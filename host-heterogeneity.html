@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Infectious Disease Epidemiology – A modern systems approach</title>
+  <meta name="description" content="Infectious Disease Epidemiology – A modern systems approach">
+  <meta name="generator" content="bookdown 0.4.1 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Infectious Disease Epidemiology – A modern systems approach" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Infectious Disease Epidemiology – A modern systems approach" />
+  
+  
+  
+
+<meta name="author" content="Andreas Handel">
+
+
+<meta name="date" content="2017-07-06">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="infectious-disease-control.html">
+<link rel="next" href="dynamics-of-multiple-pathogens.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html"><i class="fa fa-check"></i><b>1</b> Overview of this book</a><ul>
+<li class="chapter" data-level="1.1" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#rationale-for-this-book"><i class="fa fa-check"></i><b>1.1</b> Rationale for this book</a></li>
+<li class="chapter" data-level="1.2" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#what-this-book-does-and-does-not-cover"><i class="fa fa-check"></i><b>1.2</b> What this book does and does not cover</a></li>
+<li class="chapter" data-level="1.3" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#computer-exercises"><i class="fa fa-check"></i><b>1.3</b> Computer exercises</a></li>
+<li class="chapter" data-level="1.4" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>1.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Infectious Disease Epidemiology - A dynamical systems approach</a><ul>
+<li class="chapter" data-level="2.1" data-path="intro.html"><a href="intro.html#overview"><i class="fa fa-check"></i><b>2.1</b> Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="intro.html"><a href="intro.html#background"><i class="fa fa-check"></i><b>2.2</b> Background</a></li>
+<li class="chapter" data-level="2.3" data-path="intro.html"><a href="intro.html#systems-thinking"><i class="fa fa-check"></i><b>2.3</b> Systems Thinking</a></li>
+<li class="chapter" data-level="2.4" data-path="intro.html"><a href="intro.html#sytems-thinking-and-models"><i class="fa fa-check"></i><b>2.4</b> Sytems Thinking and Models</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="intro.html"><a href="intro.html#phenomenological-statistical-models"><i class="fa fa-check"></i><b>2.4.1</b> Phenomenological (statistical) Models</a></li>
+<li class="chapter" data-level="2.4.2" data-path="intro.html"><a href="intro.html#mechanistic-models"><i class="fa fa-check"></i><b>2.4.2</b> Mechanistic Models</a></li>
+<li class="chapter" data-level="2.4.3" data-path="intro.html"><a href="intro.html#dynamical-systems-thinkingmodeling"><i class="fa fa-check"></i><b>2.4.3</b> Dynamical Systems Thinking/Modeling</a></li>
+<li class="chapter" data-level="2.4.4" data-path="intro.html"><a href="intro.html#types-of-dynamical-mechanistic-models"><i class="fa fa-check"></i><b>2.4.4</b> Types of dynamical, mechanistic models</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="characterizing-infection-states.html"><a href="characterizing-infection-states.html"><i class="fa fa-check"></i><b>3</b> Characterizing Infection States</a><ul>
+<li class="chapter" data-level="3.1" data-path="characterizing-infection-states.html"><a href="characterizing-infection-states.html#overview-1"><i class="fa fa-check"></i><b>3.1</b> Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="characterizing-infection-states.html"><a href="characterizing-infection-states.html#infection-states---clinical"><i class="fa fa-check"></i><b>3.2</b> Infection states - clinical</a></li>
+<li class="chapter" data-level="3.3" data-path="characterizing-infection-states.html"><a href="characterizing-infection-states.html#infection-states---epidemiological"><i class="fa fa-check"></i><b>3.3</b> Infection states - epidemiological</a></li>
+<li class="chapter" data-level="3.4" data-path="characterizing-infection-states.html"><a href="characterizing-infection-states.html#infection-states-and-modeling"><i class="fa fa-check"></i><b>3.4</b> Infection states and modeling</a></li>
+<li class="chapter" data-level="3.5" data-path="characterizing-infection-states.html"><a href="characterizing-infection-states.html#how-many-characteristics-should-we-model"><i class="fa fa-check"></i><b>3.5</b> How many characteristics should we model?</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="id-patterns.html"><a href="id-patterns.html"><i class="fa fa-check"></i><b>4</b> ID Patterns</a><ul>
+<li class="chapter" data-level="4.1" data-path="id-patterns.html"><a href="id-patterns.html#overview-2"><i class="fa fa-check"></i><b>4.1</b> Overview</a></li>
+<li class="chapter" data-level="4.2" data-path="id-patterns.html"><a href="id-patterns.html#resource-replenishment"><i class="fa fa-check"></i><b>4.2</b> Resource Replenishment</a></li>
+<li class="chapter" data-level="4.3" data-path="id-patterns.html"><a href="id-patterns.html#intrinisic-cycles"><i class="fa fa-check"></i><b>4.3</b> Intrinisic Cycles</a></li>
+<li class="chapter" data-level="4.4" data-path="id-patterns.html"><a href="id-patterns.html#intrinisic-cycles-and-models"><i class="fa fa-check"></i><b>4.4</b> Intrinisic Cycles and models</a></li>
+<li class="chapter" data-level="4.5" data-path="id-patterns.html"><a href="id-patterns.html#external-drivers-of-seasonality"><i class="fa fa-check"></i><b>4.5</b> External drivers of seasonality</a></li>
+<li class="chapter" data-level="4.6" data-path="id-patterns.html"><a href="id-patterns.html#notes-on-cycles"><i class="fa fa-check"></i><b>4.6</b> Notes on Cycles</a></li>
+<li class="chapter" data-level="4.7" data-path="id-patterns.html"><a href="id-patterns.html#steady-states"><i class="fa fa-check"></i><b>4.7</b> Steady states</a></li>
+<li class="chapter" data-level="4.8" data-path="id-patterns.html"><a href="id-patterns.html#steady-states-and-models-m"><i class="fa fa-check"></i><b>4.8</b> Steady states and models (M)</a></li>
+<li class="chapter" data-level="4.9" data-path="id-patterns.html"><a href="id-patterns.html#id-dynamics-in-changing-populations"><i class="fa fa-check"></i><b>4.9</b> ID Dynamics in changing populations</a></li>
+<li class="chapter" data-level="4.10" data-path="id-patterns.html"><a href="id-patterns.html#references-1"><i class="fa fa-check"></i><b>4.10</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="reproductive-number.html"><a href="reproductive-number.html"><i class="fa fa-check"></i><b>5</b> Reproductive Number</a><ul>
+<li class="chapter" data-level="5.1" data-path="reproductive-number.html"><a href="reproductive-number.html#overview-3"><i class="fa fa-check"></i><b>5.1</b> Overview</a></li>
+<li class="chapter" data-level="5.2" data-path="reproductive-number.html"><a href="reproductive-number.html#background-1"><i class="fa fa-check"></i><b>5.2</b> Background</a></li>
+<li class="chapter" data-level="5.3" data-path="reproductive-number.html"><a href="reproductive-number.html#reproductive-number-definition"><i class="fa fa-check"></i><b>5.3</b> Reproductive number definition</a></li>
+<li class="chapter" data-level="5.4" data-path="reproductive-number.html"><a href="reproductive-number.html#reproductive-number-details"><i class="fa fa-check"></i><b>5.4</b> Reproductive number details</a></li>
+<li class="chapter" data-level="5.5" data-path="reproductive-number.html"><a href="reproductive-number.html#basic-reproductive-number"><i class="fa fa-check"></i><b>5.5</b> Basic reproductive number</a></li>
+<li class="chapter" data-level="5.6" data-path="reproductive-number.html"><a href="reproductive-number.html#notes-on-the-reproductive-number"><i class="fa fa-check"></i><b>5.6</b> Notes on the reproductive number</a><ul>
+<li class="chapter" data-level="5.6.1" data-path="reproductive-number.html"><a href="reproductive-number.html#mytextbox"><i class="fa fa-check"></i><b>5.6.1</b> Why R is not a rate - Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="reproductive-number.html"><a href="reproductive-number.html#outbreaks-and-the-change-in-r"><i class="fa fa-check"></i><b>5.7</b> Outbreaks and the change in R</a></li>
+<li class="chapter" data-level="5.8" data-path="reproductive-number.html"><a href="reproductive-number.html#reproductive-number-and-outbreak-control"><i class="fa fa-check"></i><b>5.8</b> Reproductive number and outbreak control</a><ul>
+<li class="chapter" data-level="5.8.1" data-path="reproductive-number.html"><a href="reproductive-number.html#mytextbox"><i class="fa fa-check"></i><b>5.8.1</b> R and outbreak control - Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="reproductive-number.html"><a href="reproductive-number.html#reproductive-number-and-id-eradication"><i class="fa fa-check"></i><b>5.9</b> Reproductive number and ID eradication</a></li>
+<li class="chapter" data-level="5.10" data-path="reproductive-number.html"><a href="reproductive-number.html#connecting-intervention-efforts-and-r"><i class="fa fa-check"></i><b>5.10</b> Connecting intervention efforts and R</a></li>
+<li class="chapter" data-level="5.11" data-path="reproductive-number.html"><a href="reproductive-number.html#r-and-the-sir-model"><i class="fa fa-check"></i><b>5.11</b> R and the SIR model</a></li>
+<li class="chapter" data-level="5.12" data-path="reproductive-number.html"><a href="reproductive-number.html#how-to-determine-r---overview"><i class="fa fa-check"></i><b>5.12</b> How to determine R - Overview</a></li>
+<li class="chapter" data-level="5.13" data-path="reproductive-number.html"><a href="reproductive-number.html#special"><i class="fa fa-check"></i><b>5.13</b> Determine R at the beginning of an outbreak</a></li>
+<li class="chapter" data-level="5.14" data-path="reproductive-number.html"><a href="reproductive-number.html#determine-r-once-the-outbreak-is-over"><i class="fa fa-check"></i><b>5.14</b> Determine R once the outbreak is over</a></li>
+<li class="chapter" data-level="5.15" data-path="reproductive-number.html"><a href="reproductive-number.html#determining-r-at-the-endemicsteady-state"><i class="fa fa-check"></i><b>5.15</b> Determining R at the Endemic/steady state</a></li>
+<li class="chapter" data-level="5.16" data-path="reproductive-number.html"><a href="reproductive-number.html#determining-r-through-age-of-infection"><i class="fa fa-check"></i><b>5.16</b> Determining R through Age of Infection</a></li>
+<li class="chapter" data-level="5.17" data-path="reproductive-number.html"><a href="reproductive-number.html#determining-r-through-fitting-a-full-transmission-model"><i class="fa fa-check"></i><b>5.17</b> Determining R through fitting a full transmission model</a></li>
+<li class="chapter" data-level="5.18" data-path="reproductive-number.html"><a href="reproductive-number.html#computing-r-for-a-given-model"><i class="fa fa-check"></i><b>5.18</b> Computing R for a given model</a></li>
+<li class="chapter" data-level="5.19" data-path="reproductive-number.html"><a href="reproductive-number.html#r-and-model-parameterization"><i class="fa fa-check"></i><b>5.19</b> R and model parameterization</a></li>
+<li class="chapter" data-level="5.20" data-path="reproductive-number.html"><a href="reproductive-number.html#summary"><i class="fa fa-check"></i><b>5.20</b> Summary</a></li>
+<li class="chapter" data-level="5.21" data-path="reproductive-number.html"><a href="reproductive-number.html#references-2"><i class="fa fa-check"></i><b>5.21</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html"><i class="fa fa-check"></i><b>6</b> Modes of Direct Transmission</a><ul>
+<li class="chapter" data-level="6.1" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#overview-4"><i class="fa fa-check"></i><b>6.1</b> Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#types-of-direct-transmission"><i class="fa fa-check"></i><b>6.2</b> Types of direct transmission</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#modeling-types-of-direct-transmission"><i class="fa fa-check"></i><b>6.2.1</b> Modeling types of direct transmission</a></li>
+<li class="chapter" data-level="6.2.2" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#note-on-notation"><i class="fa fa-check"></i><b>6.2.2</b> Note on notation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#summary-1"><i class="fa fa-check"></i><b>6.3</b> Summary</a></li>
+<li class="chapter" data-level="6.4" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#exercises"><i class="fa fa-check"></i><b>6.4</b> Exercises</a></li>
+<li class="chapter" data-level="6.5" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#further-resources"><i class="fa fa-check"></i><b>6.5</b> Further Resources</a></li>
+<li class="chapter" data-level="6.6" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#references-3"><i class="fa fa-check"></i><b>6.6</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="environmental-transmission.html"><a href="environmental-transmission.html"><i class="fa fa-check"></i><b>7</b> Environmental Transmission</a><ul>
+<li class="chapter" data-level="7.1" data-path="environmental-transmission.html"><a href="environmental-transmission.html#overview-5"><i class="fa fa-check"></i><b>7.1</b> Overview</a></li>
+<li class="chapter" data-level="7.2" data-path="environmental-transmission.html"><a href="environmental-transmission.html#types-of-indirect-transmission"><i class="fa fa-check"></i><b>7.2</b> Types of indirect transmission</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="environmental-transmission.html"><a href="environmental-transmission.html#environmental-transmission-1"><i class="fa fa-check"></i><b>7.2.1</b> Environmental transmission</a></li>
+<li class="chapter" data-level="7.2.2" data-path="environmental-transmission.html"><a href="environmental-transmission.html#modeling-environmental-transmission"><i class="fa fa-check"></i><b>7.2.2</b> Modeling environmental transmission</a></li>
+<li class="chapter" data-level="7.2.3" data-path="environmental-transmission.html"><a href="environmental-transmission.html#environmental-transmission-and-external-drivers"><i class="fa fa-check"></i><b>7.2.3</b> Environmental transmission and external drivers</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="environmental-transmission.html"><a href="environmental-transmission.html#summary-2"><i class="fa fa-check"></i><b>7.3</b> Summary</a></li>
+<li class="chapter" data-level="7.4" data-path="environmental-transmission.html"><a href="environmental-transmission.html#exercises-1"><i class="fa fa-check"></i><b>7.4</b> Exercises</a></li>
+<li class="chapter" data-level="7.5" data-path="environmental-transmission.html"><a href="environmental-transmission.html#references-4"><i class="fa fa-check"></i><b>7.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="vector-borne-id-transmission.html"><a href="vector-borne-id-transmission.html"><i class="fa fa-check"></i><b>8</b> Vector-borne ID transmission</a><ul>
+<li class="chapter" data-level="8.1" data-path="vector-borne-id-transmission.html"><a href="vector-borne-id-transmission.html#overview-6"><i class="fa fa-check"></i><b>8.1</b> Overview</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="vector-borne-id-transmission.html"><a href="vector-borne-id-transmission.html#vector-borne-transmission"><i class="fa fa-check"></i><b>8.1.1</b> Vector-borne transmission</a></li>
+<li class="chapter" data-level="8.1.2" data-path="vector-borne-id-transmission.html"><a href="vector-borne-id-transmission.html#modeling-vector-borne-transmission"><i class="fa fa-check"></i><b>8.1.2</b> Modeling vector-borne transmission</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="vector-borne-id-transmission.html"><a href="vector-borne-id-transmission.html#summary-3"><i class="fa fa-check"></i><b>8.2</b> Summary</a></li>
+<li class="chapter" data-level="8.3" data-path="vector-borne-id-transmission.html"><a href="vector-borne-id-transmission.html#exercises-2"><i class="fa fa-check"></i><b>8.3</b> Exercises</a></li>
+<li class="chapter" data-level="8.4" data-path="vector-borne-id-transmission.html"><a href="vector-borne-id-transmission.html#references-5"><i class="fa fa-check"></i><b>8.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html"><i class="fa fa-check"></i><b>9</b> Infectious Disease Control</a><ul>
+<li class="chapter" data-level="9.1" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#overview-7"><i class="fa fa-check"></i><b>9.1</b> Overview</a></li>
+<li class="chapter" data-level="9.2" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#introduction"><i class="fa fa-check"></i><b>9.2</b> Introduction</a></li>
+<li class="chapter" data-level="9.3" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#goals-of-id-control"><i class="fa fa-check"></i><b>9.3</b> Goals of ID control</a></li>
+<li class="chapter" data-level="9.4" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#types-of-infectious-disease-control"><i class="fa fa-check"></i><b>9.4</b> Types of infectious disease control</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#vaccination"><i class="fa fa-check"></i><b>9.4.1</b> Vaccination</a></li>
+<li class="chapter" data-level="9.4.2" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#pharmaceutical-interventions-drugs"><i class="fa fa-check"></i><b>9.4.2</b> Pharmaceutical Interventions (Drugs)</a></li>
+<li class="chapter" data-level="9.4.3" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#non-pharmaceutical-interventions"><i class="fa fa-check"></i><b>9.4.3</b> Non-pharmaceutical Interventions</a></li>
+<li class="chapter" data-level="9.4.4" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#special-interventions-for-non-human-hosts"><i class="fa fa-check"></i><b>9.4.4</b> Special interventions for non-human hosts</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#characteristics-of-interventions"><i class="fa fa-check"></i><b>9.5</b> Characteristics of interventions</a></li>
+<li class="chapter" data-level="9.6" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#impact-of-interventions"><i class="fa fa-check"></i><b>9.6</b> Impact of Interventions</a></li>
+<li class="chapter" data-level="9.7" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#interventions-and-models"><i class="fa fa-check"></i><b>9.7</b> Interventions and Models</a></li>
+<li class="chapter" data-level="9.8" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#summary-4"><i class="fa fa-check"></i><b>9.8</b> Summary</a></li>
+<li class="chapter" data-level="9.9" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#exercises-3"><i class="fa fa-check"></i><b>9.9</b> Exercises</a></li>
+<li class="chapter" data-level="9.10" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#references-6"><i class="fa fa-check"></i><b>9.10</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html"><i class="fa fa-check"></i><b>10</b> Host Heterogeneity</a><ul>
+<li class="chapter" data-level="10.1" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html#overview-8"><i class="fa fa-check"></i><b>10.1</b> Overview</a></li>
+<li class="chapter" data-level="10.2" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html#introduction-1"><i class="fa fa-check"></i><b>10.2</b> Introduction</a></li>
+<li class="chapter" data-level="10.3" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html#types-of-host-heterogeneity"><i class="fa fa-check"></i><b>10.3</b> Types of host heterogeneity</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="reproductive-number.html"><a href="reproductive-number.html#mytextbox"><i class="fa fa-check"></i><b>10.3.1</b> Host heterogeneity examples</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html#heterogeneity-in-transmission---core-groups"><i class="fa fa-check"></i><b>10.4</b> Heterogeneity in transmission - core groups</a></li>
+<li class="chapter" data-level="10.5" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html#heterogeneity-in-transmission---superspreaders"><i class="fa fa-check"></i><b>10.5</b> Heterogeneity in transmission - superspreaders</a></li>
+<li class="chapter" data-level="10.6" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html#heterogeneity-and-the-reproductive-number"><i class="fa fa-check"></i><b>10.6</b> Heterogeneity and the reproductive number</a></li>
+<li class="chapter" data-level="10.7" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html#heterogeneity-and-id-control"><i class="fa fa-check"></i><b>10.7</b> Heterogeneity and ID control</a></li>
+<li class="chapter" data-level="10.8" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html#modeling-heterogeneity"><i class="fa fa-check"></i><b>10.8</b> Modeling Heterogeneity</a></li>
+<li class="chapter" data-level="10.9" data-path="host-heterogeneity.html"><a href="host-heterogeneity.html#references-7"><i class="fa fa-check"></i><b>10.9</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html"><i class="fa fa-check"></i><b>11</b> Dynamics of Multiple Pathogens</a><ul>
+<li class="chapter" data-level="11.1" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#overview-9"><i class="fa fa-check"></i><b>11.1</b> Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#introduction-2"><i class="fa fa-check"></i><b>11.2</b> Introduction</a></li>
+<li class="chapter" data-level="11.3" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#types-of-interactions"><i class="fa fa-check"></i><b>11.3</b> Types of interactions</a><ul>
+<li class="chapter" data-level="11.3.1" data-path="reproductive-number.html"><a href="reproductive-number.html#mytextbox"><i class="fa fa-check"></i><b>11.3.1</b> Host heterogeneity examples</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#multiple-id-and-control"><i class="fa fa-check"></i><b>11.4</b> Multiple ID and control</a></li>
+<li class="chapter" data-level="11.5" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#modeling-multiple-id"><i class="fa fa-check"></i><b>11.5</b> Modeling multiple ID</a></li>
+<li class="chapter" data-level="11.6" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#summary-5"><i class="fa fa-check"></i><b>11.6</b> Summary</a></li>
+<li class="chapter" data-level="11.7" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#exercises-4"><i class="fa fa-check"></i><b>11.7</b> Exercises</a></li>
+<li class="chapter" data-level="11.8" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#references-8"><i class="fa fa-check"></i><b>11.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html"><i class="fa fa-check"></i><b>12</b> Stochastic Dynamics and Extinctions</a><ul>
+<li class="chapter" data-level="12.1" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html#overview-10"><i class="fa fa-check"></i><b>12.1</b> Overview</a></li>
+<li class="chapter" data-level="12.2" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html#determinisic-models"><i class="fa fa-check"></i><b>12.2</b> Determinisic models</a></li>
+<li class="chapter" data-level="12.3" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html#stochasticity"><i class="fa fa-check"></i><b>12.3</b> Stochasticity</a></li>
+<li class="chapter" data-level="12.4" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html#discrete-numbers-and-extinctions"><i class="fa fa-check"></i><b>12.4</b> Discrete numbers and Extinctions</a></li>
+<li class="chapter" data-level="12.5" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html#modeling-stochasticity-and-extinction"><i class="fa fa-check"></i><b>12.5</b> Modeling Stochasticity and Extinction</a></li>
+<li class="chapter" data-level="12.6" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html#factors-affecting-extinction"><i class="fa fa-check"></i><b>12.6</b> Factors affecting extinction</a></li>
+<li class="chapter" data-level="12.7" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html#critical-community-size"><i class="fa fa-check"></i><b>12.7</b> Critical community size</a></li>
+<li class="chapter" data-level="12.8" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html#host-extinction"><i class="fa fa-check"></i><b>12.8</b> Host extinction</a></li>
+<li class="chapter" data-level="12.9" data-path="stochastic-dynamics-and-extinctions.html"><a href="stochastic-dynamics-and-extinctions.html#references-9"><i class="fa fa-check"></i><b>12.9</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html"><i class="fa fa-check"></i><b>13</b> Evolutionary Dynamics</a><ul>
+<li class="chapter" data-level="13.1" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#overview-11"><i class="fa fa-check"></i><b>13.1</b> Overview</a></li>
+<li class="chapter" data-level="13.2" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#introduction-3"><i class="fa fa-check"></i><b>13.2</b> Introduction</a></li>
+<li class="chapter" data-level="13.3" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#evolution-of-immunity-or-vaccine-escape"><i class="fa fa-check"></i><b>13.3</b> Evolution of immunity or vaccine escape</a></li>
+<li class="chapter" data-level="13.4" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#evolution-of-drug-resistance"><i class="fa fa-check"></i><b>13.4</b> Evolution of drug resistance</a></li>
+<li class="chapter" data-level="13.5" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#evolution-of-virulence"><i class="fa fa-check"></i><b>13.5</b> Evolution of Virulence</a></li>
+<li class="chapter" data-level="13.6" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#evolution-and-public-health-interventions"><i class="fa fa-check"></i><b>13.6</b> Evolution and public health interventions</a></li>
+<li class="chapter" data-level="13.7" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#co-evolution"><i class="fa fa-check"></i><b>13.7</b> Co-evolution</a></li>
+<li class="chapter" data-level="13.8" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#modeling-evolutionary-dynamics"><i class="fa fa-check"></i><b>13.8</b> Modeling evolutionary dynamics</a></li>
+<li class="chapter" data-level="13.9" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#summary-6"><i class="fa fa-check"></i><b>13.9</b> Summary</a></li>
+<li class="chapter" data-level="13.10" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#exercises-5"><i class="fa fa-check"></i><b>13.10</b> Exercises</a></li>
+<li class="chapter" data-level="13.11" data-path="evolutionary-dynamics.html"><a href="evolutionary-dynamics.html#references-10"><i class="fa fa-check"></i><b>13.11</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="networks-and-id.html"><a href="networks-and-id.html"><i class="fa fa-check"></i><b>14</b> Networks and ID</a><ul>
+<li class="chapter" data-level="14.1" data-path="networks-and-id.html"><a href="networks-and-id.html#overview-12"><i class="fa fa-check"></i><b>14.1</b> Overview</a></li>
+<li class="chapter" data-level="14.2" data-path="networks-and-id.html"><a href="networks-and-id.html#introduction-4"><i class="fa fa-check"></i><b>14.2</b> Introduction</a></li>
+<li class="chapter" data-level="14.3" data-path="networks-and-id.html"><a href="networks-and-id.html#network-terminology"><i class="fa fa-check"></i><b>14.3</b> Network terminology</a></li>
+<li class="chapter" data-level="14.4" data-path="networks-and-id.html"><a href="networks-and-id.html#network-nodes"><i class="fa fa-check"></i><b>14.4</b> Network nodes</a></li>
+<li class="chapter" data-level="14.5" data-path="networks-and-id.html"><a href="networks-and-id.html#network-connections"><i class="fa fa-check"></i><b>14.5</b> Network connections</a></li>
+<li class="chapter" data-level="14.6" data-path="networks-and-id.html"><a href="networks-and-id.html#network-characteristics"><i class="fa fa-check"></i><b>14.6</b> Network characteristics</a></li>
+<li class="chapter" data-level="14.7" data-path="networks-and-id.html"><a href="networks-and-id.html#important-types-of-networks"><i class="fa fa-check"></i><b>14.7</b> Important types of networks</a></li>
+<li class="chapter" data-level="14.8" data-path="networks-and-id.html"><a href="networks-and-id.html#id-transmission-on-networks"><i class="fa fa-check"></i><b>14.8</b> ID transmission on networks</a></li>
+<li class="chapter" data-level="14.9" data-path="networks-and-id.html"><a href="networks-and-id.html#networks-and-id-control"><i class="fa fa-check"></i><b>14.9</b> Networks and ID control</a></li>
+<li class="chapter" data-level="14.10" data-path="networks-and-id.html"><a href="networks-and-id.html#modeling-id-transmission-on-networks"><i class="fa fa-check"></i><b>14.10</b> Modeling ID transmission on networks</a></li>
+<li class="chapter" data-level="14.11" data-path="networks-and-id.html"><a href="networks-and-id.html#id-transmission-on-dynamic-networks"><i class="fa fa-check"></i><b>14.11</b> ID transmission on dynamic networks</a></li>
+<li class="chapter" data-level="14.12" data-path="networks-and-id.html"><a href="networks-and-id.html#summary-7"><i class="fa fa-check"></i><b>14.12</b> Summary</a></li>
+<li class="chapter" data-level="14.13" data-path="networks-and-id.html"><a href="networks-and-id.html#exercises-6"><i class="fa fa-check"></i><b>14.13</b> Exercises</a></li>
+<li class="chapter" data-level="14.14" data-path="networks-and-id.html"><a href="networks-and-id.html#references-11"><i class="fa fa-check"></i><b>14.14</b> References</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Infectious Disease Epidemiology – A modern systems approach</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="host-heterogeneity" class="section level1">
+<h1><span class="header-section-number">10</span> Host Heterogeneity</h1>
+<div id="overview-8" class="section level2">
+<h2><span class="header-section-number">10.1</span> Overview</h2>
+<p>In this module, we will briefly discuss the idea that hosts differ in characteristics that are important with regard to ID dynamics and control.</p>
+</div>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">10.2</span> Introduction</h2>
+<p>So far, we tracked hosts with respect to their infection status (susceptible, infected, symptomatic, recovered, etc.). We assumed that in all other respects, hosts are similar enough with regard to features that matter for ID dynamics and control that we did not have to consider them. That is of course at best a good approximation and at worst completely wrong. There are many characteristics that can affect how an ID interacts with a host. For instance for many ID, children and the elderly are more likely to get infected and might suffer more severe symptoms. For other ID, only specific groups are affected. For instance, only sexually active individuals are at risk of contracting a sexually transmitted infection (ignoring for a moment less common transmission routes such as e.g. blood transfusion for HIV). We will discuss some of these differences/heterogeneities between hosts and how they affect ID transmission and control in this module.</p>
+</div>
+<div id="types-of-host-heterogeneity" class="section level2">
+<h2><span class="header-section-number">10.3</span> Types of host heterogeneity</h2>
+<p>We generally only care about differences in hosts as they relate to the infectious disease process. Consider a simple - maybe silly - example: Almost no infectious disease study (none that I know of) cares about a person’s eye color. That’s because this characteristic has - as far as we know - no effect on the interaction of host and ID. On the other hand, a very important characteristic that affects many IDs is age, and is therefore often taken into account when studying IDs. Other important broad categories that affect ID infection and spread are genetics and behavior.</p>
+<p>Some differences in hosts might only affect a single component of the ID, e.g. the level of susceptibility to infection. Other host differences can affect multiple components, e.g. a sexually highly active person is more likely to contract an STI and more likely to transmit if they are infected.</p>
+<div id="mytextbox" class="section level3">
+<h3><span class="header-section-number">10.3.1</span> Host heterogeneity examples</h3>
+<p>There are several famous examples that show how differences in genetics impact ID. For instance persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a specific mutation in the FUT2 gene are much less likely to get infected with norovirus. It is likely that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.</p>
+</div>
+</div>
+<div id="heterogeneity-in-transmission---core-groups" class="section level2">
+<h2><span class="header-section-number">10.4</span> Heterogeneity in transmission - core groups</h2>
+<p>For the purpose of studying ID transmission dynamics, differences in the potential and ability of individual hosts to spread an ID are obviously of great importance. This idea of heterogeneity in transmission has been studied in several contexts and under different names. One of the first ideas was the concept of a core group, which was first introduced for gonorrhea in the 1970s (see e.g. <span class="citation">(Yorke, Hethcote, and Nold <a href="#ref-yorke78">1978</a>)</span>). Core groups are subgroups in which transmission is higher compared to other groups. For many STI, transmission in the general population is low enough that the reproductive number is below 1. The question then is, why does that not lead to extinction of the ID? The answer is the core-group concept. There are small subgroups of individuals in which the ID has a reproductive number that is greater than 1. It can thus maintain itself in that population and from there continue to enter the general population.</p>
+<p>Once we have identified that different groups have different transmission behavior, it also becomes important to understand how individuals belonging to one of the groups interact with individuals of the other groups. This is often called the <em>mixing</em> pattern between groups. We are most interested in the mixing and contact patterns that facilitate transmission for the ID under consideration. For instance it is well known that humans tend to have more contacts with others of the same age, e.g. chidren predominanly contacting other children. This is called <em>assortative</em> mixing and such age-specific mixing is important for the transmission of many respiratory diseases. The opposite is <em>disassortative</em> mixing. For instance for STI, most mixing occurs between individuals from the opposite sex (and there are also more contacts among individuals of similar age). If there is no mixing preference, it is called <em>random</em> mixing.</p>
+</div>
+<div id="heterogeneity-in-transmission---superspreaders" class="section level2">
+<h2><span class="header-section-number">10.5</span> Heterogeneity in transmission - superspreaders</h2>
+<p>An equivalent concept to that of the core group, but applied to individuals, is known by the term superspreaders. Superspreaders are individuals who spread/transmit an ID much more than the <em>average</em> infected person. It turns out that for most ID, the number of secondary transmissions produced by the average infected person is not too meaningful. Such a measure would be a good description if the distribution of secondary infections were close to normal (or poisson), with most infected individuals infecting similar numbers of others. However, what is often observed is a heavily skewed distribution, with most individuals infecting none or only a few others, and a few individuals infecting many others <span class="citation">(Galvani and May <a href="#ref-galvani05">2005</a>)</span>.</p>
+</div>
+<div id="heterogeneity-and-the-reproductive-number" class="section level2">
+<h2><span class="header-section-number">10.6</span> Heterogeneity and the reproductive number</h2>
+<p>I already aluded to this above: If we have multiple host types, we need to extend the idea of the reproductive number. While it is possible to compute a reproductive number for the overall population, this quantity might not tell the full story. Instead, we might want to look at the reproductive number for subsets of the population, for instance for the general population (non-superspreaders) and core groups (the superspreaders).</p>
+</div>
+<div id="heterogeneity-and-id-control" class="section level2">
+<h2><span class="header-section-number">10.7</span> Heterogeneity and ID control</h2>
+<p>Heterogeneity among hosts with respect to their susceptibility, infectiousness and severity has direct implications for control. If we know who is most likely to transmit, who is most likely to have a severe case of a disease, and who is most likely to catch and ID in the first place, we can implement targeted control strategies. Instead of for instance vaccinating people at random, we could target those that are most vulnerable to getting the ID, or those most likely to infect others if they were to get infected. The better we can target the intervention, the more impact they can have, we get more ‘bang for our buck’.</p>
+</div>
+<div id="modeling-heterogeneity" class="section level2">
+<h2><span class="header-section-number">10.8</span> Modeling Heterogeneity</h2>
+<p>The basic concept of including host heterogeneity in models is fairly simple. We split/stratify the population according to the characteristic we want to take into account. For instance instead of lumping everyone into susceptible-infected-recovered categories, we can track males and females, or children and adults, separately.</p>
+<div class="figure">
+<img src="images/heterogeneityexample.png" alt="Example of including host heterogeneity in an SIR model." />
+<p class="caption">Example of including host heterogeneity in an SIR model.</p>
+</div>
+<p>The challenges with including more details in the model are not conceptual but instead logistical and potentially technical. Bigger models are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, it is often best to start with a simple model, and slowly introduce more host characteristics as they are deemed important for the ID setting and question one wants to address.</p>
+<p>At some point, if we want to include a lot of detail, it might be worth switching the modeling framework. For compartmental models, hosts are grouped together according to characteristics. As we want to track more characteristics, the number of compartments we need to include increases. If the basic model has C compartments/variables, P parameters, and we model N subpopulations, we have C x N equations, and at least P x N (or more) parameters. For instance if we had a basic SEIR model (4 compartments), and wanted to track males and females in 4 different age groups, we had 4 x 2 x 4 = 32 compartments. Add to that possible extra stratifications according to say vaccination or treatment status, and one can easily end up with models of 50 or even more than 100 compartments.</p>
+<p>It might then be worth deciding to stop using compartmental models and instead switch to a type of model that is called agent or individual based model (ABM/IBM). In such models, each individual host is modeled and tracked individually. We can give everyone as many different characteristics as we want. This makes the model very flexible and potentially very realistic. The downside of these ABM is that they tend to be complex, harder to program, take a long time to run. Further, for detailed models lots of parameter estimates are needed and they are often not available, leading to potentially large uncertainty in model predictions. Also, it is hard to do any kind of statistal inference with ABM. Because of these disadvantages, the compartmental modeling framework is still the most frequently used one and a good starting point for most situations and questions. For ID where we know a lot and want detailed predictions (e.g. influenza), ABM are becoming more common.</p>
+</div>
+<div id="references-7" class="section level2">
+<h2><span class="header-section-number">10.9</span> References</h2>
+
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-yorke78">
+<p>Yorke, J. A., H. W. Hethcote, and A. Nold. 1978. “Dynamics and Control of the Transmission of Gonorrhea.” <em>Sex Transm Dis</em> 5 (2). Institute for Physical Science; Technology, University of Maryland, College Park, USA.: 51–56.</p>
+</div>
+<div id="ref-galvani05">
+<p>Galvani, Alison P., and Robert M. May. 2005. “Epidemiology: Dimensions of Superspreading.” <em>Nature</em> 438 (7066): 293–95. doi:<a href="https://doi.org/10.1038/438293a">10.1038/438293a</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="infectious-disease-control.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dynamics-of-multiple-pathogens.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
