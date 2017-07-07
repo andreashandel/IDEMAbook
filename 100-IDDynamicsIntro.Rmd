@@ -1,7 +1,14 @@
 # Infectious Disease Epidemiology - A dynamical systems approach {#intro}
 
-## Overview
-In this module, we discuss the idea of taking a _(dynamical) systems approach_ and how it is applied to infectious diseases.
+## Overview and Learning Objectives
+In this chapter, we discuss the idea of taking a _(dynamical) systems approach_ and how it is applied to infectious diseases.
+
+The objectives for this chapter are:
+
+* Understand the basic ideas of complex systems and systems thinking/modeling
+* Assess strength and weaknesses of different approaches to ID dynamics
+* Understand the idea of a compartmental model and how it can be used to model infectious diseases
+* Know the components of Infectious Disease systems
 
 
 ##Background 
@@ -69,7 +76,18 @@ If you want to read a bit more about these compartmental models, [check out this
 
 
 
+##Summary and Cartoon
+This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. You also got an introduction to a fairly simple model of an infectious disease system.
+
+![Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/) ](../media/xkcd-flowcharts.png)
+
+##Exercises
+* Work through the tasks for the _ID Dynamics Introduction_ DSAIDE app.
+* Contemplate on your experience with the _ID Dynamics Introduction_ DSAIDE app. In which way does it capture the 'dynamical systems' perspective? Did you find any behavior of this - arguably still very simple - infectious disease model/system that you would consider as being "complex"? How/why?
+* Read the paper "Systems Science Methods in Public Health: Dynamics, Networks, and Agents" by Luke & Stamatakis [@luke12]. They explain several _systems science methods_ and in Table 2 provide a list of strengths for each method. What do you consider the main strengths and weaknesses of each of these 3 methods?
 
 
+##Further Resources
 
+##References
 

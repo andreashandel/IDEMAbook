@@ -1,8 +1,17 @@
 
 # ID Patterns
 
-## Overview
+## Overview and Objectives
 In this module, we will discuss different patterns of ID dynamics, such as single outbreaks, recurrent cycles and steady endemic states. 
+
+The learning objectives for this chapter are:
+
+*	Understand the concept of resource replenishment
+*	Know the different mechanisms that can lead to ID cycles
+*	Understand the concept of endemic state
+
+
+## Introduction
 Some ID produce sporadic outbreaks and then disappear for years. Ebola is a prominent example. We will discuss in a future module how to figure out what leads to the (local) extinction of an ID.
 
 Many other ID show oscillatory behavior, i.e. we get repeated outbreaks every so often, with some time of no or little disease in between. For some ID, the outbreaks are seasonal/annual, for other ID, the cycles are multi-year. 

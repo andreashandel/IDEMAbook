@@ -38,6 +38,24 @@ Also, the model building and analysis process is often iterative. After a model 
 
 
 
+##Summary 
+This chapter discussed ways to characterize an individual host's state with regard to an infection. We discussed the differences between medical and public health perspectives and how ID states can be mapped to compartmental models. 
+
+![Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/) ](../media/xkcd-course-of-colds.png)
+
+
+##Exercises
+* The _Direct transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* Suggest a real ID that might be approximately described by the _Direct transmission_ DSAIDE app. Approximately what values for the different parameters would be appropriate to describe the ID you have in mind? See what you can find for the different parameters of the ID you chose in the literature.
+* Read the paper "Modelling an outbreak of an emerging pathogen" by Kajita et al [@kajita07]. The paper lists 8 assumptions that went into constructing the model. Is there any assumption that you might have made differently, and why? Are there other assumptions the authors make when building the model that are not included in their list of assumptions? If your next step would be to further increase model realism, what would you do, i.e. what feature(s) would you include that are currently not in the model?
+
+
+
+##Further Resources
+
+
+
+##References
 
 
 
