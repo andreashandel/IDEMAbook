@@ -1,0 +1,75 @@
+# Infectious Disease Epidemiology - A dynamical systems approach {#intro}
+
+## Overview
+In this module, we discuss the idea of taking a _(dynamical) systems approach_ and how it is applied to infectious diseases.
+
+
+##Background 
+While the terminology of _systems thinking_ or _systems approach_ has seen increased use in the last few decades, the general idea has been around for a while. In public health, there is the basic idea - most often applied to infectious diseases - of the *agent - host - environment* system. 
+
+![A system perspective - The epidemiological triangle](./images/epi-triangle.png)
+
+Similarly, one can think of the basic epidemiological concept of *person - place - time* as describing a system. The notion of a system is present in virtually every field of research, ranging from the hard sciences to social sciences and business. 
+
+The scientific approach that has generally been the most successful in the past was to break down a system into its individual components and study the components one at a time. This is usually referred to as the *reductionistic approach*. This approach to understanding the world is still very powerful and useful. 
+
+A complementary approach, which has seen increased use, is to look at "the whole" system at once, instead of each component at a time. This approach can provide insights that might not be obtained by the purely reductionist approach. This approach of looking at the whole system at once is often referred to as _systems thinking/approach_.
+
+
+
+
+##Systems Thinking
+The term _systems thinking_ or _systems approach_ or similar such terminology has become popular in various fields during the last few decades. It is not a very clearly defined term, but in general a _systems_ perspective looks at multiple - often many - components that interact with each other in potentially complicated ways. For instance the problem of obesity has many different components that interact in potentially complicated ways to affect a person's weight. Complex systems are basically everywhere. The approach of studying (most of) the system at once instead of looking at a single component at a time is the hallmark of the _systems approach_
+
+![Obesity as a complex system: http://goo.gl/m2Qq13](./images/complexsystem.png)
+
+
+##Sytems Thinking and Models
+Models are everywhere in science. Models can be conceptual (e.g. graphs or charts), experimental model systems (e.g. a specific mouse strain in immunology) or take the form of mathematical/computer models. 
+
+Once we take the systems perspective, we have to deal with many components that interact in potentially complicated ways. This makes study and analysis complicated, especially if we are trying to gain insights into the causal and mechanistic connections between some quantity (exposure) and some outcome. When taking a systems approach, it is therefore often not enough to have a conceptual model. While a conceptual approach often allows some qualitative understanding, it is somewhat limiting. It is for instance almost impossible to gain a good *quantitative* understanding how changes in certain conditions and components of a system lead to changes for outcomes of interest by relying on conceptual approaches alone. If we want to go beyond qualitative and move toward a quantitative understanding (i.e. 'increasing tobacco tax by X% will reduce smoking-related healthcare costs by Y%'), we need mathematical/computational models. There are many different types of models one can implement. The following provides a - very brief - overview of different modeling approaches.
+
+
+
+###Phenomenological (statistical) Models
+A huge class of models consists of what we usually refer to as statistical models. In the context of this discussion, I prefer to label them _phenomenological_ models, but that terminology is rarely used. The idea behind the statistical/phenomenological approach is to use a mathematical or computational model to study if there are any patterns between the input (exposure and other variables) and the output (outcomes of interest). 
+
+For instance a linear regression model investigates if there is a pattern/correlation between input and output that can be well approximated by a linear function. More complicated statistical models exist, some go by the name of _machine learning methods_. All of these models try to determine if there are patterns between inputs and outputs of interest in the data. 
+
+One feature these statistical/phenomenological models have in common is that they do not try to describe the mechanisms of interactions within the system that lead to the observed input-output relations. For instance if we find that the relation between number of cigarettes smoked per day and the 5-year risk of lung cancer can be approximated by a linear function, it does not tell us much about the mechanisms leading from smoking to lung cancer. 
+
+
+###Mechanistic Models
+Another class of models are those that try to explicitly - albeit usually in very simplified form - try to model the mechanisms of interaction among system components. Those models are commonly used for infectious disease studies. For instance we might want to know how drug dose affects pathogen clearance inside an infected patient. We could collect data on both (such data often needs to come from animal models) and see if a straight line or other kind of model fits the data. Alternatively, we could try to build a model that explicitly captures the mechanism of the drug killing the pathogen, and then see if this mechanistic model describes the data well. The advantage of these kinds of models is that they potentially provide better and deeper understanding of the system. The main disadvantage is that we already need to know (or at least assume) a good bit about how the components interact for us to be able to build such a model. If we don't know what mechanisms might lead to some input impacting some output, we can't build a mechanistic model.
+
+Both phenomenological (statistical) and mechanistic models are useful tools with distinct advantages and disadvantages. Which one to use depends on the question and study system. For this course, we will focus on mechanistic models. These kinds of models can be formulated in many different ways. We discuss some below.
+
+
+###Dynamical Systems Thinking/Modeling
+The dynamical part adds an explicit time component to the system. To see the difference between a dynamical system and a 'static' one, consider this example:
+
+We could study how a change in tobacco taxes might lead to changes in healthcare costs in a given state. Of course, time is present in this system: First we change the taxes, then we look at changes in costs over some time frame. However, when studying this system, one usually doesn't need to consider an explicitly time-dependent dynamic. Instead one looks at 2 scenarios: Taxes 1 & Costs 1 versus Taxes 2 & Costs 2. It is usually not necessary to model or simulate the chain of events leading from tax change to cost change while explicitly accounting for time.
+
+In contrast, in a dynamical system the model explicitly undergoes changes in time. We might often want to know how certain changes to the system (e.g. interventions) lead to changes in outcomes through a *dynamical/time-dependent* chain of events. For infectious diseases, we most often have some underlying dynamics that we need to take into account (e.g. an ongoing outbreak) and on top of which we might want to implement some interventions. Therefore, the dynamical perspective is often used. Even if a specific disease can be considered to be 'steady' before we implement an intervention (e.g. a given level of TB in a country), there is still disease transmission between individuals happening, which most often makes the dynamical approach more suitable.
+
+We can illustrate this dynamical perspective by extending the epidemiological triangle. The following figure shows the components and the interactions of the triangle changing over time.
+
+![Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.](./images/moving-triangle.png)
+
+
+
+###Types of dynamical, mechanistic models
+When building models based on a systems approach, there are two main approaches. In one approach, the model is made up of individual *agents/individuals* and is thus called Agent based or Individual based model. The agents/individuals - which often but not always are humans - interact with each other. Each agent has certain properties and undergoes certain actions. The interactions of all agents leads to potentially interesting and complex dynamics. Schelling's segregation model (see this module's videos) is a nice example of such an agent based model.
+
+Another approach simplifies the system by not tracking every individual agent, but instead only keeps track of total agents/individuals in certain states. For instance for infectious disease models, we might only keep track of the total number of individuals who are susceptible, infectious and recovered/immune. This simplifies models immensely. If we had a population of a 100, 1000 or 10,000, we would need to keep track of as many agents. If we only keep track of total number of individuals in the 3 states just mentioned, we only need to track how our 3 states - usually called *compartments* - change, namely we need to track changes in the numbers of susceptible/infected/recovered - no matter how large our population.
+
+While these compartmental models are obviously simplifications of the real system, they often retain enough of the model complexity to allow us to study the system well. Because of this, the majority of models used in infectious disease epidemiology are these types of compartmental models, and we will use them throughout the course.  
+
+If you want to read a bit more about these compartmental models, [check out this Wikipedia article](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology)
+
+
+
+
+
+
+

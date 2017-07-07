@@ -1,0 +1,45 @@
+#Environmental Transmission
+
+
+##Overview
+A number of pathogens transmit through an environmental stage. This chapter discusses the implications on the ID dynamics in such cases.
+
+
+##Types of indirect transmission
+While the distinction between direct and indirect transmission is not clear-cut, we usually consider an ID to have an indirect mode of transmission if the time spent outside the main host is _important_ for the whole transmission cycle. The two main types of stages where a pathogen resides outside the main host are the abiotic environment or another host species. In the case of the former, we consider it to be environmental transmission, in the case of the latter, it is vector-borne. Of course, some ID are even more complicated and have both vector and environmental stages.
+
+
+###Environmental transmission
+Some diseases are shed by hosts into the environment, where they can survive for a potentially extended time before re-infecting a new host. Cholera is a good example of an ID that has water sources as environmental stage. Similarly, avian influenza is thought to survive in cold lake water for an extended time. The important consequence of environmental transmission is that it potentially allows new infections to occur over long distances in time and space. For instance an infected person might shed Cholera into the water somewhere upstream, and a susceptible person ingests the Cholera bacteria somewhere downstream miles and days or weeks away. This is fundamentally different to direct transmission, which requires close contact.
+
+![Schematic of an ID with environmental transmission](./images/environmentaltransmissionscheme.png)
+
+
+
+###Modeling environmental transmission
+Most often, during the environmental stage, we assume that the pathogen does not 'do' anything. This is in contrast to vector-borne transmission where the pathogen might for instance undergo replication in the vector. Thus, we assume that infected hosts shed pathogen into the environment, where it decays. If a a susceptible person comes into contact with the pathogen in the environment, an infection can occur. The simplest SIR type model that can capture this process is given by
+$$ 
+\begin{aligned}
+\dot S &= - b E S \\
+\dot I &= b E S  - \gamma I \\
+\dot R &= \gamma I \\
+\dot E &= p I - cE
+\end{aligned}
+$$
+Infected persons release pathogen into the environment at rate _p_. The pathogen decays at rate _c_. A susceptible host can get infected by contact with contaminated environment at rate _b_.
+
+
+###Environmental transmission and external drivers
+Because environmental transmission involves the survival of pathogen for a potentially extended time in the environment, such ID are often more strongly influenced by external drivers compared to ID that are directly transmitted. The weather has often a strong impact, as do behavior changes. E.g. humans living in temparate zones are more likely to swim in lakes when it's warm, therefore water-borne diseases often have the highest incidence in warm months.
+
+Such external drivers can be included in models by allowing certain parameters to vary over time. For instance the transmission rate or the rate at which environmental pathogen decays could be made dependent on the time of the year.
+
+
+
+##Summary
+
+##Exercises
+* The _Environmental transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+
+##References
+

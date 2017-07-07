@@ -1,0 +1,95 @@
+
+# ID Patterns
+
+## Overview
+In this module, we will discuss different patterns of ID dynamics, such as single outbreaks, recurrent cycles and steady endemic states. 
+Some ID produce sporadic outbreaks and then disappear for years. Ebola is a prominent example. We will discuss in a future module how to figure out what leads to the (local) extinction of an ID.
+
+Many other ID show oscillatory behavior, i.e. we get repeated outbreaks every so often, with some time of no or little disease in between. For some ID, the outbreaks are seasonal/annual, for other ID, the cycles are multi-year. 
+
+![Examples of ID cycles. From [@keeling08].](./images/IDcycles.png)
+
+Why are some ID seasonal, some not? What mechanisms lead to seasonal or multi-year oscillations? What determines the timing between outbreaks? 
+
+Yet other IDs seem to have "settled down" and occur more or less at a steady level, with only minor fluctuations. TB and HIV in some parts of the world, as well as certain STD and chronic viral infections of for instance the herpes virus family seem to have such a dynamic.
+
+The following discusses the factors affecting these different ID dynamics patterns. 
+
+
+## Resource Replenishment
+So far, we mainly looked at scenarios where some ID caused a single outbreak. As we saw, outbreaks wane because eventually there are not enough susceptible individuals around to sustain ongoing transmission. This is a very general ecological principle: Without replenishment of resources, some consumer of such resources will eventually die out. We see that in predators eating pray, forest fires "eating" trees, and pathogens "eating" their hosts. If the resources are not replenished quickly enough, the consumer of these resources will go extinct. To sustain continued presence of the consumer/predator, resources need to be replenished. 
+
+For our scenario, the resource consumer is the ID and the resources are the hosts, usually humans. Replenishment of susceptible hosts can happen through different mechanisms. Most common are birth of new, susceptible individuals, and loss of immunity. Migration, if strong, can be another way susceptible hosts can be replenished. Similarly, individuals that become newly sexually active correspond to the birth of new susceptibles for sexually transmitted infections. 
+
+If the replenishment of new susceptibles is rapid, an ID might be able to maintain itself in a population and never go extinct. (Extinction will be discussed in more detail in a later unit.)
+
+##Intrinisic Cycles 
+The interaction between susceptible and infectious hosts can leads to a dynamical pattern that can/does produce oscillations. Specifically, the dynamics of resource consumption (depletion of susceptible hosts), waning ID incidence due to reduced availability of hosts, and subsequent replenishment of susceptibes can lead to cycles. Since these cycles are not driven by anything "from the outside" and arise purely due to the complex interplay between host resources and ID, there are sometimes called intrinsic cycles/oscillations. The timing of these cycles (the period of the oscillations) is determined by characteristics of the ID and scenario. For instance the duration of the infectious period and the transmissibility of the host generally influence the timing between outbreaks. In ecology, such cycles are well studied and go by the terminology of predator-prey systems.
+
+
+##Intrinisic Cycles and models 
+One can sometimes compute the time between outbreaks. For the simple compartmental SIR model, an approximate equation for the period close to the endemic state is 
+$$T \approx 2 \pi \sqrt{\left( \frac{LD}{R_0 - 1} \right)}$$
+
+Here, _L_ is the average lifespan of a host, _D_ is the average duration of infectiousness, and _R~0~_ is the basic reproductive number - a quantity we will discuss shortly. For more details on this equations, see e.g. [@keeling08].
+
+For more complicated models and real-world scenarios where the simple SIR model is not a good approximation, the equation just provided does not apply anymore. It might not even be possible to write down any equation. But the main point still holds in such a case, namely there is a relation between intrinsic characteristics of the system, such as duration of infectious period (_D_) and transmissibility of the disease (_R~0~_), and the period of the oscillations. In cases where we cannot derive a mathematical equation, we can get the answer computationally. We can vary a parameter of interest, for instance the duration of the infectious period, and use the model to simulate the ID and record the period of the cycles, _T_. Finally, by plotting a figure showing _D_ on the x-axis and _T_ on the y-axis, we obtain a relation between these quantities.
+
+
+
+##External drivers of seasonality
+Another mechanism that can lead to osciallations in the dynamics of ID can come from "external" drivers. Of course, these processes are still part of the whole system, but not as directly as the dynamics and interaction of the hosts. In that sense we consider it an external process. 
+
+Weather is one of the most important external factors. Many ID are influenced by the weather. For instance influenza virus survives better when vapor pressure is low, which is usually the case in temperate regions in winter [@lipsitch09, @shaman10]. 
+
+Other types of seasonality are related to human activity and behavior. For instance many childhood diseases increase in incidence when a new school year starts. 
+
+For some ID, weather and behavior interact. Many water-borne diseases in the U.S. see an uptick in summer. This is due to behavior changes in the host: More people swim in outdoor water in the summer. 
+
+Often, more than one mechanism occurs and influences the ID dynamics. As such, it is often not possible to isolate a single factor as the main important one. It often depends on the specific setting.
+
+
+##Notes on Cycles
+In the type of models we have looked at so far, sustained oscillations need something like seasonality. Without it, the cycles die out and the disease reaches a steady, endemic state. For more complex models or models that include stochastic dynamics (something we'll discuss in a later module), cycles can be maintained even in the absence of external drivers.
+
+
+##Steady states
+In addition to single outbreaks or recurrent cycles, ID often also reach a state where the incidence/prevalence in a population is roughly constant. This is usually referred to as endemic state. Examples of that are e.g. helminth infections in many African countries (in the absence of control efforts) or certain sexually transmitted diseases in developed countries. The following figure shows for instance that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005.
+
+![Gonorrhea cases in the US. [Source CDC](http://www.cdc.gov/STD/stats06/images/trends-img-2.gif).](./images/gonorrhea.gif)
+
+Note that while at steady state, the total number of ID cases does not change, there is usually still constant turnover. Some individuals get infected, while others recover or die. It just happens that these processes balance each other, making the total numbers roughly constant.
+
+
+##Steady states and models (M)
+When an ID reaches a steady state, a model based on ordinary differential equations, such as the basic SIR model, simplifies by a lot. Specifically, at steady state, there are -- by definition -- no changes in the total number of individuals in each compartment. Therefore the left side of the equations is zero, leading to the following set of equations:
+
+$$\dot S = 0 = \lambda -\beta SI - nS$$ 
+$$\dot I = 0 = \beta S I - \gamma I - nI$$
+$$\dot R = 0 = \gamma I - nR$$
+
+We again used $\lambda$ for the birth rate and $n$ for the death rate. 
+
+The system of differential equations has turned into a system of algebraic equations. For a fairly small set of equations (usually <=5), one can obtain equations for the compartments (_S_, _I_, and _R_ in this case) at steady state that are only function of the model parameters. While it is in general possible to solve models with more compartments/equations, the resulting expressions are usually so big and unwieldy to not provide much useful insight.
+
+The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. R is not suitable for solving symbolic equations. The two main packages for such tasks are [Maple](http://www.maplesoft.com/) and [Mathematica](https://www.wolfram.com/mathematica/). Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use [Maxima](http://maxima.sourceforge.net/).  [Other packages exist](http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems). Solving these equations in Maxima would look as follows:
+
+![Maxima code for solving the SIR model steady state equations.](./images/SSmaxima.png)
+
+We thus find the values for the number of susceptible, infected and recovered at steady state as a function of the model parameters:
+
+$$S_{s} = \frac{\gamma + n}{\beta}$$ 
+$$I_{s} = \frac{\beta \lambda - n (n+ \gamma)}{\beta (n+ \gamma)}$$
+$$R_{s} = \frac{\beta \lambda \gamma - \gamma n(n+ \gamma)}{\beta n (n+ \gamma) }$$
+
+This allows us to rapidly gain insight into the system behavior. For instance we can see that for an endemic steady state to be possible (i.e. for _I~s~_ > 0), we need $\beta \lambda >  n(n+ \gamma)$. We can make intuitive sense out of this expression: The combination of pathogen transmission capacity ($\beta$) and birth rate ($\lambda$), which support ID persistence, needs to be stronger than the effects of general host death $n$ and host recovery $\gamma$. We will later see that this relates to the concept of reproductive number.
+
+Often, the model is too complicated to obtain useful equations for the steady state values of the model variables. Fortunately, we can always determine them numerically. We simply start the simulation with some values and run it long enough until it has settled down (we need to make sure it actually does have a steady state). We can then record the steady state values, change some parameter and repeat. At the end, we can plot a figure showing how the steady state values change with some model parameter. This approach is obviously much slower than just looking at the mathematical equations. However, often - especially for big models - it's the only feasible approach. 
+
+
+##ID Dynamics in changing populations
+The idea of resource replenishment described above assumes in its simplest forms that in the absence of the ID, the host population is in steady state. That is, the number of births and deaths balance each other and the population size therefore stays constant. We then investigate ID dynamics on top of such a constant population (which then might not be constant anymore if the disease leads to many deaths).
+
+One can go a step further and consider an underlying population that changes in size due to underlying growth or decline of the population. We can then study the dynamics of an ID on top of an already dynamically changing population. While this is generally not much more complicated to do with computer models, it is harder to understand what exactly is going on in the system. For instance consider an ID with high mortality in a growing population. If we just looked at the population size, it could be that it remains constant, due to the 2 processes of natural population growth and disease induced mortality balancing each other. We therefore need to carefully study how the different processes affect ID dynamics.
+
+##References

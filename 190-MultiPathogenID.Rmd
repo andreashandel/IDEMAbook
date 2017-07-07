@@ -1,0 +1,44 @@
+# Dynamics of Multiple Pathogens
+
+##Overview
+In this chapter, we will discuss a scenario where more than one infectious disease is considered simultaneously.
+
+
+##Introduction
+So far, we only focused on a single ID.
+
+
+
+##Types of interactions
+
+
+
+
+###Host heterogeneity examples {#mytextbox}
+There are several famous examples that show how differences in genetics impact ID. For instance persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a specific mutation in the FUT2 gene are much less likely to get infected with norovirus. It is likely that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.
+
+
+##Multiple ID and control
+While the importance of interactions between IDs is recognized, a multi-ID approach to intervention is often not as common as it probably should be.
+
+
+##Modeling multiple ID
+The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated bits are to properly model any potential interactions between IDs.
+
+
+![Example of a model that considers 2 ID.](./media/multipathogenmodel.png)
+
+
+
+As mentioned previously, more compartments means bigger models. Those are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many important 2-ID modeling studies exist.
+
+
+
+
+##Summary
+
+##Exercises
+* The _Multi-pathogen dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+
+##References
+

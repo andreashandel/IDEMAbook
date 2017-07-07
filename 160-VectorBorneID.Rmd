@@ -1,0 +1,48 @@
+#Vector-borne ID transmission
+
+
+##Overview
+In this chapter, we will discuss an important form of indirect transmission, one that has a vector stage.
+
+
+###Vector-borne transmission
+Vector-borne ID are those that go through - at least - two different hosts to complete a full replication and transmission cycle. Hosts of one type infect hosts of the other, there is no direct transmission between hosts of the same type.
+
+![Schematic of a vector-borne ID](./images/vectorborne-schematic.png)
+
+Not surprisingly, the IDs which receive the most study are those where one of the hosts are humans. The other host (i.e. the vector) can be any other animal, such as dogs, rodents, snails, insects, etc. At times, growth and replication of the pathogen occur mainly in one host, with the other just serving as vessel to get between hosts. Most often, the pathogen completes important parts of its growth and replication cycle in both (or all, if there are more than 2) hosts.
+
+
+
+###Modeling vector-borne transmission
+The easiest way to model a vector-borne disease is to simply ignore the vector and assume that the transmission term of the equation (e.g. a term like _bSI_) represents -- in a very simpliefied form -- all the complicated processes involved in transmission, including the vector stage. That makes the model simple, but of course doesn't capture the vector-borne aspects of the dynamics. If we are interested in the dynamics of the disease in all hosts, we do need to include the vector components in a model.
+
+To include vectors in a model, one could for instance build 2 SIR-type models, with one set of equations for the (human) host and one for the vector, and then couple the compartments by including transmission from humans to vectors and vectors to humans. Equations for such a model would look as follows:
+$$
+\begin{aligned}
+\dot S_h &= - \beta_1 S_h I_v \\
+\dot I_h &= \beta_1S_h I_v - \gamma_h I_h \\
+\dot R_h &= \gamma_h I_h \\
+\dot S_v &= - \beta_2 S_v I_h \\
+\dot I_v &= \beta_2 S_v I_h - \gamma_v I_v \\
+\dot R_v &= \gamma_v I_v
+\end{aligned}
+$$
+Here, the index _h_ indicates humans and _v_ indicates vectors. 
+
+The important vector-borne aspect of such a model is that transmission only occurs from hosts to vector and vector to host, not between 2 hosts or 2 vectors. 
+
+In general, the above model needs to be modified to more accurately describe vector-borne ID dynamics. For instance, many vectors have a fairly short natural lifespan, and as such their births and deaths need to be included in the model, even if the timescale on which we investigate the model is short enough to allow us to ignore births and deaths for humans.
+
+It is common to include more details in the human part of the model (e.g. asymptomatic stage and others as discussed previously) and less detail for the vector part. The specific details that should be included are driven by the question one want to to study.
+
+
+
+##Summary
+
+##Exercises
+* The _Vector transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+
+##References
+
+

@@ -1,0 +1,46 @@
+# Characterizing Infection States
+
+
+## Overview
+In this module, we will discuss ways to characterize individuals with regard to their ID status. We will consider why some infection states are important for public health control but less for doctors and the opposite. We will also discuss how different ID states might or might not correspond to the compartments in our computer models. 
+
+
+## Infection states - clinical
+From a purely medical perspective, focusing on one patient at a time, the most important characteristic of a disease is its severity. We would like to know what kind of symptoms a disease produces and how frequently those occur. This is the morbidity profile of a disease. One can consider mortality the "ultimate symptom". Because of its importance, it is often considered independently. Knowing severity/morbidity/mortality of an ID are generally most important when caring for individual patients. For interventions, understanding what might help mitigate morbidity/mortality is of prime interest.
+
+
+##Infection states - epidemiological
+From the perspective of a public health practicioner, other ID characteristics besides morbidity/mortality are very important. We need to know when someone is infectious (e.g. before/without symptoms, or only when symptomatic), how transmission occurs, if recovered individuals become immune, if immunity is waning, etc. The difficult part is that our data often comes from clinical (symptomatic) cases or deaths. If asymptomatic individuals are infectious, or there is underreporting, we often don't get the full picture. 
+
+This happened for example during the early days of the 2009 H1N1 influenza pandemic. The first reports out of Mexico made it look like case fatality ratio (the term case fatality rate is a bad label as this is not a rate) was fairly high. Later, once it was realized that there were many more infections that didn't go reported, it became clear that the ratio of deaths to infected was thankfully not much different from seasonal influenza.
+
+Of course, the medical and epidemiological perspectives are not an 'either/or'. Instead, success in combating infectious diseases only comes when all aspects are considered. Still, it is useful to keep in mind that certain infection states are more important when considering how to intervene on the individual patient level versus intervention on a population level.
+
+
+##Infection states and modeling
+For the compartmental model we looked at so far, individuals were split according to 3 states: susceptible, infected (and infectious) and recovered (and immune). We can build models that allow for additional states. The figure below shows a model with additional compartments. 
+
+![Example of a model with more compartments](./images/ComplicatedModel.png)
+
+In general, we need to decide for a specific ID, scenario and question which details to include in our model and which ones to ignore. This not only depends on the ID we study, but also on the question. For instance if we want to study how some control strategies for SARS might reduce the total number of *infected* but we don't care about the impact on total deaths (unlikely, but let's just pretend), then we would not need a dead compartment in our model. However, if we want to keep track of deaths and how they are impacted by our intervention (likely), we do need to track them - even though dead people are not known to transmit SARS. In contrast, we know that for Ebola, dead infected individuals contributed to transmission, so we would likely need them in the model. 
+
+
+##How many characteristics should we model?
+Tying it back to the "systems approach": We can never include all components and interactions of a system, even if we build a complicated model. We need to decide which parts are important and need to be in the model, and which ones we can ignore. A simple and maybe obvious example: We never include the hair color of individuals in any infectious disease models (at least I've never seen such a model), since we assume that this characteristic is not important for the ID dynamics. Other characteristics are less obvious. For instance for an HIV model, we likely need gender, while a SARS model might ignore this characteristic. 
+
+We will see many different types of models as we go through the course. In general, the models will include the feature we are focusing on, while excluding others. For instance we might include human and mosquitos for vector-borne IDs but ignore things like asymptomatic or presymptomatic states. This is mainly done to keep models simple and focus on one feature at a time. Models that address "real" questions often -- but not always -- include a fair number of details.
+
+To build models that are suitable to study a specific system, model builders need to be experts on the system they want to study and/or collaborate with subject matter experts. 
+
+Building a good model needs to follow the [Goldilocks Principle](https://en.wikipedia.org/wiki/Goldilocks_principle): If a model is too small/simple, it likely doesn't approximate the real system very well. If the model is too big and complicated, it is difficulty to build, hard to analyze, prone to mistakes, and might not lead to much insight (i.e. the model is a big black box). THe goal is to get the model _just right_ in terms of size and complexity. Unfortunately, there is no recipe or formula specifiny how to build a _just right_ model. Being able to build models that are approrpiate/suitable for a given ID and question distinguishes good modelers/scientists from less good ones.
+
+Also, the model building and analysis process is often iterative. After a model has been built and studied, it might become clear -- e.g. by comparing the model with data -- that important components or interactions have been ignored or not been included properly. This leads to model modification and refinement. This back and forth between model and data/the real world can happen over multiple iterations.
+
+
+
+
+
+
+
+
+

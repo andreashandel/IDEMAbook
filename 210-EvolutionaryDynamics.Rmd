@@ -1,0 +1,45 @@
+# Evolutionary Dynamics
+
+##Overview
+In this module, we will take a look at ID evolution and its relation to control measures.
+
+
+##Introduction
+Evolution is based on the generation of diversity, usually genetic diversity through mutations, and the subsequent increase or decrease in certain genetic variants through selection or random drift. 
+Microorganisms, especially viruses, tend to undergo rapid evolutionary change. High mutation rates and large population sizes provide many opportunities for the generation of genotypic and phenotypic diversity. Short generation times and fluctuations in population size (e.g. through transmission bottlenecks) allow selection to quickly act on this diversity, amplifying those mutants that have a fitness advantage and eliminating those with low fitness. These features of microbial populations leads to often rapid evolutionary change. Such evolutionary change can become a public health problem. In the following sections, we briefly discuss several drivers of public health importance that influence the selective fitness of different genetic variants and thereby drive ID evolution.
+
+
+
+##Evolution of immunity or vaccine escape
+A very strong driver of evolution is the host immune response. If an ID induces a strong immune response which subsequently protects the host from re-infection, a mutant of the ID which can partially escape the host immunity and infect a host will have a large fitness advantage. This is the process which drives the continuous evolution of influenza in humans. A similar process occurs if immunity is created through vaccines. This again is behind the reason we need to get re-immunized with influenza vaccines regularly.
+
+
+##Evolution of drug resistance
+Drugs are another mechanism that applies a strong selective pressure. Any pathogen that can avoid being killed by a drug can potentially 'take over' a patient and transmit to the next. If drug use is widespread in the population, those resistant mutants - which generally have lower fitness than the wild-type, drug sensitive strain - can take over in a population. This phenomenon has been observed with many different ID and drugs and produced such looming public health problems as extensively drug-resistant TB (XDR TB) and methicillin resistant Staphylococcus aureus (MRSA). 
+Since viruses tend to evolve faster than bacteria, drug resistance evolution is often a problem at the individual patient level. HIV is the prime example. Single-drug therapy for HIV fails consistently because the virus quickly evolved resistance. Only once we started using multiple drugs at the same time were we able to prevent rapid evolution - basically by playing a 'numbers game' - the chance of 3 resistance mutations against 3 different drugs occuring is so small that it rarely happens during the treatment of an individual host, thus making the drugs effective for the host's lifetime.
+
+##Evolution of Virulence
+The term virulence is a bit fuzzy, it generally means 'harm to the host'. That could be due to mortality caused by an ID, or in less severe forms, ID related morbidity (sickness/symptoms). Pathogens 'don't care' about harming their hosts, their main 'purpose' is to get in, replicate, and get back out and infect the next host. Sometimes, inducing some morbidity in the host is useful for the pathogen, e.g. sneezing and coughing for respiratory infections might lead to enhanced transmission and therefore increased pathogen fitness. In other situations, inducing morbidity/mortality doesn't increase pathogen fitness, but it also doesn't decrease it. Therefore, selection doesn't act to change the amount of symptoms induced. Pathogens that are too virulent, and in extreme cases kill their hosts, generally have reduced fitness since in most situations, dead hosts do not transmit. The idea is then that pathogens evolve to induce the level of virulence that is optimal for their overall transmission fitness. 
+
+
+##Evolution and public health interventions
+In general (apart from the possible phenomenon of drug-induced hypermutation in bacteria), the generation of genetic variants is not influenced by any human interventions. Those mutants are produced constantly. In the usual setting, most mutants are less fit than the wild-type strain and therefore are outcompeted - if not, they replace the current strain and become the new wild-type. 
+What happens in the presence of interventions is that the fitness landscape changes. FOr instance if we give a patient drugs, a mutant resistant to drugs - with fitness less than the wild-type in the absence of drug treatment - has a major advantage and can outcompete the wild-type strain.
+
+
+
+##Co-evolution
+While the hosts infected by ID also evolve, this usually happens on much slower time-scales. As such, studying evolution by assuming only the ID evolves and not the host is often a good approximation. However, there are examples where host evolution needs to be considered. A good example is the introduction of myxomavirus into australian rabbits. Evolution of both the virus and rabbits was observed. Over longer time-scales, features such as sickle cell anemia, which comes from a mutation that is associated with reduced malaria morbidity, is likely a trait some humans evolved in response to malaria.
+
+
+##Modeling evolutionary dynamics
+To study evolutionary dynamics, we will need to implement models that allow for changes in the system on top of the non-evolutionary dynamics of the ID. Unless we plan to model many different potential new variants, it is often easiest to pre-specify the number of variants we want to track. In the simplest form where we only track pathogen evolution, we might model the wild-type (normal, pre-existing) form of the pathogen and a single mutant that is different in some important characteristic, e.g. resistant to a drug or able to evade a vaccine. We would build a model with these compartments. We often also pre-specify the characteristics (i.e. the parameter values) for both the wild-type and mutant. We implement the process of mutant generation in the model, and run the simulation. Under certain circumstances, we might see the mutant be generated and take over the population. 
+
+If we want to model many different mutants, maybe allowing for random, not pre-specified, differences in their fitness, and maybe even allowing for host evolution, the models get quite a bit more complicated. They are not necessarily conceptually harder, but there is more bookkeeping and coding involved, which makes it technically trickier.
+
+##Summary
+
+##Exercises
+* The 
+
+##References

@@ -1,0 +1,61 @@
+#Modes of Direct Transmission
+
+
+##Overview
+In this chapter, we will discuss different types of direct transmission and explore how these different modes of transmission impact ID dynamics.
+
+
+
+##Types of direct transmission
+The most straightforward way of transmission is direct transmission from infected to uninfected host. A prime class of pathogens that follow this route are sexually transmitted infections (STI). For STI, the pathogen goes directly from one host to the other. Other pathogens are _essentially direct_ with only a very short time spent outside the host. Ebola is such an example, which requires close contact between infected and uninfected. While there is a short stage outside the host (e.g. pathogen particles suspended in the air, or on a person's hand), transmission can only occur if the pathogen enters the new host quickly after having been released from the infected host. As such, we usually consider this direct transmission.
+
+For direct transmission, there are important ways in which transmission can scale with population size or population density. One often distinguishes between _density-dependent_  and _frequency-dependent_ transmission. Unfortunately, the terminology is not very consistent, other terms are used and sometimes misused. See e.g. [@mccallum01, @begon02] for a discussion of this.
+
+The main differences between these 2 types of transmission have to do with the scaling of transmission intensity (often measured by the force of infection) as population size changes. This is a feature of the number of contacts that a susceptible has with an infected person. For some types of ID, e.g. STI, the number of contact (i.e. sexual encounters) is likely not too dependent on the population density or size. For instance the average person living in a town of 100,000 people likely has pretty much the same number of sexual contacts compared to the person living in a town if 1 million. One could argue that more opportunities might lead to more sexual contacts, but it's unlikely to change by much. This type of invariance of transmission is labeled (using the terminology of [@mccallum01,@begon02]) _frequency-dependent_.
+
+In contrast, for some ID, more individuals (given a constant area) leads to more contacts and more transmission. This might apply to ID such as influenza or norovirus. A scenario where an increase in population size/density leads to a (linear) increase in transmission is usually referred to as _density-dependent_ transmission. However, even for ID that do show some signs of density dependence, the number of social contacts often dominates. For instance a person in a city that is 10 times the size of a smaller city likely won't have 10 times as many contacts.
+
+
+
+###Modeling types of direct transmission
+Assuming the simple SIR model, we have the set of equations
+$$ 
+\begin{aligned}
+\dot S &= - \lambda S \\
+\dot I &= \lambda S  - \gamma I \\
+\dot R &= \gamma I
+\end{aligned}
+$$
+where we introduced the _force of infection_, $\lambda$ - which we previously set equal to _bI_.
+
+The force of infection can be rewritten in a differnt form, namely $\lambda= cpv$, where _c_ rate of contacts between hosts, _p_ is the probability that a contact is with an infected host and _v_ is the probability that transmission occurs during
+contact. As an example, for HIV, _c_ would measure frequency of sexual encounters, _p_ would quantify the fraction of those encounters that happen with an HIV+ individual, and _p_ quantifies the probability that having sex with an HIV+ individual leads to infection.
+
+Now, depending on the specific assumptions we make for the different parameters, we can end up with different types of transmission. We generally assume that the probability that a contact is with an infected host is equal to the prevalence of the ID in the population, i.e. p = I/N. This is the so-called well-mixed population assumption and holds for both frequency- and density-dependent SIR type models. If we wanted to relax this assumption, we would need to switch to for instance network-based models or build more complicated compartmental models.
+
+For density-dependent transmission, we assume that the rate of contacts is proportional to density of hosts, 
+i.e. c = kN/A, where N is the population size and A the area, and k is some constant of proportionality. As stated above, this might be a good approximation for some ID and scenarios, e.g. influenza.
+
+For frequency-dependent transmission, we assume that the rate of contacts is fixed and independent of the density of hosts, i.e. c = f. This might be a good approximation for e.g. sexually transmitted diseases, where the number/density of individuals in the vicinity of an individual does not (or only in a small way) influence the rate at which a person has sexual contacts.
+
+We therefore end up with $\lambda_d= kv I/A$ and $\lambda_f= fv I/N$ for density- and frequency- dependent transmission. The terms _kv_ and _fv_ are often combined into a new parameter, _b~d~_ and _b~f~_. 
+
+If population size and area are fixed, the transmission types lead to the same results, as long as parameter values are chosen accordingly.  If population size changes (not uncommon) or area changes (less common), one needs to be more careful with the choice of transmission term.
+
+
+###Note on notation
+Again, specific letters are often used in models in multiple ways. It is common to abbreviate the force of infection with $\lambda$. This letter is also often used for the birth rate (though here we usually use _b_). Just be careful when you read papers/models and make sure you know how each letter is defined.
+
+
+##Summary
+
+##Exercises
+* The _Direct transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+
+
+##Further Resources
+
+
+
+##References
+
