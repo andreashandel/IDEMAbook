@@ -1,4 +1,4 @@
-# Infectious Disease Epidemiology - A dynamical systems approach {#intro}
+# Introduction to the dynamical systems approach to infectious disease epidemiology {#intro}
 
 ## Overview and Learning Objectives
 In this chapter, we discuss the idea of taking a _(dynamical) systems approach_ and how it is applied to infectious diseases.
