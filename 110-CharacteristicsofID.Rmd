@@ -5,13 +5,15 @@
 In this module, we will discuss ways to characterize individuals with regard to their ID status. We will consider why some infection states are important for public health control but less for doctors and the opposite. We will also discuss how different ID states might or might not correspond to the compartments in our computer models. 
 
 
-The objectives for this chapter are:
+The learning objectives for this chapter are:
 
 * Categorize infectious diseases according to medical characteristics such as duration of symptoms, mortality, etc.
 * Categorize infectious diseases according to public health characteristics such as duration of infectiousness, immunity, etc.
 * Understand how "medical states" (e.g. symptoms) and "public health states" (e.g. infectiousness) do not always overlap.
 * Identify the features of infectious diseases that are most important to know for successful intervention planning
 * Understand how models change as more details are included
+
+##Introduction
 
 
 ## Infection states - clinical
@@ -47,7 +49,7 @@ Also, the model building and analysis process is often iterative. After a model 
 
 
 
-##Summary 
+##Summary and Cartoon
 This chapter discussed ways to characterize an individual host's state with regard to an infection. We discussed the differences between medical and public health perspectives and how ID states can be mapped to compartmental models. 
 
 ![Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/) ](../media/xkcd-course-of-colds.png)

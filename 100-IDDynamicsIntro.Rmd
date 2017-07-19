@@ -1,9 +1,10 @@
-# Introduction to the dynamical systems approach to infectious disease epidemiology {#intro}
+# Introduction to the dynamical systems approach to infectious disease epidemiology 
+
 
 ## Overview and Learning Objectives
 In this chapter, we discuss the idea of taking a _(dynamical) systems approach_ and how it is applied to infectious diseases.
 
-The objectives for this chapter are:
+The learning objectives for this chapter are:
 
 * Understand the basic ideas of complex systems and systems thinking/modeling
 * Assess strength and weaknesses of different approaches to ID dynamics
@@ -11,7 +12,7 @@ The objectives for this chapter are:
 * Know the components of Infectious Disease systems
 
 
-##Background 
+##Introduction 
 While the terminology of _systems thinking_ or _systems approach_ has seen increased use in the last few decades, the general idea has been around for a while. In public health, there is the basic idea - most often applied to infectious diseases - of the *agent - host - environment* system. 
 
 ![A system perspective - The epidemiological triangle](./images/epi-triangle.png)
@@ -87,8 +88,8 @@ This chapter provided a brief introduction to the concept of systems thinking an
 * Read the paper "Systems Science Methods in Public Health: Dynamics, Networks, and Agents" by Luke & Stamatakis [@luke12]. Come up with 2 systems that you consider complex in the realm of public health or biomedicine (other than those mentioned in the paper). Explain what makes them complex. Also come up with 2 systems that you consider not complex and explain why you think of them as not complex.
 
 
-
 ##Further Resources
+
 
 ##References
 

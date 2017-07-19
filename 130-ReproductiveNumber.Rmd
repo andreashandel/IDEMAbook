@@ -1,12 +1,20 @@
 # Reproductive Number
 
 
-##Overview
+## Overview and Learning Objectives
 The reproductive number is a very important concept in infectious disease epidemiology. It is simple in its definition and rather useful. The hard part is to properly estimate the reproductive number for a given disease and scenario. 
 We will discuss all these aspects in the following.
 
 
-##Background 
+The learning objectives for this chapter are:
+
+* Know how the reproductive number is defined
+* Kow how to compute the reproductive number from data
+* Apply the reproductive number concept to ID control
+
+
+
+##Introduction 
 We generally want to prevent infectious diseases from causing outbreaks, stop already ongoing outbreaks, reduce the number of people getting infected, or even bolder, try to eradicate a disease. 
 If we were able to make a vaccine against an infectious disease, it is useful to know what fraction of the population should be vaccinated to prevent future outbreaks or even eradicate the disease.
 
@@ -189,7 +197,7 @@ Knowing R is not only important for public health intervention planning, it is o
 
 
 
-##Summary 
+##Summary and Cartoon
 
 The reproductive number is a crucial concept in infectious disease epidemiology. It has a fairly straightforward definition. However, estimating R for a specific disease and scenario is not always easy. 
 
@@ -198,6 +206,16 @@ Under the assumption that everyone is susceptible, the reproductive number gets 
 R only measures one -- important -- component of a disease, namely its transmission potential/transmissibility. For a full understanding of a given disease, we need to know other characteristics such as speed of transmission, severity of disease including mortality, routes of transmission, and many other important details.
 
 The simplicity of R is both its strength and its weakness. It gives a quick, quantitative assessment of the transmission potential (and therefore outbreak size and needed control measures) of a disease. However, R is a population level average and ignores heterogeneities of host, agent and environment. Therefore any R estimates are only approximate.
+
+![Pandemic Control. [Source: dilbert.com](www.dilbert.com)](../media/dilbert_pandemic.png)
+
+
+
+##Exercises
+* The _Reproductive Number_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+
+
+## Further Resources
 
 
 ##References

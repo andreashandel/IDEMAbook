@@ -1,7 +1,7 @@
 
 # ID Patterns
 
-## Overview and Objectives
+## Overview and Learning Objectives
 In this module, we will discuss different patterns of ID dynamics, such as single outbreaks, recurrent cycles and steady endemic states. 
 
 The learning objectives for this chapter are:
@@ -9,6 +9,9 @@ The learning objectives for this chapter are:
 *	Understand the concept of resource replenishment
 *	Know the different mechanisms that can lead to ID cycles
 *	Understand the concept of endemic state
+* Understand what leads to different ID patterns 
+* Understand the difference between intrinsic and extrinsic drivers of ID cycles
+
 
 
 ## Introduction
@@ -100,5 +103,21 @@ Often, the model is too complicated to obtain useful equations for the steady st
 The idea of resource replenishment described above assumes in its simplest forms that in the absence of the ID, the host population is in steady state. That is, the number of births and deaths balance each other and the population size therefore stays constant. We then investigate ID dynamics on top of such a constant population (which then might not be constant anymore if the disease leads to many deaths).
 
 One can go a step further and consider an underlying population that changes in size due to underlying growth or decline of the population. We can then study the dynamics of an ID on top of an already dynamically changing population. While this is generally not much more complicated to do with computer models, it is harder to understand what exactly is going on in the system. For instance consider an ID with high mortality in a growing population. If we just looked at the population size, it could be that it remains constant, due to the 2 processes of natural population growth and disease induced mortality balancing each other. We therefore need to carefully study how the different processes affect ID dynamics.
+
+
+##Summary and Cartoon
+This module provided a discussion of different general patterns we observe in the dynamics of ID. Those are individual outbreaks, cycles of repeated outbreaks, and steady endemic states. 
+
+![Here's a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174) ](../media/phd_sciencenewscycle.gif)
+
+
+
+##Exercises
+* The _Patterns of ID_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* Find a scientific article/paper that investigates the incidence/prevalence pattern of some ID. Summarize the article. Discuss why one sees the observed pattern (and not one of the others). Speculate what kind of change to the ID/system could change the observed pattern (even if that change is not biologically realistic).
+* Read the article "Dynamical resonance can account for seasonality of influenza epidemics" by Dushoff et al [@dushoff04]. They suggest an interesting explanation for the seasonal variation in influenza cases. Look at the literature to see if since that paper came out, there has been any further progress on that question. Discuss recent advances that might support or refute the idea suggested by Dushoff et al.
+
+## Further Resources
+
 
 ##References

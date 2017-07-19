@@ -1,9 +1,11 @@
 #Modes of Direct Transmission
 
 
-##Overview
+##Overview and Learning Objectives
 In this chapter, we will discuss different types of direct transmission and explore how these different modes of transmission impact ID dynamics.
 
+
+##Introduction
 
 
 ##Types of direct transmission
@@ -47,7 +49,8 @@ If population size and area are fixed, the transmission types lead to the same r
 Again, specific letters are often used in models in multiple ways. It is common to abbreviate the force of infection with $\lambda$. This letter is also often used for the birth rate (though here we usually use _b_). Just be careful when you read papers/models and make sure you know how each letter is defined.
 
 
-##Summary
+##Summary and Cartoon
+
 
 ##Exercises
 * The _Direct transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
