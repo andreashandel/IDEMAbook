@@ -80,7 +80,7 @@ If you want to read a bit more about these compartmental models, [check out this
 ##Summary and Cartoon
 This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. You also got an introduction to a fairly simple model of an infectious disease system.
 
-![Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/) ](../media/xkcd-flowcharts.png)
+![Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/) ](./images/xkcd-flowcharts.png)
 
 ##Exercises
 * Work through the tasks for the _ID Dynamics Introduction_ DSAIDE app.

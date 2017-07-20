@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="host-heterogeneity.html">
-<link rel="next" href="stochastic-dynamics-and-extinctions.html">
+<link rel="prev" href="reproductive-number.html">
+<link rel="next" href="modes-of-direct-transmission.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -286,44 +286,49 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dynamics-of-multiple-pathogens" class="section level1">
-<h1><span class="header-section-number">12</span> Dynamics of Multiple Pathogens</h1>
-<div id="overview-2" class="section level2">
-<h2><span class="header-section-number">12.1</span> Overview</h2>
-<p>In this chapter, we will discuss a scenario where more than one infectious disease is considered simultaneously.</p>
-</div>
-<div id="introduction-10" class="section level2">
-<h2><span class="header-section-number">12.2</span> Introduction</h2>
-<p>So far, we only focused on a single ID.</p>
-</div>
-<div id="types-of-interactions" class="section level2">
-<h2><span class="header-section-number">12.3</span> Types of interactions</h2>
-<div id="mytextbox" class="section level3">
-<h3><span class="header-section-number">12.3.1</span> Host heterogeneity examples</h3>
-<p>There are several famous examples that show how differences in genetics impact ID. For instance persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a specific mutation in the FUT2 gene are much less likely to get infected with norovirus. It is likely that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.</p>
-</div>
-</div>
-<div id="multiple-id-and-control" class="section level2">
-<h2><span class="header-section-number">12.4</span> Multiple ID and control</h2>
-<p>While the importance of interactions between IDs is recognized, a multi-ID approach to intervention is often not as common as it probably should be.</p>
-</div>
-<div id="modeling-multiple-id" class="section level2">
-<h2><span class="header-section-number">12.5</span> Modeling multiple ID</h2>
-<p>The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated bits are to properly model any potential interactions between IDs.</p>
-<p>[Example of a model that considers 2 ID.]./images/multipathogenmodel.png)</p>
-<p>As mentioned previously, more compartments means bigger models. Those are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many important 2-ID modeling studies exist.</p>
-</div>
-<div id="summary-1" class="section level2">
-<h2><span class="header-section-number">12.6</span> Summary</h2>
-</div>
-<div id="exercises-9" class="section level2">
-<h2><span class="header-section-number">12.7</span> Exercises</h2>
+<div id="types-of-infectious-disease-transmission" class="section level1">
+<h1><span class="header-section-number">6</span> Types of infectious disease transmission</h1>
+<div id="overview-and-learning-objectives-4" class="section level2">
+<h2><span class="header-section-number">6.1</span> Overview and Learning Objectives</h2>
+<p>In this chapter, we will introduce different types of ID transmission and how these different modes of transmission impact ID dynamics. Several of the following chapters will go into more detail on different modes of transmission.</p>
+<p>The learning objectives for this chapter are:</p>
 <ul>
-<li>The <em>Multi-pathogen dynamics</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>Know the different types if ID transmission</li>
+<li>Understand the implications different modes of transmission have for ID dynamics and control</li>
 </ul>
 </div>
-<div id="references-11" class="section level2">
-<h2><span class="header-section-number">12.8</span> References</h2>
+<div id="introduction-4" class="section level2">
+<h2><span class="header-section-number">6.2</span> Introduction</h2>
+</div>
+<div id="direct-transmission" class="section level2">
+<h2><span class="header-section-number">6.3</span> Direct transmission</h2>
+<p>The most straightforward way of transmission is direct transmission from infected to uninfected host.</p>
+</div>
+<div id="environmental-transmission" class="section level2">
+<h2><span class="header-section-number">6.4</span> Environmental transmission</h2>
+</div>
+<div id="multi-host-transmission" class="section level2">
+<h2><span class="header-section-number">6.5</span> Multi-host transmission</h2>
+</div>
+<div id="summary-and-cartoon-4" class="section level2">
+<h2><span class="header-section-number">6.6</span> Summary and Cartoon</h2>
+<p>This chapter described different assumptions for direct transmission models and how they lead to different results with regard to disease dynamics and potential control strategies.</p>
+<div class="figure">
+<img src="images/smbctransmissionmode.png" alt="NEED NEW ONE. Source: smbc-comics.com" />
+<p class="caption">NEED NEW ONE. <a href="http://www.smbc-comics.com/">Source: smbc-comics.com</a></p>
+</div>
+</div>
+<div id="exercises-4" class="section level2">
+<h2><span class="header-section-number">6.7</span> Exercises</h2>
+<ul>
+<li>Several apps in the DSAIDE package address specific types of transmission, those are discussed in the following chapters.</li>
+</ul>
+</div>
+<div id="further-resources-4" class="section level2">
+<h2><span class="header-section-number">6.8</span> Further Resources</h2>
+</div>
+<div id="references-5" class="section level2">
+<h2><span class="header-section-number">6.9</span> References</h2>
 
 </div>
 </div>
@@ -332,8 +337,8 @@
           </div>
         </div>
       </div>
-<a href="host-heterogeneity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="stochastic-dynamics-and-extinctions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="reproductive-number.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="modes-of-direct-transmission.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

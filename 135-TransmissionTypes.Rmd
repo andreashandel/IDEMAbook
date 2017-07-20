@@ -1,0 +1,43 @@
+#Types of infectious disease transmission
+
+
+## Overview and Learning Objectives
+In this chapter, we will introduce different types of ID transmission and how these different modes of transmission impact ID dynamics. Several of the following chapters will go into more detail on different modes of transmission.
+
+The learning objectives for this chapter are:
+
+* Know the different types if ID transmission
+* Understand the implications different modes of transmission have for ID dynamics and control
+
+
+##Introduction
+
+
+##Direct transmission
+The most straightforward way of transmission is direct transmission from infected to uninfected host. 
+
+
+##Environmental transmission
+
+
+##Multi-host transmission
+
+
+
+##Summary and Cartoon
+This chapter described different assumptions for direct transmission models and how they lead to different results with regard to disease dynamics and potential control strategies.
+
+![NEED NEW ONE. [Source: smbc-comics.com](http://www.smbc-comics.com/)](./images/smbctransmissionmode.png)
+
+
+
+
+##Exercises
+* Several apps in the DSAIDE package address specific types of transmission, those are discussed in the following chapters.
+
+
+##Further Resources
+
+
+##References
+

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="host-heterogeneity.html">
-<link rel="next" href="stochastic-dynamics-and-extinctions.html">
+<link rel="prev" href="modes-of-direct-transmission.html">
+<link rel="next" href="vector-borne-id-transmission.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -286,44 +286,63 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dynamics-of-multiple-pathogens" class="section level1">
-<h1><span class="header-section-number">12</span> Dynamics of Multiple Pathogens</h1>
-<div id="overview-2" class="section level2">
-<h2><span class="header-section-number">12.1</span> Overview</h2>
-<p>In this chapter, we will discuss a scenario where more than one infectious disease is considered simultaneously.</p>
+<div id="environmental-transmission-1" class="section level1">
+<h1><span class="header-section-number">8</span> Environmental Transmission</h1>
+<div id="overview-and-learning-objectives-6" class="section level2">
+<h2><span class="header-section-number">8.1</span> Overview and Learning Objectives</h2>
+<p>A number of pathogens transmit through an environmental stage. This chapter discusses the implications on the ID dynamics in such cases.</p>
 </div>
-<div id="introduction-10" class="section level2">
-<h2><span class="header-section-number">12.2</span> Introduction</h2>
-<p>So far, we only focused on a single ID.</p>
+<div id="introduction-6" class="section level2">
+<h2><span class="header-section-number">8.2</span> Introduction</h2>
 </div>
-<div id="types-of-interactions" class="section level2">
-<h2><span class="header-section-number">12.3</span> Types of interactions</h2>
-<div id="mytextbox" class="section level3">
-<h3><span class="header-section-number">12.3.1</span> Host heterogeneity examples</h3>
-<p>There are several famous examples that show how differences in genetics impact ID. For instance persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a specific mutation in the FUT2 gene are much less likely to get infected with norovirus. It is likely that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.</p>
+<div id="types-of-indirect-transmission" class="section level2">
+<h2><span class="header-section-number">8.3</span> Types of indirect transmission</h2>
+<p>While the distinction between direct and indirect transmission is not clear-cut, we usually consider an ID to have an indirect mode of transmission if the time spent outside the main host is <em>important</em> for the whole transmission cycle. The two main types of stages where a pathogen resides outside the main host are the abiotic environment or another host species. In the case of the former, we consider it to be environmental transmission, in the case of the latter, it is vector-borne. Of course, some ID are even more complicated and have both vector and environmental stages.</p>
+<div id="environmental-transmission-2" class="section level3">
+<h3><span class="header-section-number">8.3.1</span> Environmental transmission</h3>
+<p>Some diseases are shed by hosts into the environment, where they can survive for a potentially extended time before re-infecting a new host. Cholera is a good example of an ID that has water sources as environmental stage. Similarly, avian influenza is thought to survive in cold lake water for an extended time. The important consequence of environmental transmission is that it potentially allows new infections to occur over long distances in time and space. For instance an infected person might shed Cholera into the water somewhere upstream, and a susceptible person ingests the Cholera bacteria somewhere downstream miles and days or weeks away. This is fundamentally different to direct transmission, which requires close contact.</p>
+<div class="figure">
+<img src="images/environmentaltransmissionscheme.png" alt="Schematic of an ID with environmental transmission" />
+<p class="caption">Schematic of an ID with environmental transmission</p>
 </div>
 </div>
-<div id="multiple-id-and-control" class="section level2">
-<h2><span class="header-section-number">12.4</span> Multiple ID and control</h2>
-<p>While the importance of interactions between IDs is recognized, a multi-ID approach to intervention is often not as common as it probably should be.</p>
+<div id="modeling-environmental-transmission" class="section level3">
+<h3><span class="header-section-number">8.3.2</span> Modeling environmental transmission</h3>
+<p>Most often, during the environmental stage, we assume that the pathogen does not ‘do’ anything. This is in contrast to vector-borne transmission where the pathogen might for instance undergo replication in the vector. Thus, we assume that infected hosts shed pathogen into the environment, where it decays. If a a susceptible person comes into contact with the pathogen in the environment, an infection can occur. The simplest SIR type model that can capture this process is given by <span class="math display">\[ 
+\begin{aligned}
+\dot S &amp;= - b E S \\
+\dot I &amp;= b E S  - \gamma I \\
+\dot R &amp;= \gamma I \\
+\dot E &amp;= p I - cE
+\end{aligned}
+\]</span> Infected persons release pathogen into the environment at rate <em>p</em>. The pathogen decays at rate <em>c</em>. A susceptible host can get infected by contact with contaminated environment at rate <em>b</em>.</p>
 </div>
-<div id="modeling-multiple-id" class="section level2">
-<h2><span class="header-section-number">12.5</span> Modeling multiple ID</h2>
-<p>The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated bits are to properly model any potential interactions between IDs.</p>
-<p>[Example of a model that considers 2 ID.]./images/multipathogenmodel.png)</p>
-<p>As mentioned previously, more compartments means bigger models. Those are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many important 2-ID modeling studies exist.</p>
+<div id="environmental-transmission-and-external-drivers" class="section level3">
+<h3><span class="header-section-number">8.3.3</span> Environmental transmission and external drivers</h3>
+<p>Because environmental transmission involves the survival of pathogen for a potentially extended time in the environment, such ID are often more strongly influenced by external drivers compared to ID that are directly transmitted. The weather has often a strong impact, as do behavior changes. E.g. humans living in temparate zones are more likely to swim in lakes when it’s warm, therefore water-borne diseases often have the highest incidence in warm months.</p>
+<p>Such external drivers can be included in models by allowing certain parameters to vary over time. For instance the transmission rate or the rate at which environmental pathogen decays could be made dependent on the time of the year.</p>
 </div>
-<div id="summary-1" class="section level2">
-<h2><span class="header-section-number">12.6</span> Summary</h2>
 </div>
-<div id="exercises-9" class="section level2">
-<h2><span class="header-section-number">12.7</span> Exercises</h2>
+<div id="summary-and-cartoon-6" class="section level2">
+<h2><span class="header-section-number">8.4</span> Summary and Cartoon</h2>
+<div class="figure">
+<img src="images/smbctransmissionmode.png" alt="Modes of transmission. Source: smbc-comics.com" />
+<p class="caption">Modes of transmission. <a href="http://www.smbc-comics.com/">Source: smbc-comics.com</a></p>
+</div>
+</div>
+<div id="exercises-6" class="section level2">
+<h2><span class="header-section-number">8.5</span> Exercises</h2>
 <ul>
-<li>The <em>Multi-pathogen dynamics</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>The <em>Environmental transmission</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>The paper by Killingley and Nguyen-Van-Tam describes modes of transmission for influenza. Pick a pathogen that can transmit in a somewhat similar manner (e.g. Ebola, SARS, MERS, or such) and compare and contrast what is known about similarities and differences in transmission between flu and the pathogen you pick. Also briefly discuss implications for control.</li>
 </ul>
 </div>
-<div id="references-11" class="section level2">
-<h2><span class="header-section-number">12.8</span> References</h2>
+<div id="further-resources-6" class="section level2">
+<h2><span class="header-section-number">8.6</span> Further Resources</h2>
+<p>The following papers provide some additional introductory reading on the topic of environmental transmission from a dynamical systems perspective: [brankston07, cortez13]</p>
+</div>
+<div id="references-7" class="section level2">
+<h2><span class="header-section-number">8.7</span> References</h2>
 
 </div>
 </div>
@@ -332,8 +351,8 @@
           </div>
         </div>
       </div>
-<a href="host-heterogeneity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="stochastic-dynamics-and-extinctions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="modes-of-direct-transmission.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vector-borne-id-transmission.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

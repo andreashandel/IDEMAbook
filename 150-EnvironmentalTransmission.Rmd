@@ -1,8 +1,12 @@
 #Environmental Transmission
 
 
-##Overview
+## Overview and Learning Objectives
+
 A number of pathogens transmit through an environmental stage. This chapter discusses the implications on the ID dynamics in such cases.
+
+
+##Introduction
 
 
 ##Types of indirect transmission
@@ -35,11 +39,18 @@ Because environmental transmission involves the survival of pathogen for a poten
 Such external drivers can be included in models by allowing certain parameters to vary over time. For instance the transmission rate or the rate at which environmental pathogen decays could be made dependent on the time of the year.
 
 
+##Summary and Cartoon
+![Modes of transmission. [Source: smbc-comics.com](http://www.smbc-comics.com/)](./images/smbctransmissionmode.png)
 
-##Summary
 
 ##Exercises
 * The _Environmental transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* The paper by Killingley and Nguyen-Van-Tam describes modes of transmission for influenza. Pick a pathogen that can transmit in a somewhat similar manner (e.g. Ebola, SARS, MERS, or such) and compare and contrast what is known about similarities and differences in transmission between flu and the pathogen you pick. Also briefly discuss implications for control.
+
+
+##Further Resources
+The following papers provide some additional introductory reading on the topic of environmental transmission from a dynamical systems perspective: [brankston07, cortez13]
+
 
 ##References
 

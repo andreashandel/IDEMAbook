@@ -1,11 +1,15 @@
 #Vector-borne ID transmission
 
 
-##Overview
+## Overview and Learning Objectives
 In this chapter, we will discuss an important form of indirect transmission, one that has a vector stage.
 
+The learning objectives for this chapter are:
+* Understand 
+* Understand how vector-borne transmission influences potential ID control strategies.
 
-###Vector-borne transmission
+
+## Introduction
 Vector-borne ID are those that go through - at least - two different hosts to complete a full replication and transmission cycle. Hosts of one type infect hosts of the other, there is no direct transmission between hosts of the same type.
 
 ![Schematic of a vector-borne ID](./images/vectorborne-schematic.png)
@@ -14,7 +18,7 @@ Not surprisingly, the IDs which receive the most study are those where one of th
 
 
 
-###Modeling vector-borne transmission
+##Modeling vector-borne transmission
 The easiest way to model a vector-borne disease is to simply ignore the vector and assume that the transmission term of the equation (e.g. a term like _bSI_) represents -- in a very simpliefied form -- all the complicated processes involved in transmission, including the vector stage. That makes the model simple, but of course doesn't capture the vector-borne aspects of the dynamics. If we are interested in the dynamics of the disease in all hosts, we do need to include the vector components in a model.
 
 To include vectors in a model, one could for instance build 2 SIR-type models, with one set of equations for the (human) host and one for the vector, and then couple the compartments by including transmission from humans to vectors and vectors to humans. Equations for such a model would look as follows:
@@ -38,11 +42,18 @@ It is common to include more details in the human part of the model (e.g. asympt
 
 
 
-##Summary
+##Summary and Cartoon
+
 
 ##Exercises
 * The _Vector transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* Nominate an ID as contender for having the 'craziest or most complicated' mode(s) of transmission. Explain the transmission dynamics for your nomination and justify why it deserves the title of _craziest or most complicated_. This doesn't have to be a vector-borne disease, though some of the "crazy" ones tend to use multiple hosts.
+
+
+##Further Resources
+The following papers provide some additional introductory reading on the topic of vector borne ID transmission from a dynamical systems perspective: 
 
 ##References
+
 
 

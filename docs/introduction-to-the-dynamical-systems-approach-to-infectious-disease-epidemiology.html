@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="host-heterogeneity.html">
-<link rel="next" href="stochastic-dynamics-and-extinctions.html">
+<link rel="prev" href="overview-of-this-book.html">
+<link rel="next" href="characterizing-infection-states.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -286,45 +286,100 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dynamics-of-multiple-pathogens" class="section level1">
-<h1><span class="header-section-number">12</span> Dynamics of Multiple Pathogens</h1>
-<div id="overview-2" class="section level2">
-<h2><span class="header-section-number">12.1</span> Overview</h2>
-<p>In this chapter, we will discuss a scenario where more than one infectious disease is considered simultaneously.</p>
-</div>
-<div id="introduction-10" class="section level2">
-<h2><span class="header-section-number">12.2</span> Introduction</h2>
-<p>So far, we only focused on a single ID.</p>
-</div>
-<div id="types-of-interactions" class="section level2">
-<h2><span class="header-section-number">12.3</span> Types of interactions</h2>
-<div id="mytextbox" class="section level3">
-<h3><span class="header-section-number">12.3.1</span> Host heterogeneity examples</h3>
-<p>There are several famous examples that show how differences in genetics impact ID. For instance persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a specific mutation in the FUT2 gene are much less likely to get infected with norovirus. It is likely that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.</p>
-</div>
-</div>
-<div id="multiple-id-and-control" class="section level2">
-<h2><span class="header-section-number">12.4</span> Multiple ID and control</h2>
-<p>While the importance of interactions between IDs is recognized, a multi-ID approach to intervention is often not as common as it probably should be.</p>
-</div>
-<div id="modeling-multiple-id" class="section level2">
-<h2><span class="header-section-number">12.5</span> Modeling multiple ID</h2>
-<p>The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated bits are to properly model any potential interactions between IDs.</p>
-<p>[Example of a model that considers 2 ID.]./images/multipathogenmodel.png)</p>
-<p>As mentioned previously, more compartments means bigger models. Those are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many important 2-ID modeling studies exist.</p>
-</div>
-<div id="summary-1" class="section level2">
-<h2><span class="header-section-number">12.6</span> Summary</h2>
-</div>
-<div id="exercises-9" class="section level2">
-<h2><span class="header-section-number">12.7</span> Exercises</h2>
+<div id="introduction-to-the-dynamical-systems-approach-to-infectious-disease-epidemiology" class="section level1">
+<h1><span class="header-section-number">2</span> Introduction to the dynamical systems approach to infectious disease epidemiology</h1>
+<div id="overview-and-learning-objectives" class="section level2">
+<h2><span class="header-section-number">2.1</span> Overview and Learning Objectives</h2>
+<p>In this chapter, we discuss the idea of taking a <em>(dynamical) systems approach</em> and how it is applied to infectious diseases.</p>
+<p>The learning objectives for this chapter are:</p>
 <ul>
-<li>The <em>Multi-pathogen dynamics</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>Understand the basic ideas of complex systems and systems thinking/modeling</li>
+<li>Assess strength and weaknesses of different approaches to ID dynamics</li>
+<li>Understand the idea of a compartmental model and how it can be used to model infectious diseases</li>
+<li>Know the components of Infectious Disease systems</li>
 </ul>
 </div>
-<div id="references-11" class="section level2">
-<h2><span class="header-section-number">12.8</span> References</h2>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">2.2</span> Introduction</h2>
+<p>While the terminology of <em>systems thinking</em> or <em>systems approach</em> has seen increased use in the last few decades, the general idea has been around for a while. In public health, there is the basic idea - most often applied to infectious diseases - of the <em>agent - host - environment</em> system.</p>
+<div class="figure">
+<img src="images/epi-triangle.png" alt="A system perspective - The epidemiological triangle" />
+<p class="caption">A system perspective - The epidemiological triangle</p>
+</div>
+<p>Similarly, one can think of the basic epidemiological concept of <em>person - place - time</em> as describing a system. The notion of a system is present in virtually every field of research, ranging from the hard sciences to social sciences and business.</p>
+<p>The scientific approach that has generally been the most successful in the past was to break down a system into its individual components and study the components one at a time. This is usually referred to as the <em>reductionistic approach</em>. This approach to understanding the world is still very powerful and useful.</p>
+<p>A complementary approach, which has seen increased use, is to look at “the whole” system at once, instead of each component at a time. This approach can provide insights that might not be obtained by the purely reductionist approach. This approach of looking at the whole system at once is often referred to as <em>systems thinking/approach</em>.</p>
+</div>
+<div id="systems-thinking" class="section level2">
+<h2><span class="header-section-number">2.3</span> Systems Thinking</h2>
+<p>The term <em>systems thinking</em> or <em>systems approach</em> or similar such terminology has become popular in various fields during the last few decades. It is not a very clearly defined term, but in general a <em>systems</em> perspective looks at multiple - often many - components that interact with each other in potentially complicated ways. For instance the problem of obesity has many different components that interact in potentially complicated ways to affect a person’s weight. Complex systems are basically everywhere. The approach of studying (most of) the system at once instead of looking at a single component at a time is the hallmark of the <em>systems approach</em></p>
+<div class="figure">
+<img src="images/complexsystem.png" alt="Obesity as a complex system: http://goo.gl/m2Qq13" />
+<p class="caption">Obesity as a complex system: <a href="http://goo.gl/m2Qq13" class="uri">http://goo.gl/m2Qq13</a></p>
+</div>
+</div>
+<div id="sytems-thinking-and-models" class="section level2">
+<h2><span class="header-section-number">2.4</span> Sytems Thinking and Models</h2>
+<p>Models are everywhere in science. Models can be conceptual (e.g. graphs or charts), experimental model systems (e.g. a specific mouse strain in immunology) or take the form of mathematical/computer models.</p>
+<p>Once we take the systems perspective, we have to deal with many components that interact in potentially complicated ways. This makes study and analysis complicated, especially if we are trying to gain insights into the causal and mechanistic connections between some quantity (exposure) and some outcome. When taking a systems approach, it is therefore often not enough to have a conceptual model. While a conceptual approach often allows some qualitative understanding, it is somewhat limiting. It is for instance almost impossible to gain a good <em>quantitative</em> understanding how changes in certain conditions and components of a system lead to changes for outcomes of interest by relying on conceptual approaches alone. If we want to go beyond qualitative and move toward a quantitative understanding (i.e. ‘increasing tobacco tax by X% will reduce smoking-related healthcare costs by Y%’), we need mathematical/computational models. There are many different types of models one can implement. The following provides a - very brief - overview of different modeling approaches.</p>
+<div id="phenomenological-statistical-models" class="section level3">
+<h3><span class="header-section-number">2.4.1</span> Phenomenological (statistical) Models</h3>
+<p>A huge class of models consists of what we usually refer to as statistical models. In the context of this discussion, I prefer to label them <em>phenomenological</em> models, but that terminology is rarely used. The idea behind the statistical/phenomenological approach is to use a mathematical or computational model to study if there are any patterns between the input (exposure and other variables) and the output (outcomes of interest).</p>
+<p>For instance a linear regression model investigates if there is a pattern/correlation between input and output that can be well approximated by a linear function. More complicated statistical models exist, some go by the name of <em>machine learning methods</em>. All of these models try to determine if there are patterns between inputs and outputs of interest in the data.</p>
+<p>One feature these statistical/phenomenological models have in common is that they do not try to describe the mechanisms of interactions within the system that lead to the observed input-output relations. For instance if we find that the relation between number of cigarettes smoked per day and the 5-year risk of lung cancer can be approximated by a linear function, it does not tell us much about the mechanisms leading from smoking to lung cancer.</p>
+</div>
+<div id="mechanistic-models" class="section level3">
+<h3><span class="header-section-number">2.4.2</span> Mechanistic Models</h3>
+<p>Another class of models are those that try to explicitly - albeit usually in very simplified form - try to model the mechanisms of interaction among system components. Those models are commonly used for infectious disease studies. For instance we might want to know how drug dose affects pathogen clearance inside an infected patient. We could collect data on both (such data often needs to come from animal models) and see if a straight line or other kind of model fits the data. Alternatively, we could try to build a model that explicitly captures the mechanism of the drug killing the pathogen, and then see if this mechanistic model describes the data well. The advantage of these kinds of models is that they potentially provide better and deeper understanding of the system. The main disadvantage is that we already need to know (or at least assume) a good bit about how the components interact for us to be able to build such a model. If we don’t know what mechanisms might lead to some input impacting some output, we can’t build a mechanistic model.</p>
+<p>Both phenomenological (statistical) and mechanistic models are useful tools with distinct advantages and disadvantages. Which one to use depends on the question and study system. For this course, we will focus on mechanistic models. These kinds of models can be formulated in many different ways. We discuss some below.</p>
+</div>
+<div id="dynamical-systems-thinkingmodeling" class="section level3">
+<h3><span class="header-section-number">2.4.3</span> Dynamical Systems Thinking/Modeling</h3>
+<p>The dynamical part adds an explicit time component to the system. To see the difference between a dynamical system and a ‘static’ one, consider this example:</p>
+<p>We could study how a change in tobacco taxes might lead to changes in healthcare costs in a given state. Of course, time is present in this system: First we change the taxes, then we look at changes in costs over some time frame. However, when studying this system, one usually doesn’t need to consider an explicitly time-dependent dynamic. Instead one looks at 2 scenarios: Taxes 1 &amp; Costs 1 versus Taxes 2 &amp; Costs 2. It is usually not necessary to model or simulate the chain of events leading from tax change to cost change while explicitly accounting for time.</p>
+<p>In contrast, in a dynamical system the model explicitly undergoes changes in time. We might often want to know how certain changes to the system (e.g. interventions) lead to changes in outcomes through a <em>dynamical/time-dependent</em> chain of events. For infectious diseases, we most often have some underlying dynamics that we need to take into account (e.g. an ongoing outbreak) and on top of which we might want to implement some interventions. Therefore, the dynamical perspective is often used. Even if a specific disease can be considered to be ‘steady’ before we implement an intervention (e.g. a given level of TB in a country), there is still disease transmission between individuals happening, which most often makes the dynamical approach more suitable.</p>
+<p>We can illustrate this dynamical perspective by extending the epidemiological triangle. The following figure shows the components and the interactions of the triangle changing over time.</p>
+<div class="figure">
+<img src="images/moving-triangle.png" alt="Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction." />
+<p class="caption">Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.</p>
+</div>
+</div>
+<div id="types-of-dynamical-mechanistic-models" class="section level3">
+<h3><span class="header-section-number">2.4.4</span> Types of dynamical, mechanistic models</h3>
+<p>When building models based on a systems approach, there are two main approaches. In one approach, the model is made up of individual <em>agents/individuals</em> and is thus called Agent based or Individual based model. The agents/individuals - which often but not always are humans - interact with each other. Each agent has certain properties and undergoes certain actions. The interactions of all agents leads to potentially interesting and complex dynamics. Schelling’s segregation model (see this module’s videos) is a nice example of such an agent based model.</p>
+<p>Another approach simplifies the system by not tracking every individual agent, but instead only keeps track of total agents/individuals in certain states. For instance for infectious disease models, we might only keep track of the total number of individuals who are susceptible, infectious and recovered/immune. This simplifies models immensely. If we had a population of a 100, 1000 or 10,000, we would need to keep track of as many agents. If we only keep track of total number of individuals in the 3 states just mentioned, we only need to track how our 3 states - usually called <em>compartments</em> - change, namely we need to track changes in the numbers of susceptible/infected/recovered - no matter how large our population.</p>
+<p>While these compartmental models are obviously simplifications of the real system, they often retain enough of the model complexity to allow us to study the system well. Because of this, the majority of models used in infectious disease epidemiology are these types of compartmental models, and we will use them throughout the course.</p>
+<p>If you want to read a bit more about these compartmental models, <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">check out this Wikipedia article</a></p>
+</div>
+</div>
+<div id="summary-and-cartoon" class="section level2">
+<h2><span class="header-section-number">2.5</span> Summary and Cartoon</h2>
+<p>This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. You also got an introduction to a fairly simple model of an infectious disease system.</p>
+<div class="figure">
+<img src="images/xkcd-flowcharts.png" alt="Not every diagram helps to understand a complex system. Source: xkcd.com" />
+<p class="caption">Not every diagram helps to understand a complex system. <a href="https://xkcd.com/1488/">Source: xkcd.com</a></p>
+</div>
+</div>
+<div id="exercises" class="section level2">
+<h2><span class="header-section-number">2.6</span> Exercises</h2>
+<ul>
+<li>Work through the tasks for the <em>ID Dynamics Introduction</em> DSAIDE app.</li>
+<li>Contemplate on your experience with the <em>ID Dynamics Introduction</em> DSAIDE app. In which way does it capture the ‘dynamical systems’ perspective? Did you find any behavior of this - arguably still very simple - infectious disease model/system that you would consider as being “complex”? How/why?</li>
+<li>Read the paper “Systems Science Methods in Public Health: Dynamics, Networks, and Agents” by Luke &amp; Stamatakis <span class="citation">(Luke and Stamatakis <a href="#ref-luke12">2012</a>)</span>. Come up with 2 systems that you consider complex in the realm of public health or biomedicine (other than those mentioned in the paper). Explain what makes them complex. Also come up with 2 systems that you consider not complex and explain why you think of them as not complex.</li>
+</ul>
+</div>
+<div id="further-resources" class="section level2">
+<h2><span class="header-section-number">2.7</span> Further Resources</h2>
+</div>
+<div id="references-1" class="section level2">
+<h2><span class="header-section-number">2.8</span> References</h2>
 
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-luke12">
+<p>Luke, Douglas A, and Katherine A Stamatakis. 2012. “Systems Science Methods in Public Health: Dynamics, Networks, and Agents.” <em>Annual Review of Public Health</em> 33. Annual Reviews: 357–76.</p>
 </div>
 </div>
             </section>
@@ -332,8 +387,8 @@
           </div>
         </div>
       </div>
-<a href="host-heterogeneity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="stochastic-dynamics-and-extinctions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="overview-of-this-book.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="characterizing-infection-states.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

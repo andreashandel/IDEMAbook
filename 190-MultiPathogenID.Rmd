@@ -26,7 +26,7 @@ While the importance of interactions between IDs is recognized, a multi-ID appro
 The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated bits are to properly model any potential interactions between IDs.
 
 
-![Example of a model that considers 2 ID.](./media/multipathogenmodel.png)
+![Example of a model that considers 2 ID.]./images/multipathogenmodel.png)
 
 
 

@@ -5,8 +5,12 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: 
     bookdown::gitbook:
-      highlight: tango
+        css: ./dsaidebook.css
+        fig_caption: true
 documentclass: book
+config:
+    toc:
+      collapse: none
 bibliography: dsaidereferences.bib
 biblio-style: apalike
 link-citations: yes

@@ -52,7 +52,7 @@ Also, the model building and analysis process is often iterative. After a model 
 ##Summary and Cartoon
 This chapter discussed ways to characterize an individual host's state with regard to an infection. We discussed the differences between medical and public health perspectives and how ID states can be mapped to compartmental models. 
 
-![Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/) ](../media/xkcd-course-of-colds.png)
+![Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/) ](./images/xkcd-course-of-colds.png)
 
 
 ##Exercises

@@ -1,8 +1,13 @@
 #Modes of Direct Transmission
 
 
-##Overview and Learning Objectives
+## Overview and Learning Objectives
 In this chapter, we will discuss different types of direct transmission and explore how these different modes of transmission impact ID dynamics.
+
+The learning objectives for this chapter are:
+
+* understand the assumptions underlying different modes of direct transmission
+* Understand how different modes of direct transmission affect ID dynamics
 
 
 ##Introduction
@@ -50,13 +55,19 @@ Again, specific letters are often used in models in multiple ways. It is common 
 
 
 ##Summary and Cartoon
+This chapter described different assumptions for direct transmission models and how they lead to different results with regard to disease dynamics and potential control strategies.
+
+![NEED NEW ONE. [Source: smbc-comics.com](http://www.smbc-comics.com/)](./images/smbctransmissionmode.png)
+
+
 
 
 ##Exercises
 * The _Direct transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
-
+* Read the paper "How should pathogen transmission be modelled? " by McCallum et al [@mccallum01]. The authors discuss different models for transmission. They claim that it matters in a practical setting to get the transmission term right. Pick some ID and explain how different assumptions about transmission might lead to different conclusions with regard to possible control strategies. 
 
 ##Further Resources
+The following papers provide some additional reading on the topic of direct transmission types from a dynamical systems perspective: [@begon02]
 
 
 
