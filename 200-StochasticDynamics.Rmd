@@ -1,7 +1,16 @@
 #Stochastic Dynamics and Extinctions
 
-##Overview
-In this module, we will take a look at stochasticity and how it impacts ID dynamics. A special focus is given on the potential of ID extinction.
+##Overview and Learning Objectives
+In this module, we will take a look at stochasticity and how it impacts ID dynamics. A special focus is given on the potential of ID extinction. We will discuss how one needs to account for stochasticity in models if one wants to study extinction. We will then investigate the phenomenon of extinction and then turn to the flip side, emergence of new pathogens through evolution. 
+
+
+The learning objectives for this chapter are:
+
+* Understand how stochasticity affects ID dynamics and can lead to extinctions
+*	Understand the difference between stochastic and deterministic models
+*	Know when one needs to make use of stochastic models
+*	Understand the concept of critical community size
+
 
 ##Determinisic models
 So far, all the models we have used to explore different aspects of ID dynamics have been _deterministic_. For a deterministic model, once you choose the initial conditions and parameter values, you always get the same result, no matter how often you run the model. There is no randomness present.
@@ -38,5 +47,19 @@ Another way an ID can go extinct is if its hosts go extinct - either due to mort
 For most human diseases, such host extinction is fortunately not very common - though highly lethal ID such as Ebola can lead to marked reduction in the number of hosts in a given population. For non-human disease, extinctions of hosts due to disease is a more important issue. Here, conversation efforts might try to achieve non-extinction of the host and - ideally - extinction of the ID.
 
 
+
+
+##Summary and Cartoon
+This module provided a brief discussion of stochasticity in ID dynamics, and its relation to disease extinctions.
+![Smallpox is _almost_ extinct.](../media/smallpox.jpg)
+
+##Exercises
+* The _Stochastic dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* Read the article "Measles Endemicity in Insular Populations: Critical Community Size and Its Evolutionary Implication" by Black. The paper discusses critical community size for measles. Find 2 papers/analyses that have been done regarding the CCS for some other ID. Read, summarize and critique the papers.
+
+
+## Further Resources
+
 ##References
+
 

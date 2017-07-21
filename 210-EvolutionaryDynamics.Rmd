@@ -1,7 +1,17 @@
 # Evolutionary Dynamics
 
-##Overview
-In this module, we will take a look at ID evolution and its relation to control measures.
+##Overview and Learning Objectives
+In this chapter, we will take a look at ID evolution and its relation to control measures.
+
+
+
+The learning objectives for this chapter are:
+
+* Know the major mechanisms of evolution
+* Understand how different types of control mechanisms are impacted by ID evolution
+* Understand the main mechanisms and drivers of ID evolution 
+* Be able to assess control strategies in the presence of ID evolution
+
 
 
 ##Introduction
@@ -37,9 +47,18 @@ To study evolutionary dynamics, we will need to implement models that allow for 
 
 If we want to model many different mutants, maybe allowing for random, not pre-specified, differences in their fitness, and maybe even allowing for host evolution, the models get quite a bit more complicated. They are not necessarily conceptually harder, but there is more bookkeeping and coding involved, which makes it technically trickier.
 
-##Summary
+
+##Summary and Cartoon
+This module provided a brief discussion of ID evolution, especially in relation to ID control.
+
+![Even if one believes that pathogens evolve (at a high rate), most human-only pathogens could have only survived a fairly recent world-wide flood such as the one described in Genesis by living on/in the surviving humans. [Source: smbc-comics.com](http://www.smbc-comics.com/)](../media/smbc-ID-evolution.png)
 
 ##Exercises
-* The 
+* The _Evolutionary dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* Read the article 'Evolutionary epidemiology 20 years on: Challenges and prospects' by Restif. The paper talks about 3 evolutionary patterns that are important to ID control. Find one or several papers that have been published in the last 5 years which address ID control from an evolutionary perspective of one or several of those topics mentioned in the Restif paper. Summarize and discuss the paper(s) you found. Critically assess the feasibility of the ideas put forward. 
+
+
+
+## Further Resources
 
 ##References

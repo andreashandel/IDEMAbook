@@ -1,8 +1,15 @@
 #Networks and ID
 
-##Overview
+##Overview and Learning Objectives
 In this module, we will briefly discuss the concept of transmission networks and how that affects ID dynamics and control.
 
+
+The learning objectives for this chapter are:
+
+* Know the how to define and measure transmission networks
+* Understand how different types of network structures affect ID transmission and control
+* Understand how transmission networks affect disease spread
+* Evaluate the impact of network structure on ID transmission
 
 
 ##Introduction
@@ -64,14 +71,23 @@ Building and analyzing network models of ID transmission is generally more chall
 ##ID transmission on dynamic networks
 Most of the time, networks are considered static and do not change during the ID transmission process. However, this does not have to be the case and is often not realistic. The most detailed models allow for changes in the network through the making and breaking of connections and addition and loss (e.g. birth and death) of nodes. Implementing and analyzing models that have a dynamically changing network with the ID dynamics (and potential control measures) occuring 'on top' is technically challenging. Not too many of such models currently exist, but it is an area of active investigation by many, see e.g. [@bansal10].
 
-##Summary
+
+
+##Summary and Cartoon
+This module provided a brief discussion of transmission networks and how they impact dynamics and control of ID.
+
+![A version of the [Kevin Bacon 'Network Game'.](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon) [Source: dilbert.com](www.dilbert.com)](../media/dilbert_degreesofseparation.gif)
 
 
 ##Exercises
-* The 
+* The online game [VAX](http://vax.herokuapp.com/) provides a nice interactive setting where you can explore vaccination on networks and how it can help reduce disease spread. Try to pass all levels.
+* Find a study that looked at the dynamics of an ID on a network. Summarize and discuss the study. Explain what findings in the study are due to the network approach. Discuss/speculate how results would be different if one were to ignore the network structure and instead used a compartmental model approach.
+* Read the article "Networks and epidemic models" by Keeling and Eames [@keeling05].
+
+
 
 ## Further Resources
 
-
 ##References
+
 

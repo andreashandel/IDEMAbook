@@ -1,7 +1,14 @@
 # Infectious Disease Control
 
-##Overview
+## Overview and Learning Objectives
 In this module, we will look a closer look at different types of control against infectious diseases and their potential outcomes.
+
+
+The learning objectives for this chapter are:
+
+* Know the major types of ID control strategies 
+* Evaluate the use of different ID control strategies
+* Understand how different pathogens require different types of control
 
 
 ##Introduction
@@ -77,11 +84,18 @@ By discussing intervention coverage, we assumed that the intervention was applie
 ##Interventions and Models
 Studying the potential impact of interventions is probably the single most important current use of ID models. It is often simply not possible to do field studies or experiments to test the impact of specific intervention strategies. Such field studies would take long, be very costly, be logistically hard to do, and be often simply unethical: We can't introduce Ebola into a population, just to see how effective different intervention strategies might be! Thus, we rely on modeling to investigate hypothetical scenarios.  Models are relatively easy and quick to build and analyze (at least compared to real field studies), there are no ethical problems, and we have 'full control' over the whole system and 'know everything'. The hope is that if our models are decent approximations of the real world, we can make informed decisions and prepare for future outbreaks.
 
-##Summary
+##Summary and Cartoon
+
+![An unusual infectious disease control program. [Source: dilbert.com](www.dilbert.com)](../media/dilbert_flushots.gif)
 
 
 ##Exercises
-* The 
+* The _ID Control_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* Read the article "Towards the endgame and beyond: complexities and challenges for the elimination of infectious diseases" by Klepac  et al [@klepac16]. Choose some ID - either one listed in box 1 of the paper or a different one - and discuss the current plans for elimination/eradication. What features of the ID will likely be helpful or unhelpful with regard to eradication/elimination. Reference the different areas the paper discusses? What is your overall assessment of feasibility?
+
+
+## Further Resources
+
 
 ##References
 

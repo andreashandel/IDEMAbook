@@ -1,21 +1,21 @@
 # Dynamics of Multiple Pathogens
 
-##Overview
+##Overview and Learning Objectives
 In this chapter, we will discuss a scenario where more than one infectious disease is considered simultaneously.
 
 
+The learning objectives for this chapter are:
+
+* 
+
 ##Introduction
-So far, we only focused on a single ID.
-
-
-
-##Types of interactions
+So far, we focused on a single ID.
 
 
 
 
-###Host heterogeneity examples {#mytextbox}
-There are several famous examples that show how differences in genetics impact ID. For instance persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a specific mutation in the FUT2 gene are much less likely to get infected with norovirus. It is likely that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.
+##Interactions of ID
+
 
 
 ##Multiple ID and control
@@ -29,16 +29,19 @@ The approach to modeling multiple ID is similar to that of host heterogeneity: W
 ![Example of a model that considers 2 ID.]./images/multipathogenmodel.png)
 
 
-
 As mentioned previously, more compartments means bigger models. Those are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many important 2-ID modeling studies exist.
 
 
 
+##Summary and Cartoon
+This module provided a brief discussion of multi-pathogen systems. 
 
-##Summary
+![Couldn't find a really good cartoon - that's the best 'heterogeneity' one I had.](../media/crazyvenndiagram.gif)
 
 ##Exercises
-* The _Multi-pathogen dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* The _HMulti-pathogen dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* Read the article 
+
+## Further Resources
 
 ##References
-

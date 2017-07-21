@@ -1,7 +1,15 @@
 # Host Heterogeneity
 
-##Overview
+## Overview and Learning Objectives
 In this module, we will briefly discuss the idea that hosts differ in characteristics that are important with regard to ID dynamics and control.
+
+The learning objectives for this chapter are:
+
+* Know the major host characteristics that lead to heterogeneity
+* Understand how heterogeneity might impact ID dynamics
+* Evaluate the need to account for heterogeneity depending on setting
+* Understand how different types of heterogeneity affect ID control
+
 
 
 ##Introduction
@@ -56,6 +64,22 @@ At some point, if we want to include a lot of detail, it might be worth switchin
 It might then be worth deciding to stop using compartmental models and instead switch to a type of model that is called agent or individual based model (ABM/IBM). In such models, each individual host is modeled and tracked individually. We can give everyone as many different characteristics as we want. This makes the model very flexible and potentially very realistic. The downside of these ABM is that they tend to be complex, harder to program, take a long time to run. Further, for detailed models lots of parameter estimates are needed and they are often not available, leading to potentially large uncertainty in model predictions. Also, it is hard to do any kind of statistal inference with ABM. Because of these disadvantages, the compartmental modeling framework is still the most frequently used one and a good starting point for most situations and questions. For ID where we know a lot and want detailed predictions (e.g. influenza), ABM are becoming more common. 
 
 
+
+
+
+##Summary and Cartoon
+This module provided a brief discussion of host heterogeneity, how to consider it in studies, and its impact on transmission and control.
+
+
+![Couldn't find a really good cartoon - that's the best 'heterogeneity' one I had.](../media/crazyvenndiagram.gif)
+
+
+##Exercises
+* The _Host Heterogeneity_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* Read the article "Disease spread, susceptibility and infection intensity: vicious circles?" by Beldomenico and Begon [@beldomenico09]. The paper mostly discusses non-human IDs. Find evidence from human IDs for which the different components they discuss (variable host susceptibility, variable infection intensity, feedback circles in the individual/population level) might be applicable. 
+
+
+## Further Resources
 
 ##References
 
