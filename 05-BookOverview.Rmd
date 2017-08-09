@@ -1,6 +1,6 @@
 # Overview of this book
 
-This book explains infectious disease epidemiology by taking a _(dynamical) systems approach_.
+This book discusses infectious disease epidemiology by taking a _(dynamical) systems approach_.
 
 
 ## Rationale for this book
@@ -21,6 +21,13 @@ This book does also not teach much about specific infectious diseases. While man
 Finally, while this book takes a modeling perspective, it does not intend to teach modeling. For anyone interested in learning how to build and analyze their own infectious disease models - a skill we highly recommend learning - we suggest e.g. [@keeling08,@vynnycky10].
 
 Maybe the material closest in approach to this book is not another book but the online course "Dynamics of Infectious Diseases" developed and taught by multiple faculty at Penn State University and hosted on Coursera [@epimooc]. This course is free to take and I can strongly recommend it. Another online course that has been offered in the past through edX is "Epidemics" from Hong Kong University [@hkepidemics].
+
+
+## How to use this book
+Each chapter deals with a different topic concerning infectious diseases and their dynamics at the population level. While I assume that the reader goes through the text linearly, and therefore occasionally reference topics discussed in previous chapters, it is likely possible to read the chapters out of order and as needed refer to previous sections to the book if they are mentioned.
+
+The idea is that this material can be learned without the need to rely on advanced mathematics or computer modeling. That said, this book still contains models and equations. In the case where this material is advanced, it is placed in a special text box. It is possible to skip over those boxes and still follow everything else. 
+
 
 ## Computer exercises
 Modern infectious disease epidemiology is inherently computational. As such, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. For a more detailed description of the DSAIDE package, see [@handel17]. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter.

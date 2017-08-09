@@ -2,7 +2,7 @@
 
 
 ## Overview and Learning Objectives
-In this chapter, we discuss the idea of taking a _(dynamical) systems approach_ and how it is applied to infectious diseases.
+In this chapter, we discuss the idea of taking a _dynamical systems approach_ and how it is applied to infectious diseases.
 
 The learning objectives for this chapter are:
 
@@ -13,9 +13,13 @@ The learning objectives for this chapter are:
 
 
 ##Introduction 
-While the terminology of _systems thinking_ or _systems approach_ has seen increased use in the last few decades, the general idea has been around for a while. In public health, there is the basic idea - most often applied to infectious diseases - of the *agent - host - environment* system. 
+While the terminology of _systems thinking_ or _systems approach_ has seen increased use in the last few decades, the general idea has been around for a while. In public health, there is the basic idea - most often applied to infectious diseases - of the *agent - host - environment* system, also referred to as the _epidemiological triangle_ (Figure \@ref(fig:epitriangle)). 
 
-![A system perspective - The epidemiological triangle](./images/epi-triangle.png)
+```{r epitriangle,   fig.cap='A system perspective - The epidemiological triangle',  echo=FALSE}
+knitr::include_graphics("./images/epi-triangle.png")
+```
+
+
 
 Similarly, one can think of the basic epidemiological concept of *person - place - time* as describing a system. The notion of a system is present in virtually every field of research, ranging from the hard sciences to social sciences and business. 
 
@@ -24,12 +28,23 @@ The scientific approach that has generally been the most successful in the past 
 A complementary approach, which has seen increased use, is to look at "the whole" system at once, instead of each component at a time. This approach can provide insights that might not be obtained by the purely reductionist approach. This approach of looking at the whole system at once is often referred to as _systems thinking/approach_.
 
 
-
-
 ##Systems Thinking
-The term _systems thinking_ or _systems approach_ or similar such terminology has become popular in various fields during the last few decades. It is not a very clearly defined term, but in general a _systems_ perspective looks at multiple - often many - components that interact with each other in potentially complicated ways. For instance the problem of obesity has many different components that interact in potentially complicated ways to affect a person's weight. Complex systems are basically everywhere. The approach of studying (most of) the system at once instead of looking at a single component at a time is the hallmark of the _systems approach_
+The term _systems thinking_ or _systems approach_ or similar such terminology has become popular in various fields during the last few decades. It is not a very clearly defined term, but in general a _systems_ perspective looks at multiple - often many - components that interact with each other in potentially complicated ways. 
 
-![Obesity as a complex system: http://goo.gl/m2Qq13](./images/complexsystem.png)
+For instance the problem of obesity has many different components that interact in potentially complicated ways to affect a person's weight. Figure \@ref(fig:obesitysystem) illustrates this, see also for instance [this video](https://youtu.be/2vojPksdbtI). Complex systems are basically everywhere. The approach of studying (most of) the system at once instead of looking at a single component at a time is the hallmark of the _systems approach_. 
+
+
+```{r obesitysystem,   fig.cap='Obesity as a complex system: http://goo.gl/m2Qq13',  echo=FALSE}
+knitr::include_graphics("./images/complexsystem.png")
+```
+
+
+
+##Classical and systems ID Epi approaches
+While concepts such as the epidemiological triangle acknowledge that interactions between components are important and determine the behavior of a system, in practice the standard epidemiological approach, based on classical study designs such as cohort, case-control and randomized trial approaches does not consider system interactions. Indeed, a hallmark assumption of these study designs is that individuals are independent. E.g. the chance that someone in a cohort study has the outcome of interest does not affect the chance of someone else having the outcome. That works well for non-transmissible diseases, and to some extent for transmissible/infectious diseases (we'll use the term infectious disease in the following, mostly meaning diseases that are also transmissible), as long as there are no interactions  (i.e. contact that could lead to transmission) between study subjects. Accounting for interactions between hosts is required to understand important infectious disease concepts such as population level immunity thresholds, critical community size, or indirect effects of interventions. This in turn requires a systems approach that explicitly allows for interactions between hosts.
+
+On the research side, the importance of such interactions has long been appreciated and is at the core of the infectious disease modeling paradigm, where one builds and analyzes a system of interacting components (e.g. susceptible and infected hosts). Such systems approaches based on models have a long history in infectious disease epidemiology [@anderson91, @blower04]. The importance of computational methods for the study of infectious diseases continues to increase. In this book, we approach infectious diseases from such a systems thinking perspective, whithough delving too deely into the mathematical and computational aspects of the topic. 
+
 
 
 ##Sytems Thinking and Models
@@ -50,37 +65,73 @@ One feature these statistical/phenomenological models have in common is that the
 ###Mechanistic Models
 Another class of models are those that try to explicitly - albeit usually in very simplified form - try to model the mechanisms of interaction among system components. Those models are commonly used for infectious disease studies. For instance we might want to know how drug dose affects pathogen clearance inside an infected patient. We could collect data on both (such data often needs to come from animal models) and see if a straight line or other kind of model fits the data. Alternatively, we could try to build a model that explicitly captures the mechanism of the drug killing the pathogen, and then see if this mechanistic model describes the data well. The advantage of these kinds of models is that they potentially provide better and deeper understanding of the system. The main disadvantage is that we already need to know (or at least assume) a good bit about how the components interact for us to be able to build such a model. If we don't know what mechanisms might lead to some input impacting some output, we can't build a mechanistic model.
 
-Both phenomenological (statistical) and mechanistic models are useful tools with distinct advantages and disadvantages. Which one to use depends on the question and study system. For this course, we will focus on mechanistic models. These kinds of models can be formulated in many different ways. We discuss some below.
+Both phenomenological (statistical) and mechanistic models are useful tools with distinct advantages and disadvantages. Which one to use depends on the question and study system. In this book, we will focus on mechanistic models, which try to represent an explicit, simplified description of the system of interest. 
 
 
 ###Dynamical Systems Thinking/Modeling
-The dynamical part adds an explicit time component to the system. To see the difference between a dynamical system and a 'static' one, consider this example:
-
-We could study how a change in tobacco taxes might lead to changes in healthcare costs in a given state. Of course, time is present in this system: First we change the taxes, then we look at changes in costs over some time frame. However, when studying this system, one usually doesn't need to consider an explicitly time-dependent dynamic. Instead one looks at 2 scenarios: Taxes 1 & Costs 1 versus Taxes 2 & Costs 2. It is usually not necessary to model or simulate the chain of events leading from tax change to cost change while explicitly accounting for time.
+The dynamical part adds an explicit time component to the system (and assumes that we can use equations to describe the dynamics). Consider this example: We could study how a change in tobacco taxes might lead to changes in healthcare costs in a given state. Of course, time is present in this system: First we change the taxes, then we look at changes in costs over some time frame. However, when studying this system, one usually doesn't need to consider an explicitly time-dependent dynamic. Instead one looks at 2 scenarios: Taxes 1 & Costs 1 versus Taxes 2 & Costs 2. It is usually not necessary to model or simulate the chain of events leading from tax change to cost change while explicitly accounting for time.
 
 In contrast, in a dynamical system the model explicitly undergoes changes in time. We might often want to know how certain changes to the system (e.g. interventions) lead to changes in outcomes through a *dynamical/time-dependent* chain of events. For infectious diseases, we most often have some underlying dynamics that we need to take into account (e.g. an ongoing outbreak) and on top of which we might want to implement some interventions. Therefore, the dynamical perspective is often used. Even if a specific disease can be considered to be 'steady' before we implement an intervention (e.g. a given level of TB in a country), there is still disease transmission between individuals happening, which most often makes the dynamical approach more suitable.
 
-We can illustrate this dynamical perspective by extending the epidemiological triangle. The following figure shows the components and the interactions of the triangle changing over time.
+We can illustrate this dynamical perspective by extending the epidemiological triangle. Figure \@ref(fig:dynamictriangle) illustrates the components and the interactions of the triangle changing over time.
 
-![Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.](./images/moving-triangle.png)
+
+```{r dynamictriangle,   fig.cap='Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.',  echo=FALSE}
+knitr::include_graphics("./images/moving-triangle.png")
+```
+
+Mechanistic models are especially well suited to describe dynamical systems and are therefore the main choice for the study of complex dynamical systems.
 
 
 
 ###Types of dynamical, mechanistic models
-When building models based on a systems approach, there are two main approaches. In one approach, the model is made up of individual *agents/individuals* and is thus called Agent based or Individual based model. The agents/individuals - which often but not always are humans - interact with each other. Each agent has certain properties and undergoes certain actions. The interactions of all agents leads to potentially interesting and complex dynamics. Schelling's segregation model (see this module's videos) is a nice example of such an agent based model.
+When building mechanistic, dynamical models based on a systems approach, there are two main approaches. In one approach, the model is made up of individual *agents/individuals* and is thus called Agent based or Individual based model. The agents/individuals - which often but not always are humans - interact with each other. Each agent has certain properties and undergoes certain actions. The interactions of all agents leads to potentially interesting and complex dynamics. 
+Schelling's segregation model (see e.g. [this video](https://youtu.be/dFl3Cfw12bo) ) is a nice example of such an agent based model. Models and approaches that consider individuals connected through networks of contacts are especially important for infectious diseases and we'll briefly discuss those in a later chapter.
 
-Another approach simplifies the system by not tracking every individual agent, but instead only keeps track of total agents/individuals in certain states. For instance for infectious disease models, we might only keep track of the total number of individuals who are susceptible, infectious and recovered/immune. This simplifies models immensely. If we had a population of a 100, 1000 or 10,000, we would need to keep track of as many agents. If we only keep track of total number of individuals in the 3 states just mentioned, we only need to track how our 3 states - usually called *compartments* - change, namely we need to track changes in the numbers of susceptible/infected/recovered - no matter how large our population.
+Another approach simplifies the system by not tracking every individual agent, but instead only keeps track of total agents/individuals in certain states. For instance for an ecological model, we might track the total numbers of predators and prey (e.g. wolves and sheep). This simplifies models immensely. If we had a population of a 100, 1000 or 10,000 wolves or sheep, we would need to keep track of as many agents. If we only keep track of total number of individuals, we only need to track how the numbers in each *compartment* (here wolves and sheep) change - no matter how large our population. Those models, which only track total numbers of individuals, are called *compartmental models*
 
-While these compartmental models are obviously simplifications of the real system, they often retain enough of the model complexity to allow us to study the system well. Because of this, the majority of models used in infectious disease epidemiology are these types of compartmental models, and we will use them throughout the course.  
+While these compartmental models are obviously simplifications of the real system, they often retain enough of the model complexity to allow us to study the system well. Because of this, the majority of models used in infectious disease epidemiology are still these types of compartmental models. Both the DSAIDE R package and the example models shown in this book focus on such compartmental models. For some more information on compartmental models, [check out this Wikipedia article](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology)
 
-If you want to read a bit more about these compartmental models, [check out this Wikipedia article](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology)
 
+##A basic infectious disease systems model
+For infectious disease models, the simplest dynamical systems model keeps track of the total number of individuals who are susceptible, infectious and recovered/immune (the so-called SIR model). This model is a compartmental model, i.e. we place individuals into distinct compartments, according to some characteristics. We then only track the total number of individuals in each of these compartments. In the simplest model, the only characteristic we track is a person's infection status according to 3 different stages/compartments: 
+
+* **S** - uninfected and susceptible individuals. 
+* **I** - infected and infectious individuals (note that these terms are often used interchangeably, but technically we are talking about someone who is infected **and** is infectious, i.e. can infect others).
+* **R** - recovered/removed individuals. Those are individuals that do not further participate, either because they are now immune or because they died.
+
+In addition to specifying the **compartments** of a model, we need to specify the **processes/mechanisms** determining the changes for each compartment. Broadly speaking, there are processes that increase the number of individuals in a given compartment/stage, and processes that lead to a reduction. Those processes are sometimes called inflows and outflows. 
+
+For our system, we specify only 2 processes/flows: 
+
+1. A susceptible individual (S) can become infected by an infectious individual (I) at some rate (for which we use the parameter _b_). This leads to the susceptible individual leaving the S compartment and entering the I compartment.   
+2. An infected individual dies or recovers and enters the recovered/removed (R) compartment at some. This is described by the parameter _g_ in our model.
+
+The SIR model is very basic, but it still has the hallmark of a complex system. Specifically, there is an interaction between components, namely the **I** "component" interacts with the **S** component, or phrased in more ordinary language, infected individuals can interact with susceptibles and thereby infect them. 
+
+For compartmental models (and also often other types of models), it is useful to show a graphical schematic representation of the compartments and processes included in the model. For compartmental models, such a diagram/figure is usually called a flow diagram. Such a diagram consists of a box for each compartment, and arrows pointing in and out of boxes to describe flows and interactions. For the simple SIR model, the flow diagram is shown in Figure \@ref(fig:basicSIR).
+
+```{r basicSIR, fig.cap='Flow diagram for the simple SIR model.',  echo=FALSE}
+knitr::include_graphics("./images/basicSIRmodelfigure.png")
+```
+
+
+#### Model Implementation {#myadvancedbox}
+If one wants to study any model in detail, one needs to implement it either in the form of a mathematical or a computer model (or both). For compartmental models, the most common way of implementation is writing the model as a set of ordinary differential equations and implementing those in some computer language. This book shows sets of ODE equations for the several of the discussed models, but a detailed understanding of these equations is not required to understand the different topics we discuss. For the model described above, the equations look like this: 
+$$\dot S = -bSI$$
+$$\dot I = bSI - gI$$
+$$\dot R = gI$$
+
+We are using the usual short-hand notation, where a dot over a variable means its derivative (its change) with respect to time. In all the models we consider, we always only consider changes with respect to time (the dynamical aspect of the model).
 
 
 ##Summary and Cartoon
-This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. You also got an introduction to a fairly simple model of an infectious disease system.
+This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. We briefly looked at a simple infectious disease systems model, the famous SIR model. 
 
-![Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/) ](./images/xkcd-flowcharts.png)
+
+```{r complexcartoon, fig.cap='Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/).',  echo=FALSE}
+knitr::include_graphics("./images/xkcd-flowcharts.png")
+```
 
 ##Exercises
 * Work through the tasks for the _ID Dynamics Introduction_ DSAIDE app.
@@ -89,7 +140,9 @@ This chapter provided a brief introduction to the concept of systems thinking an
 
 
 ##Further Resources
-
+* The paper "Why Model?" by Joshua Epstein [@epstein08] provides a nice, short discussion of the purposes of models. Other general introductory discussions of systems thinking and model use are [@may04; @chubb10; @garnett11; @basu13; @gunawardena14; @homer06; @peters14; @sterman06].
+* Several introductory papers on infectious disease modeling can be found in e.g. [@keeling09; @heesterbeek15; @lessler16; @metcalf17].
+* While the dynamical systems approach has been applied to infectious diseases for a long time, it is starting to be used more frequently in other areas of public health. Some recent references on that topic are e.g. [@ness07; @sanchez-romero16].
 
 ##References
 

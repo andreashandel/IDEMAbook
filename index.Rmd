@@ -1,23 +1,24 @@
 --- 
-title: "Infectious Disease Epidemiology – A modern systems approach"
+title: "Infectious Disease Epidemiology - A modern systems approach"
 author: "Andreas Handel"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: 
     bookdown::gitbook:
+        highlight: zenburn
         css: ./dsaidebook.css
         fig_caption: true
-documentclass: book
-config:
-    toc:
-      collapse: none
+        output_dir: "docs"
+        config:
+            toc:
+              collapse: none
 bibliography: dsaidereferences.bib
 biblio-style: apalike
 link-citations: yes
-description: ""
+description: "This book convers infectious disease epidemiology from a dynamical systems perspective"
 ---
 
 
 # Preface {-}
 
-This book explains infectious disease epidemiology by taking a _(dynamical) systems approach_.
+This book discusses infectious disease epidemiology by taking a _dynamical systems approach_.

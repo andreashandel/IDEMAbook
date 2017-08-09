@@ -33,10 +33,32 @@ So far, we mainly looked at scenarios where some ID caused a single outbreak. As
 
 For our scenario, the resource consumer is the ID and the resources are the hosts, usually humans. Replenishment of susceptible hosts can happen through different mechanisms. Most common are birth of new, susceptible individuals, and loss of immunity. Migration, if strong, can be another way susceptible hosts can be replenished. Similarly, individuals that become newly sexually active correspond to the birth of new susceptibles for sexually transmitted infections. 
 
-If the replenishment of new susceptibles is rapid, an ID might be able to maintain itself in a population and never go extinct. (Extinction will be discussed in more detail in a later unit.)
+If the replenishment of new susceptibles is rapid, an ID might be able to maintain itself in a population and never go extinct. (Extinction will be discussed in more detail later.)
+
+
+
+##A model with resource replenishment 
+A version of the SIR model that includes resource replenishment through natural births or waning immunity is shown in figure 
+\@ref(fig:birthdeathdmodel). 
+
+```{r birthdeathdmodel,   fig.cap='Example of an SIR model with births, deaths and waning immunity.',  echo=FALSE}
+knitr::include_graphics("./images/R0modelfigure.png")
+```
+
+The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate _m_, natural death at some rate _n_, and the possibility that recovered lose their immunity and return to the susceptible class at rate _w_. This new model allows for oscillations/cycles and steady states, as explained next.
+
+
+#### Mathematical equations for the model with resource replenishment {#myadvancedbox}
+The ordinary differential equations corresponding to the compartmental model shown in figure \@ref(fig:birthdeathdmodel) are given by
+
+$$\dot S = m - b I S + wR - n S $$ 
+$$\dot I = b IS - gI - n I $$ 
+$$\dot R =  gI - wR - n R$$
+
+
 
 ##Intrinisic Cycles 
-The interaction between susceptible and infectious hosts can leads to a dynamical pattern that can/does produce oscillations. Specifically, the dynamics of resource consumption (depletion of susceptible hosts), waning ID incidence due to reduced availability of hosts, and subsequent replenishment of susceptibes can lead to cycles. Since these cycles are not driven by anything "from the outside" and arise purely due to the complex interplay between host resources and ID, there are sometimes called intrinsic cycles/oscillations. The timing of these cycles (the period of the oscillations) is determined by characteristics of the ID and scenario. For instance the duration of the infectious period and the transmissibility of the host generally influence the timing between outbreaks. In ecology, such cycles are well studied and go by the terminology of predator-prey systems.
+The interaction between susceptible and infectious hosts can leads to a dynamical pattern that can/does produce oscillations. Specifically, the dynamics of resource consumption (depletion of susceptible hosts), waning ID incidence due to reduced availability of hosts, and subsequent replenishment of susceptibes can lead to cycles. Since these cycles are not driven by anything "from the outside" and arise purely due to the complex interplay between host resources and ID, there are sometimes called intrinsic cycles/oscillations. The timing of these cycles (the period of the oscillations) is determined by characteristics of the ID and scenario. For instance the duration of the infectious period and the transmissibility of the host generally influence the timing between outbreaks. In ecology, such cycles are well studied in the context of so-called predator-prey systems. For our infectious disease models, the "prey" are susceptibles and the "predators" are infected individuals.
 
 
 ##Intrinisic Cycles and models 
@@ -45,11 +67,11 @@ $$T \approx 2 \pi \sqrt{\left( \frac{LD}{R_0 - 1} \right)}$$
 
 Here, _L_ is the average lifespan of a host, _D_ is the average duration of infectiousness, and _R~0~_ is the basic reproductive number - a quantity we will discuss shortly. For more details on this equations, see e.g. [@keeling08].
 
-For more complicated models and real-world scenarios where the simple SIR model is not a good approximation, the equation just provided does not apply anymore. It might not even be possible to write down any equation. But the main point still holds in such a case, namely there is a relation between intrinsic characteristics of the system, such as duration of infectious period (_D_) and transmissibility of the disease (_R~0~_), and the period of the oscillations. In cases where we cannot derive a mathematical equation, we can get the answer computationally. We can vary a parameter of interest, for instance the duration of the infectious period, and use the model to simulate the ID and record the period of the cycles, _T_. Finally, by plotting a figure showing _D_ on the x-axis and _T_ on the y-axis, we obtain a relation between these quantities.
+For more complicated models and real-world scenarios where the simple SIR model is not a good approximation, the equation just provided does not apply anymore. It might not even be possible to write down any equation. One can then instead run a computer simulation of the model and determine the length of the cycles from the time-series returned by the computer. The main point still holds, independent of the ability to write down an equation for the cycle length, namely that there is a relation between intrinsic characteristics of the system, such as duration of infectious period (_D_) and transmissibility of the disease (_R~0~_), and the period of the oscillations. In cases where we cannot derive a mathematical equation, we can try to figure out the relation between cycle duration and some parameter of interest by repeatedly altering the parameter (e.g. the duration of the infectious period, _D_), and record the cycle period, _T_, reported by the model simulation for various values of the parameter. By plotting a figure showing _D_ on the x-axis and _T_ on the y-axis, we obtain a relation between these quantities. 
 
 
 
-##External drivers of seasonality
+##External drivers of cycles
 Another mechanism that can lead to osciallations in the dynamics of ID can come from "external" drivers. Of course, these processes are still part of the whole system, but not as directly as the dynamics and interaction of the hosts. In that sense we consider it an external process. 
 
 Weather is one of the most important external factors. Many ID are influenced by the weather. For instance influenza virus survives better when vapor pressure is low, which is usually the case in temperate regions in winter [@lipsitch09, @shaman10]. 
@@ -62,41 +84,43 @@ Often, more than one mechanism occurs and influences the ID dynamics. As such, i
 
 
 ##Notes on Cycles
-In the type of models we have looked at so far, sustained oscillations need something like seasonality. Without it, the cycles die out and the disease reaches a steady, endemic state. For more complex models or models that include stochastic dynamics (something we'll discuss in a later module), cycles can be maintained even in the absence of external drivers.
+In the type of models we have looked at so far, sustained oscillations need something like seasonality. Without it, the cycles die out and the disease reaches a steady, endemic state. For more complex models or models that include stochastic dynamics (something we'll discuss later), cycles can be maintained even in the absence of external drivers.
 
 
 ##Steady states
-In addition to single outbreaks or recurrent cycles, ID often also reach a state where the incidence/prevalence in a population is roughly constant. This is usually referred to as endemic state. Examples of that are e.g. helminth infections in many African countries (in the absence of control efforts) or certain sexually transmitted diseases in developed countries. The following figure shows for instance that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005.
-
-![Gonorrhea cases in the US. [Source CDC](http://www.cdc.gov/STD/stats06/images/trends-img-2.gif).](./images/gonorrhea.gif)
+In addition to single outbreaks or recurrent cycles, ID often also reach a state where the incidence/prevalence in a population is roughly constant. This is usually referred to as endemic state. Examples of that are e.g. helminth infections in many African countries (in the absence of control efforts) or certain sexually transmitted diseases in developed countries. 
 
 Note that while at steady state, the total number of ID cases does not change, there is usually still constant turnover. Some individuals get infected, while others recover or die. It just happens that these processes balance each other, making the total numbers roughly constant.
 
 
-##Steady states and models (M)
-When an ID reaches a steady state, a model based on ordinary differential equations, such as the basic SIR model, simplifies by a lot. Specifically, at steady state, there are -- by definition -- no changes in the total number of individuals in each compartment. Therefore the left side of the equations is zero, leading to the following set of equations:
+If we have a mathematical or computer model of our system, there are 2 ways to determine steady states. One is mathematical, the other is through simulating the system. The former approach is more elegant and powerful, but generally only works if we have a fairly small model. It is illustrated in the box below. Often, the model is too complicated to obtain useful equations for the steady state values of the model variables. Fortunately, we can always determine them numerically. We simply start our computer simulation model with some values and run it long enough until it has settled down (we need to make sure it actually does have a steady state). We can then record the steady state values. We can do this for different model parameter values (e.g. changes in birth rate or changes of rate of infection). At the end, we can plot a figure showing how the steady state values change with some model parameter. This approach is obviously much slower than using the mathematical equations. However, often it is the only feasible approach. 
 
-$$\dot S = 0 = \lambda -\beta SI - nS$$ 
-$$\dot I = 0 = \beta S I - \gamma I - nI$$
-$$\dot R = 0 = \gamma I - nR$$
+Note that there are technically steady states that exist but won't show up in the simulation since they are unstable. Since any unstable steady state also rarely exists in nature (other than the disease free state, with a population remaining in that state until a new pathogen arrives), those steady states tend to be not that important in practice.
 
-We again used $\lambda$ for the birth rate and $n$ for the death rate. 
 
-The system of differential equations has turned into a system of algebraic equations. For a fairly small set of equations (usually <=5), one can obtain equations for the compartments (_S_, _I_, and _R_ in this case) at steady state that are only function of the model parameters. While it is in general possible to solve models with more compartments/equations, the resulting expressions are usually so big and unwieldy to not provide much useful insight.
+####Steady states and models {#myadvancedbox}
+When an ID reaches a steady state, a model based on ordinary differential equations, such as the model shown above, simplifies. At steady state, there are -- by definition -- no changes in the total number of individuals in each compartment. Therefore the left side of the equations are zero, i.e. $\dot S = \dot I = \dot R =0$. This changes the differential equations into a set of algebraic equations. For a fairly small set of equations (usually < 5), one can obtain equations for the compartments (_S_, _I_, and _R_ in this case) at steady state that are only function of the model parameters. While it is often theoretically possible to solve models with more compartments/equations, the resulting expressions are usually so big and unwieldy to not provide much useful insight.
 
-The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. R is not suitable for solving symbolic equations. The two main packages for such tasks are [Maple](http://www.maplesoft.com/) and [Mathematica](https://www.wolfram.com/mathematica/). Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use [Maxima](http://maxima.sourceforge.net/).  [Other packages exist](http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems). Solving these equations in Maxima would look as follows:
+The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. The two main packages for such tasks are [Maple](http://www.maplesoft.com/) and [Mathematica](https://www.wolfram.com/mathematica/). Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use [Maxima](http://maxima.sourceforge.net/).  [Other packages exist](http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems). Note that `R` is not suitable for solving symbolic equations. Using Maxima to solve the equations above (without immune recovery, i.e. _w=0_, to make the results simpler) gives:
 
 ![Maxima code for solving the SIR model steady state equations.](./images/SSmaxima.png)
 
-We thus find the values for the number of susceptible, infected and recovered at steady state as a function of the model parameters:
+The same results are of course obtained when solving the equations by hand. The first steady state returned by maxima is the one in the absence of an ID, with only susceptibles around. Usually, we are interested in the second steady state, the endemic equilibrium at which disease prevalence is at a fixed level. We thus find the values for the number of susceptible, infected and recovered at steady state as a function of the model parameters.
 
-$$S_{s} = \frac{\gamma + n}{\beta}$$ 
-$$I_{s} = \frac{\beta \lambda - n (n+ \gamma)}{\beta (n+ \gamma)}$$
-$$R_{s} = \frac{\beta \lambda \gamma - \gamma n(n+ \gamma)}{\beta n (n+ \gamma) }$$
+Having the equations for the steady state allows us to rapidly gain insight into the system behavior. For instance we can see that for an endemic steady state to be possible (i.e. for _I_ > 0 at steady state), we need $b m >  n (n+ g)$. We can make intuitive sense out of this expression: The combination of pathogen transmission capacity (_b_) and birth rate _m_, which support ID persistence, needs to be stronger than the effects of general host death _n_ and host recovery _g_. We will later see that this relates to the concept of reproductive number.
 
-This allows us to rapidly gain insight into the system behavior. For instance we can see that for an endemic steady state to be possible (i.e. for _I~s~_ > 0), we need $\beta \lambda >  n(n+ \gamma)$. We can make intuitive sense out of this expression: The combination of pathogen transmission capacity ($\beta$) and birth rate ($\lambda$), which support ID persistence, needs to be stronger than the effects of general host death $n$ and host recovery $\gamma$. We will later see that this relates to the concept of reproductive number.
 
-Often, the model is too complicated to obtain useful equations for the steady state values of the model variables. Fortunately, we can always determine them numerically. We simply start the simulation with some values and run it long enough until it has settled down (we need to make sure it actually does have a steady state). We can then record the steady state values, change some parameter and repeat. At the end, we can plot a figure showing how the steady state values change with some model parameter. This approach is obviously much slower than just looking at the mathematical equations. However, often - especially for big models - it's the only feasible approach. 
+##Detecting cycles or other patterns
+It is often hard to determine if there is a specific repeating pattern, such as oscillations/cycles for a given ID. Consider for instance Figure \@ref(fig:gonorrheapattern) ([Source CDC](http://www.cdc.gov/STD/stats06/images/trends-img-2.gif)). 
+One can see that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005, with ups and downs in between. The changes are not rapid enough to be due to seasonal/annual drivers. If we had more data and the same up-down pattern repeated, we could speculate that this might be due to some intrinsic oscillatory dynamics of the disease. In this case, the most likely explanation for the observed patterns lie outside the disease dynamics itself. Increased detection and treatment likely led to a decline in the 40s, changing sexual behavior lead to an increase starting in the 60s, and strong safe-sex campaigns, combined with the threat of HIV, led to a decrease starting in the 80s. However, this is somewhat speculative. It might well be that other factors, (e.g. changes in surveillance intensity) could explain the pattern. A careful analysis (which I have not done) would be needed before one can be more confident as to what might lead to the observed pattern.
+
+
+```{r gonorrheapattern, fig.cap='Gonorrhea cases in the US.',  echo=FALSE}
+knitr::include_graphics("./images/gonorrhea.gif")
+```
+
+
+
 
 
 ##ID Dynamics in changing populations
@@ -118,6 +142,10 @@ This module provided a discussion of different general patterns we observe in th
 * Read the article "Dynamical resonance can account for seasonality of influenza epidemics" by Dushoff et al [@dushoff04]. They suggest an interesting explanation for the seasonal variation in influenza cases. Look at the literature to see if since that paper came out, there has been any further progress on that question. Discuss recent advances that might support or refute the idea suggested by Dushoff et al.
 
 ## Further Resources
+* The following references provide some more information on and discussion of seasonality in IDs: [@altizer06; @dowell01; @grassly06; @stone07].
+* Seasonality for influenza has been heavily studied, some references are [@dushoff04; @lofgren07; @baumgarter12]. 
+* A discussion of cycles in Cholera can be found in [@pascual02; @emch08].
+
 
 
 ##References

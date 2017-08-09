@@ -60,3 +60,17 @@ img {
 	color: black;  
 	font-weight: normal;
 }
+
+#myexamplebox
+{
+	border: 10px solid #cfd7e0; 
+	color: black;  
+	font-weight: normal;
+}
+
+#myadvancedbox
+{
+	border: 10px solid #cfd7e0; 
+	color: black;  
+	font-weight: normal;	
+}
