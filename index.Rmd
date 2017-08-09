@@ -18,7 +18,6 @@ link-citations: yes
 description: "This book convers infectious disease epidemiology from a dynamical systems perspective"
 ---
 
-
 # Preface {-}
 
-This book discusses infectious disease epidemiology by taking a _dynamical systems approach_.
+This book convers infectious disease epidemiology from a dynamical systems perspective

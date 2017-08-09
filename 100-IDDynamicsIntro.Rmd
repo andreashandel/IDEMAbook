@@ -125,6 +125,16 @@ $$\dot R = gI$$
 We are using the usual short-hand notation, where a dot over a variable means its derivative (its change) with respect to time. In all the models we consider, we always only consider changes with respect to time (the dynamical aspect of the model).
 
 
+##Some general comments and notes
+In general, the entities that change (that vary) in our system (here the number of individuals in compartments S, I and R) are called variables and are each given a compartment/equation. In contrast, the quantities that are usually assumed fixed for a given system called parameters. For the model above, those are the infection rate _b_ and the recovery rate _g_. This is not a fixed rule, though. Sometimes, parameters can be allowed to vary.
+
+When talking about the quantities that are tracked in each compartment, you will see both the term *host(s)* and *individual(s)* used interchangeably. While we most often think of human hosts, the hosts can be any animal (or plants or bacteria infected by phages or...). Sometimes, a compartment might track an entity such as pathogen load in the environment. 
+
+If you want to study a specific ID, you choose parameters such that they match the specific disease you want to study. We'll return to that idea throghout this book.
+
+Unfortunately, there are no rules concerning the naming of variables and parameters. Compartments (e.g. SIR) tend to be labeled very similarly by different researchers, while parameter labels are much more variable. I'm trying to be consistent in this book, though I might mix it up occasionally. For this book, I decided to stick with regular letters from the English alphabet, but you can often find people use greek letters for parameters (e.g. $\beta$ instead of _b_ for the transmission parameter). Always check carefully for a given paper/model what the definition and meaning of each variable and parameter are. 
+
+
 ##Summary and Cartoon
 This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. We briefly looked at a simple infectious disease systems model, the famous SIR model. 
 

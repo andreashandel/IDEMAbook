@@ -143,7 +143,7 @@ This module provided a discussion of different general patterns we observe in th
 
 ## Further Resources
 * The following references provide some more information on and discussion of seasonality in IDs: [@altizer06; @dowell01; @grassly06; @stone07].
-* Seasonality for influenza has been heavily studied, some references are [@dushoff04; @lofgren07; @baumgarter12]. 
+* Seasonality for influenza has been heavily studied, some references are [@dushoff04; @lofgren07; @baumgartner12]. 
 * A discussion of cycles in Cholera can be found in [@pascual02; @emch08].
 
 
