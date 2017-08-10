@@ -30,7 +30,7 @@ The idea is that this material can be learned without the need to rely on advanc
 
 
 ## Computer exercises
-Modern infectious disease epidemiology is inherently computational. As such, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. For a more detailed description of the DSAIDE package, see [@handel17]. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter.
+Modern infectious disease epidemiology is inherently computational. As such, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter.
 
 
 ## References

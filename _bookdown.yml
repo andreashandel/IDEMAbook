@@ -1,1 +1,2 @@
 rmd_files: ["index.Rmd", "05-BookOverview.Rmd", "100-IDDynamicsIntro.Rmd", "110-CharacteristicsofID.Rmd", "120-IDPatterns.Rmd", "130-ReproductiveNumber.Rmd"]
+output_dir: "docs"

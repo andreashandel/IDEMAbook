@@ -8,7 +8,6 @@ output:
         highlight: zenburn
         css: ./dsaidebook.css
         fig_caption: true
-        output_dir: "docs"
         config:
             toc:
               collapse: none

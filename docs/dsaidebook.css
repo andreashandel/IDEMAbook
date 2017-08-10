@@ -16,7 +16,7 @@
 ---------------*/
 img {
 	max-width: 80%;
-	padding: 3px;
+	padding: 5px;
 	
 }
 .image {
@@ -25,7 +25,7 @@ img {
 	margin-left: 5px;
 	margin-right: 5px;
 	max-width: 80%;
-	padding: 0;  
+	padding: 5px;  
 	text-align: center;
   
   /* Visual */
@@ -64,13 +64,17 @@ img {
 #myexamplebox
 {
 	border: 10px solid #cfd7e0; 
+	border-radius: 5px;
+	padding: 10px; 
 	color: black;  
 	font-weight: normal;
 }
 
 #myadvancedbox
 {
-	border: 10px solid #cfd7e0; 
-	color: black;  
-	font-weight: normal;	
+	border: 10px solid #cc6600; 
+	padding: 10px; 
+	border-radius: 5px;
+	font-size: smaller;
 }
+
