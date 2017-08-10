@@ -53,23 +53,6 @@ img {
 /* My additions
 -------------------- */
 
-
-#mytextbox
-{
-	border: 10px solid #cfd7e0; 
-	color: black;  
-	font-weight: normal;
-}
-
-#myexamplebox
-{
-	border: 10px solid #cfd7e0; 
-	border-radius: 5px;
-	padding: 10px; 
-	color: black;  
-	font-weight: normal;
-}
-
 #myadvancedbox
 {
 	border: 10px solid #cc6600; 
@@ -78,3 +61,17 @@ img {
 	font-size: smaller;
 }
 
+
+#myexamplebox
+{
+	border: 10px solid #cfd7e0; 
+	padding: 10px; 
+	border-radius: 5px;
+	font-size: smaller;
+}
+
+
+#mytextbox
+{
+	border: 10px solid #8e00cc; 
+}
