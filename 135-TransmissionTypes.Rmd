@@ -11,23 +11,25 @@ The learning objectives for this chapter are:
 
 
 ##Introduction
-
+The way in which an infectious disease transmits is important to understand its transmission dynamics and for planning interventions. An infectious disease can be transmitted directly or indirectly. Among indirect ways of transmission there are again important different categories, such as environmental or vector-borne transmission. Often, things are not that clear-cut: Some diseases might transmit by more than one route, and the definition of direct and indirect is not as clear-cut as it might sound. The following paragraphs briefly discuss the main different transmission modes, which will then be discussed in more detail in the following chapters.
 
 ##Direct transmission
-The most straightforward way of transmission is direct transmission from infected to uninfected host. 
+The most straightforward way of transmission is direct transmission from infected to uninfected host. The clearest example of direct transmission are sexually transmitted diseases. For those, it is generally the case that direct physical contact between infected and uninfected host is required for transmission. Exceptions exist, such as transmission of HIV through infected needle sharing, which could even be considered a type of vector-borne transmission, but non-direct modes of transmission are not common. 
+
+Respiratory diseases are often also considered to transmit directly if close proximity between infected and uninfected host is needed for successful transmission. Examples are measles and influenza. It gets a bit tricky though, since many respiratory pathogens can also transmit by first being deposited in the environment (e.g. inside tiny water particles floating in the air for a long time, or on a bathroom faucet), and then if an uninfected person comes into contact with the contaminated environment, they can get infected. The importance of direct versus indirect/environmental transmission for many respiratory pathogens is still not fully understood, and can likely differ between different settings. 
 
 
 ##Environmental transmission
+As just mentioned, respiratory infections might transmit through an environmental stage, where the environment is small water particles in the air or solid surfaces. Infected surfaces (in the context of ID transmission often called fomites) are major routes of transmission for several important pathogens, for instance Staph or pathogens that transmit through the fecal-oral route, e.g. norovirus. Water is the main transmission environment for another important fecal-orally transmitted disease, Cholera. The chapter on environmental transmission will discuss this route in more detail.
 
-
-##Multi-host transmission
-
+##Vector-borne transmission
+Diseases that transmit through a vector stage, such as Malaria, Dengue, Zika, and others, are an important category. The most common and important vector are mosquitos, but other vectors (e.g. kissing bugs for Trypanosomas, which causes Chagas disease) are also important. The definition of what makes an ID a vector borne ID is tricky. See e.g. the HIV-needle example above, or consider Zika, which can transmit by multiple routes. For some diseases, it is not clear if one should consider them vector-borne or not. For instance _Toxoplasma gondii_ spends part of its life-cycle in cats, the other part can be in another host, most commonly mice or birds. If the latter type of host should be considered a vector or not is largely a matter of definition. Often, it is called an intermediate host, and _T gondii_  and diseases with similar life-cycles (e.g. Schistosomiasis) are considered _multi-host diseases_, with the term vector-borne mainly used when the intermediate (non-human) host is an insect. As we will see, from the perspective of describing such diseases with models, the labeling does not make much of a difference.
 
 
 ##Summary and Cartoon
-This chapter described different assumptions for direct transmission models and how they lead to different results with regard to disease dynamics and potential control strategies.
+This chapter briefly introduced different modes of ID transmission. 
 
-![NEED NEW ONE. [Source: smbc-comics.com](http://www.smbc-comics.com/)](./images/smbctransmissionmode.png)
+![Knowing transmission routes is important to understand how one can and cannot contract a specific disease. [Source: xkcd](https://xkcd.com/574/)](./images/xkcd-swine_flu.png)
 
 
 

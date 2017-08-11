@@ -24,40 +24,29 @@ In contrast, for some ID, more individuals (given a constant area) leads to more
 
 
 
-###Modeling types of direct transmission
+###Modeling types of direct transmission {myadvancedbox}
 Assuming the simple SIR model, we have the set of equations
 $$ 
 \begin{aligned}
 \dot S &= - \lambda S \\
 \dot I &= \lambda S  - \gamma I \\
-\dot R &= \gamma I
+\dot R &= \gamma I.
 \end{aligned}
 $$
-where we introduced the _force of infection_, $\lambda$ - which we previously set equal to _bI_.
-
-The force of infection can be rewritten in a differnt form, namely $\lambda= cpv$, where _c_ rate of contacts between hosts, _p_ is the probability that a contact is with an infected host and _v_ is the probability that transmission occurs during
-contact. As an example, for HIV, _c_ would measure frequency of sexual encounters, _p_ would quantify the fraction of those encounters that happen with an HIV+ individual, and _p_ quantifies the probability that having sex with an HIV+ individual leads to infection.
+The _force of infection_, $\lambda$ - is equal to _bI_. The force of infection can be rewritten in a differnt form, namely $\lambda= cpv$, where _c_ rate of contacts between hosts, _p_ is the probability that a contact is with an infected host and _v_ is the probability that transmission occurs during contact. As an example, for HIV, _c_ would measure frequency of sexual encounters, _p_ would quantify the fraction of those encounters that happen with an HIV+ individual, and _p_ quantifies the probability that having sex with an HIV+ individual leads to infection.
 
 Now, depending on the specific assumptions we make for the different parameters, we can end up with different types of transmission. We generally assume that the probability that a contact is with an infected host is equal to the prevalence of the ID in the population, i.e. p = I/N. This is the so-called well-mixed population assumption and holds for both frequency- and density-dependent SIR type models. If we wanted to relax this assumption, we would need to switch to for instance network-based models or build more complicated compartmental models.
 
-For density-dependent transmission, we assume that the rate of contacts is proportional to density of hosts, 
-i.e. c = kN/A, where N is the population size and A the area, and k is some constant of proportionality. As stated above, this might be a good approximation for some ID and scenarios, e.g. influenza.
+For density-dependent transmission, we assume that the rate of contacts is proportional to density of hosts, i.e. c = kN/A, where N is the population size and A the area, and k is some constant of proportionality. As stated above, this might be a good approximation for some ID and scenarios, e.g. influenza.
 
-For frequency-dependent transmission, we assume that the rate of contacts is fixed and independent of the density of hosts, i.e. c = f. This might be a good approximation for e.g. sexually transmitted diseases, where the number/density of individuals in the vicinity of an individual does not (or only in a small way) influence the rate at which a person has sexual contacts.
+For frequency-dependent transmission, we assume that the rate of contacts is fixed and independent of the density of hosts, i.e. c = f. This might be a good approximation for e.g. sexually transmitted diseases, where the number/density of individuals in the vicinity of an individual does not (or only in a small way) influence the rate at which a person has sexual contacts. We therefore end up with $\lambda_d= kv I/A$ and $\lambda_f= fv I/N$ for density- and frequency- dependent transmission. The terms _kv_ and _fv_ are often combined into a new parameter, _b~d~_ and _b~f~_.  If population size and area are fixed, the transmission types lead to the same results, as long as parameter values are chosen accordingly.  If population size changes (not uncommon) or area changes (less common), one needs to be more careful with the choice of transmission term.
 
-We therefore end up with $\lambda_d= kv I/A$ and $\lambda_f= fv I/N$ for density- and frequency- dependent transmission. The terms _kv_ and _fv_ are often combined into a new parameter, _b~d~_ and _b~f~_. 
-
-If population size and area are fixed, the transmission types lead to the same results, as long as parameter values are chosen accordingly.  If population size changes (not uncommon) or area changes (less common), one needs to be more careful with the choice of transmission term.
-
-
-###Note on notation
-Again, specific letters are often used in models in multiple ways. It is common to abbreviate the force of infection with $\lambda$. This letter is also often used for the birth rate (though here we usually use _b_). Just be careful when you read papers/models and make sure you know how each letter is defined.
 
 
 ##Summary and Cartoon
 This chapter described different assumptions for direct transmission models and how they lead to different results with regard to disease dynamics and potential control strategies.
 
-![NEED NEW ONE. [Source: smbc-comics.com](http://www.smbc-comics.com/)](./images/smbctransmissionmode.png)
+![Some pathogens can have direct and indirect modes of transmission. [Source: smbc-comics.com](http://www.smbc-comics.com/)](./images/smbctransmissionmode.png)
 
 
 
