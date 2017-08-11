@@ -70,7 +70,7 @@ So how is the reproductive number related to infectious disease outbreaks? It is
 During the large Ebola outbreak in West Africa which started in 2013, a few Ebola patients came to the U.S. and the goal was to have R = 0, i.e. no ongoing transmission. That didn't quite happen, a few new individuals got infected, but R was very close to zero. In contras, in West Africa there was little hope to get R = 0 quickly. Fortunately, R < 1 is enough. So we can 'tolerate' a few further transmissions and new cases and still get the outbreak eventually under control. Of course, in general we want to get R as close to 0 as possible, especially for disease as deadly as Ebola. But to get an outbreak to fizzle out, we only need R < 1, not R = 0. 
 
 
-##Reproductive number and ID eradication
+##Reproductive number and ID eradication 
 If we could achieve R~0~ < 1 globally everywhere, we could eventually eradicate a disease. 
 The ability to do that depends on many factors. One important one is the R~0~ value of any ID before we start an eradication campaign. Intuitively, the higher R~0~, the harder it will be to get it to < 1. We'll make that more specific below.
 
