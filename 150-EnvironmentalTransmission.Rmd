@@ -49,7 +49,9 @@ Infected persons release pathogen into the environment at rate _p_. The pathogen
 
 
 ##Summary and Cartoon
-This chapter provided an introduction to environmental transmission and its
+This chapter provided a discussion of environmental transmission and its impact on ID dynamics and control.
+
+
 ![One problem with environmental transmission control. [Source: xkcd](https://xkcd.com/1161/)](./images/xkcd-hand_sanitizer.png)
 
 
@@ -59,8 +61,8 @@ This chapter provided an introduction to environmental transmission and its
 
 
 ##Further Resources
-The following papers provide some additional introductory reading on the topic of environmental transmission from a dynamical systems perspective: [brankston07, cortez13]
-
+* The following papers provide some additional introductory reading on the topic of environmental transmission from a dynamical systems perspective: [brankston07, cortez13]
+* Cholera is well studied 
 
 ##References
 
