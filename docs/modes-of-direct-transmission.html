@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="characterizing-infectious-disease-states.html">
-<link rel="next" href="reproductive-number.html">
+<link rel="prev" href="types-of-infectious-disease-transmission.html">
+<link rel="next" href="environmental-transmission-1.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -208,175 +208,71 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="id-patterns" class="section level1">
-<h1><span class="header-section-number">4</span> ID Patterns</h1>
-<div id="overview-and-learning-objectives-2" class="section level2">
-<h2><span class="header-section-number">4.1</span> Overview and Learning Objectives</h2>
-<p>In this module, we will discuss different patterns of ID dynamics, such as single outbreaks, recurrent cycles and steady endemic states.</p>
+<div id="modes-of-direct-transmission" class="section level1">
+<h1><span class="header-section-number">7</span> Modes of Direct Transmission</h1>
+<div id="overview-and-learning-objectives-5" class="section level2">
+<h2><span class="header-section-number">7.1</span> Overview and Learning Objectives</h2>
+<p>In this chapter, we will discuss different types of direct transmission and explore how these different modes of transmission impact ID dynamics.</p>
 <p>The learning objectives for this chapter are:</p>
 <ul>
-<li>Understand the concept of resource replenishment</li>
-<li>Know the different mechanisms that can lead to ID cycles</li>
-<li>Understand the concept of endemic state</li>
-<li>Understand what leads to different ID patterns</li>
-<li>Understand the difference between intrinsic and extrinsic drivers of ID cycles</li>
+<li>understand the assumptions underlying different modes of direct transmission</li>
+<li>Understand how different modes of direct transmission affect ID dynamics</li>
 </ul>
 </div>
-<div id="introduction-2" class="section level2">
-<h2><span class="header-section-number">4.2</span> Introduction</h2>
-<p>Some ID produce sporadic outbreaks and then disappear for years. Ebola is a prominent example. We will discuss in a future module how to figure out what leads to the (local) extinction of an ID.</p>
-<p>Many other ID show oscillatory behavior, i.e. we get repeated outbreaks every so often, with some time of no or little disease in between. For some ID, the outbreaks are seasonal/annual, for other ID, the cycles are multi-year.</p>
+<div id="introduction-5" class="section level2">
+<h2><span class="header-section-number">7.2</span> Introduction</h2>
+</div>
+<div id="types-of-direct-transmission" class="section level2">
+<h2><span class="header-section-number">7.3</span> Types of direct transmission</h2>
+<p>The most straightforward way of transmission is direct transmission from infected to uninfected host. A prime class of pathogens that follow this route are sexually transmitted infections (STI). For STI, the pathogen goes directly from one host to the other. Other pathogens are <em>essentially direct</em> with only a very short time spent outside the host. Ebola is such an example, which requires close contact between infected and uninfected. While there is a short stage outside the host (e.g. pathogen particles suspended in the air, or on a person’s hand), transmission can only occur if the pathogen enters the new host quickly after having been released from the infected host. As such, we usually consider this direct transmission.</p>
+<p>For direct transmission, there are important ways in which transmission can scale with population size or population density. One often distinguishes between <em>density-dependent</em> and <em>frequency-dependent</em> transmission. Unfortunately, the terminology is not very consistent, other terms are used and sometimes misused. See e.g. <span class="citation">(McCallum, Barlow, and Hone <a href="#ref-mccallum01">2001</a>, <span class="citation">Begon et al. (<a href="#ref-begon02">2002</a>)</span>)</span> for a discussion of this.</p>
+<p>The main differences between these 2 types of transmission have to do with the scaling of transmission intensity (often measured by the force of infection) as population size changes. This is a feature of the number of contacts that a susceptible has with an infected person. For some types of ID, e.g. STI, the number of contact (i.e. sexual encounters) is likely not too dependent on the population density or size. For instance the average person living in a town of 100,000 people likely has pretty much the same number of sexual contacts compared to the person living in a town if 1 million. One could argue that more opportunities might lead to more sexual contacts, but it’s unlikely to change by much. This type of invariance of transmission is labeled (using the terminology of <span class="citation">(McCallum, Barlow, and Hone <a href="#ref-mccallum01">2001</a>,<span class="citation">Begon et al. (<a href="#ref-begon02">2002</a>)</span>)</span>) <em>frequency-dependent</em>.</p>
+<p>In contrast, for some ID, more individuals (given a constant area) leads to more contacts and more transmission. This might apply to ID such as influenza or norovirus. A scenario where an increase in population size/density leads to a (linear) increase in transmission is usually referred to as <em>density-dependent</em> transmission. However, even for ID that do show some signs of density dependence, the number of social contacts often dominates. For instance a person in a city that is 10 times the size of a smaller city likely won’t have 10 times as many contacts.</p>
+<div id="modeling-types-of-direct-transmission-myadvancedbox" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Modeling types of direct transmission {myadvancedbox}</h3>
+<p>Assuming the simple SIR model, we have the set of equations <span class="math display">\[ 
+\begin{aligned}
+\dot S &amp;= - \lambda S \\
+\dot I &amp;= \lambda S  - \gamma I \\
+\dot R &amp;= \gamma I.
+\end{aligned}
+\]</span> The <em>force of infection</em>, <span class="math inline">\(\lambda\)</span> - is equal to <em>bI</em>. The force of infection can be rewritten in a differnt form, namely <span class="math inline">\(\lambda= cpv\)</span>, where <em>c</em> rate of contacts between hosts, <em>p</em> is the probability that a contact is with an infected host and <em>v</em> is the probability that transmission occurs during contact. As an example, for HIV, <em>c</em> would measure frequency of sexual encounters, <em>p</em> would quantify the fraction of those encounters that happen with an HIV+ individual, and <em>p</em> quantifies the probability that having sex with an HIV+ individual leads to infection.</p>
+<p>Now, depending on the specific assumptions we make for the different parameters, we can end up with different types of transmission. We generally assume that the probability that a contact is with an infected host is equal to the prevalence of the ID in the population, i.e. p = I/N. This is the so-called well-mixed population assumption and holds for both frequency- and density-dependent SIR type models. If we wanted to relax this assumption, we would need to switch to for instance network-based models or build more complicated compartmental models.</p>
+<p>For density-dependent transmission, we assume that the rate of contacts is proportional to density of hosts, i.e. c = kN/A, where N is the population size and A the area, and k is some constant of proportionality. As stated above, this might be a good approximation for some ID and scenarios, e.g. influenza.</p>
+<p>For frequency-dependent transmission, we assume that the rate of contacts is fixed and independent of the density of hosts, i.e. c = f. This might be a good approximation for e.g. sexually transmitted diseases, where the number/density of individuals in the vicinity of an individual does not (or only in a small way) influence the rate at which a person has sexual contacts. We therefore end up with <span class="math inline">\(\lambda_d= kv I/A\)</span> and <span class="math inline">\(\lambda_f= fv I/N\)</span> for density- and frequency- dependent transmission. The terms <em>kv</em> and <em>fv</em> are often combined into a new parameter, <em>b<sub>d</sub></em> and <em>b<sub>f</sub></em>. If population size and area are fixed, the transmission types lead to the same results, as long as parameter values are chosen accordingly. If population size changes (not uncommon) or area changes (less common), one needs to be more careful with the choice of transmission term.</p>
+</div>
+</div>
+<div id="summary-and-cartoon-5" class="section level2">
+<h2><span class="header-section-number">7.4</span> Summary and Cartoon</h2>
+<p>This chapter described different assumptions for direct transmission models and how they lead to different results with regard to disease dynamics and potential control strategies.</p>
 <div class="figure">
-<img src="images/IDcycles.png" alt="Examples of ID cycles. From (Matt J Keeling and Rohani 2008)." />
-<p class="caption">Examples of ID cycles. From <span class="citation">(Matt J Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.</p>
-</div>
-<p>Why are some ID seasonal, some not? What mechanisms lead to seasonal or multi-year oscillations? What determines the timing between outbreaks?</p>
-<p>Yet other IDs seem to have “settled down” and occur more or less at a steady level, with only minor fluctuations. TB and HIV in some parts of the world, as well as certain STD and chronic viral infections of for instance the herpes virus family seem to have such a dynamic.</p>
-<p>The following discusses the factors affecting these different ID dynamics patterns.</p>
-</div>
-<div id="resource-replenishment" class="section level2">
-<h2><span class="header-section-number">4.3</span> Resource Replenishment</h2>
-<p>So far, we mainly looked at scenarios where some ID caused a single outbreak. As we saw, outbreaks wane because eventually there are not enough susceptible individuals around to sustain ongoing transmission. This is a very general ecological principle: Without replenishment of resources, some consumer of such resources will eventually die out. We see that in predators eating pray, forest fires “eating” trees, and pathogens “eating” their hosts. If the resources are not replenished quickly enough, the consumer of these resources will go extinct. To sustain continued presence of the consumer/predator, resources need to be replenished.</p>
-<p>For our scenario, the resource consumer is the ID and the resources are the hosts, usually humans. Replenishment of susceptible hosts can happen through different mechanisms. Most common are birth of new, susceptible individuals, and loss of immunity. Migration, if strong, can be another way susceptible hosts can be replenished. Similarly, individuals that become newly sexually active correspond to the birth of new susceptibles for sexually transmitted infections.</p>
-<p>If the replenishment of new susceptibles is rapid, an ID might be able to maintain itself in a population and never go extinct. (Extinction will be discussed in more detail later.)</p>
-</div>
-<div id="a-model-with-resource-replenishment" class="section level2">
-<h2><span class="header-section-number">4.4</span> A model with resource replenishment</h2>
-<p>A version of the SIR model that includes resource replenishment through natural births or waning immunity is shown in figure <a href="id-patterns.html#fig:birthdeathdmodel">4.1</a>.</p>
-<div class="figure"><span id="fig:birthdeathdmodel"></span>
-<img src="images/R0modelfigure.png" alt="Example of an SIR model with births, deaths and waning immunity."  />
-<p class="caption">
-Figure 4.1: Example of an SIR model with births, deaths and waning immunity.
-</p>
-</div>
-<p>The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate <em>m</em>, natural death at some rate <em>n</em>, and the possibility that recovered lose their immunity and return to the susceptible class at rate <em>w</em>. This new model allows for oscillations/cycles and steady states, as explained next.</p>
-<div id="myadvancedbox" class="section level4">
-<h4><span class="header-section-number">4.4.0.1</span> Mathematical equations for the model with resource replenishment</h4>
-<p>The ordinary differential equations corresponding to the compartmental model shown in figure <a href="id-patterns.html#fig:birthdeathdmodel">4.1</a> are given by</p>
-<p><span class="math display">\[\dot S = m - b I S + wR - n S \]</span> <span class="math display">\[\dot I = b IS - gI - n I \]</span> <span class="math display">\[\dot R =  gI - wR - n R\]</span></p>
+<img src="images/smbctransmissionmode.png" alt="Some pathogens can have direct and indirect modes of transmission. Source: smbc-comics.com" />
+<p class="caption">Some pathogens can have direct and indirect modes of transmission. <a href="http://www.smbc-comics.com/">Source: smbc-comics.com</a></p>
 </div>
 </div>
-<div id="intrinisic-cycles" class="section level2">
-<h2><span class="header-section-number">4.5</span> Intrinisic Cycles</h2>
-<p>The interaction between susceptible and infectious hosts can leads to a dynamical pattern that can/does produce oscillations. Specifically, the dynamics of resource consumption (depletion of susceptible hosts), waning ID incidence due to reduced availability of hosts, and subsequent replenishment of susceptibes can lead to cycles. Since these cycles are not driven by anything “from the outside” and arise purely due to the complex interplay between host resources and ID, there are sometimes called intrinsic cycles/oscillations. The timing of these cycles (the period of the oscillations) is determined by characteristics of the ID and scenario. For instance the duration of the infectious period and the transmissibility of the host generally influence the timing between outbreaks. In ecology, such cycles are well studied in the context of so-called predator-prey systems. For our infectious disease models, the “prey” are susceptibles and the “predators” are infected individuals.</p>
-</div>
-<div id="intrinisic-cycles-and-models" class="section level2">
-<h2><span class="header-section-number">4.6</span> Intrinisic Cycles and models</h2>
-<p>One can sometimes compute the time between outbreaks. For the simple compartmental SIR model, an approximate equation for the period close to the endemic state is <span class="math display">\[T \approx 2 \pi \sqrt{\left( \frac{LD}{R_0 - 1} \right)}\]</span></p>
-<p>Here, <em>L</em> is the average lifespan of a host, <em>D</em> is the average duration of infectiousness, and <em>R<sub>0</sub></em> is the basic reproductive number - a quantity we will discuss shortly. For more details on this equations, see e.g. <span class="citation">(Matt J Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.</p>
-<p>For more complicated models and real-world scenarios where the simple SIR model is not a good approximation, the equation just provided does not apply anymore. It might not even be possible to write down any equation. One can then instead run a computer simulation of the model and determine the length of the cycles from the time-series returned by the computer. The main point still holds, independent of the ability to write down an equation for the cycle length, namely that there is a relation between intrinsic characteristics of the system, such as duration of infectious period (<em>D</em>) and transmissibility of the disease (<em>R<sub>0</sub></em>), and the period of the oscillations. In cases where we cannot derive a mathematical equation, we can try to figure out the relation between cycle duration and some parameter of interest by repeatedly altering the parameter (e.g. the duration of the infectious period, <em>D</em>), and record the cycle period, <em>T</em>, reported by the model simulation for various values of the parameter. By plotting a figure showing <em>D</em> on the x-axis and <em>T</em> on the y-axis, we obtain a relation between these quantities.</p>
-</div>
-<div id="external-drivers-of-cycles" class="section level2">
-<h2><span class="header-section-number">4.7</span> External drivers of cycles</h2>
-<p>Another mechanism that can lead to osciallations in the dynamics of ID can come from “external” drivers. Of course, these processes are still part of the whole system, but not as directly as the dynamics and interaction of the hosts. In that sense we consider it an external process.</p>
-<p>Weather is one of the most important external factors. Many ID are influenced by the weather. For instance influenza virus survives better when vapor pressure is low, which is usually the case in temperate regions in winter <span class="citation">(M. Lipsitch and Viboud <a href="#ref-lipsitch09">2009</a>, <span class="citation">Shaman et al. (<a href="#ref-shaman10">2010</a>)</span>)</span>.</p>
-<p>Other types of seasonality are related to human activity and behavior. For instance many childhood diseases increase in incidence when a new school year starts.</p>
-<p>For some ID, weather and behavior interact. Many water-borne diseases in the U.S. see an uptick in summer. This is due to behavior changes in the host: More people swim in outdoor water in the summer.</p>
-<p>Often, more than one mechanism occurs and influences the ID dynamics. As such, it is often not possible to isolate a single factor as the main important one. It often depends on the specific setting.</p>
-</div>
-<div id="notes-on-cycles" class="section level2">
-<h2><span class="header-section-number">4.8</span> Notes on Cycles</h2>
-<p>In the type of models we have looked at so far, sustained oscillations need something like seasonality. Without it, the cycles die out and the disease reaches a steady, endemic state. For more complex models or models that include stochastic dynamics (something we’ll discuss later), cycles can be maintained even in the absence of external drivers.</p>
-</div>
-<div id="steady-states" class="section level2">
-<h2><span class="header-section-number">4.9</span> Steady states</h2>
-<p>In addition to single outbreaks or recurrent cycles, ID often also reach a state where the incidence/prevalence in a population is roughly constant. This is usually referred to as endemic state. Examples of that are e.g. helminth infections in many African countries (in the absence of control efforts) or certain sexually transmitted diseases in developed countries.</p>
-<p>Note that while at steady state, the total number of ID cases does not change, there is usually still constant turnover. Some individuals get infected, while others recover or die. It just happens that these processes balance each other, making the total numbers roughly constant.</p>
-<p>If we have a mathematical or computer model of our system, there are 2 ways to determine steady states. One is mathematical, the other is through simulating the system. The former approach is more elegant and powerful, but generally only works if we have a fairly small model. It is illustrated in the box below. Often, the model is too complicated to obtain useful equations for the steady state values of the model variables. Fortunately, we can always determine them numerically. We simply start our computer simulation model with some values and run it long enough until it has settled down (we need to make sure it actually does have a steady state). We can then record the steady state values. We can do this for different model parameter values (e.g. changes in birth rate or changes of rate of infection). At the end, we can plot a figure showing how the steady state values change with some model parameter. This approach is obviously much slower than using the mathematical equations. However, often it is the only feasible approach.</p>
-<p>Note that there are technically steady states that exist but won’t show up in the simulation since they are unstable. Since any unstable steady state also rarely exists in nature (other than the disease free state, with a population remaining in that state until a new pathogen arrives), those steady states tend to be not that important in practice.</p>
-<div id="myadvancedbox" class="section level4">
-<h4><span class="header-section-number">4.9.0.1</span> Steady states and models</h4>
-<p>When an ID reaches a steady state, a model based on ordinary differential equations, such as the model shown above, simplifies. At steady state, there are – by definition – no changes in the total number of individuals in each compartment. Therefore the left side of the equations are zero, i.e. <span class="math inline">\(\dot S = \dot I = \dot R =0\)</span>. This changes the differential equations into a set of algebraic equations. For a fairly small set of equations (usually &lt; 5), one can obtain equations for the compartments (<em>S</em>, <em>I</em>, and <em>R</em> in this case) at steady state that are only function of the model parameters. While it is often theoretically possible to solve models with more compartments/equations, the resulting expressions are usually so big and unwieldy to not provide much useful insight.</p>
-<p>The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. The two main packages for such tasks are <a href="http://www.maplesoft.com/">Maple</a> and <a href="https://www.wolfram.com/mathematica/">Mathematica</a>. Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use <a href="http://maxima.sourceforge.net/">Maxima</a>. <a href="http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems">Other packages exist</a>. Note that <code>R</code> is not suitable for solving symbolic equations. Using Maxima to solve the equations above (without immune recovery, i.e. <em>w=0</em>, to make the results simpler) gives:</p>
-<div class="figure">
-<img src="images/SSmaxima.png" alt="Maxima code for solving the SIR model steady state equations." />
-<p class="caption">Maxima code for solving the SIR model steady state equations.</p>
-</div>
-<p>The same results are of course obtained when solving the equations by hand. The first steady state returned by maxima is the one in the absence of an ID, with only susceptibles around. Usually, we are interested in the second steady state, the endemic equilibrium at which disease prevalence is at a fixed level. We thus find the values for the number of susceptible, infected and recovered at steady state as a function of the model parameters.</p>
-<p>Having the equations for the steady state allows us to rapidly gain insight into the system behavior. For instance we can see that for an endemic steady state to be possible (i.e. for <em>I</em> &gt; 0 at steady state), we need <span class="math inline">\(b m &gt; n (n+ g)\)</span>. We can make intuitive sense out of this expression: The combination of pathogen transmission capacity (<em>b</em>) and birth rate <em>m</em>, which support ID persistence, needs to be stronger than the effects of general host death <em>n</em> and host recovery <em>g</em>. We will later see that this relates to the concept of reproductive number.</p>
-</div>
-</div>
-<div id="detecting-cycles-or-other-patterns" class="section level2">
-<h2><span class="header-section-number">4.10</span> Detecting cycles or other patterns</h2>
-<p>It is often hard to determine if there is a specific repeating pattern, such as oscillations/cycles for a given ID. Consider for instance Figure <a href="id-patterns.html#fig:gonorrheapattern">4.2</a> (<a href="http://www.cdc.gov/STD/stats06/images/trends-img-2.gif">Source CDC</a>). One can see that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005, with ups and downs in between. The changes are not rapid enough to be due to seasonal/annual drivers. If we had more data and the same up-down pattern repeated, we could speculate that this might be due to some intrinsic oscillatory dynamics of the disease. In this case, the most likely explanation for the observed patterns lie outside the disease dynamics itself. Increased detection and treatment likely led to a decline in the 40s, changing sexual behavior lead to an increase starting in the 60s, and strong safe-sex campaigns, combined with the threat of HIV, led to a decrease starting in the 80s. However, this is somewhat speculative. It might well be that other factors, (e.g. changes in surveillance intensity) could explain the pattern. A careful analysis (which I have not done) would be needed before one can be more confident as to what might lead to the observed pattern.</p>
-<div class="figure"><span id="fig:gonorrheapattern"></span>
-<img src="images/gonorrhea.gif" alt="Gonorrhea cases in the US."  />
-<p class="caption">
-Figure 4.2: Gonorrhea cases in the US.
-</p>
-</div>
-</div>
-<div id="id-dynamics-in-changing-populations" class="section level2">
-<h2><span class="header-section-number">4.11</span> ID Dynamics in changing populations</h2>
-<p>The idea of resource replenishment described above assumes in its simplest forms that in the absence of the ID, the host population is in steady state. That is, the number of births and deaths balance each other and the population size therefore stays constant. We then investigate ID dynamics on top of such a constant population (which then might not be constant anymore if the disease leads to many deaths).</p>
-<p>One can go a step further and consider an underlying population that changes in size due to underlying growth or decline of the population. We can then study the dynamics of an ID on top of an already dynamically changing population. While this is generally not much more complicated to do with computer models, it is harder to understand what exactly is going on in the system. For instance consider an ID with high mortality in a growing population. If we just looked at the population size, it could be that it remains constant, due to the 2 processes of natural population growth and disease induced mortality balancing each other. We therefore need to carefully study how the different processes affect ID dynamics.</p>
-</div>
-<div id="summary-and-cartoon-2" class="section level2">
-<h2><span class="header-section-number">4.12</span> Summary and Cartoon</h2>
-<p>This module provided a discussion of different general patterns we observe in the dynamics of ID. Those are individual outbreaks, cycles of repeated outbreaks, and steady endemic states.</p>
-<div class="figure">
-<img src="images/phd_sciencenewscycle.gif" alt="Here’s a different kind of cycle that (ID) scientists sometimes encounter. Source: phdcomics.com" />
-<p class="caption">Here’s a different kind of cycle that (ID) scientists sometimes encounter. <a href="http://www.phdcomics.com/comics/archive.php?comicid=1174">Source: phdcomics.com</a></p>
-</div>
-</div>
-<div id="exercises-2" class="section level2">
-<h2><span class="header-section-number">4.13</span> Exercises</h2>
+<div id="exercises-5" class="section level2">
+<h2><span class="header-section-number">7.5</span> Exercises</h2>
 <ul>
-<li>The <em>Patterns of ID</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
-<li>Find a scientific article/paper that investigates the incidence/prevalence pattern of some ID. Summarize the article. Discuss why one sees the observed pattern (and not one of the others). Speculate what kind of change to the ID/system could change the observed pattern (even if that change is not biologically realistic).</li>
-<li>Read the article “Dynamical resonance can account for seasonality of influenza epidemics” by Dushoff et al <span class="citation">(Dushoff et al. <a href="#ref-dushoff04">2004</a>)</span>. They suggest an interesting explanation for the seasonal variation in influenza cases. Look at the literature to see if since that paper came out, there has been any further progress on that question. Discuss recent advances that might support or refute the idea suggested by Dushoff et al.</li>
+<li>The <em>Direct transmission</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>Read the paper “How should pathogen transmission be modelled?” by McCallum et al <span class="citation">(McCallum, Barlow, and Hone <a href="#ref-mccallum01">2001</a>)</span>. The authors discuss different models for transmission. They claim that it matters in a practical setting to get the transmission term right. Pick some ID and explain how different assumptions about transmission might lead to different conclusions with regard to possible control strategies.</li>
 </ul>
 </div>
-<div id="further-resources-2" class="section level2">
-<h2><span class="header-section-number">4.14</span> Further Resources</h2>
-<ul>
-<li>The following references provide some more information on and discussion of seasonality in IDs: <span class="citation">(Altizer et al. <a href="#ref-altizer06">2006</a>; Dowell <a href="#ref-dowell01">2001</a>; Grassly and Fraser <a href="#ref-grassly06">2006</a>; Stone, Olinky, and Huppert <a href="#ref-stone07">2007</a>)</span>.</li>
-<li>Seasonality for influenza has been heavily studied, some references are <span class="citation">(Dushoff et al. <a href="#ref-dushoff04">2004</a>; Lofgren et al. <a href="#ref-lofgren07">2007</a>; Baumgartner et al. <a href="#ref-baumgartner12">2012</a>)</span>.</li>
-<li>A discussion of cycles in Cholera can be found in <span class="citation">(Pascual, Bouma, and Dobson <a href="#ref-pascual02">2002</a>; Emch et al. <a href="#ref-emch08">2008</a>)</span>.</li>
-</ul>
+<div id="further-resources-5" class="section level2">
+<h2><span class="header-section-number">7.6</span> Further Resources</h2>
+<p>The following papers provide some additional reading on the topic of direct transmission types from a dynamical systems perspective: <span class="citation">(Begon et al. <a href="#ref-begon02">2002</a>)</span></p>
 </div>
-<div id="references-3" class="section level2">
-<h2><span class="header-section-number">4.15</span> References</h2>
+<div id="references-6" class="section level2">
+<h2><span class="header-section-number">7.7</span> References</h2>
 
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-keeling08">
-<p>Keeling, Matt J, and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press.</p>
+<div id="ref-mccallum01">
+<p>McCallum, H., N. Barlow, and J. Hone. 2001. “How Should Pathogen Transmission Be Modelled?” <em>Trends Ecol Evol</em> 16 (6): 295–300.</p>
 </div>
-<div id="ref-lipsitch09">
-<p>Lipsitch, Marc, and Cécile Viboud. 2009. “Influenza Seasonality: Lifting the Fog.” <em>Proc Natl Acad Sci U S A</em> 106 (10). Department of Epidemiology, Harvard School of Public Health, Boston, MA 02130, USA. mlipsitc@hsph.harvard.edu: 3645–6. doi:<a href="https://doi.org/10.1073/pnas.0900933106">10.1073/pnas.0900933106</a>.</p>
-</div>
-<div id="ref-shaman10">
-<p>Shaman, Jeffrey, Virginia E. Pitzer, Cécile Viboud, Bryan T. Grenfell, and Marc Lipsitch. 2010. “Absolute Humidity and the Seasonal Onset of Influenza in the Continental United States.” <em>PLoS Biol</em> 8 (2). College of Oceanic; Atmospheric Sciences, Oregon State University, Corvallis, Oregon, United States of America.: e1000316. doi:<a href="https://doi.org/10.1371/journal.pbio.1000316">10.1371/journal.pbio.1000316</a>.</p>
-</div>
-<div id="ref-dushoff04">
-<p>Dushoff, Jonathan, Joshua B. Plotkin, Simon A. Levin, and David JD Earn. 2004. “Dynamical Resonance Can Account for Seasonality of Influenza Epidemics.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (48): 16915–6. <a href="http://www.pnas.org/content/101/48/16915.short" class="uri">http://www.pnas.org/content/101/48/16915.short</a>.</p>
-</div>
-<div id="ref-altizer06">
-<p>Altizer, Sonia, Andrew Dobson, Parviez Hosseini, Peter Hudson, Mercedes Pascual, and Pejman Rohani. 2006. “Seasonality and the Dynamics of Infectious Diseases.” <em>Ecology Letters</em> 9 (4): 467–84. doi:<a href="https://doi.org/10.1111/j.1461-0248.2005.00879.x">10.1111/j.1461-0248.2005.00879.x</a>.</p>
-</div>
-<div id="ref-dowell01">
-<p>Dowell, S F. 2001. “Seasonal Variation in Host Susceptibility and Cycles of Certain Infectious Diseases.” <em>Emerging Infectious Diseases</em> 7 (3): 369–74. doi:<a href="https://doi.org/10.3201/eid0703.010301">10.3201/eid0703.010301</a>.</p>
-</div>
-<div id="ref-grassly06">
-<p>Grassly, Nicholas C, and Christophe Fraser. 2006. “Seasonal Infectious Disease Epidemiology.” <em>Proceedings of the Royal Society of London B: Biological Sciences</em> 273 (1600). The Royal Society: 2541–50.</p>
-</div>
-<div id="ref-stone07">
-<p>Stone, Lewi, Ronen Olinky, and Amit Huppert. 2007. “Seasonal Dynamics of Recurrent Epidemics.” <em>Nature</em> 446 (7135): 533–36. doi:<a href="https://doi.org/10.1038/nature05638">10.1038/nature05638</a>.</p>
-</div>
-<div id="ref-lofgren07">
-<p>Lofgren, E., N. H. Fefferman, Y. N. Naumov, J. Gorski, and E. N. Naumova. 2007. “Influenza Seasonality: Underlying Causes and Modeling Theories.” <em>Journal of Virology</em> 81 (11): 5429–36. doi:<a href="https://doi.org/10.1128/JVI.01680-06">10.1128/JVI.01680-06</a>.</p>
-</div>
-<div id="ref-baumgartner12">
-<p>Baumgartner, Eduardo, Christine N. Dao, Sharifa Nasreen, Mejbah Uddin Bhuiyan, Syeda Mah-E-Muneer, Abdullah Al Mamun, M. A. Yushuf Sharker, et al. 2012. “Seasonality, Timing, and Climate Drivers of Influenza Activity Worldwide.” <em>The Journal of Infectious Diseases</em> 206 (6): 838–46. doi:<a href="https://doi.org/10.1093/infdis/jis467">10.1093/infdis/jis467</a>.</p>
-</div>
-<div id="ref-pascual02">
-<p>Pascual, Mercedes, Menno J. Bouma, and Andrew P. Dobson. 2002. “Cholera and Climate: Revisiting the Quantitative Evidence.” <em>Microbes and Infection</em> 4 (2): 237–45. <a href="http://www.sciencedirect.com/science/article/pii/S1286457901015337" class="uri">http://www.sciencedirect.com/science/article/pii/S1286457901015337</a>.</p>
-</div>
-<div id="ref-emch08">
-<p>Emch, Michael, Caryl Feldacker, M Sirajul Islam, and Mohammad Ali. 2008. “Seasonality of Cholera from 1974 to 2005: A Review of Global Patterns.” <em>International Journal of Health Geographics</em> 7 (1): 31. doi:<a href="https://doi.org/10.1186/1476-072X-7-31">10.1186/1476-072X-7-31</a>.</p>
+<div id="ref-begon02">
+<p>Begon, M., M. Bennett, R. G. Bowers, N. P. French, S. M. Hazel, and J. Turner. 2002. “A Clarification of Transmission Terms in Host-Microparasite Models: Numbers, Densities and Areas.” <em>Epidemiol Infect</em> 129 (1). ences, The University of Liverpool, UK.: 147–53.</p>
 </div>
 </div>
             </section>
@@ -384,8 +280,8 @@ Figure 4.2: Gonorrhea cases in the US.
           </div>
         </div>
       </div>
-<a href="characterizing-infectious-disease-states.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="reproductive-number.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="types-of-infectious-disease-transmission.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="environmental-transmission-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

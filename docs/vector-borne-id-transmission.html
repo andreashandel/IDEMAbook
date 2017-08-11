@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="overview-of-this-book.html">
-<link rel="next" href="characterizing-infectious-disease-states.html">
+<link rel="prev" href="environmental-transmission-1.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -208,205 +208,216 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-the-dynamical-systems-approach-to-infectious-disease-epidemiology" class="section level1">
-<h1><span class="header-section-number">2</span> Introduction to the dynamical systems approach to infectious disease epidemiology</h1>
-<div id="overview-and-learning-objectives" class="section level2">
-<h2><span class="header-section-number">2.1</span> Overview and Learning Objectives</h2>
-<p>In this chapter, we discuss the idea of taking a <em>dynamical systems approach</em> and how it is applied to infectious diseases.</p>
-<p>The learning objectives for this chapter are:</p>
+<div id="vector-borne-id-transmission" class="section level1">
+<h1><span class="header-section-number">9</span> Vector-borne ID transmission</h1>
+<div id="overview-and-learning-objectives-7" class="section level2">
+<h2><span class="header-section-number">9.1</span> Overview and Learning Objectives</h2>
+<p>In this chapter, we will discuss an important form of indirect transmission, one that has a vector stage.</p>
+<p>The learning objectives for this chapter are: * Know about important IDs that are vector-borne * Understand the implactions of vector-borne transmission on ID dynamics * Understand how vector-borne transmission influences potential ID control strategies.</p>
+</div>
+<div id="introduction-7" class="section level2">
+<h2><span class="header-section-number">9.2</span> Introduction</h2>
+<p>Vector-borne ID are those that go through - at least - two different hosts to complete a full replication and transmission cycle. Hosts of one type infect hosts of the other, there is no direct transmission between hosts of the same type.</p>
+<div class="figure">
+<img src="images/vectorborne-schematic.png" alt="Schematic of a vector-borne ID" />
+<p class="caption">Schematic of a vector-borne ID</p>
+</div>
+<p>Not surprisingly, the IDs which receive the most study are those where one of the hosts are humans. The other host (i.e. the vector) can be any other animal, such as dogs, rodents, snails, insects, etc. At times, growth and replication of the pathogen occur mainly in one host, with the other just serving as vessel to get between hosts. Most often, the pathogen completes important parts of its growth and replication cycle in both (or all, if there are more than 2) hosts.</p>
+<div id="vector-borne-transmission-and-id-patterns" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> Vector-borne transmission and ID patterns</h3>
+<p>Understanding what mechanisms lead to potentially observed patterns in incidence and prevalence for vector-borne diseases is difficult, due to the presence of more than one host. In a previous chapter, we discussed cycles that could be caused by the intrinsic transmission dynamics or influenced by external drivers (e.g. seasonal changes in weather). This general concept still holds, but there are now 2 species (e.g. humans and mosquitos), both with their own intrinsic dynamics and responding differently to external factors. This adds complexity. Nevertheless, patterns in ID dynamics are often observed for vector-borne diseases, and at least partially understood. For instance, the reproductive cycle of mosquitos strongly depends on the weather, and specifically the availability or lack of water. As such, in regions that have strong differences in rainfall between seasons, one often observes annual cycles based on annual weather patterns.</p>
+</div>
+<div id="vector-borne-transmission-and-interventions" class="section level3">
+<h3><span class="header-section-number">9.2.2</span> Vector-borne transmission and interventions</h3>
+<p>With vector-borne ID, there is a unique opportunity for interventions that does not exist for directly transmitted diseases. Namely, we can try to control the ID at the vector stage. That often means trying to kill as many vectors as possible. DDT in the past, and more recently pesticide-coated bednets have been proven to work very effectively. Unfortunately, these interventions need to be sustained, otherwise mosquito numbers (or other vectors with a short life-span) quickly bounce back. Also, while we mostly think of mosquitos and other insects as nuisance or worse, they do perform important roles in the ecosystem, and it is unclear what the consequences would be of potentially killing all Aenopheles mosquitos (the ones that transmit a lot of important ID). Some recent approaches try to make mosquitos resistant to ID. If one could introduce those and have them outcompete the mosquitos that are susceptible to the ID, one might - in theory - get rid of important IDs without affecting the ecosystem in unpredictable ways.</p>
+<p>A major problem with all control startegies targeting vectors is that not only do pathogens evolve quickly, but most vectors have fairly short lifespans and large population numbers, which means rapid evolution. This could make any control measures ineffective within a number of years. Indeed, that was observed for DDT, where mosquitos resistant to the chemical started to appear before its widespread use was discontinued.</p>
+</div>
+</div>
+<div id="modeling-vector-borne-transmission-myadvancedbox" class="section level2">
+<h2><span class="header-section-number">9.3</span> Modeling vector-borne transmission {myadvancedbox}</h2>
+<p>The easiest way to model a vector-borne disease is to simply ignore the vector and assume that the transmission term of the equation (e.g. a term like <em>bSI</em>) represents – in a very simpliefied form – all the complicated processes involved in transmission, including the vector stage. That makes the model simple, but of course doesn’t capture the vector-borne aspects of the dynamics. If we are interested in the dynamics of the disease in all hosts, we do need to include the vector components in a model. To include vectors in a model, one could for instance build 2 SIR-type models, with one set of equations for the (human) host and one for the vector, and then couple the compartments by including transmission from humans to vectors and vectors to humans. Equations for such a model might look as follows: <span class="math display">\[
+\begin{aligned}
+\dot S_h &amp;= - \beta_1 S_h I_v \\
+\dot I_h &amp;= \beta_1S_h I_v - \gamma_h I_h \\
+\dot R_h &amp;= \gamma_h I_h \\
+\dot S_v &amp;= - \beta_2 S_v I_h \\
+\dot I_v &amp;= \beta_2 S_v I_h - \gamma_v I_v \\
+\dot R_v &amp;= \gamma_v I_v
+\end{aligned}
+\]</span> Here, the index <em>h</em> indicates humans and <em>v</em> indicates vectors. The important vector-borne aspect of such a model is that transmission only occurs from hosts to vector and vector to host, not between hosts or vectors. In general, the above model needs to be modified to more accurately describe vector-borne ID dynamics. For instance, many vectors have a fairly short natural lifespan, and as such their births and deaths need to be included in the model, even if the timescale on which we investigate the model is short enough to allow us to ignore births and deaths for (human) hosts. It is common to include more details in the human part of the model (e.g. asymptomatic stage and others as discussed previously) and less detail for the vector part. The specific details that should be included are driven by the question one wants to to study.</p>
+</div>
+<div id="summary-and-cartoon-7" class="section level2">
+<h2><span class="header-section-number">9.4</span> Summary and Cartoon</h2>
+</div>
+<div id="exercises-7" class="section level2">
+<h2><span class="header-section-number">9.5</span> Exercises</h2>
 <ul>
-<li>Understand the basic ideas of complex systems and systems thinking/modeling</li>
-<li>Assess strength and weaknesses of different approaches to ID dynamics</li>
-<li>Understand the idea of a compartmental model and how it can be used to model infectious diseases</li>
-<li>Know the components of Infectious Disease systems</li>
+<li>The <em>Vector transmission</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>Nominate an ID as contender for having the ‘craziest or most complicated’ mode(s) of transmission. Explain the transmission dynamics for your nomination and justify why it deserves the title of <em>craziest or most complicated</em>. This doesn’t have to be a vector-borne disease, though some of the “crazy” ones tend to use multiple hosts.</li>
 </ul>
 </div>
-<div id="introduction" class="section level2">
-<h2><span class="header-section-number">2.2</span> Introduction</h2>
-<p>While the terminology of <em>systems thinking</em> or <em>systems approach</em> has seen increased use in the last few decades, the general idea has been around for a while. In public health, there is the basic idea - most often applied to infectious diseases - of the <em>agent - host - environment</em> system, also referred to as the <em>epidemiological triangle</em> (Figure <a href="introduction-to-the-dynamical-systems-approach-to-infectious-disease-epidemiology.html#fig:epitriangle">2.1</a>).</p>
-<div class="figure"><span id="fig:epitriangle"></span>
-<img src="images/epi-triangle.png" alt="A system perspective - The epidemiological triangle"  />
-<p class="caption">
-Figure 2.1: A system perspective - The epidemiological triangle
-</p>
+<div id="further-resources-7" class="section level2">
+<h2><span class="header-section-number">9.6</span> Further Resources</h2>
+<p>The following papers provide some additional introductory reading on the topic of vector borne ID transmission from a dynamical systems perspective:</p>
 </div>
-<p>Similarly, one can think of the basic epidemiological concept of <em>person - place - time</em> as describing a system. The notion of a system is present in virtually every field of research, ranging from the hard sciences to social sciences and business.</p>
-<p>The scientific approach that has generally been the most successful in the past was to break down a system into its individual components and study the components one at a time. This is usually referred to as the <em>reductionistic approach</em>. This approach to understanding the world is still very powerful and useful.</p>
-<p>A complementary approach, which has seen increased use, is to look at “the whole” system at once, instead of each component at a time. This approach can provide insights that might not be obtained by the purely reductionist approach. This approach of looking at the whole system at once is often referred to as <em>systems thinking/approach</em>.</p>
-</div>
-<div id="systems-thinking" class="section level2">
-<h2><span class="header-section-number">2.3</span> Systems Thinking</h2>
-<p>The term <em>systems thinking</em> or <em>systems approach</em> or similar such terminology has become popular in various fields during the last few decades. It is not a very clearly defined term, but in general a <em>systems</em> perspective looks at multiple - often many - components that interact with each other in potentially complicated ways.</p>
-<p>For instance the problem of obesity has many different components that interact in potentially complicated ways to affect a person’s weight. Figure <a href="introduction-to-the-dynamical-systems-approach-to-infectious-disease-epidemiology.html#fig:obesitysystem">2.2</a> illustrates this, see also for instance <a href="https://youtu.be/2vojPksdbtI">this video</a>. Complex systems are basically everywhere. The approach of studying (most of) the system at once instead of looking at a single component at a time is the hallmark of the <em>systems approach</em>.</p>
-<div class="figure"><span id="fig:obesitysystem"></span>
-<img src="images/complexsystem.png" alt="Obesity as a complex system: http://goo.gl/m2Qq13"  />
-<p class="caption">
-Figure 2.2: Obesity as a complex system: <a href="http://goo.gl/m2Qq13" class="uri">http://goo.gl/m2Qq13</a>
-</p>
-</div>
-</div>
-<div id="classical-and-systems-id-epi-approaches" class="section level2">
-<h2><span class="header-section-number">2.4</span> Classical and systems ID Epi approaches</h2>
-<p>While concepts such as the epidemiological triangle acknowledge that interactions between components are important and determine the behavior of a system, in practice the standard epidemiological approach, based on classical study designs such as cohort, case-control and randomized trial approaches does not consider system interactions. Indeed, a hallmark assumption of these study designs is that individuals are independent. E.g. the chance that someone in a cohort study has the outcome of interest does not affect the chance of someone else having the outcome. That works well for non-transmissible diseases, and to some extent for transmissible/infectious diseases (we’ll use the term infectious disease in the following, mostly meaning diseases that are also transmissible), as long as there are no interactions (i.e. contact that could lead to transmission) between study subjects. Accounting for interactions between hosts is required to understand important infectious disease concepts such as population level immunity thresholds, critical community size, or indirect effects of interventions. This in turn requires a systems approach that explicitly allows for interactions between hosts.</p>
-<p>On the research side, the importance of such interactions has long been appreciated and is at the core of the infectious disease modeling paradigm, where one builds and analyzes a system of interacting components (e.g. susceptible and infected hosts). Such systems approaches based on models have a long history in infectious disease epidemiology <span class="citation">(R. M. Anderson and May <a href="#ref-anderson91">1991</a>, <span class="citation">Blower and Bernoulli (<a href="#ref-blower04">2004</a>)</span>)</span>. The importance of computational methods for the study of infectious diseases continues to increase. In this book, we approach infectious diseases from such a systems thinking perspective, whithough delving too deely into the mathematical and computational aspects of the topic.</p>
-</div>
-<div id="sytems-thinking-and-models" class="section level2">
-<h2><span class="header-section-number">2.5</span> Sytems Thinking and Models</h2>
-<p>Models are everywhere in science. Models can be conceptual (e.g. graphs or charts), experimental model systems (e.g. a specific mouse strain in immunology) or take the form of mathematical/computer models.</p>
-<p>Once we take the systems perspective, we have to deal with many components that interact in potentially complicated ways. This makes study and analysis complicated, especially if we are trying to gain insights into the causal and mechanistic connections between some quantity (exposure) and some outcome. When taking a systems approach, it is therefore often not enough to have a conceptual model. While a conceptual approach often allows some qualitative understanding, it is somewhat limiting. It is for instance almost impossible to gain a good <em>quantitative</em> understanding how changes in certain conditions and components of a system lead to changes for outcomes of interest by relying on conceptual approaches alone. If we want to go beyond qualitative and move toward a quantitative understanding (i.e. ‘increasing tobacco tax by X% will reduce smoking-related healthcare costs by Y%’), we need mathematical/computational models. There are many different types of models one can implement. The following provides a - very brief - overview of different modeling approaches.</p>
-<div id="phenomenological-statistical-models" class="section level3">
-<h3><span class="header-section-number">2.5.1</span> Phenomenological (statistical) Models</h3>
-<p>A huge class of models consists of what we usually refer to as statistical models. In the context of this discussion, I prefer to label them <em>phenomenological</em> models, but that terminology is rarely used. The idea behind the statistical/phenomenological approach is to use a mathematical or computational model to study if there are any patterns between the input (exposure and other variables) and the output (outcomes of interest).</p>
-<p>For instance a linear regression model investigates if there is a pattern/correlation between input and output that can be well approximated by a linear function. More complicated statistical models exist, some go by the name of <em>machine learning methods</em>. All of these models try to determine if there are patterns between inputs and outputs of interest in the data.</p>
-<p>One feature these statistical/phenomenological models have in common is that they do not try to describe the mechanisms of interactions within the system that lead to the observed input-output relations. For instance if we find that the relation between number of cigarettes smoked per day and the 5-year risk of lung cancer can be approximated by a linear function, it does not tell us much about the mechanisms leading from smoking to lung cancer.</p>
-</div>
-<div id="mechanistic-models" class="section level3">
-<h3><span class="header-section-number">2.5.2</span> Mechanistic Models</h3>
-<p>Another class of models are those that try to explicitly - albeit usually in very simplified form - try to model the mechanisms of interaction among system components. Those models are commonly used for infectious disease studies. For instance we might want to know how drug dose affects pathogen clearance inside an infected patient. We could collect data on both (such data often needs to come from animal models) and see if a straight line or other kind of model fits the data. Alternatively, we could try to build a model that explicitly captures the mechanism of the drug killing the pathogen, and then see if this mechanistic model describes the data well. The advantage of these kinds of models is that they potentially provide better and deeper understanding of the system. The main disadvantage is that we already need to know (or at least assume) a good bit about how the components interact for us to be able to build such a model. If we don’t know what mechanisms might lead to some input impacting some output, we can’t build a mechanistic model.</p>
-<p>Both phenomenological (statistical) and mechanistic models are useful tools with distinct advantages and disadvantages. Which one to use depends on the question and study system. In this book, we will focus on mechanistic models, which try to represent an explicit, simplified description of the system of interest.</p>
-</div>
-<div id="dynamical-systems-thinkingmodeling" class="section level3">
-<h3><span class="header-section-number">2.5.3</span> Dynamical Systems Thinking/Modeling</h3>
-<p>The dynamical part adds an explicit time component to the system (and assumes that we can use equations to describe the dynamics). Consider this example: We could study how a change in tobacco taxes might lead to changes in healthcare costs in a given state. Of course, time is present in this system: First we change the taxes, then we look at changes in costs over some time frame. However, when studying this system, one usually doesn’t need to consider an explicitly time-dependent dynamic. Instead one looks at 2 scenarios: Taxes 1 &amp; Costs 1 versus Taxes 2 &amp; Costs 2. It is usually not necessary to model or simulate the chain of events leading from tax change to cost change while explicitly accounting for time.</p>
-<p>In contrast, in a dynamical system the model explicitly undergoes changes in time. We might often want to know how certain changes to the system (e.g. interventions) lead to changes in outcomes through a <em>dynamical/time-dependent</em> chain of events. For infectious diseases, we most often have some underlying dynamics that we need to take into account (e.g. an ongoing outbreak) and on top of which we might want to implement some interventions. Therefore, the dynamical perspective is often used. Even if a specific disease can be considered to be ‘steady’ before we implement an intervention (e.g. a given level of TB in a country), there is still disease transmission between individuals happening, which most often makes the dynamical approach more suitable.</p>
-<p>We can illustrate this dynamical perspective by extending the epidemiological triangle. Figure <a href="introduction-to-the-dynamical-systems-approach-to-infectious-disease-epidemiology.html#fig:dynamictriangle">2.3</a> illustrates the components and the interactions of the triangle changing over time.</p>
-<div class="figure"><span id="fig:dynamictriangle"></span>
-<img src="images/moving-triangle.png" alt="Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction."  />
-<p class="caption">
-Figure 2.3: Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.
-</p>
-</div>
-<p>Mechanistic models are especially well suited to describe dynamical systems and are therefore the main choice for the study of complex dynamical systems.</p>
-</div>
-<div id="types-of-dynamical-mechanistic-models" class="section level3">
-<h3><span class="header-section-number">2.5.4</span> Types of dynamical, mechanistic models</h3>
-<p>When building mechanistic, dynamical models based on a systems approach, there are two main approaches. In one approach, the model is made up of individual <em>agents/individuals</em> and is thus called Agent based or Individual based model. The agents/individuals - which often but not always are humans - interact with each other. Each agent has certain properties and undergoes certain actions. The interactions of all agents leads to potentially interesting and complex dynamics. Schelling’s segregation model (see e.g. <a href="https://youtu.be/dFl3Cfw12bo">this video</a> ) is a nice example of such an agent based model. Models and approaches that consider individuals connected through networks of contacts are especially important for infectious diseases and we’ll briefly discuss those in a later chapter.</p>
-<p>Another approach simplifies the system by not tracking every individual agent, but instead only keeps track of total agents/individuals in certain states. For instance for an ecological model, we might track the total numbers of predators and prey (e.g. wolves and sheep). This simplifies models immensely. If we had a population of a 100, 1000 or 10,000 wolves or sheep, we would need to keep track of as many agents. If we only keep track of total number of individuals, we only need to track how the numbers in each <em>compartment</em> (here wolves and sheep) change - no matter how large our population. Those models, which only track total numbers of individuals, are called <em>compartmental models</em></p>
-<p>While these compartmental models are obviously simplifications of the real system, they often retain enough of the model complexity to allow us to study the system well. Because of this, the majority of models used in infectious disease epidemiology are still these types of compartmental models. Both the DSAIDE R package and the example models shown in this book focus on such compartmental models. For some more information on compartmental models, <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">check out this Wikipedia article</a></p>
-</div>
-</div>
-<div id="a-basic-infectious-disease-systems-model" class="section level2">
-<h2><span class="header-section-number">2.6</span> A basic infectious disease systems model</h2>
-<p>For infectious disease models, the simplest dynamical systems model keeps track of the total number of individuals who are susceptible, infectious and recovered/immune (the so-called SIR model). This model is a compartmental model, i.e. we place individuals into distinct compartments, according to some characteristics. We then only track the total number of individuals in each of these compartments. In the simplest model, the only characteristic we track is a person’s infection status according to 3 different stages/compartments:</p>
-<ul>
-<li><strong>S</strong> - uninfected and susceptible individuals.</li>
-<li><strong>I</strong> - infected and infectious individuals (note that these terms are often used interchangeably, but technically we are talking about someone who is infected <strong>and</strong> is infectious, i.e. can infect others).</li>
-<li><strong>R</strong> - recovered/removed individuals. Those are individuals that do not further participate, either because they are now immune or because they died.</li>
-</ul>
-<p>In addition to specifying the <strong>compartments</strong> of a model, we need to specify the <strong>processes/mechanisms</strong> determining the changes for each compartment. Broadly speaking, there are processes that increase the number of individuals in a given compartment/stage, and processes that lead to a reduction. Those processes are sometimes called inflows and outflows.</p>
-<p>For our system, we specify only 2 processes/flows:</p>
-<ol style="list-style-type: decimal">
-<li>A susceptible individual (S) can become infected by an infectious individual (I) at some rate (for which we use the parameter <em>b</em>). This leads to the susceptible individual leaving the S compartment and entering the I compartment.<br />
-</li>
-<li>An infected individual dies or recovers and enters the recovered/removed (R) compartment at some. This is described by the parameter <em>g</em> in our model.</li>
-</ol>
-<p>The SIR model is very basic, but it still has the hallmark of a complex system. Specifically, there is an interaction between components, namely the <strong>I</strong> “component” interacts with the <strong>S</strong> component, or phrased in more ordinary language, infected individuals can interact with susceptibles and thereby infect them.</p>
-<p>For compartmental models (and also often other types of models), it is useful to show a graphical schematic representation of the compartments and processes included in the model. For compartmental models, such a diagram/figure is usually called a flow diagram. Such a diagram consists of a box for each compartment, and arrows pointing in and out of boxes to describe flows and interactions. For the simple SIR model, the flow diagram is shown in Figure <a href="introduction-to-the-dynamical-systems-approach-to-infectious-disease-epidemiology.html#fig:basicSIR">2.4</a>.</p>
-<div class="figure"><span id="fig:basicSIR"></span>
-<img src="images/basicSIRmodelfigure.png" alt="Flow diagram for the simple SIR model."  />
-<p class="caption">
-Figure 2.4: Flow diagram for the simple SIR model.
-</p>
-</div>
-<div id="myadvancedbox" class="section level4">
-<h4><span class="header-section-number">2.6.0.1</span> Model Implementation</h4>
-<p>If one wants to study any model in detail, one needs to implement it either in the form of a mathematical or a computer model (or both). For compartmental models, the most common way of implementation is writing the model as a set of ordinary differential equations and implementing those in some computer language. This book shows sets of ODE equations for the several of the discussed models, but a detailed understanding of these equations is not required to understand the different topics we discuss. For the model described above, the equations look like this: <span class="math display">\[\dot S = -bSI\]</span> <span class="math display">\[\dot I = bSI - gI\]</span> <span class="math display">\[\dot R = gI\]</span></p>
-<p>We are using the usual short-hand notation, where a dot over a variable means its derivative (its change) with respect to time. In all the models we consider, we always only consider changes with respect to time (the dynamical aspect of the model).</p>
-</div>
-</div>
-<div id="some-general-comments-and-notes" class="section level2">
-<h2><span class="header-section-number">2.7</span> Some general comments and notes</h2>
-<p>In general, the entities that change (that vary) in our system (here the number of individuals in compartments S, I and R) are called variables and are each given a compartment/equation. In contrast, the quantities that are usually assumed fixed for a given system called parameters. For the model above, those are the infection rate <em>b</em> and the recovery rate <em>g</em>. This is not a fixed rule, though. Sometimes, parameters can be allowed to vary.</p>
-<p>When talking about the quantities that are tracked in each compartment, you will see both the term <em>host(s)</em> and <em>individual(s)</em> used interchangeably. While we most often think of human hosts, the hosts can be any animal (or plants or bacteria infected by phages or…). Sometimes, a compartment might track an entity such as pathogen load in the environment.</p>
-<p>If you want to study a specific ID, you choose parameters such that they match the specific disease you want to study. We’ll return to that idea throghout this book.</p>
-<p>Unfortunately, there are no rules concerning the naming of variables and parameters. Compartments (e.g. SIR) tend to be labeled very similarly by different researchers, while parameter labels are much more variable. I’m trying to be consistent in this book, though I might mix it up occasionally. For this book, I decided to stick with regular letters from the English alphabet, but you can often find people use greek letters for parameters (e.g. <span class="math inline">\(\beta\)</span> instead of <em>b</em> for the transmission parameter). Always check carefully for a given paper/model what the definition and meaning of each variable and parameter are.</p>
-</div>
-<div id="summary-and-cartoon" class="section level2">
-<h2><span class="header-section-number">2.8</span> Summary and Cartoon</h2>
-<p>This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. We briefly looked at a simple infectious disease systems model, the famous SIR model.</p>
-<div class="figure"><span id="fig:complexcartoon"></span>
-<img src="images/xkcd-flowcharts.png" alt="Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/)."  />
-<p class="caption">
-Figure 2.5: Not every diagram helps to understand a complex system. <a href="https://xkcd.com/1488/">Source: xkcd.com</a>.
-</p>
-</div>
-</div>
-<div id="exercises" class="section level2">
-<h2><span class="header-section-number">2.9</span> Exercises</h2>
-<ul>
-<li>Work through the tasks for the <em>ID Dynamics Introduction</em> DSAIDE app.</li>
-<li>Contemplate on your experience with the <em>ID Dynamics Introduction</em> DSAIDE app. In which way does it capture the ‘dynamical systems’ perspective? Did you find any behavior of this - arguably still very simple - infectious disease model/system that you would consider as being “complex”? How/why?</li>
-<li>Read the paper “Systems Science Methods in Public Health: Dynamics, Networks, and Agents” by Luke &amp; Stamatakis <span class="citation">(Luke and Stamatakis <a href="#ref-luke12">2012</a>)</span>. Come up with 2 systems that you consider complex in the realm of public health or biomedicine (other than those mentioned in the paper). Explain what makes them complex. Also come up with 2 systems that you consider not complex and explain why you think of them as not complex.</li>
-</ul>
-</div>
-<div id="further-resources" class="section level2">
-<h2><span class="header-section-number">2.10</span> Further Resources</h2>
-<ul>
-<li>The paper “Why Model?” by Joshua Epstein <span class="citation">(Epstein <a href="#ref-epstein08">2008</a>)</span> provides a nice, short discussion of the purposes of models. Other general introductory discussions of systems thinking and model use are <span class="citation">(R. M. May <a href="#ref-may04">2004</a>; Chubb and Jacobsen <a href="#ref-chubb10">2010</a>; Garnett et al. <a href="#ref-garnett11">2011</a>; Basu and Andrews <a href="#ref-basu13">2013</a>; Gunawardena <a href="#ref-gunawardena14">2014</a>; Homer and Hirsch <a href="#ref-homer06">2006</a>; Peters <a href="#ref-peters14">2014</a>; Sterman <a href="#ref-sterman06">2006</a>)</span>.</li>
-<li>Several introductory papers on infectious disease modeling can be found in e.g. <span class="citation">(M. J. Keeling and Danon <a href="#ref-keeling09">2009</a>; H. Heesterbeek et al. <a href="#ref-heesterbeek15">2015</a>; J. Lessler et al. <a href="#ref-lessler16">2016</a>; C Jessica E Metcalf and Lessler <a href="#ref-metcalf17">2017</a>)</span>.</li>
-<li>While the dynamical systems approach has been applied to infectious diseases for a long time, it is starting to be used more frequently in other areas of public health. Some recent references on that topic are e.g. <span class="citation">(Ness, Koopman, and Roberts <a href="#ref-ness07">2007</a>; Sánchez-Romero et al. <a href="#ref-sanchez-romero16">2016</a>)</span>.</li>
-</ul>
-</div>
-<div id="references-1" class="section level2">
-<h2><span class="header-section-number">2.11</span> References</h2>
+<div id="references-8" class="section level2">
+<h2><span class="header-section-number">9.7</span> References</h2>
 
-</div>
-</div>
-<h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-anderson91">
+<div>
+<p>Altizer, Sonia, Andrew Dobson, Parviez Hosseini, Peter Hudson, Mercedes Pascual, and Pejman Rohani. 2006. “Seasonality and the Dynamics of Infectious Diseases.” <em>Ecology Letters</em> 9 (4): 467–84. doi:<a href="https://doi.org/10.1111/j.1461-0248.2005.00879.x">10.1111/j.1461-0248.2005.00879.x</a>.</p>
+</div>
+<div>
 <p>Anderson, Roy M, and RM May. 1991. “Infectious Disease of Humans.” <em>Dynamics and Control</em>.</p>
 </div>
-<div id="ref-blower04">
-<p>Blower, Sally, and Daniel Bernoulli. 2004. “An Attempt at a New Analysis of the Mortality Caused by Smallpox and of the Advantages of Inoculation to Prevent It. 1766.” <em>Reviews in Medical Virology</em> 14 (5): 275–88.</p>
-</div>
-<div id="ref-luke12">
-<p>Luke, Douglas A, and Katherine A Stamatakis. 2012. “Systems Science Methods in Public Health: Dynamics, Networks, and Agents.” <em>Annual Review of Public Health</em> 33. Annual Reviews: 357–76.</p>
-</div>
-<div id="ref-epstein08">
-<p>Epstein, Joshua M. 2008. “Why Model?” <em>Journal of Artificial Societies and Social Simulation</em> 11 (4): 12. <a href="http://jasss.soc.surrey.ac.uk/11/4/12.html" class="uri">http://jasss.soc.surrey.ac.uk/11/4/12.html</a>.</p>
-</div>
-<div id="ref-may04">
-<p>May, R. M. 2004. “Uses and Abuses of Mathematics in Biology.” <em>Science</em> 303 (5659): 790–93. doi:<a href="https://doi.org/10.1126/science.1094442">10.1126/science.1094442</a>.</p>
-</div>
-<div id="ref-chubb10">
-<p>Chubb, Mikayla C., and Kathryn H. Jacobsen. 2010. “Mathematical Modeling and the Epidemiological Research Process.” <em>European Journal of Epidemiology</em> 25 (1): 13–19. doi:<a href="https://doi.org/10.1007/s10654-009-9397-9">10.1007/s10654-009-9397-9</a>.</p>
-</div>
-<div id="ref-garnett11">
-<p>Garnett, Geoffrey P., Simon Cousens, Timothy B. Hallett, Richard Steketee, and Neff Walker. 2011. “Mathematical Models in the Evaluation of Health Programmes.” <em>The Lancet</em> 378 (9790): 515–25. <a href="http://www.sciencedirect.com/science/article/pii/S014067361061505X" class="uri">http://www.sciencedirect.com/science/article/pii/S014067361061505X</a>.</p>
-</div>
-<div id="ref-basu13">
+<div>
 <p>Basu, Sanjay, and Jason Andrews. 2013. “Complexity in Mathematical Models of Public Health Policies: A Guide for Consumers of Models.” <em>PLoS Medicine</em> 10 (10): e1001540. doi:<a href="https://doi.org/10.1371/journal.pmed.1001540">10.1371/journal.pmed.1001540</a>.</p>
 </div>
-<div id="ref-gunawardena14">
+<div>
+<p>Baumgartner, Eduardo, Christine N. Dao, Sharifa Nasreen, Mejbah Uddin Bhuiyan, Syeda Mah-E-Muneer, Abdullah Al Mamun, M. A. Yushuf Sharker, et al. 2012. “Seasonality, Timing, and Climate Drivers of Influenza Activity Worldwide.” <em>The Journal of Infectious Diseases</em> 206 (6): 838–46. doi:<a href="https://doi.org/10.1093/infdis/jis467">10.1093/infdis/jis467</a>.</p>
+</div>
+<div>
+<p>Begon, M., M. Bennett, R. G. Bowers, N. P. French, S. M. Hazel, and J. Turner. 2002. “A Clarification of Transmission Terms in Host-Microparasite Models: Numbers, Densities and Areas.” <em>Epidemiol Infect</em> 129 (1). ences, The University of Liverpool, UK.: 147–53.</p>
+</div>
+<div>
+<p>Blower, Sally, and Daniel Bernoulli. 2004. “An Attempt at a New Analysis of the Mortality Caused by Smallpox and of the Advantages of Inoculation to Prevent It. 1766.” <em>Reviews in Medical Virology</em> 14 (5): 275–88.</p>
+</div>
+<div>
+<p>Chubb, Mikayla C., and Kathryn H. Jacobsen. 2010. “Mathematical Modeling and the Epidemiological Research Process.” <em>European Journal of Epidemiology</em> 25 (1): 13–19. doi:<a href="https://doi.org/10.1007/s10654-009-9397-9">10.1007/s10654-009-9397-9</a>.</p>
+</div>
+<div>
+<p>Diekmann, O., J A P. Heesterbeek, and M. G. Roberts. 2010. “The Construction of Next-Generation Matrices for Compartmental Epidemic Models.” <em>J R Soc Interface</em> 7 (47). Department of Mathematics, Utrecht University, Budapestlaan 6, 3584 CD, Utrecht, The Netherlands.: 873–85. doi:<a href="https://doi.org/10.1098/rsif.2009.0386">10.1098/rsif.2009.0386</a>.</p>
+</div>
+<div>
+<p>Diekmann, Odo, and Johan Andre Peter Heesterbeek. 2000. <em>Mathematical Epidemiology of Infectious Diseases: Model Building, Analysis and Interpretation</em>. Vol. 5. John Wiley &amp; Sons.</p>
+</div>
+<div>
+<p>Dowell, S F. 2001. “Seasonal Variation in Host Susceptibility and Cycles of Certain Infectious Diseases.” <em>Emerging Infectious Diseases</em> 7 (3): 369–74. doi:<a href="https://doi.org/10.3201/eid0703.010301">10.3201/eid0703.010301</a>.</p>
+</div>
+<div>
+<p>Dushoff, Jonathan, Joshua B. Plotkin, Simon A. Levin, and David JD Earn. 2004. “Dynamical Resonance Can Account for Seasonality of Influenza Epidemics.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (48): 16915–6. <a href="http://www.pnas.org/content/101/48/16915.short" class="uri">http://www.pnas.org/content/101/48/16915.short</a>.</p>
+</div>
+<div>
+<p>Emch, Michael, Caryl Feldacker, M Sirajul Islam, and Mohammad Ali. 2008. “Seasonality of Cholera from 1974 to 2005: A Review of Global Patterns.” <em>International Journal of Health Geographics</em> 7 (1): 31. doi:<a href="https://doi.org/10.1186/1476-072X-7-31">10.1186/1476-072X-7-31</a>.</p>
+</div>
+<div>
+<p>Epstein, Joshua M. 2008. “Why Model?” <em>Journal of Artificial Societies and Social Simulation</em> 11 (4): 12. <a href="http://jasss.soc.surrey.ac.uk/11/4/12.html" class="uri">http://jasss.soc.surrey.ac.uk/11/4/12.html</a>.</p>
+</div>
+<div>
+<p>Fine, P. E. M. 2003. “The Interval Between Successive Cases of an Infectious Disease.” <em>American Journal of Epidemiology</em> 158 (11): 1039–47. doi:<a href="https://doi.org/10.1093/aje/kwg251">10.1093/aje/kwg251</a>.</p>
+</div>
+<div>
+<p>Fine, Paul EM. 1993. “Herd Immunity: History, Theory, Practice.” <em>Epidemiologic Reviews</em> 15 (2): 265–302. <a href="http://op12no2.me/stuff/herdhis.pdf" class="uri">http://op12no2.me/stuff/herdhis.pdf</a>.</p>
+</div>
+<div>
+<p>Fine, Paul, Ken Eames, and David L Heymann. 2011. “‘Herd Immunity’: A Rough Guide.” <em>Clinical Infectious Diseases : An Official Publication of the Infectious Diseases Society of America</em> 52 (7): 911–16. doi:<a href="https://doi.org/10.1093/cid/cir007">10.1093/cid/cir007</a>.</p>
+</div>
+<div>
+<p>Garnett, Geoffrey P., Simon Cousens, Timothy B. Hallett, Richard Steketee, and Neff Walker. 2011. “Mathematical Models in the Evaluation of Health Programmes.” <em>The Lancet</em> 378 (9790): 515–25. <a href="http://www.sciencedirect.com/science/article/pii/S014067361061505X" class="uri">http://www.sciencedirect.com/science/article/pii/S014067361061505X</a>.</p>
+</div>
+<div>
+<p>Giesecke, Johan. 2017. <em>Modern Infectious Disease Epidemiology</em>. CRC Press.</p>
+</div>
+<div>
+<p>Grassly, Nicholas C, and Christophe Fraser. 2006. “Seasonal Infectious Disease Epidemiology.” <em>Proceedings of the Royal Society of London B: Biological Sciences</em> 273 (1600). The Royal Society: 2541–50.</p>
+</div>
+<div>
 <p>Gunawardena, Jeremy. 2014. “Models in Biology:‘accurate Descriptions of Our Pathetic Thinking’.” <em>BMC Biology</em> 12 (1): 29. <a href="https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-12-29" class="uri">https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-12-29</a>.</p>
 </div>
-<div id="ref-homer06">
-<p>Homer, Jack B., and Gary B. Hirsch. 2006. “System Dynamics Modeling for Public Health: Background and Opportunities.” <em>American Journal of Public Health</em> 96 (3): 452–58. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059</a>.</p>
-</div>
-<div id="ref-peters14">
-<p>Peters, David H. 2014. “The Application of Systems Thinking in Health: Why Use Systems Thinking?” <em>Health Research Policy and Systems</em> 12 (1): 51. <a href="https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51" class="uri">https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51</a>.</p>
-</div>
-<div id="ref-sterman06">
-<p>Sterman, John D. 2006. “Learning from Evidence in a Complex World.” <em>American Journal of Public Health</em> 96 (3): 505–14. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043</a>.</p>
-</div>
-<div id="ref-keeling09">
-<p>Keeling, M. J., and L. Danon. 2009. “Mathematical Modelling of Infectious Diseases.” <em>British Medical Bulletin</em> 92 (1): 33–42. doi:<a href="https://doi.org/10.1093/bmb/ldp038">10.1093/bmb/ldp038</a>.</p>
-</div>
-<div id="ref-heesterbeek15">
+<div>
 <p>Heesterbeek, H., R. M. Anderson, V. Andreasen, S. Bansal, D. De Angelis, C. Dye, K. T. D. Eames, et al. 2015. “Modeling Infectious Disease Dynamics in the Complex Landscape of Global Health.” <em>Science</em> 347 (6227): aaa4339–aaa4339. doi:<a href="https://doi.org/10.1126/science.aaa4339">10.1126/science.aaa4339</a>.</p>
 </div>
-<div id="ref-lessler16">
+<div>
+<p>Heffernan, J M, R J Smith, and L M Wahl. 2005. “Perspectives on the Basic Reproductive Ratio.” <em>Journal of the Royal Society, Interface</em> 2 (4): 281–93. doi:<a href="https://doi.org/10.1098/rsif.2005.0042">10.1098/rsif.2005.0042</a>.</p>
+</div>
+<div>
+<p>Homer, Jack B., and Gary B. Hirsch. 2006. “System Dynamics Modeling for Public Health: Background and Opportunities.” <em>American Journal of Public Health</em> 96 (3): 452–58. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059</a>.</p>
+</div>
+<div>
+<p>Kajita, Emily, Justin T Okano, Erin N Bodine, Scott P Layne, and Sally Blower. 2007. “Modelling an Outbreak of an Emerging Pathogen.” <em>Nature Reviews. Microbiology</em> 5 (9): 700–709. doi:<a href="https://doi.org/10.1038/nrmicro1660">10.1038/nrmicro1660</a>.</p>
+</div>
+<div>
+<p>Keeling, M. J., and L. Danon. 2009. “Mathematical Modelling of Infectious Diseases.” <em>British Medical Bulletin</em> 92 (1): 33–42. doi:<a href="https://doi.org/10.1093/bmb/ldp038">10.1093/bmb/ldp038</a>.</p>
+</div>
+<div>
+<p>Keeling, Matt J, and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press.</p>
+</div>
+<div>
+<p>King, Aaron A., Edward L. Ionides, Mercedes Pascual, and Menno J. Bouma. 2008. “Inapparent Infections and Cholera Dynamics.” <em>Nature</em> 454 (7206): 877–80. doi:<a href="https://doi.org/10.1038/nature07084">10.1038/nature07084</a>.</p>
+</div>
+<div>
 <p>Lessler, Justin, Andrew S. Azman, M. Kate Grabowski, Henrik Salje, and Isabel Rodriguez-Barraquer. 2016. “Trends in the Mechanistic and Dynamic Modeling of Infectious Diseases.” <em>Current Epidemiology Reports</em> 3 (3): 212–22. doi:<a href="https://doi.org/10.1007/s40471-016-0078-4">10.1007/s40471-016-0078-4</a>.</p>
 </div>
-<div id="ref-metcalf17">
+<div>
+<p>Li, Jing, Daniel Blakeley, and Robert J. Smith. 2011. “The Failure of R 0.” <em>Computational and Mathematical Methods in Medicine</em> 2011: 1–17. doi:<a href="https://doi.org/10.1155/2011/527610">10.1155/2011/527610</a>.</p>
+</div>
+<div>
+<p>Lipsitch, Marc, and Cécile Viboud. 2009. “Influenza Seasonality: Lifting the Fog.” <em>Proc Natl Acad Sci U S A</em> 106 (10). Department of Epidemiology, Harvard School of Public Health, Boston, MA 02130, USA. mlipsitc@hsph.harvard.edu: 3645–6. doi:<a href="https://doi.org/10.1073/pnas.0900933106">10.1073/pnas.0900933106</a>.</p>
+</div>
+<div>
+<p>Lofgren, E., N. H. Fefferman, Y. N. Naumov, J. Gorski, and E. N. Naumova. 2007. “Influenza Seasonality: Underlying Causes and Modeling Theories.” <em>Journal of Virology</em> 81 (11): 5429–36. doi:<a href="https://doi.org/10.1128/JVI.01680-06">10.1128/JVI.01680-06</a>.</p>
+</div>
+<div>
+<p>Luke, Douglas A, and Katherine A Stamatakis. 2012. “Systems Science Methods in Public Health: Dynamics, Networks, and Agents.” <em>Annual Review of Public Health</em> 33. Annual Reviews: 357–76.</p>
+</div>
+<div>
+<p>May, R. M. 2004. “Uses and Abuses of Mathematics in Biology.” <em>Science</em> 303 (5659): 790–93. doi:<a href="https://doi.org/10.1126/science.1094442">10.1126/science.1094442</a>.</p>
+</div>
+<div>
+<p>McCallum, H., N. Barlow, and J. Hone. 2001. “How Should Pathogen Transmission Be Modelled?” <em>Trends Ecol Evol</em> 16 (6): 295–300.</p>
+</div>
+<div>
+<p>Metcalf, C J E, W J Edmunds, and J Lessler. 2015. “Six Challenges in Modelling for Public Health Policy.” <em>Epidemics</em> 10 (March): 93–96. doi:<a href="https://doi.org/10.1016/j.epidem.2014.08.008">10.1016/j.epidem.2014.08.008</a>.</p>
+</div>
+<div>
 <p>Metcalf, C Jessica E, and Justin Lessler. 2017. “Opportunities and Challenges in Modeling Emerging Infectious Diseases.” <em>Science (New York, N.Y.)</em> 357 (6347): 149–52. doi:<a href="https://doi.org/10.1126/science.aam8335">10.1126/science.aam8335</a>.</p>
 </div>
-<div id="ref-ness07">
+<div>
+<p>Milwid, Rachael, Andreea Steriu, Julien Arino, Jane Heffernan, Ayaz Hyder, Dena Schanzer, Emma Gardner, et al. 2016. “Toward Standardizing a Lexicon of Infectious Disease Modeling Terms.” <em>Frontiers in Public Health</em> 4: 213. doi:<a href="https://doi.org/10.3389/fpubh.2016.00213">10.3389/fpubh.2016.00213</a>.</p>
+</div>
+<div>
+<p>Nelson, Kenrad E, and Carolyn Williams. 2013. <em>Infectious Disease Epidemiology</em>. Jones &amp; Bartlett Publishers.</p>
+</div>
+<div>
 <p>Ness, Roberta B., James S. Koopman, and Mark S. Roberts. 2007. “Causal System Modeling in Chronic Disease Epidemiology: A Proposal.” <em>Annals of Epidemiology</em> 17 (7): 564–68. doi:<a href="https://doi.org/10.1016/j.annepidem.2006.10.014">10.1016/j.annepidem.2006.10.014</a>.</p>
 </div>
-<div id="ref-sanchez-romero16">
+<div>
+<p>Pascual, Mercedes, Menno J. Bouma, and Andrew P. Dobson. 2002. “Cholera and Climate: Revisiting the Quantitative Evidence.” <em>Microbes and Infection</em> 4 (2): 237–45. <a href="http://www.sciencedirect.com/science/article/pii/S1286457901015337" class="uri">http://www.sciencedirect.com/science/article/pii/S1286457901015337</a>.</p>
+</div>
+<div>
+<p>Peters, David H. 2014. “The Application of Systems Thinking in Health: Why Use Systems Thinking?” <em>Health Research Policy and Systems</em> 12 (1): 51. <a href="https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51" class="uri">https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51</a>.</p>
+</div>
+<div>
+<p>Roberts, M G. 2007. “The Pluses and Minuses of R0.” <em>Journal of the Royal Society, Interface</em> 4 (16): 949–61. doi:<a href="https://doi.org/10.1098/rsif.2007.1031">10.1098/rsif.2007.1031</a>.</p>
+</div>
+<div>
 <p>Sánchez-Romero, Luz Maria, Joanne Penko, Pamela G. Coxson, Alicia Fernández, Antoinette Mason, Andrew E. Moran, Leticia Ávila-Burgos, Michelle Odden, Simón Barquera, and Kirsten Bibbins-Domingo. 2016. “Projected Impact of Mexico’s Sugar-Sweetened Beverage Tax Policy on Diabetes and Cardiovascular Disease: A Modeling Study.” <em>PLoS Medicine</em> 13 (11): e1002158. <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002158" class="uri">http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002158</a>.</p>
+</div>
+<div>
+<p>Shaman, Jeffrey, Virginia E. Pitzer, Cécile Viboud, Bryan T. Grenfell, and Marc Lipsitch. 2010. “Absolute Humidity and the Seasonal Onset of Influenza in the Continental United States.” <em>PLoS Biol</em> 8 (2). College of Oceanic; Atmospheric Sciences, Oregon State University, Corvallis, Oregon, United States of America.: e1000316. doi:<a href="https://doi.org/10.1371/journal.pbio.1000316">10.1371/journal.pbio.1000316</a>.</p>
+</div>
+<div>
+<p>State, Penn. 2014. “Epidemics - the Dynamics of Infectious Diseases.” <a href="https://www.coursera.org/learn/epidemics" class="uri">https://www.coursera.org/learn/epidemics</a>.</p>
+</div>
+<div>
+<p>Sterman, John D. 2006. “Learning from Evidence in a Complex World.” <em>American Journal of Public Health</em> 96 (3): 505–14. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043</a>.</p>
+</div>
+<div>
+<p>Stone, Lewi, Ronen Olinky, and Amit Huppert. 2007. “Seasonal Dynamics of Recurrent Epidemics.” <em>Nature</em> 446 (7135): 533–36. doi:<a href="https://doi.org/10.1038/nature05638">10.1038/nature05638</a>.</p>
+</div>
+<div>
+<p>University, Hong Kong. 2015. “Epidemics.” <em>EdX</em>. <a href="https://www.edx.org/course/epidemics-hkux-hku01x-0" class="uri">https://www.edx.org/course/epidemics-hkux-hku01x-0</a>.</p>
+</div>
+<div>
+<p>Viboud, Cécile, Theresa Tam, Douglas Fleming, Andreas Handel, Mark A. Miller, and Lone Simonsen. 2006. “Transmissibility and Mortality Impact of Epidemic and Pandemic Influenza, with Emphasis on the Unusually Deadly 1951 Epidemic.” <em>Vaccine</em> 24 (44-46). Fogarty International Center, National Institutes of Health, Bethesda, MD 20892, USA. viboudc@mail.nih.gov: 6701–7. doi:<a href="https://doi.org/10.1016/j.vaccine.2006.05.067">10.1016/j.vaccine.2006.05.067</a>.</p>
+</div>
+<div>
+<p>Vynnycky, Emilia, and Richard White. 2010. <em>An Introduction to Infectious Disease Modelling</em>. Oxford University Press.</p>
+</div>
+<div>
+<p>Wallinga, J., and M. Lipsitch. 2007. “How generation intervals shape the relationship between growth rates and reproductive numbers.” <em>Proceedings of the Royal Society B</em> 274 (1609): 599–604.</p>
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -414,8 +425,8 @@ Figure 2.5: Not every diagram helps to understand a complex system. <a href="htt
           </div>
         </div>
       </div>
-<a href="overview-of-this-book.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="characterizing-infectious-disease-states.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="environmental-transmission-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

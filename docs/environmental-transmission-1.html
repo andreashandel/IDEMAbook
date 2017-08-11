@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="characterizing-infectious-disease-states.html">
-<link rel="next" href="reproductive-number.html">
+<link rel="prev" href="modes-of-direct-transmission.html">
+<link rel="next" href="vector-borne-id-transmission.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -208,175 +208,63 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="id-patterns" class="section level1">
-<h1><span class="header-section-number">4</span> ID Patterns</h1>
-<div id="overview-and-learning-objectives-2" class="section level2">
-<h2><span class="header-section-number">4.1</span> Overview and Learning Objectives</h2>
-<p>In this module, we will discuss different patterns of ID dynamics, such as single outbreaks, recurrent cycles and steady endemic states.</p>
-<p>The learning objectives for this chapter are:</p>
+<div id="environmental-transmission-1" class="section level1">
+<h1><span class="header-section-number">8</span> Environmental Transmission</h1>
+<div id="overview-and-learning-objectives-6" class="section level2">
+<h2><span class="header-section-number">8.1</span> Overview and Learning Objectives</h2>
+<p>A number of pathogens transmit through an environmental stage. This chapter discusses the implications on the ID dynamics in such cases.</p>
+<p>The learning objectives for this chapter are: * Know the hallmarks of indirect transmission * Understand what indirect transmission implies for control strategies * Identify diseases for which the indirect transmission pathway is important</p>
+</div>
+<div id="introduction-6" class="section level2">
+<h2><span class="header-section-number">8.2</span> Introduction</h2>
+<p>While the distinction between direct and indirect transmission is not clear-cut, we usually consider an ID to have an indirect mode of transmission if the time spent outside the main host is <em>important</em> for the whole transmission cycle. The two main types of stages where a pathogen resides outside the main host are the abiotic environment or another host species. In the case of the former, we consider it to be environmental transmission, in the case of the latter, it is vector-borne. Of course, some ID are even more complicated and have both vector and environmental stages. This chapter focuses on environmental transmission.</p>
+<div id="environmental-transmission-2" class="section level3">
+<h3><span class="header-section-number">8.2.1</span> Environmental transmission</h3>
+<p>Some diseases are shed by hosts into the environment, where they can survive for a potentially extended time before re-infecting a new host. Cholera is a good example of an ID that has water sources as environmental stage. Similarly, avian influenza is thought to survive in cold lake water for an extended time. The important consequence of environmental transmission is that it potentially allows new infections to occur over long distances in time and space. For instance an infected person might shed Cholera into the water somewhere upstream, and a susceptible person ingests the Cholera bacteria somewhere downstream miles and days or weeks away. This is fundamentally different to direct transmission, which requires close contact.</p>
+<div class="figure">
+<img src="images/environmentaltransmissionscheme.png" alt="Schematic of an ID with environmental transmission" />
+<p class="caption">Schematic of an ID with environmental transmission</p>
+</div>
+</div>
+<div id="environmental-transmission-and-external-drivers" class="section level3">
+<h3><span class="header-section-number">8.2.2</span> Environmental transmission and external drivers</h3>
+<p>Because environmental transmission involves the survival of pathogen for a potentially extended time in the environment, such ID are often more strongly influenced by external drivers compared to ID that are directly transmitted. The weather has often a strong impact, as do behavior changes. E.g. humans living in temparate zones are more likely to swim in lakes when it’s warm, therefore water-borne diseases often have the highest incidence in warm months.</p>
+<p>Such external drivers can be included in models by allowing certain parameters to vary over time. For instance the transmission rate or the rate at which environmental pathogen decays could be made dependent on the time of the year.</p>
+</div>
+<div id="environmental-transmission-and-interventions" class="section level3">
+<h3><span class="header-section-number">8.2.3</span> Environmental transmission and interventions</h3>
+<p>The environmental stage is a potentially great target for control mechanisms. Desinfecting surfaces with chemicals such as bleach is common practice in hospitals and other places where contamination might be common and needs to be minimized. Similarly, attempts have been made to disinfect the air with for instance UV radiation. Unfortunately, such radiation can be harmful to humans, and thus this approach only works within a system that moves and circulates air (e.g. an air-conditioning system with a stage at which the circulated air is irradiated). All modern water treatment plants have systems that remove pathogens - which is why diseases like Cholera are not a problem for countries with good sanitation, but are still a problem in countries where sanitation is less good. Despite good sanitation, other pathogens like norovirus are hard to control and still often cause local outbreaks. One reason for that is that these viruses are hard to kill and many regular cleaning agents do not work. Maybe the most important and famous environmental control strategy is the tried and true method of hand washing. Our hands can be considered a potentially infected environment (a fomite). By washing them, the transmission of pathogens to others is minimized. The fact that hand-washing is a great infection control strategy has been known for centuries - unfortunately, compliance is often still low, leading to many needless infections, even in settings like hospitals, where one should expect the staff to know the importance of adhering to the hand-washing routine.</p>
+<div id="modeling-environmental-transmission-myadvancedbox" class="section level4">
+<h4><span class="header-section-number">8.2.3.1</span> Modeling environmental transmission {myadvancedbox}</h4>
+<p>Most often, during the environmental stage, we assume that the pathogen does not ‘do’ anything. This is in contrast to vector-borne transmission where the pathogen might for instance undergo replication in the vector. Thus, we assume that infected hosts shed pathogen into the environment, where it decays. If a a susceptible person comes into contact with the pathogen in the environment, an infection can occur. The simplest SIR type model that can capture this process is given by <span class="math display">\[ 
+\begin{aligned}
+\dot S &amp;= - b E S \\
+\dot I &amp;= b E S  - \gamma I \\
+\dot R &amp;= \gamma I \\
+\dot E &amp;= p I - cE
+\end{aligned}
+\]</span> Infected persons release pathogen into the environment at rate <em>p</em>. The pathogen decays at rate <em>c</em>. A susceptible host can get infected by contact with contaminated environment at rate <em>b</em>.</p>
+</div>
+</div>
+</div>
+<div id="summary-and-cartoon-6" class="section level2">
+<h2><span class="header-section-number">8.3</span> Summary and Cartoon</h2>
+<p>This chapter provided an introduction to environmental transmission and its <img src="images/xkcd-hand_sanitizer.png" alt="One problem with environmental transmission control. Source: xkcd" /></p>
+</div>
+<div id="exercises-6" class="section level2">
+<h2><span class="header-section-number">8.4</span> Exercises</h2>
 <ul>
-<li>Understand the concept of resource replenishment</li>
-<li>Know the different mechanisms that can lead to ID cycles</li>
-<li>Understand the concept of endemic state</li>
-<li>Understand what leads to different ID patterns</li>
-<li>Understand the difference between intrinsic and extrinsic drivers of ID cycles</li>
+<li>The <em>Environmental transmission</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>The paper by Killingley and Nguyen-Van-Tam describes modes of transmission for influenza. Pick a pathogen that can transmit in a somewhat similar manner (e.g. Ebola, SARS, MERS, or such) and compare and contrast what is known about similarities and differences in transmission between flu and the pathogen you pick. Also briefly discuss implications for control.</li>
 </ul>
 </div>
-<div id="introduction-2" class="section level2">
-<h2><span class="header-section-number">4.2</span> Introduction</h2>
-<p>Some ID produce sporadic outbreaks and then disappear for years. Ebola is a prominent example. We will discuss in a future module how to figure out what leads to the (local) extinction of an ID.</p>
-<p>Many other ID show oscillatory behavior, i.e. we get repeated outbreaks every so often, with some time of no or little disease in between. For some ID, the outbreaks are seasonal/annual, for other ID, the cycles are multi-year.</p>
-<div class="figure">
-<img src="images/IDcycles.png" alt="Examples of ID cycles. From (Matt J Keeling and Rohani 2008)." />
-<p class="caption">Examples of ID cycles. From <span class="citation">(Matt J Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.</p>
+<div id="further-resources-6" class="section level2">
+<h2><span class="header-section-number">8.5</span> Further Resources</h2>
+<p>The following papers provide some additional introductory reading on the topic of environmental transmission from a dynamical systems perspective: [brankston07, cortez13]</p>
 </div>
-<p>Why are some ID seasonal, some not? What mechanisms lead to seasonal or multi-year oscillations? What determines the timing between outbreaks?</p>
-<p>Yet other IDs seem to have “settled down” and occur more or less at a steady level, with only minor fluctuations. TB and HIV in some parts of the world, as well as certain STD and chronic viral infections of for instance the herpes virus family seem to have such a dynamic.</p>
-<p>The following discusses the factors affecting these different ID dynamics patterns.</p>
-</div>
-<div id="resource-replenishment" class="section level2">
-<h2><span class="header-section-number">4.3</span> Resource Replenishment</h2>
-<p>So far, we mainly looked at scenarios where some ID caused a single outbreak. As we saw, outbreaks wane because eventually there are not enough susceptible individuals around to sustain ongoing transmission. This is a very general ecological principle: Without replenishment of resources, some consumer of such resources will eventually die out. We see that in predators eating pray, forest fires “eating” trees, and pathogens “eating” their hosts. If the resources are not replenished quickly enough, the consumer of these resources will go extinct. To sustain continued presence of the consumer/predator, resources need to be replenished.</p>
-<p>For our scenario, the resource consumer is the ID and the resources are the hosts, usually humans. Replenishment of susceptible hosts can happen through different mechanisms. Most common are birth of new, susceptible individuals, and loss of immunity. Migration, if strong, can be another way susceptible hosts can be replenished. Similarly, individuals that become newly sexually active correspond to the birth of new susceptibles for sexually transmitted infections.</p>
-<p>If the replenishment of new susceptibles is rapid, an ID might be able to maintain itself in a population and never go extinct. (Extinction will be discussed in more detail later.)</p>
-</div>
-<div id="a-model-with-resource-replenishment" class="section level2">
-<h2><span class="header-section-number">4.4</span> A model with resource replenishment</h2>
-<p>A version of the SIR model that includes resource replenishment through natural births or waning immunity is shown in figure <a href="id-patterns.html#fig:birthdeathdmodel">4.1</a>.</p>
-<div class="figure"><span id="fig:birthdeathdmodel"></span>
-<img src="images/R0modelfigure.png" alt="Example of an SIR model with births, deaths and waning immunity."  />
-<p class="caption">
-Figure 4.1: Example of an SIR model with births, deaths and waning immunity.
-</p>
-</div>
-<p>The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate <em>m</em>, natural death at some rate <em>n</em>, and the possibility that recovered lose their immunity and return to the susceptible class at rate <em>w</em>. This new model allows for oscillations/cycles and steady states, as explained next.</p>
-<div id="myadvancedbox" class="section level4">
-<h4><span class="header-section-number">4.4.0.1</span> Mathematical equations for the model with resource replenishment</h4>
-<p>The ordinary differential equations corresponding to the compartmental model shown in figure <a href="id-patterns.html#fig:birthdeathdmodel">4.1</a> are given by</p>
-<p><span class="math display">\[\dot S = m - b I S + wR - n S \]</span> <span class="math display">\[\dot I = b IS - gI - n I \]</span> <span class="math display">\[\dot R =  gI - wR - n R\]</span></p>
-</div>
-</div>
-<div id="intrinisic-cycles" class="section level2">
-<h2><span class="header-section-number">4.5</span> Intrinisic Cycles</h2>
-<p>The interaction between susceptible and infectious hosts can leads to a dynamical pattern that can/does produce oscillations. Specifically, the dynamics of resource consumption (depletion of susceptible hosts), waning ID incidence due to reduced availability of hosts, and subsequent replenishment of susceptibes can lead to cycles. Since these cycles are not driven by anything “from the outside” and arise purely due to the complex interplay between host resources and ID, there are sometimes called intrinsic cycles/oscillations. The timing of these cycles (the period of the oscillations) is determined by characteristics of the ID and scenario. For instance the duration of the infectious period and the transmissibility of the host generally influence the timing between outbreaks. In ecology, such cycles are well studied in the context of so-called predator-prey systems. For our infectious disease models, the “prey” are susceptibles and the “predators” are infected individuals.</p>
-</div>
-<div id="intrinisic-cycles-and-models" class="section level2">
-<h2><span class="header-section-number">4.6</span> Intrinisic Cycles and models</h2>
-<p>One can sometimes compute the time between outbreaks. For the simple compartmental SIR model, an approximate equation for the period close to the endemic state is <span class="math display">\[T \approx 2 \pi \sqrt{\left( \frac{LD}{R_0 - 1} \right)}\]</span></p>
-<p>Here, <em>L</em> is the average lifespan of a host, <em>D</em> is the average duration of infectiousness, and <em>R<sub>0</sub></em> is the basic reproductive number - a quantity we will discuss shortly. For more details on this equations, see e.g. <span class="citation">(Matt J Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.</p>
-<p>For more complicated models and real-world scenarios where the simple SIR model is not a good approximation, the equation just provided does not apply anymore. It might not even be possible to write down any equation. One can then instead run a computer simulation of the model and determine the length of the cycles from the time-series returned by the computer. The main point still holds, independent of the ability to write down an equation for the cycle length, namely that there is a relation between intrinsic characteristics of the system, such as duration of infectious period (<em>D</em>) and transmissibility of the disease (<em>R<sub>0</sub></em>), and the period of the oscillations. In cases where we cannot derive a mathematical equation, we can try to figure out the relation between cycle duration and some parameter of interest by repeatedly altering the parameter (e.g. the duration of the infectious period, <em>D</em>), and record the cycle period, <em>T</em>, reported by the model simulation for various values of the parameter. By plotting a figure showing <em>D</em> on the x-axis and <em>T</em> on the y-axis, we obtain a relation between these quantities.</p>
-</div>
-<div id="external-drivers-of-cycles" class="section level2">
-<h2><span class="header-section-number">4.7</span> External drivers of cycles</h2>
-<p>Another mechanism that can lead to osciallations in the dynamics of ID can come from “external” drivers. Of course, these processes are still part of the whole system, but not as directly as the dynamics and interaction of the hosts. In that sense we consider it an external process.</p>
-<p>Weather is one of the most important external factors. Many ID are influenced by the weather. For instance influenza virus survives better when vapor pressure is low, which is usually the case in temperate regions in winter <span class="citation">(M. Lipsitch and Viboud <a href="#ref-lipsitch09">2009</a>, <span class="citation">Shaman et al. (<a href="#ref-shaman10">2010</a>)</span>)</span>.</p>
-<p>Other types of seasonality are related to human activity and behavior. For instance many childhood diseases increase in incidence when a new school year starts.</p>
-<p>For some ID, weather and behavior interact. Many water-borne diseases in the U.S. see an uptick in summer. This is due to behavior changes in the host: More people swim in outdoor water in the summer.</p>
-<p>Often, more than one mechanism occurs and influences the ID dynamics. As such, it is often not possible to isolate a single factor as the main important one. It often depends on the specific setting.</p>
-</div>
-<div id="notes-on-cycles" class="section level2">
-<h2><span class="header-section-number">4.8</span> Notes on Cycles</h2>
-<p>In the type of models we have looked at so far, sustained oscillations need something like seasonality. Without it, the cycles die out and the disease reaches a steady, endemic state. For more complex models or models that include stochastic dynamics (something we’ll discuss later), cycles can be maintained even in the absence of external drivers.</p>
-</div>
-<div id="steady-states" class="section level2">
-<h2><span class="header-section-number">4.9</span> Steady states</h2>
-<p>In addition to single outbreaks or recurrent cycles, ID often also reach a state where the incidence/prevalence in a population is roughly constant. This is usually referred to as endemic state. Examples of that are e.g. helminth infections in many African countries (in the absence of control efforts) or certain sexually transmitted diseases in developed countries.</p>
-<p>Note that while at steady state, the total number of ID cases does not change, there is usually still constant turnover. Some individuals get infected, while others recover or die. It just happens that these processes balance each other, making the total numbers roughly constant.</p>
-<p>If we have a mathematical or computer model of our system, there are 2 ways to determine steady states. One is mathematical, the other is through simulating the system. The former approach is more elegant and powerful, but generally only works if we have a fairly small model. It is illustrated in the box below. Often, the model is too complicated to obtain useful equations for the steady state values of the model variables. Fortunately, we can always determine them numerically. We simply start our computer simulation model with some values and run it long enough until it has settled down (we need to make sure it actually does have a steady state). We can then record the steady state values. We can do this for different model parameter values (e.g. changes in birth rate or changes of rate of infection). At the end, we can plot a figure showing how the steady state values change with some model parameter. This approach is obviously much slower than using the mathematical equations. However, often it is the only feasible approach.</p>
-<p>Note that there are technically steady states that exist but won’t show up in the simulation since they are unstable. Since any unstable steady state also rarely exists in nature (other than the disease free state, with a population remaining in that state until a new pathogen arrives), those steady states tend to be not that important in practice.</p>
-<div id="myadvancedbox" class="section level4">
-<h4><span class="header-section-number">4.9.0.1</span> Steady states and models</h4>
-<p>When an ID reaches a steady state, a model based on ordinary differential equations, such as the model shown above, simplifies. At steady state, there are – by definition – no changes in the total number of individuals in each compartment. Therefore the left side of the equations are zero, i.e. <span class="math inline">\(\dot S = \dot I = \dot R =0\)</span>. This changes the differential equations into a set of algebraic equations. For a fairly small set of equations (usually &lt; 5), one can obtain equations for the compartments (<em>S</em>, <em>I</em>, and <em>R</em> in this case) at steady state that are only function of the model parameters. While it is often theoretically possible to solve models with more compartments/equations, the resulting expressions are usually so big and unwieldy to not provide much useful insight.</p>
-<p>The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. The two main packages for such tasks are <a href="http://www.maplesoft.com/">Maple</a> and <a href="https://www.wolfram.com/mathematica/">Mathematica</a>. Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use <a href="http://maxima.sourceforge.net/">Maxima</a>. <a href="http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems">Other packages exist</a>. Note that <code>R</code> is not suitable for solving symbolic equations. Using Maxima to solve the equations above (without immune recovery, i.e. <em>w=0</em>, to make the results simpler) gives:</p>
-<div class="figure">
-<img src="images/SSmaxima.png" alt="Maxima code for solving the SIR model steady state equations." />
-<p class="caption">Maxima code for solving the SIR model steady state equations.</p>
-</div>
-<p>The same results are of course obtained when solving the equations by hand. The first steady state returned by maxima is the one in the absence of an ID, with only susceptibles around. Usually, we are interested in the second steady state, the endemic equilibrium at which disease prevalence is at a fixed level. We thus find the values for the number of susceptible, infected and recovered at steady state as a function of the model parameters.</p>
-<p>Having the equations for the steady state allows us to rapidly gain insight into the system behavior. For instance we can see that for an endemic steady state to be possible (i.e. for <em>I</em> &gt; 0 at steady state), we need <span class="math inline">\(b m &gt; n (n+ g)\)</span>. We can make intuitive sense out of this expression: The combination of pathogen transmission capacity (<em>b</em>) and birth rate <em>m</em>, which support ID persistence, needs to be stronger than the effects of general host death <em>n</em> and host recovery <em>g</em>. We will later see that this relates to the concept of reproductive number.</p>
-</div>
-</div>
-<div id="detecting-cycles-or-other-patterns" class="section level2">
-<h2><span class="header-section-number">4.10</span> Detecting cycles or other patterns</h2>
-<p>It is often hard to determine if there is a specific repeating pattern, such as oscillations/cycles for a given ID. Consider for instance Figure <a href="id-patterns.html#fig:gonorrheapattern">4.2</a> (<a href="http://www.cdc.gov/STD/stats06/images/trends-img-2.gif">Source CDC</a>). One can see that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005, with ups and downs in between. The changes are not rapid enough to be due to seasonal/annual drivers. If we had more data and the same up-down pattern repeated, we could speculate that this might be due to some intrinsic oscillatory dynamics of the disease. In this case, the most likely explanation for the observed patterns lie outside the disease dynamics itself. Increased detection and treatment likely led to a decline in the 40s, changing sexual behavior lead to an increase starting in the 60s, and strong safe-sex campaigns, combined with the threat of HIV, led to a decrease starting in the 80s. However, this is somewhat speculative. It might well be that other factors, (e.g. changes in surveillance intensity) could explain the pattern. A careful analysis (which I have not done) would be needed before one can be more confident as to what might lead to the observed pattern.</p>
-<div class="figure"><span id="fig:gonorrheapattern"></span>
-<img src="images/gonorrhea.gif" alt="Gonorrhea cases in the US."  />
-<p class="caption">
-Figure 4.2: Gonorrhea cases in the US.
-</p>
-</div>
-</div>
-<div id="id-dynamics-in-changing-populations" class="section level2">
-<h2><span class="header-section-number">4.11</span> ID Dynamics in changing populations</h2>
-<p>The idea of resource replenishment described above assumes in its simplest forms that in the absence of the ID, the host population is in steady state. That is, the number of births and deaths balance each other and the population size therefore stays constant. We then investigate ID dynamics on top of such a constant population (which then might not be constant anymore if the disease leads to many deaths).</p>
-<p>One can go a step further and consider an underlying population that changes in size due to underlying growth or decline of the population. We can then study the dynamics of an ID on top of an already dynamically changing population. While this is generally not much more complicated to do with computer models, it is harder to understand what exactly is going on in the system. For instance consider an ID with high mortality in a growing population. If we just looked at the population size, it could be that it remains constant, due to the 2 processes of natural population growth and disease induced mortality balancing each other. We therefore need to carefully study how the different processes affect ID dynamics.</p>
-</div>
-<div id="summary-and-cartoon-2" class="section level2">
-<h2><span class="header-section-number">4.12</span> Summary and Cartoon</h2>
-<p>This module provided a discussion of different general patterns we observe in the dynamics of ID. Those are individual outbreaks, cycles of repeated outbreaks, and steady endemic states.</p>
-<div class="figure">
-<img src="images/phd_sciencenewscycle.gif" alt="Here’s a different kind of cycle that (ID) scientists sometimes encounter. Source: phdcomics.com" />
-<p class="caption">Here’s a different kind of cycle that (ID) scientists sometimes encounter. <a href="http://www.phdcomics.com/comics/archive.php?comicid=1174">Source: phdcomics.com</a></p>
-</div>
-</div>
-<div id="exercises-2" class="section level2">
-<h2><span class="header-section-number">4.13</span> Exercises</h2>
-<ul>
-<li>The <em>Patterns of ID</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
-<li>Find a scientific article/paper that investigates the incidence/prevalence pattern of some ID. Summarize the article. Discuss why one sees the observed pattern (and not one of the others). Speculate what kind of change to the ID/system could change the observed pattern (even if that change is not biologically realistic).</li>
-<li>Read the article “Dynamical resonance can account for seasonality of influenza epidemics” by Dushoff et al <span class="citation">(Dushoff et al. <a href="#ref-dushoff04">2004</a>)</span>. They suggest an interesting explanation for the seasonal variation in influenza cases. Look at the literature to see if since that paper came out, there has been any further progress on that question. Discuss recent advances that might support or refute the idea suggested by Dushoff et al.</li>
-</ul>
-</div>
-<div id="further-resources-2" class="section level2">
-<h2><span class="header-section-number">4.14</span> Further Resources</h2>
-<ul>
-<li>The following references provide some more information on and discussion of seasonality in IDs: <span class="citation">(Altizer et al. <a href="#ref-altizer06">2006</a>; Dowell <a href="#ref-dowell01">2001</a>; Grassly and Fraser <a href="#ref-grassly06">2006</a>; Stone, Olinky, and Huppert <a href="#ref-stone07">2007</a>)</span>.</li>
-<li>Seasonality for influenza has been heavily studied, some references are <span class="citation">(Dushoff et al. <a href="#ref-dushoff04">2004</a>; Lofgren et al. <a href="#ref-lofgren07">2007</a>; Baumgartner et al. <a href="#ref-baumgartner12">2012</a>)</span>.</li>
-<li>A discussion of cycles in Cholera can be found in <span class="citation">(Pascual, Bouma, and Dobson <a href="#ref-pascual02">2002</a>; Emch et al. <a href="#ref-emch08">2008</a>)</span>.</li>
-</ul>
-</div>
-<div id="references-3" class="section level2">
-<h2><span class="header-section-number">4.15</span> References</h2>
+<div id="references-7" class="section level2">
+<h2><span class="header-section-number">8.6</span> References</h2>
 
-</div>
-</div>
-<h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-keeling08">
-<p>Keeling, Matt J, and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press.</p>
-</div>
-<div id="ref-lipsitch09">
-<p>Lipsitch, Marc, and Cécile Viboud. 2009. “Influenza Seasonality: Lifting the Fog.” <em>Proc Natl Acad Sci U S A</em> 106 (10). Department of Epidemiology, Harvard School of Public Health, Boston, MA 02130, USA. mlipsitc@hsph.harvard.edu: 3645–6. doi:<a href="https://doi.org/10.1073/pnas.0900933106">10.1073/pnas.0900933106</a>.</p>
-</div>
-<div id="ref-shaman10">
-<p>Shaman, Jeffrey, Virginia E. Pitzer, Cécile Viboud, Bryan T. Grenfell, and Marc Lipsitch. 2010. “Absolute Humidity and the Seasonal Onset of Influenza in the Continental United States.” <em>PLoS Biol</em> 8 (2). College of Oceanic; Atmospheric Sciences, Oregon State University, Corvallis, Oregon, United States of America.: e1000316. doi:<a href="https://doi.org/10.1371/journal.pbio.1000316">10.1371/journal.pbio.1000316</a>.</p>
-</div>
-<div id="ref-dushoff04">
-<p>Dushoff, Jonathan, Joshua B. Plotkin, Simon A. Levin, and David JD Earn. 2004. “Dynamical Resonance Can Account for Seasonality of Influenza Epidemics.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (48): 16915–6. <a href="http://www.pnas.org/content/101/48/16915.short" class="uri">http://www.pnas.org/content/101/48/16915.short</a>.</p>
-</div>
-<div id="ref-altizer06">
-<p>Altizer, Sonia, Andrew Dobson, Parviez Hosseini, Peter Hudson, Mercedes Pascual, and Pejman Rohani. 2006. “Seasonality and the Dynamics of Infectious Diseases.” <em>Ecology Letters</em> 9 (4): 467–84. doi:<a href="https://doi.org/10.1111/j.1461-0248.2005.00879.x">10.1111/j.1461-0248.2005.00879.x</a>.</p>
-</div>
-<div id="ref-dowell01">
-<p>Dowell, S F. 2001. “Seasonal Variation in Host Susceptibility and Cycles of Certain Infectious Diseases.” <em>Emerging Infectious Diseases</em> 7 (3): 369–74. doi:<a href="https://doi.org/10.3201/eid0703.010301">10.3201/eid0703.010301</a>.</p>
-</div>
-<div id="ref-grassly06">
-<p>Grassly, Nicholas C, and Christophe Fraser. 2006. “Seasonal Infectious Disease Epidemiology.” <em>Proceedings of the Royal Society of London B: Biological Sciences</em> 273 (1600). The Royal Society: 2541–50.</p>
-</div>
-<div id="ref-stone07">
-<p>Stone, Lewi, Ronen Olinky, and Amit Huppert. 2007. “Seasonal Dynamics of Recurrent Epidemics.” <em>Nature</em> 446 (7135): 533–36. doi:<a href="https://doi.org/10.1038/nature05638">10.1038/nature05638</a>.</p>
-</div>
-<div id="ref-lofgren07">
-<p>Lofgren, E., N. H. Fefferman, Y. N. Naumov, J. Gorski, and E. N. Naumova. 2007. “Influenza Seasonality: Underlying Causes and Modeling Theories.” <em>Journal of Virology</em> 81 (11): 5429–36. doi:<a href="https://doi.org/10.1128/JVI.01680-06">10.1128/JVI.01680-06</a>.</p>
-</div>
-<div id="ref-baumgartner12">
-<p>Baumgartner, Eduardo, Christine N. Dao, Sharifa Nasreen, Mejbah Uddin Bhuiyan, Syeda Mah-E-Muneer, Abdullah Al Mamun, M. A. Yushuf Sharker, et al. 2012. “Seasonality, Timing, and Climate Drivers of Influenza Activity Worldwide.” <em>The Journal of Infectious Diseases</em> 206 (6): 838–46. doi:<a href="https://doi.org/10.1093/infdis/jis467">10.1093/infdis/jis467</a>.</p>
-</div>
-<div id="ref-pascual02">
-<p>Pascual, Mercedes, Menno J. Bouma, and Andrew P. Dobson. 2002. “Cholera and Climate: Revisiting the Quantitative Evidence.” <em>Microbes and Infection</em> 4 (2): 237–45. <a href="http://www.sciencedirect.com/science/article/pii/S1286457901015337" class="uri">http://www.sciencedirect.com/science/article/pii/S1286457901015337</a>.</p>
-</div>
-<div id="ref-emch08">
-<p>Emch, Michael, Caryl Feldacker, M Sirajul Islam, and Mohammad Ali. 2008. “Seasonality of Cholera from 1974 to 2005: A Review of Global Patterns.” <em>International Journal of Health Geographics</em> 7 (1): 31. doi:<a href="https://doi.org/10.1186/1476-072X-7-31">10.1186/1476-072X-7-31</a>.</p>
 </div>
 </div>
             </section>
@@ -384,8 +272,8 @@ Figure 4.2: Gonorrhea cases in the US.
           </div>
         </div>
       </div>
-<a href="characterizing-infectious-disease-states.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="reproductive-number.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="modes-of-direct-transmission.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vector-borne-id-transmission.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
