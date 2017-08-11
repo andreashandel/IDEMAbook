@@ -20,7 +20,7 @@ This book does also not teach much about specific infectious diseases. While man
 
 Finally, while this book takes a modeling perspective, it does not intend to teach modeling. For anyone interested in learning how to build and analyze their own infectious disease models - a skill we highly recommend learning - we suggest e.g. [@keeling08,@vynnycky10].
 
-Maybe the material closest in approach to this book is not another book but the online course "Dynamics of Infectious Diseases" developed and taught by multiple faculty at Penn State University and hosted on Coursera [@epimooc]. This course is free to take and I can strongly recommend it. Another online course that has been offered in the past through edX is "Epidemics" from Hong Kong University [@hkepidemics].
+Maybe the material closest in approach to this book is not another book but the online course "Dynamics of Infectious Diseases" developed and taught by multiple faculty members at Penn State University and hosted on Coursera [@epimooc]. This course is free to take, and I can strongly recommend it. Another online course that has been offered in the past through edX is "Epidemics" from Hong Kong University [@hkepidemics].
 
 
 ## How to use this book
