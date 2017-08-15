@@ -18,6 +18,7 @@ The most straightforward way of transmission is direct transmission from infecte
 
 Respiratory diseases are often also considered to transmit directly if close proximity between infected and uninfected host is needed for successful transmission. Examples are measles and influenza. It gets a bit tricky though, since many respiratory pathogens can also transmit by first being deposited in the environment (e.g. inside tiny water particles floating in the air for a long time, or on a bathroom faucet), and then if an uninfected person comes into contact with the contaminated environment, they can get infected. The importance of direct versus indirect/environmental transmission for many respiratory pathogens is still not fully understood, and can likely differ between different settings. 
 
+Another way of direct transmission is from mother to baby before or during birth. This is often called _vertical transmission_, while all other forms discussed above and below are called _horizontal transmission_. HIV is an example of a pathogen that can transmit via both routes.  
 
 ##Environmental transmission
 As just mentioned, respiratory infections might transmit through an environmental stage, where the environment is small water particles in the air or solid surfaces. Infected surfaces (in the context of ID transmission often called fomites) are major routes of transmission for several important pathogens, for instance Staph or pathogens that transmit through the fecal-oral route, e.g. norovirus. Water is the main transmission environment for another important fecal-orally transmitted disease, Cholera. The chapter on environmental transmission will discuss this route in more detail.
@@ -33,13 +34,13 @@ This chapter briefly introduced different modes of ID transmission.
 
 
 
-
 ##Exercises
 * Several apps in the DSAIDE package address specific types of transmission, those are discussed in the following chapters.
 
 
 ##Further Resources
-
+* Ewald and colleagues have done some interesting investigations connecting transmission type to virulence/pathogenicity of specific diseases. See for instance [@ewald87; @ewald95].
+* A detailed discussion linking transmission types to model alternatives is provided in [@mccallum17].
 
 ##References
 
