@@ -1,5 +1,5 @@
 
-# ID Patterns
+# Patterns of Infectious Disease Dynamics
 
 ## Overview and Learning Objectives
 In this module, we will discuss different patterns of ID dynamics, such as single outbreaks, recurrent cycles, and steady endemic states. 
