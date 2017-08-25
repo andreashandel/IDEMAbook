@@ -5,6 +5,7 @@
 In this chapter, we will discuss an important form of indirect transmission, one that has a vector stage.
 
 The learning objectives for this chapter are:
+
 * Know about important IDs that are vector-borne
 * Understand the implactions of vector-borne transmission on ID dynamics 
 * Understand how vector-borne transmission influences potential ID control strategies.
@@ -29,7 +30,7 @@ With vector-borne ID, there is a unique opportunity for interventions that does 
 A major problem with all control startegies targeting vectors is that not only do pathogens evolve quickly, but most vectors have fairly short lifespans and large population numbers, which means rapid evolution. This could make any control measures ineffective within a number of years. Indeed, that was observed for DDT, where mosquitos resistant to the chemical started to appear before its widespread use was discontinued.
 
 
-##Modeling vector-borne transmission {myadvancedbox}
+##Modeling vector-borne transmission {#myadvancedbox}
 The easiest way to model a vector-borne disease is to simply ignore the vector and assume that the transmission term of the equation (e.g. a term like _bSI_) represents -- in a very simpliefied form -- all the complicated processes involved in transmission, including the vector stage. That makes the model simple, but of course doesn't capture the vector-borne aspects of the dynamics. If we are interested in the dynamics of the disease in all hosts, we do need to include the vector components in a model. To include vectors in a model, one could for instance build 2 SIR-type models, with one set of equations for the (human) host and one for the vector, and then couple the compartments by including transmission from humans to vectors and vectors to humans. Equations for such a model might look as follows:
 $$
 \begin{aligned}
@@ -47,6 +48,9 @@ Here, the index _h_ indicates humans and _v_ indicates vectors. The important ve
 
 ##Summary and Cartoon
 
+Vector-borne transmission adds complexity to an ID, but also allows for a wider range of control measures (such as vector killing). 
+
+![There are multiple reasons mosquitos are not popular. [Source: xkcd](https://xkcd.com/1241/) ](./images/xkcd-mosquito-ringtone.png)
 
 
 
@@ -56,7 +60,8 @@ Here, the index _h_ indicates humans and _v_ indicates vectors. The important ve
 
 
 ##Further Resources
-The following papers provide some additional introductory reading on the topic of vector borne ID transmission from a dynamical systems perspective: 
+* The following papers provide some additional discussion of vector-borne diseases and how to model them [@smith14; @kilpatrick12; @luz10].
+
 
 ##References
 

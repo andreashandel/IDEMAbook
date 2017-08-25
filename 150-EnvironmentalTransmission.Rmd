@@ -6,9 +6,10 @@
 A number of pathogens transmit through an environmental stage. This chapter discusses the implications on the ID dynamics in such cases. 
 
 The learning objectives for this chapter are:
-* Know the hallmarks of indirect transmission
-* Understand what indirect transmission implies for control strategies
-* Identify diseases for which the indirect transmission pathway is important
+
+* Know the hallmarks of indirect, environmental transmission
+* Understand what environmental transmission implies for control strategies
+* Identify diseases for which the environmental transmission pathway is important
 
 
 ##Introduction
@@ -34,7 +35,7 @@ The environmental stage is a potentially great target for control mechanisms. De
 Maybe the most important and famous environmental control strategy is the tried and true method of hand washing. Our hands can be considered a potentially infected environment (a fomite). By washing them, the transmission of pathogens to others is minimized. The fact that hand-washing is a great infection control strategy has been known for centuries - unfortunately, compliance is often still low, leading to many needless infections, even in settings like hospitals, where one should expect the staff to know the importance of adhering to the hand-washing routine.
 
 
-#### Modeling environmental transmission {myadvancedbox}
+#### Modeling environmental transmission {#myadvancedbox}
 Most often, during the environmental stage, we assume that the pathogen does not 'do' anything. This is in contrast to vector-borne transmission where the pathogen might for instance undergo replication in the vector. Thus, we assume that infected hosts shed pathogen into the environment, where it decays. If a a susceptible person comes into contact with the pathogen in the environment, an infection can occur. The simplest SIR type model that can capture this process is given by
 $$ 
 \begin{aligned}
@@ -61,8 +62,10 @@ This chapter provided a discussion of environmental transmission and its impact 
 
 
 ##Further Resources
-* The following papers provide some additional introductory reading on the topic of environmental transmission from a dynamical systems perspective: [brankston07, cortez13]
-* Cholera is well studied 
+* The paper [@cortez13] discusses how direct versus indirect transmission can lead to different incidence patterns and how models can help to determine routes of transmission.
+* Ewald discusses the relation between environmental transmission and virulence in [@ewald91].
+* Some further discussion about influenza routes of transmission is provided in [@brankston07; @weber08].
+
 
 ##References
 

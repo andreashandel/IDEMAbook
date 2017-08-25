@@ -86,15 +86,17 @@ Studying the potential impact of interventions is probably the single most impor
 
 ##Summary and Cartoon
 
-![An unusual infectious disease control program. [Source: dilbert.com](www.dilbert.com)](../media/dilbert_flushots.gif)
+![Infectious disease control is arguably one of the greatest successes of epidemiology and biology.](./images/xkcd-disease-eradication.png)
 
 
 ##Exercises
 * The _ID Control_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
-* Read the article "Towards the endgame and beyond: complexities and challenges for the elimination of infectious diseases" by Klepac  et al [@klepac16]. Choose some ID - either one listed in box 1 of the paper or a different one - and discuss the current plans for elimination/eradication. What features of the ID will likely be helpful or unhelpful with regard to eradication/elimination. Reference the different areas the paper discusses? What is your overall assessment of feasibility?
+* Read the article "Towards the endgame and beyond: complexities and challenges for the elimination of infectious diseases" by Klepac  et al [@klepac13]. Choose some ID - either one listed in box 1 of the paper or a different one - and discuss the current plans for elimination/eradication. What features of the ID will likely be helpful or unhelpful with regard to eradication/elimination. Reference the different areas the paper discusses? What is your overall assessment of feasibility?
 
 
 ## Further Resources
+* The fairly new Dengue vaccine raises interesting questions regarding the interplay of vaccination coverage and disease severity, and is analyzed for instance in [@ferguson16].
+* A brief discussion of ID control is provided in [@halloran14].
 
 
 ##References

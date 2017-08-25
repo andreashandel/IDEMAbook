@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="reproductive-number.html">
-<link rel="next" href="modes-of-direct-transmission.html">
+<link rel="prev" href="vector-borne-id-transmission.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -228,71 +228,313 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="types-of-infectious-disease-transmission" class="section level1">
-<h1><span class="header-section-number">6</span> Types of Infectious Disease Transmission</h1>
-<div id="overview-and-learning-objectives-4" class="section level2">
-<h2><span class="header-section-number">6.1</span> Overview and Learning Objectives</h2>
-<p>In this chapter, we will introduce different types of ID transmission and how these different modes of transmission impact ID dynamics. Several of the following chapters will go into more detail on different modes of transmission.</p>
+<div id="infectious-disease-control" class="section level1">
+<h1><span class="header-section-number">10</span> Infectious Disease Control</h1>
+<div id="overview-and-learning-objectives-8" class="section level2">
+<h2><span class="header-section-number">10.1</span> Overview and Learning Objectives</h2>
+<p>In this module, we will look a closer look at different types of control against infectious diseases and their potential outcomes.</p>
 <p>The learning objectives for this chapter are:</p>
 <ul>
-<li>Know the different types of ID transmission</li>
-<li>Understand the implications different modes of transmission have for ID dynamics and control</li>
+<li>Know the major types of ID control strategies</li>
+<li>Evaluate the use of different ID control strategies</li>
+<li>Understand how different pathogens require different types of control</li>
 </ul>
 </div>
-<div id="introduction-4" class="section level2">
-<h2><span class="header-section-number">6.2</span> Introduction</h2>
-<p>The way in which an infectious disease transmits is important to understand its transmission dynamics and for planning interventions. An infectious disease can be transmitted directly or indirectly. Among indirect ways of transmission, there are again different important categories, such as environmental or vector-borne transmission. Often, things are not that clear-cut: Some diseases might transmit by more than one route, and the definition of direct and indirect is not as clear-cut as it might sound. The following paragraphs briefly discuss the main different transmission modes, which will then be discussed in more detail in the following chapters.</p>
+<div id="introduction-8" class="section level2">
+<h2><span class="header-section-number">10.2</span> Introduction</h2>
+<p>Generally, the reason why we study IDs and their dynamics is to eventually <em>do something</em>. We want to implement control and intervention strategies to minimize disease burden. That could be trying to contain an ongoing outbreak, reduce incidence of an endemic disease, or try to completely eradicate a disease. Depending on modes of transmission, infectiousness profiles and other ID characteristics, the types of interventions that are available and potentially effective will vary. Therefore, the better we understand and ID, the better we can likely implement control.</p>
 </div>
-<div id="direct-transmission" class="section level2">
-<h2><span class="header-section-number">6.3</span> Direct Transmission</h2>
-<p>The most straightforward way of transmission is direct transmission from infected to uninfected host. The clearest example of direct transmission are sexually transmitted diseases. It is generally the case that direct physical contact between infected and uninfected host is required for transmission. Exceptions exist, such as transmission of HIV through infected needle sharing, which could even be considered a type of vector-borne transmission, but non-direct modes of transmission are not common.</p>
-<p>Respiratory diseases are often also considered to transmit directly if close proximity between infected and uninfected host is needed for successful transmission. Examples are measles and influenza. It gets a bit tricky though since many respiratory pathogens can also transmit by first being deposited in the environment (e.g. inside tiny water particles floating in the air for a long time, or on a bathroom faucet). Then if an uninfected person comes into contact with the contaminated environment, they can get infected. The importance of direct versus indirect/environmental transmission for many respiratory pathogens is still not fully understood, and can likely differ between different settings.</p>
-<p>Another path of direct transmission is from mother to baby before or during birth. This is often called <em>vertical transmission</em>, while all other forms discussed above and below are called <em>horizontal transmission</em>. HIV is an example of a pathogen that can transmit via both routes.</p>
+<div id="goals-of-id-control" class="section level2">
+<h2><span class="header-section-number">10.3</span> Goals of ID control</h2>
+<p>When trying to control an ID, we often have more than one goal in mind. The following are a list of (overlapping) public health goals that we often try to achieve with ID control:</p>
+<ul>
+<li>Reduce morbidity</li>
+<li>Reduce mortality</li>
+<li>Reduce transmission</li>
+<li>Reduce incidence/prevalence</li>
+<li>Reduce economic impact</li>
+<li>Minimize ethical or moral dilemmas</li>
+<li>Protect the individual</li>
+<li>Protect the population</li>
+</ul>
+<p>Most of these goals are overlapping. E.g. reducing transmission likely reduces overall morbidity and mortality. Sometimes, goals can be conflicting. For instance if we have limited resources, should we target those that are most likely to transmit but not suffer much from the disease (e.g. children) or target those that are most likely to experience morbidity/mortality but are not that important for transmission (e.g. elderly)? Similarly, at what level is it acceptable to force people to (not) do something (e.g. forced vaccination or quarantine) that might not help - and maybe even slightly hurt - the individual, but will be benefitial to society? Answers to those questions are usually beyond the scope of just ID Epidemiology. What we can contribute to the wider discussion is an assessment of impact of various control strategies. That information can then be combined with other considerations to make decisions.</p>
 </div>
-<div id="environmental-transmission" class="section level2">
-<h2><span class="header-section-number">6.4</span> Environmental Transmission</h2>
-<p>As just mentioned, respiratory infections might spread through an environmental stage, where the environment is small water particles in the air or on solid surfaces. Infected surfaces (in the context of ID transmission often called fomites) are major routes of transmission for several important pathogens, for instance, Staph or pathogens that transmit through the fecal-oral route, e.g. norovirus. Water is the main transmission environment for another important fecal-orally transmitted disease, Cholera. The chapter on environmental transmission will discuss this route in more detail.</p>
+<div id="types-of-infectious-disease-control" class="section level2">
+<h2><span class="header-section-number">10.4</span> Types of infectious disease control</h2>
+<p>The types of control and intervention strategies that exist for a given ID vary. Some depend on the route of transmission, others depend on our skills and ability, e.g. our ability to produce a vaccine. The following sections describe the major types of ID control.</p>
+<div id="vaccination" class="section level3">
+<h3><span class="header-section-number">10.4.1</span> Vaccination</h3>
+<p>Vaccines are arguably the most cost effective public health intervention we have. An ideal vaccine is one that has to only be given once to induce lifelong protection against the ID. It should also be safe, with little to no side effects. Other characteristics of a good vaccine are ease of administration, low price and easy to transport and store.</p>
+<p>The only IDs we have been able to eradicate so far (smallpox and rinderpest) are those against which we have good vaccines. Unfortunately, a good vaccine alone does not mean eradication is likely. Measles is a good example. We have a good vaccine but the pathogen is so highly transmissible that coverage would need to be at levels beyond those currently achievable.</p>
 </div>
-<div id="vector-borne-transmission" class="section level2">
-<h2><span class="header-section-number">6.5</span> Vector-borne Transmission</h2>
-<p>Diseases that transmit through a vector stage, such as Malaria, Dengue, Zika, and others, are an important category. The most common and important vector are mosquitos, but other vectors are also important (e.g. kissing bugs for Trypanosoma, which causes Chagas disease). The definition of what makes an ID a vector borne ID is tricky. See the HIV-needle example above, or consider Zika, which can transmit by multiple routes. For some diseases, it is not clear if one should consider them vector-borne or not. For instance, <em>Toxoplasma gondii</em> spends part of its life-cycle in cats, and the other part can be in another host, most commonly mice or birds. If the latter type of host should be considered a vector or not is largely a matter of definition. Often, it is called an intermediate host, and <em>T gondii</em> and diseases with similar life-cycles (e.g. Schistosomiasis) are considered <em>multi-host diseases</em>, with the term vector-borne mainly used when the intermediate (non-human) host is an insect. As we will see, from the perspective of describing such diseases with models, the labeling does not make much of a difference.</p>
+<div id="pharmaceutical-interventions-drugs" class="section level3">
+<h3><span class="header-section-number">10.4.2</span> Pharmaceutical Interventions (Drugs)</h3>
+<p>Drugs, most notably antibiotics, are another very effective means of combating ID. While vaccines try to prevent infection, drugs usually try to prevent symptoms (morbidity and mortality) in already infected individuals. Reduction in symptoms might or might not impact transmission dynamics. A good example where treatment reduces infectiousness and transmission is ART treatment for HIV infected individuals.</p>
+<p>While not commonly used, drugs can also be given to susceptibles as prophylaxis to reduce the risk of infection. As such, one can think of drugs as short-term vaccines - though the mechanism of protection is very different. Again, HIV is a good example, where pre-exposure prophylaxis with ART has recently been shown to be somewhat effective in reducing risk of infection.</p>
+<p>For some ID, such as e.g. helminth infections, mass drug treatment is also being used to try and reduce ID prevalence enough to interrupt transmission and potentially eliminate the ID.</p>
 </div>
-<div id="summary-and-cartoon-4" class="section level2">
-<h2><span class="header-section-number">6.6</span> Summary and Cartoon</h2>
-<p>This chapter briefly introduced different modes of ID transmission.</p>
+<div id="non-pharmaceutical-interventions" class="section level3">
+<h3><span class="header-section-number">10.4.3</span> Non-pharmaceutical Interventions</h3>
+<p>These are the oldest types of interventions, and are often quite effective. Quarantining of either infected or susceptibles prevents further transmission. Quarantine alone does not help those that are already infected. Though if quarantine occurs in a medical setting, targeted help for the sick might reduce their morbidity and mortality. A prominent recent example for the use of quarantine was during the 2014 Ebola outbreak in West Africa. No drugs or vaccines were available, and quarantine was the main control strategy.</p>
+<p>These days, strict quarantine can be hard to enforce, especially for diseases that are not as severe as for instance Ebola. A broader class of intervention strategies, of which quarantine is a strong form, often goes by the name of <em>social distancing interventions</em>. E.g. closing a school to stop an ongoing flu or measles outbreak would usually not be labeled as quarantine, but would be considerd <em>social distancing</em>. In general, social distancing interventions try to reduce opportunities for spread, usually without going as far as fully isolating/quarantining individuals. This makes the intervention both less effective and less restrictive. Finding the right balance between restricting a person’s individual freedoms and protecting society can be difficult.</p>
+<p>Another non-pharaceutical intervention that has a profound long-term effect is sanitation. By ensuring individuals have access to clean water, and waste is properly disposed of, the incidence of many ID dramatically drops. In fact, for almost all IDs, strong drops were seen in Europe and North America before the introduction of antibiotics - simply due to better living conditions.</p>
+<p>While usually not considered ID interventions, general improvement in health (e.g. better nutrition), living conditions (e.g. better housing) and health literacy (better education) are known to be very effective at reducing the burden of any disease. Unfortunately, such systemic interventions are among the hardest to achieve.</p>
+</div>
+<div id="special-interventions-for-non-human-hosts" class="section level3">
+<h3><span class="header-section-number">10.4.4</span> Special interventions for non-human hosts</h3>
+<p>If one of the hosts is not a human (e.g. a mosquito vector, or some other animal), it is possible to use interventions that are not feasible for humans. Widespread killing of mosquitoes is ethically acceptable (though often not too effective). Killing of mammals, e.g. culling of dogs in certain parts of the world to prevent spread of rabies or other diseases, is more controversial. For some animals, ethical concerns are usually not too great (e.g. killing of poultry), but economic implications can be huge.</p>
+</div>
+</div>
+<div id="characteristics-of-interventions" class="section level2">
+<h2><span class="header-section-number">10.5</span> Characteristics of interventions</h2>
+<p>In addition to grouping interventions into specific classes as done above, it is also useful to think about them in terms of their overall characteristics.</p>
+<p><strong>Temporal/timing characteristics:</strong> While some interventions are permanent or long-term, e.g. vaccines, sanitation, improved living standards, other interventions are short-term, such as drug treatment or quarantine. In general, those interventions with lasting effects are preferable. However, those are also often the most expensive and difficult to implement.</p>
+<p><strong>Target group characteristics:</strong> Another way to distinguish ID interventions is by target group. Vaccines are ideally given before someone becomes infected with the ID. Drugs on the other hand are usually given to infected persons (though pre-exposure prophylaxis is sometimes used, e.g. for HIV or for flu during a pandemic). Quarantine can be applied to either susceptibles or infected. Measures such as sanitation improvement affect everyone.</p>
+<p><strong>Impact level characteristics:</strong> By that, I refer to the primary target being the individual or the population. The primary goal of drugs is to help the individual - population level effects as discussed earlier are secondary. In contrast, quarantine primarily targets population level impacts. It might not help an individual infected host if they are quarantined (though ethically, they should receive whatever support can be provided). Vaccines are also primarily meant to help protect the individual getting the vaccine. However, the effect of good vaccines is so powerful that in planning vaccination strategies, secondary population level effects due to herd immunity are nowadays taken into account. Interventions such as sanitation almost always target whole populations (e.g. a village/town/country).</p>
+<p>Of course, for many interventions, these categories are not clear-cut and overlap. Still, it is conceptually useful to think about interventions in such broad categories. By looking at all the tools available and assessing their impact and feasibility, one can try to come up with the best strategy for a given ID and scenario. Such a best strategy will often involve using more than one method.</p>
+</div>
+<div id="impact-of-interventions" class="section level2">
+<h2><span class="header-section-number">10.6</span> Impact of Interventions</h2>
+<p>We discussed previously that to eradicate a disease (or prevent local outbreaks) one has to get the effective reproductive number to just a bit below 1 (of course the lower and closer to 0, the better). The level of population protection at which R=1 is called critical herd/population immunity level. The relation between original/basic reproductive number, intervention coverage and effective R is R= R<sub>0</sub>(1-p). That’s true if we assume that the intervention fully protects those to whom it is applied. If instead the intervention is not perfect, we have R=R<sub>0</sub>(1-e*p), where e is the effectiveness of the intervention (e=1 is a perfectly effective intervention).</p>
+<p>By discussing intervention coverage, we assumed that the intervention was applied to the susceptibles. However, the same idea also aplies if the intervention is applied to infected. Recall that the reproductive number is given by <span class="math inline">\(R = D \beta S\)</span>. Reducing the fraction of susceptibles by some intervention reduces <em>R</em>. But we can also reduce <em>R</em> by reducing the duration of the infectious period, D, or the infectiousness/rate at which an infected transmits, <span class="math inline">\(\beta\)</span>. Quarantining infected is a strategy to reduce <span class="math inline">\(\beta\)</span>, drugs sometimes can reduce <em>D</em> and <span class="math inline">\(\beta\)</span>. For instance, if we can reduce the duration of the infectious period in the average infected person by <em>p</em>, we get a new effective reproductive number <span class="math inline">\(R_{e} = D(1-p) \beta S\)</span>. Obviously, the best strategy is one where we reduce duration of infection, transmissibility and number of susceptibles by some fraction, thus leading to a potentially large reduction in <em>R</em>.</p>
+</div>
+<div id="interventions-and-models" class="section level2">
+<h2><span class="header-section-number">10.7</span> Interventions and Models</h2>
+<p>Studying the potential impact of interventions is probably the single most important current use of ID models. It is often simply not possible to do field studies or experiments to test the impact of specific intervention strategies. Such field studies would take long, be very costly, be logistically hard to do, and be often simply unethical: We can’t introduce Ebola into a population, just to see how effective different intervention strategies might be! Thus, we rely on modeling to investigate hypothetical scenarios. Models are relatively easy and quick to build and analyze (at least compared to real field studies), there are no ethical problems, and we have ‘full control’ over the whole system and ‘know everything’. The hope is that if our models are decent approximations of the real world, we can make informed decisions and prepare for future outbreaks.</p>
+</div>
+<div id="summary-and-cartoon-8" class="section level2">
+<h2><span class="header-section-number">10.8</span> Summary and Cartoon</h2>
 <div class="figure">
-<img src="images/xkcd-swine_flu.png" alt="Knowing transmission routes is important to understand how one can and cannot contract a specific disease. Source: xkcd" />
-<p class="caption">Knowing transmission routes is important to understand how one can and cannot contract a specific disease. <a href="https://xkcd.com/574/">Source: xkcd</a></p>
+<img src="images/xkcd-disease-eradication.png" alt="Infectious disease control is arguably one of the greatest successes of epidemiology and biology." />
+<p class="caption">Infectious disease control is arguably one of the greatest successes of epidemiology and biology.</p>
 </div>
 </div>
-<div id="exercises-4" class="section level2">
-<h2><span class="header-section-number">6.7</span> Exercises</h2>
+<div id="exercises-8" class="section level2">
+<h2><span class="header-section-number">10.9</span> Exercises</h2>
 <ul>
-<li>Several apps in the DSAIDE package address specific types of transmission, those are discussed in the following chapters.</li>
+<li>The <em>ID Control</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>Read the article “Towards the endgame and beyond: complexities and challenges for the elimination of infectious diseases” by Klepac et al <span class="citation">(P. Klepac et al. <a href="#ref-klepac13">2013</a>)</span>. Choose some ID - either one listed in box 1 of the paper or a different one - and discuss the current plans for elimination/eradication. What features of the ID will likely be helpful or unhelpful with regard to eradication/elimination. Reference the different areas the paper discusses? What is your overall assessment of feasibility?</li>
 </ul>
 </div>
-<div id="further-resources-4" class="section level2">
-<h2><span class="header-section-number">6.8</span> Further Resources</h2>
+<div id="further-resources-8" class="section level2">
+<h2><span class="header-section-number">10.10</span> Further Resources</h2>
 <ul>
-<li>Ewald and colleagues have done some interesting investigations connecting transmission type to virulence/pathogenicity of specific diseases. See for instance <span class="citation">(Ewald <a href="#ref-ewald87">1987</a>; Ewald <a href="#ref-ewald95">1995</a>)</span>.</li>
-<li>A detailed discussion linking transmission types to model alternatives is provided in <span class="citation">(Hamish McCallum et al. <a href="#ref-mccallum17">2017</a>)</span>.</li>
+<li>The fairly new Dengue vaccine raises interesting questions regarding the interplay of vaccination coverage and disease severity, and is analyzed for instance in <span class="citation">(Ferguson et al. <a href="#ref-ferguson16">2016</a>)</span>.</li>
+<li>A brief discussion of ID control is provided in <span class="citation">(Halloran and Longini <a href="#ref-halloran14">2014</a>)</span>.</li>
 </ul>
 </div>
-<div id="references-5" class="section level2">
-<h2><span class="header-section-number">6.9</span> References</h2>
+<div id="references-9" class="section level2">
+<h2><span class="header-section-number">10.11</span> References</h2>
 
+<div id="refs" class="references">
+<div>
+<p>Altizer, Sonia, Andrew Dobson, Parviez Hosseini, Peter Hudson, Mercedes Pascual, and Pejman Rohani. 2006. “Seasonality and the Dynamics of Infectious Diseases.” <em>Ecology Letters</em> 9 (4): 467–84. doi:<a href="https://doi.org/10.1111/j.1461-0248.2005.00879.x">10.1111/j.1461-0248.2005.00879.x</a>.</p>
+</div>
+<div>
+<p>Anderson, Roy M, and RM May. 1991. “Infectious Disease of Humans.” <em>Dynamics and Control</em>.</p>
+</div>
+<div>
+<p>Basu, Sanjay, and Jason Andrews. 2013. “Complexity in Mathematical Models of Public Health Policies: A Guide for Consumers of Models.” <em>PLoS Medicine</em> 10 (10): e1001540. doi:<a href="https://doi.org/10.1371/journal.pmed.1001540">10.1371/journal.pmed.1001540</a>.</p>
+</div>
+<div>
+<p>Baumgartner, Eduardo, Christine N. Dao, Sharifa Nasreen, Mejbah Uddin Bhuiyan, Syeda Mah-E-Muneer, Abdullah Al Mamun, M. A. Yushuf Sharker, et al. 2012. “Seasonality, Timing, and Climate Drivers of Influenza Activity Worldwide.” <em>The Journal of Infectious Diseases</em> 206 (6): 838–46. doi:<a href="https://doi.org/10.1093/infdis/jis467">10.1093/infdis/jis467</a>.</p>
+</div>
+<div>
+<p>Begon, M., M. Bennett, R. G. Bowers, N. P. French, S. M. Hazel, and J. Turner. 2002. “A Clarification of Transmission Terms in Host-Microparasite Models: Numbers, Densities and Areas.” <em>Epidemiol Infect</em> 129 (1). ences, The University of Liverpool, UK.: 147–53.</p>
+</div>
+<div>
+<p>Blower, Sally, and Daniel Bernoulli. 2004. “An Attempt at a New Analysis of the Mortality Caused by Smallpox and of the Advantages of Inoculation to Prevent It. 1766.” <em>Reviews in Medical Virology</em> 14 (5): 275–88.</p>
+</div>
+<div>
+<p>Brankston, Gabrielle, Leah Gitterman, Zahir Hirji, Camille Lemieux, and Michael Gardam. 2007. “Transmission of Influenza A in Human Beings.” <em>The Lancet Infectious Diseases</em> 7 (4): 257–65. <a href="http://www.sciencedirect.com/science/article/pii/S1473309907700294" class="uri">http://www.sciencedirect.com/science/article/pii/S1473309907700294</a>.</p>
+</div>
+<div>
+<p>Chubb, Mikayla C., and Kathryn H. Jacobsen. 2010. “Mathematical Modeling and the Epidemiological Research Process.” <em>European Journal of Epidemiology</em> 25 (1): 13–19. doi:<a href="https://doi.org/10.1007/s10654-009-9397-9">10.1007/s10654-009-9397-9</a>.</p>
+</div>
+<div>
+<p>Cortez, Michael H., and Joshua S. Weitz. 2013. “Distinguishing Between Indirect and Direct Modes of Transmission Using Epidemiological Time Series.” <em>The American Naturalist</em> 181 (2): E43–E52. doi:<a href="https://doi.org/10.1086/668826">10.1086/668826</a>.</p>
+</div>
+<div>
+<p>Diekmann, O., J A P. Heesterbeek, and M. G. Roberts. 2010. “The Construction of Next-Generation Matrices for Compartmental Epidemic Models.” <em>J R Soc Interface</em> 7 (47). Department of Mathematics, Utrecht University, Budapestlaan 6, 3584 CD, Utrecht, The Netherlands.: 873–85. doi:<a href="https://doi.org/10.1098/rsif.2009.0386">10.1098/rsif.2009.0386</a>.</p>
+</div>
+<div>
+<p>Diekmann, Odo, and Johan Andre Peter Heesterbeek. 2000. <em>Mathematical Epidemiology of Infectious Diseases: Model Building, Analysis and Interpretation</em>. Vol. 5. John Wiley &amp; Sons.</p>
+</div>
+<div>
+<p>Dowell, S F. 2001. “Seasonal Variation in Host Susceptibility and Cycles of Certain Infectious Diseases.” <em>Emerging Infectious Diseases</em> 7 (3): 369–74. doi:<a href="https://doi.org/10.3201/eid0703.010301">10.3201/eid0703.010301</a>.</p>
+</div>
+<div>
+<p>Dushoff, Jonathan, Joshua B. Plotkin, Simon A. Levin, and David JD Earn. 2004. “Dynamical Resonance Can Account for Seasonality of Influenza Epidemics.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (48): 16915–6. <a href="http://www.pnas.org/content/101/48/16915.short" class="uri">http://www.pnas.org/content/101/48/16915.short</a>.</p>
+</div>
+<div>
+<p>Emch, Michael, Caryl Feldacker, M Sirajul Islam, and Mohammad Ali. 2008. “Seasonality of Cholera from 1974 to 2005: A Review of Global Patterns.” <em>International Journal of Health Geographics</em> 7 (1): 31. doi:<a href="https://doi.org/10.1186/1476-072X-7-31">10.1186/1476-072X-7-31</a>.</p>
+</div>
+<div>
+<p>Epstein, Joshua M. 2008. “Why Model?” <em>Journal of Artificial Societies and Social Simulation</em> 11 (4): 12. <a href="http://jasss.soc.surrey.ac.uk/11/4/12.html" class="uri">http://jasss.soc.surrey.ac.uk/11/4/12.html</a>.</p>
+</div>
+<div>
+<p>Ewald, P W. 1987. “Transmission Modes and Evolution of the Parasitism-Mutualism Continuum.” <em>Annals of the New York Academy of Sciences</em> 503: 295–306.</p>
+</div>
+<div>
+<p>———. 1991. “Waterborne Transmission and the Evolution of Virulence Among Gastrointestinal Bacteria.” <em>Epidemiology and Infection</em> 106 (1): 83–119.</p>
+</div>
+<div>
+<p>———. 1995. “The Evolution of Virulence: A Unifying Link Between Parasitology and Ecology.” <em>The Journal of Parasitology</em> 81 (5): 659–69.</p>
+</div>
+<div>
+<p>Ferguson, Neil M., Isabel Rodríguez-Barraquer, Ilaria Dorigatti, Luis Mier-y-Teran-Romero, Daniel J. Laydon, and Derek AT Cummings. 2016. “Benefits and Risks of the Sanofi-Pasteur Dengue Vaccine: Modeling Optimal Deployment.” <em>Science</em> 353 (6303): 1033–6. <a href="http://science.sciencemag.org/content/353/6303/1033.short" class="uri">http://science.sciencemag.org/content/353/6303/1033.short</a>.</p>
+</div>
+<div>
+<p>Ferrari, Matthew J., Sarah E. Perkins, Laura W. Pomeroy, and Ottar N. Bjørnstad. 2011. “Pathogens, Social Networks, and the Paradox of Transmission Scaling.” <em>Interdisciplinary Perspectives on Infectious Diseases</em> 2011: 1–10. doi:<a href="https://doi.org/10.1155/2011/267049">10.1155/2011/267049</a>.</p>
+</div>
+<div>
+<p>Fine, P. E. M. 2003. “The Interval Between Successive Cases of an Infectious Disease.” <em>American Journal of Epidemiology</em> 158 (11): 1039–47. doi:<a href="https://doi.org/10.1093/aje/kwg251">10.1093/aje/kwg251</a>.</p>
+</div>
+<div>
+<p>Fine, Paul EM. 1993. “Herd Immunity: History, Theory, Practice.” <em>Epidemiologic Reviews</em> 15 (2): 265–302. <a href="http://op12no2.me/stuff/herdhis.pdf" class="uri">http://op12no2.me/stuff/herdhis.pdf</a>.</p>
+</div>
+<div>
+<p>Fine, Paul, Ken Eames, and David L Heymann. 2011. “‘Herd Immunity’: A Rough Guide.” <em>Clinical Infectious Diseases : An Official Publication of the Infectious Diseases Society of America</em> 52 (7): 911–16. doi:<a href="https://doi.org/10.1093/cid/cir007">10.1093/cid/cir007</a>.</p>
+</div>
+<div>
+<p>Garnett, Geoffrey P., Simon Cousens, Timothy B. Hallett, Richard Steketee, and Neff Walker. 2011. “Mathematical Models in the Evaluation of Health Programmes.” <em>The Lancet</em> 378 (9790): 515–25. <a href="http://www.sciencedirect.com/science/article/pii/S014067361061505X" class="uri">http://www.sciencedirect.com/science/article/pii/S014067361061505X</a>.</p>
+</div>
+<div>
+<p>Giesecke, Johan. 2017. <em>Modern Infectious Disease Epidemiology</em>. CRC Press.</p>
+</div>
+<div>
+<p>Grassly, Nicholas C, and Christophe Fraser. 2006. “Seasonal Infectious Disease Epidemiology.” <em>Proceedings of the Royal Society of London B: Biological Sciences</em> 273 (1600). The Royal Society: 2541–50.</p>
+</div>
+<div>
+<p>Gunawardena, Jeremy. 2014. “Models in Biology:‘accurate Descriptions of Our Pathetic Thinking’.” <em>BMC Biology</em> 12 (1): 29. <a href="https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-12-29" class="uri">https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-12-29</a>.</p>
+</div>
+<div>
+<p>Halloran, M. E., and I. M. Longini. 2014. “Emerging, Evolving, and Established Infectious Diseases and Interventions.” <em>Science</em> 345 (6202): 1292–4. doi:<a href="https://doi.org/10.1126/science.1254166">10.1126/science.1254166</a>.</p>
+</div>
+<div>
+<p>Heesterbeek, H., R. M. Anderson, V. Andreasen, S. Bansal, D. De Angelis, C. Dye, K. T. D. Eames, et al. 2015. “Modeling Infectious Disease Dynamics in the Complex Landscape of Global Health.” <em>Science</em> 347 (6227): aaa4339–aaa4339. doi:<a href="https://doi.org/10.1126/science.aaa4339">10.1126/science.aaa4339</a>.</p>
+</div>
+<div>
+<p>Heffernan, J M, R J Smith, and L M Wahl. 2005. “Perspectives on the Basic Reproductive Ratio.” <em>Journal of the Royal Society, Interface</em> 2 (4): 281–93. doi:<a href="https://doi.org/10.1098/rsif.2005.0042">10.1098/rsif.2005.0042</a>.</p>
+</div>
+<div>
+<p>Homer, Jack B., and Gary B. Hirsch. 2006. “System Dynamics Modeling for Public Health: Background and Opportunities.” <em>American Journal of Public Health</em> 96 (3): 452–58. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059</a>.</p>
+</div>
+<div>
+<p>Kajita, Emily, Justin T Okano, Erin N Bodine, Scott P Layne, and Sally Blower. 2007. “Modelling an Outbreak of an Emerging Pathogen.” <em>Nature Reviews. Microbiology</em> 5 (9): 700–709. doi:<a href="https://doi.org/10.1038/nrmicro1660">10.1038/nrmicro1660</a>.</p>
+</div>
+<div>
+<p>Keeling, M. J., and L. Danon. 2009. “Mathematical Modelling of Infectious Diseases.” <em>British Medical Bulletin</em> 92 (1): 33–42. doi:<a href="https://doi.org/10.1093/bmb/ldp038">10.1093/bmb/ldp038</a>.</p>
+</div>
+<div>
+<p>Keeling, Matt J, and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press.</p>
+</div>
+<div>
+<p>Kilpatrick, A Marm, and Sarah E Randolph. 2012. “Drivers, Dynamics, and Control of Emerging Vector-Borne Zoonotic Diseases.” <em>Lancet (London, England)</em> 380 (9857): 1946–55. doi:<a href="https://doi.org/10.1016/S0140-6736(12)61151-9">10.1016/S0140-6736(12)61151-9</a>.</p>
+</div>
+<div>
+<p>King, Aaron A., Edward L. Ionides, Mercedes Pascual, and Menno J. Bouma. 2008. “Inapparent Infections and Cholera Dynamics.” <em>Nature</em> 454 (7206): 877–80. doi:<a href="https://doi.org/10.1038/nature07084">10.1038/nature07084</a>.</p>
+</div>
+<div>
+<p>Klepac, Petra, C Jessica E Metcalf, Angela R McLean, and Katie Hampson. 2013. “Towards the Endgame and Beyond: Complexities and Challenges for the Elimination of Infectious Diseases.” <em>Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences</em> 368 (1623): 20120137. doi:<a href="https://doi.org/10.1098/rstb.2012.0137">10.1098/rstb.2012.0137</a>.</p>
+</div>
+<div>
+<p>Lessler, Justin, Andrew S. Azman, M. Kate Grabowski, Henrik Salje, and Isabel Rodriguez-Barraquer. 2016. “Trends in the Mechanistic and Dynamic Modeling of Infectious Diseases.” <em>Current Epidemiology Reports</em> 3 (3): 212–22. doi:<a href="https://doi.org/10.1007/s40471-016-0078-4">10.1007/s40471-016-0078-4</a>.</p>
+</div>
+<div>
+<p>Li, Jing, Daniel Blakeley, and Robert J. Smith. 2011. “The Failure of R 0.” <em>Computational and Mathematical Methods in Medicine</em> 2011: 1–17. doi:<a href="https://doi.org/10.1155/2011/527610">10.1155/2011/527610</a>.</p>
+</div>
+<div>
+<p>Lipsitch, Marc, and Cécile Viboud. 2009. “Influenza Seasonality: Lifting the Fog.” <em>Proc Natl Acad Sci U S A</em> 106 (10). Department of Epidemiology, Harvard School of Public Health, Boston, MA 02130, USA. mlipsitc@hsph.harvard.edu: 3645–6. doi:<a href="https://doi.org/10.1073/pnas.0900933106">10.1073/pnas.0900933106</a>.</p>
+</div>
+<div>
+<p>Lofgren, E., N. H. Fefferman, Y. N. Naumov, J. Gorski, and E. N. Naumova. 2007. “Influenza Seasonality: Underlying Causes and Modeling Theories.” <em>Journal of Virology</em> 81 (11): 5429–36. doi:<a href="https://doi.org/10.1128/JVI.01680-06">10.1128/JVI.01680-06</a>.</p>
+</div>
+<div>
+<p>Luke, Douglas A, and Katherine A Stamatakis. 2012. “Systems Science Methods in Public Health: Dynamics, Networks, and Agents.” <em>Annual Review of Public Health</em> 33. Annual Reviews: 357–76.</p>
+</div>
+<div>
+<p>Luz, Paula M, Claudio J Struchiner, and Alison P Galvani. 2010. “Modeling Transmission Dynamics and Control of Vector-Borne Neglected Tropical Diseases.” <em>PLoS Neglected Tropical Diseases</em> 4 (10): e761. doi:<a href="https://doi.org/10.1371/journal.pntd.0000761">10.1371/journal.pntd.0000761</a>.</p>
+</div>
+<div>
+<p>May, R. M. 2004. “Uses and Abuses of Mathematics in Biology.” <em>Science</em> 303 (5659): 790–93. doi:<a href="https://doi.org/10.1126/science.1094442">10.1126/science.1094442</a>.</p>
+</div>
+<div>
+<p>McCallum, H., N. Barlow, and J. Hone. 2001. “How Should Pathogen Transmission Be Modelled?” <em>Trends Ecol Evol</em> 16 (6): 295–300.</p>
+</div>
+<div>
+<p>McCallum, Hamish, Andy Fenton, Peter J Hudson, Brian Lee, Beth Levick, Rachel Norman, Sarah E Perkins, Mark Viney, Anthony J Wilson, and Joanne Lello. 2017. “Breaking Beta: Deconstructing the Parasite Transmission Function.” <em>Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences</em> 372 (1719). doi:<a href="https://doi.org/10.1098/rstb.2016.0084">10.1098/rstb.2016.0084</a>.</p>
+</div>
+<div>
+<p>Metcalf, C J E, W J Edmunds, and J Lessler. 2015. “Six Challenges in Modelling for Public Health Policy.” <em>Epidemics</em> 10 (March): 93–96. doi:<a href="https://doi.org/10.1016/j.epidem.2014.08.008">10.1016/j.epidem.2014.08.008</a>.</p>
+</div>
+<div>
+<p>Metcalf, C Jessica E, and Justin Lessler. 2017. “Opportunities and Challenges in Modeling Emerging Infectious Diseases.” <em>Science (New York, N.Y.)</em> 357 (6347): 149–52. doi:<a href="https://doi.org/10.1126/science.aam8335">10.1126/science.aam8335</a>.</p>
+</div>
+<div>
+<p>Milwid, Rachael, Andreea Steriu, Julien Arino, Jane Heffernan, Ayaz Hyder, Dena Schanzer, Emma Gardner, et al. 2016. “Toward Standardizing a Lexicon of Infectious Disease Modeling Terms.” <em>Frontiers in Public Health</em> 4: 213. doi:<a href="https://doi.org/10.3389/fpubh.2016.00213">10.3389/fpubh.2016.00213</a>.</p>
+</div>
+<div>
+<p>Nelson, Kenrad E, and Carolyn Williams. 2013. <em>Infectious Disease Epidemiology</em>. Jones &amp; Bartlett Publishers.</p>
+</div>
+<div>
+<p>Ness, Roberta B., James S. Koopman, and Mark S. Roberts. 2007. “Causal System Modeling in Chronic Disease Epidemiology: A Proposal.” <em>Annals of Epidemiology</em> 17 (7): 564–68. doi:<a href="https://doi.org/10.1016/j.annepidem.2006.10.014">10.1016/j.annepidem.2006.10.014</a>.</p>
+</div>
+<div>
+<p>Pascual, Mercedes, Menno J. Bouma, and Andrew P. Dobson. 2002. “Cholera and Climate: Revisiting the Quantitative Evidence.” <em>Microbes and Infection</em> 4 (2): 237–45. <a href="http://www.sciencedirect.com/science/article/pii/S1286457901015337" class="uri">http://www.sciencedirect.com/science/article/pii/S1286457901015337</a>.</p>
+</div>
+<div>
+<p>Peters, David H. 2014. “The Application of Systems Thinking in Health: Why Use Systems Thinking?” <em>Health Research Policy and Systems</em> 12 (1): 51. <a href="https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51" class="uri">https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51</a>.</p>
+</div>
+<div>
+<p>Roberts, M G. 2007. “The Pluses and Minuses of R0.” <em>Journal of the Royal Society, Interface</em> 4 (16): 949–61. doi:<a href="https://doi.org/10.1098/rsif.2007.1031">10.1098/rsif.2007.1031</a>.</p>
+</div>
+<div>
+<p>Sánchez-Romero, Luz Maria, Joanne Penko, Pamela G. Coxson, Alicia Fernández, Antoinette Mason, Andrew E. Moran, Leticia Ávila-Burgos, Michelle Odden, Simón Barquera, and Kirsten Bibbins-Domingo. 2016. “Projected Impact of Mexico’s Sugar-Sweetened Beverage Tax Policy on Diabetes and Cardiovascular Disease: A Modeling Study.” <em>PLoS Medicine</em> 13 (11): e1002158. <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002158" class="uri">http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002158</a>.</p>
+</div>
+<div>
+<p>Shaman, Jeffrey, Virginia E. Pitzer, Cécile Viboud, Bryan T. Grenfell, and Marc Lipsitch. 2010. “Absolute Humidity and the Seasonal Onset of Influenza in the Continental United States.” <em>PLoS Biol</em> 8 (2). College of Oceanic; Atmospheric Sciences, Oregon State University, Corvallis, Oregon, United States of America.: e1000316. doi:<a href="https://doi.org/10.1371/journal.pbio.1000316">10.1371/journal.pbio.1000316</a>.</p>
+</div>
+<div>
+<p>Smith, David L, T Alex Perkins, Robert C Reiner, Christopher M Barker, Tianchan Niu, Luis Fernando Chaves, Alicia M Ellis, et al. 2014. “Recasting the Theory of Mosquito-Borne Pathogen Transmission Dynamics and Control.” <em>Transactions of the Royal Society of Tropical Medicine and Hygiene</em> 108 (4): 185–97. doi:<a href="https://doi.org/10.1093/trstmh/tru026">10.1093/trstmh/tru026</a>.</p>
+</div>
+<div>
+<p>State, Penn. 2014. “Epidemics - the Dynamics of Infectious Diseases.” <a href="https://www.coursera.org/learn/epidemics" class="uri">https://www.coursera.org/learn/epidemics</a>.</p>
+</div>
+<div>
+<p>Sterman, John D. 2006. “Learning from Evidence in a Complex World.” <em>American Journal of Public Health</em> 96 (3): 505–14. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043</a>.</p>
+</div>
+<div>
+<p>Stone, Lewi, Ronen Olinky, and Amit Huppert. 2007. “Seasonal Dynamics of Recurrent Epidemics.” <em>Nature</em> 446 (7135): 533–36. doi:<a href="https://doi.org/10.1038/nature05638">10.1038/nature05638</a>.</p>
+</div>
+<div>
+<p>University, Hong Kong. 2015. “Epidemics.” <em>EdX</em>. <a href="https://www.edx.org/course/epidemics-hkux-hku01x-0" class="uri">https://www.edx.org/course/epidemics-hkux-hku01x-0</a>.</p>
+</div>
+<div>
+<p>Viboud, Cécile, Theresa Tam, Douglas Fleming, Andreas Handel, Mark A. Miller, and Lone Simonsen. 2006. “Transmissibility and Mortality Impact of Epidemic and Pandemic Influenza, with Emphasis on the Unusually Deadly 1951 Epidemic.” <em>Vaccine</em> 24 (44-46). Fogarty International Center, National Institutes of Health, Bethesda, MD 20892, USA. viboudc@mail.nih.gov: 6701–7. doi:<a href="https://doi.org/10.1016/j.vaccine.2006.05.067">10.1016/j.vaccine.2006.05.067</a>.</p>
+</div>
+<div>
+<p>Vynnycky, Emilia, and Richard White. 2010. <em>An Introduction to Infectious Disease Modelling</em>. Oxford University Press.</p>
+</div>
+<div>
+<p>Wallinga, J., and M. Lipsitch. 2007. “How generation intervals shape the relationship between growth rates and reproductive numbers.” <em>Proceedings of the Royal Society B</em> 274 (1609): 599–604.</p>
+</div>
+<div>
+<p>Weber, Thomas P, and Nikolaos I Stilianakis. 2008. “Inactivation of Influenza a Viruses in the Environment and Modes of Transmission: A Critical Review.” <em>The Journal of Infection</em> 57 (5): 361–73. doi:<a href="https://doi.org/10.1016/j.jinf.2008.08.013">10.1016/j.jinf.2008.08.013</a>.</p>
+</div>
+</div>
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-ewald87">
-<p>Ewald, P W. 1987. “Transmission Modes and Evolution of the Parasitism-Mutualism Continuum.” <em>Annals of the New York Academy of Sciences</em> 503: 295–306.</p>
+<div id="ref-klepac13">
+<p>Klepac, Petra, C Jessica E Metcalf, Angela R McLean, and Katie Hampson. 2013. “Towards the Endgame and Beyond: Complexities and Challenges for the Elimination of Infectious Diseases.” <em>Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences</em> 368 (1623): 20120137. doi:<a href="https://doi.org/10.1098/rstb.2012.0137">10.1098/rstb.2012.0137</a>.</p>
 </div>
-<div id="ref-ewald95">
-<p>Ewald, P W. 1995. “The Evolution of Virulence: A Unifying Link Between Parasitology and Ecology.” <em>The Journal of Parasitology</em> 81 (5): 659–69.</p>
+<div id="ref-ferguson16">
+<p>Ferguson, Neil M., Isabel Rodríguez-Barraquer, Ilaria Dorigatti, Luis Mier-y-Teran-Romero, Daniel J. Laydon, and Derek AT Cummings. 2016. “Benefits and Risks of the Sanofi-Pasteur Dengue Vaccine: Modeling Optimal Deployment.” <em>Science</em> 353 (6303): 1033–6. <a href="http://science.sciencemag.org/content/353/6303/1033.short" class="uri">http://science.sciencemag.org/content/353/6303/1033.short</a>.</p>
 </div>
-<div id="ref-mccallum17">
-<p>McCallum, Hamish, Andy Fenton, Peter J Hudson, Brian Lee, Beth Levick, Rachel Norman, Sarah E Perkins, Mark Viney, Anthony J Wilson, and Joanne Lello. 2017. “Breaking Beta: Deconstructing the Parasite Transmission Function.” <em>Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences</em> 372 (1719). doi:<a href="https://doi.org/10.1098/rstb.2016.0084">10.1098/rstb.2016.0084</a>.</p>
+<div id="ref-halloran14">
+<p>Halloran, M. E., and I. M. Longini. 2014. “Emerging, Evolving, and Established Infectious Diseases and Interventions.” <em>Science</em> 345 (6202): 1292–4. doi:<a href="https://doi.org/10.1126/science.1254166">10.1126/science.1254166</a>.</p>
 </div>
 </div>
             </section>
@@ -300,8 +542,8 @@
           </div>
         </div>
       </div>
-<a href="reproductive-number.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modes-of-direct-transmission.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="vector-borne-id-transmission.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
