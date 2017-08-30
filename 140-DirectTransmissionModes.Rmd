@@ -13,15 +13,15 @@ The learning objectives for this chapter are:
 ##Introduction
 Direct transmission means a pathogen goes straight from an infected host to a new uninfected host. This sounds simple enough, but as we'll discuss here _straight from host to host_ is in fact not that straightforward. Adding to this, some pathogens have direct and indirect transmission components. We'll discuss the most important direct transmission types and what hosts fall under that umbrella.
 
-##Direct contact transmission
-The most straightforward way of transmission is direct transmission from infected to uninfected host. A prime class of pathogens that follow this route are sexually transmitted infections (STI). For STI, the pathogen goes directly from one host to the other. Another pathogen for which direct contact is an important (but not the only) route of transmission is Ebola.
+##Contact transmission
+The most straightforward way of transmission is transmission through direct contact from infected to uninfected host. A prime class of pathogens that follow this route are sexually transmitted infections (STI). For STI, the pathogen goes directly from one host to the other. Another pathogen for which direct contact is an important (but not the only) route of transmission is Ebola.
 
 A special group of contact transmission is vertical transmission between mother and child. This type of transmission is important for diseases such as HIV or Ebola. Since a model system for vertical transmission will, at the minimum, require stratification by age, we will not further discuss this here. After reading the [_Host Heterogeneity_ chapter](), it should be clear how such a scenario could be modeled.
 
 ##Airborne transmission
 Some pathogens are _essentially direct_ with only a very short time spent outside the host. Many respiratory infections fall in this category. Those pathogens are often expelled as small air drops by the host (through breathing, sneezing or coughing) and then are quickly inhaled by an uninfected host, thus potentially causing a new infection. Similarly, a pathogen might for a brief time be deposited on a surface  (e.g. a bathroom faucet). Such a potentially infected surface is often called a fomite. If the pathogen is picked up fairly quickly by an uninfected host and thus completes the transmission process, it is sometimes also reasonable to consider this an essentially direct transmission process.
 
-The decision do consider airborne or surface mediated transmission direct or indirect transmission is very much dependent on the perspective and focus of the question one wants to address. For some questions and situations, assuming this route of transmission to be essentially direct is reasonable. For instance for a large-scale simulation of a flu pandemic, it is usually a reasonable assumption to consider transmission directly between infected and uninfected hosts, without explicitly considering an environmental stage. In contrast, if one wants to study the transmission process in detail, it might be necessary to consider the short time the pathogen spends in the environment in an explicit manner, and thus using the perspective discussed in the [_Environmental Transmission_ chapter]().
+The decision do consider airborne or surface mediated transmission direct or indirect transmission is very much dependent on the perspective and focus of the question one wants to address. For some questions and situations, assuming this route of transmission to be essentially direct is reasonable. For instance for a large-scale simulation of a flu pandemic, it is usually a reasonable assumption to consider transmission directly between infected and uninfected hosts, without explicitly considering an environmental stage. In contrast, if one wants to study the transmission process in detail, it might be necessary to consider the short time the pathogen spends in the environment in an explicit manner, and thus using the perspective discussed in the _Environmental Transmission_ chapter.
 
 
 
@@ -34,7 +34,7 @@ In contrast, for some ID, more individuals (given a constant area) leads to more
 
 
 
-###Modeling types of direct transmission {myadvancedbox}
+### Modeling types of direct transmission {#myadvancedbox}
 Assuming the simple SIR model, we have the set of equations
 $$ 
 \begin{aligned}
@@ -56,9 +56,7 @@ For frequency-dependent transmission, we assume that the rate of contacts is fix
 ##Summary and Cartoon
 This chapter described different assumptions for direct transmission models and how they lead to different results with regard to disease dynamics and potential control strategies.
 
-![Some pathogens can have direct and indirect modes of transmission. [Source: smbc-comics.com](http://www.smbc-comics.com/)](./images/smbctransmissionmode.png)
-
-
+![Some pathogens have direct and more indirect modes of transmission. [Source: smbc-comics.com](http://www.smbc-comics.com/)](./images/smbctransmissionmode.png)
 
 
 ##Exercises
@@ -67,7 +65,7 @@ This chapter described different assumptions for direct transmission models and 
 
 ##Further Resources
 * The paper [@begon02] provides some additional information and discussion on the topic of direct transmission types and how they should be modeled.
-* In [@ferrari11], the authors discuss transmission scaling and connect it to network models. (This book briefly discusses networks in the [_Networks _ chapter]()).
+* In [@ferrari11], the authors discuss transmission scaling and connect it to network models. (This book briefly discusses networks in the _Networks _ chapter).
 
 
 ##References
