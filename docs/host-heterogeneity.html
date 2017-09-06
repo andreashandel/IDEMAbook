@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="modes-of-direct-transmission.html">
-<link rel="next" href="vector-borne-id-transmission.html">
+<link rel="prev" href="infectious-disease-control.html">
+<link rel="next" href="dynamics-of-multiple-pathogens.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -300,91 +300,124 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="environmental-transmission-1" class="section level1">
-<h1><span class="header-section-number">8</span> Environmental Transmission</h1>
-<div id="overview-and-learning-objectives-6" class="section level2">
-<h2><span class="header-section-number">8.1</span> Overview and Learning Objectives</h2>
-<p>A number of pathogens are transmitted through an environmental stage. This chapter discusses the implications on the ID dynamics in such cases.</p>
+<div id="host-heterogeneity" class="section level1">
+<h1><span class="header-section-number">11</span> Host Heterogeneity</h1>
+<div id="overview-and-learning-objectives-9" class="section level2">
+<h2><span class="header-section-number">11.1</span> Overview and Learning Objectives</h2>
+<p>In this module, we will briefly discuss the idea that hosts differ in characteristics that are important with regard to ID dynamics and control.</p>
 <p>The learning objectives for this chapter are:</p>
 <ul>
-<li>Know the hallmarks of indirect, environmental transmission</li>
-<li>Understand what environmental transmission implies for control strategies</li>
-<li>Identify diseases for which the environmental transmission pathway is important</li>
+<li>Know the major host characteristics that lead to heterogeneity</li>
+<li>Understand how heterogeneity might impact ID dynamics</li>
+<li>Evaluate the need to account for heterogeneity depending on setting</li>
+<li>Understand how different types of heterogeneity affect ID control</li>
 </ul>
 </div>
-<div id="introduction-6" class="section level2">
-<h2><span class="header-section-number">8.2</span> Introduction</h2>
-<p>While the distinction between direct and indirect transmission is not clear-cut, we usually consider an ID to have an indirect mode of transmission if the time spent outside the main host is <em>important</em> for the whole transmission cycle. The two main types of stages where a pathogen resides outside the main host are the abiotic environment or another host species. In the case of the former, we consider it to be environmental transmission, in the case of the latter, it is vector-borne. Of course, some IDs are even more complicated and have both vector and environmental stages. This chapter focuses on environmental transmission.</p>
-<div id="environmental-transmission-2" class="section level3">
-<h3><span class="header-section-number">8.2.1</span> Environmental transmission</h3>
-<p>Some diseases are shed by hosts into the environment, where they can survive for a potentially extended time before re-infecting a new host. Cholera is an excellent example of an ID that has water sources as the environmental stage. Similarly, avian influenza is thought to survive in cold lake water for an extended time. The important consequence of environmental transmission is that it potentially allows new infections to occur over long distances in time and space. For instance, an infected person might shed Cholera into the water somewhere upstream, and a susceptible person ingests the Cholera bacteria somewhere miles downstream and days or weeks later. This is fundamentally different to direct transmission, which requires close contact.</p>
+<div id="introduction-9" class="section level2">
+<h2><span class="header-section-number">11.2</span> Introduction</h2>
+<p>So far, we tracked hosts with respect to their infection status (susceptible, infected, symptomatic, recovered, etc.). We assumed that hosts are similar enough with regard to any other characteristics that might matter for ID dynamics and control that we did not have to consider them. For instance we did not account for age, sex, pre-existing conditions or any other such potentially differentiating detail among hosts.</p>
+<p>That approach is of course at best a decent approximation and at worst completely wrong. There are many characteristics that can affect how an ID interacts with a host. For instance for many ID, children and the elderly are more likely to get infected and might suffer more severe symptoms. For other ID, only specific groups are affected. For instance, only sexually active individuals are at risk of contracting a sexually transmitted infection (ignoring for a moment less common transmission routes such as e.g. blood transfusion for HIV). We will discuss some of these differences/heterogeneities between hosts and how they affect ID transmission and control in this module.</p>
+</div>
+<div id="types-of-host-heterogeneity" class="section level2">
+<h2><span class="header-section-number">11.3</span> Types of host heterogeneity</h2>
+<p>We generally only care about differences in hosts as they relate to the infectious disease process. Consider a simple - maybe silly - example: Almost no infectious disease study (none that I know of) cares about a person’s hair color. That’s because this characteristic has - as far as we know - no effect on the interaction of host and ID. On the other hand, a very important characteristic that affects many IDs is age, and age therefore needs to be often taken into account when studying IDs. Other important broad categories that affect ID infection and spread are genetics and behavior.</p>
+<p>Some host characterisitcs might only affect a single component of the ID, e.g. the level of susceptibility to infection. Other host differences can affect multiple components, e.g. a sexually highly active person is more likely to contract an STI and more likely to transmit if they are infected.</p>
+<div id="myexamplebox" class="section level3">
+<h3><span class="header-section-number">11.3.1</span> Host heterogeneity examples</h3>
+<p>There are several famous examples that show how differences in genetics impact ID. For instance persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a specific mutation in the FUT2 gene are much less likely to get infected with norovirus. It is likely that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.</p>
+</div>
+</div>
+<div id="heterogeneity-in-transmission---core-groups" class="section level2">
+<h2><span class="header-section-number">11.4</span> Heterogeneity in transmission - core groups</h2>
+<p>For the purpose of studying ID transmission dynamics, differences in the potential and ability of individual hosts to spread an ID are obviously of great importance. This idea of heterogeneity in transmission has been studied in several contexts and under different names. One of the first ideas was the concept of a core group, which was first introduced for gonorrhea in the 1970s (see e.g. <span class="citation">(Yorke, Hethcote, and Nold <a href="#ref-yorke78">1978</a>)</span>). Core groups are subgroups in which transmission is higher compared to other groups. For many STI, transmission in the general population is low enough that the reproductive number is below 1. The question then is, why does that not lead to extinction of the ID? The answer is the core-group concept. There are small subgroups of individuals in which the ID has a reproductive number that is greater than 1. It can thus maintain itself in that population and from there continue to enter the general population.</p>
+<p>Once we have identified that different groups have different transmission behavior, it also becomes important to understand how individuals belonging to one of the groups interact with individuals of the other groups. This is often called the <em>mixing</em> pattern between groups. We are most interested in the mixing and contact patterns that facilitate transmission for the ID under consideration. For instance it is well known that humans tend to have more contacts with others of the same age, e.g. children predominanly contacting other children. This is called <em>assortative</em> mixing and such age-specific mixing is important for the transmission of many respiratory diseases. The opposite is <em>disassortative</em> mixing. For instance for STI, most mixing occurs between individuals from the opposite sex (and there are also more contacts among individuals of similar age). Therefore, for STI, mixing with regard to gender can be considered <em>disassortative</em>. However, it is also known that people who engage in sexually more risky behavior (e.g. more partners per year) tend to have more contacts with others that have a similar risk behavior, thus with regard to transmission and infection risk, STI often show <em>assortative</em> mixing. If there is no mixing preference, it is called <em>random</em> mixing. The <em>random</em> mixing assumption is made imlicitly in any model that does not account for contact/transmission heterogeneity, e.g. the basic SIR model assumes <em>random</em> mixing and contact patterns between susceptibles and infected, independent of any other characteristic.</p>
+</div>
+<div id="heterogeneity-in-transmission---superspreaders" class="section level2">
+<h2><span class="header-section-number">11.5</span> Heterogeneity in transmission - superspreaders</h2>
+<p>An equivalent concept to that of the core group, but applied to individuals, is known by the term superspreaders. Superspreaders are individuals who spread/transmit an ID much more than the <em>average</em> infected person. It turns out that for most ID, the number of secondary transmissions produced by the average infected person is not too meaningful. Such a measure would be a good description if the distribution of secondary infections were close to normal (or poisson), with most infected individuals infecting similar numbers of others. However, what is often observed is a heavily skewed distribution, with most individuals infecting none or only a few others, and a few individuals infecting many others <span class="citation">(A. P. Galvani and May <a href="#ref-galvani05">2005</a>)</span>.</p>
+</div>
+<div id="heterogeneity-and-the-reproductive-number" class="section level2">
+<h2><span class="header-section-number">11.6</span> Heterogeneity and the reproductive number</h2>
+<p>If we have multiple host types, we need to extend the idea of the reproductive number. While it is possible to compute a reproductive number for the overall population, this quantity might not tell the full story. Instead, we might want to look at the reproductive number for subsets of the population, for instance for the general population (non-superspreaders) and core groups (the superspreaders). If one wants to compute an overall reproductive number, one needs to account for the population heterogeneity by including a measure for the variability of contacts in the equation for the reproductive number. See e.g. <span class="citation">(Robert M May, Gupta, and McLean <a href="#ref-may01">2001</a>)</span> for a discussion of this topic.</p>
+</div>
+<div id="heterogeneity-and-id-control" class="section level2">
+<h2><span class="header-section-number">11.7</span> Heterogeneity and ID control</h2>
+<p>Heterogeneity among hosts with respect to their susceptibility, infectiousness and severity has direct implications for control. If we know who is most likely to transmit, who is most likely to have a severe case of a disease, and who is most likely to catch and ID in the first place, we can implement targeted control strategies. Instead of for instance vaccinating people at random, we could target those that are most vulnerable to getting the ID, or those most likely to infect others if they were to get infected. The better we can target the intervention, the more impact they can have, we get more ‘bang for our buck’.</p>
+</div>
+<div id="modeling-heterogeneity" class="section level2">
+<h2><span class="header-section-number">11.8</span> Modeling Heterogeneity</h2>
+<p>The basic concept of including host heterogeneity in models is fairly straightforward. We simply stratify the population according to the characteristic we want to take into account. For instance instead of lumping everyone into susceptible-infected-recovered categories, we can track males and females, or children and adults, separately. Figure <a href="host-heterogeneity.html#fig:heterogeneity">11.1</a> illustrates this.</p>
+<div class="figure"><span id="fig:heterogeneity"></span>
+<img src="images/heterogeneityexample.png" alt="Example of including host heterogeneity in an SIR model."  />
+<p class="caption">
+Figure 11.1: Example of including host heterogeneity in an SIR model.
+</p>
+</div>
+<p>The challenges with including more details in the model are not conceptual but instead logistical and potentially technical. Bigger models are harder to formulate and implement, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, it is often best to start with a simple model, and slowly introduce host characteristics as they are deemed important for the ID setting and question one wants to address.</p>
+<p>At some point, if we want to include a lot of detail, it might be worth switching the modeling framework. For compartmental models, hosts are grouped together according to characteristics. As we want to track more characteristics, the number of compartments we need to include increases. If the basic model has C compartments/variables, P parameters, and we model N subpopulations, we have C x N equations, and at least P x N (or more) parameters. For instance if we had a basic SEIR model (4 compartments), and wanted to track males and females in 4 different age groups, we had 4 x 2 x 4 = 32 compartments. If we had additional compartments to track say vaccination or treatment status, one can end up with models of more than 50 compartments, sometimes even going into the hundreds.</p>
+<p>Once the number of compartments gets too large, it might then be worth deciding to stop using compartmental models and instead switch to a type of model that is called agent or individual based model (ABM/IBM). In such models, each individual host is modeled and tracked individually. We can give everyone as many different characteristics as we want. This makes the model very flexible and potentially very realistic. The downside of these ABM is that they tend to be more complex than compartmental models, are generally much more difficult to code, and often take a long time to run, especially if one wants to model a large population. Further, for detailed models lots of parameter estimates are needed and they are often not available, leading to potentially large uncertainty in model predictions. Also, it is hard to do any kind of statistal inference with ABM. Because of these disadvantages, the compartmental modeling framework is still the most frequently used one and a good starting point for most situations and questions. For ID where we know a lot and want detailed predictions (e.g. influenza), ABM are becoming more common.</p>
+</div>
+<div id="summary-and-cartoon-9" class="section level2">
+<h2><span class="header-section-number">11.9</span> Summary and Cartoon</h2>
+<p>This chapter provided a brief discussion of host heterogeneity, how to consider it in studies, and its impact on transmission and control. We also discussed how to include heterogeneity into models.</p>
 <div class="figure">
-<img src="images/environmentaltransmissionscheme.png" alt="Schematic of an ID with environmental transmission" />
-<p class="caption">Schematic of an ID with environmental transmission</p>
+<img src="images/crazyvenndiagram.gif" alt="That’s the best heterogeneity cartoon I have - let me know if you know a better one!" />
+<p class="caption">That’s the best ‘heterogeneity’ cartoon I have - let me know if you know a better one!</p>
 </div>
 </div>
-<div id="environmental-transmission-and-external-drivers" class="section level3">
-<h3><span class="header-section-number">8.2.2</span> Environmental transmission and external drivers</h3>
-<p>Because environmental transmission involves the survival of pathogen for a potentially extended time in the environment, such IDs are often more strongly influenced by external drivers compared to IDs that are directly transmitted. The weather often has a strong impact, as do behavior changes. E.g., humans living in temperate zones are more likely to swim in lakes when it’s warm. Therefore water-borne diseases often have the highest incidence in warm months.</p>
-<p>Such external drivers can be included in models by allowing certain parameters to vary over time. For instance the transmission rate or the rate at which environmental pathogen decays could be made dependent on the time of the year.</p>
-</div>
-<div id="environmental-transmission-and-interventions" class="section level3">
-<h3><span class="header-section-number">8.2.3</span> Environmental transmission and interventions</h3>
-<p>The environmental stage is a potentially great target for control mechanisms. Disinfecting surfaces with chemicals such as bleach is common practice in hospitals and other places where contamination might be common and needs to be minimized. Similarly, attempts have been made to disinfect the air with for instance UV radiation. Unfortunately, such radiation can be harmful to humans, and thus this approach only works within a system that moves and circulates air (e.g., an air-conditioning system with a stage at which the circulated air is irradiated). All modern water treatment plants have systems that remove pathogens, in conjunction with good sanitation practices, have reduced the incidence of diseases like Cholera. However, in developing countries, Cholera and other water borne disease are still a major public health concern. Even with proper sanitation, other pathogens like norovirus are hard to control and still often cause local outbreaks. One reason for that is that these viruses are hard to kill and many regular cleaning agents do not work. Maybe the most important and famous environmental control strategy is the tried and true method of hand washing. Our hands can be considered a potentially infected environment (a fomite). By washing them, the transmission of pathogens to others is minimized. The fact that hand-washing is a great infection control strategy has been known for centuries. Unfortunately, compliance is often still low, leading to many needless infections, even in settings like hospitals, where one should expect the staff to know the importance of adhering to the hand-washing routine.</p>
-<div id="myadvancedbox" class="section level4">
-<h4><span class="header-section-number">8.2.3.1</span> Modeling environmental transmission</h4>
-<p>Most often, during the environmental stage, we assume that the pathogen does not ‘do’ anything. This is in contrast to vector-borne transmission where the pathogen might, for instance, undergo replication in the vector. Thus, we assume that infected hosts shed pathogen into the environment, where it decays. If a susceptible person comes into contact with the pathogen in the environment, an infection can occur. The simplest SIR type model that can capture this process is given by <span class="math display">\[ 
-\begin{aligned}
-\dot S &amp;= - b E S \\
-\dot I &amp;= b E S  - \gamma I \\
-\dot R &amp;= \gamma I \\
-\dot E &amp;= p I - cE
-\end{aligned}
-\]</span> Infected persons release pathogen into the environment at rate <em>p</em>. The pathogen decays at rate <em>c</em>. A susceptible host can get infected by contact with a contaminated environment at rate <em>b</em>.</p>
-</div>
-</div>
-</div>
-<div id="summary-and-cartoon-6" class="section level2">
-<h2><span class="header-section-number">8.3</span> Summary and Cartoon</h2>
-<p>This chapter provided a discussion of environmental transmission and its impact on ID dynamics and control.</p>
-<div class="figure">
-<img src="images/xkcd-hand_sanitizer.png" alt="One problem with environmental transmission control. Source: xkcd" />
-<p class="caption">One problem with environmental transmission control. <a href="https://xkcd.com/1161/">Source: xkcd</a></p>
-</div>
-</div>
-<div id="exercises-6" class="section level2">
-<h2><span class="header-section-number">8.4</span> Exercises</h2>
+<div id="exercises-9" class="section level2">
+<h2><span class="header-section-number">11.10</span> Exercises</h2>
 <ul>
-<li>The <em>Environmental transmission</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
-<li>The paper by Killingley and Nguyen-Van-Tam describes modes of transmission for influenza. Pick a pathogen that can transmit in a somewhat similar manner (e.g., Ebola, SARS, MERS, or such) and compare and contrast what is known about similarities and differences in transmission between flu and the pathogen you pick. Also briefly discuss implications for control.</li>
+<li>The <em>Host Heterogeneity</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>Read the article “Disease spread, susceptibility and infection intensity: vicious circles?” by Beldomenico and Begon <span class="citation">(Beldomenico et al. <a href="#ref-beldomenico09">2009</a>)</span>. The paper mostly discusses non-human IDs. Find evidence from human IDs for which the different components they discuss (variable host susceptibility, variable infection intensity, feedback circles in the individual/population level) might be applicable.</li>
 </ul>
 </div>
-<div id="further-resources-6" class="section level2">
-<h2><span class="header-section-number">8.5</span> Further Resources</h2>
+<div id="further-resources-9" class="section level2">
+<h2><span class="header-section-number">11.11</span> Further Resources</h2>
 <ul>
-<li>The paper <span class="citation">(Cortez and Weitz <a href="#ref-cortez13">2013</a>)</span> discusses how direct versus indirect transmission can lead to different incidence patterns and how models can help to determine routes of transmission.</li>
-<li>Ewald discusses the relation between environmental transmission and virulence in <span class="citation">(Ewald <a href="#ref-ewald91">1991</a>)</span>.</li>
-<li>Some further discussion about influenza routes of transmission is provided in <span class="citation">(Brankston et al. <a href="#ref-brankston07">2007</a>; Weber and Stilianakis <a href="#ref-weber08">2008</a>)</span>.</li>
+<li>Good further discussions of the superspreader concept can be found in <span class="citation">(A. P. Galvani and May <a href="#ref-galvani05">2005</a>; <span class="citeproc-not-found" data-reference-id="lloyd-smit05"><strong>???</strong></span>; Stein <a href="#ref-stein11">2011</a>)</span>.</li>
+<li>The impact of host heterogeneity on the reproductive number is for instance discussed in <span class="citation">(Robert M May, Gupta, and McLean <a href="#ref-may01">2001</a>)</span>, an application to Chlamydia is provided in <span class="citation">(Potterat et al. <a href="#ref-potterat99">1999</a>)</span>.</li>
+<li>An influential study that collected detailed information on contact patterns using a diary approach is <span class="citation">(Mossong et al. <a href="#ref-mossong08">2008</a>)</span>.</li>
+<li>General discussions of transmission heterogeneity are given in <span class="citation">(Matthews and Woolhouse <a href="#ref-matthews05">2005</a>; Paull et al. <a href="#ref-paull12">2012</a>)</span>.</li>
+<li>Host heterogeneity and control is for instance discussed in <span class="citation">(Yorke, Hethcote, and Nold <a href="#ref-yorke78">1978</a>; M. E. Woolhouse et al. <a href="#ref-woolhouse97">1997</a>)</span>.</li>
 </ul>
 </div>
-<div id="references-7" class="section level2">
-<h2><span class="header-section-number">8.6</span> References</h2>
+<div id="references-10" class="section level2">
+<h2><span class="header-section-number">11.12</span> References</h2>
 
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-cortez13">
-<p>Cortez, Michael H., and Joshua S. Weitz. 2013. “Distinguishing Between Indirect and Direct Modes of Transmission Using Epidemiological Time Series.” <em>The American Naturalist</em> 181 (2): E43–E52. doi:<a href="https://doi.org/10.1086/668826">10.1086/668826</a>.</p>
+<div id="ref-yorke78">
+<p>Yorke, J. A., H. W. Hethcote, and A. Nold. 1978. “Dynamics and Control of the Transmission of Gonorrhea.” <em>Sex Transm Dis</em> 5 (2). Institute for Physical Science; Technology, University of Maryland, College Park, USA.: 51–56.</p>
 </div>
-<div id="ref-ewald91">
-<p>Ewald, P W. 1991. “Waterborne Transmission and the Evolution of Virulence Among Gastrointestinal Bacteria.” <em>Epidemiology and Infection</em> 106 (1): 83–119.</p>
+<div id="ref-galvani05">
+<p>Galvani, Alison P., and Robert M. May. 2005. “Epidemiology: Dimensions of Superspreading.” <em>Nature</em> 438 (7066): 293–95. doi:<a href="https://doi.org/10.1038/438293a">10.1038/438293a</a>.</p>
 </div>
-<div id="ref-brankston07">
-<p>Brankston, Gabrielle, Leah Gitterman, Zahir Hirji, Camille Lemieux, and Michael Gardam. 2007. “Transmission of Influenza A in Human Beings.” <em>The Lancet Infectious Diseases</em> 7 (4): 257–65. <a href="http://www.sciencedirect.com/science/article/pii/S1473309907700294" class="uri">http://www.sciencedirect.com/science/article/pii/S1473309907700294</a>.</p>
+<div id="ref-may01">
+<p>May, Robert M, Sunetra Gupta, and Angela R McLean. 2001. “Infectious Disease Dynamics: What Characterizes a Successful Invader?” <em>Philosophical Transactions of the Royal Society of London B: Biological Sciences</em> 356 (1410). The Royal Society: 901–10.</p>
 </div>
-<div id="ref-weber08">
-<p>Weber, Thomas P, and Nikolaos I Stilianakis. 2008. “Inactivation of Influenza a Viruses in the Environment and Modes of Transmission: A Critical Review.” <em>The Journal of Infection</em> 57 (5): 361–73. doi:<a href="https://doi.org/10.1016/j.jinf.2008.08.013">10.1016/j.jinf.2008.08.013</a>.</p>
+<div id="ref-beldomenico09">
+<p>Beldomenico, Pablo M, Sandra Telfer, Stephanie Gebert, Lukasz Lukomski, Malcolm Bennett, and Michael Begon. 2009. “The Vicious Circle and Infection Intensity: The Case of Trypanosoma Microti in Field Vole Populations.” <em>Epidemics</em> 1 (3): 162–67. doi:<a href="https://doi.org/10.1016/j.epidem.2009.05.002">10.1016/j.epidem.2009.05.002</a>.</p>
+</div>
+<div id="ref-stein11">
+<p>Stein, Richard A. 2011. “Super-Spreaders in Infectious Diseases.” <em>International Journal of Infectious Diseases : IJID : Official Publication of the International Society for Infectious Diseases</em> 15 (8): e510–e513. doi:<a href="https://doi.org/10.1016/j.ijid.2010.06.020">10.1016/j.ijid.2010.06.020</a>.</p>
+</div>
+<div id="ref-potterat99">
+<p>Potterat, John J., Helen Zimmerman-Rogers, Stephen Q. Muth, Richard B. Rothenberg, David L. Green, Jerry E. Taylor, Mandy S. Bonney, and Helen A. White. 1999. “Chlamydia Transmission: Concurrency, Reproduction Number, and the Epidemic Trajectory.” <em>American Journal of Epidemiology</em> 150 (12): 1331–9. <a href="https://academic.oup.com/aje/article-abstract/150/12/1331/53233" class="uri">https://academic.oup.com/aje/article-abstract/150/12/1331/53233</a>.</p>
+</div>
+<div id="ref-mossong08">
+<p>Mossong, Joël, Niel Hens, Mark Jit, Philippe Beutels, Kari Auranen, Rafael Mikolajczyk, Marco Massari, et al. 2008. “Social Contacts and Mixing Patterns Relevant to the Spread of Infectious Diseases.” <em>PLoS Medicine</em> 5 (3): e74. <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074" class="uri">http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074</a>.</p>
+</div>
+<div id="ref-matthews05">
+<p>Matthews, Louise, and Mark Woolhouse. 2005. “New Approaches to Quantifying the Spread of Infection.” <em>Nature Reviews. Microbiology</em> 3 (7): 529–36. doi:<a href="https://doi.org/10.1038/nrmicro1178">10.1038/nrmicro1178</a>.</p>
+</div>
+<div id="ref-paull12">
+<p>Paull, Sara H, Sejin Song, Katherine M McClure, Loren C Sackett, A Marm Kilpatrick, and Pieter TJ Johnson. 2012. “From Superspreaders to Disease Hotspots: Linking Transmission Across Hosts and Space.” <em>Frontiers in Ecology and the Environment</em> 10 (2). Wiley Online Library: 75–82.</p>
+</div>
+<div id="ref-woolhouse97">
+<p>Woolhouse, M E, C Dye, J F Etard, T Smith, J D Charlwood, G P Garnett, P Hagan, et al. 1997. “Heterogeneities in the Transmission of Infectious Agents: Implications for the Design of Control Programs.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 94 (1): 338–42.</p>
 </div>
 </div>
             </section>
@@ -392,8 +425,8 @@
           </div>
         </div>
       </div>
-<a href="modes-of-direct-transmission.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="vector-borne-id-transmission.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="infectious-disease-control.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dynamics-of-multiple-pathogens.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

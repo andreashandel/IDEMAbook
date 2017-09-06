@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="modes-of-direct-transmission.html">
-<link rel="next" href="vector-borne-id-transmission.html">
+<link rel="prev" href="evolutionary-dynamics.html">
+
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -300,91 +300,356 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="environmental-transmission-1" class="section level1">
-<h1><span class="header-section-number">8</span> Environmental Transmission</h1>
-<div id="overview-and-learning-objectives-6" class="section level2">
-<h2><span class="header-section-number">8.1</span> Overview and Learning Objectives</h2>
-<p>A number of pathogens are transmitted through an environmental stage. This chapter discusses the implications on the ID dynamics in such cases.</p>
+<div id="networks-and-id" class="section level1">
+<h1><span class="header-section-number">15</span> Networks and ID</h1>
+<div id="overview-and-learning-objectives-13" class="section level2">
+<h2><span class="header-section-number">15.1</span> Overview and Learning Objectives</h2>
+<p>In this module, we will briefly discuss the concept of transmission networks and how that affects ID dynamics and control.</p>
 <p>The learning objectives for this chapter are:</p>
 <ul>
-<li>Know the hallmarks of indirect, environmental transmission</li>
-<li>Understand what environmental transmission implies for control strategies</li>
-<li>Identify diseases for which the environmental transmission pathway is important</li>
+<li>Know the how to define and measure transmission networks</li>
+<li>Understand how different types of network structures affect ID transmission and control</li>
+<li>Understand how transmission networks affect disease spread</li>
+<li>Evaluate the impact of network structure on ID transmission</li>
 </ul>
 </div>
-<div id="introduction-6" class="section level2">
-<h2><span class="header-section-number">8.2</span> Introduction</h2>
-<p>While the distinction between direct and indirect transmission is not clear-cut, we usually consider an ID to have an indirect mode of transmission if the time spent outside the main host is <em>important</em> for the whole transmission cycle. The two main types of stages where a pathogen resides outside the main host are the abiotic environment or another host species. In the case of the former, we consider it to be environmental transmission, in the case of the latter, it is vector-borne. Of course, some IDs are even more complicated and have both vector and environmental stages. This chapter focuses on environmental transmission.</p>
-<div id="environmental-transmission-2" class="section level3">
-<h3><span class="header-section-number">8.2.1</span> Environmental transmission</h3>
-<p>Some diseases are shed by hosts into the environment, where they can survive for a potentially extended time before re-infecting a new host. Cholera is an excellent example of an ID that has water sources as the environmental stage. Similarly, avian influenza is thought to survive in cold lake water for an extended time. The important consequence of environmental transmission is that it potentially allows new infections to occur over long distances in time and space. For instance, an infected person might shed Cholera into the water somewhere upstream, and a susceptible person ingests the Cholera bacteria somewhere miles downstream and days or weeks later. This is fundamentally different to direct transmission, which requires close contact.</p>
+<div id="introduction-12" class="section level2">
+<h2><span class="header-section-number">15.2</span> Introduction</h2>
+<p>ID spread along <em>connections</em> between infected and uninfected hosts. Those could be very close and clearly defined connections, such as for sexually transmitted infections, or much less well defined connections, such as a shared water or air source (e.g. cholera and influenza). If we want to explicitly account for these connections, we need to consider a conceptual framework that moves away from the compartmental approach. In the compartmental approach, all hosts with given characteristics (e.g. infected children) were lumped together and no notion of connectivity was included. In contrast, a network perspective explicitly considers individuals and their connections.</p>
+</div>
+<div id="network-terminology" class="section level2">
+<h2><span class="header-section-number">15.3</span> Network terminology</h2>
+<p>The basic building blocks of networks are entities and their connections. Those entities go by different, equivalent names, such as actor, node, vertex, site. Similarly, the connections have different, equivalent names, such as edge, link, bond, tie or connection. The different names stem from the fact that network ideas were developed independently in different scientific sub-fields.</p>
 <div class="figure">
-<img src="images/environmentaltransmissionscheme.png" alt="Schematic of an ID with environmental transmission" />
-<p class="caption">Schematic of an ID with environmental transmission</p>
+<img src="images/network-diagram.png" alt="Simple network diagram" />
+<p class="caption">Simple network diagram</p>
 </div>
 </div>
-<div id="environmental-transmission-and-external-drivers" class="section level3">
-<h3><span class="header-section-number">8.2.2</span> Environmental transmission and external drivers</h3>
-<p>Because environmental transmission involves the survival of pathogen for a potentially extended time in the environment, such IDs are often more strongly influenced by external drivers compared to IDs that are directly transmitted. The weather often has a strong impact, as do behavior changes. E.g., humans living in temperate zones are more likely to swim in lakes when it’s warm. Therefore water-borne diseases often have the highest incidence in warm months.</p>
-<p>Such external drivers can be included in models by allowing certain parameters to vary over time. For instance the transmission rate or the rate at which environmental pathogen decays could be made dependent on the time of the year.</p>
+<div id="network-nodes" class="section level2">
+<h2><span class="header-section-number">15.4</span> Network nodes</h2>
+<p>Usually, the nodes are individual hosts (e.g. humans). But that does not need to be the case, nodes can also represent entities such as schools, cities, hospitals, etc. Simple networks only have one type of node, more complicated networks can have different types of nodes. For instance humans can be connected to specific places where they meet.</p>
+<p>In their simplest form, nodes are only characterized by their connections, they don’t have any other properties. In model simulations, it is possible to give nodes features such as age, gender, etc. and account for that when simulating ID spread.</p>
 </div>
-<div id="environmental-transmission-and-interventions" class="section level3">
-<h3><span class="header-section-number">8.2.3</span> Environmental transmission and interventions</h3>
-<p>The environmental stage is a potentially great target for control mechanisms. Disinfecting surfaces with chemicals such as bleach is common practice in hospitals and other places where contamination might be common and needs to be minimized. Similarly, attempts have been made to disinfect the air with for instance UV radiation. Unfortunately, such radiation can be harmful to humans, and thus this approach only works within a system that moves and circulates air (e.g., an air-conditioning system with a stage at which the circulated air is irradiated). All modern water treatment plants have systems that remove pathogens, in conjunction with good sanitation practices, have reduced the incidence of diseases like Cholera. However, in developing countries, Cholera and other water borne disease are still a major public health concern. Even with proper sanitation, other pathogens like norovirus are hard to control and still often cause local outbreaks. One reason for that is that these viruses are hard to kill and many regular cleaning agents do not work. Maybe the most important and famous environmental control strategy is the tried and true method of hand washing. Our hands can be considered a potentially infected environment (a fomite). By washing them, the transmission of pathogens to others is minimized. The fact that hand-washing is a great infection control strategy has been known for centuries. Unfortunately, compliance is often still low, leading to many needless infections, even in settings like hospitals, where one should expect the staff to know the importance of adhering to the hand-washing routine.</p>
-<div id="myadvancedbox" class="section level4">
-<h4><span class="header-section-number">8.2.3.1</span> Modeling environmental transmission</h4>
-<p>Most often, during the environmental stage, we assume that the pathogen does not ‘do’ anything. This is in contrast to vector-borne transmission where the pathogen might, for instance, undergo replication in the vector. Thus, we assume that infected hosts shed pathogen into the environment, where it decays. If a susceptible person comes into contact with the pathogen in the environment, an infection can occur. The simplest SIR type model that can capture this process is given by <span class="math display">\[ 
-\begin{aligned}
-\dot S &amp;= - b E S \\
-\dot I &amp;= b E S  - \gamma I \\
-\dot R &amp;= \gamma I \\
-\dot E &amp;= p I - cE
-\end{aligned}
-\]</span> Infected persons release pathogen into the environment at rate <em>p</em>. The pathogen decays at rate <em>c</em>. A susceptible host can get infected by contact with a contaminated environment at rate <em>b</em>.</p>
-</div>
-</div>
-</div>
-<div id="summary-and-cartoon-6" class="section level2">
-<h2><span class="header-section-number">8.3</span> Summary and Cartoon</h2>
-<p>This chapter provided a discussion of environmental transmission and its impact on ID dynamics and control.</p>
+<div id="network-connections" class="section level2">
+<h2><span class="header-section-number">15.5</span> Network connections</h2>
+<p>What constitutes a connection in a network strongly depends on the question asked and the ID under consideration. Sexual networks connect people that have some form of sexual contact that suffices to transmit the disease in question. Similarly, social contact networks consider contacts between people in a social setting that allows for transmission of an ID, e.g. close contact for transmission of a respiratory disease. Proximity networks can be built based on people frequenting the same locations. Connections can either just ‘exist’ or not, or they can have characteristics, similary to nodes. For instance connections can have weights, with stronger connections between people that have closer or longer contacts. Connections can also have directions. For instance if we wanted to model cholera transmission and had a network of villages, then a village upstream would have a connection pointing to villages downstream, but not the reverse. In other words, an ‘infected village’ upstream can infect a downstream village, but the opposite does not occur.</p>
 <div class="figure">
-<img src="images/xkcd-hand_sanitizer.png" alt="One problem with environmental transmission control. Source: xkcd" />
-<p class="caption">One problem with environmental transmission control. <a href="https://xkcd.com/1161/">Source: xkcd</a></p>
+<img src="images/complex-network-diagram.png" alt="More complex network diagram showing different types of nodes and connections." />
+<p class="caption">More complex network diagram showing different types of nodes and connections.</p>
 </div>
 </div>
-<div id="exercises-6" class="section level2">
-<h2><span class="header-section-number">8.4</span> Exercises</h2>
+<div id="network-characteristics" class="section level2">
+<h2><span class="header-section-number">15.6</span> Network characteristics</h2>
+<p>The initial study of a network often starts with the properties of the network itself, without considering any ID spread (yet). One of the most important characteristics of a network is the degree distribution of the nodes. This is simply a histogram of the number of connections that each node has. If connections have directions or there is more than one type of connection possible, then each one would have its own histogram.</p>
+<p>Another network characteristic is the ‘shortest path length’, which measures the shortest distance of going from a specific node to some other node. Every node has a shortest path length to every other node (if 2 nodes are not connected because they belong to unconnected subparts of a network, the path length is considered infinite).</p>
+<p>Many other network characteristics exist, the field of network analysis has grown rapidly in the last several years. If you want to learn more, <span class="citation">(Newman <a href="#ref-newman13">2013</a>)</span> is a good resource. Many review articles on that topic also exist, e.g. <span class="citation">(Matt J. Keeling and Eames <a href="#ref-keeling05">2005</a>)</span>.</p>
+<p>It is important to understand that some characteristics are attached to individual nodes and some to the full network. For instance every node has a number of degrees (connections) and the network has an overall degree distribution. Similarly, one can compute the mean shortest path length for each node and, if one takes another mean, a mean path length for the whole network.</p>
+</div>
+<div id="important-types-of-networks" class="section level2">
+<h2><span class="header-section-number">15.7</span> Important types of networks</h2>
+<p>There are several types or classes of networks with specific characteristics that have been studied in great detail, either because they are analytically tractable or because of their real world importance.</p>
+<p>One of the best-studied network is the random network. In this network, any 2 nodes have a fixed probability of being connected. For a network of <em>N</em> nodes and connection probability <em>p</em>, the average number of connections each node has (i.e. it’s degree) is <em>(N-1)p</em>. The degree distribution of the network is binomial, which for large networks becomes a normal distribution. That means most nodes have approximately the average number of connections, there are only few nodes with substantially fewer or more connections.</p>
+<p>Many real-world networks do not have the degree distribution found for random networks. It is often common that most nodes have very few connections, while a few nodes have many connections. This idea for instance underlies the superspreader concept. Such a distribution of connections can be well described by a scale-free network, here, the degree distribution follows a power law, with most nodes having very few connections but a small number of nodes having very many connections.</p>
+<div class="figure">
+<img src="images/network-examples.png" alt="Random and scale-free networks and degree distribution." />
+<p class="caption">Random and scale-free networks and degree distribution.</p>
+</div>
+</div>
+<div id="id-transmission-on-networks" class="section level2">
+<h2><span class="header-section-number">15.8</span> ID transmission on networks</h2>
+<p>The premise for ID transmission is that it can only occur along the connections of a network. As such, the structure of the network can strongly influence the dynamics of the ID. How exactly different characteristics of networks, such as the one discussed above and others, interact with the characteristics of the ID to affect overall ID dynamics is an area that is currently heavily investigated. For some recent work on that, see e.g. <span class="citation">(S. Bansal, Grenfell, and Meyers <a href="#ref-bansal07">2007</a>)</span>.</p>
+</div>
+<div id="networks-and-id-control" class="section level2">
+<h2><span class="header-section-number">15.9</span> Networks and ID control</h2>
+<p>Knowing about the connection structure is important for ID control. Most obviously, if we know who the individuals are with many connections, we could target them preferrentially and have a potentially larger impact compared to targeting random individuals. Other individuals, e.g. those that connect separate clusters of a network, might also be prime targets. The challenge in real world systems is to identify the individuals that should be targeted and being able to reach them - and in an outbreak situation, that would need to be done under time pressure. As such, while network theory has much to offer for control, it is still challenging to implement network-based intervention approaches in practice.</p>
+</div>
+<div id="modeling-id-transmission-on-networks" class="section level2">
+<h2><span class="header-section-number">15.10</span> Modeling ID transmission on networks</h2>
+<p>Building and analyzing network models of ID transmission is generally more challenging than the compartmental modeling approach. For networks, we usually track individuals. As such the models become what are called individual or agent-based models. We need to keep track and simulate the dynamics of each individual. That makes coding harder and running the models much more computationally resource intensive. It is also somewhat harder to analyze the results. Still, networks are much closer to many real systems and have therefore seen increased use in the ID modeling community in recent years. With an increase in available data of the ‘network type’ (e.g. geocoded cellphone data), further increase in computational power and more sophisticated and efficient analysis approaches, it is quite likely that network-based approaches will continue to grow in importance.</p>
+</div>
+<div id="id-transmission-on-dynamic-networks" class="section level2">
+<h2><span class="header-section-number">15.11</span> ID transmission on dynamic networks</h2>
+<p>Most of the time, networks are considered static and do not change during the ID transmission process. However, this does not have to be the case and is often not realistic. The most detailed models allow for changes in the network through the making and breaking of connections and addition and loss (e.g. birth and death) of nodes. Implementing and analyzing models that have a dynamically changing network with the ID dynamics (and potential control measures) occuring ‘on top’ is technically challenging. Not too many of such models currently exist, but it is an area of active investigation by many, see e.g. <span class="citation">(S. Bansal et al. <a href="#ref-bansal10">2010</a>)</span>.</p>
+</div>
+<div id="summary-and-cartoon-13" class="section level2">
+<h2><span class="header-section-number">15.12</span> Summary and Cartoon</h2>
+<p>This module provided a brief discussion of transmission networks and how they impact dynamics and control of ID.</p>
+<div class="figure">
+<img src="../media/dilbert_degreesofseparation.gif" alt="A version of the Kevin Bacon Network Game. Source: dilbert.com" />
+<p class="caption">A version of the <a href="https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon">Kevin Bacon ‘Network Game’.</a> <a href="www.dilbert.com">Source: dilbert.com</a></p>
+</div>
+</div>
+<div id="exercises-13" class="section level2">
+<h2><span class="header-section-number">15.13</span> Exercises</h2>
 <ul>
-<li>The <em>Environmental transmission</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
-<li>The paper by Killingley and Nguyen-Van-Tam describes modes of transmission for influenza. Pick a pathogen that can transmit in a somewhat similar manner (e.g., Ebola, SARS, MERS, or such) and compare and contrast what is known about similarities and differences in transmission between flu and the pathogen you pick. Also briefly discuss implications for control.</li>
+<li>The online game <a href="http://vax.herokuapp.com/">VAX</a> provides a nice interactive setting where you can explore vaccination on networks and how it can help reduce disease spread. Try to pass all levels.</li>
+<li>Find a study that looked at the dynamics of an ID on a network. Summarize and discuss the study. Explain what findings in the study are due to the network approach. Discuss/speculate how results would be different if one were to ignore the network structure and instead used a compartmental model approach.</li>
+<li>Read the article “Networks and epidemic models” by Keeling and Eames <span class="citation">(Matt J. Keeling and Eames <a href="#ref-keeling05">2005</a>)</span>.</li>
 </ul>
 </div>
-<div id="further-resources-6" class="section level2">
-<h2><span class="header-section-number">8.5</span> Further Resources</h2>
-<ul>
-<li>The paper <span class="citation">(Cortez and Weitz <a href="#ref-cortez13">2013</a>)</span> discusses how direct versus indirect transmission can lead to different incidence patterns and how models can help to determine routes of transmission.</li>
-<li>Ewald discusses the relation between environmental transmission and virulence in <span class="citation">(Ewald <a href="#ref-ewald91">1991</a>)</span>.</li>
-<li>Some further discussion about influenza routes of transmission is provided in <span class="citation">(Brankston et al. <a href="#ref-brankston07">2007</a>; Weber and Stilianakis <a href="#ref-weber08">2008</a>)</span>.</li>
-</ul>
+<div id="further-resources-13" class="section level2">
+<h2><span class="header-section-number">15.14</span> Further Resources</h2>
 </div>
-<div id="references-7" class="section level2">
-<h2><span class="header-section-number">8.6</span> References</h2>
+<div id="references-14" class="section level2">
+<h2><span class="header-section-number">15.15</span> References</h2>
 
+<div id="refs" class="references">
+<div>
+<p>Altizer, Sonia, Andrew Dobson, Parviez Hosseini, Peter Hudson, Mercedes Pascual, and Pejman Rohani. 2006. “Seasonality and the Dynamics of Infectious Diseases.” <em>Ecology Letters</em> 9 (4): 467–84. doi:<a href="https://doi.org/10.1111/j.1461-0248.2005.00879.x">10.1111/j.1461-0248.2005.00879.x</a>.</p>
+</div>
+<div>
+<p>Anderson, Roy M, and RM May. 1991. “Infectious Disease of Humans.” <em>Dynamics and Control</em>.</p>
+</div>
+<div>
+<p>Bansal, Shweta, Bryan T. Grenfell, and Lauren Ancel Meyers. 2007. “When Individual Behaviour Matters: Homogeneous and Network Models in Epidemiology.” <em>J R Soc Interface</em> 4 (16). Computational; Applied Mathematics, Institute for Computational Engineering; Sciences, University of Texas at Austin, 1 University Station, C0200, Austin, TX 78712, USA.: 879–91. doi:<a href="https://doi.org/10.1098/rsif.2007.1100">10.1098/rsif.2007.1100</a>.</p>
+</div>
+<div>
+<p>Bansal, Shweta, Jonathan Read, Babak Pourbohloul, and Lauren Ancel Meyers. 2010. “The Dynamic Nature of Contact Networks in Infectious Disease Epidemiology.” <em>J Biol Dyn</em> 4 (5). Center for Infectious Disease Dynamics, The Pennsylvania State University, University Park, PA, USA. shweta@sbansal.com: 478–89. doi:<a href="https://doi.org/10.1080/17513758.2010.503376">10.1080/17513758.2010.503376</a>.</p>
+</div>
+<div>
+<p>Basu, Sanjay, and Jason Andrews. 2013. “Complexity in Mathematical Models of Public Health Policies: A Guide for Consumers of Models.” <em>PLoS Medicine</em> 10 (10): e1001540. doi:<a href="https://doi.org/10.1371/journal.pmed.1001540">10.1371/journal.pmed.1001540</a>.</p>
+</div>
+<div>
+<p>Baumgartner, Eduardo, Christine N. Dao, Sharifa Nasreen, Mejbah Uddin Bhuiyan, Syeda Mah-E-Muneer, Abdullah Al Mamun, M. A. Yushuf Sharker, et al. 2012. “Seasonality, Timing, and Climate Drivers of Influenza Activity Worldwide.” <em>The Journal of Infectious Diseases</em> 206 (6): 838–46. doi:<a href="https://doi.org/10.1093/infdis/jis467">10.1093/infdis/jis467</a>.</p>
+</div>
+<div>
+<p>Begon, M., M. Bennett, R. G. Bowers, N. P. French, S. M. Hazel, and J. Turner. 2002. “A Clarification of Transmission Terms in Host-Microparasite Models: Numbers, Densities and Areas.” <em>Epidemiol Infect</em> 129 (1). ences, The University of Liverpool, UK.: 147–53.</p>
+</div>
+<div>
+<p>Beldomenico, Pablo M, Sandra Telfer, Stephanie Gebert, Lukasz Lukomski, Malcolm Bennett, and Michael Begon. 2009. “The Vicious Circle and Infection Intensity: The Case of Trypanosoma Microti in Field Vole Populations.” <em>Epidemics</em> 1 (3): 162–67. doi:<a href="https://doi.org/10.1016/j.epidem.2009.05.002">10.1016/j.epidem.2009.05.002</a>.</p>
+</div>
+<div>
+<p>Blower, Sally, and Daniel Bernoulli. 2004. “An Attempt at a New Analysis of the Mortality Caused by Smallpox and of the Advantages of Inoculation to Prevent It. 1766.” <em>Reviews in Medical Virology</em> 14 (5): 275–88.</p>
+</div>
+<div>
+<p>Brankston, Gabrielle, Leah Gitterman, Zahir Hirji, Camille Lemieux, and Michael Gardam. 2007. “Transmission of Influenza A in Human Beings.” <em>The Lancet Infectious Diseases</em> 7 (4): 257–65. <a href="http://www.sciencedirect.com/science/article/pii/S1473309907700294" class="uri">http://www.sciencedirect.com/science/article/pii/S1473309907700294</a>.</p>
+</div>
+<div>
+<p>Chubb, Mikayla C., and Kathryn H. Jacobsen. 2010. “Mathematical Modeling and the Epidemiological Research Process.” <em>European Journal of Epidemiology</em> 25 (1): 13–19. doi:<a href="https://doi.org/10.1007/s10654-009-9397-9">10.1007/s10654-009-9397-9</a>.</p>
+</div>
+<div>
+<p>Cortez, Michael H., and Joshua S. Weitz. 2013. “Distinguishing Between Indirect and Direct Modes of Transmission Using Epidemiological Time Series.” <em>The American Naturalist</em> 181 (2): E43–E52. doi:<a href="https://doi.org/10.1086/668826">10.1086/668826</a>.</p>
+</div>
+<div>
+<p>Diekmann, O., J A P. Heesterbeek, and M. G. Roberts. 2010. “The Construction of Next-Generation Matrices for Compartmental Epidemic Models.” <em>J R Soc Interface</em> 7 (47). Department of Mathematics, Utrecht University, Budapestlaan 6, 3584 CD, Utrecht, The Netherlands.: 873–85. doi:<a href="https://doi.org/10.1098/rsif.2009.0386">10.1098/rsif.2009.0386</a>.</p>
+</div>
+<div>
+<p>Diekmann, Odo, and Johan Andre Peter Heesterbeek. 2000. <em>Mathematical Epidemiology of Infectious Diseases: Model Building, Analysis and Interpretation</em>. Vol. 5. John Wiley &amp; Sons.</p>
+</div>
+<div>
+<p>Dowell, S F. 2001. “Seasonal Variation in Host Susceptibility and Cycles of Certain Infectious Diseases.” <em>Emerging Infectious Diseases</em> 7 (3): 369–74. doi:<a href="https://doi.org/10.3201/eid0703.010301">10.3201/eid0703.010301</a>.</p>
+</div>
+<div>
+<p>Dushoff, Jonathan, Joshua B. Plotkin, Simon A. Levin, and David JD Earn. 2004. “Dynamical Resonance Can Account for Seasonality of Influenza Epidemics.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (48): 16915–6. <a href="http://www.pnas.org/content/101/48/16915.short" class="uri">http://www.pnas.org/content/101/48/16915.short</a>.</p>
+</div>
+<div>
+<p>Emch, Michael, Caryl Feldacker, M Sirajul Islam, and Mohammad Ali. 2008. “Seasonality of Cholera from 1974 to 2005: A Review of Global Patterns.” <em>International Journal of Health Geographics</em> 7 (1): 31. doi:<a href="https://doi.org/10.1186/1476-072X-7-31">10.1186/1476-072X-7-31</a>.</p>
+</div>
+<div>
+<p>Epstein, Joshua M. 2008. “Why Model?” <em>Journal of Artificial Societies and Social Simulation</em> 11 (4): 12. <a href="http://jasss.soc.surrey.ac.uk/11/4/12.html" class="uri">http://jasss.soc.surrey.ac.uk/11/4/12.html</a>.</p>
+</div>
+<div>
+<p>Ewald, P W. 1987. “Transmission Modes and Evolution of the Parasitism-Mutualism Continuum.” <em>Annals of the New York Academy of Sciences</em> 503: 295–306.</p>
+</div>
+<div>
+<p>———. 1991. “Waterborne Transmission and the Evolution of Virulence Among Gastrointestinal Bacteria.” <em>Epidemiology and Infection</em> 106 (1): 83–119.</p>
+</div>
+<div>
+<p>———. 1995. “The Evolution of Virulence: A Unifying Link Between Parasitology and Ecology.” <em>The Journal of Parasitology</em> 81 (5): 659–69.</p>
+</div>
+<div>
+<p>Ferguson, Neil M., Isabel Rodríguez-Barraquer, Ilaria Dorigatti, Luis Mier-y-Teran-Romero, Daniel J. Laydon, and Derek AT Cummings. 2016. “Benefits and Risks of the Sanofi-Pasteur Dengue Vaccine: Modeling Optimal Deployment.” <em>Science</em> 353 (6303): 1033–6. <a href="http://science.sciencemag.org/content/353/6303/1033.short" class="uri">http://science.sciencemag.org/content/353/6303/1033.short</a>.</p>
+</div>
+<div>
+<p>Ferrari, Matthew J., Sarah E. Perkins, Laura W. Pomeroy, and Ottar N. Bjørnstad. 2011. “Pathogens, Social Networks, and the Paradox of Transmission Scaling.” <em>Interdisciplinary Perspectives on Infectious Diseases</em> 2011: 1–10. doi:<a href="https://doi.org/10.1155/2011/267049">10.1155/2011/267049</a>.</p>
+</div>
+<div>
+<p>Fine, P. E. M. 2003. “The Interval Between Successive Cases of an Infectious Disease.” <em>American Journal of Epidemiology</em> 158 (11): 1039–47. doi:<a href="https://doi.org/10.1093/aje/kwg251">10.1093/aje/kwg251</a>.</p>
+</div>
+<div>
+<p>Fine, Paul EM. 1993. “Herd Immunity: History, Theory, Practice.” <em>Epidemiologic Reviews</em> 15 (2): 265–302. <a href="http://op12no2.me/stuff/herdhis.pdf" class="uri">http://op12no2.me/stuff/herdhis.pdf</a>.</p>
+</div>
+<div>
+<p>Fine, Paul, Ken Eames, and David L Heymann. 2011. “‘Herd Immunity’: A Rough Guide.” <em>Clinical Infectious Diseases : An Official Publication of the Infectious Diseases Society of America</em> 52 (7): 911–16. doi:<a href="https://doi.org/10.1093/cid/cir007">10.1093/cid/cir007</a>.</p>
+</div>
+<div>
+<p>Galvani, Alison P., and Robert M. May. 2005. “Epidemiology: Dimensions of Superspreading.” <em>Nature</em> 438 (7066): 293–95. doi:<a href="https://doi.org/10.1038/438293a">10.1038/438293a</a>.</p>
+</div>
+<div>
+<p>Garnett, Geoffrey P., Simon Cousens, Timothy B. Hallett, Richard Steketee, and Neff Walker. 2011. “Mathematical Models in the Evaluation of Health Programmes.” <em>The Lancet</em> 378 (9790): 515–25. <a href="http://www.sciencedirect.com/science/article/pii/S014067361061505X" class="uri">http://www.sciencedirect.com/science/article/pii/S014067361061505X</a>.</p>
+</div>
+<div>
+<p>Giesecke, Johan. 2017. <em>Modern Infectious Disease Epidemiology</em>. CRC Press.</p>
+</div>
+<div>
+<p>Grassly, Nicholas C, and Christophe Fraser. 2006. “Seasonal Infectious Disease Epidemiology.” <em>Proceedings of the Royal Society of London B: Biological Sciences</em> 273 (1600). The Royal Society: 2541–50.</p>
+</div>
+<div>
+<p>Gunawardena, Jeremy. 2014. “Models in Biology:‘accurate Descriptions of Our Pathetic Thinking’.” <em>BMC Biology</em> 12 (1): 29. <a href="https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-12-29" class="uri">https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-12-29</a>.</p>
+</div>
+<div>
+<p>Halloran, M. E., and I. M. Longini. 2014. “Emerging, Evolving, and Established Infectious Diseases and Interventions.” <em>Science</em> 345 (6202): 1292–4. doi:<a href="https://doi.org/10.1126/science.1254166">10.1126/science.1254166</a>.</p>
+</div>
+<div>
+<p>Heesterbeek, H., R. M. Anderson, V. Andreasen, S. Bansal, D. De Angelis, C. Dye, K. T. D. Eames, et al. 2015. “Modeling Infectious Disease Dynamics in the Complex Landscape of Global Health.” <em>Science</em> 347 (6227): aaa4339–aaa4339. doi:<a href="https://doi.org/10.1126/science.aaa4339">10.1126/science.aaa4339</a>.</p>
+</div>
+<div>
+<p>Heffernan, J M, R J Smith, and L M Wahl. 2005. “Perspectives on the Basic Reproductive Ratio.” <em>Journal of the Royal Society, Interface</em> 2 (4): 281–93. doi:<a href="https://doi.org/10.1098/rsif.2005.0042">10.1098/rsif.2005.0042</a>.</p>
+</div>
+<div>
+<p>Homer, Jack B., and Gary B. Hirsch. 2006. “System Dynamics Modeling for Public Health: Background and Opportunities.” <em>American Journal of Public Health</em> 96 (3): 452–58. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059</a>.</p>
+</div>
+<div>
+<p>Kajita, Emily, Justin T Okano, Erin N Bodine, Scott P Layne, and Sally Blower. 2007. “Modelling an Outbreak of an Emerging Pathogen.” <em>Nature Reviews. Microbiology</em> 5 (9): 700–709. doi:<a href="https://doi.org/10.1038/nrmicro1660">10.1038/nrmicro1660</a>.</p>
+</div>
+<div>
+<p>Keeling, M. J., and L. Danon. 2009. “Mathematical Modelling of Infectious Diseases.” <em>British Medical Bulletin</em> 92 (1): 33–42. doi:<a href="https://doi.org/10.1093/bmb/ldp038">10.1093/bmb/ldp038</a>.</p>
+</div>
+<div>
+<p>Keeling, Matt J, and Bryan T Grenfell. 2002. “Understanding the Persistence of Measles: Reconciling Theory, Simulation and Observation.” <em>Proceedings. Biological Sciences / The Royal Society</em> 269 (1489): 335–43.</p>
+</div>
+<div>
+<p>Keeling, Matt J, and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press.</p>
+</div>
+<div>
+<p>Keeling, Matt J., and Ken T D. Eames. 2005. “Networks and Epidemic Models.” <em>J R Soc Interface</em> 2 (4). Mathematics, University of Warwick, Institute Gibbet Hill Road, Coventry CV4 7AL, UK. m.j.keeling@warwick.ac.uk: 295–307. doi:<a href="https://doi.org/10.1098/rsif.2005.0051">10.1098/rsif.2005.0051</a>.</p>
+</div>
+<div>
+<p>Kilpatrick, A Marm, and Sarah E Randolph. 2012. “Drivers, Dynamics, and Control of Emerging Vector-Borne Zoonotic Diseases.” <em>Lancet (London, England)</em> 380 (9857): 1946–55. doi:<a href="https://doi.org/10.1016/S0140-6736(12)61151-9">10.1016/S0140-6736(12)61151-9</a>.</p>
+</div>
+<div>
+<p>King, Aaron A., Edward L. Ionides, Mercedes Pascual, and Menno J. Bouma. 2008. “Inapparent Infections and Cholera Dynamics.” <em>Nature</em> 454 (7206): 877–80. doi:<a href="https://doi.org/10.1038/nature07084">10.1038/nature07084</a>.</p>
+</div>
+<div>
+<p>Klepac, Petra, C Jessica E Metcalf, Angela R McLean, and Katie Hampson. 2013. “Towards the Endgame and Beyond: Complexities and Challenges for the Elimination of Infectious Diseases.” <em>Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences</em> 368 (1623): 20120137. doi:<a href="https://doi.org/10.1098/rstb.2012.0137">10.1098/rstb.2012.0137</a>.</p>
+</div>
+<div>
+<p>Lessler, Justin, Andrew S. Azman, M. Kate Grabowski, Henrik Salje, and Isabel Rodriguez-Barraquer. 2016. “Trends in the Mechanistic and Dynamic Modeling of Infectious Diseases.” <em>Current Epidemiology Reports</em> 3 (3): 212–22. doi:<a href="https://doi.org/10.1007/s40471-016-0078-4">10.1007/s40471-016-0078-4</a>.</p>
+</div>
+<div>
+<p>Li, Jing, Daniel Blakeley, and Robert J. Smith. 2011. “The Failure of R 0.” <em>Computational and Mathematical Methods in Medicine</em> 2011: 1–17. doi:<a href="https://doi.org/10.1155/2011/527610">10.1155/2011/527610</a>.</p>
+</div>
+<div>
+<p>Lipsitch, Marc, and Cécile Viboud. 2009. “Influenza Seasonality: Lifting the Fog.” <em>Proc Natl Acad Sci U S A</em> 106 (10). Department of Epidemiology, Harvard School of Public Health, Boston, MA 02130, USA. mlipsitc@hsph.harvard.edu: 3645–6. doi:<a href="https://doi.org/10.1073/pnas.0900933106">10.1073/pnas.0900933106</a>.</p>
+</div>
+<div>
+<p>Lofgren, E., N. H. Fefferman, Y. N. Naumov, J. Gorski, and E. N. Naumova. 2007. “Influenza Seasonality: Underlying Causes and Modeling Theories.” <em>Journal of Virology</em> 81 (11): 5429–36. doi:<a href="https://doi.org/10.1128/JVI.01680-06">10.1128/JVI.01680-06</a>.</p>
+</div>
+<div>
+<p>Luke, Douglas A, and Katherine A Stamatakis. 2012. “Systems Science Methods in Public Health: Dynamics, Networks, and Agents.” <em>Annual Review of Public Health</em> 33. Annual Reviews: 357–76.</p>
+</div>
+<div>
+<p>Luz, Paula M, Claudio J Struchiner, and Alison P Galvani. 2010. “Modeling Transmission Dynamics and Control of Vector-Borne Neglected Tropical Diseases.” <em>PLoS Neglected Tropical Diseases</em> 4 (10): e761. doi:<a href="https://doi.org/10.1371/journal.pntd.0000761">10.1371/journal.pntd.0000761</a>.</p>
+</div>
+<div>
+<p>Matthews, Louise, and Mark Woolhouse. 2005. “New Approaches to Quantifying the Spread of Infection.” <em>Nature Reviews. Microbiology</em> 3 (7): 529–36. doi:<a href="https://doi.org/10.1038/nrmicro1178">10.1038/nrmicro1178</a>.</p>
+</div>
+<div>
+<p>May, R. M. 2004. “Uses and Abuses of Mathematics in Biology.” <em>Science</em> 303 (5659): 790–93. doi:<a href="https://doi.org/10.1126/science.1094442">10.1126/science.1094442</a>.</p>
+</div>
+<div>
+<p>May, Robert M, Sunetra Gupta, and Angela R McLean. 2001. “Infectious Disease Dynamics: What Characterizes a Successful Invader?” <em>Philosophical Transactions of the Royal Society of London B: Biological Sciences</em> 356 (1410). The Royal Society: 901–10.</p>
+</div>
+<div>
+<p>McCallum, H., N. Barlow, and J. Hone. 2001. “How Should Pathogen Transmission Be Modelled?” <em>Trends Ecol Evol</em> 16 (6): 295–300.</p>
+</div>
+<div>
+<p>McCallum, Hamish, Andy Fenton, Peter J Hudson, Brian Lee, Beth Levick, Rachel Norman, Sarah E Perkins, Mark Viney, Anthony J Wilson, and Joanne Lello. 2017. “Breaking Beta: Deconstructing the Parasite Transmission Function.” <em>Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences</em> 372 (1719). doi:<a href="https://doi.org/10.1098/rstb.2016.0084">10.1098/rstb.2016.0084</a>.</p>
+</div>
+<div>
+<p>Metcalf, C J E, W J Edmunds, and J Lessler. 2015. “Six Challenges in Modelling for Public Health Policy.” <em>Epidemics</em> 10 (March): 93–96. doi:<a href="https://doi.org/10.1016/j.epidem.2014.08.008">10.1016/j.epidem.2014.08.008</a>.</p>
+</div>
+<div>
+<p>Metcalf, C Jessica E, and Justin Lessler. 2017. “Opportunities and Challenges in Modeling Emerging Infectious Diseases.” <em>Science (New York, N.Y.)</em> 357 (6347): 149–52. doi:<a href="https://doi.org/10.1126/science.aam8335">10.1126/science.aam8335</a>.</p>
+</div>
+<div>
+<p>Milwid, Rachael, Andreea Steriu, Julien Arino, Jane Heffernan, Ayaz Hyder, Dena Schanzer, Emma Gardner, et al. 2016. “Toward Standardizing a Lexicon of Infectious Disease Modeling Terms.” <em>Frontiers in Public Health</em> 4: 213. doi:<a href="https://doi.org/10.3389/fpubh.2016.00213">10.3389/fpubh.2016.00213</a>.</p>
+</div>
+<div>
+<p>Mossong, Joël, Niel Hens, Mark Jit, Philippe Beutels, Kari Auranen, Rafael Mikolajczyk, Marco Massari, et al. 2008. “Social Contacts and Mixing Patterns Relevant to the Spread of Infectious Diseases.” <em>PLoS Medicine</em> 5 (3): e74. <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074" class="uri">http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074</a>.</p>
+</div>
+<div>
+<p>Nelson, Kenrad E, and Carolyn Williams. 2013. <em>Infectious Disease Epidemiology</em>. Jones &amp; Bartlett Publishers.</p>
+</div>
+<div>
+<p>Ness, Roberta B., James S. Koopman, and Mark S. Roberts. 2007. “Causal System Modeling in Chronic Disease Epidemiology: A Proposal.” <em>Annals of Epidemiology</em> 17 (7): 564–68. doi:<a href="https://doi.org/10.1016/j.annepidem.2006.10.014">10.1016/j.annepidem.2006.10.014</a>.</p>
+</div>
+<div>
+<p>Newman, M. E. J. 2013. <em>Networks: An Introduction</em>. Reprint. with corr. Oxford [u.a.]: Oxford Univ. Press.</p>
+</div>
+<div>
+<p>Pascual, Mercedes, Menno J. Bouma, and Andrew P. Dobson. 2002. “Cholera and Climate: Revisiting the Quantitative Evidence.” <em>Microbes and Infection</em> 4 (2): 237–45. <a href="http://www.sciencedirect.com/science/article/pii/S1286457901015337" class="uri">http://www.sciencedirect.com/science/article/pii/S1286457901015337</a>.</p>
+</div>
+<div>
+<p>Paull, Sara H, Sejin Song, Katherine M McClure, Loren C Sackett, A Marm Kilpatrick, and Pieter TJ Johnson. 2012. “From Superspreaders to Disease Hotspots: Linking Transmission Across Hosts and Space.” <em>Frontiers in Ecology and the Environment</em> 10 (2). Wiley Online Library: 75–82.</p>
+</div>
+<div>
+<p>Peters, David H. 2014. “The Application of Systems Thinking in Health: Why Use Systems Thinking?” <em>Health Research Policy and Systems</em> 12 (1): 51. <a href="https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51" class="uri">https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51</a>.</p>
+</div>
+<div>
+<p>Potterat, John J., Helen Zimmerman-Rogers, Stephen Q. Muth, Richard B. Rothenberg, David L. Green, Jerry E. Taylor, Mandy S. Bonney, and Helen A. White. 1999. “Chlamydia Transmission: Concurrency, Reproduction Number, and the Epidemic Trajectory.” <em>American Journal of Epidemiology</em> 150 (12): 1331–9. <a href="https://academic.oup.com/aje/article-abstract/150/12/1331/53233" class="uri">https://academic.oup.com/aje/article-abstract/150/12/1331/53233</a>.</p>
+</div>
+<div>
+<p>Roberts, M G. 2007. “The Pluses and Minuses of R0.” <em>Journal of the Royal Society, Interface</em> 4 (16): 949–61. doi:<a href="https://doi.org/10.1098/rsif.2007.1031">10.1098/rsif.2007.1031</a>.</p>
+</div>
+<div>
+<p>Sánchez-Romero, Luz Maria, Joanne Penko, Pamela G. Coxson, Alicia Fernández, Antoinette Mason, Andrew E. Moran, Leticia Ávila-Burgos, Michelle Odden, Simón Barquera, and Kirsten Bibbins-Domingo. 2016. “Projected Impact of Mexico’s Sugar-Sweetened Beverage Tax Policy on Diabetes and Cardiovascular Disease: A Modeling Study.” <em>PLoS Medicine</em> 13 (11): e1002158. <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002158" class="uri">http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002158</a>.</p>
+</div>
+<div>
+<p>Shaman, Jeffrey, Virginia E. Pitzer, Cécile Viboud, Bryan T. Grenfell, and Marc Lipsitch. 2010. “Absolute Humidity and the Seasonal Onset of Influenza in the Continental United States.” <em>PLoS Biol</em> 8 (2). College of Oceanic; Atmospheric Sciences, Oregon State University, Corvallis, Oregon, United States of America.: e1000316. doi:<a href="https://doi.org/10.1371/journal.pbio.1000316">10.1371/journal.pbio.1000316</a>.</p>
+</div>
+<div>
+<p>Smith, David L, T Alex Perkins, Robert C Reiner, Christopher M Barker, Tianchan Niu, Luis Fernando Chaves, Alicia M Ellis, et al. 2014. “Recasting the Theory of Mosquito-Borne Pathogen Transmission Dynamics and Control.” <em>Transactions of the Royal Society of Tropical Medicine and Hygiene</em> 108 (4): 185–97. doi:<a href="https://doi.org/10.1093/trstmh/tru026">10.1093/trstmh/tru026</a>.</p>
+</div>
+<div>
+<p>State, Penn. 2014. “Epidemics - the Dynamics of Infectious Diseases.” <a href="https://www.coursera.org/learn/epidemics" class="uri">https://www.coursera.org/learn/epidemics</a>.</p>
+</div>
+<div>
+<p>Stein, Richard A. 2011. “Super-Spreaders in Infectious Diseases.” <em>International Journal of Infectious Diseases : IJID : Official Publication of the International Society for Infectious Diseases</em> 15 (8): e510–e513. doi:<a href="https://doi.org/10.1016/j.ijid.2010.06.020">10.1016/j.ijid.2010.06.020</a>.</p>
+</div>
+<div>
+<p>Sterman, John D. 2006. “Learning from Evidence in a Complex World.” <em>American Journal of Public Health</em> 96 (3): 505–14. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043</a>.</p>
+</div>
+<div>
+<p>Stone, Lewi, Ronen Olinky, and Amit Huppert. 2007. “Seasonal Dynamics of Recurrent Epidemics.” <em>Nature</em> 446 (7135): 533–36. doi:<a href="https://doi.org/10.1038/nature05638">10.1038/nature05638</a>.</p>
+</div>
+<div>
+<p>University, Hong Kong. 2015. “Epidemics.” <em>EdX</em>. <a href="https://www.edx.org/course/epidemics-hkux-hku01x-0" class="uri">https://www.edx.org/course/epidemics-hkux-hku01x-0</a>.</p>
+</div>
+<div>
+<p>Viboud, Cécile, Theresa Tam, Douglas Fleming, Andreas Handel, Mark A. Miller, and Lone Simonsen. 2006. “Transmissibility and Mortality Impact of Epidemic and Pandemic Influenza, with Emphasis on the Unusually Deadly 1951 Epidemic.” <em>Vaccine</em> 24 (44-46). Fogarty International Center, National Institutes of Health, Bethesda, MD 20892, USA. viboudc@mail.nih.gov: 6701–7. doi:<a href="https://doi.org/10.1016/j.vaccine.2006.05.067">10.1016/j.vaccine.2006.05.067</a>.</p>
+</div>
+<div>
+<p>Vynnycky, Emilia, and Richard White. 2010. <em>An Introduction to Infectious Disease Modelling</em>. Oxford University Press.</p>
+</div>
+<div>
+<p>Wallinga, J., and M. Lipsitch. 2007. “How generation intervals shape the relationship between growth rates and reproductive numbers.” <em>Proceedings of the Royal Society B</em> 274 (1609): 599–604.</p>
+</div>
+<div>
+<p>Weber, Thomas P, and Nikolaos I Stilianakis. 2008. “Inactivation of Influenza a Viruses in the Environment and Modes of Transmission: A Critical Review.” <em>The Journal of Infection</em> 57 (5): 361–73. doi:<a href="https://doi.org/10.1016/j.jinf.2008.08.013">10.1016/j.jinf.2008.08.013</a>.</p>
+</div>
+<div>
+<p>Woolhouse, M E, C Dye, J F Etard, T Smith, J D Charlwood, G P Garnett, P Hagan, et al. 1997. “Heterogeneities in the Transmission of Infectious Agents: Implications for the Design of Control Programs.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 94 (1): 338–42.</p>
+</div>
+<div>
+<p>Yorke, J. A., H. W. Hethcote, and A. Nold. 1978. “Dynamics and Control of the Transmission of Gonorrhea.” <em>Sex Transm Dis</em> 5 (2). Institute for Physical Science; Technology, University of Maryland, College Park, USA.: 51–56.</p>
+</div>
+</div>
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-cortez13">
-<p>Cortez, Michael H., and Joshua S. Weitz. 2013. “Distinguishing Between Indirect and Direct Modes of Transmission Using Epidemiological Time Series.” <em>The American Naturalist</em> 181 (2): E43–E52. doi:<a href="https://doi.org/10.1086/668826">10.1086/668826</a>.</p>
+<div id="ref-newman13">
+<p>Newman, M. E. J. 2013. <em>Networks: An Introduction</em>. Reprint. with corr. Oxford [u.a.]: Oxford Univ. Press.</p>
 </div>
-<div id="ref-ewald91">
-<p>Ewald, P W. 1991. “Waterborne Transmission and the Evolution of Virulence Among Gastrointestinal Bacteria.” <em>Epidemiology and Infection</em> 106 (1): 83–119.</p>
+<div id="ref-keeling05">
+<p>Keeling, Matt J., and Ken T D. Eames. 2005. “Networks and Epidemic Models.” <em>J R Soc Interface</em> 2 (4). Mathematics, University of Warwick, Institute Gibbet Hill Road, Coventry CV4 7AL, UK. m.j.keeling@warwick.ac.uk: 295–307. doi:<a href="https://doi.org/10.1098/rsif.2005.0051">10.1098/rsif.2005.0051</a>.</p>
 </div>
-<div id="ref-brankston07">
-<p>Brankston, Gabrielle, Leah Gitterman, Zahir Hirji, Camille Lemieux, and Michael Gardam. 2007. “Transmission of Influenza A in Human Beings.” <em>The Lancet Infectious Diseases</em> 7 (4): 257–65. <a href="http://www.sciencedirect.com/science/article/pii/S1473309907700294" class="uri">http://www.sciencedirect.com/science/article/pii/S1473309907700294</a>.</p>
+<div id="ref-bansal07">
+<p>Bansal, Shweta, Bryan T. Grenfell, and Lauren Ancel Meyers. 2007. “When Individual Behaviour Matters: Homogeneous and Network Models in Epidemiology.” <em>J R Soc Interface</em> 4 (16). Computational; Applied Mathematics, Institute for Computational Engineering; Sciences, University of Texas at Austin, 1 University Station, C0200, Austin, TX 78712, USA.: 879–91. doi:<a href="https://doi.org/10.1098/rsif.2007.1100">10.1098/rsif.2007.1100</a>.</p>
 </div>
-<div id="ref-weber08">
-<p>Weber, Thomas P, and Nikolaos I Stilianakis. 2008. “Inactivation of Influenza a Viruses in the Environment and Modes of Transmission: A Critical Review.” <em>The Journal of Infection</em> 57 (5): 361–73. doi:<a href="https://doi.org/10.1016/j.jinf.2008.08.013">10.1016/j.jinf.2008.08.013</a>.</p>
+<div id="ref-bansal10">
+<p>Bansal, Shweta, Jonathan Read, Babak Pourbohloul, and Lauren Ancel Meyers. 2010. “The Dynamic Nature of Contact Networks in Infectious Disease Epidemiology.” <em>J Biol Dyn</em> 4 (5). Center for Infectious Disease Dynamics, The Pennsylvania State University, University Park, PA, USA. shweta@sbansal.com: 478–89. doi:<a href="https://doi.org/10.1080/17513758.2010.503376">10.1080/17513758.2010.503376</a>.</p>
 </div>
 </div>
             </section>
@@ -392,8 +657,8 @@
           </div>
         </div>
       </div>
-<a href="modes-of-direct-transmission.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="vector-borne-id-transmission.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="evolutionary-dynamics.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

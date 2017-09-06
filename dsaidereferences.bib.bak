@@ -4535,7 +4535,6 @@
   volume          = {57},
   pages           = {361--373},
   month           = nov,
-  __markedentry   = {[andreas:]},
   abstract        = {The relative importance of airborne, droplet and contact transmission of influenza A virus and the efficiency of control measures depends among other factors on the inactivation of viruses in different environmental media. We systematically review available information on the environmental inactivation of influenza A viruses and employ information on infectious dose and results from mathematical models to assess transmission modes. Daily inactivation rate constants differ by several orders of magnitude: on inanimate surfaces and in aerosols daily inactivation rates are in the order of 1-10(2), on hands in the order of 10(3). Influenza virus can survive in aerosols for several hours, on hands for a few minutes. Nasal infectious dose of influenza A is several orders of magnitude larger than airborne infectious dose. The airborne route is a potentially important transmission pathway for influenza in indoor environments. The importance of droplet transmission has to be reassessed. Contact transmission can be limited by fast inactivation of influenza virus on hands and is more so than airborne transmission dependent on behavioral parameters. However, the potentially large inocula deposited in the environment through sneezing and the protective effect of nasal mucus on virus survival could make contact transmission a key transmission mode.},
   citation-subset = {IM},
   completed       = {2008-11-24},
@@ -4565,7 +4564,7 @@
   volume          = {108},
   pages           = {185--197},
   month           = apr,
-  __markedentry   = {[andreas:6]},
+  __markedentry   = {[andreas:]},
   abstract        = {Mosquito-borne diseases pose some of the greatest challenges in public health, especially in tropical and sub-tropical regions of the world. Efforts to control these diseases have been underpinned by a theoretical framework developed for malaria by Ross and Macdonald, including models, metrics for measuring transmission, and theory of control that identifies key vulnerabilities in the transmission cycle. That framework, especially Macdonald's formula for R0 and its entomological derivative, vectorial capacity, are now used to study dynamics and design interventions for many mosquito-borne diseases. A systematic review of 388 models published between 1970 and 2010 found that the vast majority adopted the Ross-Macdonald assumption of homogeneous transmission in a well-mixed population. Studies comparing models and data question these assumptions and point to the capacity to model heterogeneous, focal transmission as the most important but relatively unexplored component in current theory. Fine-scale heterogeneity causes transmission dynamics to be nonlinear, and poses problems for modeling, epidemiology and measurement. Novel mathematical approaches show how heterogeneity arises from the biology and the landscape on which the processes of mosquito biting and pathogen transmission unfold. Emerging theory focuses attention on the ecological and social context for mosquito blood feeding, the movement of both hosts and mosquitoes, and the relevant spatial scales for measuring transmission and for modeling dynamics and control.},
   citation-subset = {IM},
   completed       = {2014-10-29},
@@ -4586,6 +4585,20 @@
   pubstatus       = {ppublish},
   revised         = {2017-02-20},
   timestamp       = {2017.08.24},
+}
+
+@Article{may01,
+  author        = {May, Robert M and Gupta, Sunetra and McLean, Angela R},
+  title         = {Infectious disease dynamics: what characterizes a successful invader?},
+  journal       = {Philosophical Transactions of the Royal Society of London B: Biological Sciences},
+  year          = {2001},
+  volume        = {356},
+  number        = {1410},
+  pages         = {901--910},
+  __markedentry = {[andreas:6]},
+  owner         = {andreas},
+  publisher     = {The Royal Society},
+  timestamp     = {2017.09.06},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
