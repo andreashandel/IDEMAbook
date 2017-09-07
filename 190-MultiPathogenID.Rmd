@@ -1,47 +1,66 @@
 # Dynamics of Multiple Pathogens
 
 ##Overview and Learning Objectives
-In this chapter, we will discuss a scenario where more than one infectious disease is considered simultaneously.
-
+In this chapter, we will discuss scenarios where more than one infectious disease is considered simultaneously.
 
 The learning objectives for this chapter are:
 
-* 
+* Know important multi-ID systems
+* Understand how ID can interact
+
 
 ##Introduction
-So far, we focused on a single ID.
-
-
+So far, we focused on a single ID at a time. The main reason for this is simplicity. A single ID is already difficult to study and leads to complex dynamics. It makes sense to first study and understand individual IDs before including further IDs. That said, there are always many pathogens present at the same time, and infection with more than one ID is very common. This is true in the developed world with a fairly low ID burden, and even more so in developing countries. It is thus often useful to consider systems with more than 1 ID.
 
 
 ##Interactions of ID
+Sometimes, different ID do not interact, i.e. being infected with one does not impact the susceptibility or course of infection for another ID. It is likely that some amount of interaction occurs for almost all ID, mediated by the immune response. However, unless the IDs are fairly commmon and the interaction effect is strong, it is often hard to determine if and how IDs affect each other. As such, we know how some ID interact (e.g. TB and HIV) but for most ID, we have very little knowledge. 
+
+###HIV-TB interactions
+
+
+###Malaria-HIV interactions
+
+
+###Influenza-Strep interactions
+The interaction of influenza with some bacteria, and most notably Streptococcus pneumonia, has been somewhat well studied.
+
 
 
 
 ##Multiple ID and control
-While the importance of interactions between IDs is recognized, a multi-ID approach to intervention is often not as common as it probably should be.
+If multiple ID are present, it makes sense to try and implement control strategies against as many of them as possible. This is true both if ID interact and even if they do not and both exert their burden independently. Unfortunately, given the way health systems are structured and funded, it is still often the case that interventions target a single ID at a time. E.g. a campaign against malaria focuses solely on malaria treatment, even though many of the patients probably also have TB or some helminth infections and should be tested and treated for those diseases at the same time. The one important exception is HIV. HIV testing and treatment is somewhat common even if a study or health campaign focuses on a different disease. Having a more wide-spread multi-ID approach to control would very likely be highly effective since for many ID, individuals who are likely to get infected with one are also likely to get infected with other IDs (e.g. due to general poor nutritional and sanitary conditions, low socioeconomic and educational level, general risk behavior). One could therefore reach and treat different ID in an efficient way. Public health is slowly moving into this direction.
+
+Some ways in which multiple IDs are controlled are almost accidental. It is well known that better education, better nutrition, better standard of living, improved sanitation and housing all reduce morbidity and mortality to a large number of diseases. As developing countries become richer and people can escape extreme poverty, the incidence of many ID will fall. This was the trajectory many developed countries were on, e.g. TB incidence in Europe was falling rapidly even before the introduction of anti-TB drugs. As more countries will become developed, the ID burden will decline (and likely with it, "wealth diseases" like obesity will rise).
 
 
-##Modeling multiple ID
+
+
+##Modeling multiple ID {#myadvancedbox}
 The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated bits are to properly model any potential interactions between IDs.
-
-
-![Example of a model that considers 2 ID.]./images/multipathogenmodel.png)
-
-
 As mentioned previously, more compartments means bigger models. Those are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many important 2-ID modeling studies exist.
+
+![Example of a model that considers 2 ID.](./images/multipathogenmodel.png)
+
+
+
 
 
 
 ##Summary and Cartoon
-This module provided a brief discussion of multi-pathogen systems. 
+This chapter discussed multi-pathogen systems. 
 
-![Couldn't find a really good cartoon - that's the best 'heterogeneity' one I had.](../media/crazyvenndiagram.gif)
+
+![I don't have a topical cartoon, so instead just a random one. Let me know if you find a suitable one!](./images/xkcd-sick_day.png)
 
 ##Exercises
 * The _HMulti-pathogen dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
-* Read the article 
+* Read the article "Long-term measles-induced immunomodulation increases overall childhood infectious disease mortality" by Mina et al [@mina15].
+* Find 2 ID of your choice other than the 'big ones' (HIV-TB, HIV-Malaria, etc.) and see what you can find about potential interactions between those diseases. Write a summary of your findings.
+
 
 ## Further Resources
+
+
 
 ##References
