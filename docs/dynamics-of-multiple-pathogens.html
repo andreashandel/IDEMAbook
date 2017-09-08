@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="introduction-to-the-dynamical-systems-approach-to-infectious-disease-epidemiology.html">
+<link rel="prev" href="host-heterogeneity.html">
+<link rel="next" href="stochastic-dynamics-and-extinctions.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -306,62 +306,120 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="overview-of-this-book" class="section level1">
-<h1><span class="header-section-number">1</span> Overview of this book</h1>
-<p>This book discusses infectious disease epidemiology by taking a <em>(dynamical) systems approach</em>.</p>
-<div id="rationale-for-this-book" class="section level2">
-<h2><span class="header-section-number">1.1</span> Rationale for this book</h2>
-<p>Infectious disease epidemiology is the oldest area of epidemiology and public health. As such, it is well studied, often taught, and good resources exist. So why another book on that topic?</p>
-<p>While there are plenty of infectious disease epidemiology books that cover the topic from a classical epidemiological perspective, such an approach often ignores or minimizes the importance of interactions.</p>
-<p>On the other side, the well-developed field of infectious disease modeling has its main focus on studying the interactions and resulting dynamics of ID. Good text books exist, such as <span class="citation">(Anderson and May <a href="#ref-anderson91">1991</a>, <span class="citation">Diekmann and Heesterbeek (<a href="#ref-diekmann00">2000</a>)</span>, <span class="citation">Keeling and Rohani (<a href="#ref-keeling08">2008</a>)</span>, <span class="citation">Vynnycky and White (<a href="#ref-vynnycky10">2010</a>)</span>)</span>, but require a strong quantitative and mathematical background from the student.</p>
-<p>This book is intended to fill the gap. Infectious disease topics are discussed from a <em>dynamical systems perspective</em>, but without a strong emphasis on teaching modeling - though we believe any modern infectious disease epidemiologist needs to have some familiarity with models, and as such, this book contains models and equations - but does not try to teach the student to become a modeler, instead the focus is on understanding the modeling perspective and becoming an <em>educated consumer</em> of models.</p>
+<div id="dynamics-of-multiple-pathogens" class="section level1">
+<h1><span class="header-section-number">12</span> Dynamics of Multiple Pathogens</h1>
+<div id="overview-and-learning-objectives-10" class="section level2">
+<h2><span class="header-section-number">12.1</span> Overview and Learning Objectives</h2>
+<p>In this chapter, we will discuss scenarios where more than one infectious disease is considered simultaneously.</p>
+<p>The learning objectives for this chapter are:</p>
+<ul>
+<li>Know important multi-ID systems</li>
+<li>Understand how ID can interact</li>
+</ul>
 </div>
-<div id="what-this-book-does-and-does-not-cover" class="section level2">
-<h2><span class="header-section-number">1.2</span> What this book does and does not cover</h2>
-<p>This book does not teach basic concepts of epidemiology. We assume readers are familiar with basic ideas such as incidence and prevalence, basic study design such as cohort and case-control studies and clinical trials, and other basic epidemiological concepts. For readers unfamiliar with these ideas, we suggest e.g. <span class="citation">(Giesecke <a href="#ref-giesecke17">2017</a>)</span>.</p>
-<p>This book does also not teach much about specific infectious diseases. While many different infectious diseases appear in this book, the goal is not to describe any one in much detail. Instead, they appear as examples of general dynamical patterns and concepts the book covers. For information on the epidemiology of specific infectious diseases, good resources are e.g. <span class="citation">(Nelson and Williams <a href="#ref-nelson13">2013</a>)</span>.</p>
-<p>Finally, while this book takes a modeling perspective, it does not intend to teach modeling. For anyone interested in learning how to build and analyze their own infectious disease models - a skill we highly recommend learning - we suggest e.g. <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>,<span class="citation">Vynnycky and White (<a href="#ref-vynnycky10">2010</a>)</span>)</span>.</p>
-<p>Maybe the material closest in approach to this book is not another book but the online course “Dynamics of Infectious Diseases” developed and taught by multiple faculty members at Penn State University and hosted on Coursera <span class="citation">(State <a href="#ref-epimooc">2014</a>)</span>. This course is free to take, and I can strongly recommend it. Another online course that has been offered in the past through edX is “Epidemics” from Hong Kong University <span class="citation">(University <a href="#ref-hkepidemics">2015</a>)</span>.</p>
+<div id="introduction-10" class="section level2">
+<h2><span class="header-section-number">12.2</span> Introduction</h2>
+<p>So far, we focused on a single ID at a time. The main reason for this is simplicity. A single ID is already difficult to study and leads to complex dynamics. It makes sense to first study and understand individual IDs before including further IDs. That said, there are always many pathogens present at the same time, and infection with more than one ID is very common <span class="citation">(Petney and Andrews <a href="#ref-petney98">1998</a>)</span>. This is true in the developed world with a fairly low ID burden, and even more so in developing countries. It is thus often useful to consider systems with more than one ID.</p>
 </div>
-<div id="how-to-use-this-book" class="section level2">
-<h2><span class="header-section-number">1.3</span> How to use this book</h2>
-<p>Each chapter deals with a different topic concerning infectious diseases and their dynamics at the population level. While I assume that the reader goes through the text linearly, and therefore occasionally reference topics discussed in previous chapters, it is likely possible to read the chapters out of order and as needed refer to previous sections to the book if they are mentioned.</p>
-<p>The idea is that this material can be learned without the need to rely on advanced mathematics or computer modeling. That said, this book still contains models and equations. In the case where this material is advanced, it is placed in a special text box. It is possible to skip over those boxes and still follow everything else.</p>
+<div id="interactions-of-id" class="section level2">
+<h2><span class="header-section-number">12.3</span> Interactions of ID</h2>
+<p>Sometimes, different ID do not interact, i.e. being infected with one does not impact the susceptibility or course of infection for another ID. It is likely that some amount of interaction occurs for almost all ID, mediated by the immune response or through other mechanisms such as change in host behavior or host death <span class="citation">(Rohani et al. <a href="#ref-rohani03">2003</a>)</span>. However, unless the IDs are fairly commmon and the interaction effect is strong, it is often hard to determine if and how IDs affect each other. As such, we know how some ID interact (e.g. TB and HIV) but for most ID, we have very little knowledge. The next few sections briefly discuss some ID for which we have some understanding regarding interactions. This is not an exhaustive discussion, we instead focus on some of the best known interactions.</p>
+<div id="hiv-tb-interactions" class="section level3">
+<h3><span class="header-section-number">12.3.1</span> HIV-TB interactions</h3>
+<p>HIV is the pathogen that is best studied with regard to interaction with other pathogens <span class="citation">(Karp and Auwaerter <a href="#ref-karp07">2007</a><a href="#ref-karp07">b</a>; Karp and Auwaerter <a href="#ref-karp07a">2007</a><a href="#ref-karp07a">a</a>)</span>. Arguably of most public health interest and concern is the interaction with TB. Having an (untreated) HIV infection makes it much more likely for an individual latently infected with TB to develop TB disease. Further, once TB disease develops, an individual who is also infected with HIV generally has worse symptoms and a much higher chance of dying <span class="citation">(Pawlowski et al. <a href="#ref-pawlowski12">2012</a>)</span>. An important current question that is still not fully answered is if the suppression of HIV by antiretroviral therapy treatment removes all detrimental effects of HIV on TB progression, or if the presence of HIV, albeit at very low levels, still has a negative impact on TB disease progression.</p>
 </div>
-<div id="computer-exercises" class="section level2">
-<h2><span class="header-section-number">1.4</span> Computer exercises</h2>
-<p>Modern infectious disease epidemiology is inherently computational. As such, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter.</p>
+<div id="hiv-hepatitis-interactions" class="section level3">
+<h3><span class="header-section-number">12.3.2</span> HIV-Hepatitis interactions</h3>
+<p>Persons infected with HIV are also often at risk of having HBV or HCV infections. A major reason for this is that risk factors for these pathogens are very similar (e.g. drug use),</p>
 </div>
-<div id="references" class="section level2">
-<h2><span class="header-section-number">1.5</span> References</h2>
+<div id="influenza-strep-interactions" class="section level3">
+<h3><span class="header-section-number">12.3.3</span> Influenza-Strep interactions</h3>
+<p>The interaction of influenza with some bacteria, and most notably <em>Streptococcus pneumoniae</em>, has been somewhat well studied <span class="citation">(McCullers <a href="#ref-mccullers06">2006</a>)</span>. A number of careful animal experiments, as well as modeling studies have shown how influenza interacts with bacteria co-infections <span class="citation">(Smith and McCullers <a href="#ref-smith14a">2014</a>; Shrestha et al. <a href="#ref-shrestha13">2013</a>)</span>. In general, an influenza infection seems to make it more likely - during a short time window - to have a subsequent bacteria infection, and the outcome of the bacteria infection is often worse. It is still not well understood if there is also an effect of a respiratory bacteria infection on a potential secondary influenza infection <span class="citation">(Davis et al. <a href="#ref-davis12">2012</a>)</span>.</p>
+</div>
+</div>
+<div id="more-than-two-infectious-diseases" class="section level2">
+<h2><span class="header-section-number">12.4</span> More than two infectious diseases</h2>
+<p>While not much is known about interactions between any two ID (apart from the examples just described and a few others), even less is known for 2+ ID. It is fair to say that given our current level of knowledge about the biology and epidemiology of various ID, understanding interactions and dynamics of multiple ID is beyond our current scope, and will likely remain so for a while.</p>
+</div>
+<div id="multiple-id-and-control" class="section level2">
+<h2><span class="header-section-number">12.5</span> Multiple ID and control</h2>
+<p>If multiple ID are present, it makes sense to try and implement control strategies against as many of them as possible. This is true both if ID interact and even if they do not and both exert their burden independently. Unfortunately, given the way health systems are structured and funded, it is still often the case that interventions target a single ID at a time. E.g. a campaign against malaria focuses solely on malaria treatment, even though many of the patients probably also have TB or some helminth infections and should be tested and treated for those diseases at the same time. The one important exception is HIV. HIV testing and treatment is somewhat common even if a study or health campaign focuses on a different disease. Having a more wide-spread multi-ID approach to control would very likely be highly effective since for many ID, individuals who are likely to get infected with one are also likely to get infected with other IDs (e.g. due to general poor nutritional and sanitary conditions, low socioeconomic and educational level, general risk behavior). One could therefore reach and treat different ID in an efficient way. Public health is slowly moving into this direction.</p>
+<p>Some ways in which multiple IDs are controlled are almost accidental. It is well known that better education, better nutrition, better standard of living, improved sanitation and housing all reduce morbidity and mortality to a large number of diseases. As developing countries become richer and people can escape extreme poverty, the incidence of many ID will fall. This was the trajectory many developed countries were on, e.g. TB incidence in Europe was falling rapidly even before the introduction of anti-TB drugs. As more countries will become developed, the ID burden will decline (and likely with it, “wealth diseases” like obesity will rise).</p>
+</div>
+<div id="myadvancedbox" class="section level2">
+<h2><span class="header-section-number">12.6</span> Modeling multiple ID</h2>
+<p>The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated bits are to properly model any potential interactions between IDs. As mentioned previously, more compartments means bigger models. Those are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many important 2-ID modeling studies exist.</p>
+<div class="figure">
+<img src="images/multipathogenmodel.png" alt="Example of a model that considers 2 ID." />
+<p class="caption">Example of a model that considers 2 ID.</p>
+</div>
+</div>
+<div id="summary-and-cartoon-10" class="section level2">
+<h2><span class="header-section-number">12.7</span> Summary and Cartoon</h2>
+<p>This chapter discussed multi-pathogen systems.</p>
+<div class="figure">
+<img src="images/xkcd-sick_day.png" alt="I don’t have a topical cartoon, so instead just a random one. Let me know if you find a suitable one!" />
+<p class="caption">I don’t have a topical cartoon, so instead just a random one. Let me know if you find a suitable one!</p>
+</div>
+</div>
+<div id="exercises-10" class="section level2">
+<h2><span class="header-section-number">12.8</span> Exercises</h2>
+<ul>
+<li>The <em>HMulti-pathogen dynamics</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>Read the article “Long-term measles-induced immunomodulation increases overall childhood infectious disease mortality” by Mina et al <span class="citation">(Mina et al. <a href="#ref-mina15">2015</a>)</span>.</li>
+<li>Find 2 ID of your choice other than the ‘big ones’ (HIV-TB, HIV-Malaria, etc.) and see what you can find about potential interactions between those diseases. Write a summary of your findings.</li>
+</ul>
+</div>
+<div id="further-resources-10" class="section level2">
+<h2><span class="header-section-number">12.9</span> Further Resources</h2>
+<ul>
+<li>The references mentioned in this chapter provide further information on specific topics.</li>
+<li>An interesting modeling study looking at potential interactions of HIV and Malaria is <span class="citation">(Abu-Raddad, Patnaik, and Kublin <a href="#ref-abu-raddad06">2006</a>)</span>.</li>
+<li>A review of possible interactions between TB and parasitic infections can be found in <span class="citation">(Li and Zhou <a href="#ref-li13">2013</a>)</span>.</li>
+</ul>
+</div>
+<div id="references-11" class="section level2">
+<h2><span class="header-section-number">12.10</span> References</h2>
 
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-anderson91">
-<p>Anderson, Roy M, and RM May. 1991. “Infectious Disease of Humans.” <em>Dynamics and Control</em>.</p>
+<div id="ref-petney98">
+<p>Petney, Trevor N, and Ross H Andrews. 1998. “Multiparasite Communities in Animals and Humans: Frequency, Structure and Pathogenic Significance.” <em>International Journal for Parasitology</em> 28 (3). Elsevier: 377–93.</p>
 </div>
-<div id="ref-diekmann00">
-<p>Diekmann, Odo, and Johan Andre Peter Heesterbeek. 2000. <em>Mathematical Epidemiology of Infectious Diseases: Model Building, Analysis and Interpretation</em>. Vol. 5. John Wiley &amp; Sons.</p>
+<div id="ref-rohani03">
+<p>Rohani, P, CJ Green, NB Mantilla-Beniers, and BT Grenfell. 2003. “Ecological Interference Between Fatal Diseases.” <em>Nature</em> 422 (6934). Nature Publishing Group: 885.</p>
 </div>
-<div id="ref-keeling08">
-<p>Keeling, Matt J, and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press.</p>
+<div id="ref-karp07">
+<p>Karp, Christopher L, and Paul G Auwaerter. 2007b. “Coinfection with Hiv and Tropical Infectious Diseases. Ii. Helminthic, Fungal, Bacterial, and Viral Pathogens.” <em>Clinical Infectious Diseases : An Official Publication of the Infectious Diseases Society of America</em> 45 (9): 1214–20. doi:<a href="https://doi.org/10.1086/522180">10.1086/522180</a>.</p>
 </div>
-<div id="ref-vynnycky10">
-<p>Vynnycky, Emilia, and Richard White. 2010. <em>An Introduction to Infectious Disease Modelling</em>. Oxford University Press.</p>
+<div id="ref-karp07a">
+<p>Karp, Christopher L, and Paul G Auwaerter. 2007a. “Coinfection with Hiv and Tropical Infectious Diseases. I. Protozoal Pathogens.” <em>Clinical Infectious Diseases : An Official Publication of the Infectious Diseases Society of America</em> 45 (9): 1208–13. doi:<a href="https://doi.org/10.1086/522181">10.1086/522181</a>.</p>
 </div>
-<div id="ref-giesecke17">
-<p>Giesecke, Johan. 2017. <em>Modern Infectious Disease Epidemiology</em>. CRC Press.</p>
+<div id="ref-pawlowski12">
+<p>Pawlowski, Andrzej, Marianne Jansson, Markus Sköld, Martin E Rottenberg, and Gunilla Källenius. 2012. “Tuberculosis and Hiv Co-Infection.” <em>PLoS Pathogens</em> 8 (2): e1002464. doi:<a href="https://doi.org/10.1371/journal.ppat.1002464">10.1371/journal.ppat.1002464</a>.</p>
 </div>
-<div id="ref-nelson13">
-<p>Nelson, Kenrad E, and Carolyn Williams. 2013. <em>Infectious Disease Epidemiology</em>. Jones &amp; Bartlett Publishers.</p>
+<div id="ref-mccullers06">
+<p>McCullers, Jonathan A. 2006. “Insights into the Interaction Between Influenza Virus and Pneumococcus.” <em>Clinical Microbiology Reviews</em> 19 (3): 571–82. doi:<a href="https://doi.org/10.1128/CMR.00058-05">10.1128/CMR.00058-05</a>.</p>
 </div>
-<div id="ref-epimooc">
-<p>State, Penn. 2014. “Epidemics - the Dynamics of Infectious Diseases.” <a href="https://www.coursera.org/learn/epidemics" class="uri">https://www.coursera.org/learn/epidemics</a>.</p>
+<div id="ref-smith14a">
+<p>Smith, Amber M, and Jonathan A McCullers. 2014. “Secondary Bacterial Infections in Influenza Virus Infection Pathogenesis.” <em>Current Topics in Microbiology and Immunology</em> 385: 327–56. doi:<a href="https://doi.org/10.1007/82_2014_394">10.1007/82_2014_394</a>.</p>
 </div>
-<div id="ref-hkepidemics">
-<p>University, Hong Kong. 2015. “Epidemics.” <em>EdX</em>. <a href="https://www.edx.org/course/epidemics-hkux-hku01x-0" class="uri">https://www.edx.org/course/epidemics-hkux-hku01x-0</a>.</p>
+<div id="ref-shrestha13">
+<p>Shrestha, Sourya, Betsy Foxman, Suzanne Dawid, Allison E Aiello, Brian M Davis, Joshua Berus, and Pejman Rohani. 2013. “Time and Dose-Dependent Risk of Pneumococcal Pneumonia Following Influenza: A Model for Within-Host Interaction Between Influenza and Streptococcus Pneumoniae.” <em>Journal of the Royal Society, Interface</em> 10 (86): 20130233. doi:<a href="https://doi.org/10.1098/rsif.2013.0233">10.1098/rsif.2013.0233</a>.</p>
+</div>
+<div id="ref-davis12">
+<p>Davis, Brian M, Allison E Aiello, Suzanne Dawid, Pejman Rohani, Sourya Shrestha, and Betsy Foxman. 2012. “Influenza and Community-Acquired Pneumonia Interactions: The Impact of Order and Time of Infection on Population Patterns.” <em>American Journal of Epidemiology</em> 175 (5): 363–67. doi:<a href="https://doi.org/10.1093/aje/kwr402">10.1093/aje/kwr402</a>.</p>
+</div>
+<div id="ref-mina15">
+<p>Mina, Michael J, C Jessica E Metcalf, Rik L de Swart, A D M E Osterhaus, and Bryan T Grenfell. 2015. “Long-Term Measles-Induced Immunomodulation Increases Overall Childhood Infectious Disease Mortality.” <em>Science (New York, N.Y.)</em> 348 (6235): 694–99. doi:<a href="https://doi.org/10.1126/science.aaa3662">10.1126/science.aaa3662</a>.</p>
+</div>
+<div id="ref-abu-raddad06">
+<p>Abu-Raddad, Laith J, Padmaja Patnaik, and James G Kublin. 2006. “Dual Infection with Hiv and Malaria Fuels the Spread of Both Diseases in Sub-Saharan Africa.” <em>Science (New York, N.Y.)</em> 314 (5805): 1603–6. doi:<a href="https://doi.org/10.1126/science.1132338">10.1126/science.1132338</a>.</p>
+</div>
+<div id="ref-li13">
+<p>Li, Xin-Xu, and Xiao-Nong Zhou. 2013. “Co-Infection of Tuberculosis and Parasitic Diseases in Humans: A Systematic Review.” <em>Parasites &amp; Vectors</em> 6 (March): 79. doi:<a href="https://doi.org/10.1186/1756-3305-6-79">10.1186/1756-3305-6-79</a>.</p>
 </div>
 </div>
             </section>
@@ -369,8 +427,8 @@
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="introduction-to-the-dynamical-systems-approach-to-infectious-disease-epidemiology.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="host-heterogeneity.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="stochastic-dynamics-and-extinctions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

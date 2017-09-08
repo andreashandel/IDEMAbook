@@ -13,18 +13,20 @@ The learning objectives for this chapter are:
 
 
 ##Introduction
-So far, we tracked hosts with respect to their infection status (susceptible, infected, symptomatic, recovered, etc.). We assumed that in all other respects, hosts are similar enough with regard to features that matter for ID dynamics and control that we did not have to consider them. That is of course at best a good approximation and at worst completely wrong. There are many characteristics that can affect how an ID interacts with a host. For instance for many ID, children and the elderly are more likely to get infected and might suffer more severe symptoms. For other ID, only specific groups are affected. For instance, only sexually active individuals are at risk of contracting a sexually transmitted infection (ignoring for a moment less common transmission routes such as e.g. blood transfusion for HIV). We will discuss some of these differences/heterogeneities between hosts and how they affect ID transmission and control in this module.
+So far, we tracked hosts with respect to their infection status (susceptible, infected, symptomatic, recovered, etc.). We assumed that hosts are similar enough with regard to any other characteristics that might matter for ID dynamics and control that we did not have to consider them. For instance we did not account for age, sex, pre-existing conditions or any other such potentially differentiating detail among hosts.
+
+That approach is of course at best a decent approximation and at worst completely wrong. There are many characteristics that can affect how an ID interacts with a host. For instance for many ID, children and the elderly are more likely to get infected and might suffer more severe symptoms. For other ID, only specific groups are affected. For instance, only sexually active individuals are at risk of contracting a sexually transmitted infection (ignoring for a moment less common transmission routes such as e.g. blood transfusion for HIV). We will discuss some of these differences/heterogeneities between hosts and how they affect ID transmission and control in this module.
 
 
 ##Types of host heterogeneity 
-We generally only care about differences in hosts as they relate to the infectious disease process. Consider a simple - maybe silly - example: Almost no infectious disease study (none that I know of) cares about a person's eye color. That's because this characteristic has - as far as we know - no effect on the interaction of host and ID. On the other hand, a very important characteristic that affects many IDs is age, and is therefore often taken into account when studying IDs. Other important broad categories that affect ID infection and spread are genetics and behavior.
+We generally only care about differences in hosts as they relate to the infectious disease process. Consider a simple - maybe silly - example: Almost no infectious disease study (none that I know of) cares about a person's hair color. That's because this characteristic has - as far as we know - no effect on the interaction of host and ID. On the other hand, a very important characteristic that affects many IDs is age, and age therefore needs to be often taken into account when studying IDs. Other important broad categories that affect ID infection and spread are genetics and behavior.
 
-Some differences in hosts might only affect a single component of the ID, e.g. the level of susceptibility to infection. Other host differences can affect multiple components, e.g. a sexually highly active person is more likely to contract an STI and more likely to transmit if they are infected.
-
-
+Some host characterisitcs might only affect a single component of the ID, e.g. the level of susceptibility to infection. Other host differences can affect multiple components, e.g. a sexually highly active person is more likely to contract an STI and more likely to transmit if they are infected.
 
 
-###Host heterogeneity examples {#mytextbox}
+
+
+###Host heterogeneity examples {#myexamplebox}
 There are several famous examples that show how differences in genetics impact ID. For instance persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a specific mutation in the FUT2 gene are much less likely to get infected with norovirus. It is likely that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.
 
 
@@ -36,7 +38,7 @@ There are several famous examples that show how differences in genetics impact I
 For the purpose of studying ID transmission dynamics, differences in the potential and ability of individual hosts to spread an ID are obviously of great importance. This idea of heterogeneity in transmission has been studied in several contexts and under different names. One of the first ideas was the concept of a core group, which was  first introduced for gonorrhea in
 the 1970s (see e.g. [@yorke78]). Core groups are subgroups in which transmission is higher compared to other groups. For many STI, transmission in the general population is low enough that the reproductive number is below 1. The question then is, why does that not lead to extinction of the ID? The answer is the core-group concept. There are small subgroups of individuals in which the ID has a reproductive number that is greater than 1. It can thus maintain itself in that population and from there continue to enter the general population.
 
-Once we have identified that different groups have different transmission behavior, it also becomes important to understand how individuals belonging to one of the groups interact with individuals of the other groups. This is often called the _mixing_ pattern between groups. We are most interested in the mixing and contact patterns that facilitate transmission for the ID under consideration. For instance it is well known that humans tend to have more contacts with others of the same age, e.g. chidren predominanly contacting other children. This is called _assortative_ mixing and such age-specific mixing is important for the transmission of many respiratory diseases. The opposite is _disassortative_ mixing. For instance for STI, most mixing occurs between individuals from the opposite sex (and there are also more contacts among individuals of similar age). If there is no mixing preference, it is called _random_ mixing. 
+Once we have identified that different groups have different transmission behavior, it also becomes important to understand how individuals belonging to one of the groups interact with individuals of the other groups. This is often called the _mixing_ pattern between groups. We are most interested in the mixing and contact patterns that facilitate transmission for the ID under consideration. For instance it is well known that humans tend to have more contacts with others of the same age, e.g. children predominanly contacting other children. This is called _assortative_ mixing and such age-specific mixing is important for the transmission of many respiratory diseases. The opposite is _disassortative_ mixing. For instance for STI, most mixing occurs between individuals from the opposite sex (and there are also more contacts among individuals of similar age). Therefore, for STI, mixing with regard to gender can be considered _disassortative_. However, it is also known that people who engage in sexually more risky behavior (e.g. more partners per year) tend to have more contacts with others that have a similar risk behavior, thus with regard to transmission and infection risk, STI often show _assortative_ mixing. If there is no mixing preference, it is called _random_ mixing. The _random_ mixing assumption is made imlicitly in any model that does not account for contact/transmission heterogeneity, e.g. the basic SIR model assumes _random_ mixing and contact patterns between susceptibles and infected, independent of any other characteristic.
 
 
 ##Heterogeneity in transmission - superspreaders
@@ -44,7 +46,7 @@ An equivalent concept to that of the core group, but applied to individuals, is 
 
 
 ##Heterogeneity and the reproductive number
-I already aluded to this above: If we have multiple host types, we need to extend the idea of the reproductive number. While it is possible to compute a reproductive number for the overall population, this quantity might not tell the full story. Instead, we might want to look at the reproductive number for subsets of the population, for instance for the general population (non-superspreaders) and core groups (the superspreaders). 
+If we have multiple host types, we need to extend the idea of the reproductive number. While it is possible to compute a reproductive number for the overall population, this quantity might not tell the full story. Instead, we might want to look at the reproductive number for subsets of the population, for instance for the general population (non-superspreaders) and core groups (the superspreaders). If one wants to compute an overall reproductive number, one needs to account for the population heterogeneity by including a measure for the variability of contacts in the equation for the reproductive number. See e.g. [@may01] for a discussion of this topic.
 
 
 ##Heterogeneity and ID control
@@ -53,25 +55,27 @@ Heterogeneity among hosts with respect to their susceptibility, infectiousness a
 
 
 ##Modeling Heterogeneity
-The basic concept of including host heterogeneity in models is fairly simple. We split/stratify the population according to the characteristic we want to take into account. For instance instead of lumping everyone into susceptible-infected-recovered categories, we can track males and females, or children and adults, separately. 
-
-![Example of including host heterogeneity in an SIR model.](./images/heterogeneityexample.png)
-
-The challenges with including more details in the model are not conceptual but instead logistical and potentially technical. Bigger models are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, it is often best to start with a simple model, and slowly introduce more host characteristics as they are deemed important for the ID setting and question one wants to address. 
-
-At some point, if we want to include a lot of detail, it might be worth switching the modeling framework. For compartmental models, hosts are grouped together according to characteristics. As we want to track more characteristics, the number of compartments we need to include increases. If the basic model has C compartments/variables, P parameters, and we model N subpopulations, we have C x N equations, and at least P x N (or more) parameters. For instance if we had a basic SEIR model (4 compartments), and wanted to track males and females in 4 different age groups, we had 4 x 2 x 4 = 32 compartments. Add to that possible extra stratifications according to say vaccination or treatment status, and one can easily end up with models of 50 or even more than 100 compartments. 
-
-It might then be worth deciding to stop using compartmental models and instead switch to a type of model that is called agent or individual based model (ABM/IBM). In such models, each individual host is modeled and tracked individually. We can give everyone as many different characteristics as we want. This makes the model very flexible and potentially very realistic. The downside of these ABM is that they tend to be complex, harder to program, take a long time to run. Further, for detailed models lots of parameter estimates are needed and they are often not available, leading to potentially large uncertainty in model predictions. Also, it is hard to do any kind of statistal inference with ABM. Because of these disadvantages, the compartmental modeling framework is still the most frequently used one and a good starting point for most situations and questions. For ID where we know a lot and want detailed predictions (e.g. influenza), ABM are becoming more common. 
+The basic concept of including host heterogeneity in models is fairly straightforward. We simply stratify the population according to the characteristic we want to take into account. For instance instead of lumping everyone into susceptible-infected-recovered categories, we can track males and females, or children and adults, separately. Figure \@ref(fig:heterogeneity) illustrates this. 
 
 
+```{r heterogeneity,  fig.cap='Example of including host heterogeneity in an SIR model.', echo=FALSE}
+knitr::include_graphics("./images/heterogeneityexample.png")
+```
+
+
+The challenges with including more details in the model are not conceptual but instead logistical and potentially technical. Bigger models are harder to formulate and implement, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, it is often best to start with a simple model, and slowly introduce host characteristics as they are deemed important for the ID setting and question one wants to address. 
+
+At some point, if we want to include a lot of detail, it might be worth switching the modeling framework. For compartmental models, hosts are grouped together according to characteristics. As we want to track more characteristics, the number of compartments we need to include increases. If the basic model has C compartments/variables, P parameters, and we model N subpopulations, we have C x N equations, and at least P x N (or more) parameters. For instance if we had a basic SEIR model (4 compartments), and wanted to track males and females in 4 different age groups, we had 4 x 2 x 4 = 32 compartments. If we had additional compartments to track say vaccination or treatment status, one can end up with models of more than 50 compartments, sometimes even going into the hundreds.
+
+Once the number of compartments gets too large, it might then be worth deciding to stop using compartmental models and instead switch to a type of model that is called agent or individual based model (ABM/IBM). In such models, each individual host is modeled and tracked individually. We can give everyone as many different characteristics as we want. This makes the model very flexible and potentially very realistic. The downside of these ABM is that they tend to be more complex than compartmental models, are generally much more difficult to code, and often take a long time to run, especially if one wants to model a large population. Further, for detailed models lots of parameter estimates are needed and they are often not available, leading to potentially large uncertainty in model predictions. Also, it is hard to do any kind of statistal inference with ABM. Because of these disadvantages, the compartmental modeling framework is still the most frequently used one and a good starting point for most situations and questions. For ID where we know a lot and want detailed predictions (e.g. influenza), ABM are becoming more common. 
 
 
 
 ##Summary and Cartoon
-This module provided a brief discussion of host heterogeneity, how to consider it in studies, and its impact on transmission and control.
+This chapter provided a brief discussion of host heterogeneity, how to consider it in studies, and its impact on transmission and control. We also discussed how to include heterogeneity into models.
 
 
-![Couldn't find a really good cartoon - that's the best 'heterogeneity' one I had.](../media/crazyvenndiagram.gif)
+![That's the best 'heterogeneity' cartoon I have - let me know if you know a better one!](./images/crazyvenndiagram.gif)
 
 
 ##Exercises
@@ -80,6 +84,11 @@ This module provided a brief discussion of host heterogeneity, how to consider i
 
 
 ## Further Resources
+* Good further discussions of the superspreader concept can be found in [@galvani05; @lloyd-smith05; @stein11].
+* The impact of host heterogeneity on the reproductive number is for instance discussed in [@may01], an application to Chlamydia is provided in [@potterat99].
+* An influential study that collected detailed information on contact patterns using a diary approach is [@mossong08].
+* General discussions of transmission heterogeneity are given in [@matthews05; @paull12].
+* Host heterogeneity and control is for instance discussed in [@yorke78; @woolhouse97].
 
 ##References
 
