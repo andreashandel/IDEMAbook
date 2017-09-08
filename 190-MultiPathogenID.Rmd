@@ -18,11 +18,10 @@ Sometimes, different ID do not interact, i.e. being infected with one does not i
 
 
 ###HIV-TB interactions
-HIV is the pathogen that is best studied with regard to interaction with other pathogens [@karp07; @karp07a]. Arguably of most public health interest and concern is the interaction with TB. Having an (untreated) HIV infection makes it much more likely for an individual latently infected with TB to develop TB disease. Further, once TB disease develops, an individual who is also infected with HIV generally has worse symptoms and a much higher chance of dying [@pawlowski12]. An important current question that is still not fully answered is if the suppression of HIV by antiretroviral therapy treatment removes all detrimental effects of HIV on TB progression, or if the presence of HIV, albeit at very low levels, still has a negative impact on TB disease progression.
+HIV is the pathogen that is best studied with regard to interaction with other pathogens [@karp07; @karp07a; @griffiths11]. Arguably of most public health interest and concern is the interaction with TB. Having an (untreated) HIV infection makes it much more likely for an individual latently infected with TB to develop TB disease. Further, once TB disease develops, an individual who is also infected with HIV generally has worse symptoms and a much higher chance of dying [@pawlowski12]. An important current question that is still not fully answered is if the suppression of HIV by antiretroviral therapy treatment removes all detrimental effects of HIV on TB progression, or if the presence of HIV, albeit at very low levels, still has a negative impact on TB disease progression.
 
 ###HIV-Hepatitis interactions
-Persons infected with HIV are also often at risk of having HBV or HCV infections. A major reason for this is that risk factors for these pathogens are very similar (e.g. drug use), 
-
+Persons infected with HIV are also often at risk of having HBV or HCV infections. A major reason for this is that risk factors for these pathogens are very similar (e.g. drug use) [@sulkowski08]. Co-infection leads to faster rate of liver failure [@chen14]. If HBV or HCV leads to faster progression to AIDS and HIV-mediated death is unclear [@kim09]. It seems that with antiretroviral therapy and the new drugs against viral hepatitis, the impact of this co-infection on health can be minimized.    
 
 ###Influenza-Strep interactions
 The interaction of influenza with some bacteria, and most notably _Streptococcus pneumoniae_, has been somewhat well studied [@mccullers06]. A number of careful animal experiments, as well as modeling studies have shown how influenza interacts with bacteria co-infections [@smith14a; @shrestha13]. In general, an influenza infection seems to make it more likely - during a short time window - to have a subsequent bacteria infection, and the outcome of the bacteria infection is often worse. It is still not well understood if there is also an effect of a respiratory bacteria infection on a potential secondary influenza infection [@davis12].
@@ -40,11 +39,11 @@ Some ways in which multiple IDs are controlled are almost accidental. It is well
 
 ##Modeling multiple ID {#myadvancedbox}
 The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated bits are to properly model any potential interactions between IDs.
-As mentioned previously, more compartments means bigger models. Those are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many important 2-ID modeling studies exist.
+As mentioned previously, more compartments means bigger models. Those are harder to write, more difficult to analyze, and we need estimates for each model parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many important 2-ID modeling studies exist. Figure \@ref(fig:coinfection) shows the diagram for a 2 ID model. 
 
-![Example of a model that considers 2 ID.](./images/multipathogenmodel.png)
-
-
+```{r coinfection,  fig.cap='Example of a model that considers 2 ID.', echo=FALSE}
+knitr::include_graphics("./images/multipathogenmodel.png")
+```
 
 
 
@@ -57,7 +56,9 @@ This chapter discussed multi-pathogen systems.
 
 ##Exercises
 * The _HMulti-pathogen dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
-* Read the article "Long-term measles-induced immunomodulation increases overall childhood infectious disease mortality" by Mina et al [@mina15].
+* Read the article "Long-term measles-induced immunomodulation increases overall childhood infectious disease mortality" by Mina et al [@mina15]. 
+
+
 * Find 2 ID of your choice other than the 'big ones' (HIV-TB, HIV-Malaria, etc.) and see what you can find about potential interactions between those diseases. Write a summary of your findings.
 
 
