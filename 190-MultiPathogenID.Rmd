@@ -18,14 +18,14 @@ Sometimes, different ID do not interact, i.e. being infected with one does not i
 
 
 ###HIV-TB interactions
-HIV is the pathogen that is best studied with regard to interaction with other pathogens. Arguably of most public health interest and concern is the interaction with TB. Having an (untreated) HIV infection makes it much more likely for an individual latently infected with TB to develop TB disease.
+HIV is the pathogen that is best studied with regard to interaction with other pathogens [@karp07; @karp07a]. Arguably of most public health interest and concern is the interaction with TB. Having an (untreated) HIV infection makes it much more likely for an individual latently infected with TB to develop TB disease. Further, once TB disease develops, an individual who is also infected with HIV generally has worse symptoms and a much higher chance of dying [@pawlowski12]. An important current question that is still not fully answered is if the suppression of HIV by antiretroviral therapy treatment removes all detrimental effects of HIV on TB progression, or if the presence of HIV, albeit at very low levels, still has a negative impact on TB disease progression.
 
 ###HIV-Hepatitis interactions
 Persons infected with HIV are also often at risk of having HBV or HCV infections. A major reason for this is that risk factors for these pathogens are very similar (e.g. drug use), 
 
 
 ###Influenza-Strep interactions
-The interaction of influenza with some bacteria, and most notably _Streptococcus pneumoniae_, has been somewhat well studied. A number of careful animal experiments, as well as modeling studies have shown how influenza interacts with bacteria co-infections [@ ; @shresta13]. In general, an influenza infection seems to make it more likely - during a short time window - to have a subsequent bacteria infection. If there is also an effect of respiratory bacteria infection on influenza is not clear.
+The interaction of influenza with some bacteria, and most notably _Streptococcus pneumoniae_, has been somewhat well studied [@mccullers06]. A number of careful animal experiments, as well as modeling studies have shown how influenza interacts with bacteria co-infections [@smith14a; @shrestha13]. In general, an influenza infection seems to make it more likely - during a short time window - to have a subsequent bacteria infection, and the outcome of the bacteria infection is often worse. It is still not well understood if there is also an effect of a respiratory bacteria infection on a potential secondary influenza infection [@davis12].
 
 
 ##More than two infectious diseases
@@ -62,7 +62,9 @@ This chapter discussed multi-pathogen systems.
 
 
 ## Further Resources
-
+* The references mentioned in this chapter provide further information on specific topics.
+* An interesting modeling study looking at potential interactions of HIV and Malaria is [@abu-raddad06].
+* A review of possible interactions between TB and parasitic infections can be found in [@li13].
 
 
 ##References

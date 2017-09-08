@@ -1,15 +1,14 @@
 #Stochastic Dynamics and Extinctions
 
 ##Overview and Learning Objectives
-In this module, we will take a look at stochasticity and how it impacts ID dynamics. A special focus is given on the potential of ID extinction. We will discuss how one needs to account for stochasticity in models if one wants to study extinction. We will then investigate the phenomenon of extinction and then turn to the flip side, emergence of new pathogens through evolution. 
-
+In this chapter, we take a look at stochasticity and how it impacts ID dynamics. A focus is on the potential of ID extinction. We discuss how one needs to account for stochasticity in models if one wants to study extinction. 
 
 The learning objectives for this chapter are:
 
-* Understand how stochasticity affects ID dynamics and can lead to extinctions
 *	Understand the difference between stochastic and deterministic models
 *	Know when one needs to make use of stochastic models
 *	Understand the concept of critical community size
+*   Understand how stochasticity affects ID dynamics and can lead to extinctions
 
 
 ##Determinisic models
@@ -44,21 +43,31 @@ The minimum size of a population at which an ID can maintain itself in a populat
 
 ##Host extinction
 Another way an ID can go extinct is if its hosts go extinct - either due to mortality from the ID or other causes. 
-For most human diseases, such host extinction is fortunately not very common - though highly lethal ID such as Ebola can lead to marked reduction in the number of hosts in a given population. For non-human disease, extinctions of hosts due to disease is a more important issue. Here, conversation efforts might try to achieve non-extinction of the host and - ideally - extinction of the ID.
+For most human diseases, such host extinction is fortunately not very common - though highly lethal ID such as Ebola can lead to marked reduction in the number of hosts in a given population. For non-human disease, extinctions of hosts due to disease is a more important issue. Here, conversation efforts might try to achieve non-extinction of the host and - ideally - extinction of the ID. 
+
+The host extinction approach is also often considered and used for vector-borne diseases. Here, the idea is to drive one of the hosts (commonly called the vector) to extinction. The obvious reasoning is that if there are fewer vectors (e.g. mosquitoes), the chances for humans to get infected are lower. Widespread use of DDT or insecticide-coated bed-nets are examples of this. A similar but more controversial approach is the attempted control of rabies in humans by killing its main host, vampire-bats [@stoner-duncan14].
 
 
+##Disease Emergence
+The flip-side of extinction is emergence of a new disease. During extinction, infected/pathogen numbers move from a level that can be decently approximated by a deterministic model to numbers so low that it requires a stochastic analysis approach - with possible eventual extinction. During emergence, the new disease starts at zero, then is introduced at very low numbers (possibly only a single introduction) into a new population, and "bounces around" for a while at low numbers. If conditions are right (i.e. local reproductive number greater than 1), the disease might take off and spread [@antia03]. It might eventually reach high enough numbers that a deterministic approximation which focuses on the mean dynamics is warranted. Any recent emerging disease outbreak followed that pattern, with some ID reaching high enough numbers that a deterministic approach was reasonable (2014 Ebola, 2009 Influenza pandemic), while other diseases only lead to relatively few cases for which the stochastic modeling and analysis approach is generally better (e.g. 2013 SARS, most other small Ebola outbreaks).
+
+The next chapter discusses the evolution and emergence of new diseases in more detail, with a focus on drug resistance evolution and emergence.
 
 
 ##Summary and Cartoon
 This module provided a brief discussion of stochasticity in ID dynamics, and its relation to disease extinctions.
-![Smallpox is _almost_ extinct.](../media/smallpox.jpg)
+
+![Smallpox is _almost_ extinct.](./images/smallpox.jpg)
 
 ##Exercises
 * The _Stochastic dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
-* Read the article "Measles Endemicity in Insular Populations: Critical Community Size and Its Evolutionary Implication" by Black. The paper discusses critical community size for measles. Find 2 papers/analyses that have been done regarding the CCS for some other ID. Read, summarize and critique the papers.
+* Read the article "Measles Endemicity in Insular Populations: Critical Community Size and Its Evolutionary Implication" by Black [@black66]. The paper discusses critical community size for measles. Find 2 papers/analyses that discuss the CCS for other IDs. Read, summarize and critique the papers.
 
 
-## Further Resources
+##Further Resources
+* Some further analyses of critical community size and measles can be found in [@bartlett57; @bartlett60; @keeling97; @keeling97a].
+* Some further discussion of stochastic epidemic models can be found in [@black12; @britton10a].
+* A broad discussion of invasion and persistence of ID and the role of stochasticity is given in [@lloyd-smith05b].
 
 ##References
 

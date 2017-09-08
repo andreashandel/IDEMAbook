@@ -7,21 +7,39 @@ In this chapter, we will take a look at ID evolution and its relation to control
 
 The learning objectives for this chapter are:
 
-* Know the major mechanisms of evolution
-* Understand how different types of control mechanisms are impacted by ID evolution
 * Understand the main mechanisms and drivers of ID evolution 
-* Be able to assess control strategies in the presence of ID evolution
+* Understand the role of evolution for emerging infectious diseases
+* Be able to assess how different control strategies can affect ID evolution
 
 
 
 ##Introduction
-Evolution is based on the generation of diversity, usually genetic diversity through mutations, and the subsequent increase or decrease in certain genetic variants through selection or random drift. 
-Microorganisms, especially viruses, tend to undergo rapid evolutionary change. High mutation rates and large population sizes provide many opportunities for the generation of genotypic and phenotypic diversity. Short generation times and fluctuations in population size (e.g. through transmission bottlenecks) allow selection to quickly act on this diversity, amplifying those mutants that have a fitness advantage and eliminating those with low fitness. These features of microbial populations leads to often rapid evolutionary change. Such evolutionary change can become a public health problem. In the following sections, we briefly discuss several drivers of public health importance that influence the selective fitness of different genetic variants and thereby drive ID evolution.
+Evolution is based on the generation of diversity, usually genetic diversity through mutations, and the subsequent increase or decrease in certain genetic variants through selection or random drift. Microorganisms, especially viruses, tend to undergo rapid evolutionary change. High mutation rates and large population sizes provide many opportunities for the generation of genotypic and phenotypic diversity. Short generation times and fluctuations in population size (e.g. through transmission bottlenecks) allow selection to quickly act on this diversity, amplifying those mutants that have a fitness advantage and eliminating those with low fitness. These features of microbial populations leads to often rapid evolutionary change. Such evolutionary change can become a public health problem. 
 
+
+##Emergence and Evolution
+For infectious diseases, you will often hear the term _emergence_ as in for instance _Emerging Infectious Diseases_. This means an ID that is in some way new to a population, either never seen in a specific host before (e.g. SARS emergence in 2003 in humans) or a disease that emerges in a new location. The pathogen can either be of a completely new type (e.g. SARS, MERS) or a variant of an existing one (e.g. a new strain of influenza or norovirus, a drug resistant form of a bacteria). Emergence describes the observed phenomenon. Almost always in such cases, some evolution occurs. For instance a pathogen that is already in the human population evolves drug resistance. Or a new pathogen is introduced into the human population and then undergoes evolution to adapt to the new host. While one could define emergence as the phenomenon and evolution as the mechanism, in practice you will often find these terms used interchangably and the exact meaning will depend on how the author defines it. In this chapter, we will discuss both the mechanisms of evolution and how they can lead to emergence of new pathogens.
+
+
+
+##Ecological drivers of evolution and emergence
+Many external, ecological factors affect ID dynamics. Weather, climate, vegetation, the abundance and density of hosts and other species, nutritional status and general living conditions are all important factors influencing human and animal ID. This is true both for short-term dynamics (e.g. weather patterns can influence disease incidence) as well as for the long-term evolutionary dynamics. The emergence of many recent viral pathogens among humans (e.g. HIV, SARS, MERS) is likely to a large extend caused by the closer contact humans have with the animals who are the main hosts of those diseases. Similarly, as discussed in the previous chapter, measles and other diseases were only able to emerge and establish themselves among humans once human populations became large enough. As global warming will affect climate and as humans will become more affluant and urbanized, we can expect further changes in ID dynamics and evolution over the next decades - though predicting what changes exactly will occur, and which diseases might increase and decrease in importance is very difficult [@altizer13].
+
+
+##Evolution and immune escape
+A very strong driver of evolution is the host immune response. If an ID induces a strong immune response which subsequently protects the host from re-infection, a mutant of the ID which can partially escape the host immunity and infect a host will have a large fitness advantage. This is the process which drives the continuous evolution of influenza in humans. It is likely also the driver for changes in many other diseases, especially viruses. Why some pathogens do not seem to evolve much to circumvent immune response (measles is a good example) is not quite clear, though some studies have speculated on that topic [@ ; @lange09].
+
+
+##Public health interventions and evolution
+Some of the most potent drivers of evolution are in fact public health interventions that try to reduce the burden of a 
 
 
 ##Evolution of immunity or vaccine escape
-A very strong driver of evolution is the host immune response. If an ID induces a strong immune response which subsequently protects the host from re-infection, a mutant of the ID which can partially escape the host immunity and infect a host will have a large fitness advantage. This is the process which drives the continuous evolution of influenza in humans. A similar process occurs if immunity is created through vaccines. This again is behind the reason we need to get re-immunized with influenza vaccines regularly.
+
+we briefly discuss several drivers of public health importance that influence the selective fitness of different genetic variants and thereby drive ID evolution.
+
+
+ A similar process occurs if immunity is created through vaccines. This again is behind the reason we need to get re-immunized with influenza vaccines regularly.
 
 
 ##Evolution of drug resistance
