@@ -45,7 +45,17 @@ As mentioned previously, more compartments means bigger models. Those are harder
 knitr::include_graphics("./images/multipathogenmodel.png")
 ```
 
+The set of differential equations corresponding to this diagram are given by
 
+$$\dot S =  -  (b_{1} (I_1+I_{1X}) + b_{2} (I_2+I_{2X}) + b_{12}I_{12}) S  $$ 
+$$\dot I_1 =   (b_{1} (I_1+I_{1X}) + ab_{12} I_{12})S - (g_1  + b_{2} (I_2+I_{2X})  + b_{12}  I_{12}) I_1$$ 
+$$\dot I_2 =   (b_{2} (I_2+I_{2X}) +  (1-a) b_{12} I_{12})S - (g_2 + b_{1}(I_1 + I_{1X}) + b_{12} I_{12}) I_2$$ 
+$$\dot I_{12} = (b_{2} (I_2+I_{2X})  + b_{12}  I_{12}) I_1 + (b_{1}(I_1 + I_{1X}) + b_{12} I_{12}) I_2  - g_{12} I_{12}$$ 
+$$\dot R_1 = g_1 I_1 - (b_2 (I_2 + I_{2X}) + b_{12}  I_{12}) R_1$$
+$$\dot R_2 = g_2 I_2 - (b_1 (I_1 + I_{1X}) + b_{12}  I_{12}) R_2$$
+$$\dot I_{1X} = (b_1 (I_1 + I_{1X}) + b_{12}  I_{12}) R_2 - g_{1} I_{1X}$$
+$$\dot I_{2X} = (b_2 (I_2 + I_{2X}) + b_{12}  I_{12}) R_1 - g_{2} I_{2X}$$
+$$\dot R_{12} = g_{1} I_{1X} + g_{2} I_{2X} + g_{12} I_{12} $$
 
 
 ##Summary and Cartoon
@@ -55,17 +65,15 @@ This chapter discussed multi-pathogen systems.
 ![I don't have a topical cartoon, so instead just a random one. Let me know if you find a suitable one!](./images/xkcd-sick_day.png)
 
 ##Exercises
-* The _HMulti-pathogen dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
-* Read the article "Long-term measles-induced immunomodulation increases overall childhood infectious disease mortality" by Mina et al [@mina15]. 
-
-
-* Find 2 ID of your choice other than the 'big ones' (HIV-TB, HIV-Malaria, etc.) and see what you can find about potential interactions between those diseases. Write a summary of your findings.
+* The _Multi-pathogen dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
+* Read the article "The nature and consequences of coinfection in humans" by Griffiths et al. [@griffiths11]. They report that for several of the "top 10" ID no co-infection studies could be found among 2009 publications. See if you can find any coinfection studies on one of those IDs that were published since. Describe and summarize the studies you found.
 
 
 ## Further Resources
 * The references mentioned in this chapter provide further information on specific topics.
 * An interesting modeling study looking at potential interactions of HIV and Malaria is [@abu-raddad06].
 * A review of possible interactions between TB and parasitic infections can be found in [@li13].
+* A very nice analysis of the impact of measles and measles vaccination on other childhood infectious diseases is given in [@mina15]. 
 
 
 ##References
