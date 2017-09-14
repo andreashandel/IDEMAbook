@@ -87,8 +87,8 @@ This module provided a brief discussion of transmission networks and how they im
 
 
 ## Further Resources
-* Nice general introductions to networks are given in [@strogatz10; newman03]
-* Further discussion of networks and ID spread are provided in [@pellis14; @pastor-satorras15; @ferrari11; @bansal07]
+* Nice general introductions to networks are given in [@strogatz01; newman03]
+* Further discussion of networks and ID spread are provided in [@pellis15; @pastor-satorras15; @ferrari11; @bansal07]
 * Networks and ID control are for discussed in for instance [@salathe10].
 
 

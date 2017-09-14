@@ -1,0 +1,6 @@
+
+* Find better cartoons for several chapters
+
+* Add chapter on Emerging Infectious Diseases to book, split of Evolution chapter? 
+
+* Standardize inclusion of figures using the knitr approach
