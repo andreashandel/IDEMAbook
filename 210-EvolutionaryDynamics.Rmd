@@ -18,7 +18,8 @@ Evolution is based on the generation of diversity, usually genetic diversity thr
 
 
 ##Emergence and Evolution
-For infectious diseases, you will often hear the term _emergence_ as in for instance _Emerging Infectious Diseases_. This means an ID that is in some way new to a population, either never seen in a specific host before (e.g. SARS emergence in 2003 in humans) or a disease that emerges in a new location. The pathogen can either be of a completely new type (e.g. SARS, MERS) or a variant of an existing one (e.g. a new strain of influenza or norovirus, a drug resistant form of a bacteria). Emergence describes the observed phenomenon. Almost always in such cases, some evolution occurs. For instance a pathogen that is already in the human population evolves drug resistance. Or a new pathogen is introduced into the human population and then undergoes evolution to adapt to the new host. While one could define emergence as the phenomenon and evolution as the mechanism, in practice you will often find these terms used interchangably and the exact meaning will depend on how the author defines it. In this chapter, we will discuss both the mechanisms of evolution and how they can lead to emergence of new pathogens.
+For infectious diseases, you will often hear the term _emergence_ as in for instance _Emerging Infectious Diseases_. This means an ID that is in some way new to a population, either never seen in a specific host before (e.g. SARS emergence in 2003 in humans) or a disease that emerges in a new location. The pathogen can either be of a completely new type (e.g. SARS, MERS) or a variant of an existing one (e.g. a new strain of influenza or norovirus, a drug resistant form of a bacteria). Emergence describes the observed phenomenon. Almost always in such cases, some evolution occurs. For instance a pathogen that is already in the human population evolves drug resistance. Or a new pathogen is introduced into the human population and then undergoes evolution to adapt to the new host. While one could define emergence as the phenomenon and evolution as the mechanism, in practice you will often find these terms used interchangably and the exact meaning will depend on how the author defines it. In this chapter, we will discuss both the mechanisms of evolution and how they can lead to emergence of new pathogens. The ability to understand and predict the emergence of new ID is obviously of major importance, recent references providing additional information are e.g. [@brett17; @dibble16].
+
 
 
 
@@ -27,24 +28,23 @@ Many external, ecological factors affect ID dynamics. Weather, climate, vegetati
 
 
 ##Evolution and immune escape
-A very strong driver of evolution is the host immune response. If an ID induces a strong immune response which subsequently protects the host from re-infection, a mutant of the ID which can partially escape the host immunity and infect a host will have a large fitness advantage. This is the process which drives the continuous evolution of influenza in humans. It is likely also the driver for changes in many other diseases, especially viruses. Why some pathogens do not seem to evolve much to circumvent immune response (measles is a good example) is not quite clear, though some studies have speculated on that topic [@ ; @lange09].
+A very strong driver of evolution is the host immune response. If an ID induces a strong immune response which subsequently protects the host from re-infection, a mutant of the ID which can partially escape the host immunity and infect a host will have a large fitness advantage. This is the process which drives the continuous evolution of influenza in humans. It is likely also the driver for changes in many other diseases, especially viruses. Why some pathogens do not seem to evolve much to circumvent immune response (measles is a good example) is not quite clear, though some studies have speculated on that topic [@frank07; @lange09].
 
 
 ##Public health interventions and evolution
-Some of the most potent drivers of evolution are in fact public health interventions that try to reduce the burden of a 
+Some of the most potent drivers of evolution are in fact public health interventions that try to reduce the burden of an ID. The more potent the intervention (e.g. vaccines or drugs), the more evolutionary pressure a pathogen faces and the more advantaged a pathogen variant that is (partially) resistant to the intervention will be. The following sections briefly discuss several drivers of public health importance that influence the selective fitness of different genetic variants and thereby drive ID evolution.
 
 
-##Evolution of immunity or vaccine escape
+### Evolution of immunity or vaccine escape
+Vaccines are some of our most potent interventions. Vaccination induces immunity in the vaccinated hosts. If a pathogen is able to circumvent immunity and infected vaccinated individuals, it will have a large fitness advantage. Therefore, any mutation that arises which allows a pathogen to reduce the impact of host immunity will likely spread through a population quickly. Most immunity works through antibodies, thus pathogen variants that evolve to not be (or less) recognized by pre-existing antibodies hav an advantage. This is the same mechanism induced by natural immunity. Thus, pathogens that frequently evolve to escape natural antibody-based immunity (e.g. influenza, HIV) are also able to evolve resistance against vaccine-induced immunity. This is the reason we need to get re-immunized with influenza vaccines regularly and why we have not been successful in developing an HIV vaccine. In contrast, an ID like measles which does not seem to be able to escape natural immunity also does not evolve resistance to the vaccine and we can thus still use the same vaccine against measles we have been using for decades. 
 
-we briefly discuss several drivers of public health importance that influence the selective fitness of different genetic variants and thereby drive ID evolution.
-
-
- A similar process occurs if immunity is created through vaccines. This again is behind the reason we need to get re-immunized with influenza vaccines regularly.
+The reason why measles might not be able to escape binding by pre-existing antibodies is likely because the binding site is also the part of the virus that is needed to attach to and enter host cells. Any mutation evading antibody binding would also lead to an inability to attach to and infect cells. In contrast, for influenza the antibody binding regions and the receptor attachment regions are somewhat distinct.
 
 
-##Evolution of drug resistance
-Drugs are another mechanism that applies a strong selective pressure. Any pathogen that can avoid being killed by a drug can potentially 'take over' a patient and transmit to the next. If drug use is widespread in the population, those resistant mutants - which generally have lower fitness than the wild-type, drug sensitive strain - can take over in a population. This phenomenon has been observed with many different ID and drugs and produced such looming public health problems as extensively drug-resistant TB (XDR TB) and methicillin resistant Staphylococcus aureus (MRSA). 
+### Evolution of drug resistance
+Drugs are another mechanism that applies a strong selective pressure. Any pathogen that can avoid being killed by a drug can potentially 'take over' a patient and transmit to the next. If drug use is widespread in the population, those resistant mutants - which generally have lower fitness than the wild-type, drug sensitive strain - can take over in a population. This phenomenon has been observed with many different ID and drugs and produced such looming public health problems as extensively drug-resistant TB (XDR TB) and methicillin resistant Staphylococcus aureus (MRSA) [@levy04]. 
 Since viruses tend to evolve faster than bacteria, drug resistance evolution is often a problem at the individual patient level. HIV is the prime example. Single-drug therapy for HIV fails consistently because the virus quickly evolved resistance. Only once we started using multiple drugs at the same time were we able to prevent rapid evolution - basically by playing a 'numbers game' - the chance of 3 resistance mutations against 3 different drugs occuring is so small that it rarely happens during the treatment of an individual host, thus making the drugs effective for the host's lifetime.
+Since drug resistance is such an important public health problem, it is widely studied. This includes many modeling studies. For an overview of some of those, see e.g. [@louz10; @temime08; @wiesch11]. 
 
 ##Evolution of Virulence
 The term virulence is a bit fuzzy, it generally means 'harm to the host'. That could be due to mortality caused by an ID, or in less severe forms, ID related morbidity (sickness/symptoms). Pathogens 'don't care' about harming their hosts, their main 'purpose' is to get in, replicate, and get back out and infect the next host. Sometimes, inducing some morbidity in the host is useful for the pathogen, e.g. sneezing and coughing for respiratory infections might lead to enhanced transmission and therefore increased pathogen fitness. In other situations, inducing morbidity/mortality doesn't increase pathogen fitness, but it also doesn't decrease it. Therefore, selection doesn't act to change the amount of symptoms induced. Pathogens that are too virulent, and in extreme cases kill their hosts, generally have reduced fitness since in most situations, dead hosts do not transmit. The idea is then that pathogens evolve to induce the level of virulence that is optimal for their overall transmission fitness. 
@@ -54,10 +54,8 @@ The term virulence is a bit fuzzy, it generally means 'harm to the host'. That c
 In general (apart from the possible phenomenon of drug-induced hypermutation in bacteria), the generation of genetic variants is not influenced by any human interventions. Those mutants are produced constantly. In the usual setting, most mutants are less fit than the wild-type strain and therefore are outcompeted - if not, they replace the current strain and become the new wild-type. 
 What happens in the presence of interventions is that the fitness landscape changes. FOr instance if we give a patient drugs, a mutant resistant to drugs - with fitness less than the wild-type in the absence of drug treatment - has a major advantage and can outcompete the wild-type strain.
 
-
-
 ##Co-evolution
-While the hosts infected by ID also evolve, this usually happens on much slower time-scales. As such, studying evolution by assuming only the ID evolves and not the host is often a good approximation. However, there are examples where host evolution needs to be considered. A good example is the introduction of myxomavirus into australian rabbits. Evolution of both the virus and rabbits was observed. Over longer time-scales, features such as sickle cell anemia, which comes from a mutation that is associated with reduced malaria morbidity, is likely a trait some humans evolved in response to malaria.
+While the hosts infected by ID also evolve, this usually happens on much slower time-scales. As such, studying evolution by assuming only the ID evolves and not the host is often a good approximation. However, there are examples where host evolution needs to be considered. A good example is the introduction of myxomavirus into australian rabbits. Evolution of both the virus and rabbits was observed. Over longer time-scales, features such as sickle cell anemia, which comes from a mutation that is associated with reduced malaria morbidity, is likely a trait some humans evolved in response to malaria. A discussion of genetic characteristics in humans that might be attributable to evolution in response to specific infectious diseases is provided in [@pittman16].
 
 
 ##Modeling evolutionary dynamics
@@ -69,14 +67,18 @@ If we want to model many different mutants, maybe allowing for random, not pre-s
 ##Summary and Cartoon
 This module provided a brief discussion of ID evolution, especially in relation to ID control.
 
-![Even if one believes that pathogens evolve (at a high rate), most human-only pathogens could have only survived a fairly recent world-wide flood such as the one described in Genesis by living on/in the surviving humans. [Source: smbc-comics.com](http://www.smbc-comics.com/)](../media/smbc-ID-evolution.png)
+![Even if one believes that pathogens evolve (at a high rate), most human-only pathogens could have only survived a recent world-wide flood such as the one described in Genesis by living on/in the surviving humans. [Source: smbc-comics.com](http://www.smbc-comics.com/)](../media/smbc-ID-evolution.png)
 
 ##Exercises
 * The _Evolutionary dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
 * Read the article 'Evolutionary epidemiology 20 years on: Challenges and prospects' by Restif. The paper talks about 3 evolutionary patterns that are important to ID control. Find one or several papers that have been published in the last 5 years which address ID control from an evolutionary perspective of one or several of those topics mentioned in the Restif paper. Summarize and discuss the paper(s) you found. Critically assess the feasibility of the ideas put forward. 
 
 
-
 ## Further Resources
+* The references mentioned in this chapter provide further information on specific topics.
+* Some clever ideas to fight and preemt drug resistance have recently been proposed, see e.g. [@baym16].
+* The interaction of co-infection (discussed in a previous chapter) and drug resistance is discussed in [@birger15].
+* One of the major goals in ID research is to be able to forecast the dynamics of ID, both on short and long timescales (similar to weather and climate forecasts). A review and discussion of that topic is provided in [@gandon16].  
+
 
 ##References

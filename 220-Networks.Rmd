@@ -82,11 +82,15 @@ This module provided a brief discussion of transmission networks and how they im
 ##Exercises
 * The online game [VAX](http://vax.herokuapp.com/) provides a nice interactive setting where you can explore vaccination on networks and how it can help reduce disease spread. Try to pass all levels.
 * Find a study that looked at the dynamics of an ID on a network. Summarize and discuss the study. Explain what findings in the study are due to the network approach. Discuss/speculate how results would be different if one were to ignore the network structure and instead used a compartmental model approach.
-* Read the article "Networks and epidemic models" by Keeling and Eames [@keeling05].
+* Read the article "Networks and epidemic models" by Keeling and Eames [@keeling05]. Find a recent paper that investigates a network for some ID and explain which data collection approach of the ones mentioned in section 3 (or a different one) was used. Also discuss the structure of the network that was observed in relation to the ones described in section 5.
 
 
 
 ## Further Resources
+* Nice general introductions to networks are given in [@strogatz01; newman03]
+* Further discussion of networks and ID spread are provided in [@pellis15; @pastor-satorras15; @ferrari11; @bansal07]
+* Networks and ID control are for discussed in for instance [@salathe10].
+
 
 ##References
 
