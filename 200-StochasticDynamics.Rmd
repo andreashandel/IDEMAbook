@@ -5,57 +5,57 @@ In this chapter, we take a look at stochasticity and how it impacts ID dynamics.
 
 The learning objectives for this chapter are:
 
-*	Understand the difference between stochastic and deterministic models
-*	Know when one needs to make use of stochastic models
-*	Understand the concept of critical community size
+*    Understand the difference between stochastic and deterministic models
+*    Know when one needs to make use of stochastic models
+*    Understand the concept of critical community size
 *   Understand how stochasticity affects ID dynamics and can lead to extinctions
 
 
-##Determinisic models
+##Deterministic Models
 So far, all the models we have used to explore different aspects of ID dynamics have been _deterministic_. For a deterministic model, once you choose the initial conditions and parameter values, you always get the same result, no matter how often you run the model. There is no randomness present.
 
-Such deterministic models are fairly easy to implement and to study. That is one reason why they are often used. Such a modeling approach also often provides a good representation of the dynamics of real ID if numbers are large. That is due to the law of large numbers. While every individual host or pathogen undergoes somewhat random dynamics, these random parts get _averaged out_ and the dynamics for the whole population is fairly predictable and well described by such deterministic models. (This is the same concept we use in classical epidemiological studies, where we enroll large enough numbers such that we can say something predictable about differences between groups, even if individuals are somewhat unpredictable.)
+Such deterministic models are relatively easy to implement and to study. That is one of the reasons they are so commonly used. Such a modeling approach also often provides a good representation of the dynamics of real ID if numbers are large. That is due to the law of large numbers. While every individual host or pathogen undergoes somewhat random dynamics, these random parts get _averaged out_, and the dynamics of the whole population is fairly predictable and well described by such deterministic models. (This is the same concept we use in classical epidemiological studies, where we enroll sufficiently large numbers such that we can say something predictable about differences between groups, even if individuals are somewhat unpredictable.)
 
 
 ##Stochasticity
-Biological systems are never deterministic. When numbers are low, randomness starts to matter. As an example, consider an outbreak of some ID. Let's say we have a group of 100 infected. At a given time, some of them will transmit to others and after that they will recover from the disease, while others will recover before being able to further infect others. The overall outbreak dynamics can be well approximated by a deterministic model if we properly specify the average rate of transmission and the average rate of recovery. In contrast, now assume that there is a single infected person. It makes a huge difference if this person first transmits to someone else before recovering, or if they recover before further transmitting. In the latter case, the outbreak is over and the ID has gone extinct. Thus, at low numbers, randomness/unpredictability in the order of events can make a large difference. 
+Biological systems are never deterministic. When numbers are small, randomness starts to matter. As an example, consider an outbreak of some ID. Let's say we have a group of 100 infected. At a given time, some of them will transmit to others, and after that, they will recover from the disease, while others will recover before infecting others. The overall outbreak dynamics can be well approximated by a deterministic model if we accurately specify the average rate of transmission and the average rate of recovery. In contrast, now assume that there is a single infected person. Now it makes a huge difference if this person transmits to someone else before recovering, or if they recover before transmission occurs. In the latter case, the outbreak is over, and the ID has gone extinct. Thus, at small numbers, randomness/unpredictability in the order of events can make a large difference. 
 
 
-##Discrete numbers and Extinctions
-Another problem inherent in the deterministic differential equation based models we have looked at so far is that they treat individuals in each compartment as continuous. The models allow for instance 142.7 infected hosts. Of course, in reality those numbers have to be integers. If we are dealing with large numbers, this difference between 142.7 and 142 or 143 is minor and doesn't matter. However, once numbers get small, the fact that we are dealing with discrete numbers of hosts matters. Most importantly, if less than 1 host is infected, it means in reality the ID is gone. A continuous model would instead allow the number of infected to drop below 1 but still remain above 0. In this way, the ID in the continuous models never goes truly extinct, it only gets closer and closer to 0 (and at some point is so close to 0 that the computer can't distinguish it from 0 anymore).
+##Discrete Numbers and Extinctions
+Another problem inherent in the deterministic differential equation based models we have looked at so far is that they treat individuals in each compartment as continuous. For instance, the models allow 142.7 infected hosts. Of course, in reality, those numbers have to be integers. If we are dealing with large numbers, the difference between 142.7 and 142 or 143 is minor and doesn't matter. However, once numbers get small, the fact that we are dealing with discrete numbers of hosts becomes significant. So once less than 1 host has an infection the ID is in reality gone, but a continuous model would instead allow the number of infected to drop below 1 but remain above 0. In this way, the ID in the continuous models never actually goes extinct, it only gets closer and closer to 0 (and at some point is so close to 0 that the computer can't distinguish it from 0 anymore).
 
 ##Modeling Stochasticity and Extinction
-To capture both the randomness and discrete nature of real systems, a slightly different modeling approach is needed. We can still use compartmental models, i.e. we track total numbers of individuals in specific states (e.g. S-I-R). But now, instead of letting the numbers in each compartment change continuously through inflows and outflows, changes happen in discrete steps, determined by specific events that occur in a probabilistic manner. 
+To capture both the randomness and discrete nature of real systems requires a slightly different modeling approach. We can still use compartmental models, i.e., we track total numbers of individuals in particular states (e.g., S-I-R). But now, instead of letting the numbers in each compartment change continuously through inflows and outflows, changes happen in discrete steps, determined by specific events that occur in a probabilistic manner. 
 
-As an example, instead of new susceptible hosts entering the system at some continuous birth rate, we now model births occuring as discrete events. Each birth event leads to an increase in the number of susceptibles by 1. 
-The timing of the birth events is somewhat random, with overall probability determined by the model (e.g. a higher birth rate will mean births occur more frequent, but still randomly.)
-
-
-##Factors affecting extinction
-Extinction of ID is of interest because that is often our final goal. We would like to drive an ID to extinction, either locally or even better, globally. If and how an ID can be driven to extinction depends on different factors. First, for human ID, the only real chance is to tackle IDs for which there are no other hosts. As such, we will likely never be able to eradicate influenza. But measles eradication might be possible (though hard).
-
-Several factors influence the likelihood of an ID to go extinct. The size of the host population and speed at which resources (i.e. new susceptible hosts) are replenished are important factors. So are the infectiousness of the ID, the duration of the latent and infectious periods, the ability of the ID to persist outside the host, etc.
+As an example, instead of new susceptible hosts entering the system at some continuous birth rate, we now model births occurring as discrete events. Each birth event leads to an increase in the number of susceptibles by 1. 
+The timing of the birth events is somewhat random, with an overall probability determined by the model (e.g., a higher birth rate will mean births occur more frequently, but still randomly). 
 
 
-##Critical community size
-The minimum size of a population at which an ID can maintain itself in a population without extinction has been termed Critical Community Size (CCS) (this also depends on the replenishment of new susceptibles, e.g. birth rates). Studies for measles suggested that the CCS was several hundred thoushand [@keeling02], meaning that measles could have only become a human pathogen once human populations were large enough to maintain the ID. The CCS is with reference to the susceptible population. Thus, it is possible to reduce a community size by for instance vaccinating. That means that to get an ID to go extinct, it is not necessary to vaccinate everyone. We just need to reach enough individuals to get the population of susceptibles below the critical level. This task is already hard by itself, as evidenced by the fact that we have not been able to eradicate measles, despite having a good vaccine.
+##Factors Affecting Extinction
+Extinction of ID is of interest because that is often our final goal. We would like to drive an ID to extinction, either locally or even better, globally. If and how an ID can be driven to extinction depends on different factors. For IDs in humans, the only real chance is to tackle those with no other hosts or reservoirs. As such, we will likely never be able to eradicate influenza. But measles eradication might be possible (though hard).
+
+Factors related to the host population and distinct ID characteristics influence the likelihood of an ID to go extinct. Two significant population factors are the size of the host population and the speed at which new susceptible hosts are replenished. Important characteristics of the ID included the infectiousness, the duration of the latent and infectious periods, the ability of the ID to persist outside the host, and other.
 
 
-##Host extinction
+##Critical Community Size
+The minimum size of a population at which an ID can maintain itself in a population without extinction has been termed the Critical Community Size (CCS) (this also depends on the replenishment of new susceptibles, e.g., birth rates). Studies for measles suggested that the CCS was several hundred thousand [@keeling02], meaning that measles could have only become a human pathogen once human populations were large enough to maintain it. The CCS is the number of susceptibles in a population and does not include those who are immune. Through vaccinating it is possible to reduce the size of the susceptible population below the CCS. So it is not necessary to vaccinate everyone to get an ID to go extinct. We just need to reach enough individuals to get the population of susceptibles below the critical level. This task is already hard by itself, as evidenced by the fact that we have not been able to eradicate measles, despite having a good vaccine.
+
+
+##Host Extinction
 Another way an ID can go extinct is if its hosts go extinct - either due to mortality from the ID or other causes. 
-For most human diseases, such host extinction is fortunately not very common - though highly lethal ID such as Ebola can lead to marked reduction in the number of hosts in a given population. For non-human disease, extinctions of hosts due to disease is a more important issue. Here, conversation efforts might try to achieve non-extinction of the host and - ideally - extinction of the ID. 
+For most human diseases, such host extinction is fortunately not very common - though highly lethal ID such as Ebola can lead to marked reduction in the number of hosts in a given population. For non-human disease, extinctions of hosts due to disease is a more significant issue. Here, conversation efforts might try to achieve non-extinction of the host and - ideally - extinction of the ID. 
 
-The host extinction approach is also often considered and used for vector-borne diseases. Here, the idea is to drive one of the hosts (commonly called the vector) to extinction. The obvious reasoning is that if there are fewer vectors (e.g. mosquitoes), the chances for humans to get infected are lower. Widespread use of DDT or insecticide-coated bed-nets are examples of this. A similar but more controversial approach is the attempted control of rabies in humans by killing its main host, vampire-bats [@stoner-duncan14].
+The host extinction approach is also often considered and used for vector-borne diseases. Here, the idea is to drive one of the hosts (commonly called the vector) to extinction. The obvious reasoning is that if there are fewer vectors (e.g., mosquitoes), the chances for humans to get infected are lower. Widespread use of DDT or insecticide-coated bed-nets are examples of this. A similar but more controversial approach is the attempted control of rabies in humans by killing its primary host, vampire-bats [@stoner-duncan14].
 
 
 ##Disease Emergence
-The flip-side of extinction is emergence of a new disease. During extinction, infected/pathogen numbers move from a level that can be decently approximated by a deterministic model to numbers so low that it requires a stochastic analysis approach - with possible eventual extinction. During emergence, the new disease starts at zero, then is introduced at very low numbers (possibly only a single introduction) into a new population, and "bounces around" for a while at low numbers. If conditions are right (i.e. local reproductive number greater than 1), the disease might take off and spread [@antia03]. It might eventually reach high enough numbers that a deterministic approximation which focuses on the mean dynamics is warranted. Any recent emerging disease outbreak followed that pattern, with some ID reaching high enough numbers that a deterministic approach was reasonable (2014 Ebola, 2009 Influenza pandemic), while other diseases only lead to relatively few cases for which the stochastic modeling and analysis approach is generally better (e.g. 2013 SARS, most other small Ebola outbreaks).
+The flip-side of extinction is the emergence of a new disease. During extinction, infected/pathogen numbers move from a level that can be decently approximated by a deterministic model to numbers so small that it requires a stochastic analysis approach to allow the possibility of extinction. During emergence, the new disease starts at zero, then is introduced in modest numbers (possibly only a single introduction) into a new population, and "bounces around" for a while in small numbers. If conditions are right (i.e., local reproductive number greater than 1), the disease might take off and spread [@antia03]. It might eventually reach high enough numbers that a deterministic approximation which focuses on the mean dynamics is warranted. Many recent emerging disease outbreak followed that pattern. The 2014 Ebola outbreak and 2009 Influenza pandemic reached sufficiently large numbers that a deterministic approach was reasonable, while the 2013 SARS epidemic and previous Ebola outbreaks lead to relatively few cases, so a stochastic modeling and analysis approach is likely more appropriate.
 
 The next chapter discusses the evolution and emergence of new diseases in more detail, with a focus on drug resistance evolution and emergence.
 
 
 ##Summary and Cartoon
-This module provided a brief discussion of stochasticity in ID dynamics, and its relation to disease extinctions.
+This module provides a brief discussion of stochasticity in ID dynamics, and its relation to disease extinctions.
 
 ![Smallpox is _almost_ extinct.](./images/smallpox.jpg)
 
@@ -65,7 +65,7 @@ This module provided a brief discussion of stochasticity in ID dynamics, and its
 
 
 ##Further Resources
-* Some further analyses of critical community size and measles can be found in [@bartlett57; @bartlett60; @keeling97; @keeling97a].
+* Some further analysis of critical community size and measles can be found in [@bartlett57; @bartlett60; @keeling97; @keeling97a].
 * Some further discussion of stochastic epidemic models can be found in [@black12; @britton10a].
 * A broad discussion of invasion and persistence of ID and the role of stochasticity is given in [@lloyd-smith05b].
 * An interesting discussion of critical community size and its dependence on birth dynamics, especially birth pulses, is provided in [@peel14].
