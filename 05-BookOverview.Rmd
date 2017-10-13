@@ -32,6 +32,12 @@ The idea is that this material can be learned without the need to rely on advanc
 ## Computer exercises
 Modern infectious disease epidemiology is inherently computational. As such, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter.
 
+## Recommended complementary resources
+* The online courses "Epidemics - the Dynamics of Infectious Diseases" [@epimooc] and "Epidemics" are highly recommended [@hkepidemics].
+* For additional information on infectious disease epidemiology from a more traditional, medical perspective, the very detailed book "Infectious Disease Epidemiology" is a good reference [@nelson13].
+* For those who want to continue learning about infectious diseases and modeling with the goal to become modelers, I recommend "Modeling Infectious Diseases in Humans and Animals" [@keeling08] and "An Introduction to Infectious Disease Modelling" [@vynnycky10].
+
+
 
 ## References
 
