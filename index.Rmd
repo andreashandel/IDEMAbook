@@ -11,6 +11,8 @@ output:
         config:
             toc:
               collapse: none
+    bookdown::epub_book:
+        keep_tex: yes
 bibliography: dsaidereferences.bib
 biblio-style: apalike
 link-citations: yes
