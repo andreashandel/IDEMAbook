@@ -1,23 +1,6 @@
---- 
-title: "Infectious Disease Epidemiology - A modern systems approach"
-author: "Andreas Handel"
-date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-output: 
-    bookdown::gitbook:
-        highlight: zenburn
-        css: ./dsaidebook.css
-        fig_caption: true
-        config:
-            toc:
-              collapse: none
-    bookdown::pdf_book:
-        keep_tex: yes
-bibliography: dsaidereferences.bib
-biblio-style: apalike
-link-citations: yes
-description: "This book convers infectious disease epidemiology from a dynamical systems perspective"
----
+# Infectious Disease Epidemiology - A modern systems approach
+Andreas Handel  
+`r Sys.Date()`  
 
 # Preface {-}
 
@@ -92,9 +75,10 @@ The learning objectives for this chapter are:
 ##Introduction 
 While the terminology of _systems thinking_ or _systems approach_ has seen increased use in the last few decades, the general idea has been around for a while. In public health, there is the basic idea - most often applied to infectious diseases - of the *agent - host - environment* system, also referred to as the _epidemiological triangle_ (Figure \@ref(fig:epitriangle)). 
 
-```{r epitriangle,   fig.cap='A system perspective - The epidemiological triangle',  echo=FALSE}
-knitr::include_graphics("./images/epi-triangle.png")
-```
+<div class="figure">
+<img src="./images/epi-triangle.png" alt="A system perspective - The epidemiological triangle"  />
+<p class="caption">(\#fig:epitriangle)A system perspective - The epidemiological triangle</p>
+</div>
 
 
 
@@ -111,9 +95,10 @@ The term _systems thinking_ or _systems approach_ or similar such terminology ha
 For instance, the problem of obesity has many different components that interact in potentially complex ways to affect a person's weight. Figure \@ref(fig:obesitysystem) illustrates this, see also for instance [this video](https://youtu.be/2vojPksdbtI). Complex systems are everywhere. The approach of studying (most of) the system at once instead of looking at a single component at a time is the hallmark of the _systems approach_. 
 
 
-```{r obesitysystem,   fig.cap='Obesity as a complex system: http://goo.gl/m2Qq13',  echo=FALSE}
-knitr::include_graphics("./images/complexsystem.png")
-```
+<div class="figure">
+<img src="./images/complexsystem.png" alt="Obesity as a complex system: http://goo.gl/m2Qq13"  />
+<p class="caption">(\#fig:obesitysystem)Obesity as a complex system: http://goo.gl/m2Qq13</p>
+</div>
 
 
 
@@ -153,9 +138,10 @@ In contrast, in a dynamical system, the model explicitly changes in time. We mig
 We can illustrate this dynamical perspective by extending the epidemiological triangle. Figure \@ref(fig:dynamictriangle) shows the components and the interactions of the triangle changing over time.
 
 
-```{r dynamictriangle,   fig.cap='Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.',  echo=FALSE}
-knitr::include_graphics("./images/moving-triangle.png")
-```
+<div class="figure">
+<img src="./images/moving-triangle.png" alt="Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction."  />
+<p class="caption">(\#fig:dynamictriangle)Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.</p>
+</div>
 
 Mechanistic models are especially well suited to describe dynamical systems and are therefore the primary choice for the study of complex dynamical systems.
 
@@ -188,9 +174,10 @@ The SIR model is very basic, but it still has the hallmark of a complex system. 
 
 For compartmental models (and often other types of models), it is useful to show a graphical representation of the compartments and processes included in the model. For compartmental models, such a diagram/figure is usually called a flow diagram. Such a diagram consists of a box for each compartment, and arrows pointing in and out of boxes to describe flows and interactions. For the simple SIR model, the flow diagram is shown in Figure \@ref(fig:basicSIR).
 
-```{r basicSIR, fig.cap='Flow diagram for the simple SIR model.',  echo=FALSE}
-knitr::include_graphics("./images/basicSIRmodelfigure.png")
-```
+<div class="figure">
+<img src="./images/basicSIRmodelfigure.png" alt="Flow diagram for the simple SIR model."  />
+<p class="caption">(\#fig:basicSIR)Flow diagram for the simple SIR model.</p>
+</div>
 
 
 #### Model Implementation {#myadvancedbox}
@@ -216,9 +203,10 @@ Unfortunately, there are no rules concerning the naming of variables and paramet
 This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. We briefly looked at a simple infectious disease systems model, the famous SIR model. 
 
 
-```{r complexcartoon, fig.cap='Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/).',  echo=FALSE}
-knitr::include_graphics("./images/xkcd-flowcharts.png")
-```
+<div class="figure">
+<img src="./images/xkcd-flowcharts.png" alt="Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/)."  />
+<p class="caption">(\#fig:complexcartoon)Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/).</p>
+</div>
 
 ##Exercises
 * Work through the tasks for the _ID Dynamics Introduction_ DSAIDE app.
@@ -278,9 +266,10 @@ In addition to the infection stage, other states of the host might need to be co
 ###Models with more details
 To study the dynamics of an infectious disease in more detail than is provided by the simple SIR model, we can consider models that allow for additional states. Figure \@ref(fig:complicatedmodel) shows a model with additional compartments. Equations for this model are not shown here, but a model similar to this one, together with the equations, can be found in the corresponding DSAIDE app referred to below.
 
-```{r complicatedmodel,   fig.cap='Example of a model with more compartments.',  echo=FALSE}
-knitr::include_graphics("./images/ComplicatedModel.png")
-```
+<div class="figure">
+<img src="./images/ComplicatedModel.png" alt="Example of a model with more compartments."  />
+<p class="caption">(\#fig:complicatedmodel)Example of a model with more compartments.</p>
+</div>
 
 
 
@@ -306,7 +295,13 @@ Also, the model building and analysis process is often iterative. After a model 
 ##Summary and Cartoon
 This chapter discussed ways to characterize an individual host's state with regard to an infection. We discussed the differences between medical and public health perspectives and how ID states can be mapped to models. We also briefly discussed how one should build models that provide the right amount of complexity.
 
-![Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/) ](./images/xkcd-course-of-colds.png)
+
+
+<div class="figure">
+<img src="./images/xkcd-course-of-colds.png" alt="Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/)."  />
+<p class="caption">(\#fig:coldcourse)Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/).</p>
+</div>
+
 
 
 ##Exercises
@@ -353,7 +348,13 @@ Some IDs produce sporadic outbreaks and then disappear for years. Ebola is a pro
 
 Many other IDs show oscillatory behavior, i.e. we get repeated outbreaks every so often, with some time of no or little disease in between. For some ID, the outbreaks are seasonal/annual, for other ID, the cycles are multi-year. 
 
-![Examples of ID cycles. From [@keeling08].](./images/IDcycles.png)
+
+<div class="figure">
+<img src="./images/IDcycles.png" alt="Examples of ID cycles. From [@keeling08]."  />
+<p class="caption">(\#fig:IDcycles)Examples of ID cycles. From [@keeling08].</p>
+</div>
+
+
 
 Why are some ID seasonal, some not? What mechanisms lead to seasonal or multi-year oscillations? What determines the timing of outbreaks? 
 
@@ -375,9 +376,10 @@ If the replenishment of new susceptibles is rapid, an ID might be able to mainta
 A version of the SIR model that includes resource replenishment through natural births or waning immunity is shown in figure 
 \@ref(fig:birthdeathdmodel). 
 
-```{r birthdeathdmodel,   fig.cap='Example of an SIR model with births, deaths and waning immunity.',  echo=FALSE}
-knitr::include_graphics("./images/R0modelfigure.png")
-```
+<div class="figure">
+<img src="./images/R0modelfigure.png" alt="Example of an SIR model with births, deaths and waning immunity."  />
+<p class="caption">(\#fig:birthdeathdmodel)Example of an SIR model with births, deaths and waning immunity.</p>
+</div>
 
 The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate _m_, natural death at some rate _n_, and the possibility that recovered lose their immunity and return to the susceptible class at rate _w_. This new model allows for oscillations/cycles and steady states, as explained next.
 
@@ -437,7 +439,12 @@ When an ID reaches a steady state, a model based on ordinary differential equati
 
 The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. The two most important packages for such tasks are [Maple](http://www.maplesoft.com/) and [Mathematica](https://www.wolfram.com/mathematica/). Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use [Maxima](http://maxima.sourceforge.net/).  [Other packages exist](http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems). Note that `R` is not suitable for solving symbolic equations. Using Maxima to solve the equations above (without immune recovery, i.e. _w=0_, to make the results simpler) gives:
 
-![Maxima code for solving the SIR model steady state equations.](./images/SSmaxima.png)
+
+<div class="figure">
+<img src="./images/SSmaxima.png" alt="Maxima code for solving the SIR model steady state equations."  />
+<p class="caption">(\#fig:SSmaxima)Maxima code for solving the SIR model steady state equations.</p>
+</div>
+
 
 The same results are of course obtained when solving the equations by hand. The first steady state returned by maxima is the one in the absence of an ID, with only susceptibles around. Usually, we are interested in the second steady state, the endemic equilibrium at which disease prevalence is at a fixed level. We thus find the values for the number of susceptible, infected and recovered at steady state as a function of the model parameters.
 
@@ -449,9 +456,10 @@ It is often hard to determine if there is a specific repeating pattern, such as 
 One can see that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005, with ups and downs in between. The changes are not rapid enough to be due to seasonal/annual drivers. If we had more data and the same up-down pattern repeated, we could speculate that this might be due to some intrinsic oscillatory dynamics of the disease. In this case, the most likely explanation for the observed patterns lies outside the disease dynamics itself. Increased detection and treatment likely led to a decline in the 40s, changing sexual behavior lead to an increase starting in the 60s, and strong safe-sex campaigns, combined with the threat of HIV, resulted in a decrease starting in the 80s. However, this is somewhat speculative. It might well be that other factors, (e.g. changes in surveillance intensity) could explain the pattern. A careful analysis (which I have not done) would be needed before one can be more confident as to what might lead to the observed pattern.
 
 
-```{r gonorrheapattern, fig.cap='Gonorrhea cases in the US.',  echo=FALSE}
-knitr::include_graphics("./images/gonorrhea.gif")
-```
+<div class="figure">
+<img src="./images/gonorrhea.png" alt="Gonorrhea cases in the US."  />
+<p class="caption">(\#fig:gonorrheapattern)Gonorrhea cases in the US.</p>
+</div>
 
 
 
@@ -466,7 +474,12 @@ One can go a step further and consider an underlying population that changes in 
 ##Summary and Cartoon
 This module provided a discussion of the various general patterns we observe in the dynamics of ID. Those are individual outbreaks, cycles of repeated outbreaks, and steady endemic states. 
 
-![Here's a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174) ](./images/phd_sciencenewscycle.gif)
+
+
+<div class="figure">
+<img src="./images/phd_sciencenewscycle.png" alt="Here is a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174)."  />
+<p class="caption">(\#fig:sciencenewscycle)Here is a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174).</p>
+</div>
 
 
 
@@ -490,9 +503,8 @@ This module provided a discussion of the various general patterns we observe in 
 
 
 ## Overview and Learning Objectives
-The reproductive number is a fundamental concept in infectious disease epidemiology. It is simple in its definition and rather useful. The hard part is to correctly estimate the reproductive number for a given disease and scenario. 
+The reproductive number is a fundamental concept in infectious disease epidemiology. It is so important, it even made its way into (at least) one mainstream movie [@contagionmovie]! It is simple in its definition and rather useful. The hard part is to correctly estimate the reproductive number for a given disease and scenario. 
 We will discuss all these aspects in the following.
-
 
 The learning objectives for this chapter are:
 
@@ -505,7 +517,6 @@ The learning objectives for this chapter are:
 We generally want to prevent infectious diseases from causing outbreaks, stop already ongoing outbreaks, reduce the number of people getting infected, or even bolder, try to eradicate a disease. 
 If we were able to make a vaccine against an infectious disease, it is useful to know what fraction of the population should be vaccinated to prevent future outbreaks or even eradicate the disease.
 
-
 Assume you asked the "person on the street" the question: "If we wanted to prevent a potential future SARS outbreak, what fraction of the U.S. population do we need to vaccinate to make a large-scale outbreak impossible?" 
 I suspect that most people would likely say that nearly everyone needs to be vaccinated to prevent outbreaks. A smaller number of people might realize that we don't need to vaccinate everyone, just enough people to sufficiently reduce the disease's transmission potential. To reach the second answer, one needs to have thought about how infectious diseases 'work'. 
 
@@ -516,12 +527,14 @@ The concept and definition of the reproductive number are rather straightforward
 
 ![Schematic showing the definition of the reproductive number. Each person `produces' *on average* 2 other infectious individuals. (Of course, we would usually need to have more data than shown in this figure to properly estimate R.)](./images/R0scheme.png)
 
+From this definition of the reproductive number, it is clear that if the value is greater than 1, the pathogen keeps spreading to more and more people and we have a growing outbreak. Conversely, if R is less than 1, the outbreak will fizzle out. Because of this characteristic, it is important to know R for a given outbreak, which will then tell us how stringent the interventions need to be to bring the outbreak under control. This is more explained in the following sections.
+
 ##Reproductive number details
-Let's look a bit closer at the definition for R. First, note that it applies to population **averages**. A single person might infect none, a few or many others. R does not capture this detail. It only describes the average. That's why it is, for instance, possible to have R=2.5 or other non-integer numbers. Of course, it's not feasible for an individual to infect 2.5 others, but since R describes an average, such fractional infections are possible. This **population average** feature of R is a strength since it makes R relatively easy to determine. It is also a weakness since often we'd like to know the distribution in addition to the mean/average - we'll discuss that when we deal with ideas such as population heterogeneity, core groups, and super-spreaders later on.
+Let's look a bit closer at the definition for R. First, note that it applies to population **averages**. A single person might infect none, a few or many others. R does not capture this detail. It only describes the average. That's why it is, for instance, possible to have R=2.5 or other non-integer numbers. Of course, it is not possible for an individual to infect 2.5 others, but since R describes an average, such fractional infections are possible. This **population average** feature of R is a strength since it makes R relatively easy to determine. It is also a weakness since often we'd like to know the distribution in addition to the mean/average - we'll discuss that when we deal with ideas such as population heterogeneity, core groups, and super-spreaders in later chapters.
 
-Another point to note is that the definition is about the number of new **infectious** hosts produced by one infectious host. For some diseases, being infected and being infectious are pretty much the same. E.g. pretty much everyone who is infected with HIV is also - to some degree - infectious. For other diseases, that's not the case. For instance, the majority of people who get infected with TB will never reach a state where they are infectious. So to compute R, we don't count the average number of individuals an infectious person infects, but only those that later go on to become infectious themselves. The same idea applies when we talk about diseases that have multiple hosts. R is defined as the number of infectious hosts 'produced' by one infectious host of the same type. For instance, for vector-borne diseases, R would be the number of infectious humans 'produced' by one infectious human via the intermediary mosquito/vector stage. While conceptually still straightforward, measuring and computing R/R~0~ in such multi-host situations can get tricky.
+Another point to note is that the definition is about the number of new **infectious** hosts produced by one infectious host. For some diseases, being infected and being infectious are pretty much the same. E.g. pretty much everyone who is infected with HIV is also - to some degree - infectious. For other diseases, that is not the case. For instance, the majority of people who get infected with TB will never reach a state where they are infectious. To compute R, we do not count the average number of individuals an infectious person infects, but only those that later go on to become infectious themselves. The same idea applies when we talk about diseases that have multiple hosts. R is defined as the number of infectious hosts 'produced' by one infectious host of the same type. For instance, for vector-borne diseases, R would be the number of infectious humans 'produced' by one infectious human via the intermediary mosquito/vector stage. While conceptually still straightforward, measuring and computing R/R~0~ in such multi-host situations can get tricky.
 
-_Note: Here and in other places, I'm often sloppy and use the word "infected" even if more precisely, I mean "infectious". You will find such sloppy terminology throughout the literature. It is usually clear from the context if one means an 'infected and infectious' person or just someone who is infected but not infectious (commonly called "exposed"). So when you read 'infected' here and other places, assume it means that host is 'infectious' as well, unless otherwise stated._
+_Note: Here and in other places, I am often sloppy and use the word "infected" even if more precisely, I mean "infectious". You will find such sloppy terminology throughout the literature. It is usually clear from the context if one means an 'infected and infectious' person or just someone who is infected but not infectious (commonly called "exposed" or "latent"). So when you read 'infected' here and other places, assume it means that host is 'infectious' as well, unless otherwise stated._
 
 
 ##Basic reproductive number
@@ -530,7 +543,7 @@ The quantity R~0~ is a measurement of the transmission potential of a disease in
 
 
 ##Notes on the reproductive number
-While I will be mainly using the term reproductive number, there are alternative names for R. In general, any combination of reproductive/reproduction and ratio/number is ok terminology. In its early days, R was called reproductive rate. This is *incorrect* terminology and should not be used. R is **not** a rate (there are no units of 1/time). Why does that matter? See the 'R is not a rate' box for an example.
+While I will be mainly using the term reproductive number, there are alternative names for R. In general, any combination of reproductive/reproduction and ratio/number is ok terminology. In its early days, R was called reproductive rate. This is *incorrect* terminology and should not be used. R is **not** a rate (there are no units of  inverse time). Why does that matter? See the 'R is not a rate' box for an example.
 
 
 While we often say "Infectious disease X has an R~0~ of Y", this is only an approximation. R and R~0~ also depend on the setting. The potential for transmission for many ID is much higher in for instance crowded locations (prisons, slums, cruise ships), or among "high risk groups" (e.g. STD in sex workers). For example R~0~ < 1 for HIV in the general population but it is not going away because it has an R~0~ > 1 in certain subgroups. When we talk about R, it is, therefore, useful to specify the scenario/population/setting.
@@ -551,7 +564,13 @@ As stated above, at the beginning of an outbreak, a specific disease in a certai
 ##Reproductive Number and Outbreak Control
 So how is the reproductive number related to infectious disease outbreaks? It is intuitively clear that if on average every infectious person "produces" more than one subsequent infectious person, we get a growing epidemic. In contrast, if every infectious person "produces" less than one subsequent infectious person, the pathogen might transmit a few times, but pretty soon it will disappear. Thus if we can achieve R~0~ < 1, e.g. through vaccination, we can prevent an outbreak from starting. Further, if during an outbreak we can intervene to get R < 1, the outbreak is going to fizzle out. If we wanted to stop any further transmission, we would need to get R even lower, namely R = 0. Intervention efforts try to achieve an R as small as possible.
 
-![Impact of an Intervention on transmission.](./images/R0intervention.png)
+
+<div class="figure">
+<img src="./images/R0intervention.png" alt="Impact of an Intervention on transmission."  />
+<p class="caption">(\#fig:R0intervention)Impact of an Intervention on transmission.</p>
+</div>
+
+
 
 
 #### R and Outbreak Control - Example {#myexamplebox} 
@@ -572,7 +591,13 @@ The level of population protection at which R=1 is called critical herd/populati
 
 From this, it follows that the higher R~0~, the harder it is to control and ID.
 
-![R~0~ and Interventions. From [@keeling08].](./images/kr-R0intervention.png)
+
+
+<div class="figure">
+<img src="./images/kr-R0intervention.png" alt="R~0~ and Interventions. From [@keeling08]."  />
+<p class="caption">(\#fig:krR0intervention)R~0~ and Interventions. From [@keeling08].</p>
+</div>
+
 
 
 
@@ -602,19 +627,26 @@ Very early in an outbreak, there will only be a few cases, and they occur seemin
 Once we know r and T, we can compute R. There are different equations relating r and T to R, they depend on specific assumptions one makes about the disease. One relation between r, T, and R is given by R = 1 + rT, and another one is given by R = e^rT^ . For assumptions underlying these equations and further details, see e.g. [@wallinga07].
 
 
-![Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06].](./images/viboud-R0.png)
+<div class="figure">
+<img src="./images/viboud-R0.png" alt="Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06]."  />
+<p class="caption">(\#fig:viboudR0)Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06].</p>
+</div>
 
 
 
 ##Determine R Once the Outbreak is Over
-A larger R the more significant the outbreak (ignoring things like interventions, behavior change, etc.). The main reason to determine R is so we can use it to predict the expected size of an (uncontrolled) outbreak - and more importantly, we can learn how strong our intervention efforts need to be. But we can also flip things around. Once an (uncontrolled) outbreak has occurred, knowing the outbreak size can allow us to estimate R. It is often possible to determine outbreak sizes after an outbreak has occurred, e.g. through serosurveys which show antibodies against the disease and therefore indicate who got infected. We don't need any 'timing' information, just the fraction infected at the end. Essentially, we need to know the number of people that got infected, and the number of people who were at risk (i.e. the susceptibles) at the beginning of the outbreak. Once we know these pieces of the puzzle, we can estimate R.
+A larger R leads to a larger outbreak (ignoring things like interventions, behavior change, etc.). The reason to determine R is so we can use it to predict the expected size of an (uncontrolled) outbreak - and more importantly, we can learn how strong our intervention efforts need to be. But we can also flip things around. Once an (uncontrolled) outbreak has occurred, knowing the outbreak size can allow us to estimate R. It is often possible to determine outbreak sizes after an outbreak has occurred, e.g. through serosurveys which show antibodies against the disease and therefore indicate who got infected. We don't need any 'timing' information, just the fraction infected at the end. Essentially, we need to know the number of people that got infected, and the number of people who were at risk (i.e. the susceptibles) at the beginning of the outbreak. Once we know these pieces of the puzzle, we can estimate R.
 
 More specifically, assume we know the final size of the outbreak, i.e. total fraction of those becoming infected, I~f~ = I~tot~/N, where N is the population at risk and I~tot~ is the total number of infected. We then also know the fraction of susceptibles that are left at the end of an outbreak, S~f~=1-I~f~. To find R/R~0~, we can use the equation R=_ln_(S~f~)/(S~f~ - 1) (here, _ln_ is the natural logarithm). The figure below shows the relation between the fraction infected and R~0~ graphically.
 
 
-![The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08].](./images/outbreaksize.png)
+<div class="figure">
+<img src="./images/outbreaksize.png" alt="The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08]."  />
+<p class="caption">(\#fig:outbreaksize)The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08].</p>
+</div>
 
 
+For the above equation to be true, we assume that initially everyone is susceptible and that the population is well mixed. More refined estimates for R, with more complicated equations, are available [@ma06].
 
 
 ##Determining R at the Endemic/steady state
@@ -623,12 +655,15 @@ For an ID that is at an endemic/steady state, we have another way of determining
 
 
 ##Determining R Through Age of Infection
-For those ID for which an infection induces long-lasting immunity, i.e. where a host can only be infected once, the age of infection is an important concept. Intuitively, the more infectious a disease is, the more likely it is that a host gets an ID at an early age. For an ID that induces immunity, one can collect serological data (i.e. antibody measurements) to determine the fraction of individuals of a given age who have antibodies, which means they have been previously infected (assuming for the moment that no vaccine is available). One can define the median age of infection as the age at which 50% of the population has been infected.
-
-![Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08].](./images/R0age.png)
+For those ID for which an infection induces life-long immunity, i.e. where a host can only be infected once, the age of infection is an important concept. Intuitively, the more infectious a disease is, the more likely it is that a host gets an ID at an early age. For an ID that induces immunity, one can collect serological data (i.e. antibody measurements) to determine the fraction of individuals of a given age who have antibodies, which means they have been previously infected (assuming for the moment that no vaccine is available). One can define the median age of infection as the age at which 50% of the population has been infected.
 
 
-For a simple model with certain assumptions, one can find an approximating equation connecting the median age of infection and the basic reproductive number with the equation $A \approx \frac {L}{R_0 - 1}$ or rewritten $R_0 \approx \frac{L}{A} + 1$. In this equation, _L_ is the average life expectancy of a host and _A_ is the median age of infection. This again shows what we expect intuitively: Higher R~0~, i.e. more infectious ID, leads to an earlier age of infection.
+<div class="figure">
+<img src="./images/R0age.png" alt="Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08]."  />
+<p class="caption">(\#fig:R0age)Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08].</p>
+</div>
+
+For a simple model with certain assumptions [@keeling08], one can find an approximating equation connecting the median age of infection and the basic reproductive number with the equation $A \approx \frac {L}{R_0 - 1}$ or rewritten $R_0 \approx \frac{L}{A} + 1$. In this equation, _L_ is the average life expectancy of a host and _A_ is the median age of infection. This shows what we expect intuitively: Higher R~0~, i.e. more infectious ID, leads to an earlier age of infection.
 
 
 _Note: If you want to determine R/R~0~ to be used as parameter in a mathematical transmission model, you use this approach based on the age-seroprevalence relation even if the model you plan on using doesn't have age in it._
@@ -668,7 +703,12 @@ R only measures one -- important -- component of a disease, namely its transmiss
 
 The simplicity of R is both its strength and its weakness. It gives a quick, quantitative assessment of the transmission potential (and therefore outbreak size and needed control measures) of a disease. However, R is a population level average and ignores heterogeneities of host, agent, and environment. Therefore any R estimates are only approximate.
 
-![The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/)](./images/xkcd-outbreak-control.png)
+
+<div class="figure">
+<img src="./images/xkcd-outbreak-control.png" alt="The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/)."  />
+<p class="caption">(\#fig:xkcd-outbreak-control)The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/).</p>
+</div>
+
 
 
 
@@ -1127,9 +1167,10 @@ Heterogeneity among hosts concerning their susceptibility, infectiousness, and s
 The basic concept of including host heterogeneity in models is relatively straightforward. We stratify the population according to the characteristic we want to take into account. For instance, instead of lumping everyone into susceptible-infected-recovered categories, we can track males and females, or children and adults, separately. Figure \@ref(fig:heterogeneity) illustrates this. 
 
 
-```{r heterogeneity,  fig.cap='Example of including host heterogeneity in an SIR model.', echo=FALSE}
-knitr::include_graphics("./images/heterogeneityexample.png")
-```
+<div class="figure">
+<img src="./images/heterogeneityexample.png" alt="Example of including host heterogeneity in an SIR model."  />
+<p class="caption">(\#fig:heterogeneity)Example of including host heterogeneity in an SIR model.</p>
+</div>
 
 
 The challenges with including more details in the model are not conceptual but are instead logistical and potentially technical. Bigger models are harder to formulate, implement, and analyze. Additionally, we need estimates of model parameters with regard to the stratifying characteristics, which are often hard to get. Because of that, it is often best to start with a simple model, and slowly introduce host characteristics as they are deemed relevant to the ID setting, and question one wants to address. 
@@ -1144,7 +1185,14 @@ Once the number of compartments gets too large, it might then be worth deciding 
 This chapter provided a brief discussion of host heterogeneity, how to consider it in studies, and its impact on transmission and control. We also discussed how to include heterogeneity into models.
 
 
-![That's the best 'heterogeneity' cartoon I have - let me know if you know a better one!](./images/crazyvenndiagram.gif)
+
+
+<div class="figure">
+<img src="./images/crazyvenndiagram.png" alt="That is the best heterogeneity cartoon I have - let me know if you know a better one!"  />
+<p class="caption">(\#fig:crazyvenndiagram)That is the best heterogeneity cartoon I have - let me know if you know a better one!</p>
+</div>
+
+
 
 
 ##Exercises
@@ -1207,9 +1255,10 @@ Some ways in which multiple IDs are controlled are almost accidental. It is well
 The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated part is modeling any potential interactions between IDs correctly.
 As mentioned previously, more compartments the more complex the model becomes. Making it harder to code,  analyze, and we need estimates for each parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many critical 2-ID modeling studies exist. Figure \@ref(fig:coinfection) shows the diagram for a 2 ID model. 
 
-```{r coinfection,  fig.cap='Example of a model that considers 2 ID.', echo=FALSE}
-knitr::include_graphics("./images/multipathogenmodel.png")
-```
+<div class="figure">
+<img src="./images/multipathogenmodel.png" alt="Example of a model that considers 2 ID."  />
+<p class="caption">(\#fig:coinfection)Example of a model that considers 2 ID.</p>
+</div>
 
 The differential equations corresponding to this diagram are given by:
 
@@ -1305,7 +1354,15 @@ The next chapter discusses the evolution and emergence of new diseases in more d
 ##Summary and Cartoon
 This module provides a brief discussion of stochasticity in ID dynamics, and its relation to disease extinctions.
 
-![Smallpox is _almost_ extinct.](./images/smallpox.jpg)
+
+
+<div class="figure">
+<img src="./images/smallpox.png" alt="Smallpox is _almost_ extinct."  />
+<p class="caption">(\#fig:smallpox)Smallpox is _almost_ extinct.</p>
+</div>
+
+
+
 
 ##Exercises
 * The _Stochastic dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
@@ -1466,7 +1523,14 @@ One of the best-studied networks is the random network. In this network, any 2 n
 Many real-world networks do not have the degree distribution found for random networks. It is often common that most nodes have very few connections, while a few nodes have many connections. This idea, for instance, underlies the superspreader concept. Such a distribution of connections can be well described by a scale-free network. In which case the degree distribution follows a power law, with most nodes having very few connections but a small number of nodes having very many connections.
 
 
-![Random and scale-free networks and degree distribution.](./images/network-examples.png)
+
+
+<div class="figure">
+<img src="./images/network-examples.png" alt="Random and scale-free networks and degree distribution."  />
+<p class="caption">(\#fig:network-examples)Random and scale-free networks and degree distribution.</p>
+</div>
+
+
 
 
 
@@ -1489,9 +1553,17 @@ Most of the time, networks are considered static and do not change during the ID
 ##Summary and Cartoon
 This module provides a brief discussion of transmission networks and how they impact dynamics and control of ID.
 
-[Kevin Bacon 'Network Game'.](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon) 
 
-![Source: dilbert.com (www.dilbert.com)](./images/dilbert_degreesofseparation.gif)
+
+
+
+<div class="figure">
+<img src="./images/xkcd-network.png" alt="Computer viruses and human viruses are in many ways similar. [Source: xkcd.com](https://xkcd.com/350/)."  />
+<p class="caption">(\#fig:xkcdnetwork)Computer viruses and human viruses are in many ways similar. [Source: xkcd.com](https://xkcd.com/350/).</p>
+</div>
+
+
+
 
 
 ##Exercises

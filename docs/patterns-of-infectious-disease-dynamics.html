@@ -25,7 +25,7 @@
 <meta name="author" content="Andreas Handel">
 
 
-<meta name="date" content="2017-11-29">
+<meta name="date" content="2017-12-17">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -333,9 +333,11 @@
 <h2><span class="header-section-number">4.2</span> Introduction</h2>
 <p>Some IDs produce sporadic outbreaks and then disappear for years. Ebola is a prominent example. We will discuss in a future module how to figure out what leads to the (local) extinction of an ID.</p>
 <p>Many other IDs show oscillatory behavior, i.e. we get repeated outbreaks every so often, with some time of no or little disease in between. For some ID, the outbreaks are seasonal/annual, for other ID, the cycles are multi-year.</p>
-<div class="figure">
-<img src="images/IDcycles.png" alt="Examples of ID cycles. From (Keeling and Rohani 2008)." />
-<p class="caption">Examples of ID cycles. From <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.</p>
+<div class="figure"><span id="fig:IDcycles"></span>
+<img src="images/IDcycles.png" alt="Examples of ID cycles. From [@keeling08]."  />
+<p class="caption">
+Figure 4.1: Examples of ID cycles. From <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.
+</p>
 </div>
 <p>Why are some ID seasonal, some not? What mechanisms lead to seasonal or multi-year oscillations? What determines the timing of outbreaks?</p>
 <p>Other IDs seem to have “settled down” and occur more or less at a steady level, with only minor fluctuations. TB and HIV in some parts of the world, as well as certain STD and chronic viral infections of for instance the herpes virus family, seem to have such a dynamic.</p>
@@ -349,17 +351,17 @@
 </div>
 <div id="a-model-with-resource-replenishment" class="section level2">
 <h2><span class="header-section-number">4.4</span> A Model with Resource Replenishment</h2>
-<p>A version of the SIR model that includes resource replenishment through natural births or waning immunity is shown in figure <a href="patterns-of-infectious-disease-dynamics.html#fig:birthdeathdmodel">4.1</a>.</p>
+<p>A version of the SIR model that includes resource replenishment through natural births or waning immunity is shown in figure <a href="patterns-of-infectious-disease-dynamics.html#fig:birthdeathdmodel">4.2</a>.</p>
 <div class="figure"><span id="fig:birthdeathdmodel"></span>
 <img src="images/R0modelfigure.png" alt="Example of an SIR model with births, deaths and waning immunity."  />
 <p class="caption">
-Figure 4.1: Example of an SIR model with births, deaths and waning immunity.
+Figure 4.2: Example of an SIR model with births, deaths and waning immunity.
 </p>
 </div>
 <p>The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate <em>m</em>, natural death at some rate <em>n</em>, and the possibility that recovered lose their immunity and return to the susceptible class at rate <em>w</em>. This new model allows for oscillations/cycles and steady states, as explained next.</p>
 <div id="myadvancedbox" class="section level4">
 <h4><span class="header-section-number">4.4.0.1</span> Mathematical Equations for the Model with Resource replenishment</h4>
-<p>The ordinary differential equations corresponding to the compartmental model shown in figure <a href="patterns-of-infectious-disease-dynamics.html#fig:birthdeathdmodel">4.1</a> are given by</p>
+<p>The ordinary differential equations corresponding to the compartmental model shown in figure <a href="patterns-of-infectious-disease-dynamics.html#fig:birthdeathdmodel">4.2</a> are given by</p>
 <p><span class="math display">\[\dot S = m - b I S + wR - n S \]</span> <span class="math display">\[\dot I = b IS - gI - n I \]</span> <span class="math display">\[\dot R =  gI - wR - n R\]</span></p>
 </div>
 </div>
@@ -395,9 +397,11 @@ Figure 4.1: Example of an SIR model with births, deaths and waning immunity.
 <h4><span class="header-section-number">4.9.0.1</span> Steady States and Models</h4>
 <p>When an ID reaches a steady state, a model based on ordinary differential equations, such as the model shown above, simplifies. At steady state, there are – by definition – no changes in the total number of individuals in each compartment. Therefore the left side of the equations are zero, i.e. <span class="math inline">\(\dot S = \dot I = \dot R =0\)</span>. This changes the differential equations into a set of algebraic equations. For a fairly small set of equations (usually &lt; 5), one can obtain equations for the compartments (<em>S</em>, <em>I</em>, and <em>R</em> in this case) at steady state that are a function of the model parameters. While it is often theoretically possible to solve models with more compartments/equations, the resulting expressions are usually so big and unwieldy to not provide much useful insight.</p>
 <p>The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. The two most important packages for such tasks are <a href="http://www.maplesoft.com/">Maple</a> and <a href="https://www.wolfram.com/mathematica/">Mathematica</a>. Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use <a href="http://maxima.sourceforge.net/">Maxima</a>. <a href="http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems">Other packages exist</a>. Note that <code>R</code> is not suitable for solving symbolic equations. Using Maxima to solve the equations above (without immune recovery, i.e. <em>w=0</em>, to make the results simpler) gives:</p>
-<div class="figure">
-<img src="images/SSmaxima.png" alt="Maxima code for solving the SIR model steady state equations." />
-<p class="caption">Maxima code for solving the SIR model steady state equations.</p>
+<div class="figure"><span id="fig:SSmaxima"></span>
+<img src="images/SSmaxima.png" alt="Maxima code for solving the SIR model steady state equations."  />
+<p class="caption">
+Figure 4.3: Maxima code for solving the SIR model steady state equations.
+</p>
 </div>
 <p>The same results are of course obtained when solving the equations by hand. The first steady state returned by maxima is the one in the absence of an ID, with only susceptibles around. Usually, we are interested in the second steady state, the endemic equilibrium at which disease prevalence is at a fixed level. We thus find the values for the number of susceptible, infected and recovered at steady state as a function of the model parameters.</p>
 <p>Having the equations for the steady state allows us to gain insight into the system behavior rapidly. For instance we can see that for an endemic steady state to be possible (i.e. for <em>I</em> &gt; 0 at steady state), we need <span class="math inline">\(b m &gt; n (n+ g)\)</span>. We can make intuitive sense out of this expression: The combination of pathogen transmission capacity (<em>b</em>) and birth rate <em>m</em>, which support ID persistence, needs to be stronger than the effects of general host death <em>n</em> and host recovery <em>g</em>. We will later see that this relates to the concept of reproductive number.</p>
@@ -405,11 +409,11 @@ Figure 4.1: Example of an SIR model with births, deaths and waning immunity.
 </div>
 <div id="detecting-cycles-or-other-patterns" class="section level2">
 <h2><span class="header-section-number">4.10</span> Detecting cycles or other patterns</h2>
-<p>It is often hard to determine if there is a specific repeating pattern, such as oscillations/cycles for a given ID. Consider for instance Figure <a href="patterns-of-infectious-disease-dynamics.html#fig:gonorrheapattern">4.2</a> (<a href="http://www.cdc.gov/STD/stats06/images/trends-img-2.gif">Source CDC</a>). One can see that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005, with ups and downs in between. The changes are not rapid enough to be due to seasonal/annual drivers. If we had more data and the same up-down pattern repeated, we could speculate that this might be due to some intrinsic oscillatory dynamics of the disease. In this case, the most likely explanation for the observed patterns lies outside the disease dynamics itself. Increased detection and treatment likely led to a decline in the 40s, changing sexual behavior lead to an increase starting in the 60s, and strong safe-sex campaigns, combined with the threat of HIV, resulted in a decrease starting in the 80s. However, this is somewhat speculative. It might well be that other factors, (e.g. changes in surveillance intensity) could explain the pattern. A careful analysis (which I have not done) would be needed before one can be more confident as to what might lead to the observed pattern.</p>
+<p>It is often hard to determine if there is a specific repeating pattern, such as oscillations/cycles for a given ID. Consider for instance Figure <a href="patterns-of-infectious-disease-dynamics.html#fig:gonorrheapattern">4.4</a> (<a href="http://www.cdc.gov/STD/stats06/images/trends-img-2.gif">Source CDC</a>). One can see that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005, with ups and downs in between. The changes are not rapid enough to be due to seasonal/annual drivers. If we had more data and the same up-down pattern repeated, we could speculate that this might be due to some intrinsic oscillatory dynamics of the disease. In this case, the most likely explanation for the observed patterns lies outside the disease dynamics itself. Increased detection and treatment likely led to a decline in the 40s, changing sexual behavior lead to an increase starting in the 60s, and strong safe-sex campaigns, combined with the threat of HIV, resulted in a decrease starting in the 80s. However, this is somewhat speculative. It might well be that other factors, (e.g. changes in surveillance intensity) could explain the pattern. A careful analysis (which I have not done) would be needed before one can be more confident as to what might lead to the observed pattern.</p>
 <div class="figure"><span id="fig:gonorrheapattern"></span>
-<img src="images/gonorrhea.gif" alt="Gonorrhea cases in the US."  />
+<img src="images/gonorrhea.png" alt="Gonorrhea cases in the US."  />
 <p class="caption">
-Figure 4.2: Gonorrhea cases in the US.
+Figure 4.4: Gonorrhea cases in the US.
 </p>
 </div>
 </div>
@@ -421,9 +425,11 @@ Figure 4.2: Gonorrhea cases in the US.
 <div id="summary-and-cartoon-2" class="section level2">
 <h2><span class="header-section-number">4.12</span> Summary and Cartoon</h2>
 <p>This module provided a discussion of the various general patterns we observe in the dynamics of ID. Those are individual outbreaks, cycles of repeated outbreaks, and steady endemic states.</p>
-<div class="figure">
-<img src="images/phd_sciencenewscycle.gif" alt="Here’s a different kind of cycle that (ID) scientists sometimes encounter. Source: phdcomics.com" />
-<p class="caption">Here’s a different kind of cycle that (ID) scientists sometimes encounter. <a href="http://www.phdcomics.com/comics/archive.php?comicid=1174">Source: phdcomics.com</a></p>
+<div class="figure"><span id="fig:sciencenewscycle"></span>
+<img src="images/phd_sciencenewscycle.png" alt="Here is a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174)."  />
+<p class="caption">
+Figure 4.5: Here is a different kind of cycle that (ID) scientists sometimes encounter. <a href="http://www.phdcomics.com/comics/archive.php?comicid=1174">Source: phdcomics.com</a>.
+</p>
 </div>
 </div>
 <div id="exercises-2" class="section level2">
@@ -524,9 +530,12 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf"],
 "toc": {
 "collapse": "none"
+},
+"toolbar": {
+"position": "fixed"
 }
 });
 });

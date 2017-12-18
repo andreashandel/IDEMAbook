@@ -19,7 +19,12 @@ Some IDs produce sporadic outbreaks and then disappear for years. Ebola is a pro
 
 Many other IDs show oscillatory behavior, i.e. we get repeated outbreaks every so often, with some time of no or little disease in between. For some ID, the outbreaks are seasonal/annual, for other ID, the cycles are multi-year. 
 
-![Examples of ID cycles. From [@keeling08].](./images/IDcycles.png)
+
+```{r IDcycles,   fig.cap='Examples of ID cycles. From [@keeling08].',  echo=FALSE}
+knitr::include_graphics("./images/IDcycles.png")
+```
+
+
 
 Why are some ID seasonal, some not? What mechanisms lead to seasonal or multi-year oscillations? What determines the timing of outbreaks? 
 
@@ -103,7 +108,11 @@ When an ID reaches a steady state, a model based on ordinary differential equati
 
 The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. The two most important packages for such tasks are [Maple](http://www.maplesoft.com/) and [Mathematica](https://www.wolfram.com/mathematica/). Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use [Maxima](http://maxima.sourceforge.net/).  [Other packages exist](http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems). Note that `R` is not suitable for solving symbolic equations. Using Maxima to solve the equations above (without immune recovery, i.e. _w=0_, to make the results simpler) gives:
 
-![Maxima code for solving the SIR model steady state equations.](./images/SSmaxima.png)
+
+```{r SSmaxima,   fig.cap='Maxima code for solving the SIR model steady state equations.',  echo=FALSE}
+knitr::include_graphics("./images/SSmaxima.png")
+```
+
 
 The same results are of course obtained when solving the equations by hand. The first steady state returned by maxima is the one in the absence of an ID, with only susceptibles around. Usually, we are interested in the second steady state, the endemic equilibrium at which disease prevalence is at a fixed level. We thus find the values for the number of susceptible, infected and recovered at steady state as a function of the model parameters.
 
@@ -116,7 +125,7 @@ One can see that Gonorrhea incidence was fairly stable between 1950-1965 and aga
 
 
 ```{r gonorrheapattern, fig.cap='Gonorrhea cases in the US.',  echo=FALSE}
-knitr::include_graphics("./images/gonorrhea.gif")
+knitr::include_graphics("./images/gonorrhea.png")
 ```
 
 
@@ -132,7 +141,11 @@ One can go a step further and consider an underlying population that changes in 
 ##Summary and Cartoon
 This module provided a discussion of the various general patterns we observe in the dynamics of ID. Those are individual outbreaks, cycles of repeated outbreaks, and steady endemic states. 
 
-![Here's a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174) ](./images/phd_sciencenewscycle.gif)
+
+
+```{r sciencenewscycle,   fig.cap='Here is a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174).',  echo=FALSE}
+knitr::include_graphics("./images/phd_sciencenewscycle.png")
+```
 
 
 

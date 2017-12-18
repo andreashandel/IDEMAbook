@@ -2,9 +2,8 @@
 
 
 ## Overview and Learning Objectives
-The reproductive number is a fundamental concept in infectious disease epidemiology. It is simple in its definition and rather useful. The hard part is to correctly estimate the reproductive number for a given disease and scenario. 
+The reproductive number is a fundamental concept in infectious disease epidemiology. It is so important, it even made its way into (at least) one mainstream movie [@contagionmovie]! It is simple in its definition and rather useful. The hard part is to correctly estimate the reproductive number for a given disease and scenario. 
 We will discuss all these aspects in the following.
-
 
 The learning objectives for this chapter are:
 
@@ -17,7 +16,6 @@ The learning objectives for this chapter are:
 We generally want to prevent infectious diseases from causing outbreaks, stop already ongoing outbreaks, reduce the number of people getting infected, or even bolder, try to eradicate a disease. 
 If we were able to make a vaccine against an infectious disease, it is useful to know what fraction of the population should be vaccinated to prevent future outbreaks or even eradicate the disease.
 
-
 Assume you asked the "person on the street" the question: "If we wanted to prevent a potential future SARS outbreak, what fraction of the U.S. population do we need to vaccinate to make a large-scale outbreak impossible?" 
 I suspect that most people would likely say that nearly everyone needs to be vaccinated to prevent outbreaks. A smaller number of people might realize that we don't need to vaccinate everyone, just enough people to sufficiently reduce the disease's transmission potential. To reach the second answer, one needs to have thought about how infectious diseases 'work'. 
 
@@ -28,12 +26,14 @@ The concept and definition of the reproductive number are rather straightforward
 
 ![Schematic showing the definition of the reproductive number. Each person `produces' *on average* 2 other infectious individuals. (Of course, we would usually need to have more data than shown in this figure to properly estimate R.)](./images/R0scheme.png)
 
+From this definition of the reproductive number, it is clear that if the value is greater than 1, the pathogen keeps spreading to more and more people and we have a growing outbreak. Conversely, if R is less than 1, the outbreak will fizzle out. Because of this characteristic, it is important to know R for a given outbreak, which will then tell us how stringent the interventions need to be to bring the outbreak under control. This is more explained in the following sections.
+
 ##Reproductive number details
-Let's look a bit closer at the definition for R. First, note that it applies to population **averages**. A single person might infect none, a few or many others. R does not capture this detail. It only describes the average. That's why it is, for instance, possible to have R=2.5 or other non-integer numbers. Of course, it's not feasible for an individual to infect 2.5 others, but since R describes an average, such fractional infections are possible. This **population average** feature of R is a strength since it makes R relatively easy to determine. It is also a weakness since often we'd like to know the distribution in addition to the mean/average - we'll discuss that when we deal with ideas such as population heterogeneity, core groups, and super-spreaders later on.
+Let's look a bit closer at the definition for R. First, note that it applies to population **averages**. A single person might infect none, a few or many others. R does not capture this detail. It only describes the average. That's why it is, for instance, possible to have R=2.5 or other non-integer numbers. Of course, it is not possible for an individual to infect 2.5 others, but since R describes an average, such fractional infections are possible. This **population average** feature of R is a strength since it makes R relatively easy to determine. It is also a weakness since often we'd like to know the distribution in addition to the mean/average - we'll discuss that when we deal with ideas such as population heterogeneity, core groups, and super-spreaders in later chapters.
 
-Another point to note is that the definition is about the number of new **infectious** hosts produced by one infectious host. For some diseases, being infected and being infectious are pretty much the same. E.g. pretty much everyone who is infected with HIV is also - to some degree - infectious. For other diseases, that's not the case. For instance, the majority of people who get infected with TB will never reach a state where they are infectious. So to compute R, we don't count the average number of individuals an infectious person infects, but only those that later go on to become infectious themselves. The same idea applies when we talk about diseases that have multiple hosts. R is defined as the number of infectious hosts 'produced' by one infectious host of the same type. For instance, for vector-borne diseases, R would be the number of infectious humans 'produced' by one infectious human via the intermediary mosquito/vector stage. While conceptually still straightforward, measuring and computing R/R~0~ in such multi-host situations can get tricky.
+Another point to note is that the definition is about the number of new **infectious** hosts produced by one infectious host. For some diseases, being infected and being infectious are pretty much the same. E.g. pretty much everyone who is infected with HIV is also - to some degree - infectious. For other diseases, that is not the case. For instance, the majority of people who get infected with TB will never reach a state where they are infectious. To compute R, we do not count the average number of individuals an infectious person infects, but only those that later go on to become infectious themselves. The same idea applies when we talk about diseases that have multiple hosts. R is defined as the number of infectious hosts 'produced' by one infectious host of the same type. For instance, for vector-borne diseases, R would be the number of infectious humans 'produced' by one infectious human via the intermediary mosquito/vector stage. While conceptually still straightforward, measuring and computing R/R~0~ in such multi-host situations can get tricky.
 
-_Note: Here and in other places, I'm often sloppy and use the word "infected" even if more precisely, I mean "infectious". You will find such sloppy terminology throughout the literature. It is usually clear from the context if one means an 'infected and infectious' person or just someone who is infected but not infectious (commonly called "exposed"). So when you read 'infected' here and other places, assume it means that host is 'infectious' as well, unless otherwise stated._
+_Note: Here and in other places, I am often sloppy and use the word "infected" even if more precisely, I mean "infectious". You will find such sloppy terminology throughout the literature. It is usually clear from the context if one means an 'infected and infectious' person or just someone who is infected but not infectious (commonly called "exposed" or "latent"). So when you read 'infected' here and other places, assume it means that host is 'infectious' as well, unless otherwise stated._
 
 
 ##Basic reproductive number
@@ -42,7 +42,7 @@ The quantity R~0~ is a measurement of the transmission potential of a disease in
 
 
 ##Notes on the reproductive number
-While I will be mainly using the term reproductive number, there are alternative names for R. In general, any combination of reproductive/reproduction and ratio/number is ok terminology. In its early days, R was called reproductive rate. This is *incorrect* terminology and should not be used. R is **not** a rate (there are no units of 1/time). Why does that matter? See the 'R is not a rate' box for an example.
+While I will be mainly using the term reproductive number, there are alternative names for R. In general, any combination of reproductive/reproduction and ratio/number is ok terminology. In its early days, R was called reproductive rate. This is *incorrect* terminology and should not be used. R is **not** a rate (there are no units of  inverse time). Why does that matter? See the 'R is not a rate' box for an example.
 
 
 While we often say "Infectious disease X has an R~0~ of Y", this is only an approximation. R and R~0~ also depend on the setting. The potential for transmission for many ID is much higher in for instance crowded locations (prisons, slums, cruise ships), or among "high risk groups" (e.g. STD in sex workers). For example R~0~ < 1 for HIV in the general population but it is not going away because it has an R~0~ > 1 in certain subgroups. When we talk about R, it is, therefore, useful to specify the scenario/population/setting.
@@ -63,7 +63,12 @@ As stated above, at the beginning of an outbreak, a specific disease in a certai
 ##Reproductive Number and Outbreak Control
 So how is the reproductive number related to infectious disease outbreaks? It is intuitively clear that if on average every infectious person "produces" more than one subsequent infectious person, we get a growing epidemic. In contrast, if every infectious person "produces" less than one subsequent infectious person, the pathogen might transmit a few times, but pretty soon it will disappear. Thus if we can achieve R~0~ < 1, e.g. through vaccination, we can prevent an outbreak from starting. Further, if during an outbreak we can intervene to get R < 1, the outbreak is going to fizzle out. If we wanted to stop any further transmission, we would need to get R even lower, namely R = 0. Intervention efforts try to achieve an R as small as possible.
 
-![Impact of an Intervention on transmission.](./images/R0intervention.png)
+
+```{r R0intervention,   fig.cap='Impact of an Intervention on transmission.',  echo=FALSE}
+knitr::include_graphics("./images/R0intervention.png")
+```
+
+
 
 
 #### R and Outbreak Control - Example {#myexamplebox} 
@@ -84,7 +89,12 @@ The level of population protection at which R=1 is called critical herd/populati
 
 From this, it follows that the higher R~0~, the harder it is to control and ID.
 
-![R~0~ and Interventions. From [@keeling08].](./images/kr-R0intervention.png)
+
+
+```{r krR0intervention,   fig.cap='R~0~ and Interventions. From [@keeling08].',  echo=FALSE}
+knitr::include_graphics("./images/kr-R0intervention.png")
+```
+
 
 
 
@@ -114,19 +124,24 @@ Very early in an outbreak, there will only be a few cases, and they occur seemin
 Once we know r and T, we can compute R. There are different equations relating r and T to R, they depend on specific assumptions one makes about the disease. One relation between r, T, and R is given by R = 1 + rT, and another one is given by R = e^rT^ . For assumptions underlying these equations and further details, see e.g. [@wallinga07].
 
 
-![Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06].](./images/viboud-R0.png)
+```{r viboudR0,   fig.cap='Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06].',  echo=FALSE}
+knitr::include_graphics("./images/viboud-R0.png")
+```
 
 
 
 ##Determine R Once the Outbreak is Over
-A larger R the more significant the outbreak (ignoring things like interventions, behavior change, etc.). The main reason to determine R is so we can use it to predict the expected size of an (uncontrolled) outbreak - and more importantly, we can learn how strong our intervention efforts need to be. But we can also flip things around. Once an (uncontrolled) outbreak has occurred, knowing the outbreak size can allow us to estimate R. It is often possible to determine outbreak sizes after an outbreak has occurred, e.g. through serosurveys which show antibodies against the disease and therefore indicate who got infected. We don't need any 'timing' information, just the fraction infected at the end. Essentially, we need to know the number of people that got infected, and the number of people who were at risk (i.e. the susceptibles) at the beginning of the outbreak. Once we know these pieces of the puzzle, we can estimate R.
+A larger R leads to a larger outbreak (ignoring things like interventions, behavior change, etc.). The reason to determine R is so we can use it to predict the expected size of an (uncontrolled) outbreak - and more importantly, we can learn how strong our intervention efforts need to be. But we can also flip things around. Once an (uncontrolled) outbreak has occurred, knowing the outbreak size can allow us to estimate R. It is often possible to determine outbreak sizes after an outbreak has occurred, e.g. through serosurveys which show antibodies against the disease and therefore indicate who got infected. We don't need any 'timing' information, just the fraction infected at the end. Essentially, we need to know the number of people that got infected, and the number of people who were at risk (i.e. the susceptibles) at the beginning of the outbreak. Once we know these pieces of the puzzle, we can estimate R.
 
 More specifically, assume we know the final size of the outbreak, i.e. total fraction of those becoming infected, I~f~ = I~tot~/N, where N is the population at risk and I~tot~ is the total number of infected. We then also know the fraction of susceptibles that are left at the end of an outbreak, S~f~=1-I~f~. To find R/R~0~, we can use the equation R=_ln_(S~f~)/(S~f~ - 1) (here, _ln_ is the natural logarithm). The figure below shows the relation between the fraction infected and R~0~ graphically.
 
 
-![The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08].](./images/outbreaksize.png)
+```{r outbreaksize,  fig.cap='The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08].',  echo=FALSE}
+knitr::include_graphics("./images/outbreaksize.png")
+```
 
 
+For the above equation to be true, we assume that initially everyone is susceptible and that the population is well mixed. More refined estimates for R, with more complicated equations, are available [@ma06].
 
 
 ##Determining R at the Endemic/steady state
@@ -135,12 +150,14 @@ For an ID that is at an endemic/steady state, we have another way of determining
 
 
 ##Determining R Through Age of Infection
-For those ID for which an infection induces long-lasting immunity, i.e. where a host can only be infected once, the age of infection is an important concept. Intuitively, the more infectious a disease is, the more likely it is that a host gets an ID at an early age. For an ID that induces immunity, one can collect serological data (i.e. antibody measurements) to determine the fraction of individuals of a given age who have antibodies, which means they have been previously infected (assuming for the moment that no vaccine is available). One can define the median age of infection as the age at which 50% of the population has been infected.
-
-![Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08].](./images/R0age.png)
+For those ID for which an infection induces life-long immunity, i.e. where a host can only be infected once, the age of infection is an important concept. Intuitively, the more infectious a disease is, the more likely it is that a host gets an ID at an early age. For an ID that induces immunity, one can collect serological data (i.e. antibody measurements) to determine the fraction of individuals of a given age who have antibodies, which means they have been previously infected (assuming for the moment that no vaccine is available). One can define the median age of infection as the age at which 50% of the population has been infected.
 
 
-For a simple model with certain assumptions, one can find an approximating equation connecting the median age of infection and the basic reproductive number with the equation $A \approx \frac {L}{R_0 - 1}$ or rewritten $R_0 \approx \frac{L}{A} + 1$. In this equation, _L_ is the average life expectancy of a host and _A_ is the median age of infection. This again shows what we expect intuitively: Higher R~0~, i.e. more infectious ID, leads to an earlier age of infection.
+```{r R0age,  fig.cap='Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08].',  echo=FALSE}
+knitr::include_graphics("./images/R0age.png")
+```
+
+For a simple model with certain assumptions [@keeling08], one can find an approximating equation connecting the median age of infection and the basic reproductive number with the equation $A \approx \frac {L}{R_0 - 1}$ or rewritten $R_0 \approx \frac{L}{A} + 1$. In this equation, _L_ is the average life expectancy of a host and _A_ is the median age of infection. This shows what we expect intuitively: Higher R~0~, i.e. more infectious ID, leads to an earlier age of infection.
 
 
 _Note: If you want to determine R/R~0~ to be used as parameter in a mathematical transmission model, you use this approach based on the age-seroprevalence relation even if the model you plan on using doesn't have age in it._
@@ -180,7 +197,11 @@ R only measures one -- important -- component of a disease, namely its transmiss
 
 The simplicity of R is both its strength and its weakness. It gives a quick, quantitative assessment of the transmission potential (and therefore outbreak size and needed control measures) of a disease. However, R is a population level average and ignores heterogeneities of host, agent, and environment. Therefore any R estimates are only approximate.
 
-![The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/)](./images/xkcd-outbreak-control.png)
+
+```{r xkcd-outbreak-control,   fig.cap='The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/).',  echo=FALSE}
+knitr::include_graphics("./images/xkcd-outbreak-control.png")
+```
+
 
 
 

@@ -72,7 +72,13 @@ Once the number of compartments gets too large, it might then be worth deciding 
 This chapter provided a brief discussion of host heterogeneity, how to consider it in studies, and its impact on transmission and control. We also discussed how to include heterogeneity into models.
 
 
-![That's the best 'heterogeneity' cartoon I have - let me know if you know a better one!](./images/crazyvenndiagram.gif)
+
+
+```{r crazyvenndiagram,   fig.cap='That is the best heterogeneity cartoon I have - let me know if you know a better one!',  echo=FALSE}
+knitr::include_graphics("./images/crazyvenndiagram.png")
+```
+
+
 
 
 ##Exercises

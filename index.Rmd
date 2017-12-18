@@ -8,13 +8,17 @@ output:
         highlight: zenburn
         css: ./dsaidebook.css
         fig_caption: true
+        keep_md: true
         config:
             toc:
               collapse: none
-    bookdown::epub_book:
+            toolbar:
+              position: fixed
+    bookdown::pdf_book:
         keep_tex: yes
 bibliography: dsaidereferences.bib
 biblio-style: apalike
+documentclass: book
 link-citations: yes
 description: "This book convers infectious disease epidemiology from a dynamical systems perspective"
 ---

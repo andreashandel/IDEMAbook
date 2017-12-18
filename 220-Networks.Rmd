@@ -53,7 +53,13 @@ One of the best-studied networks is the random network. In this network, any 2 n
 Many real-world networks do not have the degree distribution found for random networks. It is often common that most nodes have very few connections, while a few nodes have many connections. This idea, for instance, underlies the superspreader concept. Such a distribution of connections can be well described by a scale-free network. In which case the degree distribution follows a power law, with most nodes having very few connections but a small number of nodes having very many connections.
 
 
-![Random and scale-free networks and degree distribution.](./images/network-examples.png)
+
+
+```{r network-examples,  fig.cap='Random and scale-free networks and degree distribution.',  echo=FALSE}
+knitr::include_graphics("./images/network-examples.png")
+```
+
+
 
 
 
@@ -76,9 +82,16 @@ Most of the time, networks are considered static and do not change during the ID
 ##Summary and Cartoon
 This module provides a brief discussion of transmission networks and how they impact dynamics and control of ID.
 
-[Kevin Bacon 'Network Game'.](https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon) 
 
-![Source: dilbert.com (www.dilbert.com)](./images/dilbert_degreesofseparation.gif)
+
+
+
+```{r xkcdnetwork,  fig.cap='Computer viruses and human viruses are in many ways similar. [Source: xkcd.com](https://xkcd.com/350/).',  echo=FALSE}
+knitr::include_graphics("./images/xkcd-network.png")
+```
+
+
+
 
 
 ##Exercises

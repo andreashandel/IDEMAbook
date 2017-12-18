@@ -57,7 +57,14 @@ The next chapter discusses the evolution and emergence of new diseases in more d
 ##Summary and Cartoon
 This module provides a brief discussion of stochasticity in ID dynamics, and its relation to disease extinctions.
 
-![Smallpox is _almost_ extinct.](./images/smallpox.jpg)
+
+
+```{r smallpox,  fig.cap='Smallpox is _almost_ extinct.', echo=FALSE}
+knitr::include_graphics("./images/smallpox.png")
+```
+
+
+
 
 ##Exercises
 * The _Stochastic dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.

@@ -25,7 +25,7 @@
 <meta name="author" content="Andreas Handel">
 
 
-<meta name="date" content="2017-11-29">
+<meta name="date" content="2017-12-17">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -365,9 +365,11 @@
 <p>There are several types or classes of networks with specific characteristics that have been studied in great detail, either because they are analytically tractable or because of their real-world importance.</p>
 <p>One of the best-studied networks is the random network. In this network, any 2 nodes have a fixed probability of being connected. For a network of <em>N</em> nodes and connection probability <em>p</em>, the average number of connections each node has (it’s degree) is <em>(N-1)p</em>. The degree distribution of the network is binomial, which for large networks becomes a normal distribution. That means most nodes have approximately the average number of connections. There are only a few nodes with substantially fewer or more connections.</p>
 <p>Many real-world networks do not have the degree distribution found for random networks. It is often common that most nodes have very few connections, while a few nodes have many connections. This idea, for instance, underlies the superspreader concept. Such a distribution of connections can be well described by a scale-free network. In which case the degree distribution follows a power law, with most nodes having very few connections but a small number of nodes having very many connections.</p>
-<div class="figure">
-<img src="images/network-examples.png" alt="Random and scale-free networks and degree distribution." />
-<p class="caption">Random and scale-free networks and degree distribution.</p>
+<div class="figure"><span id="fig:network-examples"></span>
+<img src="images/network-examples.png" alt="Random and scale-free networks and degree distribution."  />
+<p class="caption">
+Figure 15.1: Random and scale-free networks and degree distribution.
+</p>
 </div>
 </div>
 <div id="id-transmission-on-networks" class="section level2">
@@ -389,10 +391,11 @@
 <div id="summary-and-cartoon-13" class="section level2">
 <h2><span class="header-section-number">15.12</span> Summary and Cartoon</h2>
 <p>This module provides a brief discussion of transmission networks and how they impact dynamics and control of ID.</p>
-<p><a href="https://en.wikipedia.org/wiki/Six_Degrees_of_Kevin_Bacon">Kevin Bacon ‘Network Game’.</a></p>
-<div class="figure">
-<img src="./images/dilbert_degreesofseparation.gif" alt="Source: dilbert.com (www.dilbert.com)" />
-<p class="caption">Source: dilbert.com (www.dilbert.com)</p>
+<div class="figure"><span id="fig:xkcdnetwork"></span>
+<img src="images/xkcd-network.png" alt="Computer viruses and human viruses are in many ways similar. [Source: xkcd.com](https://xkcd.com/350/)."  />
+<p class="caption">
+Figure 15.2: Computer viruses and human viruses are in many ways similar. <a href="https://xkcd.com/350/">Source: xkcd.com</a>.
+</p>
 </div>
 </div>
 <div id="exercises-13" class="section level2">
@@ -484,9 +487,12 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf"],
 "toc": {
 "collapse": "none"
+},
+"toolbar": {
+"position": "fixed"
 }
 });
 });
