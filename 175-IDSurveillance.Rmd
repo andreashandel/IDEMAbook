@@ -1,0 +1,45 @@
+# Infectious Disease Surveillance
+
+
+## Overview and Learning Objectives
+In this module, we will take a look at surveillance of different infectious diseases.
+
+
+The learning objectives for this chapter are:
+
+* Understand surveillance 
+
+
+##Introduction
+To be able to implement successful interventions, we first need to know what is actually happening. Once we implemented a control strategy, we also want to know how it works. For both of those goals, good surveillance is key.
+
+
+##Goals of Surveillance
+
+* Identify new emerging diseases as quickly as possible
+
+##Types of Surveillance
+Active and passive
+
+Medical/clinical and sequence
+
+Ongoing or ad-hoc
+
+##Problems with surveillance
+Knowing numerator and denominator. Bias due to getting more severe cases. Behavior change during an outbreak.
+
+
+##Summary and Cartoon
+
+![A comprehensive, 'always on' surveillance for infectious diseases would be ideal.](./images/xkcd-listening.png)
+
+
+##Exercises
+* 
+
+
+## Further Resources
+* 
+
+##References
+

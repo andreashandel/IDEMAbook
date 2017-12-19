@@ -1,0 +1,116 @@
+---
+title: "Book proposal: Infectious Disease Epidemiology - A modern systems approach"
+author: ""
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: article
+output:
+  bookdown::word_document2: 
+    toc: false
+bibliography: ../DSAIDEreferences.bib
+---
+
+
+# Author
+* Andreas Handel^1^, Department of Epidemiology and Biostatistics, The University of Georgia, Athens, GA, USA
+
+
+#Working book titles
+* Infectious Disease Epidemiology - A modern systems approach
+* Modern Infectious Disease Epidemiology - A (dynamical) systems approach
+
+
+#Rationale and scope 
+Modern infectious disease epidemiology makes heavy use of computational model-based approaches and a dynamical systems perspective. The importance of analyzing infectious diseases in such a way keeps increasing. However, infectious disease epidemiology is still often
+taught mainly from a medical and classical epidemiological study design (e.g., cohort, case-
+control) perspective. A number of textbooks exist that approach infectious disease epidemiology from that perspective (e.g. [@magnus08; @nelson13; @giesecke17]).
+
+While textbooks that teach a systems/model based approach to infectious diseases exist (e.g. [@anderson91; @diekmann00; @keeling08; @vynnycky10]), those books are meant to teach students how to become modelers. As such the books require students to work with mathematical models and write computer code. This is a significant barrier for students who do not have a strong mathematical background or prior coding experience, which applies to many students in public health and related biomedical disciplines. It limits the number of students who can
+or want to engage with infectious disease epidemiology by using modern, systems modeling-based approaches. 
+
+There is currently (as far as I am aware) no book that teaches infectious disease epidemiology from a systems perspective while at the same time being approachable to students without the need of doing a good bit of math and/or computer programming. Thus the idea for this book, which is meant to fill the gap between 'classical' ID Epi books and the modeling books.
+
+Some more (and overlapping) thoughts on how this book fits in can be found in the overview chapter of the current draft: https://ahgroup.github.io/DSAIDEbook/overview-of-this-book.html.
+
+#Readership
+The main audience are students in public health and related biomedical disciplines who want to learn about infectious disease epidemiology from a modern, systems-based perspective, while not (yet) wanting to engage deeply with the math and computational aspects related to the topic. 
+
+Students who have some basic understanding of epidemiological and infectious disease concepts will have a better starting point, but with a bit of 'filling the gaps' using Wikipedia, the book should be accessible to any interested student.
+
+The main goal of the book is to equip students with the knowledge to think about ID Epi in a systems way and to 'consume/interpret' results from infectious disease modeling studies. If students, after having worked through this book, want to proceed toward becoming modelers themselves, they could continue with the modeling textbooks mentioned above.
+ 
+
+#Competing/related books 
+The rationale and scope describes how I believe this book differs from existing books and covers a gap that isn't covered by any current book.
+
+Another book worth mentioning is [@kraemer10], which is an edited volume. It's a mix of ID topics, more conceptual/less medical than [@nelson13]. Since each chapter is written by a different set of authors, it has the usual problem of edited books that each chapter/topic is somewhat stand-alone, with authors writing at different levels of difficulty and discussing whatever they find relevant for a given topic. Thus the whole book is not that cohesive and I consider it suitable to assign specific chapters as additional reading but wouldn't use it as a stand-alone book for teaching/learning.
+
+A somewhat older book similar to [@kraemer10] seems to be [@thomas01]. It is also an edited volume and based on the TOC, convers broadly similar ground to [@kraemer10]. I do not own [@thomas01], thus have not yet seen/reviewed the full text.
+
+To my knowledge, the resources that are most similar to the book in content/spirit are not textbooks but 2 online courses on Coursera, one called 'Epidemics - the dynamics of infectious diseases' developed by faculty from Penn State [@epimooc], and one called 'Epidemics', developed by faculty from Hong Kong University [@hkepidemics]. 
+
+The Penn State course is 8 week long, features many very good and short videos, and is somewhat broader regarding content and discusses topics than my book. For instance 1 week of the course is devoted to within-host infection and immune response processes, something I do not cover explicitly. Almost all content is taught through the videos, with some optional reading drawn from the primary literature
+
+The Hong Kong Course is 10 weeks long and also mainly video-based, with some optional reading drawn from the primary literature. The course discusses some topics my book doesn't touch on (e.g. communication strategies for ID interventions) while conversely I discuss topics (e.g. extinction and evolution) that are not/barely covered in the course.
+
+I consider the relation between these courses and my proposed book somewhat complementary, i.e. those are 2 different ways of teaching similar material. In fact, in my course on this topic (see below), for every topic I cover I assign both a chapter of my book and suitable videos, many of which come from these online courses.
+
+I have not yet performed a very thourough and systematic review of all the books out there. It is possible that I missed some that are related/similar to my proposed book. I plan to shortly do a very thorough review of what is out there. Still, I believe that whatever I find, my book will be different enough to warrant its existence.
+
+
+#Content 
+
+A first version of the book is already written and is currently available on Github at:
+
+https://ahgroup.github.io/DSAIDEbook/
+
+The book currently has 16 chapters, some longer than others. Each chapter has the same structure, with a short section of suggested exercises at the end. Those exercises usually involve the computer package described below, and suggestions for reading and critically discussing papers from the primary literature.
+
+The current form of the book was written as part of my teaching of a course on this topic. This is an online graduate level course with mostly public health students and some students from other disciplines (e.g. Ecology, Veterinary Infectious Disease, Forestry, etc.). Each chapter was covered in a week (together with other assigned materials). Students were assigned some or all of the exercises listed at the end of the chapter as weekly homework.
+
+
+#Special features 
+Color figures are likely not needed. The book contains text boxes that are set apart from the main text and that contain more advanced material (e.g. show sets of differential equations) that students can skip without losing the ability to understand the rest. 
+
+
+#Description of ancillary material 
+I have written an R package that allows students to actively explore the topics covered in the book. In the exercise section of each book chapter, the students are pointed toward the appropriate simulation in the R package. This R package is fully developed and available, a description of it can be found in [@handel17].
+
+ 
+#Proposed length of the book and its proposed completion date 
+
+A very crude word count (including TOC and references) gives around 40,000 words currently. A pdf version of the book is 106 pages. I expect the final version to grow by around 50-100% through addition of a few more chapters and adding more details to several existing chapters.
+
+My aspirational completion date is end of summer. I have a light teaching load in spring and time over summer. This should give me enough time to finish a version that is suitable to undergo peer review. If I can't finish by end of summer, I hope to get it done at least end of year.
+
+#Planned next steps
+
+* I have a few topics/chapters that I want to add, I have started working on those. They are in the book draft but currently empty/incomplete.
+* I want to re-visit various pertinent books/courses/resources and review them to see if there are any topics that I think should be added to my book. 
+* Some of the existing chapters are a bit too short, I plan to flesh them out some more.
+* Everything needs further editing and cleaning up.
+
+
+#Brief credentials of the author
+
+Andreas Handel    
+Associate Professor    
+Assoc. Dept. Head &    
+Graduate Coordinator    
+Department of Epidemiology and Biostatistics    
+College of Public Health, University of Georgia    
+Athens, Georgia 30602, USA    
+http://handelgroup.uga.edu/    
+
+See website for my research and further information.
+
+
+#Some other comments
+The book is written in bookdown (https://bookdown.org/) and lives in the "R ecosystem" (markdown, pandoc, bibtex, etc.)
+
+
+
+# References
+
+
+
