@@ -18,7 +18,7 @@ Infectious disease epidemiology is the oldest area of epidemiology and public he
 
 While there are plenty of infectious disease epidemiology books that cover the topic from a classical epidemiological perspective, such an approach often ignores or minimizes the importance of interactions.
 
-On the other side, the well-developed field of infectious disease modeling has its main focus on studying the interactions and resulting dynamics of ID. Good text books exist, such as [@anderson91, @diekmann00, @keeling08, @vynnycky10], but require a strong quantitative and mathematical background from the student.
+On the other side, the well-developed field of infectious disease modeling has its main focus on studying the interactions and resulting dynamics of ID. Good text books exist, such as [@anderson91; @diekmann00; @keeling08; @vynnycky10], but require a strong quantitative and mathematical background from the student.
 
 This book is intended to fill the gap. Infectious disease topics are discussed from a _dynamical systems perspective_, but without a strong emphasis on teaching modeling - though we believe any modern infectious disease epidemiologist needs to have some familiarity with models, and as such, this book contains models and equations - but does not try to teach the student to become a modeler, instead the focus is on understanding the modeling perspective and becoming an _educated consumer_ of models.
 
@@ -28,7 +28,7 @@ This book does not teach basic concepts of epidemiology. We assume readers are f
 
 This book does also not teach much about specific infectious diseases. While many different infectious diseases appear in this book, the goal is not to describe any one in much detail. Instead, they appear as examples of general dynamical patterns and concepts the book covers. For information on the epidemiology of specific infectious diseases, good resources are e.g. [@nelson13].
 
-Finally, while this book takes a modeling perspective, it does not intend to teach modeling. For anyone interested in learning how to build and analyze their own infectious disease models - a skill we highly recommend learning - we suggest e.g. [@keeling08,@vynnycky10].
+Finally, while this book takes a modeling perspective, it does not intend to teach modeling. For anyone interested in learning how to build and analyze their own infectious disease models - a skill we highly recommend learning - we suggest e.g. [@keeling08; @vynnycky10].
 
 Maybe the material closest in approach to this book is not another book but the online course "Dynamics of Infectious Diseases" developed and taught by multiple faculty members at Penn State University and hosted on Coursera [@epimooc]. This course is free to take, and I can strongly recommend it. Another online course that has been offered in the past through edX is "Epidemics" from Hong Kong University [@hkepidemics].
 
@@ -1110,6 +1110,54 @@ Studying the potential impact of interventions is probably the single most impor
 
 <!--chapter:end:170-IDControl.Rmd-->
 
+# Infectious Disease Surveillance
+
+
+## Overview and Learning Objectives
+In this module, we will take a look at surveillance of different infectious diseases.
+
+
+The learning objectives for this chapter are:
+
+* Understand surveillance 
+
+
+##Introduction
+To be able to implement successful interventions, we first need to know what is actually happening. Once we implemented a control strategy, we also want to know how it works. For both of those goals, good surveillance is key.
+
+
+##Goals of Surveillance
+
+* Identify new emerging diseases as quickly as possible
+
+##Types of Surveillance
+Active and passive
+
+Medical/clinical and sequence
+
+Ongoing or ad-hoc
+
+##Problems with surveillance
+Knowing numerator and denominator. Bias due to getting more severe cases. Behavior change during an outbreak.
+
+
+##Summary and Cartoon
+
+![A comprehensive, 'always on' surveillance for infectious diseases would be ideal.](./images/xkcd-listening.png)
+
+
+##Exercises
+* 
+
+
+## Further Resources
+* 
+
+##References
+
+
+<!--chapter:end:175-IDSurveillance.Rmd-->
+
 # Host Heterogeneity
 
 ## Overview and Learning Objectives
@@ -1391,23 +1439,12 @@ In this chapter, we will take a look at ID-evolution and its relation to control
 The learning objectives for this chapter are:
 
 * Understand the central mechanisms and drivers of ID-evolution 
-* Understand the role of evolution in emerging infectious diseases
 * Be able to assess how different control strategies can affect ID-evolution
 
 
 
 ##Introduction
 Evolution is based on the generation of diversity, usually genetic diversity through mutations and the subsequent increase or decrease in certain genetic variants through selection or random drift. Microorganisms, especially viruses, tend to undergo rapid evolutionary change. High mutation rates and large population sizes provide many opportunities for the generation of genotypic and phenotypic diversity. Short generation times and fluctuations in population size (e.g., through transmission bottlenecks) allow selection to quickly act on this diversity, amplifying those mutants that have a fitness advantage and eliminating those with low fitness. These features of microbial populations often lead to rapid evolutionary changes. Such evolutionary change can become a public health problem. 
-
-
-##Emergence and Evolution
-For infectious diseases, you will often hear the term _emergence_ as in _Emerging Infectious Diseases_. This means the ID is in some way new to a population, either never seen in a particular host before (e.g., SARS emergence in 2003 in humans) or a disease that emerges in a new location. The pathogen can either be an entirely new type (e.g., SARS, MERS) or a variant of an existing one (e.g., a new strain of influenza or norovirus, or a drug-resistant form of a bacteria). Emergence describes the observed phenomenon. Almost always in such cases, some evolution occurs. For instance, a pathogen that is already in the human population evolves drug resistance. Or a new pathogen is introduced into the human population and then undergoes evolution to adapt to the new host. While one could define emergence as the phenomenon and evolution as the mechanism, in practice, you will often find these terms used interchangeably, and the exact meaning will depend on how the author defines it. In this chapter, we will discuss both the mechanisms of evolution and how they can lead to the emergence of new pathogens. The ability to understand and predict the emergence of new IDs is, of course, of vital importance, recent references providing additional information are [@brett17; @dibble16].
-
-
-
-
-##Ecological drivers of evolution and emergence
-Many external, ecological factors affect ID dynamics. Weather, climate, vegetation, the abundance and density of hosts and other species, nutritional status, and general living conditions are all important factors influencing human and animal ID. This is true both for short-term dynamics (e.g., weather patterns can affect disease incidence) as well as for the long-term evolutionary dynamics. The emergence of many new viral pathogens among humans (e.g., HIV, SARS, MERS) is likely caused by the closer contact humans have with the animals who are the main hosts of those diseases. Transmission in these situations of close human-animal contact is often called spillover.  Similarly, as discussed in the previous chapter, measles and other diseases were only able to emerge and establish themselves among humans once human populations became large enough. As global warming will affect climate and as people become more affluent and urbanized, we can expect further changes in ID dynamics and evolution over the next decades - though predicting what changes exactly will occur, and which diseases might increase and decrease in importance is very difficult [@altizer13].
 
 
 ##Evolution and Immune Escape
@@ -1467,6 +1504,51 @@ This module provides a brief discussion of ID-evolution, especially concerning I
 ##References
 
 <!--chapter:end:210-EvolutionaryDynamics.Rmd-->
+
+# Emerging Infectious Diseases 
+
+##Overview and Learning Objectives
+In this chapter, we will take a look at a specific evolutionary process underlying the emergence of new Infectious Diseases
+
+
+
+The learning objectives for this chapter are:
+
+* Understand the central mechanisms and drivers of emergence 
+
+
+
+##Introduction
+
+
+##Emergence and Evolution
+For infectious diseases, you will often hear the term _emergence_ as in _Emerging Infectious Diseases_. This means the ID is in some way new to a population, either never seen in a particular host before (e.g., SARS emergence in 2003 in humans) or a disease that emerges in a new location. The pathogen can either be an entirely new type (e.g., SARS, MERS) or a variant of an existing one (e.g., a new strain of influenza or norovirus, or a drug-resistant form of a bacteria). Emergence describes the observed phenomenon. Almost always in such cases, some evolution occurs. For instance, a pathogen that is already in the human population evolves drug resistance. Or a new pathogen is introduced into the human population and then undergoes evolution to adapt to the new host. While one could define emergence as the phenomenon and evolution as the mechanism, in practice, you will often find these terms used interchangeably, and the exact meaning will depend on how the author defines it. In this chapter, we will discuss both the mechanisms of evolution and how they can lead to the emergence of new pathogens. The ability to understand and predict the emergence of new IDs is, of course, of vital importance, recent references providing additional information are [@brett17; @dibble16].
+
+
+##Ecological drivers of evolution and emergence
+Many external, ecological factors affect ID dynamics. Weather, climate, vegetation, the abundance and density of hosts and other species, nutritional status, and general living conditions are all important factors influencing human and animal ID. This is true both for short-term dynamics (e.g., weather patterns can affect disease incidence) as well as for the long-term evolutionary dynamics. The emergence of many new viral pathogens among humans (e.g., HIV, SARS, MERS) is likely caused by the closer contact humans have with the animals who are the main hosts of those diseases. Transmission in these situations of close human-animal contact is often called spillover.  Similarly, as discussed in the previous chapter, measles and other diseases were only able to emerge and establish themselves among humans once human populations became large enough. As global warming will affect climate and as people become more affluent and urbanized, we can expect further changes in ID dynamics and evolution over the next decades - though predicting what changes exactly will occur, and which diseases might increase and decrease in importance is very difficult [@altizer13].
+
+
+##Modeling ID Emergence Dynamics
+To study evolutionary dynamics, we will need to implement models that allow for changes in the system on top of the non-evolutionary dynamics of the ID. Unless we plan to model many different potential new variants, it is often easiest to pre-specify the number of variants we want to track. In the simplest form where we only track pathogen evolution, we might model the wild-type (normal, pre-existing) form of the pathogen and a single mutant that is different in some important characteristic, e.g., resistant to a drug or able to evade a vaccine. We would build a model with these compartments. We often also pre-specify the characteristics (i.e., the parameter values) for both the wild-type and mutant. We implement the process of mutant generation in the model and run the simulation. Under certain circumstances, we might see the mutant be generated and take over the population. 
+
+If we want to model many different mutants, maybe allowing for random, not pre-specified, differences in their fitness, and perhaps even allowing for host evolution, the models get quite a bit more complicated. They are not necessarily conceptually harder, but there is more bookkeeping and coding involved making it technically trickier.
+
+
+##Summary and Cartoon
+This module provides a brief discussion of ID emergence.
+
+
+##Exercises
+*  
+
+## Further Resources
+* 
+
+
+##References
+
+<!--chapter:end:215-EmergingID.Rmd-->
 
 #Networks and ID
 

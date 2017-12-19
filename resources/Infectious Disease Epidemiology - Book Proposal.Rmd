@@ -64,7 +64,7 @@ A first version of the book is already written and is currently available on Git
 
 https://ahgroup.github.io/DSAIDEbook/
 
-The book currently has 16 chapters, some longer than others. Each chapter has the same structure, with a short section of suggested exercises at the end. Those exercises usually involve the computer package described below, and suggestions for reading and critically discussing papers from the primary literature.
+The book currently has 18 chapters, some longer than others. Each chapter has the same structure, with a short section of suggested exercises at the end. Those exercises usually involve the computer package described below, and suggestions for reading and critically discussing papers from the primary literature.
 
 The current form of the book was written as part of my teaching of a course on this topic. This is an online graduate level course with mostly public health students and some students from other disciplines (e.g. Ecology, Veterinary Infectious Disease, Forestry, etc.). Each chapter was covered in a week (together with other assigned materials). Students were assigned some or all of the exercises listed at the end of the chapter as weekly homework.
 

@@ -82,7 +82,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-12-17}
+  \date{2017-12-19}
 
 
 \usepackage{amsthm}
@@ -130,10 +130,10 @@ approach often ignores or minimizes the importance of interactions.
 On the other side, the well-developed field of infectious disease
 modeling has its main focus on studying the interactions and resulting
 dynamics of ID. Good text books exist, such as (Anderson and May
-\protect\hyperlink{ref-anderson91}{1991}, Diekmann and Heesterbeek
-(\protect\hyperlink{ref-diekmann00}{2000}), Keeling and Rohani
-(\protect\hyperlink{ref-keeling08}{2008}), Vynnycky and White
-(\protect\hyperlink{ref-vynnycky10}{2010})), but require a strong
+\protect\hyperlink{ref-anderson91}{1991}; Diekmann and Heesterbeek
+\protect\hyperlink{ref-diekmann00}{2000}; Keeling and Rohani
+\protect\hyperlink{ref-keeling08}{2008}; Vynnycky and White
+\protect\hyperlink{ref-vynnycky10}{2010}), but require a strong
 quantitative and mathematical background from the student.
 
 This book is intended to fill the gap. Infectious disease topics are
@@ -167,8 +167,8 @@ Finally, while this book takes a modeling perspective, it does not
 intend to teach modeling. For anyone interested in learning how to build
 and analyze their own infectious disease models - a skill we highly
 recommend learning - we suggest e.g. (Keeling and Rohani
-\protect\hyperlink{ref-keeling08}{2008},Vynnycky and White
-(\protect\hyperlink{ref-vynnycky10}{2010})).
+\protect\hyperlink{ref-keeling08}{2008}; Vynnycky and White
+\protect\hyperlink{ref-vynnycky10}{2010}).
 
 Maybe the material closest in approach to this book is not another book
 but the online course ``Dynamics of Infectious Diseases'' developed and
@@ -2923,10 +2923,78 @@ successes of epidemiology and biology.}
 
 \section{References}\label{references-9}
 
-\chapter{Host Heterogeneity}\label{host-heterogeneity}
+\chapter{Infectious Disease
+Surveillance}\label{infectious-disease-surveillance}
 
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives-9}
+
+In this module, we will take a look at surveillance of different
+infectious diseases.
+
+The learning objectives for this chapter are:
+
+\begin{itemize}
+\tightlist
+\item
+  Understand surveillance
+\end{itemize}
+
+\section{Introduction}\label{introduction-9}
+
+To be able to implement successful interventions, we first need to know
+what is actually happening. Once we implemented a control strategy, we
+also want to know how it works. For both of those goals, good
+surveillance is key.
+
+\section{Goals of Surveillance}\label{goals-of-surveillance}
+
+\begin{itemize}
+\tightlist
+\item
+  Identify new emerging diseases as quickly as possible
+\end{itemize}
+
+\section{Types of Surveillance}\label{types-of-surveillance}
+
+Active and passive
+
+Medical/clinical and sequence
+
+Ongoing or ad-hoc
+
+\section{Problems with surveillance}\label{problems-with-surveillance}
+
+Knowing numerator and denominator. Bias due to getting more severe
+cases. Behavior change during an outbreak.
+
+\section{Summary and Cartoon}\label{summary-and-cartoon-9}
+
+\begin{figure}
+\centering
+\includegraphics{./images/xkcd-listening.png}
+\caption{A comprehensive, `always on' surveillance for infectious
+diseases would be ideal.}
+\end{figure}
+
+\section{Exercises}\label{exercises-9}
+
+\begin{itemize}
+\item
+\end{itemize}
+
+\section{Further Resources}\label{further-resources-9}
+
+\begin{itemize}
+\item
+\end{itemize}
+
+\section{References}\label{references-10}
+
+\chapter{Host Heterogeneity}\label{host-heterogeneity}
+
+\section{Overview and Learning
+Objectives}\label{overview-and-learning-objectives-10}
 
 In this module, we will briefly discuss the idea that hosts differ in
 characteristics that are important with regard to ID dynamics and
@@ -2946,7 +3014,7 @@ The learning objectives for this chapter are:
   Understand how different types of heterogeneity affect ID control
 \end{itemize}
 
-\section{Introduction}\label{introduction-9}
+\section{Introduction}\label{introduction-10}
 
 So far, we tracked hosts concerning their infection status (susceptible,
 infected, symptomatic, recovered, etc.). We assumed that hosts are
@@ -3144,7 +3212,7 @@ framework is still the most frequently used and a good starting point
 for most situations and questions. For IDs where we know a lot and want
 detailed predictions (e.g., influenza), ABMs are becoming more common.
 
-\section{Summary and Cartoon}\label{summary-and-cartoon-9}
+\section{Summary and Cartoon}\label{summary-and-cartoon-10}
 
 This chapter provided a brief discussion of host heterogeneity, how to
 consider it in studies, and its impact on transmission and control. We
@@ -3157,7 +3225,7 @@ also discussed how to include heterogeneity into models.
 I have - let me know if you know a better one!}
 \end{figure}
 
-\section{Exercises}\label{exercises-9}
+\section{Exercises}\label{exercises-10}
 
 \begin{itemize}
 \tightlist
@@ -3174,7 +3242,7 @@ I have - let me know if you know a better one!}
   individual/population level) might be applicable.
 \end{itemize}
 
-\section{Further Resources}\label{further-resources-9}
+\section{Further Resources}\label{further-resources-10}
 
 \begin{itemize}
 \tightlist
@@ -3203,13 +3271,13 @@ I have - let me know if you know a better one!}
   al. \protect\hyperlink{ref-woolhouse97}{1997}).
 \end{itemize}
 
-\section{References}\label{references-10}
+\section{References}\label{references-11}
 
 \chapter{Dynamics of Multiple
 Pathogens}\label{dynamics-of-multiple-pathogens}
 
 \section{Overview and Learning
-Objectives}\label{overview-and-learning-objectives-10}
+Objectives}\label{overview-and-learning-objectives-11}
 
 In this chapter, we will discuss scenarios where more than one
 infectious disease is considered simultaneously.
@@ -3224,7 +3292,7 @@ The learning objectives for this chapter are:
   Understand how IDs can interact
 \end{itemize}
 
-\section{Introduction}\label{introduction-10}
+\section{Introduction}\label{introduction-11}
 
 So far, we focused on a single ID at a time. The main reason for this is
 simplicity. A single ID is already difficult to study and leads to
@@ -3375,7 +3443,7 @@ The differential equations corresponding to this diagram are given by:
 \[\dot I_{2X} = (b_2 (I_2 + I_{2X}) + b_{12}  I_{12}) R_1 - g_{2} I_{2X}\]
 \[\dot R_{12} = g_{1} I_{1X} + g_{2} I_{2X} + g_{12} I_{12} \]
 
-\section{Summary and Cartoon}\label{summary-and-cartoon-10}
+\section{Summary and Cartoon}\label{summary-and-cartoon-11}
 
 This chapter discussed multi-pathogen systems.
 
@@ -3386,7 +3454,7 @@ This chapter discussed multi-pathogen systems.
 Let me know if you find a suitable one!}
 \end{figure}
 
-\section{Exercises}\label{exercises-10}
+\section{Exercises}\label{exercises-11}
 
 \begin{itemize}
 \tightlist
@@ -3403,7 +3471,7 @@ Let me know if you find a suitable one!}
   the studies you found.
 \end{itemize}
 
-\section{Further Resources}\label{further-resources-10}
+\section{Further Resources}\label{further-resources-11}
 
 \begin{itemize}
 \tightlist
@@ -3423,13 +3491,13 @@ Let me know if you find a suitable one!}
   \protect\hyperlink{ref-mina15}{2015}).
 \end{itemize}
 
-\section{References}\label{references-11}
+\section{References}\label{references-12}
 
 \chapter{Stochastic Dynamics and
 Extinctions}\label{stochastic-dynamics-and-extinctions}
 
 \section{Overview and Learning
-Objectives}\label{overview-and-learning-objectives-11}
+Objectives}\label{overview-and-learning-objectives-12}
 
 In this chapter, we take a look at stochasticity and how it impacts ID
 dynamics. A focus is on the potential of ID extinction. We discuss how
@@ -3603,7 +3671,7 @@ analysis approach is likely more appropriate.
 The next chapter discusses the evolution and emergence of new diseases
 in more detail, with a focus on drug resistance evolution and emergence.
 
-\section{Summary and Cartoon}\label{summary-and-cartoon-11}
+\section{Summary and Cartoon}\label{summary-and-cartoon-12}
 
 This module provides a brief discussion of stochasticity in ID dynamics,
 and its relation to disease extinctions.
@@ -3614,7 +3682,7 @@ and its relation to disease extinctions.
 \caption{\label{fig:smallpox}Smallpox is \emph{almost} extinct.}
 \end{figure}
 
-\section{Exercises}\label{exercises-11}
+\section{Exercises}\label{exercises-12}
 
 \begin{itemize}
 \tightlist
@@ -3629,7 +3697,7 @@ and its relation to disease extinctions.
   CCS for other IDs. Read, summarize and critique the papers.
 \end{itemize}
 
-\section{Further Resources}\label{further-resources-11}
+\section{Further Resources}\label{further-resources-12}
 
 \begin{itemize}
 \tightlist
@@ -3653,12 +3721,12 @@ and its relation to disease extinctions.
   (Peel et al. \protect\hyperlink{ref-peel14}{2014}).
 \end{itemize}
 
-\section{References}\label{references-12}
+\section{References}\label{references-13}
 
 \chapter{Evolutionary Dynamics}\label{evolutionary-dynamics}
 
 \section{Overview and Learning
-Objectives}\label{overview-and-learning-objectives-12}
+Objectives}\label{overview-and-learning-objectives-13}
 
 In this chapter, we will take a look at ID-evolution and its relation to
 control measures.
@@ -3670,13 +3738,11 @@ The learning objectives for this chapter are:
 \item
   Understand the central mechanisms and drivers of ID-evolution
 \item
-  Understand the role of evolution in emerging infectious diseases
-\item
   Be able to assess how different control strategies can affect
   ID-evolution
 \end{itemize}
 
-\section{Introduction}\label{introduction-11}
+\section{Introduction}\label{introduction-12}
 
 Evolution is based on the generation of diversity, usually genetic
 diversity through mutations and the subsequent increase or decrease in
@@ -3690,52 +3756,6 @@ diversity, amplifying those mutants that have a fitness advantage and
 eliminating those with low fitness. These features of microbial
 populations often lead to rapid evolutionary changes. Such evolutionary
 change can become a public health problem.
-
-\section{Emergence and Evolution}\label{emergence-and-evolution}
-
-For infectious diseases, you will often hear the term \emph{emergence}
-as in \emph{Emerging Infectious Diseases}. This means the ID is in some
-way new to a population, either never seen in a particular host before
-(e.g., SARS emergence in 2003 in humans) or a disease that emerges in a
-new location. The pathogen can either be an entirely new type (e.g.,
-SARS, MERS) or a variant of an existing one (e.g., a new strain of
-influenza or norovirus, or a drug-resistant form of a bacteria).
-Emergence describes the observed phenomenon. Almost always in such
-cases, some evolution occurs. For instance, a pathogen that is already
-in the human population evolves drug resistance. Or a new pathogen is
-introduced into the human population and then undergoes evolution to
-adapt to the new host. While one could define emergence as the
-phenomenon and evolution as the mechanism, in practice, you will often
-find these terms used interchangeably, and the exact meaning will depend
-on how the author defines it. In this chapter, we will discuss both the
-mechanisms of evolution and how they can lead to the emergence of new
-pathogens. The ability to understand and predict the emergence of new
-IDs is, of course, of vital importance, recent references providing
-additional information are (Brett, Drake, and Rohani
-\protect\hyperlink{ref-brett17}{2017}; Dibble et al.
-\protect\hyperlink{ref-dibble16}{2016}).
-
-\section{Ecological drivers of evolution and
-emergence}\label{ecological-drivers-of-evolution-and-emergence}
-
-Many external, ecological factors affect ID dynamics. Weather, climate,
-vegetation, the abundance and density of hosts and other species,
-nutritional status, and general living conditions are all important
-factors influencing human and animal ID. This is true both for
-short-term dynamics (e.g., weather patterns can affect disease
-incidence) as well as for the long-term evolutionary dynamics. The
-emergence of many new viral pathogens among humans (e.g., HIV, SARS,
-MERS) is likely caused by the closer contact humans have with the
-animals who are the main hosts of those diseases. Transmission in these
-situations of close human-animal contact is often called spillover.
-Similarly, as discussed in the previous chapter, measles and other
-diseases were only able to emerge and establish themselves among humans
-once human populations became large enough. As global warming will
-affect climate and as people become more affluent and urbanized, we can
-expect further changes in ID dynamics and evolution over the next
-decades - though predicting what changes exactly will occur, and which
-diseases might increase and decrease in importance is very difficult
-(Altizer et al. \protect\hyperlink{ref-altizer13}{2013}).
 
 \section{Evolution and Immune Escape}\label{evolution-and-immune-escape}
 
@@ -3888,7 +3908,7 @@ allowing for host evolution, the models get quite a bit more
 complicated. They are not necessarily conceptually harder, but there is
 more bookkeeping and coding involved making it technically trickier.
 
-\section{Summary and Cartoon}\label{summary-and-cartoon-12}
+\section{Summary and Cartoon}\label{summary-and-cartoon-13}
 
 This module provides a brief discussion of ID-evolution, especially
 concerning ID control.
@@ -3902,7 +3922,7 @@ flood such as the one described in Genesis by living on/in the surviving
 humans. Source: smbc-comics.com (\url{http://www.smbc-comics.com/})}
 \end{figure}
 
-\section{Exercises}\label{exercises-12}
+\section{Exercises}\label{exercises-13}
 
 \begin{itemize}
 \tightlist
@@ -3919,7 +3939,7 @@ humans. Source: smbc-comics.com (\url{http://www.smbc-comics.com/})}
   found. Critically assess the feasibility of the ideas put forward.
 \end{itemize}
 
-\section{Further Resources}\label{further-resources-12}
+\section{Further Resources}\label{further-resources-13}
 
 \begin{itemize}
 \tightlist
@@ -3941,12 +3961,118 @@ humans. Source: smbc-comics.com (\url{http://www.smbc-comics.com/})}
   (Gandon et al. \protect\hyperlink{ref-gandon16}{2016}).
 \end{itemize}
 
-\section{References}\label{references-13}
+\section{References}\label{references-14}
+
+\chapter{Emerging Infectious
+Diseases}\label{emerging-infectious-diseases}
+
+\section{Overview and Learning
+Objectives}\label{overview-and-learning-objectives-14}
+
+In this chapter, we will take a look at a specific evolutionary process
+underlying the emergence of new Infectious Diseases
+
+The learning objectives for this chapter are:
+
+\begin{itemize}
+\tightlist
+\item
+  Understand the central mechanisms and drivers of emergence
+\end{itemize}
+
+\section{Introduction}\label{introduction-13}
+
+\section{Emergence and Evolution}\label{emergence-and-evolution}
+
+For infectious diseases, you will often hear the term \emph{emergence}
+as in \emph{Emerging Infectious Diseases}. This means the ID is in some
+way new to a population, either never seen in a particular host before
+(e.g., SARS emergence in 2003 in humans) or a disease that emerges in a
+new location. The pathogen can either be an entirely new type (e.g.,
+SARS, MERS) or a variant of an existing one (e.g., a new strain of
+influenza or norovirus, or a drug-resistant form of a bacteria).
+Emergence describes the observed phenomenon. Almost always in such
+cases, some evolution occurs. For instance, a pathogen that is already
+in the human population evolves drug resistance. Or a new pathogen is
+introduced into the human population and then undergoes evolution to
+adapt to the new host. While one could define emergence as the
+phenomenon and evolution as the mechanism, in practice, you will often
+find these terms used interchangeably, and the exact meaning will depend
+on how the author defines it. In this chapter, we will discuss both the
+mechanisms of evolution and how they can lead to the emergence of new
+pathogens. The ability to understand and predict the emergence of new
+IDs is, of course, of vital importance, recent references providing
+additional information are (Brett, Drake, and Rohani
+\protect\hyperlink{ref-brett17}{2017}; Dibble et al.
+\protect\hyperlink{ref-dibble16}{2016}).
+
+\section{Ecological drivers of evolution and
+emergence}\label{ecological-drivers-of-evolution-and-emergence}
+
+Many external, ecological factors affect ID dynamics. Weather, climate,
+vegetation, the abundance and density of hosts and other species,
+nutritional status, and general living conditions are all important
+factors influencing human and animal ID. This is true both for
+short-term dynamics (e.g., weather patterns can affect disease
+incidence) as well as for the long-term evolutionary dynamics. The
+emergence of many new viral pathogens among humans (e.g., HIV, SARS,
+MERS) is likely caused by the closer contact humans have with the
+animals who are the main hosts of those diseases. Transmission in these
+situations of close human-animal contact is often called spillover.
+Similarly, as discussed in the previous chapter, measles and other
+diseases were only able to emerge and establish themselves among humans
+once human populations became large enough. As global warming will
+affect climate and as people become more affluent and urbanized, we can
+expect further changes in ID dynamics and evolution over the next
+decades - though predicting what changes exactly will occur, and which
+diseases might increase and decrease in importance is very difficult
+(Altizer et al. \protect\hyperlink{ref-altizer13}{2013}).
+
+\section{Modeling ID Emergence
+Dynamics}\label{modeling-id-emergence-dynamics}
+
+To study evolutionary dynamics, we will need to implement models that
+allow for changes in the system on top of the non-evolutionary dynamics
+of the ID. Unless we plan to model many different potential new
+variants, it is often easiest to pre-specify the number of variants we
+want to track. In the simplest form where we only track pathogen
+evolution, we might model the wild-type (normal, pre-existing) form of
+the pathogen and a single mutant that is different in some important
+characteristic, e.g., resistant to a drug or able to evade a vaccine. We
+would build a model with these compartments. We often also pre-specify
+the characteristics (i.e., the parameter values) for both the wild-type
+and mutant. We implement the process of mutant generation in the model
+and run the simulation. Under certain circumstances, we might see the
+mutant be generated and take over the population.
+
+If we want to model many different mutants, maybe allowing for random,
+not pre-specified, differences in their fitness, and perhaps even
+allowing for host evolution, the models get quite a bit more
+complicated. They are not necessarily conceptually harder, but there is
+more bookkeeping and coding involved making it technically trickier.
+
+\section{Summary and Cartoon}\label{summary-and-cartoon-14}
+
+This module provides a brief discussion of ID emergence.
+
+\section{Exercises}\label{exercises-14}
+
+\begin{itemize}
+\item
+\end{itemize}
+
+\section{Further Resources}\label{further-resources-14}
+
+\begin{itemize}
+\item
+\end{itemize}
+
+\section{References}\label{references-15}
 
 \chapter{Networks and ID}\label{networks-and-id}
 
 \section{Overview and Learning
-Objectives}\label{overview-and-learning-objectives-13}
+Objectives}\label{overview-and-learning-objectives-15}
 
 In this module, we will briefly discuss the concept of transmission
 networks and how that affects ID dynamics and control.
@@ -3966,7 +4092,7 @@ The learning objectives for this chapter are:
   Evaluate the impact of network structure on ID transmission
 \end{itemize}
 
-\section{Introduction}\label{introduction-12}
+\section{Introduction}\label{introduction-14}
 
 ID spread along \emph{connections} between infected and uninfected
 hosts. Those could be very close and defined connections, such as for
@@ -4148,7 +4274,7 @@ technically challenging. Not too many of such models currently exist,
 but it is an area of active investigation by many, see (Bansal et al.
 \protect\hyperlink{ref-bansal10}{2010}).
 
-\section{Summary and Cartoon}\label{summary-and-cartoon-13}
+\section{Summary and Cartoon}\label{summary-and-cartoon-15}
 
 This module provides a brief discussion of transmission networks and how
 they impact dynamics and control of ID.
@@ -4160,7 +4286,7 @@ they impact dynamics and control of ID.
 many ways similar. \href{https://xkcd.com/350/}{Source: xkcd.com}.}
 \end{figure}
 
-\section{Exercises}\label{exercises-13}
+\section{Exercises}\label{exercises-15}
 
 \begin{itemize}
 \tightlist
@@ -4183,7 +4309,7 @@ many ways similar. \href{https://xkcd.com/350/}{Source: xkcd.com}.}
   that was observed in relation to the ones described in section 5.
 \end{itemize}
 
-\section{Further Resources}\label{further-resources-13}
+\section{Further Resources}\label{further-resources-15}
 
 \begin{itemize}
 \tightlist
@@ -4201,7 +4327,7 @@ many ways similar. \href{https://xkcd.com/350/}{Source: xkcd.com}.}
   Jones \protect\hyperlink{ref-salathe10}{2010}).
 \end{itemize}
 
-\section{References}\label{references-14}
+\section{References}\label{references-16}
 
 \chapter{Summary}\label{summary}
 
