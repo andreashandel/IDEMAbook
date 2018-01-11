@@ -14,6 +14,8 @@ output:
               collapse: none
             toolbar:
               position: fixed
+            edit: null
+            download: no
     bookdown::pdf_book:
         keep_tex: yes
 bibliography: dsaidereferences.bib

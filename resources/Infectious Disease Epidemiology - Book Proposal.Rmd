@@ -21,29 +21,73 @@ bibliography: ../DSAIDEreferences.bib
 
 
 #Rationale and scope 
-Modern infectious disease epidemiology makes heavy use of computational model-based approaches and a dynamical systems perspective. The importance of analyzing infectious diseases in such a way keeps increasing. However, infectious disease epidemiology is still often
-taught mainly from a medical and classical epidemiological study design (e.g., cohort, case-
-control) perspective. A number of textbooks exist that approach infectious disease epidemiology from that perspective (e.g. [@magnus08; @nelson13; @giesecke17]).
+
+##Overview
+
+Modern infectious disease (ID) epidemiology makes heavy use of computational model-based approaches and a dynamical systems perspective. The importance of analyzing infectious diseases in such a way keeps increasing. However, infectious disease epidemiology is still often taught mainly from a medical and classical epidemiological study design (e.g., cohort, case- control) perspective. A number of textbooks exist that approach infectious disease epidemiology from a classical epidemiological and medical perspective (e.g. [@magnus08; @nelson13; @giesecke17]).
 
 While textbooks that teach a systems/model based approach to infectious diseases exist (e.g. [@anderson91; @diekmann00; @keeling08; @vynnycky10]), those books are meant to teach students how to become modelers. As such the books require students to work with mathematical models and write computer code. This is a significant barrier for students who do not have a strong mathematical background or prior coding experience, which applies to many students in public health and related biomedical disciplines. It limits the number of students who can
 or want to engage with infectious disease epidemiology by using modern, systems modeling-based approaches. 
 
-There is currently (as far as I am aware) no book that teaches infectious disease epidemiology from a systems perspective while at the same time being approachable to students without the need of doing a good bit of math and/or computer programming. Thus the idea for this book, which is meant to fill the gap between 'classical' ID Epi books and the modeling books.
+There is currently (as far as I am aware) no book that teaches infectious disease epidemiology from a systems perspective while at the same time being approachable to students without the need of doing a good bit of math and/or computer programming. 
 
-Some more (and overlapping) thoughts on how this book fits in can be found in the overview chapter of the current draft: https://ahgroup.github.io/DSAIDEbook/overview-of-this-book.html.
+Thus the idea for this book. In this book, ID topics are discussed from a dynamical systems perspective, and make use of dynamical models. At the same time, students are not required to know advanced mathematics or coding and model building is not taught. 
 
-#Readership
-The main audience are students in public health and related biomedical disciplines who want to learn about infectious disease epidemiology from a modern, systems-based perspective, while not (yet) wanting to engage deeply with the math and computational aspects related to the topic. 
+I believe that anyone working on infectious disease related topics in public health nowadays needs to have some familiarity with models. As such, this book contains and shows some models and equations. However, it introduces those models as tools for understanding infectious disease concepts, and does not try to teach the student to become a modeler. The focus is on understanding the modeling perspective and becoming an educated consumer of models. 
 
-Students who have some basic understanding of epidemiological and infectious disease concepts will have a better starting point, but with a bit of 'filling the gaps' using Wikipedia, the book should be accessible to any interested student.
+
+
+##Learning Objectives
 
 The main goal of the book is to equip students with the knowledge to think about ID Epi in a systems way and to 'consume/interpret' results from infectious disease modeling studies. If students, after having worked through this book, want to proceed toward becoming modelers themselves, they could continue with the modeling textbooks mentioned above.
- 
+
+The proposed book is meant to address the following main learning objectives (more detailed objectives are listed at the beginning of each book chapter):
+
+* Explain the importance of system dynamical thinking for the study and control of ID
+* Understand how different stages of an infection play different roles influencing medical versus public health interventions
+* Interpret the meaning of specific dynamic patterns seen in ID incidence and prevalence 
+* Explain and compute important epidemiological measures, such as reproductive number and level of herd immunity
+* Know about main differences in ID transmission and how that affects control strategies
+* Choose optimal ID intervention strategies based on features of specific IDs and predict the impact of different ID intervention strategies
+* Understand how host heterogeneity impacts ID dynamics
+* Appreciate the complexities of multi-pathogen dynamics
+* Assess the role of stochasticity on ID extinction 
+* Understand the mechanisms and drivers of pathogen evolution and the emergence of new infectious diseases
+* Evaluate the impact of connection structure between hosts on ID dynamics
+
+##Specific Use Case Examples
+I envision several target groups and use cases for this book:
+
+For graduate (masters and PhD) students/courses in public health, epidemiology and related areas who have an interest in ID Epi without necessarily wanting to become modelers:
+
+* The main book for a course on ID Epi (to replace e.g. [@nelson13]), possibly supplemented with additional reading from the primary literature. This would be for a course that teaches ID Epi from a modern, dynamical systems perspective.
+* One of the books used for a course on ID Epi, together with more classical books (e.g. [@nelson13]), to teach ID Epi in a mix of standard and model-thinking approach.
+* The main book for an ID Modeling course, supplemented with further material (reading or exercises, especially the DSAIDE R package described below), to teach model building.
+* One of the books used for an ID Modeling course, alongside e.g. [@keeling08; @vynnycky10]). 
+For non-student individuals, e.g. health professionals working in places like health departments, CDC, etc.
+* As self-contained reading outside a course for individuals who have learned ID Epi from a classical perspective and are increasingly exposed to model-based studies in the literature and want to better understand that approach, without wanting to become active modelers. 
+
+As example, here is how we currently cover ID Epi at our institution (College of Public Health at the University of Georgia). We currently have 3 graduate level courses (with usually a mix of MPH/MS/PhD student enrolled) that broadly cover infectious diseases: 
+
+1. Infectious Disease Epidemiology (taught by one of my colleagues for the last 5+ years), which uses a classical epidemiological/medical/disease centric approach with [@nelson13] as textbook. 
+2. A course on Dynamical Systems Approaches to Infectious Disease Epidemiology which I have taught online for the last 2 years. This book originates from this class and is the main reading used there.
+3. A course on Infectious Disease Modeling, also taught by myself for the last 5+ years, which in the past used [@keeling08; @vynnycky10] as recommended reading. Unfortunately, I found that both books require mathematical knowledge that many of my students could not handle. Thus the books were only optional/recommended (usually only a few students ended up buying one of them) and I mostly relied on my own materials. I have not taught the modeling course since I wrote this book, but I plan to use this book and supplement with modeling exercises in the future, while continuing to recommend [@keeling08; @vynnycky10] for those students that can handle the material and want to dig deeper.
+
+
+
+#Readership
+
+The main audience are students in public health and related biomedical disciplines who want to learn about infectious disease epidemiology from a modern, systems-based perspective, while not (yet) wanting to engage deeply with the math and computational aspects related to the topic.
+
+We assume readers are familiar with basic epidemiological and public health ideas such as incidence and prevalence, basic study design such as cohort and case-control studies and clinical trials, and other basic epidemiological concepts. We also assume readers have at least some passing knowledge of many infectious diseases, which make appearances in the book but are not described in much detail. 
+
+It is likely that most readers will have some gaps (e.g. not being familiar with a specific disease or a specific epidemiological concept). Filling such gaps does not require anything beyond some basic reading on main sources such as Wikipedia, the CDC website, or similar.
+
 
 #Competing/related books 
-The rationale and scope describes how I believe this book differs from existing books and covers a gap that isn't covered by any current book.
+The rationale and scope sections above describe how I believe this book differs from existing classical ID EPi books ([@magnus08; @nelson13; @giesecke17]) and ID Modeling books ([@anderson91; @diekmann00; @keeling08; @vynnycky10]) and is positioned in the gap that I think exists between these two categories of currently existing ID Epi books.
 
-Another book worth mentioning is [@kraemer10], which is an edited volume. It's a mix of ID topics, more conceptual/less medical than [@nelson13]. Since each chapter is written by a different set of authors, it has the usual problem of edited books that each chapter/topic is somewhat stand-alone, with authors writing at different levels of difficulty and discussing whatever they find relevant for a given topic. Thus the whole book is not that cohesive and I consider it suitable to assign specific chapters as additional reading but wouldn't use it as a stand-alone book for teaching/learning.
+Another book worth mentioning is [@kraemer10], which is an edited volume. It is a mix of ID topics, more conceptual/less medical than [@nelson13]. Since each chapter is written by a different set of authors, it has the usual problem of edited books that each chapter/topic is somewhat stand-alone, with authors writing at different levels of difficulty and discussing whatever they find relevant for a given topic. Thus the whole book is not that cohesive and I consider it suitable to assign specific chapters as additional reading but wouldn't use it as a stand-alone book for teaching/learning.
 
 A somewhat older book similar to [@kraemer10] seems to be [@thomas01]. It is also an edited volume and based on the TOC, convers broadly similar ground to [@kraemer10]. I do not own [@thomas01], thus have not yet seen/reviewed the full text.
 
@@ -55,18 +99,21 @@ The Hong Kong Course is 10 weeks long and also mainly video-based, with some opt
 
 I consider the relation between these courses and my proposed book somewhat complementary, i.e. those are 2 different ways of teaching similar material. In fact, in my course on this topic (see below), for every topic I cover I assign both a chapter of my book and suitable videos, many of which come from these online courses.
 
-I have not yet performed a very thourough and systematic review of all the books out there. It is possible that I missed some that are related/similar to my proposed book. I plan to shortly do a very thorough review of what is out there. Still, I believe that whatever I find, my book will be different enough to warrant its existence.
+
 
 
 #Content 
 
-A first version of the book is already written and is currently available on Github at:
+A draft version of the book is already written and is currently available on Github at:
 
 https://ahgroup.github.io/DSAIDEbook/
 
-The book currently has 18 chapters, some longer than others. Each chapter has the same structure, with a short section of suggested exercises at the end. Those exercises usually involve the computer package described below, and suggestions for reading and critically discussing papers from the primary literature.
+The current form of the book was written as part of my teaching of a course on this topic (the Dynamical Systems Approaches to Infectious Disease Epidemiology course mentioned above). This is an online graduate level course at the University of Georgia with mostly public health students and some students from other disciplines (e.g. Ecology, Veterinary Infectious Disease, Forestry, etc.). I have taught the course twice so far. The first year (fall 2016), I modified my previous lecture notes (based on the ID Modeling class I've been teaching for a while, as well as a short-term ID Epi class I taught previously at Emory) and turned them into short readings for each topic. For the fall 2017 course, I combined those short readings and further expanded them, leading to the currently existing book draft. 
 
-The current form of the book was written as part of my teaching of a course on this topic. This is an online graduate level course with mostly public health students and some students from other disciplines (e.g. Ecology, Veterinary Infectious Disease, Forestry, etc.). Each chapter was covered in a week (together with other assigned materials). Students were assigned some or all of the exercises listed at the end of the chapter as weekly homework.
+The book currently has 18 chapters, some longer than others. Each chapter has the same structure, with a short section of suggested exercises at the end. In the last iteration of the course (fall 2017), each book chapter (apart from the 2 I have added since which are not yet written) was covered in a week. Additional materials I have used in this class are videos from the courses [@epimooc; @hkepidemics] described above, as well as papers from the primary literature. These materials are already or will be referenced in the 'further resources' section of each book chapter or are part of the exercises listed at the end of each chapter.
+
+Each week, students were assigned some or all of the exercises listed at the end of the chapter as weekly homework. Those exercises usually involve the DSAIDE R package described in more detail below, and suggestions for reading and critically discussing papers from the primary literature.
+
 
 
 #Special features 
@@ -74,7 +121,15 @@ Color figures are likely not needed. The book contains text boxes that are set a
 
 
 #Description of ancillary material 
-I have written an R package that allows students to actively explore the topics covered in the book. In the exercise section of each book chapter, the students are pointed toward the appropriate simulation in the R package. This R package is fully developed and available, a description of it can be found in [@handel17].
+I have written an R package called DSAIDE that allows students to actively explore the topics covered in the book. This R package is freely available on CRAN (https://cran.r-project.org/package=DSAIDE). It consists of multiple simulations, wrapped into a graphical user interface (implemented in R/Shiny). Each app addresses a specific ID topic and comes with a description of the underlying model and a list of tasks for the user to do. The tasks are meant to explore and thus further learn the topic covered by an app.
+
+This R package is fully developed and available on CRAN, I published a (freely available) paper in PLoS Comp Bio describing the package and its use [@handel17]. I have used this package in my previous teaching of the course, and know of at least 2 other colleagues (one at Virigina Tech, one at GA Southern) who have used the package as part of their ID Epi courses. 
+
+While both the DSAIDE package and the book are designed such that they could be used on their own, in my opinion the combination of the 2 makes for the best learning experience. The idea is for a student to start by reading the material in the book. In the exercise section of each book chapter, the students are pointed toward the appropriate simulation in the DSAIDE package. Using the package and performing the given tasks for each app provides hands-on learning and further strengthens understanding of the material.
+
+An important aspect of DSAIDE is its modular structure. The main intended use is through the graphical interface, which allows students with no coding experience to interact and explore infectious disease topics from a dynamical systems perspective. In addition, each app is written such that students have direct access to the underlying simulation code. This allows more advanced exploration by writing a few lines of their own code wrapped around the supplied simulation function, or even more advanced, by modifying the supplied simulation functions to suit their needs. As such, the package is useful for both students who wish to explore ID models but do not want to start writing code and building models, and those students who want to get a (gentle) introduction toward becoming active modelers. All of these details are described in more details in the PLoS Comp Bio paper mentioned above [@handel17]. 
+
+Note that there are currently no apps in DSAIDE that directly deal with data (e.g. fitting dynamical models to time-series). This might change in the future, but fitting data is a more advanced topic and not the main focus of the DSAIDE package.
 
  
 #Proposed length of the book and its proposed completion date 
@@ -86,8 +141,10 @@ My aspirational completion date is end of summer. I have a light teaching load i
 #Planned next steps
 
 * I have a few topics/chapters that I want to add, I have started working on those. They are in the book draft but currently empty/incomplete.
+* All existing chapters need some further work. Some require more text content, most require additional figures/graphs/examples. Some figures might need to be replaced/removed for copyright reasons.
+* Further resources and Exercises sections of each chapter need to be further worked on.
+* Objectives for each chapter need to be fully aligned with content and made consistent across Bloom's Taxonomy.
 * I want to re-visit various pertinent books/courses/resources and review them to see if there are any topics that I think should be added to my book. 
-* Some of the existing chapters are a bit too short, I plan to flesh them out some more.
 * Everything needs further editing and cleaning up.
 
 
@@ -108,6 +165,28 @@ See website for my research and further information.
 #Some other comments
 The book is written in bookdown (https://bookdown.org/) and lives in the "R ecosystem" (markdown, pandoc, bibtex, etc.)
 
+#Current chapters of book
+
+Some chapters are already fairly complete, most are somewhat complete but still need further additions, a few chapters still need to be written.
+
+1. Overview of this book 
+2. Introduction to the Dynamical Systems Approach to Infectious Disease Epidemiology 
+3. Characterizing Infectious Disease States
+4. Patterns of Infectious Disease Dynamics 
+5. Reproductive Number 
+6. Types of Infectious Disease Transmission 
+7. Modes of Direct Transmission 
+8. Environmental Transmission
+9. Vector-borne ID Transmission 
+10. Infectious Disease Control 
+11. Infectious Disease Surveillance 
+12. Host Heterogeneity 
+13. Dynamics of Multiple Pathogens 
+14. Stochastic Dynamics and Extinctions
+15. Evolutionary Dynamics 
+16. Emerging Infectious Diseases 
+17. Networks and ID 
+18. Summary 
 
 
 # References
