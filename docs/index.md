@@ -71,7 +71,7 @@ The learning objectives for this chapter are:
 
 * Understand the basic ideas of complex systems and systems thinking
 * Understand how models can help study complex systems
-* Assess strength and weaknesses of different approaches to ID dynamics
+* Assess strength and weaknesses of different modeling approaches 
 * Understand the concept of a compartmental model and how it can be used to model infectious diseases
 
 
@@ -111,11 +111,6 @@ A huge class of models consists of what is usually refered to as statistical mod
 
 For instance, a linear regression model investigates if there is a pattern between input (system components or other measurable quantities that are part of the system) and an outcome of interest that can be approximated by a linear function. More complicated statistical models exist, some go by the name of _machine learning methods_. All of these models try to determine if there are patterns between inputs and outputs of interest in the data. Some of the more complicated models allow for interactions between system components (inputs, predictors, variables). Figure \@ref(fig:phenomodel) gives an illustration of 2 simple phenomenological models fit to some data.
 
-
-```r
-knitr::include_graphics("./images/phenomodel.png")
-```
-
 <div class="figure">
 <img src="./images/phenomodel.png" alt="Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model."  />
 <p class="caption">(\#fig:phenomodel)Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model.</p>
@@ -144,6 +139,8 @@ We can illustrate this dynamical perspective in an abstract way by extending the
 <img src="./images/moving-triangle.png" alt="Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction."  />
 <p class="caption">(\#fig:dynamictriangle)Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.</p>
 </div>
+
+A more specific example of a simple dynamical model showing changes over time is shown in Figure \@ref(fig:sirsim).
 
 Mechanistic models are especially well suited to describe dynamical systems and are therefore the primary choice for the study of complex dynamical systems.
 
@@ -227,9 +224,9 @@ This chapter provided a brief introduction to the concept of systems thinking an
 </div>
 
 ##Exercises
-* If you haven't done already, install R, RStudio and the DSAIDE R package. See [@handel17] for an overview and quick-start guide.
+* If you haven't done already, install R, RStudio and the DSAIDE R package. See [@handel17] for an overview and quick-start guide for DSAIDE.
 * Work through the tasks for the _ID Dynamics Introduction_ DSAIDE app.
-* Contemplate on your experience with the _ID Dynamics Introduction_ DSAIDE app. In which way does it capture the 'dynamical systems' perspective? Did you find any behavior of this - arguably very simple - infectious disease model as being "complex"? How/why?
+* Contemplate on your experience with the _ID Dynamics Introduction_ DSAIDE app. In which way does it capture the 'dynamical systems' perspective? Did you find any behavior of this - arguably very simple - infectious disease model to be complex? How/why?
 * Read the paper "Systems Science Methods in Public Health: Dynamics, Networks, and Agents" by Luke & Stamatakis [@luke12]. Come up with 2 systems that you consider complex in the realm of public health or biomedicine (other than those mentioned in the paper). Explain what makes them complex. Also, come up with 2 systems that you consider not complex and explain why you think of them as not complex.
 
 
@@ -244,47 +241,70 @@ This chapter provided a brief introduction to the concept of systems thinking an
 
 <!--chapter:end:100-IDDynamicsIntro.Rmd-->
 
-# Characterizing Infectious Disease States
+# Characterizing Infectious Disease States {#idstates}
 
 
 ## Overview and Learning Objectives
-In this module, we will discuss ways to characterize individuals with regard to their ID status. We will consider why some infection states are important for public health control but less for doctors and the opposite. We will also discuss how different ID states might or might not correspond to the compartments in our computer models. 
+In this module, we will discuss ways to characterize individuals with regard to their infection status, e.g. susceptible, symptomatic infected, revovered and immune. We will consider why some infection states are important for public health control but less important from an individual patient, medical perspective, and the reverse. We will also discuss the connection between infectious disease states and compartments in computer models. 
 
 
 The learning objectives for this chapter are:
 
-* Categorize infectious diseases according to medical characteristics such as duration of symptoms, mortality, etc.
-* Categorize infectious diseases according to public health characteristics such as duration of infectiousness, immunity, etc.
+* Ability to accurately categorize infectious diseases according to medical and public health characteristics
+* Evaluate the impact of different infection states on medical outcomes and disease dynamics 
 * Understand how "medical states" (e.g. symptoms) and "public health states" (e.g. infectiousness) do not always overlap.
 * Identify the features of infectious diseases that are most important to know for successful intervention planning
-* Understand how models change as more details are included
+* Understand how different infections states are represented in mathematical models 
 
-##Introduction
-We previously introduced a very simple compartmental systems model for an infectious disease (the SIR model) where individuals were split according to 3 states: susceptible, infected (and infectious) and recovered (and immune). While easy and sometimes a good starting point, the simple SIR is often not detailed enough to capture the important aspects of many infectious diseases. Here, we discuss some important considerations with regard to the infection status of individuals that can affect the behavior of the system and thus need to be included if one wants to build a model to study this system.
-
-
-## Infection states 
-It is important to keep in mind that infectiousness and symptoms are not always overlapping. The former is the most important driver of the ongoing infection process. The latter is important for surveillance and medical interventions. We will discuss different clinical/medical and epidemiological/transmission states in the following.
+## Introduction
+In the previous chapter, we introduced a very simple compartmental systems model for an infectious disease (the SIR model) where individuals were split according to 3 states related to the infectious disease of interest: susceptible, infected (and infectious) and recovered (and immune). Sometimes, placing individuals into one of these 3 categories provides a reasonable approximation of reality. It is easy and thus often a good starting point. However, at some point we might want to categorize infection states of individuals in some more detail. For instance, for a disease like tuberculosis, a large fraction of individuals who are infected are not infectious. Thus, combining all of those who are infected into a single group is not realistic. We have to allow for more distinct categories. there is potentially an unlimited number of states we can consider. For instance for HIV, we could categorize infected individuals into sub-groups based on their CD4 cell count - and the number of such sub-groups is essentially infinite. Fortunately, to get a fairly realistic picture of most diseases, we can usually get away with introducing just some additional categories. The following sections discuss the major categories with regard to infection status of individuals.
 
 
-### Infection states - clinical
-From a purely medical perspective, focusing on one patient at a time, the most important characteristic of a disease is its severity, also called morbidity. We would like to know what kind of symptoms a disease produces and how frequently those occur. This is the morbidity profile of a disease. One can consider mortality the "ultimate symptom". Because of its importance, mortality is often considered separate from morbidity. Knowing morbidity and mortality of an ID are generally most important when caring for individual patients. For interventions, understanding what might help mitigate morbidity and mortality is of prime interest. Morbidity and mortality are also often necessary for the acquisition of data. It is difficult to determine infected individuals that do not show symptoms, those that are symptomatic - and obviously, those that die - are easier to count and thus get estimates for disease prevalence and incidence.
+## States of susceptibility
+The simplest assumption is to classify everyone as susceptible. While this is true in some instances, e.g. for a newly emerging disease, often this assumption is not justified. Depending on the disease and population, some individuals might not be susceptible, e.g. because they previously had the infection and have natural immunity, or they received a vaccine or they have a genetic make-up that makes them non-susceptible (examples are the CCR5-delta 32 mutation in HIV or the FUT2-G428A for some norovirus strains). The easiest way to deal with individuals who are not susceptible is to "ignore" them, i.e. simply not include them in any models for that disease. Alternatively, if the model has a recovered and immune class, one can place all those individuals in that category.
+
+It gets more complicated if susceptibility is only somewhat reduced. This is common for some vaccines, which often do not offer full protection, but instead reduce the chance of getting infected (and if infection occurs, often disease severity is reduced). If you wants to account for this, you will have to introduce a new state into your conceptual/mathematical/computer model. For instance you could have a category _S_ of fully susceptible individuals, and a category _Sp_ of partially susceptible. Those individuals would get infected at a lower rate compared to fully susceptible individuals. If reduced susceptibility can wane, e.g. due to the wearing off of a vaccine induced immunity, one might need to include a process in the model by which _sp_ individuals transition back into the _S_ category.
 
 
-###Infection states - epidemiological
-From the perspective of a public health practitioner, other ID characteristics besides morbidity and mortality are fundamental. We need to know when someone is infectious (e.g. before/without symptoms, or only when symptomatic), how transmission occurs, if recovered individuals become immune, if immunity is waning, etc. The difficult part is that our data often comes from clinical (symptomatic) cases or deaths. If asymptomatic individuals are infectious, or there is underreporting, we often don't get the full picture. 
+## States of Infection 
+Categorizing individuals beyond the simple _infected and infectious_ category is often the most important addition to a model if one wants to make things more realistic. Several important states are commonly distinguished and described in the next few sections.
 
-Of course, the medical and epidemiological perspectives are not an 'either/or'. Instead, success in combating infectious diseases only comes when all aspects are considered. Still, it is useful to keep in mind that certain infection states are more important when considering how to intervene on the individual patient level versus intervention on a population level.
+### Latent infection
+Many important diseases (e.g. HIV, Tuberculosis), have a state during which an individual is infected but does not show any symptoms. This is usually called _latent_ infection. Sometimes the term _exposed_ is also used. Latent, non-symptomatic infected individuals might (HIV) or might not (TB) be infectious. It is important to keep in mind that infectiousness and symptoms are not always overlapping. The former is the most important driver of the ongoing infection process and drives the observed disease dynamics on the population level. The latter is important for surveillance and medical interventions. 
+
+### Symptomatic infection
+From a purely medical perspective, focusing on one patient at a time, the most important characteristic of a disease is its severity, also called morbidity. We would like to know what kind of symptoms a disease produces and how frequently those occur. This is the morbidity profile of a disease. One can consider mortality the "ultimate symptom". Because of its importance, mortality is often considered separate from morbidity. Knowing morbidity and mortality of an ID are generally most important when caring for individual patients. For interventions, understanding what might help mitigate morbidity and mortality is of prime interest.
+
+Most diseases lead to a state with morbidity, i.e. where an infected individual shows symptoms. Those diseases that don't are usually not of much medical and public health interest. During the symptomatic state, individuals are generally infectious. The question how symptoms might or might not impact infectiousness is important but not too well understood. Qualitatively, we know that coughing and sneezing help spread many respiratory pathogens, while the symptoms an HIV infected individual displays during the AIDS stage are likely not increasing infectiousness. The connection of symptoms, morbidity and mortality and its relation to infectiousness is the main theme underlying the topic of _virulence_, which we'll cover later in the chapter on virulence evolution. 
+
+Morbidity and mortality are also often important for public health surveillance. It is generally difficult to capture infected individuals that do not show symptoms, those that are symptomatic - and obviously, those that die - are easier to count and thus get estimates for disease prevalence and incidence.
 
 
-#### Biased Surveillance - an example {#myexamplebox}
-During the early days of the 2009 H1N1 influenza pandemic, the numbers on cases and deaths suggested that this strain of influenza might have a higher than normal case fatality ratio (the often used term case fatality rate is a bad label as this is not a rate). Once more and better data became available. It was realized that many infections initially did not get reported, and adjusting for those it became clear that the ratio of deaths to infected was thankfully not much different from seasonal influenza.
+### Asymptomatic infection
+After infection, for almost all diseases there is a latent period when symptoms are not yet visible. For many diseases, the whole course of infection is asymptomatic in at least a fraction of infected individuals. If such asymptomatic individuals are infectious, they are a potentially important driver of the infection dynamics. Since asymptomatic indivuals are often not picked up by surveillance, they can pose problems for the control of a disease. 
 
-##Other important infectious disease stages
-In addition to the infection stage, other states of the host might need to be considered carefully. For instance, while in the classic SIR model the recovered individuals are assumed to be immune to re-infection - and thus don't further influence the systems dynamics, there are IDs which either do not induce immunity (e.g. many sexually transmitted diseases) or only lead to short-term immunity (e.g. norovirus or influenza). This can often be represented in a model by adjusting the flows, e.g. if recovered individuals initially have some immunity and then lose them, flow from the recovered to the susceptible class can be implemented.
+Note that some diseases can show complicated patterns of symptoms, e.g. for malaria symptoms can be intermittent, with periods of no symptoms in between.
 
-###Models with more details
-To study the dynamics of an infectious disease in more detail than is provided by the simple SIR model, we can consider models that allow for additional states. Figure \@ref(fig:complicatedmodel) shows a model with additional compartments. Equations for this model are not shown here, but a model similar to this one, together with the equations, can be found in the corresponding DSAIDE app referred to below.
+
+## Post-infection states 
+After infection is over, it is possible for an individual to enter different states. So far, we only considered a _recovered and immune_ state. in the classic SIR model, those _R_ individuals are immune forever and thus do not further influence the systems dynamics. However, some infectious diseases either do not induce immunity (e.g. many sexually transmitted diseases) or only lead to short-term immunity (e.g. norovirus or influenza). If a disease does not induce immunity, one can conceptualize and model this by assuming that after infection, individuals directly enter the susceptible state again (leading to the SIS model). 
+
+If we assume that everyone has immunity only for a short period of time, we can account for that by having infected individuals first enter the recovered state, and then from that state move at some rate back to the susceptible state (leading to the SIRS model).
+
+Things can get more complicated when combined with different infection states. For instance it might be that those individuals who had an asymptomatic case of the disease aquire immunity that lasts less long compared to those who were symptomatic infected. We then need to have 2 different recovered compartments, each with its own rate of returning to the susceptible state.
+
+A special and important post-infection state is death. From a ID dynamics perspective, a dead person generally behaves like a recovered and immune person, i.e. they do not further influence the infection dynamics (ignoring special cases such as e.g. Ebola where transmission after death has been observed). Of course, from a medical and public health perspective, a recoverd and immune person is a favorable outcome while a dead person is not.
+
+
+## Medical versus ID dynamics perspectives
+I hope that the above description of different states made it clear that features that are important from a medical perspective (e.g. severity of symptoms), might or might not be important for understanding the dynamics of the disease. To properly study the dynamics of an ID, we need to know when someone is infectious (e.g. before/without symptoms, or only when symptomatic), how transmission occurs, if recovered individuals become immune, if immunity is waning, etc. The difficult part is that our data often comes from clinical (symptomatic) cases or deaths. If asymptomatic individuals are infectious, or there is underreporting, we often don't get the full picture. This is discussed further in the surveillance chapter.
+
+Of course, the medical and ID dynamics/epidemiological perspectives are not an 'either/or'. Instead, success in combating infectious diseases only comes when all aspects are considered. Still, it is useful to keep in mind that certain infection states are more important when considering how to intervene on the individual patient level versus intervention on a population level.
+
+
+
+## Models with more details
+The above sections described different states that might need to be considered and explained how models will need to be adjusted to account for such different states. To make this more specific, figure \@ref(fig:complicatedmodel) shows a model with additional compartments. We omit showing a mathematical representation (i.e. a set of differential equations) for this model. However, a very similar model, together with the equations, can be found in the DSAIDE app referred to below in the exercise section.
 
 <div class="figure">
 <img src="./images/ComplicatedModel.png" alt="Example of a model with more compartments."  />
@@ -293,23 +313,32 @@ To study the dynamics of an infectious disease in more detail than is provided b
 
 
 
+## How complex should our model be?
+While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected indiduals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? 
 
-##How complex should our model be?
+Onee might be inclined to build very complicated and detailed models, in an effort to be as realistic as possible. While more detailed models can indeed be more realistic, there are several drawbacks. First, as models get larger, they contain more parameters. Each parameter needs to be given a numeric value to allow one to run simulations. One can try to obtain the parameters from the literature, however, often that information is not available. Alternatively, one could fit the model to data (something not discussed in this book) and try to estimate the parameters. However, with the kind of data typically available, one can usually only estimate a few parameters with some level of certainty. And even if one were to be able to get good estimates for all model parameters, larger models are harder to implement, take longer to run, and are more difficult to analyze. With too many parts present, it can be hard to understand how different components interact with each other and affect outcomes of interest. 
 
-Individuals can be classified as non-infectious or infectious. The latter could be divided further, e.g. into low and high infectiousness. Infectiousness is the primary driver of the dynamics. Clinical states that are often tracked are asymptomatic, symptomatic and dead. Sometimes, individuals are asymptomatic before they become symptomatic. This is usually labeled pre-symptomatic. Individuals in any of those states can be infectious or not. Depending on the ID, some of those states are more important than others. For instance for HIV, individuals are infectious during the long asymptomatic period, while asymptomatic individuals infected with TB are not infectious. A model describing a specific system needs to be tailored to the ID under study. 
+We therefore cannot - and do not want to - include every detail of a complex system, i.e. all components and interactions. We need to decide which parts are important and need to be in the model, and which ones we can ignore. A simple and somewhat silly example: We never include the hair color of individuals in any infectious disease models (at least I've never seen such a model), since we assume that this characteristic is not important for the ID dynamics. The choice to include or exclude other features is less obvious in other cases. For instance, for an HIV model, we likely need gender, while a SARS model might ignore this characteristic. 
 
-The question then becomes: What details should we include and which ones should we omit? We can - and do not want to - include every detail of a complex system, i.e. all components and interactions. We need to decide which parts are important and need to be in the model, and which ones we can ignore. A simple and somewhat silly example: We never include the hair color of individuals in any infectious disease models (at least I've never seen such a model), since we assume that this characteristic is not important for the ID dynamics. The choice to include or exclude other features is less obvious in other cases. For instance, for an HIV model, we likely need gender, while a SARS model might ignore this characteristic. 
+It is important to find a trade-off between details that need to be included and details one can leave out. Unfortunately, there is no recipe for it. Some very simple models have produced useful insights, while there are big models in the literature that arguably do little to nothing in helping us understand or deal with infectious diseases. Obviously, there have also been fairly big models that have produced useful information, and small models that are too simplistic to provide much information about any real system.
 
-In general, we need to decide for a specific ID, scenario, and question which details to include in our model and which ones to ignore. In general, the primary interactions between components of the system are needed. Thus, if we wanted to model the transmission dynamics of Ebola, we might need to include deceased infected individuals into the model, since they are known to contribute to transmission. In contrast, if we want to study how some control strategies for SARS might reduce the total number of *infected* but we don't care about the impact on total deaths (unlikely, but let's just pretend). In this case, we would not need a dead compartment in our model, since those dead don't further interact with anyone else in the system. However, if we want to keep track of deaths and how they are impacted by our intervention (likely), we do need to track them - even though dead people are not known to transmit SARS. 
+A good analogy for model building and use in general is the use of maps. Maps are models of the real world. They serve specific purposes, and it is important that a given map be useful for the intended purpose. For instance, if we want to know how to drive from Atlanta to Athens, the left map in figure \@ref(fig:mapfigure) would be most useful. If instead we want to know where in the US the state of Georgia is located, the middle map is most useful. If we want to know where most people live in Georgia, the right map is most useful. In each case, we study the same object (the state of Georgia), but depending on the question, different maps are needed. Maps (and models) are useful because they capture the information that is needed for a specific situation, while leaving out unneccesary information. Nobody would want to have a map so detailed that it is essentially the real world - it wouldn't be a very useful map anymore.
 
-We will see many different types of models as we go through the course. In general, the models will include the feature we are focusing on while excluding others. For instance, we might include human and mosquitos for vector-borne IDs but ignore things like asymptomatic or pre-symptomatic states. This is mainly done to keep models simple and focus on one feature at a time. Models that address "real" questions often -- but not always -- include a fair number of details.
 
-To build models that are suitable to study a particular system, model builders need to be experts on the system they want to study and/or collaborate with subject matter experts. 
 
-Building a good model needs to follow the [Goldilocks Principle](https://en.wikipedia.org/wiki/Goldilocks_principle): If a model is too small/simple, it likely doesn't approximate the real system very well. If the model is too big and complicated, it 's hard to build, hard to analyze, prone to mistakes, and might not lead to much insight (i.e. the model is a big black box). The goal is to get the model _just right_ regarding size and complexity. Unfortunately, no recipe or formula exists specifying how to build a _just right_ model. Being able to build models that are appropriate/suitable for a given ID and question distinguishes good modelers/scientists from less good ones.
+<div class="figure">
+<img src="./images/mapfigure.png" alt="Three different maps of the state of Georgia."  />
+<p class="caption">(\#fig:mapfigure)Three different maps of the state of Georgia.</p>
+</div>
 
-Also, the model building and analysis process is often iterative. After a model has been built and studied, it might become clear -- e.g. by comparing the model with data -- that important components or interactions have been ignored or not been included correctly. This leads to model modification and refinement. This back and forth between model and data/the real world can happen over multiple iterations.
+In analogy to the map example, we need to decide for a specific ID, scenario, and question which details to include in our model and which ones to ignore. In general, the primary interactions between components of the system are needed. Thus, if we wanted to model the transmission dynamics of Ebola, we might need to include deceased infected individuals into the model, since they are known to contribute to transmission. In contrast, if we want to study how some control strategies for SARS might reduce the total number of *infected* but we don't care about the impact on total deaths (unlikely, but let's just pretend). In this case, we would not need a dead compartment in our model, since those dead don't further interact with anyone else in the system. However, if we want to keep track of deaths and how they are impacted by our intervention (likely), we do need to track them - even though dead people are not known to transmit SARS. 
 
+To build models that are suitable to study a particular system, model builders need to be experts on the system they want to study or collaborate with subject matter experts. Building a good model needs to follow the [Goldilocks Principle](https://en.wikipedia.org/wiki/Goldilocks_principle): If a model is too simple, it likely doesn't approximate the real system very well. If the model is too complicated, it is hard to build and analyze, and might not lead to much insight (i.e. the model is a big black box). The goal is to get the model _just right_ regarding size and complexity. Unfortunately, no recipe or formula exists specifying how to build a _just right_ model. Using models that are suitable for a given system and question is a hallmark of a good scientist.
+
+The model building and analysis process is often iterative. After a model has been built and studied, it might become clear -- e.g. by comparing the model with data -- that important components or interactions have been ignored or not been included correctly. This leads to model modification and refinement. This back and forth between model and data/the real world can happen over multiple iterations.
+
+
+Note that for purposes of teaching, we keep the models throughout this book fairly simple. The models will include the feature we are focusing on while excluding others. For instance, we include humans and mosquitos for vector-borne IDs but ignore things like asymptomatic or pre-symptomatic states. This is mainly done to keep models simple and focus on one feature at a time. Models that address "real" questions often -- but not always -- include more details than the models we investigate througout this book.
 
 
 ##Summary and Cartoon
@@ -892,11 +921,11 @@ The learning objectives for this chapter are:
 * Identify diseases for which the environmental transmission pathway is important
 
 
-##Introduction
+## Introduction
 While the distinction between direct and indirect transmission is not clear-cut, we usually consider an ID to have an indirect mode of transmission if the time spent outside the main host is _important_ for the whole transmission cycle. The two main types of stages where a pathogen resides outside the main host are the abiotic environment or another host species. In the case of the former, we consider it to be environmental transmission, in the case of the latter, it is vector-borne. Of course, some IDs are even more complicated and have both vector and environmental stages. This chapter focuses on environmental transmission.
 
 
-###Environmental transmission
+## Environmental transmission basics
 Some diseases are shed by hosts into the environment, where they can survive for a potentially extended time before re-infecting a new host. Cholera is an excellent example of an ID that has water sources as the environmental stage. Similarly, avian influenza is thought to survive in cold lake water for an extended time. The important consequence of environmental transmission is that it potentially allows new infections to occur over long distances in time and space. For instance, an infected person might shed Cholera into the water somewhere upstream, and a susceptible person ingests the Cholera bacteria somewhere miles downstream and days or weeks later. This is fundamentally different to direct transmission, which requires close contact.
 
 ![Schematic of an ID with environmental transmission](./images/environmentaltransmissionscheme.png)
@@ -904,13 +933,13 @@ Some diseases are shed by hosts into the environment, where they can survive for
 
 
 
-###Environmental transmission and external drivers
+## Environmental transmission and external drivers
 Because environmental transmission involves the survival of pathogen for a potentially extended time in the environment, such IDs are often more strongly influenced by external drivers compared to IDs that are directly transmitted. The weather often has a strong impact, as do behavior changes. E.g., humans living in temperate zones are more likely to swim in lakes when it's warm. Therefore water-borne diseases often have the highest incidence in warm months.
 
 Such external drivers can be included in models by allowing certain parameters to vary over time. For instance the transmission rate or the rate at which environmental pathogen decays could be made dependent on the time of the year.
 
 
-###Environmental transmission and interventions
+## Environmental transmission and interventions
 The environmental stage is a potentially great target for control mechanisms. Disinfecting surfaces with chemicals such as bleach is common practice in hospitals and other places where contamination might be common and needs to be minimized. Similarly, attempts have been made to disinfect the air with for instance UV radiation. Unfortunately, such radiation can be harmful to humans, and thus this approach only works within a system that moves and circulates air (e.g., an air-conditioning system with a stage at which the circulated air is irradiated). All modern water treatment plants have systems that remove pathogens, in conjunction with good sanitation practices, have reduced the incidence of diseases like Cholera. However, in developing countries, Cholera and other water borne disease are still a major public health concern.  Even with proper sanitation, other pathogens like norovirus are hard to control and still often cause local outbreaks. One reason for that is that these viruses are hard to kill and many regular cleaning agents do not work.
 Maybe the most important and famous environmental control strategy is the tried and true method of hand washing. Our hands can be considered a potentially infected environment (a fomite). By washing them, the transmission of pathogens to others is minimized. The fact that hand-washing is a great infection control strategy has been known for centuries. Unfortunately, compliance is often still low, leading to many needless infections, even in settings like hospitals, where one should expect the staff to know the importance of adhering to the hand-washing routine.
 
@@ -929,7 +958,7 @@ Infected persons release pathogen into the environment at rate _p_. The pathogen
 
 
 
-##Summary and Cartoon
+## Summary and Cartoon
 This chapter provided a discussion of environmental transmission and its impact on ID dynamics and control.
 
 
@@ -974,17 +1003,17 @@ Not surprisingly, the IDs which receive the most study are those where one of th
 
 
 
-###Vector-borne transmission and ID patterns
+## Vector-borne transmission and ID patterns
 Understanding what mechanisms lead to potentially observed patterns in incidence and prevalence for vector-borne diseases is difficult, due to the presence of more than one host. In a previous chapter, we discussed cycles that could be caused by the intrinsic transmission dynamics or influenced by external drivers (e.g., seasonal changes in weather). This general concept still holds, but there are now two species (e.g., humans and mosquitos),  both have distinct and intrinsic dynamics and responding differently to external factors. This obviously adds a lot of complexity to the model. Nevertheless, patterns in ID dynamics are often observed for vector-borne diseases and are at least partially understood. For instance, the reproductive cycle of mosquitos strongly depends on the weather, and specifically the availability or lack of water. As such, in regions that have strong differences in rainfall between seasons, one often observes annual cycles based on annual weather patterns. 
 
 
-###Vector-borne transmission and interventions
+## Vector-borne transmission and interventions
 With vector-borne ID, there is a unique opportunity for interventions that do not exist for directly transmitted diseases. Namely, we can try to control the ID at the vector stage. That often means trying to kill as many vectors as possible. DDT in the past and more recently pesticide-coated bed nets have been proven to work very effectively. Unfortunately, these interventions need to be sustained. Otherwise, mosquito numbers (or other vectors with a short lifespan) quickly bounce back. Also, while we mostly think of mosquitos and other insects as a nuisance or worse, they do perform important roles in the ecosystem, and it is unclear what the consequences would be of potentially killing all Anopheles mosquitos (they transmit a lot of important IDs). Some recent approaches try to make mosquitos resistant to ID. If one could introduce those and have them out-compete the mosquitos that are susceptible to the ID, one might - in theory - get rid of relevant IDs without affecting the ecosystem in unpredictable ways. 
 
 A major problem with all control strategies targeting vectors is that not only do pathogens evolve quickly, but most vectors have fairly short life spans and large population numbers, which means rapid evolution. That could result in wide spread resistance making any control measures ineffective within a short time. Indeed, that was observed for DDT, where mosquitos resistant to the chemical started to appear before its widespread use was discontinued.
 
 
-##Modeling vector-borne transmission {#myadvancedbox}
+#### Modeling vector-borne transmission {#myadvancedbox}
 The easiest way to model a vector-borne disease is to simply ignore the vector and assume that the transmission term of the equation (e.g., a term like _bSI_) represents -- in a very simplified form -- all the complicated processes involved in transmission, including the vector stage. That makes the model simple, but of course, doesn't capture the vector-borne aspects of the dynamics. If we are interested in the dynamics of the disease in all hosts, we do need to include the vector components in a model. To add vectors in a model, one could, for instance, build 2 SIR-type models, with one set of equations for the (human) host and one for the vector, and then couple the compartments by including transmission from humans to vectors and vectors to humans. Equations for such a model might look as follows:
 $$
 \begin{aligned}
@@ -1157,9 +1186,15 @@ Medical/clinical and sequence
 
 Ongoing or ad-hoc
 
+
 ##Problems with surveillance
 Knowing numerator and denominator. Bias due to getting more severe cases. Behavior change during an outbreak.
 
+
+
+
+#### Biased Surveillance - an example {#myexamplebox}
+During the early days of the 2009 H1N1 influenza pandemic, the numbers on cases and deaths suggested that this strain of influenza might have a higher than normal case fatality ratio (the often used term case fatality rate is a bad label as this is not a rate). Once more and better data became available. It was realized that many infections initially did not get reported, and adjusting for those it became clear that the ratio of deaths to infected was thankfully not much different from seasonal influenza.
 
 ##Summary and Cartoon
 
@@ -1206,7 +1241,7 @@ Some host characteristics might only have an impact on a single component of the
 
 
 
-###Host Heterogeneity Examples {#myexamplebox}
+#### Host Heterogeneity Examples {#myexamplebox}
 Several famous examples show how differences in genetics can impact ID. For instance, persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a particular mutation in the FUT2 gene are much less likely to get infected with norovirus. It is probable that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.
 
 
@@ -1376,9 +1411,11 @@ The learning objectives for this chapter are:
 *   Understand how stochasticity affects ID dynamics and can lead to extinctions
 
 
-##Deterministic Models
-So far, all the models we have used to explore different aspects of ID dynamics have been _deterministic_. For a deterministic model, once you choose the initial conditions and parameter values, you always get the same result, no matter how often you run the model. There is no randomness present.
+## Introduction
+So far, all the models we have used to explore different aspects of ID dynamics have been _deterministic_. For a deterministic model, once you choose the initial conditions and parameter values, you always get the same result, no matter how often you run the model. There is no randomness present. Biological systems are never deterministic. There is always some amount of randomness or noise present. Models that allow for such randomness are called stochastic models. We discuss here when it is important to consider stochastic models and some of the questions one can only study with those models.
 
+
+## Deterministic systems
 Such deterministic models are relatively easy to implement and to study. That is one of the reasons they are so commonly used. Such a modeling approach also often provides a good representation of the dynamics of real ID if numbers are large. That is due to the law of large numbers. While every individual host or pathogen undergoes somewhat random dynamics, these random parts get _averaged out_, and the dynamics of the whole population is fairly predictable and well described by such deterministic models. (This is the same concept we use in classical epidemiological studies, where we enroll sufficiently large numbers such that we can say something predictable about differences between groups, even if individuals are somewhat unpredictable.)
 
 
@@ -1417,6 +1454,9 @@ The host extinction approach is also often considered and used for vector-borne 
 The flip-side of extinction is the emergence of a new disease. During extinction, infected/pathogen numbers move from a level that can be decently approximated by a deterministic model to numbers so small that it requires a stochastic analysis approach to allow the possibility of extinction. During emergence, the new disease starts at zero, then is introduced in modest numbers (possibly only a single introduction) into a new population, and "bounces around" for a while in small numbers. If conditions are right (i.e., local reproductive number greater than 1), the disease might take off and spread [@antia03]. It might eventually reach high enough numbers that a deterministic approximation which focuses on the mean dynamics is warranted. Many recent emerging disease outbreak followed that pattern. The 2014 Ebola outbreak and 2009 Influenza pandemic reached sufficiently large numbers that a deterministic approach was reasonable, while the 2013 SARS epidemic and previous Ebola outbreaks lead to relatively few cases, so a stochastic modeling and analysis approach is likely more appropriate.
 
 The next chapter discusses the evolution and emergence of new diseases in more detail, with a focus on drug resistance evolution and emergence.
+
+## Are stochastic models better?
+After having gone through this chapter and learned that stochastic models allow you to address questions that deterministic models cannot address, you might wonder why we should still use deterministic models at all. The main reasons are that deterministic models are generally easier to build, easier to analyze, faster to run on a computer, and importantly, much easier to fit to data. Often this simplicity is worth the loss in some level of realism. But of course, it depends on the specific scenario and question. Recall the example of different maps in a chapter \@ref(idstates). The right map depends on the question. Similarly, the most appropriate model depends on your question. For some questions, stochastic models are needed. For others, deterministic models might still be the better choice.
 
 
 ##Summary and Cartoon
@@ -1528,18 +1568,16 @@ This module provides a brief discussion of ID-evolution, especially concerning I
 # Emerging Infectious Diseases 
 
 ##Overview and Learning Objectives
-In this chapter, we will take a look at a specific evolutionary process underlying the emergence of new Infectious Diseases
-
-
+In this chapter, we will take a look at the evolutionary processes underlying the emergence of new Infectious Diseases.
 
 The learning objectives for this chapter are:
 
 * Understand the central mechanisms and drivers of emergence 
-
+* Assess the potential impact of different control strategies on potential future ID emergence
 
 
 ##Introduction
-
+The definition of emerging infectious disease (EID) is a bit vague, but in general a pathogen that is 'new' to a specific population and has never been seen in that population before can be considered an EID. A 'new' pathogen can mean a genuinely new one (e.g. SARS or MERS-CoV in humans), or a new variant of an existing pathogen (e.g. the 2009 H1N1 influenza that caused a pandemic, or drug resistant Staph Aureus). In each case, there is usually a mix of deterministic drivers (e.g. changes in climate, population density, antibiotic use) and random chance that lead to the emergence of new diseases.
 
 ##Emergence and Evolution
 For infectious diseases, you will often hear the term _emergence_ as in _Emerging Infectious Diseases_. This means the ID is in some way new to a population, either never seen in a particular host before (e.g., SARS emergence in 2003 in humans) or a disease that emerges in a new location. The pathogen can either be an entirely new type (e.g., SARS, MERS) or a variant of an existing one (e.g., a new strain of influenza or norovirus, or a drug-resistant form of a bacteria). Emergence describes the observed phenomenon. Almost always in such cases, some evolution occurs. For instance, a pathogen that is already in the human population evolves drug resistance. Or a new pathogen is introduced into the human population and then undergoes evolution to adapt to the new host. While one could define emergence as the phenomenon and evolution as the mechanism, in practice, you will often find these terms used interchangeably, and the exact meaning will depend on how the author defines it. In this chapter, we will discuss both the mechanisms of evolution and how they can lead to the emergence of new pathogens. The ability to understand and predict the emergence of new IDs is, of course, of vital importance, recent references providing additional information are [@brett17; @dibble16].

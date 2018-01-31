@@ -26,7 +26,7 @@ Some host characteristics might only have an impact on a single component of the
 
 
 
-###Host Heterogeneity Examples {#myexamplebox}
+#### Host Heterogeneity Examples {#myexamplebox}
 Several famous examples show how differences in genetics can impact ID. For instance, persons with a certain mutation of the CCR5 co-receptor on T-cells are much less likely to get infected with HIV. Similarly, persons with a particular mutation in the FUT2 gene are much less likely to get infected with norovirus. It is probable that there are genetic differences for almost any ID that influence the probability of getting infected, the severity of symptoms, and the duration and amount of shedding.
 
 

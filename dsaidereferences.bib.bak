@@ -5705,17 +5705,16 @@
   timestamp     = {2018.01.10},
 }
 
-@Misc{epidemicsmooc2,
+@Misc{hkepidemics,
   author        = {Hong Kong University},
   title         = {Epidemics},
-  month         = jan,
   year          = {2015},
   __markedentry = {[andreas:6]},
   abstract      = {Why was the Ebola epidemic that started in 2013 so devastating? What can be done to control and mitigate outbreaks of new pathogens such as MERS coronavirus? Explore the science, prevention and control of epidemics in this free online course. In addition to lectures by leading scientists in this field from HKU, this course will feature panel discussions with world leading experts in epidemics, including Professor Peter Piot who is the co-discoverer of Ebola and Professor Barbara Stocking who chairs the 2015 WHO-commissioned panel that assesses WHO's response to the Ebola outbreak.},
-  journal       = {edX},
+  journal       = {Coursera},
   owner         = {andreas},
   timestamp     = {2018.01.10},
-  url           = {https://www.edx.org/course/epidemics-hkux-hku01x-0},
+  url           = {https://www.coursera.org/learn/hkuepidemics},
   urldate       = {2017-04-04},
 }
 

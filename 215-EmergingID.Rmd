@@ -1,18 +1,16 @@
 # Emerging Infectious Diseases 
 
 ##Overview and Learning Objectives
-In this chapter, we will take a look at a specific evolutionary process underlying the emergence of new Infectious Diseases
-
-
+In this chapter, we will take a look at the evolutionary processes underlying the emergence of new Infectious Diseases.
 
 The learning objectives for this chapter are:
 
 * Understand the central mechanisms and drivers of emergence 
-
+* Assess the potential impact of different control strategies on potential future ID emergence
 
 
 ##Introduction
-
+The definition of emerging infectious disease (EID) is a bit vague, but in general a pathogen that is 'new' to a specific population and has never been seen in that population before can be considered an EID. A 'new' pathogen can mean a genuinely new one (e.g. SARS or MERS-CoV in humans), or a new variant of an existing pathogen (e.g. the 2009 H1N1 influenza that caused a pandemic, or drug resistant Staph Aureus). In each case, there is usually a mix of deterministic drivers (e.g. changes in climate, population density, antibiotic use) and random chance that lead to the emergence of new diseases.
 
 ##Emergence and Evolution
 For infectious diseases, you will often hear the term _emergence_ as in _Emerging Infectious Diseases_. This means the ID is in some way new to a population, either never seen in a particular host before (e.g., SARS emergence in 2003 in humans) or a disease that emerges in a new location. The pathogen can either be an entirely new type (e.g., SARS, MERS) or a variant of an existing one (e.g., a new strain of influenza or norovirus, or a drug-resistant form of a bacteria). Emergence describes the observed phenomenon. Almost always in such cases, some evolution occurs. For instance, a pathogen that is already in the human population evolves drug resistance. Or a new pathogen is introduced into the human population and then undergoes evolution to adapt to the new host. While one could define emergence as the phenomenon and evolution as the mechanism, in practice, you will often find these terms used interchangeably, and the exact meaning will depend on how the author defines it. In this chapter, we will discuss both the mechanisms of evolution and how they can lead to the emergence of new pathogens. The ability to understand and predict the emergence of new IDs is, of course, of vital importance, recent references providing additional information are [@brett17; @dibble16].
