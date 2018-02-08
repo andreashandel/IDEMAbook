@@ -1,4 +1,4 @@
-# Host Heterogeneity
+# Host Heterogeneity {#heterogeneity}
 
 ## Overview and Learning Objectives
 In this module, we will briefly discuss the idea that hosts differ in characteristics that are important with regard to ID dynamics and control.

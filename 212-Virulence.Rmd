@@ -1,0 +1,32 @@
+# Virulence
+
+##Overview and Learning Objectives
+In this chapter, we will discuss the concept of virulence and how it can be understood from an evolutionary perspective. 
+
+The learning objectives for this chapter are:
+
+* Be able to define virulence
+* Understand the drivers of virulence for specific diseases 
+
+
+
+## Introduction
+Many pathogens harm their hosts, some in small amounts (e.g. a runny nose), some in large amounts (e.g. death). The question of why that is the case is 
+
+
+## Virulence definition
+The term virulence is a bit fuzzy, but it generally means 'harm to the host'. That could be due to mortality caused by an ID, or in less severe forms, ID-related morbidity (sickness/symptoms).
+
+## Virulence evolution
+Pathogens 'don't care' about harming their hosts, their primary 'purpose' is to get in, replicate, and get back out and infect the next host. Sometimes, inducing some morbidity in the host is useful for the pathogen. Sneezing and coughing for respiratory infections might lead to enhanced transmission and therefore increased pathogen fitness. In other situations, inducing morbidity/mortality doesn't increase pathogen fitness, but it also doesn't decrease it. Therefore, selection doesn't act to change the number of symptoms induced. Pathogens that are too virulent, and in extreme cases kill their hosts, generally have reduced fitness since, in most situations, dead hosts do not transmit. The idea is then that pathogens evolve to induce the level of virulence that is optimal for their overall transmission fitness. 
+
+
+
+##Summary and Cartoon
+
+##Exercises
+
+## Further Resources
+* Ewald and colleagues have done some interesting investigations connecting transmission type to virulence/pathogenicity of specific diseases. See for instance [@ewald87; @ewald95].
+
+##References

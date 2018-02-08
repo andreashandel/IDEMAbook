@@ -1,8 +1,7 @@
-# Infectious Disease Control
+# Infectious Disease Control {control}
 
 ## Overview and Learning Objectives
-In this module, we will look a closer look at different types of control against infectious diseases and their potential outcomes.
-
+This chapter provides a closer look at different types of control against infectious diseases and their potential outcomes.
 
 The learning objectives for this chapter are:
 

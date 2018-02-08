@@ -4,7 +4,11 @@ Andreas Handel
 
 # Preface {-}
 
-This book convers infectious disease epidemiology from a dynamical systems perspective
+This book convers infectious disease epidemiology from a dynamical systems perspective.
+
+__Note 1: This book is currently under active development. I will likely be moving material around, adding new chapters or combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to happen for a while. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
+
+_Note 2: I appreciate receiving feedback. If you think a certain topic is missing that should be covered, or certain topics aren't explained well, or any other thought you have, please provide feedback. The best way of doing so is by going to [the github page for this book](https://github.com/ahgroup/DSAIDEbook) and submitting an "Issue". Alternatively, feel free to email me (google me to get my email address)._  
 
 <!--chapter:end:index.Rmd-->
 
@@ -61,7 +65,7 @@ Each chapter of the book lists additional and complementary resources for specif
 
 <!--chapter:end:05-BookOverview.Rmd-->
 
-# Introduction to the Dynamical Systems Approach 
+# Introduction to the Dynamical Systems Approach {#idintro}
 
 
 ## Overview and Learning Objectives
@@ -192,14 +196,15 @@ For compartmental models (and often other types of models), it is useful to show
 
 To study a specific ID and scientific question, one needs to use a model that approximates the real system one is interested in reasonably well, and one needs to choose values for the model parameters and starting conditions such that they match the specific system one wants to study. We'll return to that idea throughout this book.
 
-We can implement the flow diagram as a computer model, for instance by formulating it as the set of ordinary differential equations shown below, and then implementing those on a computer to simulate an outbreak. Figure \#ref(fig:sirsim) shows such a simulation.
+We can implement the flow diagram as a computer model, for instance by formulating it as the set of ordinary differential equations shown below, and then implementing those on a computer to simulate an outbreak. Figure \@ref(fig:sirsim) shows such a simulation.
 
 <div class="figure">
 <img src="./images/sirsim.png" alt="An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0."  />
 <p class="caption">(\#fig:sirsim)An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0.</p>
 </div>
 
-Note that, unfortunately, there are no rules concerning the naming of variables and parameters. Compartments (e.g. SIR) tend to be labeled very similarly by different researchers, while parameter labels are much more variable. I'm trying to be consistent in this book, though I might mix it up occasionally. For this book, I decided to stick with letters from the English alphabet, but you can often find people use Greek letters for parameters (e.g. $\beta$ instead of _b_ for the transmission parameter). Always check carefully for a given paper/model what the definition and meaning of each variable and parameter are. 
+#### {#mynotebox}
+Unfortunately, there are no rules concerning the naming of variables and parameters. Compartments (e.g. SIR) tend to be labeled very similarly by different researchers, while parameter labels are much more variable. I'm trying to be consistent in this book, though I might mix it up occasionally. For this book, I decided to stick with letters from the English alphabet, but you can often find people use Greek letters for parameters (e.g. $\beta$ instead of _b_ for the transmission parameter). Always check carefully for a given paper/model what the definition and meaning of each variable and parameter are. 
 
 For some more further information on compartmental models in epidemiology, [check out this Wikipedia article](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology). We will also discuss many variants of these type of compartmental models in further chapters.
 
@@ -312,36 +317,12 @@ The above sections described different states that might need to be considered a
 </div>
 
 
-
-## How complex should our model be?
-While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected indiduals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? 
-
-Onee might be inclined to build very complicated and detailed models, in an effort to be as realistic as possible. While more detailed models can indeed be more realistic, there are several drawbacks. First, as models get larger, they contain more parameters. Each parameter needs to be given a numeric value to allow one to run simulations. One can try to obtain the parameters from the literature, however, often that information is not available. Alternatively, one could fit the model to data (something not discussed in this book) and try to estimate the parameters. However, with the kind of data typically available, one can usually only estimate a few parameters with some level of certainty. And even if one were to be able to get good estimates for all model parameters, larger models are harder to implement, take longer to run, and are more difficult to analyze. With too many parts present, it can be hard to understand how different components interact with each other and affect outcomes of interest. 
-
-We therefore cannot - and do not want to - include every detail of a complex system, i.e. all components and interactions. We need to decide which parts are important and need to be in the model, and which ones we can ignore. A simple and somewhat silly example: We never include the hair color of individuals in any infectious disease models (at least I've never seen such a model), since we assume that this characteristic is not important for the ID dynamics. The choice to include or exclude other features is less obvious in other cases. For instance, for an HIV model, we likely need gender, while a SARS model might ignore this characteristic. 
-
-It is important to find a trade-off between details that need to be included and details one can leave out. Unfortunately, there is no recipe for it. Some very simple models have produced useful insights, while there are big models in the literature that arguably do little to nothing in helping us understand or deal with infectious diseases. Obviously, there have also been fairly big models that have produced useful information, and small models that are too simplistic to provide much information about any real system.
-
-A good analogy for model building and use in general is the use of maps. Maps are models of the real world. They serve specific purposes, and it is important that a given map be useful for the intended purpose. For instance, if we want to know how to drive from Atlanta to Athens, the left map in figure \@ref(fig:mapfigure) would be most useful. If instead we want to know where in the US the state of Georgia is located, the middle map is most useful. If we want to know where most people live in Georgia, the right map is most useful. In each case, we study the same object (the state of Georgia), but depending on the question, different maps are needed. Maps (and models) are useful because they capture the information that is needed for a specific situation, while leaving out unneccesary information. Nobody would want to have a map so detailed that it is essentially the real world - it wouldn't be a very useful map anymore.
+## How much detail is needed?
+While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected indiduals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? Tthis is an important question and deserves a detailed answer, which I am trying to provide in the Appendix, Chapter \@ref(modelcomplexity).
 
 
 
-<div class="figure">
-<img src="./images/mapfigure.png" alt="Three different maps of the state of Georgia."  />
-<p class="caption">(\#fig:mapfigure)Three different maps of the state of Georgia.</p>
-</div>
-
-In analogy to the map example, we need to decide for a specific ID, scenario, and question which details to include in our model and which ones to ignore. In general, the primary interactions between components of the system are needed. Thus, if we wanted to model the transmission dynamics of Ebola, we might need to include deceased infected individuals into the model, since they are known to contribute to transmission. In contrast, if we want to study how some control strategies for SARS might reduce the total number of *infected* but we don't care about the impact on total deaths (unlikely, but let's just pretend). In this case, we would not need a dead compartment in our model, since those dead don't further interact with anyone else in the system. However, if we want to keep track of deaths and how they are impacted by our intervention (likely), we do need to track them - even though dead people are not known to transmit SARS. 
-
-To build models that are suitable to study a particular system, model builders need to be experts on the system they want to study or collaborate with subject matter experts. Building a good model needs to follow the [Goldilocks Principle](https://en.wikipedia.org/wiki/Goldilocks_principle): If a model is too simple, it likely doesn't approximate the real system very well. If the model is too complicated, it is hard to build and analyze, and might not lead to much insight (i.e. the model is a big black box). The goal is to get the model _just right_ regarding size and complexity. Unfortunately, no recipe or formula exists specifying how to build a _just right_ model. Using models that are suitable for a given system and question is a hallmark of a good scientist.
-
-The model building and analysis process is often iterative. After a model has been built and studied, it might become clear -- e.g. by comparing the model with data -- that important components or interactions have been ignored or not been included correctly. This leads to model modification and refinement. This back and forth between model and data/the real world can happen over multiple iterations.
-
-
-Note that for purposes of teaching, we keep the models throughout this book fairly simple. The models will include the feature we are focusing on while excluding others. For instance, we include humans and mosquitos for vector-borne IDs but ignore things like asymptomatic or pre-symptomatic states. This is mainly done to keep models simple and focus on one feature at a time. Models that address "real" questions often -- but not always -- include more details than the models we investigate througout this book.
-
-
-##Summary and Cartoon
+## Summary and Cartoon
 This chapter discussed ways to characterize an individual host's state with regard to an infection. We discussed the differences between medical and public health perspectives and how ID states can be mapped to models. We also briefly discussed how one should build models that provide the right amount of complexity.
 
 
@@ -393,31 +374,23 @@ The learning objectives for this chapter are:
 
 
 ## Introduction
-Some IDs produce sporadic outbreaks and then disappear for years. Ebola is a prominent example. We will discuss in a future module how to figure out what leads to the (local) extinction of an ID.
-
-Many other IDs show oscillatory behavior, i.e. we get repeated outbreaks every so often, with some time of no or little disease in between. For some ID, the outbreaks are seasonal/annual, for other ID, the cycles are multi-year. 
-
+Different IDs show different patterns in their dynamics. Some IDs produce sporadic outbreaks and then seem to disappear for years. Ebola is a prominent example. Other ID seem to be 'always around' and incidence or prevalence might change little. TB and HIV in some parts of the world, as well as certain STD and chronic viral infections show such patterns. Many other IDs show oscillatory behavior, i.e. we repeated outbreaks or increases in incidence, followed by periods of reduced incidence. For some ID, these patterns of increase and decrease are annual, for other ID the cycles are multi-year. Figure \@ref(fig:IDcycles) shows an example of such patterns of increase and decrease for measles and pertussis.
 
 <div class="figure">
 <img src="./images/IDcycles.png" alt="Examples of ID cycles. From [@keeling08]."  />
 <p class="caption">(\#fig:IDcycles)Examples of ID cycles. From [@keeling08].</p>
 </div>
 
+Understanding the nature of the different patterns seen for ID help understand the general 'behavior' of the ID and can also point to best approaches of minimizing specific IDs.
 
-
-Why are some ID seasonal, some not? What mechanisms lead to seasonal or multi-year oscillations? What determines the timing of outbreaks? 
-
-Other IDs seem to have "settled down" and occur more or less at a steady level, with only minor fluctuations. TB and HIV in some parts of the world, as well as certain STD and chronic viral infections of for instance the herpes virus family,  seem to have such a dynamic.
-
-The following discusses the factors affecting these different ID dynamics patterns. 
 
 
 ## Resource Replenishment
-So far, we mainly looked at scenarios where some ID caused a single outbreak. As we saw, outbreaks wane because eventually there are not enough susceptible individuals around to sustain ongoing transmission. This is a very general ecological principle: Without replenishment of resources, some consumer of such resources will eventually die out. We see that in predators eating prey, forest fires "eating" trees, and pathogens "eating" their hosts. If the resources are not replenished quickly enough, the consumer of these resources will go extinct. To sustain the continued presence of the consumer/predator, resources need to be replaced. 
+The basic SIR model considered in chapter \@ref(idintro) can capture the dynamics of a single outbreak, it can however not reprduce repeat oscillations or endemic states. The reason for this inability of the simple model to produce more than one outbreak is because as the ID spreads, it depletes the pool of susceptibles. At then end of the outbreak, there are not enough susceptible individuals left to allow for a second outbreak or an endemic state. In ecological terms, the infectious disease depleted its resources (i.e. its hosts) and subsequently dies out. This is a very general principle: We see that in predators consuming prey, forest fires consuming trees, and pathogens "consuming" their susceptible hosts. If the resources are not replenished quickly enough, the consumer of these resources will go extinct. To sustain the continued presence of the consumer/predator, resources need to be replenished. 
 
-For our scenario, the resource consumer is the ID, and the resources are the hosts, usually humans. Replenishment of susceptible hosts can happen through different mechanisms. Most common is the birth of new, susceptible individuals, and loss of immunity. Migration, if strong, can be another way susceptible hosts can be replenished. Similarly, individuals that become newly sexually active correspond to the birth of new susceptibles for sexually transmitted infections. 
+For our scenario, the resource consumer is the ID, and the resources are the susceptible hosts, usually humans. To sustain endemic states or repeat increases in incidence, susceptible hosts need to be entering the system. This can happen through different mechanisms. The most common processes to add new susceptibles to a population is through the birth of new, susceptible individuals, or through the loss of immunity, and return to the susceptible class, of existing hosts. Migration, if strong, can be another way susceptible hosts can be replenished. Similarly, individuals that become newly sexually active correspond to the birth of new susceptibles for sexually transmitted infections. 
 
-If the replenishment of new susceptibles is rapid, an ID might be able to maintain itself in a population and never go extinct. (Extinction will be discussed in more detail later.)
+If the replenishment of new susceptibles is fast enough to balance the depletion of resources by the ID, an ID might be able to maintain itself in a population and lead to either oscillatory patterns or an endemic state.
 
 
 
@@ -430,7 +403,10 @@ A version of the SIR model that includes resource replenishment through natural 
 <p class="caption">(\#fig:birthdeathdmodel)Example of an SIR model with births, deaths and waning immunity.</p>
 </div>
 
-The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate _m_, natural death at some rate _n_, and the possibility that recovered lose their immunity and return to the susceptible class at rate _w_. This new model allows for oscillations/cycles and steady states, as explained next.
+The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate _m_, and the possibility that recovered lose their immunity and return to the susceptible class at rate _w_. Both of these processes can produce new susceptibles and thus lead to resource replenishment. If this process is fast enough, it can allow the ID to persist and lead to oscillations/cycles or steady states.
+
+#### {#mynotebox}
+The model shown in \@ref(fig:birtdheathmodel) also includes natural death at some rate _n_. This is 
 
 
 #### Mathematical Equations for the Model with Resource replenishment {#myadvancedbox}
@@ -666,11 +642,11 @@ For this model, what needs to be true to get an increase in the number of infect
 
 
 
-##How to determine R - Overview 
+##How to determine R 
 Knowing the reproductive number for a particular pathogen and scenario is important to allow for adequate intervention planning. There are multiple ways to estimate R from data. We'll briefly discuss them now.
 
 
-##Determine R at the Beginning of an Outbreak 
+### Determine R at the Beginning of an Outbreak 
 Very early in an outbreak, there will only be a few cases, and they occur seemingly randomly/stochastically. If the outbreak continues growing after a while, the case numbers will increase exponentially. The exponential growth rate, r, can be estimated from the data, essentially by fitting a straight line to the logarithmic values of the case report data. To go from the growth rate to R, we need some further information. Namely, we need to know the serial interval. The serial interval, T, is the time between onset of infection in one host to the onset of infection in a secondary host. Sometimes T can be approximated by the duration of the infectious period, D.
 
 Once we know r and T, we can compute R. There are different equations relating r and T to R, they depend on specific assumptions one makes about the disease. One relation between r, T, and R is given by R = 1 + rT, and another one is given by R = e^rT^ . For assumptions underlying these equations and further details, see e.g. [@wallinga07].
@@ -683,7 +659,7 @@ Once we know r and T, we can compute R. There are different equations relating r
 
 
 
-##Determine R Once the Outbreak is Over
+###Determine R Once the Outbreak is Over
 A larger R leads to a larger outbreak (ignoring things like interventions, behavior change, etc.). The reason to determine R is so we can use it to predict the expected size of an (uncontrolled) outbreak - and more importantly, we can learn how strong our intervention efforts need to be. But we can also flip things around. Once an (uncontrolled) outbreak has occurred, knowing the outbreak size can allow us to estimate R. It is often possible to determine outbreak sizes after an outbreak has occurred, e.g. through serosurveys which show antibodies against the disease and therefore indicate who got infected. We don't need any 'timing' information, just the fraction infected at the end. Essentially, we need to know the number of people that got infected, and the number of people who were at risk (i.e. the susceptibles) at the beginning of the outbreak. Once we know these pieces of the puzzle, we can estimate R.
 
 More specifically, assume we know the final size of the outbreak, i.e. total fraction of those becoming infected, I~f~ = I~tot~/N, where N is the population at risk and I~tot~ is the total number of infected. We then also know the fraction of susceptibles that are left at the end of an outbreak, S~f~=1-I~f~. To find R/R~0~, we can use the equation R=_ln_(S~f~)/(S~f~ - 1) (here, _ln_ is the natural logarithm). The figure below shows the relation between the fraction infected and R~0~ graphically.
@@ -698,12 +674,12 @@ More specifically, assume we know the final size of the outbreak, i.e. total fra
 For the above equation to be true, we assume that initially everyone is susceptible and that the population is well mixed. More refined estimates for R, with more complicated equations, are available [@ma06].
 
 
-##Determining R at the Endemic/steady state
+###Determining R at the Endemic/steady state
 For an ID that is at an endemic/steady state, we have another way of determining R~0~. At the endemic equilibrium, the reproductive number is R~eq~ = 1. If it weren't, the ID would either grow or decline, and it wouldn't be the endemic state. At this endemic state, a fraction of the population is still susceptible, S~eq~. By definition, at the beginning of an ID with transmissibility R~0~, everyone is susceptible (S~0~=1, expressed as a fraction). If we know S~eq~, we can then compute R~0~ as given by R~0~ = R~eq~ S~0~/S~eq~ = 1/ S~eq~. As an example, if at an endemic state (with R~eq~=1), 50% of the population is susceptible, then at the beginning, when 100% of the population was susceptible, we have R~0~=2. Conversely, if we know R~0~, we can predict the number of susceptibles at the endemic state, S~eq~=1/R~0~.
 
 
 
-##Determining R Through Age of Infection
+###Determining R Through Age of Infection
 For those ID for which an infection induces life-long immunity, i.e. where a host can only be infected once, the age of infection is an important concept. Intuitively, the more infectious a disease is, the more likely it is that a host gets an ID at an early age. For an ID that induces immunity, one can collect serological data (i.e. antibody measurements) to determine the fraction of individuals of a given age who have antibodies, which means they have been previously infected (assuming for the moment that no vaccine is available). One can define the median age of infection as the age at which 50% of the population has been infected.
 
 
@@ -718,7 +694,7 @@ For a simple model with certain assumptions [@keeling08], one can find an approx
 _Note: If you want to determine R/R~0~ to be used as parameter in a mathematical transmission model, you use this approach based on the age-seroprevalence relation even if the model you plan on using doesn't have age in it._
 
 
-##Determining R Through Fitting a Full Transmission Model 
+###Determining R Through Fitting a Full Transmission Model 
 Instead of just using data for the initial exponential growth phase, determining _r_ and computing R~0~ as specified above, we can fit some or all outbreak data to an SIR type model. We use the data to estimate the parameters of the model. For instance, for the simple SIR model, we would estimate the transmission rate, b, and recovery rate, g. We can then use the equation for R~0~ for a given model to compute its value. For the simple SIR model, that would be R~0~ = bS~0~/g. 
 
 
@@ -981,7 +957,7 @@ This chapter provided a discussion of environmental transmission and its impact 
 
 <!--chapter:end:150-EnvironmentalTransmission.Rmd-->
 
-#Vector-borne ID Transmission
+#Vector-borne transmission
 
 
 ## Overview and Learning Objectives
@@ -1354,7 +1330,7 @@ If multiple IDs are present, it makes sense to try and implement control strateg
 Some ways in which multiple IDs are controlled are almost accidental. It is well known that better education, better nutrition, better standard of living, improved sanitation and housing all reduce morbidity and mortality to a large number of diseases. As developing countries become richer and people escape extreme poverty, the incidence of many IDs fall. This is the trajectory many developed countries were on, e.g., TB incidence in Europe was falling rapidly even before the introduction of anti-TB drugs. As more countries become developed, the ID burden will decline (and likely with it, "wealth diseases" like obesity will rise).
 
 
-##Modeling multiple ID {#myadvancedbox}
+#### Modeling multiple ID {#myadvancedbox}
 The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated part is modeling any potential interactions between IDs correctly.
 As mentioned previously, more compartments the more complex the model becomes. Making it harder to code,  analyze, and we need estimates for each parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many critical 2-ID modeling studies exist. Figure \@ref(fig:coinfection) shows the diagram for a 2 ID model. 
 
@@ -1450,10 +1426,11 @@ For most human diseases, such host extinction is fortunately not very common - t
 The host extinction approach is also often considered and used for vector-borne diseases. Here, the idea is to drive one of the hosts (commonly called the vector) to extinction. The obvious reasoning is that if there are fewer vectors (e.g., mosquitoes), the chances for humans to get infected are lower. Widespread use of DDT or insecticide-coated bed-nets are examples of this. A similar but more controversial approach is the attempted control of rabies in humans by killing its primary host, vampire-bats [@stoner-duncan14].
 
 
-##Disease Emergence
-The flip-side of extinction is the emergence of a new disease. During extinction, infected/pathogen numbers move from a level that can be decently approximated by a deterministic model to numbers so small that it requires a stochastic analysis approach to allow the possibility of extinction. During emergence, the new disease starts at zero, then is introduced in modest numbers (possibly only a single introduction) into a new population, and "bounces around" for a while in small numbers. If conditions are right (i.e., local reproductive number greater than 1), the disease might take off and spread [@antia03]. It might eventually reach high enough numbers that a deterministic approximation which focuses on the mean dynamics is warranted. Many recent emerging disease outbreak followed that pattern. The 2014 Ebola outbreak and 2009 Influenza pandemic reached sufficiently large numbers that a deterministic approach was reasonable, while the 2013 SARS epidemic and previous Ebola outbreaks lead to relatively few cases, so a stochastic modeling and analysis approach is likely more appropriate.
+## Disease Emergence
+The flip-side of extinction is the emergence of a new disease. During extinction, infected/pathogen numbers move from a level that can be decently approximated by a deterministic model to numbers so small that it requires a stochastic analysis approach to allow the possibility of extinction. During emergence, the new disease starts at zero, then is introduced in modest numbers (possibly only a single introduction) into a new population, and "bounces around" for a while in small numbers. If conditions are right (i.e., local reproductive number greater than 1), the disease might take off and spread. It might eventually reach high enough numbers that a deterministic approximation which focuses on the mean dynamics is warranted. To understand emerging infectious diseases, one needs to account for evolutionary dynamics. Both are an important topics in infectious disease epidemiology and will considered in detail in the next few chapters.
 
-The next chapter discusses the evolution and emergence of new diseases in more detail, with a focus on drug resistance evolution and emergence.
+
+
 
 ## Are stochastic models better?
 After having gone through this chapter and learned that stochastic models allow you to address questions that deterministic models cannot address, you might wonder why we should still use deterministic models at all. The main reasons are that deterministic models are generally easier to build, easier to analyze, faster to run on a computer, and importantly, much easier to fit to data. Often this simplicity is worth the loss in some level of realism. But of course, it depends on the specific scenario and question. Recall the example of different maps in a chapter \@ref(idstates). The right map depends on the question. Similarly, the most appropriate model depends on your question. For some questions, stochastic models are needed. For others, deterministic models might still be the better choice.
@@ -1489,59 +1466,50 @@ This module provides a brief discussion of stochasticity in ID dynamics, and its
 
 <!--chapter:end:200-StochasticDynamics.Rmd-->
 
-# Evolutionary Dynamics
+# Evolutionary Dynamics Introduction
 
 ##Overview and Learning Objectives
-In this chapter, we will take a look at ID-evolution and its relation to control measures.
-
-
+In this chapter, we will take a look at the evolutionary dynamics of infectious diseases. 
 
 The learning objectives for this chapter are:
 
-* Understand the central mechanisms and drivers of ID-evolution 
-* Be able to assess how different control strategies can affect ID-evolution
+* Understand the central mechanisms and drivers of infectious disease evolution 
+* Be able to assess how different control strategies can affect infectious disease evolution
 
 
-
-##Introduction
+## Introduction
 Evolution is based on the generation of diversity, usually genetic diversity through mutations and the subsequent increase or decrease in certain genetic variants through selection or random drift. Microorganisms, especially viruses, tend to undergo rapid evolutionary change. High mutation rates and large population sizes provide many opportunities for the generation of genotypic and phenotypic diversity. Short generation times and fluctuations in population size (e.g., through transmission bottlenecks) allow selection to quickly act on this diversity, amplifying those mutants that have a fitness advantage and eliminating those with low fitness. These features of microbial populations often lead to rapid evolutionary changes. Such evolutionary change can become a public health problem. 
 
+## Basics of Evolutionary dynamics
+Two main mechanisms underly evolutionary dynamics: First, diversity needs to be generated. 
 
-##Evolution and Immune Escape
+Second, newly created mutants undergo _selection_. Depending on the phenotype of the mutant and the environment, it might be more or less fit than the wild-type (e.g. grow better inside a host or transmit better between hosts). Depending on this fitness
+
+Another process is drift. Even if a mutant has lowe or higher fitness than the wild-type.
+
+
+These two processes are often labeled 'mutation' and 'selection'. In that terminology, mutation includes processes such as point mutation, recombination, etc.
+
+The mutation process is generally stochastic, new mutants are generated at random. For most organisms, this also occurs at a fixed rate, independent of the setting. An exception are some bacteria that are thought to be able to increase generation of new mutants in response to environmental factors REFS.
+
+The selection process is potentially less random and more predictable. 
+
+In general (apart from the possible phenomenon of drug-induced hypermutation in bacteria), the generation of genetic variants is not influenced by any human intervention. Those mutants are constantly produced. In the usual setting, most mutants are less fit than the wild-type strain and therefore are outcompeted. If not, they replace the current strain and become the new wild-type. 
+
+
+## Evolution and Immune Escape
 A powerful driver of evolution is the host immune response. If an ID induces a strong immune response which subsequently protects the host from re-infection, a mutant of the ID which can partially escape the host immunity and infect a host will have a large fitness advantage. This is the process which drives the continuous evolution of influenza in humans. It is likely also the driver for changes in many other diseases, especially viruses. Why some pathogens do not seem to evolve much to circumvent immune response (measles is a good example) is not quite clear, though some studies have speculated on that topic [@frank07; @lange09].
 
-
-##Public Health Interventions and Evolution
-Some of the most potent drivers of evolution are in fact public health interventions that try to reduce the burden of an ID. The more powerful the intervention (e.g., vaccines or drugs), the more evolutionary pressure a pathogen faces and the more advantaged a pathogen variant that is partially or entirely resistant to the intervention will be. The following sections briefly discuss several drivers of public health importance that influence the selective fitness of different genetic variants and thereby drive ID-evolution.
-
-
-### Evolution of Immunity or Vaccine Escape
-Vaccines are some of our most potent interventions. Vaccination induces immunity in the vaccinated hosts. If a pathogen can circumvent immunity and infected vaccinated individuals, it will have a large fitness advantage. Therefore, any mutation that arises which allows a pathogen to reduce the impact of host immunity will likely spread through a population quickly. Most immunity works through antibodies. Thus pathogen variants that evolve not to be (or less) recognized by pre-existing antibodies have an advantage. This is the same mechanism induced by natural immunity. Thus, pathogens that frequently evolve to escape natural antibody-based immunity (e.g., influenza, HIV) are also able to develop resistance to vaccine-induced immunity. This is the reason we need to get re-immunized with influenza vaccines regularly and why we have not managed to develop an HIV vaccine. In contrast, an ID like measles which does not seem to be able to escape natural immunity also does not evolve resistance to the vaccine, and we can use the same vaccine against measles we have been using for decades. 
-
-The reason why measles might not be able to escape binding by pre-existing antibodies is likely because the binding site is also the part of the virus that is needed to attach to and enter host cells. Any mutation evading antibody binding would also lead to an inability to attach to and infect cells. In contrast, for influenza, the antibody binding regions and the receptor attachment regions are somewhat distinct.
-
-
-### Evolution of Drug Resistance
-Drugs are another mechanism that applies a strong selective pressure. Any pathogen that can avoid being killed by a drug can potentially 'take over' a patient and transmit to the next. If drug use is widespread in the population, those resistant mutants which generally have lower fitness than the wild-type, drug-sensitive strain can take over in a population. This phenomenon has been observed with many different ID and drugs and produced such looming public health problems as extensively drug-resistant TB (XDR TB) and methicillin-resistant Staphylococcus aureus (MRSA) [@levy04]. 
-Since viruses tend to evolve faster than bacteria, drug resistance evolution is often a problem at the individual patient level. HIV is the prime example. Single-drug therapy for HIV fails consistently because the virus quickly evolved resistance. Only once we started using multiple drugs at the same time were we able to prevent rapid evolution. We are playing a 'numbers game' since the chance of 3 resistance mutations against 3 different drugs occurring is so small that it rarely happens during the treatment of an individual host, thus making the drugs effective for the host's lifetime.
-Since drug resistance is such an important public health problem, it is widely studied. This includes many modeling studies. For an overview of some of those, see [@louz10; @temime08; @wiesch11]. 
-
-##Evolution of Virulence
-The term virulence is a bit fuzzy, but it generally means 'harm to the host'. That could be due to mortality caused by an ID, or in less severe forms, ID-related morbidity (sickness/symptoms). Pathogens 'don't care' about harming their hosts, their primary 'purpose' is to get in, replicate, and get back out and infect the next host. Sometimes, inducing some morbidity in the host is useful for the pathogen. Sneezing and coughing for respiratory infections might lead to enhanced transmission and therefore increased pathogen fitness. In other situations, inducing morbidity/mortality doesn't increase pathogen fitness, but it also doesn't decrease it. Therefore, selection doesn't act to change the number of symptoms induced. Pathogens that are too virulent, and in extreme cases kill their hosts, generally have reduced fitness since, in most situations, dead hosts do not transmit. The idea is then that pathogens evolve to induce the level of virulence that is optimal for their overall transmission fitness. 
-
-
-##Evolution and Public Health Interventions
-In general (apart from the possible phenomenon of drug-induced hypermutation in bacteria), the generation of genetic variants is not influenced by any human intervention. Those mutants are constantly produced. In the usual setting, most mutants are less fit than the wild-type strain and therefore are outcompeted. If not, they replace the current strain and become the new wild-type. 
-What happens in the presence of interventions is that the fitness landscape changes. For instance, if we give a patient drugs, a mutant resistant to drugs with a fitness less than the wild-type in the absence of drug treatment has a significant advantage and can outcompete the wild-type strain.
-
-##Co-evolution
-While the hosts infected by ID also evolve, this usually happens on much slower time-scales. As such, studying evolution by assuming only the ID evolves and not the host is often a good approximation. However, there are examples where host evolution needs to be considered. A good example is the introduction of myxoma virus to control Australian rabbit populations. Evolution of both the virus and rabbits was observed. Over longer time-scales, features such as sickle cell anemia, which comes from a mutation that is associated with reduced malaria morbidity, is likely a trait some humans evolved in response to malaria. A discussion of genetic characteristics in humans that might be attributable to evolution in response to specific infectious diseases is provided in [@pittman16].
 
 
 ##Modeling Evolutionary Dynamics
 To study evolutionary dynamics, we will need to implement models that allow for changes in the system on top of the non-evolutionary dynamics of the ID. Unless we plan to model many different potential new variants, it is often easiest to pre-specify the number of variants we want to track. In the simplest form where we only track pathogen evolution, we might model the wild-type (normal, pre-existing) form of the pathogen and a single mutant that is different in some important characteristic, e.g., resistant to a drug or able to evade a vaccine. We would build a model with these compartments. We often also pre-specify the characteristics (i.e., the parameter values) for both the wild-type and mutant. We implement the process of mutant generation in the model and run the simulation. Under certain circumstances, we might see the mutant be generated and take over the population. 
 
 If we want to model many different mutants, maybe allowing for random, not pre-specified, differences in their fitness, and perhaps even allowing for host evolution, the models get quite a bit more complicated. They are not necessarily conceptually harder, but there is more bookkeeping and coding involved making it technically trickier.
+
+
+## Co-evolution
+While the hosts infected by ID also evolve, this usually happens on much slower time-scales. As such, studying evolution by assuming only the ID evolves and not the host is often a good approximation. However, there are examples where host evolution needs to be considered. A good example is the introduction of myxoma virus to control Australian rabbit populations. Evolution of both the virus and rabbits was observed. Over longer time-scales, features such as sickle cell anemia, which comes from a mutation that is associated with reduced malaria morbidity, is likely a trait some humans evolved in response to malaria. A discussion of genetic characteristics in humans that might be attributable to evolution in response to specific infectious diseases is provided in [@pittman16].
 
 
 ##Summary and Cartoon
@@ -1565,6 +1533,89 @@ This module provides a brief discussion of ID-evolution, especially concerning I
 
 <!--chapter:end:210-EvolutionaryDynamics.Rmd-->
 
+# Virulence
+
+##Overview and Learning Objectives
+In this chapter, we will discuss the concept of virulence and how it can be understood from an evolutionary perspective. 
+
+The learning objectives for this chapter are:
+
+* Be able to define virulence
+* Understand the drivers of virulence for specific diseases 
+
+
+
+## Introduction
+Many pathogens harm their hosts, some in small amounts (e.g. a runny nose), some in large amounts (e.g. death). The question of why that is the case is 
+
+
+## Virulence definition
+The term virulence is a bit fuzzy, but it generally means 'harm to the host'. That could be due to mortality caused by an ID, or in less severe forms, ID-related morbidity (sickness/symptoms).
+
+## Virulence evolution
+Pathogens 'don't care' about harming their hosts, their primary 'purpose' is to get in, replicate, and get back out and infect the next host. Sometimes, inducing some morbidity in the host is useful for the pathogen. Sneezing and coughing for respiratory infections might lead to enhanced transmission and therefore increased pathogen fitness. In other situations, inducing morbidity/mortality doesn't increase pathogen fitness, but it also doesn't decrease it. Therefore, selection doesn't act to change the number of symptoms induced. Pathogens that are too virulent, and in extreme cases kill their hosts, generally have reduced fitness since, in most situations, dead hosts do not transmit. The idea is then that pathogens evolve to induce the level of virulence that is optimal for their overall transmission fitness. 
+
+
+
+##Summary and Cartoon
+
+##Exercises
+
+## Further Resources
+
+##References
+
+<!--chapter:end:212-Virulence.Rmd-->
+
+# Evolution and Control
+
+##Overview and Learning Objectives
+In this chapter, we will discuss how control of infectious diseases can induce strong evolutionary pressure and how this often leads to unwanted results.
+
+The learning objectives for this chapter are:
+
+* Understand how control measures affect pathogen fitness
+* Assess the impact of different control measures on potential for evolution
+* Know about similarities and differences in certain ID control strategies
+
+
+
+## Introduction
+
+Some of the most potent drivers of evolution are the very same control strategies we have developed to try to reduce the burden of an ID. The more powerful the intervention, the more evolutionary pressure a pathogen faces and the more advantaged a pathogen variant that is partially or entirely resistant to the intervention will be. 
+
+
+The following sections discuss several drivers of public health importance that influence the selective fitness of different genetic variants and thereby drive ID-evolution.
+
+
+What happens in the presence of interventions is that the fitness landscape changes. For instance, if we give a patient drugs, a mutant resistant to drugs with a fitness less than the wild-type in the absence of drug treatment has a significant advantage and can outcompete the wild-type strain.
+
+
+## Vaccine Escape
+Vaccines are some of our most potent interventions. Vaccination induces immunity in the vaccinated hosts. If a pathogen can circumvent immunity and infected vaccinated individuals, it will have a large fitness advantage. Therefore, any mutation that arises which allows a pathogen to reduce the impact of host immunity will likely spread through a population quickly. Most immunity works through antibodies. Thus pathogen variants that evolve not to be (or less) recognized by pre-existing antibodies have an advantage. This is the same mechanism induced by natural immunity. Thus, pathogens that frequently evolve to escape natural antibody-based immunity (e.g., influenza, HIV) are also able to develop resistance to vaccine-induced immunity. This is the reason we need to get re-immunized with influenza vaccines regularly and why we have not managed to develop an HIV vaccine. In contrast, an ID like measles which does not seem to be able to escape natural immunity also does not evolve resistance to the vaccine, and we can use the same vaccine against measles we have been using for decades. 
+
+The reason why measles might not be able to escape binding by pre-existing antibodies is likely because the binding site is also the part of the virus that is needed to attach to and enter host cells. Any mutation evading antibody binding would also lead to an inability to attach to and infect cells. In contrast, for influenza, the antibody binding regions and the receptor attachment regions are somewhat distinct.
+
+
+## Drug Resistance
+Drugs are another mechanism that applies a strong selective pressure. Any pathogen that can avoid being killed by a drug can potentially 'take over' a patient and transmit to the next. If drug use is widespread in the population, those resistant mutants which generally have lower fitness than the wild-type, drug-sensitive strain can take over in a population. This phenomenon has been observed with many different ID and drugs and produced such looming public health problems as extensively drug-resistant TB (XDR TB) and methicillin-resistant Staphylococcus aureus (MRSA) [@levy04]. 
+Since viruses tend to evolve faster than bacteria, drug resistance evolution is often a problem at the individual patient level. HIV is the prime example. Single-drug therapy for HIV fails consistently because the virus quickly evolved resistance. Only once we started using multiple drugs at the same time were we able to prevent rapid evolution. We are playing a 'numbers game' since the chance of 3 resistance mutations against 3 different drugs occurring is so small that it rarely happens during the treatment of an individual host, thus making the drugs effective for the host's lifetime.
+Since drug resistance is such an important public health problem, it is widely studied. This includes many modeling studies. For an overview of some of those, see [@louz10; @temime08; @wiesch11]. 
+
+
+
+
+
+##Summary and Cartoon
+
+##Exercises
+
+## Further Resources
+
+##References
+
+<!--chapter:end:214-EvolutionandControl.Rmd-->
+
 # Emerging Infectious Diseases 
 
 ##Overview and Learning Objectives
@@ -1577,20 +1628,27 @@ The learning objectives for this chapter are:
 
 
 ##Introduction
-The definition of emerging infectious disease (EID) is a bit vague, but in general a pathogen that is 'new' to a specific population and has never been seen in that population before can be considered an EID. A 'new' pathogen can mean a genuinely new one (e.g. SARS or MERS-CoV in humans), or a new variant of an existing pathogen (e.g. the 2009 H1N1 influenza that caused a pandemic, or drug resistant Staph Aureus). In each case, there is usually a mix of deterministic drivers (e.g. changes in climate, population density, antibiotic use) and random chance that lead to the emergence of new diseases.
+The definition of emerging infectious disease (EID) is a bit vague, but in general a pathogen that is 'new' to a specific population can be considered an EID. A 'new' pathogen can mean a genuinely new one (e.g. SARS or MERS-CoV in humans), or a new variant of an existing pathogen (e.g. the 2009 H1N1 influenza that caused a pandemic, or drug resistant Staph Aureus). In each case, there is usually a mix of deterministic drivers (e.g. changes in climate, population density, antibiotic use) and random chance that lead to the emergence of new diseases.
+
 
 ##Emergence and Evolution
-For infectious diseases, you will often hear the term _emergence_ as in _Emerging Infectious Diseases_. This means the ID is in some way new to a population, either never seen in a particular host before (e.g., SARS emergence in 2003 in humans) or a disease that emerges in a new location. The pathogen can either be an entirely new type (e.g., SARS, MERS) or a variant of an existing one (e.g., a new strain of influenza or norovirus, or a drug-resistant form of a bacteria). Emergence describes the observed phenomenon. Almost always in such cases, some evolution occurs. For instance, a pathogen that is already in the human population evolves drug resistance. Or a new pathogen is introduced into the human population and then undergoes evolution to adapt to the new host. While one could define emergence as the phenomenon and evolution as the mechanism, in practice, you will often find these terms used interchangeably, and the exact meaning will depend on how the author defines it. In this chapter, we will discuss both the mechanisms of evolution and how they can lead to the emergence of new pathogens. The ability to understand and predict the emergence of new IDs is, of course, of vital importance, recent references providing additional information are [@brett17; @dibble16].
+The word 'emergence' describes what is observed, a new disease shows up for the first time (emerges) in a population. This emergence is almost always linked to evolutionary processes. For instance, a pathogen that is already in the human population evolves drug resistance. Or a new pathogen is introduced into the human population and then undergoes evolution to adapt to the new host. While one could define emergence as the phenomenon and evolution as the mechanism, in practice, you will often find these terms used interchangeably, and the exact meaning will depend on how the author defines it. In this chapter, we will discuss both the mechanisms of evolution and how they can lead to the emergence of new pathogens. The ability to understand and predict the emergence of new IDs is, of course, of vital importance, recent references providing additional information are [@brett17; @dibble16].
 
 
 ##Ecological drivers of evolution and emergence
 Many external, ecological factors affect ID dynamics. Weather, climate, vegetation, the abundance and density of hosts and other species, nutritional status, and general living conditions are all important factors influencing human and animal ID. This is true both for short-term dynamics (e.g., weather patterns can affect disease incidence) as well as for the long-term evolutionary dynamics. The emergence of many new viral pathogens among humans (e.g., HIV, SARS, MERS) is likely caused by the closer contact humans have with the animals who are the main hosts of those diseases. Transmission in these situations of close human-animal contact is often called spillover.  Similarly, as discussed in the previous chapter, measles and other diseases were only able to emerge and establish themselves among humans once human populations became large enough. As global warming will affect climate and as people become more affluent and urbanized, we can expect further changes in ID dynamics and evolution over the next decades - though predicting what changes exactly will occur, and which diseases might increase and decrease in importance is very difficult [@altizer13].
 
 
+##Emergence dynamics
+During the process of emergence, the new disease is initially - by definition - not present (or at least not detectable by our surveillance methods). Initially a small number of new hosts are infected by the new disease. The disease "bounces around" for a while with few transmission events and overall low numbers. If conditions are right (the local reproductive number is greater than 1), the disease might take off and spread. Once it has spread enough that our surveillance systems notice it, we consider this new disease as having emerged in that population. The newly emerged (observed) disease can then either be brought under control relatively quickly (e.g. 2003 SARS outbreak), or with much effort (e.g. 2014 Ebola outbreak), or not be fully controlled but continue at a low level (e.g. MERS-CoV) or uncontrolled and spreading widely (e.g. 2009 influenza pandemic).
+
+
 ##Modeling ID Emergence Dynamics
 To study evolutionary dynamics, we will need to implement models that allow for changes in the system on top of the non-evolutionary dynamics of the ID. Unless we plan to model many different potential new variants, it is often easiest to pre-specify the number of variants we want to track. In the simplest form where we only track pathogen evolution, we might model the wild-type (normal, pre-existing) form of the pathogen and a single mutant that is different in some important characteristic, e.g., resistant to a drug or able to evade a vaccine. We would build a model with these compartments. We often also pre-specify the characteristics (i.e., the parameter values) for both the wild-type and mutant. We implement the process of mutant generation in the model and run the simulation. Under certain circumstances, we might see the mutant be generated and take over the population. 
 
 If we want to model many different mutants, maybe allowing for random, not pre-specified, differences in their fitness, and perhaps even allowing for host evolution, the models get quite a bit more complicated. They are not necessarily conceptually harder, but there is more bookkeeping and coding involved making it technically trickier.
+
+
 
 
 ##Summary and Cartoon
@@ -1736,4 +1794,122 @@ While the ability to be able to develop and analyze dynamical models requires ad
 
 
 <!--chapter:end:300-Summary.Rmd-->
+
+#Appendix A - A brief description of modeling software
+
+
+## Overview
+I this book, we discussed infectious diseases from a dynamical systems perspective and made heavy use of models, both in gaining conceptual understanding and in the exercises. Some use of software
+
+
+## R
+
+
+## R packages
+While basic R can do some things, the main pwer of R comes from its packages. The number of R packages keeps growing incredibly fast. The official place for packages is the CRAN repository, but nowadays many packages, especially those in early development, can also be found on Github and other places. Packages give you additional sets of functionality. For instance the 'Shiny' package provides the functionality in the DSAIDE package to have a nice graphical interface through which to interact with the simulations. As you can tell by this, packages can make use of each other. Similarly, most of the underlying simulations in the DSAIDE package make use of the _deSolve_ package to simulate the differential equation models. There is a package for almost any need, and it is often common for individuals to publish a new method together with and R package. Therefore, you can often use cutting-edge approaches in a user-friendly manner, instead of having to write the code yourself or wait until some commercial software has implemented this new approach.
+
+
+
+## The 'R universe'
+In addition to using R for building and running models and doing all kinds of computational tasks, there is another reason why using R is a good choice. By now, in large part thanks to the folks from RStudio, a whole system has emerged around R that allows you to build full products from beginning to end in the 'R Ecosystem'. The RMarkdown language allows you to combine R code with text and quickly produce nice outputs in various formats (e.g. html, pdf, word). The bookdown package lets you write whole books (in fact, this book was mainly written in bookdown). The blogdown package lets you quickly produce blog posts with code and text. It is easy to produce presentation slides based on a mix of code and text. Even animated and interactive graphics are possible. This can make your whole workflow much easier and save a lot of time. It also helps make things reproducible.
+
+
+## Other software
+The following provides a brief, non-exhaustive list of other software used for ID modeling and analysis. These are my own, possibly biased opinions:
+
+* Python is a programming language that is similar in terms of difficulty to learn/use as R. Python ise is growing a lot (like R) and it's open source and free (like R). It comes with libraries (equivalent to packages in R) that provide additional functionality. I have never actually used Python, but I know colleagues who use it and it seems to me that R and Python are overall rather similar. If you have specific functionality you need, you might want to check if R or Python is better.
+
+* Matlab and Octave. Before I switched to R, I used Matlab a lot. It's the de-facto standard in engineering. In the engineering areas, it has features not found in R. When it comes to more statistical questions, R can often do more with the right packages. To me, the main reason not to use Matlab is the price. It's a commercial product and can be quite expensive. For both teaching and research, having access to free and open source software is in my opinion very important. That was the main reason I stopped using Matlab - and have not had the need to consider using it again. Octave is a free, open source implementation of Matlab. It's not as powerful and feature-rich as Matlab and, while I haven't tried Octave in a while, it seems to me that R or Python are better choices for the budding infectious disease modeler/analyst.
+
+* Berkeley Madonna, Stella, Nova, etc.: There are software packages, like these, which are meant specifically to build and simulate dynamical systems. One big advantage of those software compared to R is that they allow the user to build and run models through a graphical interface by drawing the model diagram and letting the software take care of the code. This is a great feature for those just starting out with modeling. I wish R had a package that would allow that. The downside is that once you want to do some more sophisticated and customized analyses, you either have to write code (using the language specific for those packages, which is often different than any other programming langauge) and/or you might just not be able to do what you want to do and will have to switch to a more flexible language (e.g. R or Python) anyway. Further most of those sofware packages are not free. If you just plan on doing some fairly simple modeling tasks, looking at some of these packages might be worth it. If you plan on diving deep into modeling, I suggest you go with R or Python. The initial learning curve is harder, but once you mastered it you will have a much more powerful tool at your disposal.
+
+* SAS, SPSS, STATA, etc.: Those are commonly used to do more statistical and data analysis tasks. I have very limited experience with them. I don't like to use them for several reasons. For one, they are all commercial and not free. Further, they are in my opinion not 'real' programming languages, i.e. they are good at what they do, but if you need to be able to write your own bit of code to do whatever you want to, then you quickly reach your limits. I don't know anyone who uses these mainly statistical software packages for simulating dynamical infectious disease models. Over the years I've tried to figure out why one might use any of these software packages, I haven't found a convincing reason. They are often a bit more user friendly than jumping right in and coding, but there are packages for R that provide graphical interfaces to do statistics - for free. Unless you need to use them for some reason, I would stay away from them.
+
+
+
+
+##References
+
+
+
+<!--chapter:end:500-Appendix-Software.Rmd-->
+
+#Appendix - How complex should our model be? {#modelcomplexity}
+
+
+Onee might be inclined to build very complicated and detailed models, in an effort to be as realistic as possible. While more detailed models can indeed be more realistic, there are several drawbacks. First, as models get larger, they contain more parameters. Each parameter needs to be given a numeric value to allow one to run simulations. One can try to obtain the parameters from the literature, however, often that information is not available. Alternatively, one could fit the model to data (something not discussed in this book) and try to estimate the parameters. However, with the kind of data typically available, one can usually only estimate a few parameters with some level of certainty. And even if one were to be able to get good estimates for all model parameters, larger models are harder to implement, take longer to run, and are more difficult to analyze. With too many parts present, it can be hard to understand how different components interact with each other and affect outcomes of interest. 
+
+We therefore cannot - and do not want to - include every detail of a complex system, i.e. all components and interactions. We need to decide which parts are important and need to be in the model, and which ones we can ignore. A simple and somewhat silly example: We never include the hair color of individuals in any infectious disease models (at least I've never seen such a model), since we assume that this characteristic is not important for the ID dynamics. The choice to include or exclude other features is less obvious in other cases. For instance, for an HIV model, we likely need gender, while a SARS model might ignore this characteristic. 
+
+It is important to find a trade-off between details that need to be included and details one can leave out. Unfortunately, there is no recipe for it. Some very simple models have produced useful insights, while there are big models in the literature that arguably do little to nothing in helping us understand or deal with infectious diseases. Obviously, there have also been fairly big models that have produced useful information, and small models that are too simplistic to provide much information about any real system.
+
+A good analogy for model building and use in general is the use of maps. Maps are models of the real world. They serve specific purposes, and it is important that a given map be useful for the intended purpose. For instance, if we want to know how to drive from Atlanta to Athens, the left map in figure \@ref(fig:mapfigure) would be most useful. If instead we want to know where in the US the state of Georgia is located, the middle map is most useful. If we want to know where most people live in Georgia, the right map is most useful. In each case, we study the same object (the state of Georgia), but depending on the question, different maps are needed. Maps (and models) are useful because they capture the information that is needed for a specific situation, while leaving out unneccesary information. Nobody would want to have a map so detailed that it is essentially the real world - it wouldn't be a very useful map anymore.
+
+
+<div class="figure">
+<img src="./images/mapfigure.png" alt="Three different maps of the state of Georgia."  />
+<p class="caption">(\#fig:mapfigure)Three different maps of the state of Georgia.</p>
+</div>
+
+In analogy to the map example, we need to decide for a specific ID, scenario, and question which details to include in our model and which ones to ignore. In general, the primary interactions between components of the system are needed. Thus, if we wanted to model the transmission dynamics of Ebola, we might need to include deceased infected individuals into the model, since they are known to contribute to transmission. In contrast, if we want to study how some control strategies for SARS might reduce the total number of *infected* but we don't care about the impact on total deaths (unlikely, but let's just pretend). In this case, we would not need a dead compartment in our model, since those dead don't further interact with anyone else in the system. However, if we want to keep track of deaths and how they are impacted by our intervention (likely), we do need to track them - even though dead people are not known to transmit SARS. 
+
+To build models that are suitable to study a particular system, model builders need to be experts on the system they want to study or collaborate with subject matter experts. Building a good model needs to follow the [Goldilocks Principle](https://en.wikipedia.org/wiki/Goldilocks_principle): If a model is too simple, it likely doesn't approximate the real system very well. If the model is too complicated, it is hard to build and analyze, and might not lead to much insight (i.e. the model is a big black box). The goal is to get the model _just right_ regarding size and complexity. Unfortunately, no recipe or formula exists specifying how to build a _just right_ model. Using models that are suitable for a given system and question is a hallmark of a good scientist.
+
+The model building and analysis process is often iterative. After a model has been built and studied, it might become clear -- e.g. by comparing the model with data -- that important components or interactions have been ignored or not been included correctly. This leads to model modification and refinement. This back and forth between model and data/the real world can happen over multiple iterations.
+
+
+Note that for purposes of teaching, we keep the models throughout this book fairly simple. The models will include the feature we are focusing on while excluding others. For instance, we include humans and mosquitos for vector-borne IDs but ignore things like asymptomatic or pre-symptomatic states. This is mainly done to keep models simple and focus on one feature at a time. Models that address "real" questions often -- but not always -- include more details than the models we investigate througout this book.
+
+
+##References
+
+
+
+<!--chapter:end:505-Appendix-ModelComplexity.Rmd-->
+
+#Appendix B - The different uses of ID models
+
+
+## Overview
+There are different ways one can categorize the uses of the mechanistic models we discussed here. The following is one useful way of thinking about model uses. 
+
+## Exploring/Understanding 
+At the early stages of trying to gain a fairly basic understanding of the behavior of a system, one can build simple mechanistic models and explore how interactions between model components (and thus components of the real system) impact observed patterns. Using models in this way provides a quick and cheap way to gain some intuition of how a system functions. For understanding purposes, one generally tries to keep models simple.
+
+## Prediction/what-if
+Once we have gained some general understanding of the system under study and know enough about the system to be able to build models that provide reasonable approximations of the real system, we can use those models to perform _in silico experiments_. We can make predictions what might happen to the system if we changed some of its parts. For instance in a model that includes some cytokine, we could test what would happen if we administered a drug that suppressed this cytokine. This allows us to make predictions that can be tested with further experiments. These _in silico_ approaches are much faster, cheaper and have no ethical problems, compared to real experiments. Of course the major caveat with any model result is that it is only useful insofar as the model properly captures the important features of the real system. The more a model is used to make predictions and these predictions tested with data, the more reliable it becomes.
+
+## Fitting/inference
+The previous two ways of using a model can be considered _data free_. What we mean by that is that while models should obviously be built based on the best information about the system, and model parameters need to come from experiments or other data sources, once the model is built it can be run and analyzed without further need for data. Comparing model predictions with data, as described in the previous paragraph, is a first step toward using data together with models. If one makes the model-data comparison in a rigorous statistical manner, one reaches the area of model fitting (inference). Here, one tries to fit a specific mechanistic model to available data in a rigorous statistical manner (using various approaches such as frequentist, likelihood or bayesian methods). Fitting allows one to discriminate between different postulated mechanisms (hypotheses), which are translated into different models and fitting determines which model is better at explaining the observed data. Further, model fitting provides estimates for model parameters. Often, such parameters have a directly interpretable biological meaning (e.g. the rate of virus production by infected cells) and are thus of interest on their own.
+
+
+##References
+
+
+
+<!--chapter:end:510-Appendix-ModelUse.Rmd-->
+
+#Appendix C - A very brief introduction to data fitting
+
+
+
+## Overview
+
+Throghout this book, we have tried to connect the real world and data to models. In some chapters, we described how one can directly use data to estimate quantities of interest (e.g. the reproductive number chapter).
+
+
+## Conceptual Ideas
+
+
+
+## Technical details
+
+
+
+
+## References
+
+
+
+<!--chapter:end:550-Appendix-Fitting.Rmd-->
 

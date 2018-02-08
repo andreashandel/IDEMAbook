@@ -39,7 +39,6 @@ This chapter briefly introduced different modes of ID transmission.
 
 
 ##Further Resources
-* Ewald and colleagues have done some interesting investigations connecting transmission type to virulence/pathogenicity of specific diseases. See for instance [@ewald87; @ewald95].
 * A detailed discussion linking transmission types to model alternatives is provided in [@mccallum17].
 
 ##References

@@ -37,7 +37,7 @@ If multiple IDs are present, it makes sense to try and implement control strateg
 Some ways in which multiple IDs are controlled are almost accidental. It is well known that better education, better nutrition, better standard of living, improved sanitation and housing all reduce morbidity and mortality to a large number of diseases. As developing countries become richer and people escape extreme poverty, the incidence of many IDs fall. This is the trajectory many developed countries were on, e.g., TB incidence in Europe was falling rapidly even before the introduction of anti-TB drugs. As more countries become developed, the ID burden will decline (and likely with it, "wealth diseases" like obesity will rise).
 
 
-##Modeling multiple ID {#myadvancedbox}
+#### Modeling multiple ID {#myadvancedbox}
 The approach to modeling multiple ID is similar to that of host heterogeneity: We need to split/stratify the population according to infection status of each ID. The complicated part is modeling any potential interactions between IDs correctly.
 As mentioned previously, more compartments the more complex the model becomes. Making it harder to code,  analyze, and we need estimates for each parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many critical 2-ID modeling studies exist. Figure \@ref(fig:coinfection) shows the diagram for a 2 ID model. 
 

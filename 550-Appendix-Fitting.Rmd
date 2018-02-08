@@ -1,0 +1,21 @@
+#Appendix C - A very brief introduction to data fitting
+
+
+
+## Overview
+
+Throghout this book, we have tried to connect the real world and data to models. In some chapters, we described how one can directly use data to estimate quantities of interest (e.g. the reproductive number chapter).
+
+
+## Conceptual Ideas
+
+
+
+## Technical details
+
+
+
+
+## References
+
+

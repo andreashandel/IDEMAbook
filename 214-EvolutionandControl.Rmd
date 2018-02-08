@@ -1,0 +1,46 @@
+# Evolution and Control
+
+##Overview and Learning Objectives
+In this chapter, we will discuss how control of infectious diseases can induce strong evolutionary pressure and how this often leads to unwanted results.
+
+The learning objectives for this chapter are:
+
+* Understand how control measures affect pathogen fitness
+* Assess the impact of different control measures on potential for evolution
+* Know about similarities and differences in certain ID control strategies
+
+
+
+## Introduction
+
+Some of the most potent drivers of evolution are the very same control strategies we have developed to try to reduce the burden of an ID. The more powerful the intervention, the more evolutionary pressure a pathogen faces and the more advantaged a pathogen variant that is partially or entirely resistant to the intervention will be. 
+
+
+The following sections discuss several drivers of public health importance that influence the selective fitness of different genetic variants and thereby drive ID-evolution.
+
+
+What happens in the presence of interventions is that the fitness landscape changes. For instance, if we give a patient drugs, a mutant resistant to drugs with a fitness less than the wild-type in the absence of drug treatment has a significant advantage and can outcompete the wild-type strain.
+
+
+## Vaccine Escape
+Vaccines are some of our most potent interventions. Vaccination induces immunity in the vaccinated hosts. If a pathogen can circumvent immunity and infected vaccinated individuals, it will have a large fitness advantage. Therefore, any mutation that arises which allows a pathogen to reduce the impact of host immunity will likely spread through a population quickly. Most immunity works through antibodies. Thus pathogen variants that evolve not to be (or less) recognized by pre-existing antibodies have an advantage. This is the same mechanism induced by natural immunity. Thus, pathogens that frequently evolve to escape natural antibody-based immunity (e.g., influenza, HIV) are also able to develop resistance to vaccine-induced immunity. This is the reason we need to get re-immunized with influenza vaccines regularly and why we have not managed to develop an HIV vaccine. In contrast, an ID like measles which does not seem to be able to escape natural immunity also does not evolve resistance to the vaccine, and we can use the same vaccine against measles we have been using for decades. 
+
+The reason why measles might not be able to escape binding by pre-existing antibodies is likely because the binding site is also the part of the virus that is needed to attach to and enter host cells. Any mutation evading antibody binding would also lead to an inability to attach to and infect cells. In contrast, for influenza, the antibody binding regions and the receptor attachment regions are somewhat distinct.
+
+
+## Drug Resistance
+Drugs are another mechanism that applies a strong selective pressure. Any pathogen that can avoid being killed by a drug can potentially 'take over' a patient and transmit to the next. If drug use is widespread in the population, those resistant mutants which generally have lower fitness than the wild-type, drug-sensitive strain can take over in a population. This phenomenon has been observed with many different ID and drugs and produced such looming public health problems as extensively drug-resistant TB (XDR TB) and methicillin-resistant Staphylococcus aureus (MRSA) [@levy04]. 
+Since viruses tend to evolve faster than bacteria, drug resistance evolution is often a problem at the individual patient level. HIV is the prime example. Single-drug therapy for HIV fails consistently because the virus quickly evolved resistance. Only once we started using multiple drugs at the same time were we able to prevent rapid evolution. We are playing a 'numbers game' since the chance of 3 resistance mutations against 3 different drugs occurring is so small that it rarely happens during the treatment of an individual host, thus making the drugs effective for the host's lifetime.
+Since drug resistance is such an important public health problem, it is widely studied. This includes many modeling studies. For an overview of some of those, see [@louz10; @temime08; @wiesch11]. 
+
+
+
+
+
+##Summary and Cartoon
+
+##Exercises
+
+## Further Resources
+
+##References

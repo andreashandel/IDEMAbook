@@ -82,7 +82,7 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2017-12-19}
+  \date{2018-02-07}
 
 
 \usepackage{amsthm}
@@ -202,18 +202,23 @@ to explore and further learn all the topics discussed in this book
 through hands-on computer exercises. These computer exercises and the
 use of the DSAIDE package do not require coding skills. At the end of
 each chapter, I mention which simulation/app from the DSAIDE package
-corresponds to the material covered in the chapter.
+corresponds to the material covered in the chapter. For an overview and
+introduction to the DSAIDE package, including how to install it and get
+started, please read (Handel \protect\hyperlink{ref-handel17}{2017}).
 
 \section{Recommended complementary
 resources}\label{recommended-complementary-resources}
+
+Each chapter of the book lists additional and complementary resources
+for specific topics. As overall supplements to this book, I specifically
+recommend the following resources:
 
 \begin{itemize}
 \tightlist
 \item
   The online courses ``Epidemics - the Dynamics of Infectious Diseases''
-  (State \protect\hyperlink{ref-epimooc}{2014}) and ``Epidemics'' are
-  highly recommended (University
-  \protect\hyperlink{ref-hkepidemics}{2015}).
+  (State \protect\hyperlink{ref-epimooc}{2014}) and ``Epidemics''
+  (University \protect\hyperlink{ref-hkepidemics}{2015}).
 \item
   For additional information on infectious disease epidemiology from a
   more traditional, medical perspective, the very detailed book
@@ -230,9 +235,8 @@ resources}\label{recommended-complementary-resources}
 
 \section{References}\label{references}
 
-\chapter{Introduction to the Dynamical Systems Approach to Infectious
-Disease
-Epidemiology}\label{introduction-to-the-dynamical-systems-approach-to-infectious-disease-epidemiology}
+\chapter{Introduction to the Dynamical Systems
+Approach}\label{introduction-to-the-dynamical-systems-approach}
 
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives}
@@ -245,25 +249,39 @@ The learning objectives for this chapter are:
 \begin{itemize}
 \tightlist
 \item
-  Understand the basic ideas of complex systems and systems
-  thinking/modeling
+  Understand the basic ideas of complex systems and systems thinking
 \item
-  Assess strength and weaknesses of different approaches to ID dynamics
+  Understand how models can help study complex systems
 \item
-  Understand the idea of a compartmental model and how it can be used to
-  model infectious diseases
+  Assess strength and weaknesses of different modeling approaches
 \item
-  Know the components of Infectious Disease systems
+  Understand the concept of a compartmental model and how it can be used
+  to model infectious diseases
 \end{itemize}
 
 \section{Introduction}\label{introduction}
 
+The scientific approach that has generally been the most successful in
+the past was to break down a system into its components and study the
+components one at a time. This is commonly referred to as the
+\emph{reductionistic approach}. This approach to understanding the world
+is still very powerful and useful.
+
+A complementary approach, which has seen increased use, is to look at
+all components of a given system at once, instead of each component by
+itself. Using the whole system approach can provide insights that might
+not be obtained by the purely reductionist approach. Looking at the
+whole system at once is often referred to as \emph{systems
+thinking/approach}.
+
 While the terminology of \emph{systems thinking} or \emph{systems
 approach} has seen increased use in the last few decades, the general
-idea has been around for a while. In public health, there is the basic
-idea - most often applied to infectious diseases - of the \emph{agent -
-host - environment} system, also referred to as the
-\emph{epidemiological triangle} (Figure \ref{fig:epitriangle}).
+idea has been around for a while. The notion of systems is present in
+virtually every field of research, ranging from the hard sciences to
+social sciences and business. In public health, there is the basic idea
+- most often applied to infectious diseases - of the \emph{agent - host
+- environment} system, also referred to as the \emph{epidemiological
+triangle} (Figure \ref{fig:epitriangle}).
 
 \begin{figure}
 \centering
@@ -272,30 +290,12 @@ host - environment} system, also referred to as the
 triangle}
 \end{figure}
 
-Similarly, one can think of the basic epidemiological concept of
-\emph{person - place - time} as describing a system. The notion of a
-system is present in virtually every field of research, ranging from the
-hard sciences to social sciences and business.
-
-The scientific approach that has generally been the most successful in
-the past was to break down a system into its components and study the
-components one at a time. Usually referred to as the
-\emph{reductionistic approach}. This approach to understanding the world
-is still very powerful and useful.
-
-A complementary approach, which has seen increased use, is to look at
-``the whole'' system at once, instead of each component at a time. Using
-the whole system approach can provide insights that might not be
-obtained by the purely reductionist approach. Looking at the whole
-system at once is often referred to as \emph{systems thinking/approach}.
-
 \section{Systems Thinking}\label{systems-thinking}
 
-The term \emph{systems thinking} or \emph{systems approach} or similar
-such terminology has become popular in various fields during the last
-few decades. It is not a very clearly defined term, but in general, a
-\emph{systems} perspective looks at multiple - often many - components
-that interact with each other in potentially complicated ways.
+The term \emph{systems thinking} or \emph{systems approach} is not a
+very clearly defined term, but in general, a \emph{systems} perspective
+looks at multiple - often many - components that interact with each
+other in potentially complicated ways.
 
 For instance, the problem of obesity has many different components that
 interact in potentially complex ways to affect a person's weight. Figure
@@ -312,8 +312,184 @@ the \emph{systems approach}.
 \url{http://goo.gl/m2Qq13}}
 \end{figure}
 
-\section{Classical and Systems ID Epi
-Approaches}\label{classical-and-systems-id-epi-approaches}
+\section{Systems Thinking and Models}\label{systems-thinking-and-models}
+
+Once we take the systems perspective, we have to deal with many
+components that interact in potentially complicated ways. This makes
+study and analysis complicated, especially if we are trying to gain
+insights into the causal and mechanistic connections between system
+components and their effect on outcomes of interest. While a
+qualitative, conceptual model (e.g.~the one shown in Figure
+\ref{fig:obesitysystem}) often provides some qualitative understanding,
+it is limiting. It is for instance almost impossible to gain a good
+\emph{quantitative} understanding how changes in certain conditions and
+components of a system lead to changes in outcomes of interest by
+relying on conceptual approaches alone. If we want to go beyond
+qualitative and move toward a quantitative understanding (i.e.
+`increasing the tobacco tax by X\% will reduce smoking-related health
+care costs by Y\%'), we need quantitative, i.e.~mathematical or
+computational, models. There are many different types of such models one
+can use. The following provides a - very brief - overview of different
+modeling approaches.
+
+\subsection{Phenomenological (statistical)
+Models}\label{phenomenological-statistical-models}
+
+A huge class of models consists of what is usually refered to as
+statistical models. In the context of this discussion, I prefer to label
+them \emph{phenomenological} models, but that terminology is rarely
+used. The idea behind the statistical/phenomenological approach is to
+use a mathematical or computational model to study if there are any
+patterns between the components of the system and the outcomes of
+interest.
+
+For instance, a linear regression model investigates if there is a
+pattern between input (system components or other measurable quantities
+that are part of the system) and an outcome of interest that can be
+approximated by a linear function. More complicated statistical models
+exist, some go by the name of \emph{machine learning methods}. All of
+these models try to determine if there are patterns between inputs and
+outputs of interest in the data. Some of the more complicated models
+allow for interactions between system components (inputs, predictors,
+variables). Figure \ref{fig:phenomodel} gives an illustration of 2
+simple phenomenological models fit to some data.
+
+\begin{figure}
+\centering
+\includegraphics{./images/phenomodel.png}
+\caption{\label{fig:phenomodel}Two phenomenological models, a linear and
+quadratic equation, fit to data. The data and model suggest that there
+is a clear pattern of decreasing fuel efficiency as engine size
+increases. It seems the pattern is somewhat better described by the
+quadratic model.}
+\end{figure}
+
+One feature these phenomenological models have in common is that they do
+not try to describe the \emph{mechanisms} of interactions within the
+system that lead to the observed patterns. For instance, if we find that
+the relationship between the number of cigarettes smoked per day and the
+5-year risk of lung cancer can be approximated by a sigmoid function, it
+does not tell us much about the mechanisms leading from smoking to lung
+cancer.
+
+\subsection{Mechanistic Models}\label{mechanistic-models}
+
+A class of models that is complementary to the just discussed
+phenomenologica models are mechanistic models, which explicitly - albeit
+usually in very simplified form - try to model the mechanisms of
+interaction among system components. These models are commonly used the
+hard sciences and engineering. For instance the mathematical equations
+describing the movement of fluids or electromagnetic fields, or computer
+simulations of airplane engines, are based on such mechanistic models.
+The advantage of these kinds of models is that they potentially provide
+better and deeper understanding of the system. The main disadvantage is
+that we already need to know (or at least assume) a good bit about how
+the components interact for us to be able to build such a model. If we
+have no idea what mechanisms are at work in our system of interest, we
+cannot build a mechanistic model. Because of that, areas that are
+currently less well understood (e.g.~the functioning of the stock market
+or the working of brains) are currently not well described by
+mechanistic models.
+
+One advantage of a mechanistic model is that once it is specified and
+built, it can be investigated (either mathematically, or more likely
+through computer simulations) without the need of additional data. For
+instance, our ability to build decent models capturing the salient
+features of hurricane dynamics allows us to forecast the storm
+trajectory. An example of a simulation for a simple mechanistic model is
+shown in Figure \ref{fig:sirsim}.
+
+Both phenomenological (statistical) and mechanistic models are useful
+tools with distinct advantages and disadvantages. Deciding which one to
+use depends on the question and study system. In this book, we focus on
+mechanistic models, which try to represent an explicit, simplified
+description of the system of interest.
+
+\subsection{Dynamical Models}\label{dynamical-models}
+
+While the interactions of components always have some implicit time
+factor, the explicit consideration of time in models is not always
+needed. Consider this example: We could build a model to study how a
+change in tobacco taxes might lead to changes in healthcare costs in a
+given state. Of course, time is present in this system: First we change
+the taxes, and then we look at changes in costs over some time frame.
+However, when studying this system, one usually doesn't need to consider
+an explicitly time-dependent dynamic. Instead one looks at 2 scenarios:
+Taxes 1 \& Costs 1 versus Taxes 2 \& Costs 2. It is usually not
+necessary to model or simulate the chain of events leading from tax
+change to cost change while explicitly accounting for time.
+
+However, often the interactions of components that make up a system
+occurs over time and the temporal component needs to be included. We
+often want to know how certain changes to the system
+(e.g.~interventions) lead to changes in outcomes through a
+\emph{dynamical/time-dependent} chain of events. This leads to dynamical
+models. For infectious diseases, we most often have some underlying
+dynamics that we need to take into account (e.g.~an ongoing outbreak)
+and on top of which we might want to implement some interventions.
+Therefore, the dynamical perspective is generally used.
+
+We can illustrate this dynamical perspective in an abstract way by
+extending the epidemiological triangle. Figure \ref{fig:dynamictriangle}
+shows the components and the interactions of the triangle changing over
+time.
+
+\begin{figure}
+\centering
+\includegraphics{./images/moving-triangle.png}
+\caption{\label{fig:dynamictriangle}Dynamic Epidemiological Triangle.
+Interactions between agent, host and environment change explicitly with
+time - indicated by the different coloring for each component and
+interaction.}
+\end{figure}
+
+A more specific example of a simple dynamical model showing changes over
+time is shown in Figure \ref{fig:sirsim}.
+
+Mechanistic models are especially well suited to describe dynamical
+systems and are therefore the primary choice for the study of complex
+dynamical systems.
+
+\subsection{Types of Dynamical, Mechanistic
+Models}\label{types-of-dynamical-mechanistic-models}
+
+When building mechanistic, dynamical models based on a systems approach,
+there are two main approaches. In one approach, the model is made up of
+individuals (who are sometimes called agents) and thus these types of
+models are called agent based or individual based models. The
+agents/individuals - which are often but not always are humans -
+interact with each other. Each agent has certain properties and
+undergoes certain actions. The interactions of all the agents lead to
+potentially interesting and complex dynamics.
+
+Schelling's segregation model (see e.g.
+\href{https://youtu.be/dFl3Cfw12bo}{this video} ) is a nice example of
+such an individual based model. Models and approaches that consider
+individuals connected through networks of contacts are a type of
+individual based model that is particularly important for infectious
+diseases. We will discuss such network concepts in a later chapter.
+
+Another approach simplifies the system by not tracking every individual,
+but instead only keeps track of total numbers in certain states. For
+instance, for an ecological model, we might track the total numbers of
+predators and prey (e.g.~wolves and sheep). The resulting model is much
+simpler. If we had a population of a 100, 1000 or 10,000 wolves or
+sheep, we would need to keep track of as many individuals. If we only
+keep track of the total number of individuals, we only need to track how
+the numbers in each \emph{compartment} (here wolves and sheep) change -
+no matter how large our population. Those models, which only track total
+numbers of individuals, are called \emph{compartmental models}.
+
+While these compartmental models are obviously simplifications of the
+real system, they often retain enough of the model complexity to allow
+us to study the system in detail. Because of this, the majority of
+models used in infectious disease epidemiology are still these types of
+compartmental models. Both the DSAIDE R package and the example models
+shown in this book focus on such compartmental models. The only
+exception is the chapter on networks.
+
+\section{Systems approaches in ID
+Epidemiology}\label{systems-approaches-in-id-epidemiology}
 
 While concepts such as the epidemiological triangle acknowledge that
 interactions between components are important and determine the behavior
@@ -331,7 +507,7 @@ transmission) between study subjects. Accounting for interactions
 between hosts is required to understand important infectious disease
 concepts such as population level immunity thresholds, critical
 community size, or indirect effects of interventions. This, in turn,
-requires a systems approach that explicitly allows for interactions
+leads to a systems approach that explicitly allows for interactions
 between hosts.
 
 On the research side, the importance of such interactions has long been
@@ -344,164 +520,10 @@ Bernoulli (\protect\hyperlink{ref-blower04}{2004})). The importance of
 computational methods for the study of infectious diseases continues to
 increase. In this book, we approach infectious diseases from such a
 systems thinking perspective, without delving too deeply into the
-mathematical and computational aspects of the topic.
-
-\section{Sytems Thinking and Models}\label{sytems-thinking-and-models}
-
-Models are everywhere in science. Models can be conceptual (e.g.~graphs
-or charts), experimental model systems (e.g.~a specific mouse strain in
-immunology) or take the form of mathematical/computer models.
-
-Once we take the systems perspective, we have to deal with many
-components that interact in potentially complicated ways. Making study
-and analysis complicated, especially if we are trying to gain insights
-into the causal and mechanistic connections between some quantity
-(exposure) and some outcome. When taking a systems approach, it is
-therefore often not enough to have a conceptual model alone. While a
-conceptual approach often allows some qualitative understanding, it is
-somewhat limiting. It is for instance almost impossible to gain a good
-\emph{quantitative} understanding how changes in certain conditions and
-components of a system lead to changes in outcomes of interest by
-relying on conceptual approaches alone. If we want to go beyond
-qualitative and move toward a quantitative understanding (i.e.
-`increasing the tobacco tax by X\% will reduce smoking-related health
-care costs by Y\%'), we need mathematical/computational models. There
-are many different types of models one can implement. The following
-provides a - very brief - overview of different modeling approaches.
-
-\subsection{Phenomenological (statistical)
-Models}\label{phenomenological-statistical-models}
-
-A huge class of models consists of what we usually refer to as
-statistical models. In the context of this discussion, I prefer to label
-them \emph{phenomenological} models, but that terminology is rarely
-used. The idea behind the statistical/phenomenological approach is to
-use a mathematical or computational model to study if there are any
-patterns between the input (exposure and other variables) and the output
-(outcomes of interest).
-
-For instance, a linear regression model investigates if there is a
-pattern/correlation between input and output that can be well
-approximated by a linear function. More complicated statistical models
-exist, some go by the name of \emph{machine learning methods}. All of
-these models try to determine if there are patterns between inputs and
-outputs of interest in the data.
-
-One feature these statistical/phenomenological models have in common is
-that they do not try to describe the mechanisms of interactions within
-the system that lead to the observed input-output relations. For
-instance, if we find that the relationship between the number of
-cigarettes smoked per day and the 5-year risk of lung cancer can be
-approximated by a linear function, it does not tell us much about the
-mechanisms leading from smoking to lung cancer.
-
-\subsection{Mechanistic Models}\label{mechanistic-models}
-
-Another class of models are mechanistic models, which explicitly -
-albeit usually in very simplified form - try to model the mechanisms of
-interaction among system components. These models are commonly used for
-infectious disease studies. For instance, we might want to know how drug
-dose affects pathogen clearance inside an infected patient. We could
-collect data on both (such data often needs to come from animal models)
-and see if a straight line or another kind of model fits the data.
-Alternatively, we could try to build a model that explicitly captures
-the mechanism of the drug killing the pathogen, and then see if this
-mechanistic model describes the data well. The advantage of these kinds
-of models is that they potentially provide better and deeper
-understanding of the system. The main disadvantage is that we already
-need to know (or at least assume) a good bit about how the components
-interact for us to be able to build such a model. If we don't know what
-mechanisms might lead to some input impacting some output, we can't
-build a mechanistic model.
-
-Both phenomenological (statistical) and mechanistic models are useful
-tools with distinct advantages and disadvantages. Deciding which one to
-use depends on the question and study system. In this book, we will
-focus on mechanistic models, which try to represent an explicit,
-simplified description of the system of interest.
-
-\subsection{Dynamical Systems
-Thinking/Modeling}\label{dynamical-systems-thinkingmodeling}
-
-The dynamical part adds an explicit time component to the system (and
-assumes that we can use equations to describe the dynamics). Consider
-this example: We could study how a change in tobacco taxes might lead to
-changes in healthcare costs in a given state. Of course, time is present
-in this system: First we change the taxes, and then we look at changes
-in costs over some time frame. However, when studying this system, one
-usually doesn't need to consider an explicitly time-dependent dynamic.
-Instead one looks at 2 scenarios: Taxes 1 \& Costs 1 versus Taxes 2 \&
-Costs 2. It is usually not necessary to model or simulate the chain of
-events leading from tax change to cost change while explicitly
-accounting for time.
-
-In contrast, in a dynamical system, the model explicitly changes in
-time. We might often want to know how certain changes to the system
-(e.g.~interventions) lead to changes in outcomes through a
-\emph{dynamical/time-dependent} chain of events. For infectious
-diseases, we most often have some underlying dynamics that we need to
-take into account (e.g.~an ongoing outbreak) and on top of which we
-might want to implement some interventions. Therefore, the dynamical
-perspective is often used. Even if a specific disease can be considered
-to be `steady' before we implement an intervention (e.g.~a given level
-of TB in a country), there is still disease transmission between
-individuals happening, which most often makes the dynamical approach
-more suitable.
-
-We can illustrate this dynamical perspective by extending the
-epidemiological triangle. Figure \ref{fig:dynamictriangle} shows the
-components and the interactions of the triangle changing over time.
-
-\begin{figure}
-\centering
-\includegraphics{./images/moving-triangle.png}
-\caption{\label{fig:dynamictriangle}Dynamic Epidemiological Triangle.
-Interactions between agent, host and environment change explicitly with
-time - indicated by the different coloring for each component and
-interaction.}
-\end{figure}
-
-Mechanistic models are especially well suited to describe dynamical
-systems and are therefore the primary choice for the study of complex
-dynamical systems.
-
-\subsection{Types of Dynamical, Mechanistic
-Models}\label{types-of-dynamical-mechanistic-models}
-
-When building mechanistic, dynamical models based on a systems approach,
-there are two main approaches. In one approach, the model is made up of
-individual \emph{agents/individuals} and is thus called Agent based or
-Individual based model. The agents/individuals - which are often but not
-always are humans - interact with each other. Each agent has certain
-properties and undergoes certain actions. The interactions of all the
-agents lead to potentially interesting and complex dynamics. Schelling's
-segregation model (see e.g. \href{https://youtu.be/dFl3Cfw12bo}{this
-video} ) is a nice example of such an agent based model. Models and
-approaches that consider individuals connected through networks of
-contacts are particularly important for infectious diseases, and we'll
-briefly discuss those in a later chapter.
-
-Another approach simplifies the system by not tracking every individual
-agent, but instead only keeps track of total agents/individuals in
-certain states. For instance, for an ecological model, we might track
-the total numbers of predators and prey (e.g.~wolves and sheep). The
-resulting model is significantly simplified compared to the agent based.
-If we had a population of a 100, 1000 or 10,000 wolves or sheep, we
-would need to keep track of as many agents. If we only keep track of the
-total number of individuals, we only need to track how the numbers in
-each \emph{compartment} (here wolves and sheep) change - no matter how
-large our population. Those models, which only track total numbers of
-individuals, are called \emph{compartmental models}
-
-While these compartmental models are obviously simplifications of the
-real system, they often retain enough of the model complexity to allow
-us to study the system in detail. Because of this, the majority of
-models used in infectious disease epidemiology are still these types of
-compartmental models. Both the DSAIDE R package and the example models
-shown in this book focus on such compartmental models. For some more
-information on compartmental models,
-\href{https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology}{check
-out this Wikipedia article}
+mathematical and computational aspects of the topic. If you are
+interested in building your own models, the books (Keeling and Rohani
+\protect\hyperlink{ref-keeling08}{2008}; Vynnycky and White
+\protect\hyperlink{ref-vynnycky10}{2010}) are good starting points.
 
 \section{A Basic Infectious Disease Systems
 Model}\label{a-basic-infectious-disease-systems-model}
@@ -530,6 +552,13 @@ status according to 3 different stages/compartments:
   because they died.
 \end{itemize}
 
+When talking about the quantities that are tracked in each compartment,
+you will see both the term \emph{host(s)} and \emph{individual(s)} used
+interchangeably. While we most often think of human hosts, the hosts can
+be any animal (or plants or bacteria infected by phages, etc.).
+Sometimes, a compartment might track a quantity such as pathogen load in
+the environment.
+
 In addition to specifying the \textbf{compartments} of a model, we need
 to specify the \textbf{processes/mechanisms} determining the changes in
 each compartment. Broadly speaking, some processes increase the number
@@ -552,9 +581,17 @@ For our system, we specify only 2 processes/flows:
   the parameter \emph{g} in our model.
 \end{enumerate}
 
+In general, the entities that change (that vary) in our system (here the
+number of individuals in compartments S, I and R) are called variables
+and are each represented by a compartment. In contrast, the quantities
+that are usually assumed fixed for a given system are called parameters.
+For the model above, those are the infection rate \emph{b} and the
+recovery rate \emph{g}. This is not a fixed rule, though, and sometimes
+parameters can be allowed to vary.
+
 The SIR model is very basic, but it still has the hallmark of a complex
 system. Specifically, there is an interaction between components, namely
-the \textbf{I} ``component'' interacts with the \textbf{S} component, or
+the \textbf{I} component interacts with the \textbf{S} component, or
 phrased in more ordinary language, infected individuals can interact
 with susceptibles and thereby infect them.
 
@@ -572,6 +609,42 @@ shown in Figure \ref{fig:basicSIR}.
 \caption{\label{fig:basicSIR}Flow diagram for the simple SIR model.}
 \end{figure}
 
+To study a specific ID and scientific question, one needs to use a model
+that approximates the real system one is interested in reasonably well,
+and one needs to choose values for the model parameters and starting
+conditions such that they match the specific system one wants to study.
+We'll return to that idea throughout this book.
+
+We can implement the flow diagram as a computer model, for instance by
+formulating it as the set of ordinary differential equations shown
+below, and then implementing those on a computer to simulate an
+outbreak. Figure \#ref(fig:sirsim) shows such a simulation.
+
+\begin{figure}
+\centering
+\includegraphics{./images/sirsim.png}
+\caption{\label{fig:sirsim}An outbreak simulation using the simple SIR
+model. Values for parameters are chosen as b=0.0025/days and g = 1/(7
+days). The starting conditions for each compartment are set to S=100,
+I=1, R=0.}
+\end{figure}
+
+Note that, unfortunately, there are no rules concerning the naming of
+variables and parameters. Compartments (e.g.~SIR) tend to be labeled
+very similarly by different researchers, while parameter labels are much
+more variable. I'm trying to be consistent in this book, though I might
+mix it up occasionally. For this book, I decided to stick with letters
+from the English alphabet, but you can often find people use Greek
+letters for parameters (e.g. \(\beta\) instead of \emph{b} for the
+transmission parameter). Always check carefully for a given paper/model
+what the definition and meaning of each variable and parameter are.
+
+For some more further information on compartmental models in
+epidemiology,
+\href{https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology}{check
+out this Wikipedia article}. We will also discuss many variants of these
+type of compartmental models in further chapters.
+
 \subsubsection{Model Implementation}\label{myadvancedbox}
 
 If one wants to study any model in detail, one needs to implement it
@@ -579,47 +652,20 @@ either in the form of a mathematical or a computer model (or both). For
 compartmental models, the most common way of implementation is writing
 the model as a set of ordinary differential equations and implementing
 those in some computer language. This book shows sets of ODE equations
-for the several of the discussed models, but a detailed understanding of
-these equations is not required to understand the different topics we
-discuss. For the model described above, the equations look like this:
+for most of the discussed models, but a detailed understanding of these
+equations is not required to understand the different topics we discuss.
+For the model described above, the equations look like this:
 \[\dot S = -bSI\] \[\dot I = bSI - gI\] \[\dot R = gI\]
 
 We are using the usual short-hand notation, where a dot over a variable
 means its derivative (its change) with respect to time. In all the
 models we consider, we always only consider changes with respect to time
-(the dynamical aspect of the model).
-
-\section{Some General Comments and
-Notes}\label{some-general-comments-and-notes}
-
-In general, the entities that change (that vary) in our system (here the
-number of individuals in compartments S, I and R) are called variables
-and are each given a compartment/equation. In contrast, the quantities
-that are usually assumed fixed for a given system are called parameters.
-For the model above, those are the infection rate \emph{b} and the
-recovery rate \emph{g}. This is not a fixed rule, though and sometimes,
-parameters can be allowed to vary.
-
-When talking about the quantities that are tracked in each compartment,
-you will see both the term \emph{host(s)} and \emph{individual(s)} used
-interchangeably. While we most often think of human hosts, the hosts can
-be any animal (or plants or bacteria infected by phages, etc.).
-Sometimes, a compartment might track an entity such as pathogen load in
-the environment.
-
-If you want to study a specific ID, you choose parameters such that they
-match the specific disease you want to study. We'll return to that idea
-throughout this book.
-
-Unfortunately, there are no rules concerning the naming of variables and
-parameters. Compartments (e.g.~SIR) tend to be labeled very similarly by
-different researchers, while parameter labels are much more variable.
-I'm trying to be consistent in this book, though I might mix it up
-occasionally. For this book, I decided to stick with letters from the
-English alphabet, but you can often find people use Greek letters for
-parameters (e.g. \(\beta\) instead of \emph{b} for the transmission
-parameter). Always check carefully for a given paper/model what the
-definition and meaning of each variable and parameter are.
+(the dynamical aspect of the model). The left side indicates which
+variable changes, and the right side indicates how it changes. Anything
+with an (usually not shown) positive sign on the right side describes a
+positive change, i.e.~an inflow into the specified compartment, thus
+increasing the number in that compartment. Anything with a negative sign
+indicates an outflow out of that compartment.
 
 \section{Summary and Cartoon}\label{summary-and-cartoon}
 
@@ -640,14 +686,17 @@ complex system. \href{https://xkcd.com/1488/}{Source: xkcd.com}.}
 \begin{itemize}
 \tightlist
 \item
+  If you haven't done already, install R, RStudio and the DSAIDE R
+  package. See (Handel \protect\hyperlink{ref-handel17}{2017}) for an
+  overview and quick-start guide for DSAIDE.
+\item
   Work through the tasks for the \emph{ID Dynamics Introduction} DSAIDE
   app.
 \item
   Contemplate on your experience with the \emph{ID Dynamics
   Introduction} DSAIDE app. In which way does it capture the `dynamical
   systems' perspective? Did you find any behavior of this - arguably
-  still very simple - infectious disease model/system that you would
-  consider as being ``complex''? How/why?
+  very simple - infectious disease model to be complex? How/why?
 \item
   Read the paper ``Systems Science Methods in Public Health: Dynamics,
   Networks, and Agents'' by Luke \& Stamatakis (Luke and Stamatakis
@@ -688,32 +737,37 @@ complex system. \href{https://xkcd.com/1488/}{Source: xkcd.com}.}
   other areas of public health. Some recent references on that topic are
   e.g. (Ness, Koopman, and Roberts \protect\hyperlink{ref-ness07}{2007};
   Sánchez-Romero et al. \protect\hyperlink{ref-sanchez-romero16}{2016}).
+\item
+  This book does not deal with individual based models. If you want to
+  learn more about them, see e.g. (Railsback and Grimm
+  \protect\hyperlink{ref-railsback11}{2011}).
 \end{itemize}
 
 \section{References}\label{references-1}
 
-\chapter{Characterizing Infectious Disease
-States}\label{characterizing-infectious-disease-states}
+\chapter{Characterizing Infectious Disease States}\label{idstates}
 
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives-1}
 
 In this module, we will discuss ways to characterize individuals with
-regard to their ID status. We will consider why some infection states
-are important for public health control but less for doctors and the
-opposite. We will also discuss how different ID states might or might
-not correspond to the compartments in our computer models.
+regard to their infection status, e.g.~susceptible, symptomatic
+infected, revovered and immune. We will consider why some infection
+states are important for public health control but less important from
+an individual patient, medical perspective, and the reverse. We will
+also discuss the connection between infectious disease states and
+compartments in computer models.
 
 The learning objectives for this chapter are:
 
 \begin{itemize}
 \tightlist
 \item
-  Categorize infectious diseases according to medical characteristics
-  such as duration of symptoms, mortality, etc.
+  Ability to accurately categorize infectious diseases according to
+  medical and public health characteristics
 \item
-  Categorize infectious diseases according to public health
-  characteristics such as duration of infectiousness, immunity, etc.
+  Evaluate the impact of different infection states on medical outcomes
+  and disease dynamics
 \item
   Understand how ``medical states'' (e.g.~symptoms) and ``public health
   states'' (e.g.~infectiousness) do not always overlap.
@@ -721,31 +775,81 @@ The learning objectives for this chapter are:
   Identify the features of infectious diseases that are most important
   to know for successful intervention planning
 \item
-  Understand how models change as more details are included
+  Understand how different infections states are represented in
+  mathematical models
 \end{itemize}
 
 \section{Introduction}\label{introduction-1}
 
-We previously introduced a very simple compartmental systems model for
-an infectious disease (the SIR model) where individuals were split
-according to 3 states: susceptible, infected (and infectious) and
-recovered (and immune). While easy and sometimes a good starting point,
-the simple SIR is often not detailed enough to capture the important
-aspects of many infectious diseases. Here, we discuss some important
-considerations with regard to the infection status of individuals that
-can affect the behavior of the system and thus need to be included if
-one wants to build a model to study this system.
+In the previous chapter, we introduced a very simple compartmental
+systems model for an infectious disease (the SIR model) where
+individuals were split according to 3 states related to the infectious
+disease of interest: susceptible, infected (and infectious) and
+recovered (and immune). Sometimes, placing individuals into one of these
+3 categories provides a reasonable approximation of reality. It is easy
+and thus often a good starting point. However, at some point we might
+want to categorize infection states of individuals in some more detail.
+For instance, for a disease like tuberculosis, a large fraction of
+individuals who are infected are not infectious. Thus, combining all of
+those who are infected into a single group is not realistic. We have to
+allow for more distinct categories. there is potentially an unlimited
+number of states we can consider. For instance for HIV, we could
+categorize infected individuals into sub-groups based on their CD4 cell
+count - and the number of such sub-groups is essentially infinite.
+Fortunately, to get a fairly realistic picture of most diseases, we can
+usually get away with introducing just some additional categories. The
+following sections discuss the major categories with regard to infection
+status of individuals.
 
-\section{Infection states}\label{infection-states}
+\section{States of susceptibility}\label{states-of-susceptibility}
 
-It is important to keep in mind that infectiousness and symptoms are not
-always overlapping. The former is the most important driver of the
-ongoing infection process. The latter is important for surveillance and
-medical interventions. We will discuss different clinical/medical and
-epidemiological/transmission states in the following.
+The simplest assumption is to classify everyone as susceptible. While
+this is true in some instances, e.g.~for a newly emerging disease, often
+this assumption is not justified. Depending on the disease and
+population, some individuals might not be susceptible, e.g.~because they
+previously had the infection and have natural immunity, or they received
+a vaccine or they have a genetic make-up that makes them non-susceptible
+(examples are the CCR5-delta 32 mutation in HIV or the FUT2-G428A for
+some norovirus strains). The easiest way to deal with individuals who
+are not susceptible is to ``ignore'' them, i.e.~simply not include them
+in any models for that disease. Alternatively, if the model has a
+recovered and immune class, one can place all those individuals in that
+category.
 
-\subsection{Infection states -
-clinical}\label{infection-states---clinical}
+It gets more complicated if susceptibility is only somewhat reduced.
+This is common for some vaccines, which often do not offer full
+protection, but instead reduce the chance of getting infected (and if
+infection occurs, often disease severity is reduced). If you wants to
+account for this, you will have to introduce a new state into your
+conceptual/mathematical/computer model. For instance you could have a
+category \emph{S} of fully susceptible individuals, and a category
+\emph{Sp} of partially susceptible. Those individuals would get infected
+at a lower rate compared to fully susceptible individuals. If reduced
+susceptibility can wane, e.g.~due to the wearing off of a vaccine
+induced immunity, one might need to include a process in the model by
+which \emph{sp} individuals transition back into the \emph{S} category.
+
+\section{States of Infection}\label{states-of-infection}
+
+Categorizing individuals beyond the simple \emph{infected and
+infectious} category is often the most important addition to a model if
+one wants to make things more realistic. Several important states are
+commonly distinguished and described in the next few sections.
+
+\subsection{Latent infection}\label{latent-infection}
+
+Many important diseases (e.g.~HIV, Tuberculosis), have a state during
+which an individual is infected but does not show any symptoms. This is
+usually called \emph{latent} infection. Sometimes the term
+\emph{exposed} is also used. Latent, non-symptomatic infected
+individuals might (HIV) or might not (TB) be infectious. It is important
+to keep in mind that infectiousness and symptoms are not always
+overlapping. The former is the most important driver of the ongoing
+infection process and drives the observed disease dynamics on the
+population level. The latter is important for surveillance and medical
+interventions.
+
+\subsection{Symptomatic infection}\label{symptomatic-infection}
 
 From a purely medical perspective, focusing on one patient at a time,
 the most important characteristic of a disease is its severity, also
@@ -756,63 +860,106 @@ Because of its importance, mortality is often considered separate from
 morbidity. Knowing morbidity and mortality of an ID are generally most
 important when caring for individual patients. For interventions,
 understanding what might help mitigate morbidity and mortality is of
-prime interest. Morbidity and mortality are also often necessary for the
-acquisition of data. It is difficult to determine infected individuals
+prime interest.
+
+Most diseases lead to a state with morbidity, i.e.~where an infected
+individual shows symptoms. Those diseases that don't are usually not of
+much medical and public health interest. During the symptomatic state,
+individuals are generally infectious. The question how symptoms might or
+might not impact infectiousness is important but not too well
+understood. Qualitatively, we know that coughing and sneezing help
+spread many respiratory pathogens, while the symptoms an HIV infected
+individual displays during the AIDS stage are likely not increasing
+infectiousness. The connection of symptoms, morbidity and mortality and
+its relation to infectiousness is the main theme underlying the topic of
+\emph{virulence}, which we'll cover later in the chapter on virulence
+evolution.
+
+Morbidity and mortality are also often important for public health
+surveillance. It is generally difficult to capture infected individuals
 that do not show symptoms, those that are symptomatic - and obviously,
 those that die - are easier to count and thus get estimates for disease
 prevalence and incidence.
 
-\subsection{Infection states -
-epidemiological}\label{infection-states---epidemiological}
+\subsection{Asymptomatic infection}\label{asymptomatic-infection}
 
-From the perspective of a public health practitioner, other ID
-characteristics besides morbidity and mortality are fundamental. We need
-to know when someone is infectious (e.g.~before/without symptoms, or
-only when symptomatic), how transmission occurs, if recovered
+After infection, for almost all diseases there is a latent period when
+symptoms are not yet visible. For many diseases, the whole course of
+infection is asymptomatic in at least a fraction of infected
+individuals. If such asymptomatic individuals are infectious, they are a
+potentially important driver of the infection dynamics. Since
+asymptomatic indivuals are often not picked up by surveillance, they can
+pose problems for the control of a disease.
+
+Note that some diseases can show complicated patterns of symptoms,
+e.g.~for malaria symptoms can be intermittent, with periods of no
+symptoms in between.
+
+\section{Post-infection states}\label{post-infection-states}
+
+After infection is over, it is possible for an individual to enter
+different states. So far, we only considered a \emph{recovered and
+immune} state. in the classic SIR model, those \emph{R} individuals are
+immune forever and thus do not further influence the systems dynamics.
+However, some infectious diseases either do not induce immunity
+(e.g.~many sexually transmitted diseases) or only lead to short-term
+immunity (e.g.~norovirus or influenza). If a disease does not induce
+immunity, one can conceptualize and model this by assuming that after
+infection, individuals directly enter the susceptible state again
+(leading to the SIS model).
+
+If we assume that everyone has immunity only for a short period of time,
+we can account for that by having infected individuals first enter the
+recovered state, and then from that state move at some rate back to the
+susceptible state (leading to the SIRS model).
+
+Things can get more complicated when combined with different infection
+states. For instance it might be that those individuals who had an
+asymptomatic case of the disease aquire immunity that lasts less long
+compared to those who were symptomatic infected. We then need to have 2
+different recovered compartments, each with its own rate of returning to
+the susceptible state.
+
+A special and important post-infection state is death. From a ID
+dynamics perspective, a dead person generally behaves like a recovered
+and immune person, i.e.~they do not further influence the infection
+dynamics (ignoring special cases such as e.g.~Ebola where transmission
+after death has been observed). Of course, from a medical and public
+health perspective, a recoverd and immune person is a favorable outcome
+while a dead person is not.
+
+\section{Medical versus ID dynamics
+perspectives}\label{medical-versus-id-dynamics-perspectives}
+
+I hope that the above description of different states made it clear that
+features that are important from a medical perspective (e.g.~severity of
+symptoms), might or might not be important for understanding the
+dynamics of the disease. To properly study the dynamics of an ID, we
+need to know when someone is infectious (e.g.~before/without symptoms,
+or only when symptomatic), how transmission occurs, if recovered
 individuals become immune, if immunity is waning, etc. The difficult
 part is that our data often comes from clinical (symptomatic) cases or
 deaths. If asymptomatic individuals are infectious, or there is
-underreporting, we often don't get the full picture.
+underreporting, we often don't get the full picture. This is discussed
+further in the surveillance chapter.
 
-Of course, the medical and epidemiological perspectives are not an
-`either/or'. Instead, success in combating infectious diseases only
-comes when all aspects are considered. Still, it is useful to keep in
-mind that certain infection states are more important when considering
-how to intervene on the individual patient level versus intervention on
-a population level.
+Of course, the medical and ID dynamics/epidemiological perspectives are
+not an `either/or'. Instead, success in combating infectious diseases
+only comes when all aspects are considered. Still, it is useful to keep
+in mind that certain infection states are more important when
+considering how to intervene on the individual patient level versus
+intervention on a population level.
 
-\subsubsection{Biased Surveillance - an example}\label{myexamplebox}
+\section{Models with more details}\label{models-with-more-details}
 
-During the early days of the 2009 H1N1 influenza pandemic, the numbers
-on cases and deaths suggested that this strain of influenza might have a
-higher than normal case fatality ratio (the often used term case
-fatality rate is a bad label as this is not a rate). Once more and
-better data became available. It was realized that many infections
-initially did not get reported, and adjusting for those it became clear
-that the ratio of deaths to infected was thankfully not much different
-from seasonal influenza.
-
-\section{Other important infectious disease
-stages}\label{other-important-infectious-disease-stages}
-
-In addition to the infection stage, other states of the host might need
-to be considered carefully. For instance, while in the classic SIR model
-the recovered individuals are assumed to be immune to re-infection - and
-thus don't further influence the systems dynamics, there are IDs which
-either do not induce immunity (e.g.~many sexually transmitted diseases)
-or only lead to short-term immunity (e.g.~norovirus or influenza). This
-can often be represented in a model by adjusting the flows, e.g.~if
-recovered individuals initially have some immunity and then lose them,
-flow from the recovered to the susceptible class can be implemented.
-
-\subsection{Models with more details}\label{models-with-more-details}
-
-To study the dynamics of an infectious disease in more detail than is
-provided by the simple SIR model, we can consider models that allow for
-additional states. Figure \ref{fig:complicatedmodel} shows a model with
-additional compartments. Equations for this model are not shown here,
-but a model similar to this one, together with the equations, can be
-found in the corresponding DSAIDE app referred to below.
+The above sections described different states that might need to be
+considered and explained how models will need to be adjusted to account
+for such different states. To make this more specific, figure
+\ref{fig:complicatedmodel} shows a model with additional compartments.
+We omit showing a mathematical representation (i.e.~a set of
+differential equations) for this model. However, a very similar model,
+together with the equations, can be found in the DSAIDE app referred to
+below in the exercise section.
 
 \begin{figure}
 \centering
@@ -824,20 +971,31 @@ compartments.}
 \section{How complex should our model
 be?}\label{how-complex-should-our-model-be}
 
-Individuals can be classified as non-infectious or infectious. The
-latter could be divided further, e.g.~into low and high infectiousness.
-Infectiousness is the primary driver of the dynamics. Clinical states
-that are often tracked are asymptomatic, symptomatic and dead.
-Sometimes, individuals are asymptomatic before they become symptomatic.
-This is usually labeled pre-symptomatic. Individuals in any of those
-states can be infectious or not. Depending on the ID, some of those
-states are more important than others. For instance for HIV, individuals
-are infectious during the long asymptomatic period, while asymptomatic
-individuals infected with TB are not infectious. A model describing a
-specific system needs to be tailored to the ID under study.
+While we discussed major ways to categorize individuals
+(e.g.~symptomatic versus asymptomatic or infectious vs non-infectious),
+one can potentially sub-divide any state into as many sub-states as one
+wanted. For instance one could split infected indiduals into 10
+different levels of infectiousness. The question then becomes: How
+detailed and complex should our model be? What details should we include
+and which ones should we omit?
 
-The question then becomes: What details should we include and which ones
-should we omit? We can - and do not want to - include every detail of a
+Onee might be inclined to build very complicated and detailed models, in
+an effort to be as realistic as possible. While more detailed models can
+indeed be more realistic, there are several drawbacks. First, as models
+get larger, they contain more parameters. Each parameter needs to be
+given a numeric value to allow one to run simulations. One can try to
+obtain the parameters from the literature, however, often that
+information is not available. Alternatively, one could fit the model to
+data (something not discussed in this book) and try to estimate the
+parameters. However, with the kind of data typically available, one can
+usually only estimate a few parameters with some level of certainty. And
+even if one were to be able to get good estimates for all model
+parameters, larger models are harder to implement, take longer to run,
+and are more difficult to analyze. With too many parts present, it can
+be hard to understand how different components interact with each other
+and affect outcomes of interest.
+
+We therefore cannot - and do not want to - include every detail of a
 complex system, i.e.~all components and interactions. We need to decide
 which parts are important and need to be in the model, and which ones we
 can ignore. A simple and somewhat silly example: We never include the
@@ -848,51 +1006,80 @@ other features is less obvious in other cases. For instance, for an HIV
 model, we likely need gender, while a SARS model might ignore this
 characteristic.
 
-In general, we need to decide for a specific ID, scenario, and question
-which details to include in our model and which ones to ignore. In
-general, the primary interactions between components of the system are
-needed. Thus, if we wanted to model the transmission dynamics of Ebola,
-we might need to include deceased infected individuals into the model,
-since they are known to contribute to transmission. In contrast, if we
-want to study how some control strategies for SARS might reduce the
-total number of \emph{infected} but we don't care about the impact on
-total deaths (unlikely, but let's just pretend). In this case, we would
-not need a dead compartment in our model, since those dead don't further
-interact with anyone else in the system. However, if we want to keep
-track of deaths and how they are impacted by our intervention (likely),
-we do need to track them - even though dead people are not known to
-transmit SARS.
+It is important to find a trade-off between details that need to be
+included and details one can leave out. Unfortunately, there is no
+recipe for it. Some very simple models have produced useful insights,
+while there are big models in the literature that arguably do little to
+nothing in helping us understand or deal with infectious diseases.
+Obviously, there have also been fairly big models that have produced
+useful information, and small models that are too simplistic to provide
+much information about any real system.
 
-We will see many different types of models as we go through the course.
-In general, the models will include the feature we are focusing on while
-excluding others. For instance, we might include human and mosquitos for
-vector-borne IDs but ignore things like asymptomatic or pre-symptomatic
-states. This is mainly done to keep models simple and focus on one
-feature at a time. Models that address ``real'' questions often -- but
-not always -- include a fair number of details.
+A good analogy for model building and use in general is the use of maps.
+Maps are models of the real world. They serve specific purposes, and it
+is important that a given map be useful for the intended purpose. For
+instance, if we want to know how to drive from Atlanta to Athens, the
+left map in figure \ref{fig:mapfigure} would be most useful. If instead
+we want to know where in the US the state of Georgia is located, the
+middle map is most useful. If we want to know where most people live in
+Georgia, the right map is most useful. In each case, we study the same
+object (the state of Georgia), but depending on the question, different
+maps are needed. Maps (and models) are useful because they capture the
+information that is needed for a specific situation, while leaving out
+unneccesary information. Nobody would want to have a map so detailed
+that it is essentially the real world - it wouldn't be a very useful map
+anymore.
+
+\begin{figure}
+\centering
+\includegraphics{./images/mapfigure.png}
+\caption{\label{fig:mapfigure}Three different maps of the state of Georgia.}
+\end{figure}
+
+In analogy to the map example, we need to decide for a specific ID,
+scenario, and question which details to include in our model and which
+ones to ignore. In general, the primary interactions between components
+of the system are needed. Thus, if we wanted to model the transmission
+dynamics of Ebola, we might need to include deceased infected
+individuals into the model, since they are known to contribute to
+transmission. In contrast, if we want to study how some control
+strategies for SARS might reduce the total number of \emph{infected} but
+we don't care about the impact on total deaths (unlikely, but let's just
+pretend). In this case, we would not need a dead compartment in our
+model, since those dead don't further interact with anyone else in the
+system. However, if we want to keep track of deaths and how they are
+impacted by our intervention (likely), we do need to track them - even
+though dead people are not known to transmit SARS.
 
 To build models that are suitable to study a particular system, model
-builders need to be experts on the system they want to study and/or
-collaborate with subject matter experts.
-
-Building a good model needs to follow the
+builders need to be experts on the system they want to study or
+collaborate with subject matter experts. Building a good model needs to
+follow the
 \href{https://en.wikipedia.org/wiki/Goldilocks_principle}{Goldilocks
-Principle}: If a model is too small/simple, it likely doesn't
-approximate the real system very well. If the model is too big and
-complicated, it 's hard to build, hard to analyze, prone to mistakes,
-and might not lead to much insight (i.e.~the model is a big black box).
-The goal is to get the model \emph{just right} regarding size and
-complexity. Unfortunately, no recipe or formula exists specifying how to
-build a \emph{just right} model. Being able to build models that are
-appropriate/suitable for a given ID and question distinguishes good
-modelers/scientists from less good ones.
+Principle}: If a model is too simple, it likely doesn't approximate the
+real system very well. If the model is too complicated, it is hard to
+build and analyze, and might not lead to much insight (i.e.~the model is
+a big black box). The goal is to get the model \emph{just right}
+regarding size and complexity. Unfortunately, no recipe or formula
+exists specifying how to build a \emph{just right} model. Using models
+that are suitable for a given system and question is a hallmark of a
+good scientist.
 
-Also, the model building and analysis process is often iterative. After
-a model has been built and studied, it might become clear -- e.g.~by
+The model building and analysis process is often iterative. After a
+model has been built and studied, it might become clear -- e.g.~by
 comparing the model with data -- that important components or
 interactions have been ignored or not been included correctly. This
 leads to model modification and refinement. This back and forth between
 model and data/the real world can happen over multiple iterations.
+
+Note that for purposes of teaching, we keep the models throughout this
+book fairly simple. The models will include the feature we are focusing
+on while excluding others. For instance, we include humans and mosquitos
+for vector-borne IDs but ignore things like asymptomatic or
+pre-symptomatic states. This is mainly done to keep models simple and
+focus on one feature at a time. Models that address ``real'' questions
+often -- but not always -- include more details than the models we
+investigate througout this book.
 
 \section{Summary and Cartoon}\label{summary-and-cartoon-1}
 
@@ -2323,8 +2510,8 @@ vector-borne. Of course, some IDs are even more complicated and have
 both vector and environmental stages. This chapter focuses on
 environmental transmission.
 
-\subsection{Environmental
-transmission}\label{environmental-transmission-2}
+\section{Environmental transmission
+basics}\label{environmental-transmission-basics}
 
 Some diseases are shed by hosts into the environment, where they can
 survive for a potentially extended time before re-infecting a new host.
@@ -2344,7 +2531,7 @@ direct transmission, which requires close contact.
 \caption{Schematic of an ID with environmental transmission}
 \end{figure}
 
-\subsection{Environmental transmission and external
+\section{Environmental transmission and external
 drivers}\label{environmental-transmission-and-external-drivers}
 
 Because environmental transmission involves the survival of pathogen for
@@ -2360,7 +2547,7 @@ parameters to vary over time. For instance the transmission rate or the
 rate at which environmental pathogen decays could be made dependent on
 the time of the year.
 
-\subsection{Environmental transmission and
+\section{Environmental transmission and
 interventions}\label{environmental-transmission-and-interventions}
 
 The environmental stage is a potentially great target for control
@@ -2501,7 +2688,7 @@ the other just serving as a vessel to get between hosts. Most often, the
 pathogen completes significant parts of its growth and replication cycle
 in both (or all, if there are more than 2) hosts.
 
-\subsection{Vector-borne transmission and ID
+\section{Vector-borne transmission and ID
 patterns}\label{vector-borne-transmission-and-id-patterns}
 
 Understanding what mechanisms lead to potentially observed patterns in
@@ -2519,7 +2706,7 @@ weather, and specifically the availability or lack of water. As such, in
 regions that have strong differences in rainfall between seasons, one
 often observes annual cycles based on annual weather patterns.
 
-\subsection{Vector-borne transmission and
+\section{Vector-borne transmission and
 interventions}\label{vector-borne-transmission-and-interventions}
 
 With vector-borne ID, there is a unique opportunity for interventions
@@ -2546,7 +2733,7 @@ ineffective within a short time. Indeed, that was observed for DDT,
 where mosquitos resistant to the chemical started to appear before its
 widespread use was discontinued.
 
-\section{Modeling vector-borne transmission}\label{myadvancedbox}
+\subsubsection{Modeling vector-borne transmission}\label{myadvancedbox}
 
 The easiest way to model a vector-borne disease is to simply ignore the
 vector and assume that the transmission term of the equation (e.g., a
@@ -2968,6 +3155,17 @@ Ongoing or ad-hoc
 Knowing numerator and denominator. Bias due to getting more severe
 cases. Behavior change during an outbreak.
 
+\subsubsection{Biased Surveillance - an example}\label{myexamplebox}
+
+During the early days of the 2009 H1N1 influenza pandemic, the numbers
+on cases and deaths suggested that this strain of influenza might have a
+higher than normal case fatality ratio (the often used term case
+fatality rate is a bad label as this is not a rate). Once more and
+better data became available. It was realized that many infections
+initially did not get reported, and adjusting for those it became clear
+that the ratio of deaths to infected was thankfully not much different
+from seasonal influenza.
+
 \section{Summary and Cartoon}\label{summary-and-cartoon-9}
 
 \begin{figure}
@@ -3053,7 +3251,7 @@ Other host differences can affect multiple components, e.g., a person
 with numerous sexual partners is more likely to contract an STI, and if
 they are infected, they are also more likely to transmit an STI.
 
-\subsection{Host Heterogeneity Examples}\label{myexamplebox}
+\subsubsection{Host Heterogeneity Examples}\label{myexamplebox}
 
 Several famous examples show how differences in genetics can impact ID.
 For instance, persons with a certain mutation of the CCR5 co-receptor on
@@ -3519,13 +3717,19 @@ The learning objectives for this chapter are:
   extinctions
 \end{itemize}
 
-\section{Deterministic Models}\label{deterministic-models}
+\section{Introduction}\label{introduction-12}
 
 So far, all the models we have used to explore different aspects of ID
 dynamics have been \emph{deterministic}. For a deterministic model, once
 you choose the initial conditions and parameter values, you always get
 the same result, no matter how often you run the model. There is no
-randomness present.
+randomness present. Biological systems are never deterministic. There is
+always some amount of randomness or noise present. Models that allow for
+such randomness are called stochastic models. We discuss here when it is
+important to consider stochastic models and some of the questions one
+can only study with those models.
+
+\section{Deterministic systems}\label{deterministic-systems}
 
 Such deterministic models are relatively easy to implement and to study.
 That is one of the reasons they are so commonly used. Such a modeling
@@ -3671,6 +3875,22 @@ analysis approach is likely more appropriate.
 The next chapter discusses the evolution and emergence of new diseases
 in more detail, with a focus on drug resistance evolution and emergence.
 
+\section{Are stochastic models
+better?}\label{are-stochastic-models-better}
+
+After having gone through this chapter and learned that stochastic
+models allow you to address questions that deterministic models cannot
+address, you might wonder why we should still use deterministic models
+at all. The main reasons are that deterministic models are generally
+easier to build, easier to analyze, faster to run on a computer, and
+importantly, much easier to fit to data. Often this simplicity is worth
+the loss in some level of realism. But of course, it depends on the
+specific scenario and question. Recall the example of different maps in
+a chapter \ref{idstates}. The right map depends on the question.
+Similarly, the most appropriate model depends on your question. For some
+questions, stochastic models are needed. For others, deterministic
+models might still be the better choice.
+
 \section{Summary and Cartoon}\label{summary-and-cartoon-12}
 
 This module provides a brief discussion of stochasticity in ID dynamics,
@@ -3742,7 +3962,7 @@ The learning objectives for this chapter are:
   ID-evolution
 \end{itemize}
 
-\section{Introduction}\label{introduction-12}
+\section{Introduction}\label{introduction-13}
 
 Evolution is based on the generation of diversity, usually genetic
 diversity through mutations and the subsequent increase or decrease in
@@ -3969,8 +4189,8 @@ Diseases}\label{emerging-infectious-diseases}
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives-14}
 
-In this chapter, we will take a look at a specific evolutionary process
-underlying the emergence of new Infectious Diseases
+In this chapter, we will take a look at the evolutionary processes
+underlying the emergence of new Infectious Diseases.
 
 The learning objectives for this chapter are:
 
@@ -3978,9 +4198,22 @@ The learning objectives for this chapter are:
 \tightlist
 \item
   Understand the central mechanisms and drivers of emergence
+\item
+  Assess the potential impact of different control strategies on
+  potential future ID emergence
 \end{itemize}
 
-\section{Introduction}\label{introduction-13}
+\section{Introduction}\label{introduction-14}
+
+The definition of emerging infectious disease (EID) is a bit vague, but
+in general a pathogen that is `new' to a specific population and has
+never been seen in that population before can be considered an EID. A
+`new' pathogen can mean a genuinely new one (e.g.~SARS or MERS-CoV in
+humans), or a new variant of an existing pathogen (e.g.~the 2009 H1N1
+influenza that caused a pandemic, or drug resistant Staph Aureus). In
+each case, there is usually a mix of deterministic drivers (e.g.~changes
+in climate, population density, antibiotic use) and random chance that
+lead to the emergence of new diseases.
 
 \section{Emergence and Evolution}\label{emergence-and-evolution}
 
@@ -4092,7 +4325,7 @@ The learning objectives for this chapter are:
   Evaluate the impact of network structure on ID transmission
 \end{itemize}
 
-\section{Introduction}\label{introduction-14}
+\section{Introduction}\label{introduction-15}
 
 ID spread along \emph{connections} between infected and uninfected
 hosts. Those could be very close and defined connections, such as for
@@ -4341,6 +4574,194 @@ perspective and different ID concepts best discussed from such a
 perspective.
 
 \section{All References}\label{all-references}
+
+\chapter{Appendix A - A brief description of modeling
+software}\label{appendix-a---a-brief-description-of-modeling-software}
+
+\section{Overview}\label{overview}
+
+I this book, we discussed infectious diseases from a dynamical systems
+perspective and made heavy use of models, both in gaining conceptual
+understanding and in the exercises. Some use of software
+
+\section{R}\label{r}
+
+\section{R packages}\label{r-packages}
+
+While basic R can do some things, the main pwer of R comes from its
+packages. The number of R packages keeps growing incredibly fast. The
+official place for packages is the CRAN repository, but nowadays many
+packages, especially those in early development, can also be found on
+Github and other places. Packages give you additional sets of
+functionality. For instance the `Shiny' package provides the
+functionality in the DSAIDE package to have a nice graphical interface
+through which to interact with the simulations. As you can tell by this,
+packages can make use of each other. Similarly, most of the underlying
+simulations in the DSAIDE package make use of the \emph{deSolve} package
+to simulate the differential equation models. There is a package for
+almost any need, and it is often common for individuals to publish a new
+method together with and R package. Therefore, you can often use
+cutting-edge approaches in a user-friendly manner, instead of having to
+write the code yourself or wait until some commercial software has
+implemented this new approach.
+
+\section{\texorpdfstring{The `R
+universe'}{The R universe}}\label{the-r-universe}
+
+In addition to using R for building and running models and doing all
+kinds of computational tasks, there is another reason why using R is a
+good choice. By now, in large part thanks to the folks from RStudio, a
+whole system has emerged around R that allows you to build full products
+from beginning to end in the `R Ecosystem'. The RMarkdown language
+allows you to combine R code with text and quickly produce nice outputs
+in various formats (e.g.~html, pdf, word). The bookdown package lets you
+write whole books (in fact, this book was mainly written in bookdown).
+The blogdown package lets you quickly produce blog posts with code and
+text. It is easy to produce presentation slides based on a mix of code
+and text. Even animated and interactive graphics are possible. This can
+make your whole workflow much easier and save a lot of time. It also
+helps make things reproducible.
+
+\section{Other software}\label{other-software}
+
+The following provides a brief, non-exhaustive list of other software
+used for ID modeling and analysis. These are my own, possibly biased
+opinions:
+
+\begin{itemize}
+\item
+  Python is a programming language that is similar in terms of
+  difficulty to learn/use as R. Python ise is growing a lot (like R) and
+  it's open source and free (like R). It comes with libraries
+  (equivalent to packages in R) that provide additional functionality. I
+  have never actually used Python, but I know colleagues who use it and
+  it seems to me that R and Python are overall rather similar. If you
+  have specific functionality you need, you might want to check if R or
+  Python is better.
+\item
+  Matlab and Octave. Before I switched to R, I used Matlab a lot. It's
+  the de-facto standard in engineering. In the engineering areas, it has
+  features not found in R. When it comes to more statistical questions,
+  R can often do more with the right packages. To me, the main reason
+  not to use Matlab is the price. It's a commercial product and can be
+  quite expensive. For both teaching and research, having access to free
+  and open source software is in my opinion very important. That was the
+  main reason I stopped using Matlab - and have not had the need to
+  consider using it again. Octave is a free, open source implementation
+  of Matlab. It's not as powerful and feature-rich as Matlab and, while
+  I haven't tried Octave in a while, it seems to me that R or Python are
+  better choices for the budding infectious disease modeler/analyst.
+\item
+  Berkeley Madonna, Stella, Nova, etc.: There are software packages,
+  like these, which are meant specifically to build and simulate
+  dynamical systems. One big advantage of those software compared to R
+  is that they allow the user to build and run models through a
+  graphical interface by drawing the model diagram and letting the
+  software take care of the code. This is a great feature for those just
+  starting out with modeling. I wish R had a package that would allow
+  that. The downside is that once you want to do some more sophisticated
+  and customized analyses, you either have to write code (using the
+  language specific for those packages, which is often different than
+  any other programming langauge) and/or you might just not be able to
+  do what you want to do and will have to switch to a more flexible
+  language (e.g.~R or Python) anyway. Further most of those sofware
+  packages are not free. If you just plan on doing some fairly simple
+  modeling tasks, looking at some of these packages might be worth it.
+  If you plan on diving deep into modeling, I suggest you go with R or
+  Python. The initial learning curve is harder, but once you mastered it
+  you will have a much more powerful tool at your disposal.
+\item
+  SAS, SPSS, STATA, etc.: Those are commonly used to do more statistical
+  and data analysis tasks. I have very limited experience with them. I
+  don't like to use them for several reasons. For one, they are all
+  commercial and not free. Further, they are in my opinion not `real'
+  programming languages, i.e.~they are good at what they do, but if you
+  need to be able to write your own bit of code to do whatever you want
+  to, then you quickly reach your limits. I don't know anyone who uses
+  these mainly statistical software packages for simulating dynamical
+  infectious disease models. Over the years I've tried to figure out why
+  one might use any of these software packages, I haven't found a
+  convincing reason. They are often a bit more user friendly than
+  jumping right in and coding, but there are packages for R that provide
+  graphical interfaces to do statistics - for free. Unless you need to
+  use them for some reason, I would stay away from them.
+\end{itemize}
+
+\section{References}\label{references-17}
+
+\chapter{Appendix B - The different uses of ID
+models}\label{appendix-b---the-different-uses-of-id-models}
+
+\section{Overview}\label{overview-1}
+
+There are different ways one can categorize the uses of the mechanistic
+models we discussed here. The following is one useful way of thinking
+about model uses.
+
+\section{Exploring/Understanding}\label{exploringunderstanding}
+
+At the early stages of trying to gain a fairly basic understanding of
+the behavior of a system, one can build simple mechanistic models and
+explore how interactions between model components (and thus components
+of the real system) impact observed patterns. Using models in this way
+provides a quick and cheap way to gain some intuition of how a system
+functions. For understanding purposes, one generally tries to keep
+models simple.
+
+\section{Prediction/what-if}\label{predictionwhat-if}
+
+Once we have gained some general understanding of the system under study
+and know enough about the system to be able to build models that provide
+reasonable approximations of the real system, we can use those models to
+perform \emph{in silico experiments}. We can make predictions what might
+happen to the system if we changed some of its parts. For instance in a
+model that includes some cytokine, we could test what would happen if we
+administered a drug that suppressed this cytokine. This allows us to
+make predictions that can be tested with further experiments. These
+\emph{in silico} approaches are much faster, cheaper and have no ethical
+problems, compared to real experiments. Of course the major caveat with
+any model result is that it is only useful insofar as the model properly
+captures the important features of the real system. The more a model is
+used to make predictions and these predictions tested with data, the
+more reliable it becomes.
+
+\section{Fitting/inference}\label{fittinginference}
+
+The previous two ways of using a model can be considered \emph{data
+free}. What we mean by that is that while models should obviously be
+built based on the best information about the system, and model
+parameters need to come from experiments or other data sources, once the
+model is built it can be run and analyzed without further need for data.
+Comparing model predictions with data, as described in the previous
+paragraph, is a first step toward using data together with models. If
+one makes the model-data comparison in a rigorous statistical manner,
+one reaches the area of model fitting (inference). Here, one tries to
+fit a specific mechanistic model to available data in a rigorous
+statistical manner (using various approaches such as frequentist,
+likelihood or bayesian methods). Fitting allows one to discriminate
+between different postulated mechanisms (hypotheses), which are
+translated into different models and fitting determines which model is
+better at explaining the observed data. Further, model fitting provides
+estimates for model parameters. Often, such parameters have a directly
+interpretable biological meaning (e.g.~the rate of virus production by
+infected cells) and are thus of interest on their own.
+
+\section{References}\label{references-18}
+
+\chapter{Appendix C - A very brief introduction to data
+fitting}\label{appendix-c---a-very-brief-introduction-to-data-fitting}
+
+\section{Overview}\label{overview-2}
+
+Throghout this book, we have tried to connect the real world and data to
+models. In some chapters, we described how one can directly use data to
+estimate quantities of interest (e.g.~the reproductive number chapter).
+
+\section{Conceptual Ideas}\label{conceptual-ideas}
+
+\section{Technical details}\label{technical-details}
+
+\section{References}\label{references-19}
 
 \hypertarget{refs}{}
 \hypertarget{ref-abu-raddad06}{}
@@ -4649,6 +5070,11 @@ Halloran, M. E., and I. M. Longini. 2014. ``Emerging, Evolving, and
 Established Infectious Diseases and Interventions.'' \emph{Science} 345
 (6202): 1292--4.
 doi:\href{https://doi.org/10.1126/science.1254166}{10.1126/science.1254166}.
+
+\hypertarget{ref-handel17}{}
+Handel, Andreas. 2017. ``Learning Infectious Disease Epidemiology in a
+Modern Framework.'' \emph{PLoS Computational Biology} 13 (10). Public
+Library of Science: e1005642.
 
 \hypertarget{ref-heesterbeek15}{}
 Heesterbeek, H., R. M. Anderson, V. Andreasen, S. Bansal, D. De Angelis,
@@ -4976,6 +5402,11 @@ Number, and the Epidemic Trajectory.'' \emph{American Journal of
 Epidemiology} 150 (12): 1331--9.
 \url{https://academic.oup.com/aje/article-abstract/150/12/1331/53233}.
 
+\hypertarget{ref-railsback11}{}
+Railsback, Steven F, and Volker Grimm. 2011. \emph{Agent-Based and
+Individual-Based Modeling: A Practical Introduction}. Princeton
+university press.
+
 \hypertarget{ref-roberts07}{}
 Roberts, M G. 2007. ``The Pluses and Minuses of R0.'' \emph{Journal of
 the Royal Society, Interface} 4 (16): 949--61.
@@ -5077,8 +5508,8 @@ Resistance Research as a Case Study.'' \emph{Epidemiology and Infection}
 doi:\href{https://doi.org/10.1017/S0950268807009442}{10.1017/S0950268807009442}.
 
 \hypertarget{ref-hkepidemics}{}
-University, Hong Kong. 2015. ``Epidemics.'' \emph{edX}.
-\url{https://www.edx.org/course/epidemics-hkux-hku01x-0}.
+University, Hong Kong. 2015. ``Epidemics.'' \emph{Coursera}.
+\url{https://www.coursera.org/learn/hkuepidemics}.
 
 \hypertarget{ref-viboud06}{}
 Viboud, Cécile, Theresa Tam, Douglas Fleming, Andreas Handel, Mark A.

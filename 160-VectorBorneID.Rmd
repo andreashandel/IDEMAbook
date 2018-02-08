@@ -1,4 +1,4 @@
-#Vector-borne ID Transmission
+#Vector-borne transmission
 
 
 ## Overview and Learning Objectives

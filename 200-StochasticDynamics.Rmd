@@ -1,4 +1,4 @@
-#Stochastic Dynamics and Extinctions
+#Stochastic Dynamics and Extinctions {#stochastic}
 
 ##Overview and Learning Objectives
 In this chapter, we take a look at stochasticity and how it impacts ID dynamics. A focus is on the potential of ID extinction. We discuss how one needs to account for stochasticity in models if one wants to study extinction. 
@@ -50,10 +50,11 @@ For most human diseases, such host extinction is fortunately not very common - t
 The host extinction approach is also often considered and used for vector-borne diseases. Here, the idea is to drive one of the hosts (commonly called the vector) to extinction. The obvious reasoning is that if there are fewer vectors (e.g., mosquitoes), the chances for humans to get infected are lower. Widespread use of DDT or insecticide-coated bed-nets are examples of this. A similar but more controversial approach is the attempted control of rabies in humans by killing its primary host, vampire-bats [@stoner-duncan14].
 
 
-##Disease Emergence
-The flip-side of extinction is the emergence of a new disease. During extinction, infected/pathogen numbers move from a level that can be decently approximated by a deterministic model to numbers so small that it requires a stochastic analysis approach to allow the possibility of extinction. During emergence, the new disease starts at zero, then is introduced in modest numbers (possibly only a single introduction) into a new population, and "bounces around" for a while in small numbers. If conditions are right (i.e., local reproductive number greater than 1), the disease might take off and spread [@antia03]. It might eventually reach high enough numbers that a deterministic approximation which focuses on the mean dynamics is warranted. Many recent emerging disease outbreak followed that pattern. The 2014 Ebola outbreak and 2009 Influenza pandemic reached sufficiently large numbers that a deterministic approach was reasonable, while the 2013 SARS epidemic and previous Ebola outbreaks lead to relatively few cases, so a stochastic modeling and analysis approach is likely more appropriate.
+## Disease Emergence
+The flip-side of extinction is the emergence of a new disease. During extinction, infected/pathogen numbers move from a level that can be decently approximated by a deterministic model to numbers so small that it requires a stochastic analysis approach to allow the possibility of extinction. During emergence, the new disease starts at zero, then is introduced in modest numbers (possibly only a single introduction) into a new population, and "bounces around" for a while in small numbers. If conditions are right (i.e., local reproductive number greater than 1), the disease might take off and spread. It might eventually reach high enough numbers that a deterministic approximation which focuses on the mean dynamics is warranted. To understand emerging infectious diseases, one needs to account for evolutionary dynamics. Both are an important topics in infectious disease epidemiology and will considered in detail in the next few chapters.
 
-The next chapter discusses the evolution and emergence of new diseases in more detail, with a focus on drug resistance evolution and emergence.
+
+
 
 ## Are stochastic models better?
 After having gone through this chapter and learned that stochastic models allow you to address questions that deterministic models cannot address, you might wonder why we should still use deterministic models at all. The main reasons are that deterministic models are generally easier to build, easier to analyze, faster to run on a computer, and importantly, much easier to fit to data. Often this simplicity is worth the loss in some level of realism. But of course, it depends on the specific scenario and question. Recall the example of different maps in a chapter \@ref(idstates). The right map depends on the question. Similarly, the most appropriate model depends on your question. For some questions, stochastic models are needed. For others, deterministic models might still be the better choice.

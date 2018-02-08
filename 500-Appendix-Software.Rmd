@@ -1,0 +1,36 @@
+#Appendix A - A brief description of modeling software
+
+
+## Overview
+I this book, we discussed infectious diseases from a dynamical systems perspective and made heavy use of models, both in gaining conceptual understanding and in the exercises. Some use of software
+
+
+## R
+
+
+## R packages
+While basic R can do some things, the main pwer of R comes from its packages. The number of R packages keeps growing incredibly fast. The official place for packages is the CRAN repository, but nowadays many packages, especially those in early development, can also be found on Github and other places. Packages give you additional sets of functionality. For instance the 'Shiny' package provides the functionality in the DSAIDE package to have a nice graphical interface through which to interact with the simulations. As you can tell by this, packages can make use of each other. Similarly, most of the underlying simulations in the DSAIDE package make use of the _deSolve_ package to simulate the differential equation models. There is a package for almost any need, and it is often common for individuals to publish a new method together with and R package. Therefore, you can often use cutting-edge approaches in a user-friendly manner, instead of having to write the code yourself or wait until some commercial software has implemented this new approach.
+
+
+
+## The 'R universe'
+In addition to using R for building and running models and doing all kinds of computational tasks, there is another reason why using R is a good choice. By now, in large part thanks to the folks from RStudio, a whole system has emerged around R that allows you to build full products from beginning to end in the 'R Ecosystem'. The RMarkdown language allows you to combine R code with text and quickly produce nice outputs in various formats (e.g. html, pdf, word). The bookdown package lets you write whole books (in fact, this book was mainly written in bookdown). The blogdown package lets you quickly produce blog posts with code and text. It is easy to produce presentation slides based on a mix of code and text. Even animated and interactive graphics are possible. This can make your whole workflow much easier and save a lot of time. It also helps make things reproducible.
+
+
+## Other software
+The following provides a brief, non-exhaustive list of other software used for ID modeling and analysis. These are my own, possibly biased opinions:
+
+* Python is a programming language that is similar in terms of difficulty to learn/use as R. Python ise is growing a lot (like R) and it's open source and free (like R). It comes with libraries (equivalent to packages in R) that provide additional functionality. I have never actually used Python, but I know colleagues who use it and it seems to me that R and Python are overall rather similar. If you have specific functionality you need, you might want to check if R or Python is better.
+
+* Matlab and Octave. Before I switched to R, I used Matlab a lot. It's the de-facto standard in engineering. In the engineering areas, it has features not found in R. When it comes to more statistical questions, R can often do more with the right packages. To me, the main reason not to use Matlab is the price. It's a commercial product and can be quite expensive. For both teaching and research, having access to free and open source software is in my opinion very important. That was the main reason I stopped using Matlab - and have not had the need to consider using it again. Octave is a free, open source implementation of Matlab. It's not as powerful and feature-rich as Matlab and, while I haven't tried Octave in a while, it seems to me that R or Python are better choices for the budding infectious disease modeler/analyst.
+
+* Berkeley Madonna, Stella, Nova, etc.: There are software packages, like these, which are meant specifically to build and simulate dynamical systems. One big advantage of those software compared to R is that they allow the user to build and run models through a graphical interface by drawing the model diagram and letting the software take care of the code. This is a great feature for those just starting out with modeling. I wish R had a package that would allow that. The downside is that once you want to do some more sophisticated and customized analyses, you either have to write code (using the language specific for those packages, which is often different than any other programming langauge) and/or you might just not be able to do what you want to do and will have to switch to a more flexible language (e.g. R or Python) anyway. Further most of those sofware packages are not free. If you just plan on doing some fairly simple modeling tasks, looking at some of these packages might be worth it. If you plan on diving deep into modeling, I suggest you go with R or Python. The initial learning curve is harder, but once you mastered it you will have a much more powerful tool at your disposal.
+
+* SAS, SPSS, STATA, etc.: Those are commonly used to do more statistical and data analysis tasks. I have very limited experience with them. I don't like to use them for several reasons. For one, they are all commercial and not free. Further, they are in my opinion not 'real' programming languages, i.e. they are good at what they do, but if you need to be able to write your own bit of code to do whatever you want to, then you quickly reach your limits. I don't know anyone who uses these mainly statistical software packages for simulating dynamical infectious disease models. Over the years I've tried to figure out why one might use any of these software packages, I haven't found a convincing reason. They are often a bit more user friendly than jumping right in and coding, but there are packages for R that provide graphical interfaces to do statistics - for free. Unless you need to use them for some reason, I would stay away from them.
+
+
+
+
+##References
+
+

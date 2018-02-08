@@ -61,6 +61,14 @@ img {
 	font-size: smaller;
 }
 
+#mynotebox
+{
+	border: 10px solid blue; 
+	padding: 10px; 
+	border-radius: 5px;
+	font-size: smaller;
+}
+
 
 #myexamplebox
 {

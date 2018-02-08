@@ -27,4 +27,8 @@ description: "This book convers infectious disease epidemiology from a dynamical
 
 # Preface {-}
 
-This book convers infectious disease epidemiology from a dynamical systems perspective
+This book convers infectious disease epidemiology from a dynamical systems perspective.
+
+__Note 1: This book is currently under active development. I will likely be moving material around, adding new chapters or combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to happen for a while. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
+
+_Note 2: I appreciate receiving feedback. If you think a certain topic is missing that should be covered, or certain topics aren't explained well, or any other thought you have, please provide feedback. The best way of doing so is by going to [the github page for this book](https://github.com/ahgroup/DSAIDEbook) and submitting an "Issue". Alternatively, feel free to email me (google me to get my email address)._  
