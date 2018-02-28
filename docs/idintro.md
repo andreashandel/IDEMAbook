@@ -1,3 +1,16 @@
+# Infectious Disease Epidemiology - A modern systems approach
+Andreas Handel  
+`r Sys.Date()`  
+
+# Preface {-}
+
+<!--chapter:end:index.Rmd-->
+
+
+# Overview of this book
+
+<!--chapter:end:05-BookOverview.Rmd-->
+
 # Introduction to the Dynamical Systems Approach {#idintro}
 
 
@@ -19,9 +32,10 @@ A complementary approach, which has seen increased use, is to look at all compon
 
 While the terminology of _systems thinking_ or _systems approach_ has seen increased use in the last few decades, the general idea has been around for a while. The notion of systems is present in virtually every field of research, ranging from the hard sciences to social sciences and business. In public health, there is the basic idea - most often applied to infectious diseases - of the *agent - host - environment* system, also referred to as the _epidemiological triangle_ (Figure \@ref(fig:epitriangle)). 
 
-```{r epitriangle,   fig.cap='A system perspective - The epidemiological triangle',  echo=FALSE}
-knitr::include_graphics("./images/epi-triangle.png")
-```
+<div class="figure">
+<img src="./images/epi-triangle.png" alt="A system perspective - The epidemiological triangle"  />
+<p class="caption">(\#fig:epitriangle)A system perspective - The epidemiological triangle</p>
+</div>
 
 
 
@@ -31,9 +45,10 @@ The term _systems thinking_ or _systems approach_ is not a very clearly defined 
 For instance, the problem of obesity has many different components that interact in potentially complex ways to affect a person's weight. Figure \@ref(fig:obesitysystem) illustrates this, see also for instance [this video](https://youtu.be/2vojPksdbtI). Complex systems are everywhere. The approach of studying (most of) the system at once instead of looking at a single component at a time is the hallmark of the _systems approach_. 
 
 
-```{r obesitysystem,   fig.cap='Obesity as a complex system: http://goo.gl/m2Qq13',  echo=FALSE}
-knitr::include_graphics("./images/complexsystem.png")
-```
+<div class="figure">
+<img src="./images/complexsystem.png" alt="Obesity as a complex system: http://goo.gl/m2Qq13"  />
+<p class="caption">(\#fig:obesitysystem)Obesity as a complex system: http://goo.gl/m2Qq13</p>
+</div>
 
 
 ##Systems Thinking and Models
@@ -46,14 +61,15 @@ A huge class of models consists of what is usually refered to as statistical mod
 
 For instance, a linear regression model investigates if there is a pattern between input (system components or other measurable quantities that are part of the system) and an outcome of interest that can be approximated by a linear function. More complicated statistical models exist, some go by the name of _machine learning methods_. All of these models try to determine if there are patterns between inputs and outputs of interest in the data. Some of the more complicated models allow for interactions between system components (inputs, predictors, variables). Figure \@ref(fig:phenomodel) gives an illustration of 2 simple phenomenological models fit to some data.
 
-```{r phenomodel, fig.cap='Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model.',  echo=FALSE}
-knitr::include_graphics("./images/phenomodel.png")
-```
+<div class="figure">
+<img src="./images/phenomodel.png" alt="Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model."  />
+<p class="caption">(\#fig:phenomodel)Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model.</p>
+</div>
 
 One feature these phenomenological models have in common is that they do not try to describe the _mechanisms_ of interactions within the system that lead to the observed patterns. For instance, if we find that the relationship between the number of cigarettes smoked per day and the 5-year risk of lung cancer can be approximated by a sigmoid function, it does not tell us much about the mechanisms leading from smoking to lung cancer. 
 
 #### A few more comments regarding phenomenological models {#mynotebox}
-The big category that I call phenomenological models can of course be further divided. A useful division and way of thinking is between fairly simple models based on some underlying statistical theory and used to explain relations between some factors and some outcome, versus more complicated, often "black-box" type of models that are mainly used to predict an outcome based on some inputs. The former area is the topic of most "classical" statistical work, while the latter often goes by names such as machine learning, data mining, or similar. While simple models are sometimes considered explanatory and can provide clues toward causal links between some inputs and some outputs, they still do not provide insights regarding the mechansisms, which distinghuishes all of these models from mechanistic ones. For more information on the explanatory vs. predictive approach to model uses, the papers [@shmueli10] and [@breiman01] are good starting points.
+The big category that I call phenomenological models can of course be further divided. A useful division and way of thinking is between fairly simple models based on some underlying statistical theory and used to explain relations between some factors and some outcome, versus more complicated, often "block-box" type of models that are mainly used to predict an outcome based on some inputs. While the simple models are sometimes considered explanatory and can provide clues toward causal links between some inputs and some outputs, they still do not provide insights regarding the mechansisms, which distinghuishes all of these models from mechanistic ones. For more information on the explanatory vs. predictive approach to model uses, the papers [@shmueli10] and [@breiman01] are good starting points.
 
 
 ###Mechanistic Models
@@ -71,9 +87,10 @@ However, often the interactions of components that make up a system occurs over 
 
 We can illustrate this dynamical perspective in an abstract way by extending the epidemiological triangle. Figure \@ref(fig:dynamictriangle) shows the components and the interactions of the triangle changing over time.
 
-```{r dynamictriangle,   fig.cap='Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.',  echo=FALSE}
-knitr::include_graphics("./images/moving-triangle.png")
-```
+<div class="figure">
+<img src="./images/moving-triangle.png" alt="Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction."  />
+<p class="caption">(\#fig:dynamictriangle)Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.</p>
+</div>
 
 A more specific example of a simple dynamical model showing changes over time is shown in Figure \@ref(fig:sirsim).
 
@@ -119,18 +136,20 @@ The SIR model is very basic, but it still has the hallmark of a complex system. 
 
 For compartmental models (and often other types of models), it is useful to show a graphical representation of the compartments and processes included in the model. For compartmental models, such a diagram/figure is usually called a flow diagram. Such a diagram consists of a box for each compartment, and arrows pointing in and out of boxes to describe flows and interactions. For the simple SIR model, the flow diagram is shown in Figure \@ref(fig:basicSIR).
 
-```{r basicSIR, fig.cap='Flow diagram for the simple SIR model.',  echo=FALSE}
-knitr::include_graphics("./images/basicSIRmodelfigure.png")
-```
+<div class="figure">
+<img src="./images/basicSIRmodelfigure.png" alt="Flow diagram for the simple SIR model."  />
+<p class="caption">(\#fig:basicSIR)Flow diagram for the simple SIR model.</p>
+</div>
 
 
 To study a specific ID and scientific question, one needs to use a model that approximates the real system one is interested in reasonably well, and one needs to choose values for the model parameters and starting conditions such that they match the specific system one wants to study. We'll return to that idea throughout this book.
 
 We can implement the flow diagram as a computer model, for instance by formulating it as the set of ordinary differential equations shown below, and then implementing those on a computer to simulate an outbreak. Figure \@ref(fig:sirsim) shows such a simulation.
 
-```{r sirsim, fig.cap='An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0.',  echo=FALSE}
-knitr::include_graphics("./images/sirsim.png")
-```
+<div class="figure">
+<img src="./images/sirsim.png" alt="An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0."  />
+<p class="caption">(\#fig:sirsim)An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0.</p>
+</div>
 
 
 For some more further information on compartmental models in epidemiology, [check out this Wikipedia article](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology). We will also discuss many variants of these type of compartmental models in further chapters.
@@ -158,9 +177,10 @@ We are using the usual short-hand notation, where a dot over a variable means it
 This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. We briefly looked at a simple infectious disease systems model, the famous SIR model. 
 
 
-```{r complexcartoon, fig.cap='Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/).',  echo=FALSE}
-knitr::include_graphics("./images/xkcd-flowcharts.png")
-```
+<div class="figure">
+<img src="./images/xkcd-flowcharts.png" alt="Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/)."  />
+<p class="caption">(\#fig:complexcartoon)Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/).</p>
+</div>
 
 ##Exercises
 * If you haven't done already, install R, RStudio and the DSAIDE R package. See [@handel17] for an overview and quick-start guide for DSAIDE.
@@ -176,4 +196,122 @@ knitr::include_graphics("./images/xkcd-flowcharts.png")
 * This book does not deal with individual based models. If you want to learn more about them, see e.g. [@railsback11].
 
 ##References
+
+
+<!--chapter:end:100-IDDynamicsIntro.Rmd-->
+
+
+# Characterizing Infectious Disease States {#idstates}
+
+<!--chapter:end:110-CharacteristicsofID.Rmd-->
+
+
+# Patterns of Infectious Disease Dynamics
+
+<!--chapter:end:120-PatternsofID.Rmd-->
+
+
+# Reproductive Number  {#R0}
+
+<!--chapter:end:130-ReproductiveNumber.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:135-TransmissionTypes.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:140-DirectTransmissionModes.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:150-EnvironmentalTransmission.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:160-VectorBorneID.Rmd-->
+
+
+# Infectious Disease Control {control}
+
+<!--chapter:end:170-IDControl.Rmd-->
+
+
+# Infectious Disease Surveillance
+
+<!--chapter:end:175-IDSurveillance.Rmd-->
+
+
+# Host Heterogeneity {#heterogeneity}
+
+<!--chapter:end:180-HostHeterogeneity.Rmd-->
+
+
+# Dynamics of Multiple Pathogens
+
+<!--chapter:end:190-MultiPathogenID.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:200-StochasticDynamics.Rmd-->
+
+
+# Evolutionary Dynamics Introduction
+
+<!--chapter:end:210-EvolutionaryDynamics.Rmd-->
+
+
+# Virulence
+
+<!--chapter:end:212-Virulence.Rmd-->
+
+
+# Evolution and Control
+
+<!--chapter:end:214-EvolutionandControl.Rmd-->
+
+
+# Emerging Infectious Diseases 
+
+<!--chapter:end:215-EmergingID.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:220-Networks.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:300-Summary.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:500-Appendix-Software.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:505-Appendix-ModelComplexity.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:510-Appendix-ModelUse.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:550-Appendix-Fitting.Rmd-->
+
+
+# Placeholder
+
+<!--chapter:end:600-Glossary.Rmd-->
 
