@@ -71,6 +71,9 @@ knitr::include_graphics("./images/ComplicatedModel.png")
 ## How much detail is needed?
 While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected indiduals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? Tthis is an important question and deserves a detailed answer, which I am trying to provide in the Appendix, Chapter \@ref(modelcomplexity).
 
+## Case study examples
+
+### example 1
 
 
 ## Summary and Cartoon
