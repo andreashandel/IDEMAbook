@@ -48,6 +48,12 @@ $$
 Infected persons release pathogen into the environment at rate _p_. The pathogen decays at rate _c_. A susceptible host can get infected by contact with a contaminated environment at rate _b_.
 
 
+## Case study examples
+
+### Basic Science example: Environmental transmission for Cholera
+
+### Policy/Application example: 
+
 
 ## Summary and Cartoon
 This chapter provided a discussion of environmental transmission and its impact on ID dynamics and control.
