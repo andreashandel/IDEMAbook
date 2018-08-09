@@ -1,4 +1,4 @@
-# Infectious Disease Control {control}
+# Infectious Disease Control
 
 ## Overview and Learning Objectives
 This chapter provides a closer look at different types of control against infectious diseases and their potential outcomes.
