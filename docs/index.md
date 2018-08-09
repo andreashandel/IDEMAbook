@@ -1,6 +1,29 @@
-# Infectious Disease Epidemiology - A modern systems approach
-Andreas Handel  
-`r Sys.Date()`  
+--- 
+title: "Infectious Disease Epidemiology - A modern systems approach"
+author: "Andreas Handel"
+date: "2018-08-09"
+site: bookdown::bookdown_site
+output: 
+    bookdown::gitbook:
+        highlight: zenburn
+        css: ./dsaidebook.css
+        fig_caption: true
+        keep_md: true
+        config:
+            toc:
+              collapse: none
+            toolbar:
+              position: fixed
+            edit: null
+            download: no
+    bookdown::pdf_book:
+        keep_tex: yes
+bibliography: dsaidereferences.bib
+biblio-style: apalike
+documentclass: book
+link-citations: yes
+description: "This book convers infectious disease epidemiology from a dynamical systems perspective"
+---
 
 # Preface {-}
 
@@ -120,8 +143,10 @@ For instance, a linear regression model investigates if there is a pattern betwe
 <p class="caption">(\#fig:phenomodel)Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model.</p>
 </div>
 
-
 One feature these phenomenological models have in common is that they do not try to describe the _mechanisms_ of interactions within the system that lead to the observed patterns. For instance, if we find that the relationship between the number of cigarettes smoked per day and the 5-year risk of lung cancer can be approximated by a sigmoid function, it does not tell us much about the mechanisms leading from smoking to lung cancer. 
+
+#### A few more comments regarding phenomenological models {#mynotebox}
+The big category that I call phenomenological models can of course be further divided. A useful division and way of thinking is between fairly simple models based on some underlying statistical theory and used to explain relations between some factors and some outcome, versus more complicated, often "black-box" type of models that are mainly used to predict an outcome based on some inputs. The former area is the topic of most "classical" statistical work, while the latter often goes by names such as machine learning, data mining, or similar. While simple models are sometimes considered explanatory and can provide clues toward causal links between some inputs and some outputs, they still do not provide insights regarding the mechansisms, which distinghuishes all of these models from mechanistic ones. For more information on the explanatory vs. predictive approach to model uses, the papers [@shmueli10] and [@breiman01] are good starting points.
 
 
 ###Mechanistic Models
@@ -167,24 +192,24 @@ On the research side, the importance of such interactions has long been apprecia
 
 
 ##A Basic Infectious Disease Systems Model
-For infectious disease models, the simplest dynamical systems model keeps track of the total number of individuals who are susceptible, infectious and recovered/immune (the so-called SIR model). This model is a compartmental model, i.e. we place individuals into distinct compartments, according to some characteristics. We then only track the total number of individuals in each of these compartments. In the simplest model, the only characteristic we track is a person's infection status according to 3 different stages/compartments: 
+For infectious disease models, the simplest dynamical systems model keeps track of the total number of individuals who are susceptible, infectious and removed/recovered (the so-called SIR model). This model is a compartmental model, i.e. we place individuals into distinct compartments, according to some characteristics. We then only track the total number of individuals in each of these compartments. In the simplest model, the only characteristic we track is a person's infection status according to 3 different stages/compartments: 
 
 * **S** - uninfected and susceptible individuals. 
-* **I** - infected and infectious individuals (note that these terms are often used interchangeably, but technically we are talking about someone who is infected **and** is infectious, i.e. can infect others).
-* **R** - recovered/removed individuals. Those are individuals that do not further participate, either because they are now immune or because they died.
+* **I** - infected and infectious individuals.
+* **R** - removed (recovered and immune or dead) individuals. Those are individuals that do not further participate, either because they are now immune or because they died.
 
-When talking about the quantities that are tracked in each compartment, you will see both the term *host(s)* and *individual(s)* used interchangeably. While we most often think of human hosts, the hosts can be any animal (or plants or bacteria infected by phages, etc.). Sometimes, a compartment might track a quantity such as pathogen load in the environment. 
+When talking about the quantities that are tracked in each compartment, you will see both the term *host(s)* and *individual(s)* used interchangeably. While we most often think of human hosts, the hosts can be any animal (or plants infected by viruses or bacteria infected by phages, etc.). Sometimes, a compartment might track a quantity such as pathogen load in the environment. 
 
 In addition to specifying the **compartments** of a model, we need to specify the **processes/mechanisms** determining the changes in each compartment. Broadly speaking, some processes increase the number of individuals in a given compartment/stage and processes that lead to a reduction. Those processes are sometimes called inflows and outflows. 
 
 For our system, we specify only 2 processes/flows: 
 
 1. A susceptible individual (S) can become infected by an infectious individual (I) at some rate (for which we use the parameter _b_). This leads to the susceptible individual leaving the S compartment and entering the I compartment.   
-2. An infected individual dies or recovers and enters the recovered/removed (R) compartment at some rate. This is described by the parameter _g_ in our model.
+2. An infected individual dies or recovers and enters the removed (R) compartment at some rate. This is described by the parameter _g_ in our model.
 
 In general, the entities that change (that vary) in our system (here the number of individuals in compartments S, I and R) are called variables and are each represented by a compartment. In contrast, the quantities that are usually assumed fixed for a given system are called parameters. For the model above, those are the infection rate _b_ and the recovery rate _g_. This is not a fixed rule, though, and sometimes parameters can be allowed to vary.
 
-The SIR model is very basic, but it still has the hallmark of a complex system. Specifically, there is an interaction between components, namely the **I** component interacts with the **S** component, or phrased in more ordinary language, infected individuals can interact with susceptibles and thereby infect them. 
+The SIR model is very basic, but it still has the hallmark of a complex system. Specifically, there is an interaction between components, namely the **I** component interacts with the **S** component, namely infected individuals can infect susceptibles. 
 
 For compartmental models (and often other types of models), it is useful to show a graphical representation of the compartments and processes included in the model. For compartmental models, such a diagram/figure is usually called a flow diagram. Such a diagram consists of a box for each compartment, and arrows pointing in and out of boxes to describe flows and interactions. For the simple SIR model, the flow diagram is shown in Figure \@ref(fig:basicSIR).
 
@@ -203,10 +228,16 @@ We can implement the flow diagram as a computer model, for instance by formulati
 <p class="caption">(\#fig:sirsim)An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0.</p>
 </div>
 
-#### {#mynotebox}
-Unfortunately, there are no rules concerning the naming of variables and parameters. Compartments (e.g. SIR) tend to be labeled very similarly by different researchers, while parameter labels are much more variable. I'm trying to be consistent in this book, though I might mix it up occasionally. For this book, I decided to stick with letters from the English alphabet, but you can often find people use Greek letters for parameters (e.g. $\beta$ instead of _b_ for the transmission parameter). Always check carefully for a given paper/model what the definition and meaning of each variable and parameter are. 
 
 For some more further information on compartmental models in epidemiology, [check out this Wikipedia article](https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology). We will also discuss many variants of these type of compartmental models in further chapters.
+
+
+
+#### Notes {#mynotebox}
+Unfortunately, there are no rules concerning the naming of variables and parameters. Compartments (e.g. SIR) tend to be labeled very similarly by different researchers, while parameter labels are much more variable. I'm trying to be consistent in this book, though I might mix it up occasionally. For this book, I decided to stick with letters from the English alphabet, but you can often find people use Greek letters for parameters (e.g. $\beta$ instead of _b_ for the transmission parameter). Always check carefully what the definition and meaning of each variable and parameter are. 
+
+Here and in other places, I am often sloppy and use the word "infected" even if more precisely, I mean "infected and infectious". You will find such somewhat sloppy terminology throughout the literature. Individuals who are infected but not infectious are often given their own compartment and label, e.g. they are called "exposed" or "latent" - see chapter \@ref(idstates) for more on this. So when you read infected throughout this book (and in most other places), assume it means 'infectious' as well, unless otherwise stated.
+
 
 
 #### Model Implementation {#myadvancedbox}
@@ -320,6 +351,9 @@ The above sections described different states that might need to be considered a
 ## How much detail is needed?
 While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected indiduals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? Tthis is an important question and deserves a detailed answer, which I am trying to provide in the Appendix, Chapter \@ref(modelcomplexity).
 
+## Case study examples
+
+### example 1
 
 
 ## Summary and Cartoon
@@ -405,8 +439,8 @@ A version of the SIR model that includes resource replenishment through natural 
 
 The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate _m_, and the possibility that recovered lose their immunity and return to the susceptible class at rate _w_. Both of these processes can produce new susceptibles and thus lead to resource replenishment. If this process is fast enough, it can allow the ID to persist and lead to oscillations/cycles or steady states.
 
-#### {#mynotebox}
-The model shown in \@ref(fig:birtdheathmodel) also includes natural death at some rate _n_. This is 
+#### Notes {#mynotebox}
+The model shown in \@ref(fig:birtdheathmodel) also includes natural death at rate _n_. This is done to for several reasons. One is simply consistency. If we make the model more detailed by taking into account natural births, it seems reasonable to also include natural death. Another, related reason is that without death in the model to balance births, we would have a population which grows without bounds. This is not a good approximation of any real scenario. When you implement models, especially larger ones, you always want to make sure that each component of the model produces reasonable results by itself. In this example, in the absence of disease, we would like to have susceptible individuals reach some steady level depending on births and deaths. Without the inclusion of the death rates, this could not happen.
 
 
 #### Mathematical Equations for the Model with Resource replenishment {#myadvancedbox}
@@ -426,7 +460,7 @@ The interaction between susceptible and infectious hosts can lead to a dynamical
 One can sometimes compute the time between outbreaks. For the simple compartmental SIR model, an approximate equation for the period close to the endemic state is 
 $$T \approx 2 \pi \sqrt{\left( \frac{LD}{R_0 - 1} \right)}$$
 
-Here, _L_ is the average lifespan of a host, _D_ is the average duration of infectiousness, and _R~0~_ is the basic reproductive number - a quantity we will discuss shortly. For more details on this equations, see e.g. [@keeling08].
+Here, _L_ is the average lifespan of a host, _D_ is the average duration of infectiousness, and _R~0~_ is the basic reproductive number - a quantity we will discuss in chapter \@ref(R0) For more details on this equations, see e.g. [@keeling08].
 
 For more complicated models and real-world scenarios where the simple SIR model is not a good approximation, the equation just provided does not apply anymore. It might not even be possible to write down any equation. One can then instead run a computer simulation of the model and determine the length of the cycles from the time-series returned by the computer. The main point still holds, independent of the ability to write down an equation for the cycle length, namely that there is a relation between intrinsic characteristics of the system, such as duration of infectious period (_D_) and transmissibility of the disease (_R~0~_), and the period of the oscillations. In cases where we cannot derive a mathematical equation, we can try to figure out the relation between cycle duration and some parameter of interest. This can be achieved by repeatedly altering the parameter (e.g. the duration of the infectious period, _D_), and recording the cycle period, _T_, reported by the model simulation for various values of the parameter. By plotting a figure showing _D_ on the x-axis and _T_ on the y-axis, we obtain a relation between these quantities. 
 
@@ -444,14 +478,14 @@ For some ID, weather and behavior interact. Many water-borne diseases in the U.S
 Often, more than one mechanism occurs and influences the ID dynamics. As such, it is often not possible to isolate a single factor as the main important one. It often depends on the particular setting.
 
 
-##Notes on Cycles
-In the type of models, we have looked at so far; sustained oscillations need something like seasonality. Without it, the cycles die out, and the disease reaches a steady, endemic state. For more complex models or models that include stochastic dynamics (something we'll discuss later), cycles can be maintained even in the absence of external drivers.
+#### Notes {#mynotebox}
+In the type of models we have looked at so far, seasonality or some other external driver is needed to sustain oscillations. Without it, the cycles die out, and the disease reaches a steady, endemic state. For more complex models or models that include stochastic dynamics (discuss in chapter \@ref(stochastic)), cycles can be maintained even in the absence of external drivers.
 
 
 ##Steady states
-In addition to single outbreaks or recurrent cycles, ID often also reach a state where the incidence/prevalence in a population is roughly constant. This is usually referred to as an endemic state. Examples of that are e.g. helminth infections in many African countries (in the absence of control efforts) or certain sexually transmitted diseases in developed countries. 
+In addition to single outbreaks or recurrent cycles, ID often also reach a state where the prevalence in a population is roughly constant. This is usually referred to as an endemic state. Examples of that are e.g. helminth infections in many African countries (in the absence of control efforts) or certain sexually transmitted diseases in developed countries. 
 
-Note that while at steady state, the total number of ID cases does not change, there is usually a constant turnover. Some individuals get infected, while others recover or die. It just happens that these processes balance each other, making the total numbers roughly constant.
+At steady state, the total number of ID cases (the prevalence) does not change. Nevertheless, it is important to keep in mind that there are still constantly new cases occuring, i.e. the incidence is not zero. It just happens to be the case that the incidence is roughly similar to the rate at which existing cases disappear (e.g. through recovery or death), such that the turnover process is in balance, leading to a a roughly constant prevalence.
 
 
 If we have a mathematical or computer model of our system, there are two ways to determine steady states. One is mathematical, and the other is through simulating the system. The former approach is more elegant and powerful but only works if we have a relatively small model. It is illustrated in the box below. Often, the model is too complicated to obtain useful equations for the steady state values of the model variables. Fortunately, we can always determine them numerically. We simply start our computer simulation model with some values and run it long enough until it has settled down (we need to make sure it does have a steady state). We can then record the steady state values. We can do this for different model parameter values (e.g. changes in birth rate or changes of rate of infection). In the end, we can plot a figure showing how the steady state values change with some model parameter. This approach is obviously much slower than using the mathematical equations. However, often it is the only feasible approach. 
@@ -524,7 +558,7 @@ This module provided a discussion of the various general patterns we observe in 
 
 <!--chapter:end:120-PatternsofID.Rmd-->
 
-# Reproductive Number
+# Reproductive Number  {#R0}
 
 
 ## Overview and Learning Objectives
@@ -559,7 +593,6 @@ Let's look a bit closer at the definition for R. First, note that it applies to 
 
 Another point to note is that the definition is about the number of new **infectious** hosts produced by one infectious host. For some diseases, being infected and being infectious are pretty much the same. E.g. pretty much everyone who is infected with HIV is also - to some degree - infectious. For other diseases, that is not the case. For instance, the majority of people who get infected with TB will never reach a state where they are infectious. To compute R, we do not count the average number of individuals an infectious person infects, but only those that later go on to become infectious themselves. The same idea applies when we talk about diseases that have multiple hosts. R is defined as the number of infectious hosts 'produced' by one infectious host of the same type. For instance, for vector-borne diseases, R would be the number of infectious humans 'produced' by one infectious human via the intermediary mosquito/vector stage. While conceptually still straightforward, measuring and computing R/R~0~ in such multi-host situations can get tricky.
 
-_Note: Here and in other places, I am often sloppy and use the word "infected" even if more precisely, I mean "infectious". You will find such sloppy terminology throughout the literature. It is usually clear from the context if one means an 'infected and infectious' person or just someone who is infected but not infectious (commonly called "exposed" or "latent"). So when you read 'infected' here and other places, assume it means that host is 'infectious' as well, unless otherwise stated._
 
 
 ##Basic reproductive number
@@ -567,17 +600,19 @@ A special case of the reproductive number is at the beginning of an outbreak whe
 The quantity R~0~ is a measurement of the transmission potential of a disease in a particular setting. It does by definition not change during an ongoing outbreak. The more general definition of the reproductive number, R, does change during an epidemic. We'll discuss that more below.
 
 
-##Notes on the reproductive number
-While I will be mainly using the term reproductive number, there are alternative names for R. In general, any combination of reproductive/reproduction and ratio/number is ok terminology. In its early days, R was called reproductive rate. This is *incorrect* terminology and should not be used. R is **not** a rate (there are no units of  inverse time). Why does that matter? See the 'R is not a rate' box for an example.
-
-
-While we often say "Infectious disease X has an R~0~ of Y", this is only an approximation. R and R~0~ also depend on the setting. The potential for transmission for many ID is much higher in for instance crowded locations (prisons, slums, cruise ships), or among "high risk groups" (e.g. STD in sex workers). For example R~0~ < 1 for HIV in the general population but it is not going away because it has an R~0~ > 1 in certain subgroups. When we talk about R, it is, therefore, useful to specify the scenario/population/setting.
-
-In this reading, and more generally in the literature, you find the use of R~0~, R or _effective R_ (R~eff~) often used (sloppily) in an interchangeable manner. Usually, it's clear from the context if the symbol refers specifically to ~R~0 at the beginning of an outbreak in a susceptible population, or more generally to R, the average number of secondary infectious cases produced by one infectious individual in any population.
+#Reproductive number terminology
+While I will be mainly using the term reproductive number, there are alternative names for R. In general, any combination of reproductive/reproduction and ratio/number is ok terminology. In its early days, R was called reproductive rate. This is *incorrect* terminology and should not be used. R is **not** a rate (there are no units of  inverse time). Why does that matter? See the 'R is not a rate' box for an example. Unfortunately, old habits die slowly and you can still see the word `rate' applied to the reproductive number in some recent publications.
 
 
 #### Why R Is Not a Rate - Example  {#myexamplebox}
 It is important to understand that R only provides a measure of how transmissible a pathogen is, R does **not** provide any information about the speed at which transmission occurs. This is an important limitation of R. Consider 2 infections with the similar reproductive number, say HIV and SARS, which are both estimated to have a reproductive number of around 3-4. If we let an outbreak 'run its course', we would - based on R - expect to get the same number of infected individuals. However, the dynamics at which those infections occur will be quite different. SARS spreads rapidly, i.e. an infected person infects 3-4 others within a few weeks. On the other hand, a person infected with HIV will infect others on a timeframe of years. These different dynamics have of course important implications on the control approaches against diseases. Thus, while knowing R is significant for a given disease, it doesn't tell 'the full story'. 
+
+#### Notes {mynotebox}
+While we often say "Infectious disease X has an R~0~ of Y", this is only an approximation. R and R~0~ also depend on the setting. The potential for transmission for many ID is much higher in for instance crowded locations (prisons, slums, cruise ships), or among "high risk groups" (e.g. STD in sex workers). For example in most countries R~0~ of HIV is below 1 in the general population but HIV is not disappearing because it has an R~0~ > 1 in certain subgroups. The importance of such population heterogeneity is further discused in chapter \@ref(heterogeneity) . When we talk about R, it is therefore useful to be as specific as possible about the scenario/population/setting.
+
+In this book, and in the literature in general, you will foten find the use of R~0~, R or _effective R_ (R~eff~) used (sloppily) in an interchangeable manner. Usually, it is clear from the context if the symbol refers specifically to ~R~0 at the beginning of an outbreak in a susceptible population, or more generally to R, the average number of secondary infectious cases produced by one infectious individual in any population.
+
+Unfortunately, _R_ seem to be a very popular letter. In the context of infectious disease dynamics, _R_ is used both to indicate the removed compartment in an SIR model, and as abbreviation for the reproductive number. To make things worse, it is also the name of the programming language which I used to write the DSAIDE package which accompanies this book. You will just have to figure out from the context if a reference to _R_ means "computer software" or "removed compartment" or "reproductive number". Fortunately, it should always be clear what is meant.
 
 
 ##Outbreaks and the Change in R
@@ -587,8 +622,7 @@ As stated above, at the beginning of an outbreak, a specific disease in a certai
 
 
 ##Reproductive Number and Outbreak Control
-So how is the reproductive number related to infectious disease outbreaks? It is intuitively clear that if on average every infectious person "produces" more than one subsequent infectious person, we get a growing epidemic. In contrast, if every infectious person "produces" less than one subsequent infectious person, the pathogen might transmit a few times, but pretty soon it will disappear. Thus if we can achieve R~0~ < 1, e.g. through vaccination, we can prevent an outbreak from starting. Further, if during an outbreak we can intervene to get R < 1, the outbreak is going to fizzle out. If we wanted to stop any further transmission, we would need to get R even lower, namely R = 0. Intervention efforts try to achieve an R as small as possible.
-
+It is intuitively clear that if on average every infectious person "produces" more than one subsequent infectious person, we get a growing epidemic. In contrast, if every infectious person "produces" less than one subsequent infectious person, the pathogen might transmit a few times, but pretty soon it will disappear. Thus if we can achieve R~0~ < 1, e.g. through vaccination, we can prevent an outbreak from starting. Further, if during an outbreak we can intervene to get R < 1, the outbreak is going to fizzle out. Figure \@ref(fig:R0intervention) illustrates this idea. If we wanted to stop _any_ further transmission, we would need to get R even lower, namely R = 0. Intervention efforts try to achieve an R as small as possible. If we could achieve R~0~ < 1 globally everywhere, we could eventually eradicate a disease. The ability to do that depends on many factors. One important one is the R~0~ value of any ID before we start an eradication campaign. Intuitively, the higher R~0~, the harder it will be to get it to < 1. We'll make that more explicit below.
 
 <div class="figure">
 <img src="./images/R0intervention.png" alt="Impact of an Intervention on transmission."  />
@@ -597,33 +631,21 @@ So how is the reproductive number related to infectious disease outbreaks? It is
 
 
 
-
 #### R and Outbreak Control - Example {#myexamplebox} 
 During the large Ebola outbreak in West Africa which started in 2013, a few Ebola patients came to the U.S., and the goal was to have R = 0, i.e. no ongoing transmission. That didn't quite happen, a few new individuals got infected, but R was very close to zero. In contrast, in West Africa, there was little hope to get R = 0 quickly. Fortunately, R < 1 is enough. So we can 'tolerate' a few further transmissions and new cases and still get the outbreak under control eventually. Of course, in general, we want to get R as close to 0 as possible, especially for a disease as deadly as Ebola. But to get an outbreak to fizzle out, we only need R < 1, not R = 0. 
 
 
-##Reproductive Number and ID Eradication 
-If we could achieve R~0~ < 1 globally everywhere, we could eventually eradicate a disease. 
-The ability to do that depends on many factors. One important one is the R~0~ value of any ID before we start an eradication campaign. Intuitively, the higher R~0~, the harder it will be to get it to < 1. We'll make that more explicit below.
 
+##Estimating Intervention Efforts based on R
+Let's make the relation between response efforts and the reproductive number a bit more quantitative. As a simple example, consider an infectious disease with R~0~=2. That means on average every infected person infects two others. If we could somehow protect a bit more than half of the susceptibles, then a person who might have become infected can't become infected anymore, and the _effective R_ (sometimes called R~eff~) drops below 1. More generally, to prevent an outbreak, a fraction p = 1-1/R~0~ of the population needs to be protected (e.g. through vaccination). From this, it follows that the higher R~0~, the harder it is to control and ID. This is illustrated in figure \@ref(fig:krR0intervention). One can see both from the figure and the equation that a disease with say R~0~ = 5 requires that 80% of the population is protected such that R~eff~ = 1.
 
-##Connecting Intervention Efforts and R
-We just discussed that R < 1 means no outbreak occurs. Let's make the relation between response efforts and the reproductive number a bit more quantitative. As a simple example, consider an infectious disease with R~0~=2. That means on average every infected person infects two others. If we could somehow protect a bit more than half of the susceptibles, then a person who might have become infected can't become infected anymore, and the _effective R_ (sometimes called R~eff~) drops below 1.
-
-More generally, to prevent an outbreak, a fraction p = 1-1/R~0~ of the population needs to be protected (e.g. through vaccination). So for R~0~ = 2, 50% protection is required.
-
-The level of population protection at which R=1 is called critical herd/population immunity level. The relation between original/basic reproductive number, vaccine/intervention coverage, and effective R is R= R~0~(1-p). That's true if we assume that the intervention adequately protects those to whom it is applied. If instead, the intervention is not perfect, we have R=R~0~(1-e*p), where e is the effectiveness of the intervention/vaccine (e=1 is an entirely effective intervention).
-
-From this, it follows that the higher R~0~, the harder it is to control and ID.
-
+The level of population protection at which R=1 is called critical population (or herd) immunity level. The relation between basic reproductive number, intervention coverage, and effective R is R= R~0~(1-p). That holds true if we assume that the intervention fully protects those to whom it is applied. If the intervention is not perfect, we have R=R~0~(1-e*p), where e is the effectiveness of the intervention (e=1 is an entirely effective intervention).
 
 
 <div class="figure">
 <img src="./images/kr-R0intervention.png" alt="R~0~ and Interventions. From [@keeling08]."  />
 <p class="caption">(\#fig:krR0intervention)R~0~ and Interventions. From [@keeling08].</p>
 </div>
-
-
 
 
 
@@ -637,7 +659,7 @@ $$
 \dot R &= g I
 \end{aligned}
 $$
-For this model, what needs to be true to get an increase in the number of infectious hosts? The influx of new infectious hosts, b*S*I, needs to be larger than the outflow, g*I. This condition, b*S*I > g*I, can be rewritten as 1 < (b*S)/g. We then define the quantity on the right side of this condition as the reproductive number, R = (b*S)/g. At the beginning of an outbreak, where everyone is assumed to be susceptible (written as S= S~0~), we have the special case of the basic reproductive number, R~0~ = (b*S~0~)/g. Note that the rate of recovery, g, is related to the average duration of infection, D as D=1/g. Therefore, one can also write R = D*b*S, with the special case R~0~ for S=S~0~, i.e. at the beginning of an outbreak.
+For this model, what needs to be true to get an increase in the number of infectious hosts? The influx of new infectious hosts, bSI, needs to be larger than the outflow, gI. This condition, bSI > gI, can be rewritten as 1 < (bS)/g. We then define the quantity on the right side of this condition as the reproductive number, R = (bS)/g. At the beginning of an outbreak, where everyone is assumed to be susceptible (written as S= S~0~), we have the special case of the basic reproductive number, R~0~ = (bS~0~)/g. Note that the rate of recovery, g, is related to the average duration of infection, D as D=1/g. Therefore, one can also write R = DbS, with the special case R~0~ for S=S~0~, i.e. at the beginning of an outbreak.
 
 
 
@@ -690,8 +712,8 @@ For those ID for which an infection induces life-long immunity, i.e. where a hos
 
 For a simple model with certain assumptions [@keeling08], one can find an approximating equation connecting the median age of infection and the basic reproductive number with the equation $A \approx \frac {L}{R_0 - 1}$ or rewritten $R_0 \approx \frac{L}{A} + 1$. In this equation, _L_ is the average life expectancy of a host and _A_ is the median age of infection. This shows what we expect intuitively: Higher R~0~, i.e. more infectious ID, leads to an earlier age of infection.
 
-
-_Note: If you want to determine R/R~0~ to be used as parameter in a mathematical transmission model, you use this approach based on the age-seroprevalence relation even if the model you plan on using doesn't have age in it._
+#### Note {mynotebox}
+If you want to determine R/R~0~ to be used as parameter in a mathematical transmission model, you use this approach based on the age-seroprevalence relation even if the model you plan on using doesn't have age in it.
 
 
 ###Determining R Through Fitting a Full Transmission Model 
@@ -715,6 +737,14 @@ An individual infected again infects at rate b*S. The average duration for which
 
 ##R and model parameterization 
 Knowing R is not only essential for public health intervention planning, but it is also an important component of building and analysis of infectious disease models. Most models have a parameter for the transmission rate, such as _b_ in the models above. To allow simulation of a model, all parameters need to get assigned specific values - chosen to correspond to the disease and scenario under study. Direct estimates of the transmission rate for a model are usually hard to find. Instead, we often determine R/R~0~ for a given ID/setting and then use it to compute _b_ using equations like those shown above.
+
+
+## Case study examples
+
+### Basic Science example: Estimating the reproductive number for the 1918 influenza pandemic
+Marc paper
+
+### Policy/Application example: Estimating the reproductive number of the 2014 Ebola outbreak
 
 
 
@@ -800,7 +830,6 @@ This chapter briefly introduced different modes of ID transmission.
 
 
 ##Further Resources
-* Ewald and colleagues have done some interesting investigations connecting transmission type to virulence/pathogenicity of specific diseases. See for instance [@ewald87; @ewald95].
 * A detailed discussion linking transmission types to model alternatives is provided in [@mccallum17].
 
 ##References
@@ -826,7 +855,8 @@ The direct transmission of a pathogen means it goes straight from an infected ho
 ##Contact transmission
 The most straightforward way of transmission is through direct contact between infected and uninfected hosts. A prime class of pathogens that follow this route are sexually transmitted infections (STI). For STIs, the pathogen goes directly from one host to the other. Another pathogen for which direct contact is an important (but not the only) route of transmission is Ebola.
 
-A particular group of contact transmission is vertical transmission between mother and child. This type of transmission is important for diseases such as HIV or Ebola. Since a model system for vertical transmission will, at the minimum, require stratification by age, it will not be discussed further here. After reading the [_Host Heterogeneity_ chapter](), it should be clear how such a scenario could be modeled.
+A particular group of contact transmission is vertical transmission between mother and child. This type of transmission is important for diseases such as HIV or Ebola. To describe vertical transmission, one needs to account for at least two different types of hosts, namely mothers and children. We will consider different types of hosts and how they can be represented in models in chapter \@ref(heterogeneity).
+
 
 ##Airborne transmission
 Some pathogens are _essentially direct_ with only a very short time spent outside the host. Many respiratory infections fall in this category. Those pathogens are often expelled as small air drops by the host (through breathing, sneezing or coughing) and then are quickly inhaled by an uninfected host, thus potentially causing a new infection. Similarly, a pathogen might for a brief time be deposited on a surface  (e.g., a bathroom faucet). Such a potentially infected surface is often called a fomite. If the pathogen is picked up fairly quickly by an uninfected host and thus completes the transmission process, it is sometimes also reasonable to consider this an essentially direct transmission process.
@@ -933,6 +963,12 @@ $$
 Infected persons release pathogen into the environment at rate _p_. The pathogen decays at rate _c_. A susceptible host can get infected by contact with a contaminated environment at rate _b_.
 
 
+## Case study examples
+
+### Basic Science example: Environmental transmission for Cholera
+
+### Policy/Application example: 
+
 
 ## Summary and Cartoon
 This chapter provided a discussion of environmental transmission and its impact on ID dynamics and control.
@@ -1029,11 +1065,10 @@ Vector-borne transmission adds complexity to an ID, but also allows for a wider 
 
 <!--chapter:end:160-VectorBorneID.Rmd-->
 
-# Infectious Disease Control
+# Infectious Disease Control {control}
 
 ## Overview and Learning Objectives
-In this module, we will look a closer look at different types of control against infectious diseases and their potential outcomes.
-
+This chapter provides a closer look at different types of control against infectious diseases and their potential outcomes.
 
 The learning objectives for this chapter are:
 
@@ -1189,7 +1224,7 @@ During the early days of the 2009 H1N1 influenza pandemic, the numbers on cases 
 
 <!--chapter:end:175-IDSurveillance.Rmd-->
 
-# Host Heterogeneity
+# Host Heterogeneity {#heterogeneity}
 
 ## Overview and Learning Objectives
 In this module, we will briefly discuss the idea that hosts differ in characteristics that are important with regard to ID dynamics and control.
@@ -1374,7 +1409,7 @@ This chapter discussed multi-pathogen systems.
 
 <!--chapter:end:190-MultiPathogenID.Rmd-->
 
-#Stochastic Dynamics and Extinctions
+#Stochastic Dynamics and Extinctions {#stochastic}
 
 ##Overview and Learning Objectives
 In this chapter, we take a look at stochasticity and how it impacts ID dynamics. A focus is on the potential of ID extinction. We discuss how one needs to account for stochasticity in models if one wants to study extinction. 
@@ -1562,6 +1597,7 @@ Pathogens 'don't care' about harming their hosts, their primary 'purpose' is to 
 ##Exercises
 
 ## Further Resources
+* Ewald and colleagues have done some interesting investigations connecting transmission type to virulence/pathogenicity of specific diseases. See for instance [@ewald87; @ewald95].
 
 ##References
 
@@ -1912,4 +1948,21 @@ Throghout this book, we have tried to connect the real world and data to models.
 
 
 <!--chapter:end:550-Appendix-Fitting.Rmd-->
+
+#Appendix - Glossary of terms {#glossary}
+
+The following provides very short explanation of commonly used terms. As applicable, references pointing to further details are provided.
+
+
+__Incidence__ 
+
+__Prevalence__
+
+__endemic__
+
+__zoonosis__
+
+
+
+<!--chapter:end:600-Glossary.Rmd-->
 

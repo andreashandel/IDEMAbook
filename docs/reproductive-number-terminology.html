@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="overview-of-this-book.html">
-<link rel="next" href="idstates.html">
+<link rel="prev" href="R0.html">
+<link rel="next" href="types-of-infectious-disease-transmission.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -384,245 +384,204 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="idintro" class="section level1">
-<h1><span class="header-section-number">2</span> Introduction to the Dynamical Systems Approach</h1>
-<div id="overview-and-learning-objectives" class="section level2">
-<h2><span class="header-section-number">2.1</span> Overview and Learning Objectives</h2>
-<p>In this chapter, we discuss the idea of taking a <em>dynamical systems approach</em> and how it is applied to infectious diseases.</p>
-<p>The learning objectives for this chapter are:</p>
-<ul>
-<li>Understand the basic ideas of complex systems and systems thinking</li>
-<li>Understand how models can help study complex systems</li>
-<li>Assess strength and weaknesses of different modeling approaches</li>
-<li>Understand the concept of a compartmental model and how it can be used to model infectious diseases</li>
-</ul>
+<div id="reproductive-number-terminology" class="section level1">
+<h1><span class="header-section-number">6</span> Reproductive number terminology</h1>
+<p>While I will be mainly using the term reproductive number, there are alternative names for R. In general, any combination of reproductive/reproduction and ratio/number is ok terminology. In its early days, R was called reproductive rate. This is <em>incorrect</em> terminology and should not be used. R is <strong>not</strong> a rate (there are no units of inverse time). Why does that matter? See the ‘R is not a rate’ box for an example. Unfortunately, old habits die slowly and you can still see the word `rate’ applied to the reproductive number in some recent publications.</p>
+<div id="myexamplebox" class="section level4">
+<h4><span class="header-section-number">6.0.0.1</span> Why R Is Not a Rate - Example</h4>
+<p>It is important to understand that R only provides a measure of how transmissible a pathogen is, R does <strong>not</strong> provide any information about the speed at which transmission occurs. This is an important limitation of R. Consider 2 infections with the similar reproductive number, say HIV and SARS, which are both estimated to have a reproductive number of around 3-4. If we let an outbreak ‘run its course’, we would - based on R - expect to get the same number of infected individuals. However, the dynamics at which those infections occur will be quite different. SARS spreads rapidly, i.e. an infected person infects 3-4 others within a few weeks. On the other hand, a person infected with HIV will infect others on a timeframe of years. These different dynamics have of course important implications on the control approaches against diseases. Thus, while knowing R is significant for a given disease, it doesn’t tell ‘the full story’.</p>
 </div>
-<div id="introduction" class="section level2">
-<h2><span class="header-section-number">2.2</span> Introduction</h2>
-<p>The scientific approach that has generally been the most successful in the past was to break down a system into its components and study the components one at a time. This is commonly referred to as the <em>reductionistic approach</em>. This approach to understanding the world is still very powerful and useful.</p>
-<p>A complementary approach, which has seen increased use, is to look at all components of a given system at once, instead of each component by itself. Using the whole system approach can provide insights that might not be obtained by the purely reductionist approach. Looking at the whole system at once is often referred to as <em>systems thinking/approach</em>.</p>
-<p>While the terminology of <em>systems thinking</em> or <em>systems approach</em> has seen increased use in the last few decades, the general idea has been around for a while. The notion of systems is present in virtually every field of research, ranging from the hard sciences to social sciences and business. In public health, there is the basic idea - most often applied to infectious diseases - of the <em>agent - host - environment</em> system, also referred to as the <em>epidemiological triangle</em> (Figure <a href="idintro.html#fig:epitriangle">2.1</a>).</p>
-<div class="figure"><span id="fig:epitriangle"></span>
-<img src="images/epi-triangle.png" alt="A system perspective - The epidemiological triangle"  />
+<div id="notes-mynotebox" class="section level4">
+<h4><span class="header-section-number">6.0.0.2</span> Notes {mynotebox}</h4>
+<p>While we often say “Infectious disease X has an R<sub>0</sub> of Y”, this is only an approximation. R and R<sub>0</sub> also depend on the setting. The potential for transmission for many ID is much higher in for instance crowded locations (prisons, slums, cruise ships), or among “high risk groups” (e.g. STD in sex workers). For example in most countries R<sub>0</sub> of HIV is below 1 in the general population but HIV is not disappearing because it has an R<sub>0</sub> &gt; 1 in certain subgroups. The importance of such population heterogeneity is further discused in chapter <a href="heterogeneity.html#heterogeneity">13</a> . When we talk about R, it is therefore useful to be as specific as possible about the scenario/population/setting.</p>
+<p>In this book, and in the literature in general, you will foten find the use of R<sub>0</sub>, R or <em>effective R</em> (R<sub>eff</sub>) used (sloppily) in an interchangeable manner. Usually, it is clear from the context if the symbol refers specifically to <sub>R</sub>0 at the beginning of an outbreak in a susceptible population, or more generally to R, the average number of secondary infectious cases produced by one infectious individual in any population.</p>
+<p>Unfortunately, <em>R</em> seem to be a very popular letter. In the context of infectious disease dynamics, <em>R</em> is used both to indicate the removed compartment in an SIR model, and as abbreviation for the reproductive number. To make things worse, it is also the name of the programming language which I used to write the DSAIDE package which accompanies this book. You will just have to figure out from the context if a reference to <em>R</em> means “computer software” or “removed compartment” or “reproductive number”. Fortunately, it should always be clear what is meant.</p>
+</div>
+<div id="outbreaks-and-the-change-in-r" class="section level2">
+<h2><span class="header-section-number">6.1</span> Outbreaks and the Change in R</h2>
+<p>As stated above, at the beginning of an outbreak, a specific disease in a certain setting will have some value R<sub>0</sub>. As the outbreak progresses, more and more hosts become infected and - for many diseases - either die or recover and become immune to further infection. This leads to a reduction in the reproductive number as the outbreak progresses. For instance, at the start of the epidemic with everyone susceptible, R<sub>0</sub>=3. Then once a third of the population have become infected and immune, an infectious person who would have infected three others at the beginning of an outbreak now ‘wastes’ one of their transmissions on an already immune person, and therefore only infects two others. Similarly, once 2/3 of the population have become infected and immune, R will have dropped to 1. At this point, the outbreak does not grow further (recall, we need R&gt;1 for growth). Instead, the outbreak has reached its peak and now starts to decline, with R continuing to go down as fewer and fewer susceptibles remain.</p>
+</div>
+<div id="reproductive-number-and-outbreak-control" class="section level2">
+<h2><span class="header-section-number">6.2</span> Reproductive Number and Outbreak Control</h2>
+<p>It is intuitively clear that if on average every infectious person “produces” more than one subsequent infectious person, we get a growing epidemic. In contrast, if every infectious person “produces” less than one subsequent infectious person, the pathogen might transmit a few times, but pretty soon it will disappear. Thus if we can achieve R<sub>0</sub> &lt; 1, e.g. through vaccination, we can prevent an outbreak from starting. Further, if during an outbreak we can intervene to get R &lt; 1, the outbreak is going to fizzle out. Figure <a href="reproductive-number-terminology.html#fig:R0intervention">6.1</a> illustrates this idea. If we wanted to stop <em>any</em> further transmission, we would need to get R even lower, namely R = 0. Intervention efforts try to achieve an R as small as possible. If we could achieve R<sub>0</sub> &lt; 1 globally everywhere, we could eventually eradicate a disease. The ability to do that depends on many factors. One important one is the R<sub>0</sub> value of any ID before we start an eradication campaign. Intuitively, the higher R<sub>0</sub>, the harder it will be to get it to &lt; 1. We’ll make that more explicit below.</p>
+<div class="figure"><span id="fig:R0intervention"></span>
+<img src="images/R0intervention.png" alt="Impact of an Intervention on transmission."  />
 <p class="caption">
-Figure 2.1: A system perspective - The epidemiological triangle
+Figure 6.1: Impact of an Intervention on transmission.
 </p>
 </div>
+<div id="myexamplebox" class="section level4">
+<h4><span class="header-section-number">6.2.0.1</span> R and Outbreak Control - Example</h4>
+<p>During the large Ebola outbreak in West Africa which started in 2013, a few Ebola patients came to the U.S., and the goal was to have R = 0, i.e. no ongoing transmission. That didn’t quite happen, a few new individuals got infected, but R was very close to zero. In contrast, in West Africa, there was little hope to get R = 0 quickly. Fortunately, R &lt; 1 is enough. So we can ‘tolerate’ a few further transmissions and new cases and still get the outbreak under control eventually. Of course, in general, we want to get R as close to 0 as possible, especially for a disease as deadly as Ebola. But to get an outbreak to fizzle out, we only need R &lt; 1, not R = 0.</p>
 </div>
-<div id="systems-thinking" class="section level2">
-<h2><span class="header-section-number">2.3</span> Systems Thinking</h2>
-<p>The term <em>systems thinking</em> or <em>systems approach</em> is not a very clearly defined term, but in general, a <em>systems</em> perspective looks at multiple - often many - components that interact with each other in potentially complicated ways.</p>
-<p>For instance, the problem of obesity has many different components that interact in potentially complex ways to affect a person’s weight. Figure <a href="idintro.html#fig:obesitysystem">2.2</a> illustrates this, see also for instance <a href="https://youtu.be/2vojPksdbtI">this video</a>. Complex systems are everywhere. The approach of studying (most of) the system at once instead of looking at a single component at a time is the hallmark of the <em>systems approach</em>.</p>
-<div class="figure"><span id="fig:obesitysystem"></span>
-<img src="images/complexsystem.png" alt="Obesity as a complex system: http://goo.gl/m2Qq13"  />
+</div>
+<div id="estimating-intervention-efforts-based-on-r" class="section level2">
+<h2><span class="header-section-number">6.3</span> Estimating Intervention Efforts based on R</h2>
+<p>Let’s make the relation between response efforts and the reproductive number a bit more quantitative. As a simple example, consider an infectious disease with R<sub>0</sub>=2. That means on average every infected person infects two others. If we could somehow protect a bit more than half of the susceptibles, then a person who might have become infected can’t become infected anymore, and the <em>effective R</em> (sometimes called R<sub>eff</sub>) drops below 1. More generally, to prevent an outbreak, a fraction p = 1-1/R<sub>0</sub> of the population needs to be protected (e.g. through vaccination). From this, it follows that the higher R<sub>0</sub>, the harder it is to control and ID. This is illustrated in figure <a href="reproductive-number-terminology.html#fig:krR0intervention">6.2</a>. One can see both from the figure and the equation that a disease with say R<sub>0</sub> = 5 requires that 80% of the population is protected such that R<sub>eff</sub> = 1.</p>
+<p>The level of population protection at which R=1 is called critical population (or herd) immunity level. The relation between basic reproductive number, intervention coverage, and effective R is R= R<sub>0</sub>(1-p). That holds true if we assume that the intervention fully protects those to whom it is applied. If the intervention is not perfect, we have R=R<sub>0</sub>(1-e*p), where e is the effectiveness of the intervention (e=1 is an entirely effective intervention).</p>
+<div class="figure"><span id="fig:krR0intervention"></span>
+<img src="images/kr-R0intervention.png" alt="R~0~ and Interventions. From [@keeling08]."  />
 <p class="caption">
-Figure 2.2: Obesity as a complex system: <a href="http://goo.gl/m2Qq13" class="uri">http://goo.gl/m2Qq13</a>
+Figure 6.2: R<sub>0</sub> and Interventions. From <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.
 </p>
-</div>
-</div>
-<div id="systems-thinking-and-models" class="section level2">
-<h2><span class="header-section-number">2.4</span> Systems Thinking and Models</h2>
-<p>Once we take the systems perspective, we have to deal with many components that interact in potentially complicated ways. This makes study and analysis complicated, especially if we are trying to gain insights into the causal and mechanistic connections between system components and their effect on outcomes of interest. While a qualitative, conceptual model (e.g. the one shown in Figure <a href="idintro.html#fig:obesitysystem">2.2</a>) often provides some qualitative understanding, it is limiting. It is for instance almost impossible to gain a good <em>quantitative</em> understanding how changes in certain conditions and components of a system lead to changes in outcomes of interest by relying on conceptual approaches alone. If we want to go beyond qualitative and move toward a quantitative understanding (i.e. ‘increasing the tobacco tax by X% will reduce smoking-related health care costs by Y%’), we need quantitative, i.e. mathematical or computational, models. There are many different types of such models one can use. The following provides a - very brief - overview of different modeling approaches.</p>
-<div id="phenomenological-statistical-models" class="section level3">
-<h3><span class="header-section-number">2.4.1</span> Phenomenological (statistical) Models</h3>
-<p>A huge class of models consists of what is usually refered to as statistical models. In the context of this discussion, I prefer to label them <em>phenomenological</em> models, but that terminology is rarely used. The idea behind the statistical/phenomenological approach is to use a mathematical or computational model to study if there are any patterns between the components of the system and the outcomes of interest.</p>
-<p>For instance, a linear regression model investigates if there is a pattern between input (system components or other measurable quantities that are part of the system) and an outcome of interest that can be approximated by a linear function. More complicated statistical models exist, some go by the name of <em>machine learning methods</em>. All of these models try to determine if there are patterns between inputs and outputs of interest in the data. Some of the more complicated models allow for interactions between system components (inputs, predictors, variables). Figure <a href="idintro.html#fig:phenomodel">2.3</a> gives an illustration of 2 simple phenomenological models fit to some data.</p>
-<div class="figure"><span id="fig:phenomodel"></span>
-<img src="images/phenomodel.png" alt="Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model."  />
-<p class="caption">
-Figure 2.3: Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model.
-</p>
-</div>
-<p>One feature these phenomenological models have in common is that they do not try to describe the <em>mechanisms</em> of interactions within the system that lead to the observed patterns. For instance, if we find that the relationship between the number of cigarettes smoked per day and the 5-year risk of lung cancer can be approximated by a sigmoid function, it does not tell us much about the mechanisms leading from smoking to lung cancer.</p>
-<div id="mynotebox" class="section level4">
-<h4><span class="header-section-number">2.4.1.1</span> A few more comments regarding phenomenological models</h4>
-<p>The big category that I call phenomenological models can of course be further divided. A useful division and way of thinking is between fairly simple models based on some underlying statistical theory and used to explain relations between some factors and some outcome, versus more complicated, often “black-box” type of models that are mainly used to predict an outcome based on some inputs. The former area is the topic of most “classical” statistical work, while the latter often goes by names such as machine learning, data mining, or similar. While simple models are sometimes considered explanatory and can provide clues toward causal links between some inputs and some outputs, they still do not provide insights regarding the mechansisms, which distinghuishes all of these models from mechanistic ones. For more information on the explanatory vs. predictive approach to model uses, the papers <span class="citation">(Shmueli <a href="#ref-shmueli10">2010</a>)</span> and <span class="citation">(Breiman and others <a href="#ref-breiman01">2001</a>)</span> are good starting points.</p>
-</div>
-</div>
-<div id="mechanistic-models" class="section level3">
-<h3><span class="header-section-number">2.4.2</span> Mechanistic Models</h3>
-<p>A class of models that is complementary to the just discussed phenomenologica models are mechanistic models, which explicitly - albeit usually in very simplified form - try to model the mechanisms of interaction among system components. These models are commonly used the hard sciences and engineering. For instance the mathematical equations describing the movement of fluids or electromagnetic fields, or computer simulations of airplane engines, are based on such mechanistic models. The advantage of these kinds of models is that they potentially provide better and deeper understanding of the system. The main disadvantage is that we already need to know (or at least assume) a good bit about how the components interact for us to be able to build such a model. If we have no idea what mechanisms are at work in our system of interest, we cannot build a mechanistic model. Because of that, areas that are currently less well understood (e.g. the functioning of the stock market or the working of brains) are currently not well described by mechanistic models.</p>
-<p>One advantage of a mechanistic model is that once it is specified and built, it can be investigated (either mathematically, or more likely through computer simulations) without the need of additional data. For instance, our ability to build decent models capturing the salient features of hurricane dynamics allows us to forecast the storm trajectory. An example of a simulation for a simple mechanistic model is shown in Figure <a href="idintro.html#fig:sirsim">2.6</a>.</p>
-<p>Both phenomenological (statistical) and mechanistic models are useful tools with distinct advantages and disadvantages. Deciding which one to use depends on the question and study system. In this book, we focus on mechanistic models, which try to represent an explicit, simplified description of the system of interest.</p>
-</div>
-<div id="dynamical-models" class="section level3">
-<h3><span class="header-section-number">2.4.3</span> Dynamical Models</h3>
-<p>While the interactions of components always have some implicit time factor, the explicit consideration of time in models is not always needed. Consider this example: We could build a model to study how a change in tobacco taxes might lead to changes in healthcare costs in a given state. Of course, time is present in this system: First we change the taxes, and then we look at changes in costs over some time frame. However, when studying this system, one usually doesn’t need to consider an explicitly time-dependent dynamic. Instead one looks at 2 scenarios: Taxes 1 &amp; Costs 1 versus Taxes 2 &amp; Costs 2. It is usually not necessary to model or simulate the chain of events leading from tax change to cost change while explicitly accounting for time.</p>
-<p>However, often the interactions of components that make up a system occurs over time and the temporal component needs to be included. We often want to know how certain changes to the system (e.g. interventions) lead to changes in outcomes through a <em>dynamical/time-dependent</em> chain of events. This leads to dynamical models. For infectious diseases, we most often have some underlying dynamics that we need to take into account (e.g. an ongoing outbreak) and on top of which we might want to implement some interventions. Therefore, the dynamical perspective is generally used.</p>
-<p>We can illustrate this dynamical perspective in an abstract way by extending the epidemiological triangle. Figure <a href="idintro.html#fig:dynamictriangle">2.4</a> shows the components and the interactions of the triangle changing over time.</p>
-<div class="figure"><span id="fig:dynamictriangle"></span>
-<img src="images/moving-triangle.png" alt="Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction."  />
-<p class="caption">
-Figure 2.4: Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.
-</p>
-</div>
-<p>A more specific example of a simple dynamical model showing changes over time is shown in Figure <a href="idintro.html#fig:sirsim">2.6</a>.</p>
-<p>Mechanistic models are especially well suited to describe dynamical systems and are therefore the primary choice for the study of complex dynamical systems.</p>
-</div>
-<div id="types-of-dynamical-mechanistic-models" class="section level3">
-<h3><span class="header-section-number">2.4.4</span> Types of Dynamical, Mechanistic Models</h3>
-<p>When building mechanistic, dynamical models based on a systems approach, there are two main approaches. In one approach, the model is made up of individuals (who are sometimes called agents) and thus these types of models are called agent based or individual based models. The agents/individuals - which are often but not always are humans - interact with each other. Each agent has certain properties and undergoes certain actions. The interactions of all the agents lead to potentially interesting and complex dynamics.</p>
-<p>Schelling’s segregation model (see e.g. <a href="https://youtu.be/dFl3Cfw12bo">this video</a> ) is a nice example of such an individual based model. Models and approaches that consider individuals connected through networks of contacts are a type of individual based model that is particularly important for infectious diseases. We will discuss such network concepts in a later chapter.</p>
-<p>Another approach simplifies the system by not tracking every individual, but instead only keeps track of total numbers in certain states. For instance, for an ecological model, we might track the total numbers of predators and prey (e.g. wolves and sheep). The resulting model is much simpler. If we had a population of a 100, 1000 or 10,000 wolves or sheep, we would need to keep track of as many individuals. If we only keep track of the total number of individuals, we only need to track how the numbers in each <em>compartment</em> (here wolves and sheep) change - no matter how large our population. Those models, which only track total numbers of individuals, are called <em>compartmental models</em>.</p>
-<p>While these compartmental models are obviously simplifications of the real system, they often retain enough of the model complexity to allow us to study the system in detail. Because of this, the majority of models used in infectious disease epidemiology are still these types of compartmental models. Both the DSAIDE R package and the example models shown in this book focus on such compartmental models. The only exception is the chapter on networks.</p>
-</div>
-</div>
-<div id="systems-approaches-in-id-epidemiology" class="section level2">
-<h2><span class="header-section-number">2.5</span> Systems approaches in ID Epidemiology</h2>
-<p>While concepts such as the epidemiological triangle acknowledge that interactions between components are important and determine the behavior of a system, in practice the standard epidemiological approach, based on classical study designs such as cohort, case-control and the randomized trial does not consider system interactions. Indeed, a hallmark assumption of these study designs is that individuals are independent. E.g. the chance that someone in a cohort study has the outcome of interest does not affect the chance of someone else having the outcome. That works well for non-transmissible diseases, and to some extent for transmissible/infectious diseases (we’ll use the term infectious disease in the following, mostly meaning diseases that are also transmissible), as long as there are no interactions (i.e. contact that could lead to transmission) between study subjects. Accounting for interactions between hosts is required to understand important infectious disease concepts such as population level immunity thresholds, critical community size, or indirect effects of interventions. This, in turn, leads to a systems approach that explicitly allows for interactions between hosts.</p>
-<p>On the research side, the importance of such interactions has long been appreciated and is at the core of the infectious disease modeling paradigm, where one builds and analyzes a system of interacting components (e.g. susceptible and infected hosts). Model based system approaches have a long history in infectious disease epidemiology <span class="citation">(Anderson and May <a href="#ref-anderson91">1991</a>, <span class="citation">Blower and Bernoulli (<a href="#ref-blower04">2004</a>)</span>)</span>. The importance of computational methods for the study of infectious diseases continues to increase. In this book, we approach infectious diseases from such a systems thinking perspective, without delving too deeply into the mathematical and computational aspects of the topic. If you are interested in building your own models, the books <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>; Vynnycky and White <a href="#ref-vynnycky10">2010</a>)</span> are good starting points.</p>
-</div>
-<div id="a-basic-infectious-disease-systems-model" class="section level2">
-<h2><span class="header-section-number">2.6</span> A Basic Infectious Disease Systems Model</h2>
-<p>For infectious disease models, the simplest dynamical systems model keeps track of the total number of individuals who are susceptible, infectious and removed/recovered (the so-called SIR model). This model is a compartmental model, i.e. we place individuals into distinct compartments, according to some characteristics. We then only track the total number of individuals in each of these compartments. In the simplest model, the only characteristic we track is a person’s infection status according to 3 different stages/compartments:</p>
-<ul>
-<li><strong>S</strong> - uninfected and susceptible individuals.</li>
-<li><strong>I</strong> - infected and infectious individuals.</li>
-<li><strong>R</strong> - removed (recovered and immune or dead) individuals. Those are individuals that do not further participate, either because they are now immune or because they died.</li>
-</ul>
-<p>When talking about the quantities that are tracked in each compartment, you will see both the term <em>host(s)</em> and <em>individual(s)</em> used interchangeably. While we most often think of human hosts, the hosts can be any animal (or plants infected by viruses or bacteria infected by phages, etc.). Sometimes, a compartment might track a quantity such as pathogen load in the environment.</p>
-<p>In addition to specifying the <strong>compartments</strong> of a model, we need to specify the <strong>processes/mechanisms</strong> determining the changes in each compartment. Broadly speaking, some processes increase the number of individuals in a given compartment/stage and processes that lead to a reduction. Those processes are sometimes called inflows and outflows.</p>
-<p>For our system, we specify only 2 processes/flows:</p>
-<ol style="list-style-type: decimal">
-<li>A susceptible individual (S) can become infected by an infectious individual (I) at some rate (for which we use the parameter <em>b</em>). This leads to the susceptible individual leaving the S compartment and entering the I compartment.<br />
-</li>
-<li>An infected individual dies or recovers and enters the removed (R) compartment at some rate. This is described by the parameter <em>g</em> in our model.</li>
-</ol>
-<p>In general, the entities that change (that vary) in our system (here the number of individuals in compartments S, I and R) are called variables and are each represented by a compartment. In contrast, the quantities that are usually assumed fixed for a given system are called parameters. For the model above, those are the infection rate <em>b</em> and the recovery rate <em>g</em>. This is not a fixed rule, though, and sometimes parameters can be allowed to vary.</p>
-<p>The SIR model is very basic, but it still has the hallmark of a complex system. Specifically, there is an interaction between components, namely the <strong>I</strong> component interacts with the <strong>S</strong> component, namely infected individuals can infect susceptibles.</p>
-<p>For compartmental models (and often other types of models), it is useful to show a graphical representation of the compartments and processes included in the model. For compartmental models, such a diagram/figure is usually called a flow diagram. Such a diagram consists of a box for each compartment, and arrows pointing in and out of boxes to describe flows and interactions. For the simple SIR model, the flow diagram is shown in Figure <a href="idintro.html#fig:basicSIR">2.5</a>.</p>
-<div class="figure"><span id="fig:basicSIR"></span>
-<img src="images/basicSIRmodelfigure.png" alt="Flow diagram for the simple SIR model."  />
-<p class="caption">
-Figure 2.5: Flow diagram for the simple SIR model.
-</p>
-</div>
-<p>To study a specific ID and scientific question, one needs to use a model that approximates the real system one is interested in reasonably well, and one needs to choose values for the model parameters and starting conditions such that they match the specific system one wants to study. We’ll return to that idea throughout this book.</p>
-<p>We can implement the flow diagram as a computer model, for instance by formulating it as the set of ordinary differential equations shown below, and then implementing those on a computer to simulate an outbreak. Figure <a href="idintro.html#fig:sirsim">2.6</a> shows such a simulation.</p>
-<div class="figure"><span id="fig:sirsim"></span>
-<img src="images/sirsim.png" alt="An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0."  />
-<p class="caption">
-Figure 2.6: An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0.
-</p>
-</div>
-<p>For some more further information on compartmental models in epidemiology, <a href="https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology">check out this Wikipedia article</a>. We will also discuss many variants of these type of compartmental models in further chapters.</p>
-<div id="mynotebox" class="section level4">
-<h4><span class="header-section-number">2.6.0.1</span> Notes</h4>
-<p>Unfortunately, there are no rules concerning the naming of variables and parameters. Compartments (e.g. SIR) tend to be labeled very similarly by different researchers, while parameter labels are much more variable. I’m trying to be consistent in this book, though I might mix it up occasionally. For this book, I decided to stick with letters from the English alphabet, but you can often find people use Greek letters for parameters (e.g. <span class="math inline">\(\beta\)</span> instead of <em>b</em> for the transmission parameter). Always check carefully what the definition and meaning of each variable and parameter are.</p>
-<p>Here and in other places, I am often sloppy and use the word “infected” even if more precisely, I mean “infected and infectious”. You will find such somewhat sloppy terminology throughout the literature. Individuals who are infected but not infectious are often given their own compartment and label, e.g. they are called “exposed” or “latent” - see chapter <a href="idstates.html#idstates">3</a> for more on this. So when you read infected throughout this book (and in most other places), assume it means ‘infectious’ as well, unless otherwise stated.</p>
 </div>
 <div id="myadvancedbox" class="section level4">
-<h4><span class="header-section-number">2.6.0.2</span> Model Implementation</h4>
-<p>If one wants to study any model in detail, one needs to implement it either in the form of a mathematical or a computer model (or both). For compartmental models, the most common way of implementation is writing the model as a set of ordinary differential equations and implementing those in some computer language. This book shows sets of ODE equations for most of the discussed models, but a detailed understanding of these equations is not required to understand the different topics we discuss. For the model described above, the equations look like this: <span class="math display">\[\dot S = -bSI\]</span> <span class="math display">\[\dot I = bSI - gI\]</span> <span class="math display">\[\dot R = gI\]</span></p>
-<p>We are using the usual short-hand notation, where a dot over a variable means its derivative (its change) with respect to time. In all the models we consider, we always only consider changes with respect to time (the dynamical aspect of the model). The left side indicates which variable changes, and the right side indicates how it changes. Anything with an (usually not shown) positive sign on the right side describes a positive change, i.e. an inflow into the specified compartment, thus increasing the number in that compartment. Anything with a negative sign indicates an outflow out of that compartment.</p>
+<h4><span class="header-section-number">6.3.0.1</span> R and the SIR Model</h4>
+<p>We can connect the concept that R&gt;1 leads to growth and R&lt;1 leads to a decline in infectious persons with the simple SIR model for an outbreak. The model, which we saw earlier, is given by the following set of differential equations (Don’t confuse the <em>R</em> for the recovered with the R/R<sub>0</sub> from the reproductive number. Unfortunately it is customary to use the same letter for both.):</p>
+<p><span class="math display">\[ 
+\begin{aligned}
+\dot S &amp;= - b SI \\
+\dot I &amp;= b S I - g I \\
+\dot R &amp;= g I
+\end{aligned}
+\]</span> For this model, what needs to be true to get an increase in the number of infectious hosts? The influx of new infectious hosts, bSI, needs to be larger than the outflow, gI. This condition, bSI &gt; gI, can be rewritten as 1 &lt; (bS)/g. We then define the quantity on the right side of this condition as the reproductive number, R = (bS)/g. At the beginning of an outbreak, where everyone is assumed to be susceptible (written as S= S<sub>0</sub>), we have the special case of the basic reproductive number, R<sub>0</sub> = (bS<sub>0</sub>)/g. Note that the rate of recovery, g, is related to the average duration of infection, D as D=1/g. Therefore, one can also write R = DbS, with the special case R<sub>0</sub> for S=S<sub>0</sub>, i.e. at the beginning of an outbreak.</p>
 </div>
 </div>
-<div id="summary-and-cartoon" class="section level2">
-<h2><span class="header-section-number">2.7</span> Summary and Cartoon</h2>
-<p>This chapter provided a brief introduction to the concept of systems thinking and how modeling is used to study complex systems. We briefly looked at a simple infectious disease systems model, the famous SIR model.</p>
-<div class="figure"><span id="fig:complexcartoon"></span>
-<img src="images/xkcd-flowcharts.png" alt="Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/)."  />
+<div id="how-to-determine-r" class="section level2">
+<h2><span class="header-section-number">6.4</span> How to determine R</h2>
+<p>Knowing the reproductive number for a particular pathogen and scenario is important to allow for adequate intervention planning. There are multiple ways to estimate R from data. We’ll briefly discuss them now.</p>
+<div id="determine-r-at-the-beginning-of-an-outbreak" class="section level3">
+<h3><span class="header-section-number">6.4.1</span> Determine R at the Beginning of an Outbreak</h3>
+<p>Very early in an outbreak, there will only be a few cases, and they occur seemingly randomly/stochastically. If the outbreak continues growing after a while, the case numbers will increase exponentially. The exponential growth rate, r, can be estimated from the data, essentially by fitting a straight line to the logarithmic values of the case report data. To go from the growth rate to R, we need some further information. Namely, we need to know the serial interval. The serial interval, T, is the time between onset of infection in one host to the onset of infection in a secondary host. Sometimes T can be approximated by the duration of the infectious period, D.</p>
+<p>Once we know r and T, we can compute R. There are different equations relating r and T to R, they depend on specific assumptions one makes about the disease. One relation between r, T, and R is given by R = 1 + rT, and another one is given by R = e<sup>rT</sup> . For assumptions underlying these equations and further details, see e.g. <span class="citation">(Wallinga and Lipsitch <a href="#ref-wallinga07">2007</a>)</span>.</p>
+<div class="figure"><span id="fig:viboudR0"></span>
+<img src="images/viboud-R0.png" alt="Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06]."  />
 <p class="caption">
-Figure 2.7: Not every diagram helps to understand a complex system. <a href="https://xkcd.com/1488/">Source: xkcd.com</a>.
+Figure 6.3: Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine <span class="citation">(Viboud et al. <a href="#ref-viboud06">2006</a>)</span>.
 </p>
 </div>
 </div>
-<div id="exercises" class="section level2">
-<h2><span class="header-section-number">2.8</span> Exercises</h2>
+<div id="determine-r-once-the-outbreak-is-over" class="section level3">
+<h3><span class="header-section-number">6.4.2</span> Determine R Once the Outbreak is Over</h3>
+<p>A larger R leads to a larger outbreak (ignoring things like interventions, behavior change, etc.). The reason to determine R is so we can use it to predict the expected size of an (uncontrolled) outbreak - and more importantly, we can learn how strong our intervention efforts need to be. But we can also flip things around. Once an (uncontrolled) outbreak has occurred, knowing the outbreak size can allow us to estimate R. It is often possible to determine outbreak sizes after an outbreak has occurred, e.g. through serosurveys which show antibodies against the disease and therefore indicate who got infected. We don’t need any ‘timing’ information, just the fraction infected at the end. Essentially, we need to know the number of people that got infected, and the number of people who were at risk (i.e. the susceptibles) at the beginning of the outbreak. Once we know these pieces of the puzzle, we can estimate R.</p>
+<p>More specifically, assume we know the final size of the outbreak, i.e. total fraction of those becoming infected, I<sub>f</sub> = I<sub>tot</sub>/N, where N is the population at risk and I<sub>tot</sub> is the total number of infected. We then also know the fraction of susceptibles that are left at the end of an outbreak, S<sub>f</sub>=1-I<sub>f</sub>. To find R/R<sub>0</sub>, we can use the equation R=<em>ln</em>(S<sub>f</sub>)/(S<sub>f</sub> - 1) (here, <em>ln</em> is the natural logarithm). The figure below shows the relation between the fraction infected and R<sub>0</sub> graphically.</p>
+<div class="figure"><span id="fig:outbreaksize"></span>
+<img src="images/outbreaksize.png" alt="The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08]."  />
+<p class="caption">
+Figure 6.4: The relation between R<sub>0</sub> and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R<sub>0</sub>. Source: Keeling and Rohani 2008 <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.
+</p>
+</div>
+<p>For the above equation to be true, we assume that initially everyone is susceptible and that the population is well mixed. More refined estimates for R, with more complicated equations, are available <span class="citation">(Ma and Earn <a href="#ref-ma06">2006</a>)</span>.</p>
+</div>
+<div id="determining-r-at-the-endemicsteady-state" class="section level3">
+<h3><span class="header-section-number">6.4.3</span> Determining R at the Endemic/steady state</h3>
+<p>For an ID that is at an endemic/steady state, we have another way of determining R<sub>0</sub>. At the endemic equilibrium, the reproductive number is R<sub>eq</sub> = 1. If it weren’t, the ID would either grow or decline, and it wouldn’t be the endemic state. At this endemic state, a fraction of the population is still susceptible, S<sub>eq</sub>. By definition, at the beginning of an ID with transmissibility R<sub>0</sub>, everyone is susceptible (S<sub>0</sub>=1, expressed as a fraction). If we know S<sub>eq</sub>, we can then compute R<sub>0</sub> as given by R<sub>0</sub> = R<sub>eq</sub> S<sub>0</sub>/S<sub>eq</sub> = 1/ S<sub>eq</sub>. As an example, if at an endemic state (with R<sub>eq</sub>=1), 50% of the population is susceptible, then at the beginning, when 100% of the population was susceptible, we have R<sub>0</sub>=2. Conversely, if we know R<sub>0</sub>, we can predict the number of susceptibles at the endemic state, S<sub>eq</sub>=1/R<sub>0</sub>.</p>
+</div>
+<div id="determining-r-through-age-of-infection" class="section level3">
+<h3><span class="header-section-number">6.4.4</span> Determining R Through Age of Infection</h3>
+<p>For those ID for which an infection induces life-long immunity, i.e. where a host can only be infected once, the age of infection is an important concept. Intuitively, the more infectious a disease is, the more likely it is that a host gets an ID at an early age. For an ID that induces immunity, one can collect serological data (i.e. antibody measurements) to determine the fraction of individuals of a given age who have antibodies, which means they have been previously infected (assuming for the moment that no vaccine is available). One can define the median age of infection as the age at which 50% of the population has been infected.</p>
+<div class="figure"><span id="fig:R0age"></span>
+<img src="images/R0age.png" alt="Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08]."  />
+<p class="caption">
+Figure 6.5: Fraction seropositive (previously infected) as function of age for measles. Source <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.
+</p>
+</div>
+<p>For a simple model with certain assumptions <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>, one can find an approximating equation connecting the median age of infection and the basic reproductive number with the equation <span class="math inline">\(A \approx \frac {L}{R_0 - 1}\)</span> or rewritten <span class="math inline">\(R_0 \approx \frac{L}{A} + 1\)</span>. In this equation, <em>L</em> is the average life expectancy of a host and <em>A</em> is the median age of infection. This shows what we expect intuitively: Higher R<sub>0</sub>, i.e. more infectious ID, leads to an earlier age of infection.</p>
+<div id="note-mynotebox" class="section level4">
+<h4><span class="header-section-number">6.4.4.1</span> Note {mynotebox}</h4>
+<p>If you want to determine R/R<sub>0</sub> to be used as parameter in a mathematical transmission model, you use this approach based on the age-seroprevalence relation even if the model you plan on using doesn’t have age in it.</p>
+</div>
+</div>
+<div id="determining-r-through-fitting-a-full-transmission-model" class="section level3">
+<h3><span class="header-section-number">6.4.5</span> Determining R Through Fitting a Full Transmission Model</h3>
+<p>Instead of just using data for the initial exponential growth phase, determining <em>r</em> and computing R<sub>0</sub> as specified above, we can fit some or all outbreak data to an SIR type model. We use the data to estimate the parameters of the model. For instance, for the simple SIR model, we would estimate the transmission rate, b, and recovery rate, g. We can then use the equation for R<sub>0</sub> for a given model to compute its value. For the simple SIR model, that would be R<sub>0</sub> = bS<sub>0</sub>/g.</p>
+<div id="myadvancedbox" class="section level4">
+<h4><span class="header-section-number">6.4.5.1</span> Computing R for a Given Model</h4>
+<p>Once a mathematical model for a given ID and setting has been specified, it is often useful to compute R<sub>0</sub> for the model. Above, we looked at one way to get R<sub>0</sub> for the basic SIR model, i.e. we determined that bS/g needs to be greater than 1 and that turned out to be R<sub>0</sub>. However, it is often better to derive R<sub>0</sub> for a given model by starting with the basic definition: R<sub>0</sub> is the average number of secondary infections caused by one infected individual, assuming the population is fully susceptible. We can then reason as follows: An individual infected person infects new susceptibles at a rate b S<sub>0</sub>, for a duration of 1/g. Therefore the total number of newly infected individuals is bS<sub>0</sub>/g. Let’s apply the same reasoning to a few variations of the SIR model. Consider the following SIR model with an additional, disease-induced mortality at rate <em>m</em>.</p>
+<p><span class="math display">\[ 
+\begin{aligned}
+\dot S &amp;= -b SI \\
+\dot I &amp;= b S I - g I - m I\\
+\dot R &amp;= g I
+\end{aligned}
+\]</span></p>
+<p>An individual infected again infects at rate b<em>S. The average duration for which an individual is infectious is now 1/(g + m), i.e. the sum of all the outflows out of the <em>I</em> compartment. That’s a general rule: The average duration of stay in a given compartment is the inverse of the sum of all the outflows. Therefore, for this model, we now get R<sub>0</sub> = b</em>S<sub>0</sub>/(g+m). Computing R for larger models can get complicated. There are specific methods one can use for more complex models. See for instance <span class="citation">(Diekmann, Heesterbeek, and Roberts <a href="#ref-diekmann10">2010</a>)</span> for further information on this.</p>
+</div>
+</div>
+</div>
+<div id="r-and-model-parameterization" class="section level2">
+<h2><span class="header-section-number">6.5</span> R and model parameterization</h2>
+<p>Knowing R is not only essential for public health intervention planning, but it is also an important component of building and analysis of infectious disease models. Most models have a parameter for the transmission rate, such as <em>b</em> in the models above. To allow simulation of a model, all parameters need to get assigned specific values - chosen to correspond to the disease and scenario under study. Direct estimates of the transmission rate for a model are usually hard to find. Instead, we often determine R/R<sub>0</sub> for a given ID/setting and then use it to compute <em>b</em> using equations like those shown above.</p>
+</div>
+<div id="case-study-examples-1" class="section level2">
+<h2><span class="header-section-number">6.6</span> Case study examples</h2>
+<div id="basic-science-example-estimating-the-reproductive-number-for-the-1918-influenza-pandemic" class="section level3">
+<h3><span class="header-section-number">6.6.1</span> Basic Science example: Estimating the reproductive number for the 1918 influenza pandemic</h3>
+<p>Marc paper</p>
+</div>
+<div id="policyapplication-example-estimating-the-reproductive-number-of-the-2014-ebola-outbreak" class="section level3">
+<h3><span class="header-section-number">6.6.2</span> Policy/Application example: Estimating the reproductive number of the 2014 Ebola outbreak</h3>
+</div>
+</div>
+<div id="summary-and-cartoon-3" class="section level2">
+<h2><span class="header-section-number">6.7</span> Summary and Cartoon</h2>
+<p>The reproductive number is a crucial concept in infectious disease epidemiology. It has a relatively straightforward definition. However, estimating R for a specific disease and scenario is not always easy.</p>
+<p>Under the assumption that everyone is susceptible, the reproductive number gets the special name <em>basic reproductive number</em> and is a denoted by R<sub>0</sub>. Knowing R/R<sub>0</sub> helps in planning the scale of interventions.</p>
+<p>R only measures one – important – component of a disease, namely its transmission potential/transmissibility. For a full understanding of a given disease, we need to know other characteristics such as speed of transmission, the severity of disease including mortality, routes of transmission, and other disease specific details.</p>
+<p>The simplicity of R is both its strength and its weakness. It gives a quick, quantitative assessment of the transmission potential (and therefore outbreak size and needed control measures) of a disease. However, R is a population level average and ignores heterogeneities of host, agent, and environment. Therefore any R estimates are only approximate.</p>
+<div class="figure"><span id="fig:xkcd-outbreak-control"></span>
+<img src="images/xkcd-outbreak-control.png" alt="The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/)."  />
+<p class="caption">
+Figure 6.6: The R<sub>0</sub> in this case was 0. <a href="https://xkcd.com/734/">Source: xkcd.com</a>.
+</p>
+</div>
+</div>
+<div id="exercises-3" class="section level2">
+<h2><span class="header-section-number">6.8</span> Exercises</h2>
 <ul>
-<li>If you haven’t done already, install R, RStudio and the DSAIDE R package. See <span class="citation">(Handel <a href="#ref-handel17">2017</a>)</span> for an overview and quick-start guide for DSAIDE.</li>
-<li>Work through the tasks for the <em>ID Dynamics Introduction</em> DSAIDE app.</li>
-<li>Contemplate on your experience with the <em>ID Dynamics Introduction</em> DSAIDE app. In which way does it capture the ‘dynamical systems’ perspective? Did you find any behavior of this - arguably very simple - infectious disease model to be complex? How/why?</li>
-<li>Read the paper “Systems Science Methods in Public Health: Dynamics, Networks, and Agents” by Luke &amp; Stamatakis <span class="citation">(Luke and Stamatakis <a href="#ref-luke12">2012</a>)</span>. Come up with 2 systems that you consider complex in the realm of public health or biomedicine (other than those mentioned in the paper). Explain what makes them complex. Also, come up with 2 systems that you consider not complex and explain why you think of them as not complex.</li>
+<li>The <em>Reproductive Number</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>Find a paper from the research literature that provides evidence for herd immunity for a specific infectious disease and setting. Summarize the paper and explain how it demonstrates the occurrence of herd immunity.</li>
+<li>Read the paper “Herd Immunity: A Rough Guide” by Fine et al. <span class="citation">(Fine, Eames, and Heymann <a href="#ref-fine11">2011</a>)</span>. In this paper, the authors mention <em>“…the complexities of imperfect immunity, heterogeneous populations, nonrandom vaccination, and freeloaders…”</em>. For each of those complexities, find, read and summarize a research paper that discusses the topic. Ideally, choose papers other than those already cited by Fine et al.</li>
+<li>Compute R<sub>0</sub> following the scheme described in this chapter for the following model, which has an additional compartment of exposed, not-yet infectious hosts (we called those <em>P</em> in previous models). Note that you always go “full circle”, i.e. from one infectious individual back to infectious individuals: <span class="math inline">\(\dot S = -b SI, \ \dot E = b S I - a E, \ \dot I = a E - g I - m I, \ \dot R = g I\)</span>.</li>
+<li>Compute R<sub>0</sub> following the scheme described in this chapter for the following model, which includes births and deaths: <span class="math inline">\(\dot S =m - b SI - n S, \ \dot E = b S I - a E - n E, \ \dot I = a E - g I - n I, \ \dot R = g I - n R\)</span>. (Note that in the previous exercise, the parameter <em>m</em> represents disease-induced mortality, here it represents births. I’m purposefully re-cycling it, so you get used to the fact that different papers/people use different letters for parameters. Always read carefully.)</li>
 </ul>
 </div>
-<div id="further-resources" class="section level2">
-<h2><span class="header-section-number">2.9</span> Further Resources</h2>
+<div id="further-resources-3" class="section level2">
+<h2><span class="header-section-number">6.9</span> Further Resources</h2>
 <ul>
-<li>The paper “Why Model?” by Joshua Epstein <span class="citation">(Epstein <a href="#ref-epstein08">2008</a>)</span> provides a nice, short discussion of the purposes of models. Other general introductory discussions of systems thinking and model use are <span class="citation">(May <a href="#ref-may04">2004</a>; Chubb and Jacobsen <a href="#ref-chubb10">2010</a>; Garnett et al. <a href="#ref-garnett11">2011</a>; Basu and Andrews <a href="#ref-basu13">2013</a>; Gunawardena <a href="#ref-gunawardena14">2014</a>; Homer and Hirsch <a href="#ref-homer06">2006</a>; Peters <a href="#ref-peters14">2014</a>; Sterman <a href="#ref-sterman06">2006</a>)</span>.</li>
-<li>Several introductory papers on infectious disease modeling can be found in e.g. <span class="citation">(Keeling and Danon <a href="#ref-keeling09">2009</a>; Heesterbeek et al. <a href="#ref-heesterbeek15">2015</a>; Lessler et al. <a href="#ref-lessler16">2016</a>; Metcalf and Lessler <a href="#ref-metcalf17">2017</a>)</span>.</li>
-<li>While the dynamical systems approach has been applied to infectious diseases for a long time, it is starting to be used more frequently in other areas of public health. Some recent references on that topic are e.g. <span class="citation">(Ness, Koopman, and Roberts <a href="#ref-ness07">2007</a>; Sánchez-Romero et al. <a href="#ref-sanchez-romero16">2016</a>)</span>.</li>
-<li>This book does not deal with individual based models. If you want to learn more about them, see e.g. <span class="citation">(Railsback and Grimm <a href="#ref-railsback11">2011</a>)</span>.</li>
+<li>The following papers provide further discussions and details on the reproductive number: <span class="citation">(Heffernan, Smith, and Wahl <a href="#ref-heffernan05">2005</a>; Roberts <a href="#ref-roberts07">2007</a>; Li, Blakeley, and Smith <a href="#ref-li11">2011</a>)</span>.</li>
+<li>Further discussions regarding herd immunity can be found in <span class="citation">(Metcalf, Edmunds, and Lessler <a href="#ref-metcalf15">2015</a>; Fine <a href="#ref-fine93">1993</a>)</span>.</li>
 </ul>
 </div>
-<div id="references-1" class="section level2">
-<h2><span class="header-section-number">2.10</span> References</h2>
+<div id="references-4" class="section level2">
+<h2><span class="header-section-number">6.10</span> References</h2>
 
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
-<div id="ref-shmueli10">
-<p>Shmueli, Galit. 2010. “To Explain or to Predict?” <em>Statistical Science</em>. JSTOR, 289–310.</p>
-</div>
-<div id="ref-breiman01">
-<p>Breiman, Leo, and others. 2001. “Statistical Modeling: The Two Cultures (with Comments and a Rejoinder by the Author).” <em>Statistical Science</em> 16 (3). Institute of Mathematical Statistics: 199–231.</p>
-</div>
-<div id="ref-anderson91">
-<p>Anderson, Roy M, and RM May. 1991. “Infectious Disease of Humans.” <em>Dynamics and Control</em>.</p>
-</div>
-<div id="ref-blower04">
-<p>Blower, Sally, and Daniel Bernoulli. 2004. “An Attempt at a New Analysis of the Mortality Caused by Smallpox and of the Advantages of Inoculation to Prevent It. 1766.” <em>Reviews in Medical Virology</em> 14 (5): 275–88.</p>
-</div>
 <div id="ref-keeling08">
 <p>Keeling, Matt J, and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press.</p>
 </div>
-<div id="ref-vynnycky10">
-<p>Vynnycky, Emilia, and Richard White. 2010. <em>An Introduction to Infectious Disease Modelling</em>. Oxford University Press.</p>
+<div id="ref-wallinga07">
+<p>Wallinga, J., and M. Lipsitch. 2007. “How generation intervals shape the relationship between growth rates and reproductive numbers.” <em>Proceedings of the Royal Society B</em> 274 (1609): 599–604.</p>
 </div>
-<div id="ref-handel17">
-<p>Handel, Andreas. 2017. “Learning Infectious Disease Epidemiology in a Modern Framework.” <em>PLoS Computational Biology</em> 13 (10). Public Library of Science: e1005642.</p>
+<div id="ref-viboud06">
+<p>Viboud, Cécile, Theresa Tam, Douglas Fleming, Andreas Handel, Mark A. Miller, and Lone Simonsen. 2006. “Transmissibility and Mortality Impact of Epidemic and Pandemic Influenza, with Emphasis on the Unusually Deadly 1951 Epidemic.” <em>Vaccine</em> 24 (44-46). Fogarty International Center, National Institutes of Health, Bethesda, MD 20892, USA. viboudc@mail.nih.gov: 6701–7. doi:<a href="https://doi.org/10.1016/j.vaccine.2006.05.067">10.1016/j.vaccine.2006.05.067</a>.</p>
 </div>
-<div id="ref-luke12">
-<p>Luke, Douglas A, and Katherine A Stamatakis. 2012. “Systems Science Methods in Public Health: Dynamics, Networks, and Agents.” <em>Annual Review of Public Health</em> 33. Annual Reviews: 357–76.</p>
+<div id="ref-ma06">
+<p>Ma, Junling, and David JD Earn. 2006. “Generality of the Final Size Formula for an Epidemic of a Newly Invading Infectious Disease.” <em>Bulletin of Mathematical Biology</em> 68 (3). Springer: 679–702.</p>
 </div>
-<div id="ref-epstein08">
-<p>Epstein, Joshua M. 2008. “Why Model?” <em>Journal of Artificial Societies and Social Simulation</em> 11 (4): 12. <a href="http://jasss.soc.surrey.ac.uk/11/4/12.html" class="uri">http://jasss.soc.surrey.ac.uk/11/4/12.html</a>.</p>
+<div id="ref-diekmann10">
+<p>Diekmann, O., J A P. Heesterbeek, and M. G. Roberts. 2010. “The Construction of Next-Generation Matrices for Compartmental Epidemic Models.” <em>J R Soc Interface</em> 7 (47). Department of Mathematics, Utrecht University, Budapestlaan 6, 3584 CD, Utrecht, The Netherlands.: 873–85. doi:<a href="https://doi.org/10.1098/rsif.2009.0386">10.1098/rsif.2009.0386</a>.</p>
 </div>
-<div id="ref-may04">
-<p>May, R. M. 2004. “Uses and Abuses of Mathematics in Biology.” <em>Science</em> 303 (5659): 790–93. doi:<a href="https://doi.org/10.1126/science.1094442">10.1126/science.1094442</a>.</p>
+<div id="ref-fine11">
+<p>Fine, Paul, Ken Eames, and David L Heymann. 2011. “‘Herd Immunity’: A Rough Guide.” <em>Clinical Infectious Diseases : An Official Publication of the Infectious Diseases Society of America</em> 52 (7): 911–16. doi:<a href="https://doi.org/10.1093/cid/cir007">10.1093/cid/cir007</a>.</p>
 </div>
-<div id="ref-chubb10">
-<p>Chubb, Mikayla C., and Kathryn H. Jacobsen. 2010. “Mathematical Modeling and the Epidemiological Research Process.” <em>European Journal of Epidemiology</em> 25 (1): 13–19. doi:<a href="https://doi.org/10.1007/s10654-009-9397-9">10.1007/s10654-009-9397-9</a>.</p>
+<div id="ref-heffernan05">
+<p>Heffernan, J M, R J Smith, and L M Wahl. 2005. “Perspectives on the Basic Reproductive Ratio.” <em>Journal of the Royal Society, Interface</em> 2 (4): 281–93. doi:<a href="https://doi.org/10.1098/rsif.2005.0042">10.1098/rsif.2005.0042</a>.</p>
 </div>
-<div id="ref-garnett11">
-<p>Garnett, Geoffrey P., Simon Cousens, Timothy B. Hallett, Richard Steketee, and Neff Walker. 2011. “Mathematical Models in the Evaluation of Health Programmes.” <em>The Lancet</em> 378 (9790): 515–25. <a href="http://www.sciencedirect.com/science/article/pii/S014067361061505X" class="uri">http://www.sciencedirect.com/science/article/pii/S014067361061505X</a>.</p>
+<div id="ref-roberts07">
+<p>Roberts, M G. 2007. “The Pluses and Minuses of R0.” <em>Journal of the Royal Society, Interface</em> 4 (16): 949–61. doi:<a href="https://doi.org/10.1098/rsif.2007.1031">10.1098/rsif.2007.1031</a>.</p>
 </div>
-<div id="ref-basu13">
-<p>Basu, Sanjay, and Jason Andrews. 2013. “Complexity in Mathematical Models of Public Health Policies: A Guide for Consumers of Models.” <em>PLoS Medicine</em> 10 (10): e1001540. doi:<a href="https://doi.org/10.1371/journal.pmed.1001540">10.1371/journal.pmed.1001540</a>.</p>
+<div id="ref-li11">
+<p>Li, Jing, Daniel Blakeley, and Robert J. Smith. 2011. “The Failure of R 0.” <em>Computational and Mathematical Methods in Medicine</em> 2011: 1–17. doi:<a href="https://doi.org/10.1155/2011/527610">10.1155/2011/527610</a>.</p>
 </div>
-<div id="ref-gunawardena14">
-<p>Gunawardena, Jeremy. 2014. “Models in Biology:‘accurate Descriptions of Our Pathetic Thinking’.” <em>BMC Biology</em> 12 (1): 29. <a href="https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-12-29" class="uri">https://bmcbiol.biomedcentral.com/articles/10.1186/1741-7007-12-29</a>.</p>
+<div id="ref-metcalf15">
+<p>Metcalf, C J E, W J Edmunds, and J Lessler. 2015. “Six Challenges in Modelling for Public Health Policy.” <em>Epidemics</em> 10 (March): 93–96. doi:<a href="https://doi.org/10.1016/j.epidem.2014.08.008">10.1016/j.epidem.2014.08.008</a>.</p>
 </div>
-<div id="ref-homer06">
-<p>Homer, Jack B., and Gary B. Hirsch. 2006. “System Dynamics Modeling for Public Health: Background and Opportunities.” <em>American Journal of Public Health</em> 96 (3): 452–58. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.062059</a>.</p>
-</div>
-<div id="ref-peters14">
-<p>Peters, David H. 2014. “The Application of Systems Thinking in Health: Why Use Systems Thinking?” <em>Health Research Policy and Systems</em> 12 (1): 51. <a href="https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51" class="uri">https://health-policy-systems.biomedcentral.com/articles/10.1186/1478-4505-12-51</a>.</p>
-</div>
-<div id="ref-sterman06">
-<p>Sterman, John D. 2006. “Learning from Evidence in a Complex World.” <em>American Journal of Public Health</em> 96 (3): 505–14. <a href="http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043" class="uri">http://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2005.066043</a>.</p>
-</div>
-<div id="ref-keeling09">
-<p>Keeling, M. J., and L. Danon. 2009. “Mathematical Modelling of Infectious Diseases.” <em>British Medical Bulletin</em> 92 (1): 33–42. doi:<a href="https://doi.org/10.1093/bmb/ldp038">10.1093/bmb/ldp038</a>.</p>
-</div>
-<div id="ref-heesterbeek15">
-<p>Heesterbeek, H., R. M. Anderson, V. Andreasen, S. Bansal, D. De Angelis, C. Dye, K. T. D. Eames, et al. 2015. “Modeling Infectious Disease Dynamics in the Complex Landscape of Global Health.” <em>Science</em> 347 (6227): aaa4339–aaa4339. doi:<a href="https://doi.org/10.1126/science.aaa4339">10.1126/science.aaa4339</a>.</p>
-</div>
-<div id="ref-lessler16">
-<p>Lessler, Justin, Andrew S. Azman, M. Kate Grabowski, Henrik Salje, and Isabel Rodriguez-Barraquer. 2016. “Trends in the Mechanistic and Dynamic Modeling of Infectious Diseases.” <em>Current Epidemiology Reports</em> 3 (3): 212–22. doi:<a href="https://doi.org/10.1007/s40471-016-0078-4">10.1007/s40471-016-0078-4</a>.</p>
-</div>
-<div id="ref-metcalf17">
-<p>Metcalf, C Jessica E, and Justin Lessler. 2017. “Opportunities and Challenges in Modeling Emerging Infectious Diseases.” <em>Science (New York, N.Y.)</em> 357 (6347): 149–52. doi:<a href="https://doi.org/10.1126/science.aam8335">10.1126/science.aam8335</a>.</p>
-</div>
-<div id="ref-ness07">
-<p>Ness, Roberta B., James S. Koopman, and Mark S. Roberts. 2007. “Causal System Modeling in Chronic Disease Epidemiology: A Proposal.” <em>Annals of Epidemiology</em> 17 (7): 564–68. doi:<a href="https://doi.org/10.1016/j.annepidem.2006.10.014">10.1016/j.annepidem.2006.10.014</a>.</p>
-</div>
-<div id="ref-sanchez-romero16">
-<p>Sánchez-Romero, Luz Maria, Joanne Penko, Pamela G. Coxson, Alicia Fernández, Antoinette Mason, Andrew E. Moran, Leticia Ávila-Burgos, Michelle Odden, Simón Barquera, and Kirsten Bibbins-Domingo. 2016. “Projected Impact of Mexico’s Sugar-Sweetened Beverage Tax Policy on Diabetes and Cardiovascular Disease: A Modeling Study.” <em>PLoS Medicine</em> 13 (11): e1002158. <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002158" class="uri">http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002158</a>.</p>
-</div>
-<div id="ref-railsback11">
-<p>Railsback, Steven F, and Volker Grimm. 2011. <em>Agent-Based and Individual-Based Modeling: A Practical Introduction</em>. Princeton university press.</p>
+<div id="ref-fine93">
+<p>Fine, Paul EM. 1993. “Herd Immunity: History, Theory, Practice.” <em>Epidemiologic Reviews</em> 15 (2): 265–302. <a href="http://op12no2.me/stuff/herdhis.pdf" class="uri">http://op12no2.me/stuff/herdhis.pdf</a>.</p>
 </div>
 </div>
             </section>
@@ -630,8 +589,8 @@ Figure 2.7: Not every diagram helps to understand a complex system. <a href="htt
           </div>
         </div>
       </div>
-<a href="overview-of-this-book.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="idstates.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="R0.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="types-of-infectious-disease-transmission.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
