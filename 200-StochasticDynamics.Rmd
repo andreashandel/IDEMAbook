@@ -1,6 +1,6 @@
-#Stochastic Dynamics and Extinctions {#stochastic}
+# Stochastic Dynamics and Extinctions {#stochastic}
 
-##Overview and Learning Objectives
+## Overview and Learning Objectives
 In this chapter, we take a look at stochasticity and how it impacts ID dynamics. A focus is on the potential of ID extinction. We discuss how one needs to account for stochasticity in models if one wants to study extinction. 
 
 The learning objectives for this chapter are:
@@ -19,11 +19,11 @@ So far, all the models we have used to explore different aspects of ID dynamics 
 Such deterministic models are relatively easy to implement and to study. That is one of the reasons they are so commonly used. Such a modeling approach also often provides a good representation of the dynamics of real ID if numbers are large. That is due to the law of large numbers. While every individual host or pathogen undergoes somewhat random dynamics, these random parts get _averaged out_, and the dynamics of the whole population is fairly predictable and well described by such deterministic models. (This is the same concept we use in classical epidemiological studies, where we enroll sufficiently large numbers such that we can say something predictable about differences between groups, even if individuals are somewhat unpredictable.)
 
 
-##Stochasticity
+## Stochasticity
 Biological systems are never deterministic. When numbers are small, randomness starts to matter. As an example, consider an outbreak of some ID. Let's say we have a group of 100 infected. At a given time, some of them will transmit to others, and after that, they will recover from the disease, while others will recover before infecting others. The overall outbreak dynamics can be well approximated by a deterministic model if we accurately specify the average rate of transmission and the average rate of recovery. In contrast, now assume that there is a single infected person. Now it makes a huge difference if this person transmits to someone else before recovering, or if they recover before transmission occurs. In the latter case, the outbreak is over, and the ID has gone extinct. Thus, at small numbers, randomness/unpredictability in the order of events can make a large difference. 
 
 
-##Discrete Numbers and Extinctions
+## Discrete Numbers and Extinctions
 Another problem inherent in the deterministic differential equation based models we have looked at so far is that they treat individuals in each compartment as continuous. For instance, the models allow 142.7 infected hosts. Of course, in reality, those numbers have to be integers. If we are dealing with large numbers, the difference between 142.7 and 142 or 143 is minor and doesn't matter. However, once numbers get small, the fact that we are dealing with discrete numbers of hosts becomes significant. So once less than 1 host has an infection the ID is in reality gone, but a continuous model would instead allow the number of infected to drop below 1 but remain above 0. In this way, the ID in the continuous models never actually goes extinct, it only gets closer and closer to 0 (and at some point is so close to 0 that the computer can't distinguish it from 0 anymore).
 
 ##Modeling Stochasticity and Extinction
@@ -33,17 +33,17 @@ As an example, instead of new susceptible hosts entering the system at some cont
 The timing of the birth events is somewhat random, with an overall probability determined by the model (e.g., a higher birth rate will mean births occur more frequently, but still randomly). 
 
 
-##Factors Affecting Extinction
+## Factors Affecting Extinction
 Extinction of ID is of interest because that is often our final goal. We would like to drive an ID to extinction, either locally or even better, globally. If and how an ID can be driven to extinction depends on different factors. For IDs in humans, the only real chance is to tackle those with no other hosts or reservoirs. As such, we will likely never be able to eradicate influenza. But measles eradication might be possible (though hard).
 
 Factors related to the host population and distinct ID characteristics influence the likelihood of an ID to go extinct. Two significant population factors are the size of the host population and the speed at which new susceptible hosts are replenished. Important characteristics of the ID included the infectiousness, the duration of the latent and infectious periods, the ability of the ID to persist outside the host, and other.
 
 
-##Critical Community Size
+## Critical Community Size
 The minimum size of a population at which an ID can maintain itself in a population without extinction has been termed the Critical Community Size (CCS) (this also depends on the replenishment of new susceptibles, e.g., birth rates). Studies for measles suggested that the CCS was several hundred thousand [@keeling02], meaning that measles could have only become a human pathogen once human populations were large enough to maintain it. The CCS is the number of susceptibles in a population and does not include those who are immune. Through vaccinating it is possible to reduce the size of the susceptible population below the CCS. So it is not necessary to vaccinate everyone to get an ID to go extinct. We just need to reach enough individuals to get the population of susceptibles below the critical level. This task is already hard by itself, as evidenced by the fact that we have not been able to eradicate measles, despite having a good vaccine.
 
 
-##Host Extinction
+## Host Extinction
 Another way an ID can go extinct is if its hosts go extinct - either due to mortality from the ID or other causes. 
 For most human diseases, such host extinction is fortunately not very common - though highly lethal ID such as Ebola can lead to marked reduction in the number of hosts in a given population. For non-human disease, extinctions of hosts due to disease is a more significant issue. Here, conversation efforts might try to achieve non-extinction of the host and - ideally - extinction of the ID. 
 
@@ -60,7 +60,7 @@ The flip-side of extinction is the emergence of a new disease. During extinction
 After having gone through this chapter and learned that stochastic models allow you to address questions that deterministic models cannot address, you might wonder why we should still use deterministic models at all. The main reasons are that deterministic models are generally easier to build, easier to analyze, faster to run on a computer, and importantly, much easier to fit to data. Often this simplicity is worth the loss in some level of realism. But of course, it depends on the specific scenario and question. Recall the example of different maps in a chapter \@ref(idstates). The right map depends on the question. Similarly, the most appropriate model depends on your question. For some questions, stochastic models are needed. For others, deterministic models might still be the better choice.
 
 
-##Summary and Cartoon
+## Summary and Cartoon
 This module provides a brief discussion of stochasticity in ID dynamics, and its relation to disease extinctions.
 
 
@@ -72,17 +72,17 @@ knitr::include_graphics("./images/smallpox.png")
 
 
 
-##Exercises
+## Exercises
 * The _Stochastic dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
 * Read the article "Measles Endemicity in Insular Populations: Critical Community Size and Its Evolutionary Implication" by Black [@black66]. The paper discusses critical community size for measles. Find 2 papers/analyses that discuss the CCS for other IDs. Read, summarize and critique the papers.
 
 
-##Further Resources
+## Further Resources
 * Some further analysis of critical community size and measles can be found in [@bartlett57; @bartlett60; @keeling97; @keeling97a].
 * Some further discussion of stochastic epidemic models can be found in [@black12; @britton10a].
 * A broad discussion of invasion and persistence of ID and the role of stochasticity is given in [@lloyd-smith05b].
 * An interesting discussion of critical community size and its dependence on birth dynamics, especially birth pulses, is provided in [@peel14].
 
-##References
+## References
 
 

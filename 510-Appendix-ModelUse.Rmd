@@ -1,4 +1,4 @@
-#Appendix B - The different uses of ID models
+#Appendix C - The different uses of Infectious Disease models
 
 
 ## Overview

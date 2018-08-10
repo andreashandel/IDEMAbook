@@ -18,6 +18,8 @@ output:
             download: no
     bookdown::pdf_book:
         keep_tex: yes
+    bookdown::word_document2: 
+        toc: true
 bibliography: dsaidereferences.bib
 biblio-style: apalike
 documentclass: book

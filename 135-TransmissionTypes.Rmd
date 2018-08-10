@@ -1,4 +1,4 @@
-#Types of Infectious Disease Transmission
+# Types of Infectious Disease Transmission
 
 
 ## Overview and Learning Objectives
@@ -10,17 +10,17 @@ The learning objectives for this chapter are:
 * Understand the implications different modes of transmission have for ID dynamics and control
 
 
-##Introduction
+## Introduction
 The way in which an infectious disease transmits is important to understand its transmission dynamics and for planning interventions. An infectious disease can be transmitted directly or indirectly. Among indirect ways of transmission, there are again different important categories, such as environmental or vector-borne transmission. Often, things are not that clear-cut: Some diseases might transmit by more than one route, and the definition of direct and indirect is not as clear-cut as it might sound. The following paragraphs briefly discuss the main different transmission modes, which will then be discussed in more detail in the following chapters.
 
-##Direct Transmission
+## Direct Transmission
 The most straightforward way of transmission is direct transmission from infected to uninfected host. The clearest example of direct transmission are sexually transmitted diseases. It is generally the case that direct physical contact between infected and uninfected host is required for transmission. Exceptions exist, such as transmission of HIV through infected needle sharing, which could even be considered a type of vector-borne transmission, but non-direct modes of transmission are not common. 
 
 Respiratory diseases are often also considered to transmit directly if close proximity between infected and uninfected host is needed for successful transmission. Examples are measles and influenza. It gets a bit tricky though since many respiratory pathogens can also transmit by first being deposited in the environment (e.g., inside tiny water particles floating in the air for a long time, or on a bathroom faucet). Then if an uninfected person comes into contact with the contaminated environment, they can get infected. The importance of direct versus indirect/environmental transmission for many respiratory pathogens is still not fully understood, and can likely differ between different settings. 
 
 Another path of direct transmission is from mother to baby before or during birth. This is often called _vertical transmission_, while all other forms discussed above and below are called _horizontal transmission_. HIV is an example of a pathogen that can transmit via both routes.  
 
-##Environmental Transmission
+## Environmental Transmission
 As just mentioned, respiratory infections might spread through an environmental stage, where the environment is small water particles in the air or on solid surfaces. Infected surfaces (in the context of ID transmission often called fomites) are major routes of transmission for several important pathogens, for instance, Staph or pathogens that transmit through the fecal-oral route, e.g., norovirus. Water is the main transmission environment for another important fecal-orally transmitted disease, Cholera. The chapter on environmental transmission will discuss this route in more detail.
 
 ##Vector-borne Transmission

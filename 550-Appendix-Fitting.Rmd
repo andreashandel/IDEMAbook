@@ -1,4 +1,4 @@
-#Appendix C - A very brief introduction to data fitting
+# Appendix D - A very brief introduction to data fitting
 
 
 

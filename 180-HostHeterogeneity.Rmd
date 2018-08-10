@@ -12,7 +12,7 @@ The learning objectives for this chapter are:
 
 
 
-##Introduction
+## Introduction
 So far, we tracked hosts concerning their infection status (susceptible, infected, symptomatic, recovered, etc.). We assumed that hosts are similar enough with regard to any other characteristics that might matter for ID dynamics and control that we did not have to consider them. For instance, we did not account for age, sex, pre-existing conditions or any other such potentially differentiating detail among hosts.
 
 That approach is of course at best a decent approximation and at worst completely wrong. Many characteristics affect how an ID interacts with a host. For instance, for many ID, children and the elderly are more likely to get infected and might suffer more severe symptoms. For other ID, only specific groups are affected. For instance, only sexually active individuals are at risk of contracting a sexually transmitted infection (ignoring for a moment less common transmission routes such as blood transfusion for HIV). We will discuss some of these differences/heterogeneities between hosts and how they affect ID transmission and control in this module.
