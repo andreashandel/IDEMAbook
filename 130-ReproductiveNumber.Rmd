@@ -1,4 +1,4 @@
-# Reproductive Number  {#R0}
+# Reproductive Number  {# R0}
 
 
 ## Overview and Learning Objectives

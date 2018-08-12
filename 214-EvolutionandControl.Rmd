@@ -1,6 +1,6 @@
 # Evolution and Control
 
-##Overview and Learning Objectives
+## Overview and Learning Objectives
 In this chapter, we will discuss how control of infectious diseases can induce strong evolutionary pressure and how this often leads to unwanted results.
 
 The learning objectives for this chapter are:
@@ -37,10 +37,10 @@ Since drug resistance is such an important public health problem, it is widely s
 
 
 
-##Summary and Cartoon
+## Summary and Cartoon
 
-##Exercises
+## Exercises
 
 ## Further Resources
 
-##References
+## References

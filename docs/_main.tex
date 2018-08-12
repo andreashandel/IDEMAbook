@@ -74,15 +74,16 @@
 }
 
 \setlength{\droptitle}{-2em}
+
   \title{Infectious Disease Epidemiology - A modern systems approach}
-  \pretitle{\vspace{\droptitle}\centering\huge}
+    \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
-  \author{Andreas Handel}
-  \preauthor{\centering\large\emph}
+    \author{Andreas Handel}
+    \preauthor{\centering\large\emph}
   \postauthor{\par}
-  \predate{\centering\large\emph}
+      \predate{\centering\large\emph}
   \postdate{\par}
-  \date{2018-02-07}
+    \date{2018-08-12}
 
 
 \usepackage{amsthm}
@@ -110,7 +111,22 @@
 \addcontentsline{toc}{chapter}{Preface}
 
 This book convers infectious disease epidemiology from a dynamical
-systems perspective
+systems perspective.
+
+\textbf{Note 1: This book is currently under active development. I will
+likely be moving material around, adding new chapters or combining
+existing ones, and adding more content. I don't expect to delete major
+parts, but rewrites and reshuffling are expected to happen for a while.
+So if something you read previously is `gone', it got likely moved to a
+different chapter/section of the book}
+
+\emph{Note 2: I appreciate receiving feedback. If you think a certain
+topic is missing that should be covered, or certain topics aren't
+explained well, or any other thought you have, please provide feedback.
+The best way of doing so is by going to
+\href{https://github.com/ahgroup/DSAIDEbook}{the github page for this
+book} and submitting an ``Issue''. Alternatively, feel free to email me
+(google me to get my email address).}
 
 \chapter{Overview of this book}\label{overview-of-this-book}
 
@@ -235,8 +251,7 @@ recommend the following resources:
 
 \section{References}\label{references}
 
-\chapter{Introduction to the Dynamical Systems
-Approach}\label{introduction-to-the-dynamical-systems-approach}
+\chapter{Introduction to the Dynamical Systems Approach}\label{idintro}
 
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives}
@@ -371,6 +386,25 @@ the relationship between the number of cigarettes smoked per day and the
 5-year risk of lung cancer can be approximated by a sigmoid function, it
 does not tell us much about the mechanisms leading from smoking to lung
 cancer.
+
+\subsubsection{A few more comments regarding phenomenological
+models}\label{mynotebox}
+
+The big category that I call phenomenological models can of course be
+further divided. A useful division and way of thinking is between fairly
+simple models based on some underlying statistical theory and used to
+explain relations between some factors and some outcome, versus more
+complicated, often ``black-box'' type of models that are mainly used to
+predict an outcome based on some inputs. The former area is the topic of
+most ``classical'' statistical work, while the latter often goes by
+names such as machine learning, data mining, or similar. While simple
+models are sometimes considered explanatory and can provide clues toward
+causal links between some inputs and some outputs, they still do not
+provide insights regarding the mechansisms, which distinghuishes all of
+these models from mechanistic ones. For more information on the
+explanatory vs.~predictive approach to model uses, the papers (Shmueli
+\protect\hyperlink{ref-shmueli10}{2010}) and (Breiman and others
+\protect\hyperlink{ref-breiman01}{2001}) are good starting points.
 
 \subsection{Mechanistic Models}\label{mechanistic-models}
 
@@ -530,8 +564,8 @@ Model}\label{a-basic-infectious-disease-systems-model}
 
 For infectious disease models, the simplest dynamical systems model
 keeps track of the total number of individuals who are susceptible,
-infectious and recovered/immune (the so-called SIR model). This model is
-a compartmental model, i.e.~we place individuals into distinct
+infectious and removed/recovered (the so-called SIR model). This model
+is a compartmental model, i.e.~we place individuals into distinct
 compartments, according to some characteristics. We then only track the
 total number of individuals in each of these compartments. In the
 simplest model, the only characteristic we track is a person's infection
@@ -542,22 +576,19 @@ status according to 3 different stages/compartments:
 \item
   \textbf{S} - uninfected and susceptible individuals.
 \item
-  \textbf{I} - infected and infectious individuals (note that these
-  terms are often used interchangeably, but technically we are talking
-  about someone who is infected \textbf{and} is infectious, i.e.~can
-  infect others).
+  \textbf{I} - infected and infectious individuals.
 \item
-  \textbf{R} - recovered/removed individuals. Those are individuals that
-  do not further participate, either because they are now immune or
-  because they died.
+  \textbf{R} - removed (recovered and immune or dead) individuals. Those
+  are individuals that do not further participate, either because they
+  are now immune or because they died.
 \end{itemize}
 
 When talking about the quantities that are tracked in each compartment,
 you will see both the term \emph{host(s)} and \emph{individual(s)} used
 interchangeably. While we most often think of human hosts, the hosts can
-be any animal (or plants or bacteria infected by phages, etc.).
-Sometimes, a compartment might track a quantity such as pathogen load in
-the environment.
+be any animal (or plants infected by viruses or bacteria infected by
+phages, etc.). Sometimes, a compartment might track a quantity such as
+pathogen load in the environment.
 
 In addition to specifying the \textbf{compartments} of a model, we need
 to specify the \textbf{processes/mechanisms} determining the changes in
@@ -576,9 +607,9 @@ For our system, we specify only 2 processes/flows:
   This leads to the susceptible individual leaving the S compartment and
   entering the I compartment.\\
 \item
-  An infected individual dies or recovers and enters the
-  recovered/removed (R) compartment at some rate. This is described by
-  the parameter \emph{g} in our model.
+  An infected individual dies or recovers and enters the removed (R)
+  compartment at some rate. This is described by the parameter \emph{g}
+  in our model.
 \end{enumerate}
 
 In general, the entities that change (that vary) in our system (here the
@@ -591,9 +622,8 @@ parameters can be allowed to vary.
 
 The SIR model is very basic, but it still has the hallmark of a complex
 system. Specifically, there is an interaction between components, namely
-the \textbf{I} component interacts with the \textbf{S} component, or
-phrased in more ordinary language, infected individuals can interact
-with susceptibles and thereby infect them.
+the \textbf{I} component interacts with the \textbf{S} component, namely
+infected individuals can infect susceptibles.
 
 For compartmental models (and often other types of models), it is useful
 to show a graphical representation of the compartments and processes
@@ -618,7 +648,7 @@ We'll return to that idea throughout this book.
 We can implement the flow diagram as a computer model, for instance by
 formulating it as the set of ordinary differential equations shown
 below, and then implementing those on a computer to simulate an
-outbreak. Figure \#ref(fig:sirsim) shows such a simulation.
+outbreak. Figure \ref{fig:sirsim} shows such a simulation.
 
 \begin{figure}
 \centering
@@ -629,21 +659,32 @@ days). The starting conditions for each compartment are set to S=100,
 I=1, R=0.}
 \end{figure}
 
-Note that, unfortunately, there are no rules concerning the naming of
-variables and parameters. Compartments (e.g.~SIR) tend to be labeled
-very similarly by different researchers, while parameter labels are much
-more variable. I'm trying to be consistent in this book, though I might
-mix it up occasionally. For this book, I decided to stick with letters
-from the English alphabet, but you can often find people use Greek
-letters for parameters (e.g. \(\beta\) instead of \emph{b} for the
-transmission parameter). Always check carefully for a given paper/model
-what the definition and meaning of each variable and parameter are.
-
 For some more further information on compartmental models in
 epidemiology,
 \href{https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology}{check
 out this Wikipedia article}. We will also discuss many variants of these
 type of compartmental models in further chapters.
+
+\subsubsection{Notes}\label{mynotebox}
+
+Unfortunately, there are no rules concerning the naming of variables and
+parameters. Compartments (e.g.~SIR) tend to be labeled very similarly by
+different researchers, while parameter labels are much more variable.
+I'm trying to be consistent in this book, though I might mix it up
+occasionally. For this book, I decided to stick with letters from the
+English alphabet, but you can often find people use Greek letters for
+parameters (e.g. \(\beta\) instead of \emph{b} for the transmission
+parameter). Always check carefully what the definition and meaning of
+each variable and parameter are.
+
+Here and in other places, I am often sloppy and use the word
+``infected'' even if more precisely, I mean ``infected and infectious''.
+You will find such somewhat sloppy terminology throughout the
+literature. Individuals who are infected but not infectious are often
+given their own compartment and label, e.g.~they are called ``exposed''
+or ``latent'' - see chapter \ref{idstates} for more on this. So when you
+read infected throughout this book (and in most other places), assume it
+means `infectious' as well, unless otherwise stated.
 
 \subsubsection{Model Implementation}\label{myadvancedbox}
 
@@ -968,8 +1009,7 @@ below in the exercise section.
 compartments.}
 \end{figure}
 
-\section{How complex should our model
-be?}\label{how-complex-should-our-model-be}
+\section{How much detail is needed?}\label{how-much-detail-is-needed}
 
 While we discussed major ways to categorize individuals
 (e.g.~symptomatic versus asymptomatic or infectious vs non-infectious),
@@ -977,109 +1017,13 @@ one can potentially sub-divide any state into as many sub-states as one
 wanted. For instance one could split infected indiduals into 10
 different levels of infectiousness. The question then becomes: How
 detailed and complex should our model be? What details should we include
-and which ones should we omit?
+and which ones should we omit? Tthis is an important question and
+deserves a detailed answer, which I am trying to provide in the
+Appendix, Chapter \ref{modelcomplexity}.
 
-Onee might be inclined to build very complicated and detailed models, in
-an effort to be as realistic as possible. While more detailed models can
-indeed be more realistic, there are several drawbacks. First, as models
-get larger, they contain more parameters. Each parameter needs to be
-given a numeric value to allow one to run simulations. One can try to
-obtain the parameters from the literature, however, often that
-information is not available. Alternatively, one could fit the model to
-data (something not discussed in this book) and try to estimate the
-parameters. However, with the kind of data typically available, one can
-usually only estimate a few parameters with some level of certainty. And
-even if one were to be able to get good estimates for all model
-parameters, larger models are harder to implement, take longer to run,
-and are more difficult to analyze. With too many parts present, it can
-be hard to understand how different components interact with each other
-and affect outcomes of interest.
+\section{Case study examples}\label{case-study-examples}
 
-We therefore cannot - and do not want to - include every detail of a
-complex system, i.e.~all components and interactions. We need to decide
-which parts are important and need to be in the model, and which ones we
-can ignore. A simple and somewhat silly example: We never include the
-hair color of individuals in any infectious disease models (at least
-I've never seen such a model), since we assume that this characteristic
-is not important for the ID dynamics. The choice to include or exclude
-other features is less obvious in other cases. For instance, for an HIV
-model, we likely need gender, while a SARS model might ignore this
-characteristic.
-
-It is important to find a trade-off between details that need to be
-included and details one can leave out. Unfortunately, there is no
-recipe for it. Some very simple models have produced useful insights,
-while there are big models in the literature that arguably do little to
-nothing in helping us understand or deal with infectious diseases.
-Obviously, there have also been fairly big models that have produced
-useful information, and small models that are too simplistic to provide
-much information about any real system.
-
-A good analogy for model building and use in general is the use of maps.
-Maps are models of the real world. They serve specific purposes, and it
-is important that a given map be useful for the intended purpose. For
-instance, if we want to know how to drive from Atlanta to Athens, the
-left map in figure \ref{fig:mapfigure} would be most useful. If instead
-we want to know where in the US the state of Georgia is located, the
-middle map is most useful. If we want to know where most people live in
-Georgia, the right map is most useful. In each case, we study the same
-object (the state of Georgia), but depending on the question, different
-maps are needed. Maps (and models) are useful because they capture the
-information that is needed for a specific situation, while leaving out
-unneccesary information. Nobody would want to have a map so detailed
-that it is essentially the real world - it wouldn't be a very useful map
-anymore.
-
-\begin{figure}
-\centering
-\includegraphics{./images/mapfigure.png}
-\caption{\label{fig:mapfigure}Three different maps of the state of Georgia.}
-\end{figure}
-
-In analogy to the map example, we need to decide for a specific ID,
-scenario, and question which details to include in our model and which
-ones to ignore. In general, the primary interactions between components
-of the system are needed. Thus, if we wanted to model the transmission
-dynamics of Ebola, we might need to include deceased infected
-individuals into the model, since they are known to contribute to
-transmission. In contrast, if we want to study how some control
-strategies for SARS might reduce the total number of \emph{infected} but
-we don't care about the impact on total deaths (unlikely, but let's just
-pretend). In this case, we would not need a dead compartment in our
-model, since those dead don't further interact with anyone else in the
-system. However, if we want to keep track of deaths and how they are
-impacted by our intervention (likely), we do need to track them - even
-though dead people are not known to transmit SARS.
-
-To build models that are suitable to study a particular system, model
-builders need to be experts on the system they want to study or
-collaborate with subject matter experts. Building a good model needs to
-follow the
-\href{https://en.wikipedia.org/wiki/Goldilocks_principle}{Goldilocks
-Principle}: If a model is too simple, it likely doesn't approximate the
-real system very well. If the model is too complicated, it is hard to
-build and analyze, and might not lead to much insight (i.e.~the model is
-a big black box). The goal is to get the model \emph{just right}
-regarding size and complexity. Unfortunately, no recipe or formula
-exists specifying how to build a \emph{just right} model. Using models
-that are suitable for a given system and question is a hallmark of a
-good scientist.
-
-The model building and analysis process is often iterative. After a
-model has been built and studied, it might become clear -- e.g.~by
-comparing the model with data -- that important components or
-interactions have been ignored or not been included correctly. This
-leads to model modification and refinement. This back and forth between
-model and data/the real world can happen over multiple iterations.
-
-Note that for purposes of teaching, we keep the models throughout this
-book fairly simple. The models will include the feature we are focusing
-on while excluding others. For instance, we include humans and mosquitos
-for vector-borne IDs but ignore things like asymptomatic or
-pre-symptomatic states. This is mainly done to keep models simple and
-focus on one feature at a time. Models that address ``real'' questions
-often -- but not always -- include more details than the models we
-investigate througout this book.
+\subsection{example 1}\label{example-1}
 
 \section{Summary and Cartoon}\label{summary-and-cartoon-1}
 
@@ -1166,57 +1110,61 @@ The learning objectives for this chapter are:
 
 \section{Introduction}\label{introduction-2}
 
-Some IDs produce sporadic outbreaks and then disappear for years. Ebola
-is a prominent example. We will discuss in a future module how to figure
-out what leads to the (local) extinction of an ID.
-
-Many other IDs show oscillatory behavior, i.e.~we get repeated outbreaks
-every so often, with some time of no or little disease in between. For
-some ID, the outbreaks are seasonal/annual, for other ID, the cycles are
-multi-year.
+Different IDs show different patterns in their dynamics. Some IDs
+produce sporadic outbreaks and then seem to disappear for years. Ebola
+is a prominent example. Other ID seem to be `always around' and
+incidence or prevalence might change little. TB and HIV in some parts of
+the world, as well as certain STD and chronic viral infections show such
+patterns. Many other IDs show oscillatory behavior, i.e.~we repeated
+outbreaks or increases in incidence, followed by periods of reduced
+incidence. For some ID, these patterns of increase and decrease are
+annual, for other ID the cycles are multi-year. Figure
+\ref{fig:IDcycles} shows an example of such patterns of increase and
+decrease for measles and pertussis.
 
 \begin{figure}
 \centering
-\includegraphics{./images/IDcycles.pdf}
+\includegraphics{./images/IDcycles.png}
 \caption{\label{fig:IDcycles}Examples of ID cycles. From (Keeling and Rohani
 \protect\hyperlink{ref-keeling08}{2008}).}
 \end{figure}
 
-Why are some ID seasonal, some not? What mechanisms lead to seasonal or
-multi-year oscillations? What determines the timing of outbreaks?
-
-Other IDs seem to have ``settled down'' and occur more or less at a
-steady level, with only minor fluctuations. TB and HIV in some parts of
-the world, as well as certain STD and chronic viral infections of for
-instance the herpes virus family, seem to have such a dynamic.
-
-The following discusses the factors affecting these different ID
-dynamics patterns.
+Understanding the nature of the different patterns seen for ID help
+understand the general `behavior' of the ID and can also point to best
+approaches of minimizing specific IDs.
 
 \section{Resource Replenishment}\label{resource-replenishment}
 
-So far, we mainly looked at scenarios where some ID caused a single
-outbreak. As we saw, outbreaks wane because eventually there are not
-enough susceptible individuals around to sustain ongoing transmission.
-This is a very general ecological principle: Without replenishment of
-resources, some consumer of such resources will eventually die out. We
-see that in predators eating prey, forest fires ``eating'' trees, and
-pathogens ``eating'' their hosts. If the resources are not replenished
-quickly enough, the consumer of these resources will go extinct. To
-sustain the continued presence of the consumer/predator, resources need
-to be replaced.
+The basic SIR model considered in chapter \ref{idintro} can capture the
+dynamics of a single outbreak, it can however not reprduce repeat
+oscillations or endemic states. The reason for this inability of the
+simple model to produce more than one outbreak is because as the ID
+spreads, it depletes the pool of susceptibles. At then end of the
+outbreak, there are not enough susceptible individuals left to allow for
+a second outbreak or an endemic state. In ecological terms, the
+infectious disease depleted its resources (i.e.~its hosts) and
+subsequently dies out. This is a very general principle: We see that in
+predators consuming prey, forest fires consuming trees, and pathogens
+``consuming'' their susceptible hosts. If the resources are not
+replenished quickly enough, the consumer of these resources will go
+extinct. To sustain the continued presence of the consumer/predator,
+resources need to be replenished.
 
 For our scenario, the resource consumer is the ID, and the resources are
-the hosts, usually humans. Replenishment of susceptible hosts can happen
-through different mechanisms. Most common is the birth of new,
-susceptible individuals, and loss of immunity. Migration, if strong, can
-be another way susceptible hosts can be replenished. Similarly,
-individuals that become newly sexually active correspond to the birth of
-new susceptibles for sexually transmitted infections.
+the susceptible hosts, usually humans. To sustain endemic states or
+repeat increases in incidence, susceptible hosts need to be entering the
+system. This can happen through different mechanisms. The most common
+processes to add new susceptibles to a population is through the birth
+of new, susceptible individuals, or through the loss of immunity, and
+return to the susceptible class, of existing hosts. Migration, if
+strong, can be another way susceptible hosts can be replenished.
+Similarly, individuals that become newly sexually active correspond to
+the birth of new susceptibles for sexually transmitted infections.
 
-If the replenishment of new susceptibles is rapid, an ID might be able
-to maintain itself in a population and never go extinct. (Extinction
-will be discussed in more detail later.)
+If the replenishment of new susceptibles is fast enough to balance the
+depletion of resources by the ID, an ID might be able to maintain itself
+in a population and lead to either oscillatory patterns or an endemic
+state.
 
 \section{A Model with Resource
 Replenishment}\label{a-model-with-resource-replenishment}
@@ -1234,10 +1182,26 @@ deaths and waning immunity.}
 
 The new features of this model compared to the basic SIR model
 introduced earlier are births (of susceptibles) at some rate \emph{m},
-natural death at some rate \emph{n}, and the possibility that recovered
-lose their immunity and return to the susceptible class at rate
-\emph{w}. This new model allows for oscillations/cycles and steady
-states, as explained next.
+and the possibility that recovered lose their immunity and return to the
+susceptible class at rate \emph{w}. Both of these processes can produce
+new susceptibles and thus lead to resource replenishment. If this
+process is fast enough, it can allow the ID to persist and lead to
+oscillations/cycles or steady states.
+
+\subsubsection{Notes}\label{mynotebox}
+
+The model shown in \ref{fig:birthdheathmodel} also includes natural
+death at rate \emph{n}. This is done to for several reasons. One is
+simply consistency. If we make the model more detailed by taking into
+account natural births, it seems reasonable to also include natural
+death. Another, related reason is that without death in the model to
+balance births, we would have a population which grows without bounds.
+This is not a good approximation of any real scenario. When you
+implement models, especially larger ones, you always want to make sure
+that each component of the model produces reasonable results by itself.
+In this example, in the absence of disease, we would like to have
+susceptible individuals reach some steady level depending on births and
+deaths. Without the inclusion of the death rates, this could not happen.
 
 \subsubsection{Mathematical Equations for the Model with Resource
 replenishment}\label{myadvancedbox}
@@ -1275,9 +1239,9 @@ the endemic state is
 
 Here, \emph{L} is the average lifespan of a host, \emph{D} is the
 average duration of infectiousness, and \emph{R\textsubscript{0}} is the
-basic reproductive number - a quantity we will discuss shortly. For more
-details on this equations, see e.g. (Keeling and Rohani
-\protect\hyperlink{ref-keeling08}{2008}).
+basic reproductive number - a quantity we will discuss in chapter
+\ref{R0} For more details on this equations, see e.g. (Keeling and
+Rohani \protect\hyperlink{ref-keeling08}{2008}).
 
 For more complicated models and real-world scenarios where the simple
 SIR model is not a good approximation, the equation just provided does
@@ -1325,27 +1289,31 @@ Often, more than one mechanism occurs and influences the ID dynamics. As
 such, it is often not possible to isolate a single factor as the main
 important one. It often depends on the particular setting.
 
-\section{Notes on Cycles}\label{notes-on-cycles}
+\subsubsection{Notes}\label{mynotebox}
 
-In the type of models, we have looked at so far; sustained oscillations
-need something like seasonality. Without it, the cycles die out, and the
-disease reaches a steady, endemic state. For more complex models or
-models that include stochastic dynamics (something we'll discuss later),
-cycles can be maintained even in the absence of external drivers.
+In the type of models we have looked at so far, seasonality or some
+other external driver is needed to sustain oscillations. Without it, the
+cycles die out, and the disease reaches a steady, endemic state. For
+more complex models or models that include stochastic dynamics (discuss
+in chapter \ref{stochastic}), cycles can be maintained even in the
+absence of external drivers.
 
 \section{Steady states}\label{steady-states}
 
 In addition to single outbreaks or recurrent cycles, ID often also reach
-a state where the incidence/prevalence in a population is roughly
-constant. This is usually referred to as an endemic state. Examples of
-that are e.g.~helminth infections in many African countries (in the
-absence of control efforts) or certain sexually transmitted diseases in
-developed countries.
+a state where the prevalence in a population is roughly constant. This
+is usually referred to as an endemic state. Examples of that are
+e.g.~helminth infections in many African countries (in the absence of
+control efforts) or certain sexually transmitted diseases in developed
+countries.
 
-Note that while at steady state, the total number of ID cases does not
-change, there is usually a constant turnover. Some individuals get
-infected, while others recover or die. It just happens that these
-processes balance each other, making the total numbers roughly constant.
+At steady state, the total number of ID cases (the prevalence) does not
+change. Nevertheless, it is important to keep in mind that there are
+still constantly new cases occuring, i.e.~the incidence is not zero. It
+just happens to be the case that the incidence is roughly similar to the
+rate at which existing cases disappear (e.g.~through recovery or death),
+such that the turnover process is in balance, leading to a a roughly
+constant prevalence.
 
 If we have a mathematical or computer model of our system, there are two
 ways to determine steady states. One is mathematical, and the other is
@@ -1536,7 +1504,7 @@ phdcomics.com}.}
 
 \section{References}\label{references-3}
 
-\chapter{Reproductive Number}\label{reproductive-number}
+\chapter{Reproductive Number \{\# R0\}}\label{reproductive-number-r0}
 
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives-3}
@@ -1647,15 +1615,6 @@ via the intermediary mosquito/vector stage. While conceptually still
 straightforward, measuring and computing R/R\textsubscript{0} in such
 multi-host situations can get tricky.
 
-\emph{Note: Here and in other places, I am often sloppy and use the word
-``infected'' even if more precisely, I mean ``infectious''. You will
-find such sloppy terminology throughout the literature. It is usually
-clear from the context if one means an `infected and infectious' person
-or just someone who is infected but not infectious (commonly called
-``exposed'' or ``latent''). So when you read `infected' here and other
-places, assume it means that host is `infectious' as well, unless
-otherwise stated.}
-
 \section{Basic reproductive number}\label{basic-reproductive-number}
 
 A special case of the reproductive number is at the beginning of an
@@ -1668,8 +1627,8 @@ by definition not change during an ongoing outbreak. The more general
 definition of the reproductive number, R, does change during an
 epidemic. We'll discuss that more below.
 
-\section{Notes on the reproductive
-number}\label{notes-on-the-reproductive-number}
+\section{Reproductive number
+terminology}\label{reproductive-number-terminology}
 
 While I will be mainly using the term reproductive number, there are
 alternative names for R. In general, any combination of
@@ -1677,25 +1636,9 @@ reproductive/reproduction and ratio/number is ok terminology. In its
 early days, R was called reproductive rate. This is \emph{incorrect}
 terminology and should not be used. R is \textbf{not} a rate (there are
 no units of inverse time). Why does that matter? See the `R is not a
-rate' box for an example.
-
-While we often say ``Infectious disease X has an R\textsubscript{0} of
-Y'', this is only an approximation. R and R\textsubscript{0} also depend
-on the setting. The potential for transmission for many ID is much
-higher in for instance crowded locations (prisons, slums, cruise ships),
-or among ``high risk groups'' (e.g.~STD in sex workers). For example
-R\textsubscript{0} \textless{} 1 for HIV in the general population but
-it is not going away because it has an R\textsubscript{0} \textgreater{}
-1 in certain subgroups. When we talk about R, it is, therefore, useful
-to specify the scenario/population/setting.
-
-In this reading, and more generally in the literature, you find the use
-of R\textsubscript{0}, R or \emph{effective R} (R\textsubscript{eff})
-often used (sloppily) in an interchangeable manner. Usually, it's clear
-from the context if the symbol refers specifically to \textsubscript{R}0
-at the beginning of an outbreak in a susceptible population, or more
-generally to R, the average number of secondary infectious cases
-produced by one infectious individual in any population.
+rate' box for an example. Unfortunately, old habits die slowly and you
+can still see the word `rate' applied to the reproductive number in some
+recent publications.
 
 \subsubsection{Why R Is Not a Rate - Example}\label{myexamplebox}
 
@@ -1713,6 +1656,39 @@ person infected with HIV will infect others on a timeframe of years.
 These different dynamics have of course important implications on the
 control approaches against diseases. Thus, while knowing R is
 significant for a given disease, it doesn't tell `the full story'.
+
+\subsubsection{Notes \{mynotebox\}}\label{notes-mynotebox}
+
+While we often say ``Infectious disease X has an R\textsubscript{0} of
+Y'', this is only an approximation. R and R\textsubscript{0} also depend
+on the setting. The potential for transmission for many ID is much
+higher in for instance crowded locations (prisons, slums, cruise ships),
+or among ``high risk groups'' (e.g.~STD in sex workers). For example in
+most countries R\textsubscript{0} of HIV is below 1 in the general
+population but HIV is not disappearing because it has an
+R\textsubscript{0} \textgreater{} 1 in certain subgroups. The importance
+of such population heterogeneity is further discused in chapter
+\ref{heterogeneity} . When we talk about R, it is therefore useful to be
+as specific as possible about the scenario/population/setting.
+
+In this book, and in the literature in general, you will foten find the
+use of R\textsubscript{0}, R or \emph{effective R}
+(R\textsubscript{eff}) used (sloppily) in an interchangeable manner.
+Usually, it is clear from the context if the symbol refers specifically
+to \textsubscript{R}0 at the beginning of an outbreak in a susceptible
+population, or more generally to R, the average number of secondary
+infectious cases produced by one infectious individual in any
+population.
+
+Unfortunately, \emph{R} seem to be a very popular letter. In the context
+of infectious disease dynamics, \emph{R} is used both to indicate the
+removed compartment in an SIR model, and as abbreviation for the
+reproductive number. To make things worse, it is also the name of the
+programming language which I used to write the DSAIDE package which
+accompanies this book. You will just have to figure out from the context
+if a reference to \emph{R} means ``computer software'' or ``removed
+compartment'' or ``reproductive number''. Fortunately, it should always
+be clear what is meant.
 
 \section{Outbreaks and the Change in
 R}\label{outbreaks-and-the-change-in-r}
@@ -1737,22 +1713,27 @@ remain.
 \section{Reproductive Number and Outbreak
 Control}\label{reproductive-number-and-outbreak-control}
 
-So how is the reproductive number related to infectious disease
-outbreaks? It is intuitively clear that if on average every infectious
-person ``produces'' more than one subsequent infectious person, we get a
+It is intuitively clear that if on average every infectious person
+``produces'' more than one subsequent infectious person, we get a
 growing epidemic. In contrast, if every infectious person ``produces''
 less than one subsequent infectious person, the pathogen might transmit
 a few times, but pretty soon it will disappear. Thus if we can achieve
 R\textsubscript{0} \textless{} 1, e.g.~through vaccination, we can
 prevent an outbreak from starting. Further, if during an outbreak we can
 intervene to get R \textless{} 1, the outbreak is going to fizzle out.
-If we wanted to stop any further transmission, we would need to get R
-even lower, namely R = 0. Intervention efforts try to achieve an R as
-small as possible.
+Figure \ref{fig:R0intervention} illustrates this idea. If we wanted to
+stop \emph{any} further transmission, we would need to get R even lower,
+namely R = 0. Intervention efforts try to achieve an R as small as
+possible. If we could achieve R\textsubscript{0} \textless{} 1 globally
+everywhere, we could eventually eradicate a disease. The ability to do
+that depends on many factors. One important one is the
+R\textsubscript{0} value of any ID before we start an eradication
+campaign. Intuitively, the higher R\textsubscript{0}, the harder it will
+be to get it to \textless{} 1. We'll make that more explicit below.
 
 \begin{figure}
 \centering
-\includegraphics{./images/R0intervention.pdf}
+\includegraphics{./images/R0intervention.png}
 \caption{\label{fig:R0intervention}Impact of an Intervention on
 transmission.}
 \end{figure}
@@ -1770,48 +1751,36 @@ eventually. Of course, in general, we want to get R as close to 0 as
 possible, especially for a disease as deadly as Ebola. But to get an
 outbreak to fizzle out, we only need R \textless{} 1, not R = 0.
 
-\section{Reproductive Number and ID
-Eradication}\label{reproductive-number-and-id-eradication}
+\section{Estimating Intervention Efforts based on
+R}\label{estimating-intervention-efforts-based-on-r}
 
-If we could achieve R\textsubscript{0} \textless{} 1 globally
-everywhere, we could eventually eradicate a disease. The ability to do
-that depends on many factors. One important one is the
-R\textsubscript{0} value of any ID before we start an eradication
-campaign. Intuitively, the higher R\textsubscript{0}, the harder it will
-be to get it to \textless{} 1. We'll make that more explicit below.
-
-\section{Connecting Intervention Efforts and
-R}\label{connecting-intervention-efforts-and-r}
-
-We just discussed that R \textless{} 1 means no outbreak occurs. Let's
-make the relation between response efforts and the reproductive number a
-bit more quantitative. As a simple example, consider an infectious
-disease with R\textsubscript{0}=2. That means on average every infected
-person infects two others. If we could somehow protect a bit more than
-half of the susceptibles, then a person who might have become infected
-can't become infected anymore, and the \emph{effective R} (sometimes
-called R\textsubscript{eff}) drops below 1.
-
-More generally, to prevent an outbreak, a fraction p =
-1-1/R\textsubscript{0} of the population needs to be protected
-(e.g.~through vaccination). So for R\textsubscript{0} = 2, 50\%
-protection is required.
+Let's make the relation between response efforts and the reproductive
+number a bit more quantitative. As a simple example, consider an
+infectious disease with R\textsubscript{0}=2. That means on average
+every infected person infects two others. If we could somehow protect a
+bit more than half of the susceptibles, then a person who might have
+become infected can't become infected anymore, and the \emph{effective
+R} (sometimes called R\textsubscript{eff}) drops below 1. More
+generally, to prevent an outbreak, a fraction p = 1-1/R\textsubscript{0}
+of the population needs to be protected (e.g.~through vaccination). From
+this, it follows that the higher R\textsubscript{0}, the harder it is to
+control and ID. This is illustrated in figure
+\ref{fig:krR0intervention}. One can see both from the figure and the
+equation that a disease with say R\textsubscript{0} = 5 requires that
+80\% of the population is protected such that R\textsubscript{eff} = 1.
 
 The level of population protection at which R=1 is called critical
-herd/population immunity level. The relation between original/basic
-reproductive number, vaccine/intervention coverage, and effective R is
-R= R\textsubscript{0}(1-p). That's true if we assume that the
-intervention adequately protects those to whom it is applied. If
-instead, the intervention is not perfect, we have
-R=R\textsubscript{0}(1-e*p), where e is the effectiveness of the
-intervention/vaccine (e=1 is an entirely effective intervention).
-
-From this, it follows that the higher R\textsubscript{0}, the harder it
-is to control and ID.
+population (or herd) immunity level. The relation between basic
+reproductive number, intervention coverage, and effective R is R=
+R\textsubscript{0}(1-p). That holds true if we assume that the
+intervention fully protects those to whom it is applied. If the
+intervention is not perfect, we have R=R\textsubscript{0}(1-e*p), where
+e is the effectiveness of the intervention (e=1 is an entirely effective
+intervention).
 
 \begin{figure}
 \centering
-\includegraphics{./images/kr-R0intervention.pdf}
+\includegraphics{./images/kr-R0intervention.png}
 \caption{\label{fig:krR0intervention}R\textsubscript{0} and Interventions.
 From (Keeling and Rohani \protect\hyperlink{ref-keeling08}{2008}).}
 \end{figure}
@@ -1832,27 +1801,26 @@ number. Unfortunately it is customary to use the same letter for both.):
 \dot R &= g I
 \end{aligned}
 \] For this model, what needs to be true to get an increase in the
-number of infectious hosts? The influx of new infectious hosts,
-b\emph{S}I, needs to be larger than the outflow, g\emph{I. This
-condition, b}S\emph{I \textgreater{} g}I, can be rewritten as 1
-\textless{} (b\emph{S)/g. We then define the quantity on the right side
-of this condition as the reproductive number, R = (b}S)/g. At the
-beginning of an outbreak, where everyone is assumed to be susceptible
-(written as S= S\textsubscript{0}), we have the special case of the
-basic reproductive number, R\textsubscript{0} =
-(b\emph{S\textsubscript{0})/g. Note that the rate of recovery, g, is
-related to the average duration of infection, D as D=1/g. Therefore, one
-can also write R = D}b*S, with the special case R\textsubscript{0} for
-S=S\textsubscript{0}, i.e.~at the beginning of an outbreak.
+number of infectious hosts? The influx of new infectious hosts, bSI,
+needs to be larger than the outflow, gI. This condition, bSI
+\textgreater{} gI, can be rewritten as 1 \textless{} (bS)/g. We then
+define the quantity on the right side of this condition as the
+reproductive number, R = (bS)/g. At the beginning of an outbreak, where
+everyone is assumed to be susceptible (written as S=
+S\textsubscript{0}), we have the special case of the basic reproductive
+number, R\textsubscript{0} = (bS\textsubscript{0})/g. Note that the rate
+of recovery, g, is related to the average duration of infection, D as
+D=1/g. Therefore, one can also write R = DbS, with the special case
+R\textsubscript{0} for S=S\textsubscript{0}, i.e.~at the beginning of an
+outbreak.
 
-\section{How to determine R -
-Overview}\label{how-to-determine-r---overview}
+\section{How to determine R}\label{how-to-determine-r}
 
 Knowing the reproductive number for a particular pathogen and scenario
 is important to allow for adequate intervention planning. There are
 multiple ways to estimate R from data. We'll briefly discuss them now.
 
-\section{Determine R at the Beginning of an
+\subsection{Determine R at the Beginning of an
 Outbreak}\label{determine-r-at-the-beginning-of-an-outbreak}
 
 Very early in an outbreak, there will only be a few cases, and they
@@ -1875,13 +1843,13 @@ assumptions underlying these equations and further details, see e.g.
 
 \begin{figure}
 \centering
-\includegraphics{./images/viboud-R0.pdf}
+\includegraphics{./images/viboud-R0.png}
 \caption{\label{fig:viboudR0}Example of R0 estimation based on case data in
 the early stages of an outbreak. Source: Viboud et al 2006 Vaccine
 (Viboud et al. \protect\hyperlink{ref-viboud06}{2006}).}
 \end{figure}
 
-\section{Determine R Once the Outbreak is
+\subsection{Determine R Once the Outbreak is
 Over}\label{determine-r-once-the-outbreak-is-over}
 
 A larger R leads to a larger outbreak (ignoring things like
@@ -1912,7 +1880,7 @@ between the fraction infected and R\textsubscript{0} graphically.
 
 \begin{figure}
 \centering
-\includegraphics{./images/outbreaksize.pdf}
+\includegraphics{./images/outbreaksize.png}
 \caption{\label{fig:outbreaksize}The relation between R\textsubscript{0} and
 outbreak Size. If we have information about the size of an outbreak (in
 the absence of control measures), we can use it to estimate
@@ -1925,7 +1893,7 @@ susceptible and that the population is well mixed. More refined
 estimates for R, with more complicated equations, are available (Ma and
 Earn \protect\hyperlink{ref-ma06}{2006}).
 
-\section{Determining R at the Endemic/steady
+\subsection{Determining R at the Endemic/steady
 state}\label{determining-r-at-the-endemicsteady-state}
 
 For an ID that is at an endemic/steady state, we have another way of
@@ -1945,7 +1913,7 @@ population was susceptible, we have R\textsubscript{0}=2. Conversely, if
 we know R\textsubscript{0}, we can predict the number of susceptibles at
 the endemic state, S\textsubscript{eq}=1/R\textsubscript{0}.
 
-\section{Determining R Through Age of
+\subsection{Determining R Through Age of
 Infection}\label{determining-r-through-age-of-infection}
 
 For those ID for which an infection induces life-long immunity,
@@ -1961,7 +1929,7 @@ has been infected.
 
 \begin{figure}
 \centering
-\includegraphics{./images/R0age.pdf}
+\includegraphics{./images/R0age.png}
 \caption{\label{fig:R0age}Fraction seropositive (previously infected) as
 function of age for measles. Source (Keeling and Rohani
 \protect\hyperlink{ref-keeling08}{2008}).}
@@ -1977,12 +1945,14 @@ of infection. This shows what we expect intuitively: Higher
 R\textsubscript{0}, i.e.~more infectious ID, leads to an earlier age of
 infection.
 
-\emph{Note: If you want to determine R/R\textsubscript{0} to be used as
-parameter in a mathematical transmission model, you use this approach
-based on the age-seroprevalence relation even if the model you plan on
-using doesn't have age in it.}
+\subsubsection{Note \{mynotebox\}}\label{note-mynotebox}
 
-\section{Determining R Through Fitting a Full Transmission
+If you want to determine R/R\textsubscript{0} to be used as parameter in
+a mathematical transmission model, you use this approach based on the
+age-seroprevalence relation even if the model you plan on using doesn't
+have age in it.
+
+\subsection{Determining R Through Fitting a Full Transmission
 Model}\label{determining-r-through-fitting-a-full-transmission-model}
 
 Instead of just using data for the initial exponential growth phase,
@@ -2043,6 +2013,18 @@ Direct estimates of the transmission rate for a model are usually hard
 to find. Instead, we often determine R/R\textsubscript{0} for a given
 ID/setting and then use it to compute \emph{b} using equations like
 those shown above.
+
+\section{Case studies}\label{case-studies}
+
+\subsection{Basic Science example: Estimating the reproductive number
+for the 1918 influenza
+pandemic}\label{basic-science-example-estimating-the-reproductive-number-for-the-1918-influenza-pandemic}
+
+Marc paper
+
+\subsection{Policy/Application example: Estimating the reproductive
+number of the 2014 Ebola
+outbreak}\label{policyapplication-example-estimating-the-reproductive-number-of-the-2014-ebola-outbreak}
 
 \section{Summary and Cartoon}\label{summary-and-cartoon-3}
 
@@ -2253,12 +2235,6 @@ can and cannot contract a specific disease.
 \begin{itemize}
 \tightlist
 \item
-  Ewald and colleagues have done some interesting investigations
-  connecting transmission type to virulence/pathogenicity of specific
-  diseases. See for instance (Ewald
-  \protect\hyperlink{ref-ewald87}{1987}; Ewald
-  \protect\hyperlink{ref-ewald95}{1995}).
-\item
   A detailed discussion linking transmission types to model alternatives
   is provided in (McCallum et al.
   \protect\hyperlink{ref-mccallum17}{2017}).
@@ -2308,11 +2284,10 @@ transmission is Ebola.
 
 A particular group of contact transmission is vertical transmission
 between mother and child. This type of transmission is important for
-diseases such as HIV or Ebola. Since a model system for vertical
-transmission will, at the minimum, require stratification by age, it
-will not be discussed further here. After reading the \href{}{\emph{Host
-Heterogeneity} chapter}, it should be clear how such a scenario could be
-modeled.
+diseases such as HIV or Ebola. To describe vertical transmission, one
+needs to account for at least two different types of hosts, namely
+mothers and children. We will consider different types of hosts and how
+they can be represented in models in chapter \ref{heterogeneity}.
 
 \section{Airborne transmission}\label{airborne-transmission}
 
@@ -2595,6 +2570,14 @@ simplest SIR type model that can capture this process is given by \[
 get infected by contact with a contaminated environment at rate
 \emph{b}.
 
+\section{Case study examples}\label{case-study-examples-1}
+
+\subsection{Basic Science example: Environmental transmission for
+Cholera}\label{basic-science-example-environmental-transmission-for-cholera}
+
+\subsection{Policy/Application
+example:}\label{policyapplication-example}
+
 \section{Summary and Cartoon}\label{summary-and-cartoon-6}
 
 This chapter provided a discussion of environmental transmission and its
@@ -2644,8 +2627,7 @@ impact on ID dynamics and control.
 
 \section{References}\label{references-7}
 
-\chapter{Vector-borne ID
-Transmission}\label{vector-borne-id-transmission}
+\chapter{Vector-borne transmission}\label{vector-borne-transmission-1}
 
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives-7}
@@ -2816,7 +2798,7 @@ a wider range of control measures (such as vector killing).
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives-8}
 
-In this module, we will look a closer look at different types of control
+This chapter provides a closer look at different types of control
 against infectious diseases and their potential outcomes.
 
 The learning objectives for this chapter are:
@@ -3189,7 +3171,7 @@ diseases would be ideal.}
 
 \section{References}\label{references-10}
 
-\chapter{Host Heterogeneity}\label{host-heterogeneity}
+\chapter{Host Heterogeneity}\label{heterogeneity}
 
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives-10}
@@ -3611,7 +3593,7 @@ anti-TB drugs. As more countries become developed, the ID burden will
 decline (and likely with it, ``wealth diseases'' like obesity will
 rise).
 
-\section{Modeling multiple ID}\label{myadvancedbox}
+\subsubsection{Modeling multiple ID}\label{myadvancedbox}
 
 The approach to modeling multiple ID is similar to that of host
 heterogeneity: We need to split/stratify the population according to
@@ -3691,8 +3673,7 @@ Let me know if you find a suitable one!}
 
 \section{References}\label{references-12}
 
-\chapter{Stochastic Dynamics and
-Extinctions}\label{stochastic-dynamics-and-extinctions}
+\chapter{Stochastic Dynamics and Extinctions}\label{stochastic}
 
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives-12}
@@ -3862,18 +3843,12 @@ extinction. During emergence, the new disease starts at zero, then is
 introduced in modest numbers (possibly only a single introduction) into
 a new population, and ``bounces around'' for a while in small numbers.
 If conditions are right (i.e., local reproductive number greater than
-1), the disease might take off and spread (Antia et al.
-\protect\hyperlink{ref-antia03}{2003}). It might eventually reach high
-enough numbers that a deterministic approximation which focuses on the
-mean dynamics is warranted. Many recent emerging disease outbreak
-followed that pattern. The 2014 Ebola outbreak and 2009 Influenza
-pandemic reached sufficiently large numbers that a deterministic
-approach was reasonable, while the 2013 SARS epidemic and previous Ebola
-outbreaks lead to relatively few cases, so a stochastic modeling and
-analysis approach is likely more appropriate.
-
-The next chapter discusses the evolution and emergence of new diseases
-in more detail, with a focus on drug resistance evolution and emergence.
+1), the disease might take off and spread. It might eventually reach
+high enough numbers that a deterministic approximation which focuses on
+the mean dynamics is warranted. To understand emerging infectious
+diseases, one needs to account for evolutionary dynamics. Both are an
+important topics in infectious disease epidemiology and will considered
+in detail in the next few chapters.
 
 \section{Are stochastic models
 better?}\label{are-stochastic-models-better}
@@ -3943,23 +3918,25 @@ and its relation to disease extinctions.
 
 \section{References}\label{references-13}
 
-\chapter{Evolutionary Dynamics}\label{evolutionary-dynamics}
+\chapter{Evolutionary Dynamics
+Introduction}\label{evolutionary-dynamics-introduction}
 
 \section{Overview and Learning
 Objectives}\label{overview-and-learning-objectives-13}
 
-In this chapter, we will take a look at ID-evolution and its relation to
-control measures.
+In this chapter, we will take a look at the evolutionary dynamics of
+infectious diseases.
 
 The learning objectives for this chapter are:
 
 \begin{itemize}
 \tightlist
 \item
-  Understand the central mechanisms and drivers of ID-evolution
+  Understand the central mechanisms and drivers of infectious disease
+  evolution
 \item
   Be able to assess how different control strategies can affect
-  ID-evolution
+  infectious disease evolution
 \end{itemize}
 
 \section{Introduction}\label{introduction-13}
@@ -3977,6 +3954,39 @@ eliminating those with low fitness. These features of microbial
 populations often lead to rapid evolutionary changes. Such evolutionary
 change can become a public health problem.
 
+\section{Basics of Evolutionary
+dynamics}\label{basics-of-evolutionary-dynamics}
+
+Two main mechanisms underly evolutionary dynamics: First, diversity
+needs to be generated.
+
+Second, newly created mutants undergo \emph{selection}. Depending on the
+phenotype of the mutant and the environment, it might be more or less
+fit than the wild-type (e.g.~grow better inside a host or transmit
+better between hosts). Depending on this fitness
+
+Another process is drift. Even if a mutant has lowe or higher fitness
+than the wild-type.
+
+These two processes are often labeled `mutation' and `selection'. In
+that terminology, mutation includes processes such as point mutation,
+recombination, etc.
+
+The mutation process is generally stochastic, new mutants are generated
+at random. For most organisms, this also occurs at a fixed rate,
+independent of the setting. An exception are some bacteria that are
+thought to be able to increase generation of new mutants in response to
+environmental factors REFS.
+
+The selection process is potentially less random and more predictable.
+
+In general (apart from the possible phenomenon of drug-induced
+hypermutation in bacteria), the generation of genetic variants is not
+influenced by any human intervention. Those mutants are constantly
+produced. In the usual setting, most mutants are less fit than the
+wild-type strain and therefore are outcompeted. If not, they replace the
+current strain and become the new wild-type.
+
 \section{Evolution and Immune Escape}\label{evolution-and-immune-escape}
 
 A powerful driver of evolution is the host immune response. If an ID
@@ -3990,120 +4000,6 @@ much to circumvent immune response (measles is a good example) is not
 quite clear, though some studies have speculated on that topic (Frank
 and Bush \protect\hyperlink{ref-frank07}{2007}; Lange and Ferguson
 \protect\hyperlink{ref-lange09}{2009}).
-
-\section{Public Health Interventions and
-Evolution}\label{public-health-interventions-and-evolution}
-
-Some of the most potent drivers of evolution are in fact public health
-interventions that try to reduce the burden of an ID. The more powerful
-the intervention (e.g., vaccines or drugs), the more evolutionary
-pressure a pathogen faces and the more advantaged a pathogen variant
-that is partially or entirely resistant to the intervention will be. The
-following sections briefly discuss several drivers of public health
-importance that influence the selective fitness of different genetic
-variants and thereby drive ID-evolution.
-
-\subsection{Evolution of Immunity or Vaccine
-Escape}\label{evolution-of-immunity-or-vaccine-escape}
-
-Vaccines are some of our most potent interventions. Vaccination induces
-immunity in the vaccinated hosts. If a pathogen can circumvent immunity
-and infected vaccinated individuals, it will have a large fitness
-advantage. Therefore, any mutation that arises which allows a pathogen
-to reduce the impact of host immunity will likely spread through a
-population quickly. Most immunity works through antibodies. Thus
-pathogen variants that evolve not to be (or less) recognized by
-pre-existing antibodies have an advantage. This is the same mechanism
-induced by natural immunity. Thus, pathogens that frequently evolve to
-escape natural antibody-based immunity (e.g., influenza, HIV) are also
-able to develop resistance to vaccine-induced immunity. This is the
-reason we need to get re-immunized with influenza vaccines regularly and
-why we have not managed to develop an HIV vaccine. In contrast, an ID
-like measles which does not seem to be able to escape natural immunity
-also does not evolve resistance to the vaccine, and we can use the same
-vaccine against measles we have been using for decades.
-
-The reason why measles might not be able to escape binding by
-pre-existing antibodies is likely because the binding site is also the
-part of the virus that is needed to attach to and enter host cells. Any
-mutation evading antibody binding would also lead to an inability to
-attach to and infect cells. In contrast, for influenza, the antibody
-binding regions and the receptor attachment regions are somewhat
-distinct.
-
-\subsection{Evolution of Drug
-Resistance}\label{evolution-of-drug-resistance}
-
-Drugs are another mechanism that applies a strong selective pressure.
-Any pathogen that can avoid being killed by a drug can potentially `take
-over' a patient and transmit to the next. If drug use is widespread in
-the population, those resistant mutants which generally have lower
-fitness than the wild-type, drug-sensitive strain can take over in a
-population. This phenomenon has been observed with many different ID and
-drugs and produced such looming public health problems as extensively
-drug-resistant TB (XDR TB) and methicillin-resistant Staphylococcus
-aureus (MRSA) (Levy and Marshall \protect\hyperlink{ref-levy04}{2004}).
-Since viruses tend to evolve faster than bacteria, drug resistance
-evolution is often a problem at the individual patient level. HIV is the
-prime example. Single-drug therapy for HIV fails consistently because
-the virus quickly evolved resistance. Only once we started using
-multiple drugs at the same time were we able to prevent rapid evolution.
-We are playing a `numbers game' since the chance of 3 resistance
-mutations against 3 different drugs occurring is so small that it rarely
-happens during the treatment of an individual host, thus making the
-drugs effective for the host's lifetime. Since drug resistance is such
-an important public health problem, it is widely studied. This includes
-many modeling studies. For an overview of some of those, see (Louz et
-al. \protect\hyperlink{ref-louz10}{2010}; Temime et al.
-\protect\hyperlink{ref-temime08}{2008}; Wiesch et al.
-\protect\hyperlink{ref-wiesch11}{2011}).
-
-\section{Evolution of Virulence}\label{evolution-of-virulence}
-
-The term virulence is a bit fuzzy, but it generally means `harm to the
-host'. That could be due to mortality caused by an ID, or in less severe
-forms, ID-related morbidity (sickness/symptoms). Pathogens `don't care'
-about harming their hosts, their primary `purpose' is to get in,
-replicate, and get back out and infect the next host. Sometimes,
-inducing some morbidity in the host is useful for the pathogen. Sneezing
-and coughing for respiratory infections might lead to enhanced
-transmission and therefore increased pathogen fitness. In other
-situations, inducing morbidity/mortality doesn't increase pathogen
-fitness, but it also doesn't decrease it. Therefore, selection doesn't
-act to change the number of symptoms induced. Pathogens that are too
-virulent, and in extreme cases kill their hosts, generally have reduced
-fitness since, in most situations, dead hosts do not transmit. The idea
-is then that pathogens evolve to induce the level of virulence that is
-optimal for their overall transmission fitness.
-
-\section{Evolution and Public Health
-Interventions}\label{evolution-and-public-health-interventions}
-
-In general (apart from the possible phenomenon of drug-induced
-hypermutation in bacteria), the generation of genetic variants is not
-influenced by any human intervention. Those mutants are constantly
-produced. In the usual setting, most mutants are less fit than the
-wild-type strain and therefore are outcompeted. If not, they replace the
-current strain and become the new wild-type. What happens in the
-presence of interventions is that the fitness landscape changes. For
-instance, if we give a patient drugs, a mutant resistant to drugs with a
-fitness less than the wild-type in the absence of drug treatment has a
-significant advantage and can outcompete the wild-type strain.
-
-\section{Co-evolution}\label{co-evolution}
-
-While the hosts infected by ID also evolve, this usually happens on much
-slower time-scales. As such, studying evolution by assuming only the ID
-evolves and not the host is often a good approximation. However, there
-are examples where host evolution needs to be considered. A good example
-is the introduction of myxoma virus to control Australian rabbit
-populations. Evolution of both the virus and rabbits was observed. Over
-longer time-scales, features such as sickle cell anemia, which comes
-from a mutation that is associated with reduced malaria morbidity, is
-likely a trait some humans evolved in response to malaria. A discussion
-of genetic characteristics in humans that might be attributable to
-evolution in response to specific infectious diseases is provided in
-(Pittman et al. \protect\hyperlink{ref-pittman16}{2016}).
 
 \section{Modeling Evolutionary
 Dynamics}\label{modeling-evolutionary-dynamics}
@@ -4127,6 +4023,21 @@ not pre-specified, differences in their fitness, and perhaps even
 allowing for host evolution, the models get quite a bit more
 complicated. They are not necessarily conceptually harder, but there is
 more bookkeeping and coding involved making it technically trickier.
+
+\section{Co-evolution}\label{co-evolution}
+
+While the hosts infected by ID also evolve, this usually happens on much
+slower time-scales. As such, studying evolution by assuming only the ID
+evolves and not the host is often a good approximation. However, there
+are examples where host evolution needs to be considered. A good example
+is the introduction of myxoma virus to control Australian rabbit
+populations. Evolution of both the virus and rabbits was observed. Over
+longer time-scales, features such as sickle cell anemia, which comes
+from a mutation that is associated with reduced malaria morbidity, is
+likely a trait some humans evolved in response to malaria. A discussion
+of genetic characteristics in humans that might be attributable to
+evolution in response to specific infectious diseases is provided in
+(Pittman et al. \protect\hyperlink{ref-pittman16}{2016}).
 
 \section{Summary and Cartoon}\label{summary-and-cartoon-13}
 
@@ -4183,11 +4094,113 @@ humans. Source: smbc-comics.com (\url{http://www.smbc-comics.com/})}
 
 \section{References}\label{references-14}
 
+\chapter{Evolution and Control}\label{evolution-and-control}
+
+\section{Overview and Learning
+Objectives}\label{overview-and-learning-objectives-14}
+
+In this chapter, we will discuss how control of infectious diseases can
+induce strong evolutionary pressure and how this often leads to unwanted
+results.
+
+The learning objectives for this chapter are:
+
+\begin{itemize}
+\tightlist
+\item
+  Understand how control measures affect pathogen fitness
+\item
+  Assess the impact of different control measures on potential for
+  evolution
+\item
+  Know about similarities and differences in certain ID control
+  strategies
+\end{itemize}
+
+\section{Introduction}\label{introduction-14}
+
+Some of the most potent drivers of evolution are the very same control
+strategies we have developed to try to reduce the burden of an ID. The
+more powerful the intervention, the more evolutionary pressure a
+pathogen faces and the more advantaged a pathogen variant that is
+partially or entirely resistant to the intervention will be.
+
+The following sections discuss several drivers of public health
+importance that influence the selective fitness of different genetic
+variants and thereby drive ID-evolution.
+
+What happens in the presence of interventions is that the fitness
+landscape changes. For instance, if we give a patient drugs, a mutant
+resistant to drugs with a fitness less than the wild-type in the absence
+of drug treatment has a significant advantage and can outcompete the
+wild-type strain.
+
+\section{Vaccine Escape}\label{vaccine-escape}
+
+Vaccines are some of our most potent interventions. Vaccination induces
+immunity in the vaccinated hosts. If a pathogen can circumvent immunity
+and infected vaccinated individuals, it will have a large fitness
+advantage. Therefore, any mutation that arises which allows a pathogen
+to reduce the impact of host immunity will likely spread through a
+population quickly. Most immunity works through antibodies. Thus
+pathogen variants that evolve not to be (or less) recognized by
+pre-existing antibodies have an advantage. This is the same mechanism
+induced by natural immunity. Thus, pathogens that frequently evolve to
+escape natural antibody-based immunity (e.g., influenza, HIV) are also
+able to develop resistance to vaccine-induced immunity. This is the
+reason we need to get re-immunized with influenza vaccines regularly and
+why we have not managed to develop an HIV vaccine. In contrast, an ID
+like measles which does not seem to be able to escape natural immunity
+also does not evolve resistance to the vaccine, and we can use the same
+vaccine against measles we have been using for decades.
+
+The reason why measles might not be able to escape binding by
+pre-existing antibodies is likely because the binding site is also the
+part of the virus that is needed to attach to and enter host cells. Any
+mutation evading antibody binding would also lead to an inability to
+attach to and infect cells. In contrast, for influenza, the antibody
+binding regions and the receptor attachment regions are somewhat
+distinct.
+
+\section{Drug Resistance}\label{drug-resistance}
+
+Drugs are another mechanism that applies a strong selective pressure.
+Any pathogen that can avoid being killed by a drug can potentially `take
+over' a patient and transmit to the next. If drug use is widespread in
+the population, those resistant mutants which generally have lower
+fitness than the wild-type, drug-sensitive strain can take over in a
+population. This phenomenon has been observed with many different ID and
+drugs and produced such looming public health problems as extensively
+drug-resistant TB (XDR TB) and methicillin-resistant Staphylococcus
+aureus (MRSA) (Levy and Marshall \protect\hyperlink{ref-levy04}{2004}).
+Since viruses tend to evolve faster than bacteria, drug resistance
+evolution is often a problem at the individual patient level. HIV is the
+prime example. Single-drug therapy for HIV fails consistently because
+the virus quickly evolved resistance. Only once we started using
+multiple drugs at the same time were we able to prevent rapid evolution.
+We are playing a `numbers game' since the chance of 3 resistance
+mutations against 3 different drugs occurring is so small that it rarely
+happens during the treatment of an individual host, thus making the
+drugs effective for the host's lifetime. Since drug resistance is such
+an important public health problem, it is widely studied. This includes
+many modeling studies. For an overview of some of those, see (Louz et
+al. \protect\hyperlink{ref-louz10}{2010}; Temime et al.
+\protect\hyperlink{ref-temime08}{2008}; Wiesch et al.
+\protect\hyperlink{ref-wiesch11}{2011}).
+
+\section{Summary and Cartoon}\label{summary-and-cartoon-14}
+
+\section{Exercises}\label{exercises-14}
+
+\section{Further Resources}\label{further-resources-14}
+
+\section{References}\label{references-15}
+
 \chapter{Emerging Infectious
 Diseases}\label{emerging-infectious-diseases}
 
 \section{Overview and Learning
-Objectives}\label{overview-and-learning-objectives-14}
+Objectives}\label{overview-and-learning-objectives-15}
 
 In this chapter, we will take a look at the evolutionary processes
 underlying the emergence of new Infectious Diseases.
@@ -4203,38 +4216,32 @@ The learning objectives for this chapter are:
   potential future ID emergence
 \end{itemize}
 
-\section{Introduction}\label{introduction-14}
+\section{Introduction}\label{introduction-15}
 
 The definition of emerging infectious disease (EID) is a bit vague, but
-in general a pathogen that is `new' to a specific population and has
-never been seen in that population before can be considered an EID. A
-`new' pathogen can mean a genuinely new one (e.g.~SARS or MERS-CoV in
-humans), or a new variant of an existing pathogen (e.g.~the 2009 H1N1
-influenza that caused a pandemic, or drug resistant Staph Aureus). In
-each case, there is usually a mix of deterministic drivers (e.g.~changes
-in climate, population density, antibiotic use) and random chance that
-lead to the emergence of new diseases.
+in general a pathogen that is `new' to a specific population can be
+considered an EID. A `new' pathogen can mean a genuinely new one
+(e.g.~SARS or MERS-CoV in humans), or a new variant of an existing
+pathogen (e.g.~the 2009 H1N1 influenza that caused a pandemic, or drug
+resistant Staph Aureus). In each case, there is usually a mix of
+deterministic drivers (e.g.~changes in climate, population density,
+antibiotic use) and random chance that lead to the emergence of new
+diseases.
 
 \section{Emergence and Evolution}\label{emergence-and-evolution}
 
-For infectious diseases, you will often hear the term \emph{emergence}
-as in \emph{Emerging Infectious Diseases}. This means the ID is in some
-way new to a population, either never seen in a particular host before
-(e.g., SARS emergence in 2003 in humans) or a disease that emerges in a
-new location. The pathogen can either be an entirely new type (e.g.,
-SARS, MERS) or a variant of an existing one (e.g., a new strain of
-influenza or norovirus, or a drug-resistant form of a bacteria).
-Emergence describes the observed phenomenon. Almost always in such
-cases, some evolution occurs. For instance, a pathogen that is already
-in the human population evolves drug resistance. Or a new pathogen is
-introduced into the human population and then undergoes evolution to
-adapt to the new host. While one could define emergence as the
-phenomenon and evolution as the mechanism, in practice, you will often
-find these terms used interchangeably, and the exact meaning will depend
-on how the author defines it. In this chapter, we will discuss both the
-mechanisms of evolution and how they can lead to the emergence of new
-pathogens. The ability to understand and predict the emergence of new
-IDs is, of course, of vital importance, recent references providing
+The word `emergence' describes what is observed, a new disease shows up
+for the first time (emerges) in a population. This emergence is almost
+always linked to evolutionary processes. For instance, a pathogen that
+is already in the human population evolves drug resistance. Or a new
+pathogen is introduced into the human population and then undergoes
+evolution to adapt to the new host. While one could define emergence as
+the phenomenon and evolution as the mechanism, in practice, you will
+often find these terms used interchangeably, and the exact meaning will
+depend on how the author defines it. In this chapter, we will discuss
+both the mechanisms of evolution and how they can lead to the emergence
+of new pathogens. The ability to understand and predict the emergence of
+new IDs is, of course, of vital importance, recent references providing
 additional information are (Brett, Drake, and Rohani
 \protect\hyperlink{ref-brett17}{2017}; Dibble et al.
 \protect\hyperlink{ref-dibble16}{2016}).
@@ -4261,6 +4268,22 @@ decades - though predicting what changes exactly will occur, and which
 diseases might increase and decrease in importance is very difficult
 (Altizer et al. \protect\hyperlink{ref-altizer13}{2013}).
 
+\section{Emergence dynamics}\label{emergence-dynamics}
+
+During the process of emergence, the new disease is initially - by
+definition - not present (or at least not detectable by our surveillance
+methods). Initially a small number of new hosts are infected by the new
+disease. The disease ``bounces around'' for a while with few
+transmission events and overall low numbers. If conditions are right
+(the local reproductive number is greater than 1), the disease might
+take off and spread. Once it has spread enough that our surveillance
+systems notice it, we consider this new disease as having emerged in
+that population. The newly emerged (observed) disease can then either be
+brought under control relatively quickly (e.g.~2003 SARS outbreak), or
+with much effort (e.g.~2014 Ebola outbreak), or not be fully controlled
+but continue at a low level (e.g.~MERS-CoV) or uncontrolled and
+spreading widely (e.g.~2009 influenza pandemic).
+
 \section{Modeling ID Emergence
 Dynamics}\label{modeling-id-emergence-dynamics}
 
@@ -4284,28 +4307,91 @@ allowing for host evolution, the models get quite a bit more
 complicated. They are not necessarily conceptually harder, but there is
 more bookkeeping and coding involved making it technically trickier.
 
-\section{Summary and Cartoon}\label{summary-and-cartoon-14}
+\section{Summary and Cartoon}\label{summary-and-cartoon-15}
 
 This module provides a brief discussion of ID emergence.
 
-\section{Exercises}\label{exercises-14}
+\section{Exercises}\label{exercises-15}
 
 \begin{itemize}
 \item
 \end{itemize}
 
-\section{Further Resources}\label{further-resources-14}
+\section{Further Resources}\label{further-resources-15}
 
 \begin{itemize}
 \item
 \end{itemize}
 
-\section{References}\label{references-15}
+\section{References}\label{references-16}
+
+\chapter{Virulence}\label{virulence}
+
+\section{Overview and Learning
+Objectives}\label{overview-and-learning-objectives-16}
+
+In this chapter, we will discuss the concept of virulence and how it can
+be understood from an evolutionary perspective.
+
+The learning objectives for this chapter are:
+
+\begin{itemize}
+\tightlist
+\item
+  Be able to define virulence
+\item
+  Understand the drivers of virulence for specific diseases
+\end{itemize}
+
+\section{Introduction}\label{introduction-16}
+
+Many pathogens harm their hosts, some in small amounts (e.g.~a runny
+nose), some in large amounts (e.g.~death). The question of why that is
+the case is
+
+\section{Virulence definition}\label{virulence-definition}
+
+The term virulence is a bit fuzzy, but it generally means `harm to the
+host'. That could be due to mortality caused by an ID, or in less severe
+forms, ID-related morbidity (sickness/symptoms).
+
+\section{Virulence evolution}\label{virulence-evolution}
+
+Pathogens `don't care' about harming their hosts, their primary
+`purpose' is to get in, replicate, and get back out and infect the next
+host. Sometimes, inducing some morbidity in the host is useful for the
+pathogen. Sneezing and coughing for respiratory infections might lead to
+enhanced transmission and therefore increased pathogen fitness. In other
+situations, inducing morbidity/mortality doesn't increase pathogen
+fitness, but it also doesn't decrease it. Therefore, selection doesn't
+act to change the number of symptoms induced. Pathogens that are too
+virulent, and in extreme cases kill their hosts, generally have reduced
+fitness since, in most situations, dead hosts do not transmit. The idea
+is then that pathogens evolve to induce the level of virulence that is
+optimal for their overall transmission fitness.
+
+\section{Summary and Cartoon}\label{summary-and-cartoon-16}
+
+\section{Exercises}\label{exercises-16}
+
+\section{Further Resources}\label{further-resources-16}
+
+\begin{itemize}
+\tightlist
+\item
+  Ewald and colleagues have done some interesting investigations
+  connecting transmission type to virulence/pathogenicity of specific
+  diseases. See for instance (Ewald
+  \protect\hyperlink{ref-ewald87}{1987}; Ewald
+  \protect\hyperlink{ref-ewald95}{1995}).
+\end{itemize}
+
+\section{References}\label{references-17}
 
 \chapter{Networks and ID}\label{networks-and-id}
 
 \section{Overview and Learning
-Objectives}\label{overview-and-learning-objectives-15}
+Objectives}\label{overview-and-learning-objectives-17}
 
 In this module, we will briefly discuss the concept of transmission
 networks and how that affects ID dynamics and control.
@@ -4325,7 +4411,7 @@ The learning objectives for this chapter are:
   Evaluate the impact of network structure on ID transmission
 \end{itemize}
 
-\section{Introduction}\label{introduction-15}
+\section{Introduction}\label{introduction-17}
 
 ID spread along \emph{connections} between infected and uninfected
 hosts. Those could be very close and defined connections, such as for
@@ -4507,7 +4593,7 @@ technically challenging. Not too many of such models currently exist,
 but it is an area of active investigation by many, see (Bansal et al.
 \protect\hyperlink{ref-bansal10}{2010}).
 
-\section{Summary and Cartoon}\label{summary-and-cartoon-15}
+\section{Summary and Cartoon}\label{summary-and-cartoon-17}
 
 This module provides a brief discussion of transmission networks and how
 they impact dynamics and control of ID.
@@ -4519,7 +4605,7 @@ they impact dynamics and control of ID.
 many ways similar. \href{https://xkcd.com/350/}{Source: xkcd.com}.}
 \end{figure}
 
-\section{Exercises}\label{exercises-15}
+\section{Exercises}\label{exercises-17}
 
 \begin{itemize}
 \tightlist
@@ -4542,7 +4628,7 @@ many ways similar. \href{https://xkcd.com/350/}{Source: xkcd.com}.}
   that was observed in relation to the ones described in section 5.
 \end{itemize}
 
-\section{Further Resources}\label{further-resources-15}
+\section{Further Resources}\label{further-resources-17}
 
 \begin{itemize}
 \tightlist
@@ -4560,7 +4646,7 @@ many ways similar. \href{https://xkcd.com/350/}{Source: xkcd.com}.}
   Jones \protect\hyperlink{ref-salathe10}{2010}).
 \end{itemize}
 
-\section{References}\label{references-16}
+\section{References}\label{references-18}
 
 \chapter{Summary}\label{summary}
 
@@ -4687,10 +4773,117 @@ opinions:
   use them for some reason, I would stay away from them.
 \end{itemize}
 
-\section{References}\label{references-17}
+\section{References}\label{references-19}
 
-\chapter{Appendix B - The different uses of ID
-models}\label{appendix-b---the-different-uses-of-id-models}
+\chapter{Appendix B - How to build or use the right
+model}\label{modelcomplexity}
+
+Onee might be inclined to build very complicated and detailed models, in
+an effort to be as realistic as possible. While more detailed models can
+indeed be more realistic, there are several drawbacks. First, as models
+get larger, they contain more parameters. Each parameter needs to be
+given a numeric value to allow one to run simulations. One can try to
+obtain the parameters from the literature, however, often that
+information is not available. Alternatively, one could fit the model to
+data (something not discussed in this book) and try to estimate the
+parameters. However, with the kind of data typically available, one can
+usually only estimate a few parameters with some level of certainty. And
+even if one were to be able to get good estimates for all model
+parameters, larger models are harder to implement, take longer to run,
+and are more difficult to analyze. With too many parts present, it can
+be hard to understand how different components interact with each other
+and affect outcomes of interest.
+
+We therefore cannot - and do not want to - include every detail of a
+complex system, i.e.~all components and interactions. We need to decide
+which parts are important and need to be in the model, and which ones we
+can ignore. A simple and somewhat silly example: We never include the
+hair color of individuals in any infectious disease models (at least
+I've never seen such a model), since we assume that this characteristic
+is not important for the ID dynamics. The choice to include or exclude
+other features is less obvious in other cases. For instance, for an HIV
+model, we likely need gender, while a SARS model might ignore this
+characteristic.
+
+It is important to find a trade-off between details that need to be
+included and details one can leave out. Unfortunately, there is no
+recipe for it. Some very simple models have produced useful insights,
+while there are big models in the literature that arguably do little to
+nothing in helping us understand or deal with infectious diseases.
+Obviously, there have also been fairly big models that have produced
+useful information, and small models that are too simplistic to provide
+much information about any real system.
+
+A good analogy for model building and use in general is the use of maps.
+Maps are models of the real world. They serve specific purposes, and it
+is important that a given map be useful for the intended purpose. For
+instance, if we want to know how to drive from Atlanta to Athens, the
+left map in figure \ref{fig:mapfigure} would be most useful. If instead
+we want to know where in the US the state of Georgia is located, the
+middle map is most useful. If we want to know where most people live in
+Georgia, the right map is most useful. In each case, we study the same
+object (the state of Georgia), but depending on the question, different
+maps are needed. Maps (and models) are useful because they capture the
+information that is needed for a specific situation, while leaving out
+unneccesary information. Nobody would want to have a map so detailed
+that it is essentially the real world - it wouldn't be a very useful map
+anymore.
+
+\begin{figure}
+\centering
+\includegraphics{./images/mapfigure.png}
+\caption{\label{fig:mapfigure}Three different maps of the state of Georgia.}
+\end{figure}
+
+In analogy to the map example, we need to decide for a specific ID,
+scenario, and question which details to include in our model and which
+ones to ignore. In general, the primary interactions between components
+of the system are needed. Thus, if we wanted to model the transmission
+dynamics of Ebola, we might need to include deceased infected
+individuals into the model, since they are known to contribute to
+transmission. In contrast, if we want to study how some control
+strategies for SARS might reduce the total number of \emph{infected} but
+we don't care about the impact on total deaths (unlikely, but let's just
+pretend). In this case, we would not need a dead compartment in our
+model, since those dead don't further interact with anyone else in the
+system. However, if we want to keep track of deaths and how they are
+impacted by our intervention (likely), we do need to track them - even
+though dead people are not known to transmit SARS.
+
+To build models that are suitable to study a particular system, model
+builders need to be experts on the system they want to study or
+collaborate with subject matter experts. Building a good model needs to
+follow the
+\href{https://en.wikipedia.org/wiki/Goldilocks_principle}{Goldilocks
+Principle}: If a model is too simple, it likely doesn't approximate the
+real system very well. If the model is too complicated, it is hard to
+build and analyze, and might not lead to much insight (i.e.~the model is
+a big black box). The goal is to get the model \emph{just right}
+regarding size and complexity. Unfortunately, no recipe or formula
+exists specifying how to build a \emph{just right} model. Using models
+that are suitable for a given system and question is a hallmark of a
+good scientist.
+
+The model building and analysis process is often iterative. After a
+model has been built and studied, it might become clear -- e.g.~by
+comparing the model with data -- that important components or
+interactions have been ignored or not been included correctly. This
+leads to model modification and refinement. This back and forth between
+model and data/the real world can happen over multiple iterations.
+
+Note that for purposes of teaching, we keep the models throughout this
+book fairly simple. The models will include the feature we are focusing
+on while excluding others. For instance, we include humans and mosquitos
+for vector-borne IDs but ignore things like asymptomatic or
+pre-symptomatic states. This is mainly done to keep models simple and
+focus on one feature at a time. Models that address ``real'' questions
+often -- but not always -- include more details than the models we
+investigate througout this book.
+
+\section{References}\label{references-20}
+
+\chapter{Appendix C - The different uses of Infectious Disease
+models}\label{appendix-c---the-different-uses-of-infectious-disease-models}
 
 \section{Overview}\label{overview-1}
 
@@ -4746,10 +4939,10 @@ estimates for model parameters. Often, such parameters have a directly
 interpretable biological meaning (e.g.~the rate of virus production by
 infected cells) and are thus of interest on their own.
 
-\section{References}\label{references-18}
+\section{References}\label{references-21}
 
-\chapter{Appendix C - A very brief introduction to data
-fitting}\label{appendix-c---a-very-brief-introduction-to-data-fitting}
+\chapter{Appendix D - A very brief introduction to data
+fitting}\label{appendix-d---a-very-brief-introduction-to-data-fitting}
 
 \section{Overview}\label{overview-2}
 
@@ -4761,7 +4954,22 @@ estimate quantities of interest (e.g.~the reproductive number chapter).
 
 \section{Technical details}\label{technical-details}
 
-\section{References}\label{references-19}
+\section{References}\label{references-22}
+
+\chapter{Appendix E - Glossary of terms}\label{glossary}
+
+The following provides very short explanation of commonly used terms. As
+applicable, references pointing to further details are provided.
+
+\textbf{Incidence}
+
+\textbf{Prevalence}
+
+\textbf{endemic}
+
+\textbf{zoonosis}
+
+\chapter{References}\label{references}
 
 \hypertarget{refs}{}
 \hypertarget{ref-abu-raddad06}{}
@@ -4787,12 +4995,6 @@ doi:\href{https://doi.org/10.1126/science.1239401}{10.1126/science.1239401}.
 \hypertarget{ref-anderson91}{}
 Anderson, Roy M, and RM May. 1991. ``Infectious Disease of Humans.''
 \emph{Dynamics and Control}.
-
-\hypertarget{ref-antia03}{}
-Antia, Rustom, Roland R Regoes, Jacob C Koella, and Carl T Bergstrom.
-2003. ``The Role of Evolution in the Emergence of Infectious Diseases.''
-\emph{Nature} 426 (6967): 658--61.
-doi:\href{https://doi.org/10.1038/nature02104}{10.1038/nature02104}.
 
 \hypertarget{ref-bansal07}{}
 Bansal, Shweta, Bryan T. Grenfell, and Lauren Ancel Meyers. 2007. ``When
@@ -4886,6 +5088,11 @@ Brankston, Gabrielle, Leah Gitterman, Zahir Hirji, Camille Lemieux, and
 Michael Gardam. 2007. ``Transmission of Influenza A in Human Beings.''
 \emph{The Lancet Infectious Diseases} 7 (4): 257--65.
 \url{http://www.sciencedirect.com/science/article/pii/S1473309907700294}.
+
+\hypertarget{ref-breiman01}{}
+Breiman, Leo, and others. 2001. ``Statistical Modeling: The Two Cultures
+(with Comments and a Rejoinder by the Author).'' \emph{Statistical
+Science} 16 (3). Institute of Mathematical Statistics: 199--231.
 
 \hypertarget{ref-brett17}{}
 Brett, Tobias S, John M Drake, and Pejman Rohani. 2017. ``Anticipating
@@ -5439,6 +5646,10 @@ Influenza in the Continental United States.'' \emph{PLoS Biol} 8 (2).
 College of Oceanic; Atmospheric Sciences, Oregon State University,
 Corvallis, Oregon, United States of America.: e1000316.
 doi:\href{https://doi.org/10.1371/journal.pbio.1000316}{10.1371/journal.pbio.1000316}.
+
+\hypertarget{ref-shmueli10}{}
+Shmueli, Galit. 2010. ``To Explain or to Predict?'' \emph{Statistical
+Science}. JSTOR, 289--310.
 
 \hypertarget{ref-shrestha13}{}
 Shrestha, Sourya, Betsy Foxman, Suzanne Dawid, Allison E Aiello, Brian M

@@ -1,6 +1,6 @@
 # Virulence
 
-##Overview and Learning Objectives
+## Overview and Learning Objectives
 In this chapter, we will discuss the concept of virulence and how it can be understood from an evolutionary perspective. 
 
 The learning objectives for this chapter are:
@@ -22,11 +22,11 @@ Pathogens 'don't care' about harming their hosts, their primary 'purpose' is to 
 
 
 
-##Summary and Cartoon
+## Summary and Cartoon
 
-##Exercises
+## Exercises
 
 ## Further Resources
 * Ewald and colleagues have done some interesting investigations connecting transmission type to virulence/pathogenicity of specific diseases. See for instance [@ewald87; @ewald95].
 
-##References
+## References

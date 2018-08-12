@@ -73,7 +73,7 @@ As example, here is how we currently cover ID Epi at our institution (College of
 
 My colleague Isaac Fung at Georgia Southern University has also started to use the draft version of the book in his Infectious Disease Epidemiology Modeling class, alongside his current main textbook [@vynnycky10].
 
-#Readership
+# Readership
 
 The main audience are students in public health and related biomedical disciplines who want to learn about infectious disease epidemiology from a modern, systems-based perspective, while not (yet) wanting to engage deeply with the math and computational aspects related to the topic.
 
@@ -82,7 +82,7 @@ I assume readers are familiar with basic epidemiological and public health ideas
 It is likely that most readers will have some gaps (e.g. not being familiar with a specific disease or a specific epidemiological concept). Deep knowledge of any such topic is not required. Thus, filling such gaps does not require anything beyond some basic reading on main sources such as Wikipedia, the CDC website, or similar. Each chapter also provides links to further resources that can help fill any gaps, as well as point readers toward more advanced materials on a given topic if they decide to dig deeper.
 
 
-#Competing/related books 
+# Competing/related books 
 The rationale and scope sections above describe how I believe this book differs from existing classical ID EPi books ([@magnus08; @nelson13; @giesecke17]) and ID Modeling books ([@anderson91; @diekmann00; @keeling08; @vynnycky10]) and is positioned in the gap that I think exists between these two categories of currently existing ID Epi books.
 
 Another book worth mentioning is [@kraemer10], which is an edited volume. It is a mix of ID topics, more conceptual/less medical than [@nelson13]. Since each chapter is written by a different set of authors, it has the usual problem of edited books that each chapter/topic is somewhat stand-alone, with authors writing at different levels of difficulty and discussing whatever they find relevant for a given topic. Thus the whole book is not that cohesive and I consider it suitable to assign specific chapters as additional reading but wouldn't use it as a stand-alone book for teaching/learning.
