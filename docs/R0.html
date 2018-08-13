@@ -25,7 +25,7 @@
 <meta name="author" content="Andreas Handel">
 
 
-<meta name="date" content="2018-08-10">
+<meta name="date" content="2018-08-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -366,6 +366,7 @@
 <li class="chapter" data-level="24.4" data-path="appendix-d-a-very-brief-introduction-to-data-fitting.html"><a href="appendix-d-a-very-brief-introduction-to-data-fitting.html#references-22"><i class="fa fa-check"></i><b>24.4</b> References</a></li>
 </ul></li>
 <li class="chapter" data-level="25" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>25</b> Appendix E - Glossary of terms</a></li>
+<li class="chapter" data-level="26" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>26</b> References</a></li>
 </ul>
 
       </nav>
@@ -426,8 +427,8 @@
 <h4><span class="header-section-number">5.6.0.1</span> Why R Is Not a Rate - Example</h4>
 <p>It is important to understand that R only provides a measure of how transmissible a pathogen is, R does <strong>not</strong> provide any information about the speed at which transmission occurs. This is an important limitation of R. Consider 2 infections with the similar reproductive number, say HIV and SARS, which are both estimated to have a reproductive number of around 3-4. If we let an outbreak ‘run its course’, we would - based on R - expect to get the same number of infected individuals. However, the dynamics at which those infections occur will be quite different. SARS spreads rapidly, i.e. an infected person infects 3-4 others within a few weeks. On the other hand, a person infected with HIV will infect others on a timeframe of years. These different dynamics have of course important implications on the control approaches against diseases. Thus, while knowing R is significant for a given disease, it doesn’t tell ‘the full story’.</p>
 </div>
-<div id="notes-mynotebox" class="section level4">
-<h4><span class="header-section-number">5.6.0.2</span> Notes {mynotebox}</h4>
+<div id="mynotebox" class="section level4">
+<h4><span class="header-section-number">5.6.0.2</span> Notes</h4>
 <p>While we often say “Infectious disease X has an R<sub>0</sub> of Y”, this is only an approximation. R and R<sub>0</sub> also depend on the setting. The potential for transmission for many ID is much higher in for instance crowded locations (prisons, slums, cruise ships), or among “high risk groups” (e.g. STD in sex workers). For example in most countries R<sub>0</sub> of HIV is below 1 in the general population but HIV is not disappearing because it has an R<sub>0</sub> &gt; 1 in certain subgroups. The importance of such population heterogeneity is further discused in chapter <a href="heterogeneity.html#heterogeneity">12</a> . When we talk about R, it is therefore useful to be as specific as possible about the scenario/population/setting.</p>
 <p>In this book, and in the literature in general, you will foten find the use of R<sub>0</sub>, R or <em>effective R</em> (R<sub>eff</sub>) used (sloppily) in an interchangeable manner. Usually, it is clear from the context if the symbol refers specifically to <sub>R</sub>0 at the beginning of an outbreak in a susceptible population, or more generally to R, the average number of secondary infectious cases produced by one infectious individual in any population.</p>
 <p>Unfortunately, <em>R</em> seem to be a very popular letter. In the context of infectious disease dynamics, <em>R</em> is used both to indicate the removed compartment in an SIR model, and as abbreviation for the reproductive number. To make things worse, it is also the name of the programming language which I used to write the DSAIDE package which accompanies this book. You will just have to figure out from the context if a reference to <em>R</em> means “computer software” or “removed compartment” or “reproductive number”. Fortunately, it should always be clear what is meant.</p>
@@ -584,7 +585,7 @@ Figure 5.6: The R<sub>0</sub> in this case was 0. <a href="https://xkcd.com/734/
 
 </div>
 </div>
-<h3>References</h3>
+<h3> References</h3>
 <div id="refs" class="references">
 <div id="ref-contagionmovie">
 <p>“Contagion.” 2011. Warner Bros. <a href="https://en.wikipedia.org/wiki/Contagion_(film)" class="uri">https://en.wikipedia.org/wiki/Contagion_(film)</a>.</p>
@@ -659,7 +660,7 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
-"download": null,
+"download": ["_main.pdf"],
 "toc": {
 "collapse": "none"
 },

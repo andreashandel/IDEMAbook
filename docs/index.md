@@ -443,7 +443,7 @@ A version of the SIR model that includes resource replenishment through natural 
 The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate _m_, and the possibility that recovered lose their immunity and return to the susceptible class at rate _w_. Both of these processes can produce new susceptibles and thus lead to resource replenishment. If this process is fast enough, it can allow the ID to persist and lead to oscillations/cycles or steady states.
 
 #### Notes {#mynotebox}
-The model shown in \@ref(fig:birthdheathmodel) also includes natural death at rate _n_. This is done to for several reasons. One is simply consistency. If we make the model more detailed by taking into account natural births, it seems reasonable to also include natural death. Another, related reason is that without death in the model to balance births, we would have a population which grows without bounds. This is not a good approximation of any real scenario. When you implement models, especially larger ones, you always want to make sure that each component of the model produces reasonable results by itself. In this example, in the absence of disease, we would like to have susceptible individuals reach some steady level depending on births and deaths. Without the inclusion of the death rates, this could not happen.
+The model shown in \@ref(fig:birthdeathdmodel) also includes natural death at rate _n_. This is done to for several reasons. One is simply consistency. If we make the model more detailed by taking into account natural births, it seems reasonable to also include natural death. Another, related reason is that without death in the model to balance births, we would have a population which grows without bounds. This is not a good approximation of any real scenario. When you implement models, especially larger ones, you always want to make sure that each component of the model produces reasonable results by itself. In this example, in the absence of disease, we would like to have susceptible individuals reach some steady level depending on births and deaths. Without the inclusion of the death rates, this could not happen.
 
 
 #### Mathematical Equations for the Model with Resource replenishment {#myadvancedbox}
@@ -561,7 +561,7 @@ This module provided a discussion of the various general patterns we observe in 
 
 <!--chapter:end:120-PatternsofID.Rmd-->
 
-# Reproductive Number  {# R0}
+# Reproductive Number  {#R0}
 
 
 ## Overview and Learning Objectives
@@ -610,7 +610,7 @@ While I will be mainly using the term reproductive number, there are alternative
 #### Why R Is Not a Rate - Example  {#myexamplebox}
 It is important to understand that R only provides a measure of how transmissible a pathogen is, R does **not** provide any information about the speed at which transmission occurs. This is an important limitation of R. Consider 2 infections with the similar reproductive number, say HIV and SARS, which are both estimated to have a reproductive number of around 3-4. If we let an outbreak 'run its course', we would - based on R - expect to get the same number of infected individuals. However, the dynamics at which those infections occur will be quite different. SARS spreads rapidly, i.e. an infected person infects 3-4 others within a few weeks. On the other hand, a person infected with HIV will infect others on a timeframe of years. These different dynamics have of course important implications on the control approaches against diseases. Thus, while knowing R is significant for a given disease, it doesn't tell 'the full story'. 
 
-#### Notes {mynotebox}
+#### Notes {#mynotebox}
 While we often say "Infectious disease X has an R~0~ of Y", this is only an approximation. R and R~0~ also depend on the setting. The potential for transmission for many ID is much higher in for instance crowded locations (prisons, slums, cruise ships), or among "high risk groups" (e.g. STD in sex workers). For example in most countries R~0~ of HIV is below 1 in the general population but HIV is not disappearing because it has an R~0~ > 1 in certain subgroups. The importance of such population heterogeneity is further discused in chapter \@ref(heterogeneity) . When we talk about R, it is therefore useful to be as specific as possible about the scenario/population/setting.
 
 In this book, and in the literature in general, you will foten find the use of R~0~, R or _effective R_ (R~eff~) used (sloppily) in an interchangeable manner. Usually, it is clear from the context if the symbol refers specifically to ~R~0 at the beginning of an outbreak in a susceptible population, or more generally to R, the average number of secondary infectious cases produced by one infectious individual in any population.

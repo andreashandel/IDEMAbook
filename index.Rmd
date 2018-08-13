@@ -15,7 +15,7 @@ output:
             toolbar:
               position: fixed
             edit: null
-            download: yes
+            download: no
     bookdown::pdf_book:
         keep_tex: yes
         toc: true
