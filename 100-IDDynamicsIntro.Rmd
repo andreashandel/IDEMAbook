@@ -173,7 +173,7 @@ knitr::include_graphics("./images/xkcd-flowcharts.png")
 * The paper "Why Model?" by Joshua Epstein [@epstein08] provides a nice, short discussion of the purposes of models. Other general introductory discussions of systems thinking and model use are [@may04; @chubb10; @garnett11; @basu13; @gunawardena14; @homer06; @peters14; @sterman06].
 * Several introductory papers on infectious disease modeling can be found in e.g. [@keeling09; @heesterbeek15; @lessler16; @metcalf17].
 * While the dynamical systems approach has been applied to infectious diseases for a long time, it is starting to be used more frequently in other areas of public health. Some recent references on that topic are e.g. [@ness07; @sanchez-romero16].
-* This book does not deal with individual based models. If you want to learn more about them, see e.g. [@railsback11].
+* If you want to learn more about individual based models, see e.g. [@railsback11].
 
 ## References
 
