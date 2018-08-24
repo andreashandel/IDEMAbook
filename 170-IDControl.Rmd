@@ -10,11 +10,11 @@ The learning objectives for this chapter are:
 * Understand how different pathogens require different types of control
 
 
-##Introduction
+## Introduction
 Generally, the reason why we study IDs and their dynamics is to eventually _do something_. We want to implement control and intervention strategies to minimize disease burden. That could be trying to contain an ongoing outbreak, reduce the incidence of an endemic disease, or try to eradicate a disease. Depending on modes of transmission, infectiousness profiles and other ID characteristics, the types of interventions that are available and potentially useful will vary. Therefore, the better we understand and ID, the better we can likely implement control.  
 
 
-##Goals of ID Control
+## Goals of ID Control
 When trying to control an ID, we often have more than one goal in mind. The following are a list of (overlapping) public health goals that we often try to achieve with ID control:
 
 * Reduce morbidity
@@ -29,17 +29,17 @@ When trying to control an ID, we often have more than one goal in mind. The foll
 Most of these goals are overlapping. E.g., reducing transmission likely reduces overall morbidity and mortality. Sometimes, goals can be conflicting. For instance, if we have limited resources, should we target those that are most likely to transmit but not suffer much from the disease (e.g., children) or target those that are most likely to experience morbidity/mortality but are not that necessary for transmission (e.g., elderly)? Similarly, at what level is it acceptable to force people to (not) do something (e.g., forced vaccination or quarantine) that might not help - and maybe even slightly hurt - the individual, but will be beneficial to society? Answers to those questions are usually beyond the scope of just ID Epidemiology. What we can contribute to the wider discussion is an assessment of the impact of various control strategies. That information can then be combined with other considerations to make decisions.
 
 
-##Types of Infectious Disease Control
+## Types of Infectious Disease Control
 The types of control and intervention strategies that exist for a given ID vary. Some depend on the route of transmission. Others depend on our skills and ability, e.g., our ability to produce a vaccine. The following sections describe the major types of ID control. 
 
 
-###Vaccination
+### Vaccination
 Vaccines are arguably the most cost effective public health intervention we have. An ideal vaccine is one that has only to be given once to induce lifelong protection against the ID. It should also be safe, with little to no side effects. Other characteristics of a good vaccine are ease of administration, low price and easy to transport and store.
 
 The only IDs we have been able to eradicate so far (smallpox and rinderpest) are those against which we have good vaccines. Unfortunately, a good vaccine alone does not mean eradication is likely. Measles is a good example. We have a good vaccine, but the pathogen is so highly transmissible that coverage would need to be at levels beyond those currently achievable.
 
 
-###Pharmaceutical Interventions (Drugs)
+### Pharmaceutical Interventions (Drugs)
 Drugs, most notably antibiotics, are another very effective means of combating ID. While vaccines try to prevent infection, drugs usually try to prevent symptoms (morbidity and mortality) in already infected individuals. Reduction in symptoms might or might not impact transmission dynamics. A good example where treatment reduces infectiousness and transmission is ART treatment for HIV infected individuals.
 
 While not commonly used, drugs can also be given to susceptibles as prophylaxis to reduce the risk of infection. As such, one can think of drugs as short-term vaccines though the mechanism of protection is very different. Again, HIV is a case in point, where pre-exposure prophylaxis with ART has recently been shown to be somewhat effective in reducing the risk of infection.
@@ -47,7 +47,7 @@ While not commonly used, drugs can also be given to susceptibles as prophylaxis 
 For some IDs, such as, helminth infections, mass drug treatment is also being used to try and reduce ID prevalence enough to interrupt transmission and potentially eliminate the ID.
 
 
-###Non-pharmaceutical Interventions 
+### Non-pharmaceutical Interventions 
 These are the oldest types of interventions and are often quite effective. Quarantining of either infected or susceptibles prevents further transmission. Quarantine alone does not help those that are already infected. Though if quarantine occurs in a medical setting, targeted help for the sick might reduce their morbidity and mortality. A prominent recent example for the use of quarantine was during the 2014 Ebola outbreak in West Africa. No drugs or vaccines were available, and quarantine was the main control strategy. 
 
 These days, strict quarantine can be hard to enforce, especially for diseases that are not as severe as Ebola. A broader class of intervention strategies, of which quarantine is a strong form, often goes by the name of _social distancing interventions_. E.g., closing a school to stop an ongoing flu or measles outbreak would usually not be labeled as quarantine, but would be considered _social distancing_. In general, social distancing interventions try to reduce mixing of infected and susceptible people, usually without going as far as fully isolating/quarantining individuals. This makes the intervention both less effective and less restrictive. Finding the right balance between restricting individual freedoms and protecting society can be difficult. 
@@ -58,11 +58,11 @@ Another non-pharmaceutical intervention that has a profound long-term effect is 
 While usually not considered ID interventions, a general improvement in health (e.g., better nutrition), living conditions (e.g., better housing) and health literacy (better education) are known to be very effective at reducing the burden of any disease. Unfortunately, such systemic interventions are among the hardest to achieve.
 
 
-###Special Interventions for Non-human Hosts
+### Special Interventions for Non-human Hosts
 If one of the hosts is not a human (e.g., a mosquito vector, or some other animal), it is possible to use interventions that are not feasible for humans. Widespread killing of mosquitoes is ethically acceptable (though often not too effective). The killing of mammals, e.g., culling of dogs in certain parts of the world to prevent the spread of rabies or other diseases, is more controversial. For some animals, ethical concerns are usually not too great (e.g., killing of poultry), but economic implications can be huge.
 
 
-##Characteristics of Interventions
+## Characteristics of Interventions
 In addition to grouping interventions into specific classes as done above, it is also useful to think about them in terms of their overall characteristics.
 
 __Temporal/timing characteristics:__ While some interventions are permanent or long-term, e.g., vaccines, sanitation, improved living standards, other interventions are short-term, such as drug treatment or quarantine. In general, those interventions with lasting effects are preferable. However, those are also often the most expensive and difficult to implement.
@@ -74,21 +74,21 @@ __Impact level characteristics:__ By that, I refer to the primary target being t
 
 Of course, for many interventions, these categories are not clear-cut and overlap. Still, it is conceptually useful to think about interventions in such broad categories. By looking at all the tools available and assessing their impact and feasibility, one can try to come up with the best strategy for a given ID and scenario. Such a best strategy will often involve using more than one method.
 
-##Impact of Interventions
+## Impact of Interventions
 We discussed previously that to eradicate a disease (or prevent local outbreaks) one has to get the effective reproductive number to just a bit below 1 (of course the lower and closer to 0, the better). The level of population protection at which R=1 is called critical herd/population immunity level. The relation between original/basic reproductive number, intervention coverage, and effective R is R= R~0~(1-p). That's true if we assume that the intervention fully protects those to whom it is applied. If instead, the intervention is not perfect, we have R=R~0~(1-e*p), where e is the effectiveness of the intervention (e=1 is a perfectly effective intervention). 
 
 By discussing intervention coverage, we assumed that the intervention was applied to the susceptibles. However, the same idea also applies if the intervention is applied to infected. Recall that the reproductive number is given by $R = D \beta S$. Reducing the fraction of susceptibles by some intervention reduces _R_. But we can also reduce _R_ by reducing the duration of the infectious period, D, or the infectiousness/rate at which an infected transmits, $\beta$. Quarantining infected is a strategy to reduce $\beta$, drugs sometimes can reduce _D_ and $\beta$. For instance, if we can reduce the duration of the infectious period in the average infected person by _p_, we get a new effective reproductive number $R_{e} = D(1-p) \beta S$. Obviously, the best strategy is one where we reduce the duration of infection, transmissibility, and number of susceptibles by some fraction, thus leading to a potentially large reduction in _R_.
 
 
-##Interventions and Models
+## Interventions and Models
 Studying the potential impact of interventions is probably the single most important current use of ID models. It is often simply not possible to do field studies or experiments to test the impact of specific intervention strategies. Such field studies would take a long time, be very costly, be logistically hard to do, and often be simply unethical: We can't introduce Ebola into a population, just to see how effective different intervention strategies might be! Thus, we rely on modeling to investigate hypothetical scenarios.  Models are relatively easy and quick to build and analyze (at least compared to real field studies), there are no ethical problems, and we have 'full control' over the whole system and 'know everything'. The hope is that if our models are decent approximations of the real world, we can make informed decisions and prepare for future outbreaks.
 
-##Summary and Cartoon
+## Summary and Cartoon
 
 ![Infectious disease control is arguably one of the greatest successes of epidemiology and biology.](./images/xkcd-disease-eradication.png)
 
 
-##Exercises
+## Exercises
 * The _ID Control_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
 * Read the article "Towards the endgame and beyond: complexities and challenges for the elimination of infectious diseases" by Klepac et al. [@klepac13]. Choose some ID - either one listed in box 1 of the paper or a different one - and discuss the current plans for elimination/eradication. What features of the ID will likely be helpful or unhelpful with regard to eradication/elimination? Reference the different areas the paper discusses? What is your overall assessment of feasibility?
 
@@ -98,5 +98,5 @@ Studying the potential impact of interventions is probably the single most impor
 * A brief discussion of ID control is provided in [@halloran14].
 
 
-##References
+## References
 

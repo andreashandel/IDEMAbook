@@ -1,4 +1,4 @@
-#Vector-borne transmission
+# Vector-borne transmission
 
 
 ## Overview and Learning Objectives
@@ -46,7 +46,7 @@ Here, the index _h_ indicates humans and _v_ indicates vectors. The important ve
 
 
 
-##Summary and Cartoon
+## Summary and Cartoon
 
 Vector-borne transmission adds complexity to an ID, but also allows for a wider range of control measures (such as vector killing). 
 
@@ -54,16 +54,16 @@ Vector-borne transmission adds complexity to an ID, but also allows for a wider 
 
 
 
-##Exercises
+## Exercises
 * The _Vector transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
 * Nominate an ID as a contender for having the 'craziest or most complicated' mode(s) of transmission. Explain the transmission dynamics for your nomination and justify why it deserves the title of _craziest or most complicated_. This doesn't have to be a vector-borne disease, though some of the "crazy" ones tend to use multiple hosts.
 
 
-##Further Resources
+## Further Resources
 * The following papers provide some additional discussion of vector-borne diseases and how to model them [@smith14; @kilpatrick12; @luz10].
 
 
-##References
+## References
 
 
 

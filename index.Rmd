@@ -18,6 +18,7 @@ output:
             download: no
     bookdown::pdf_book:
         keep_tex: yes
+        toc: true
     bookdown::word_document2: 
         toc: true
 bibliography: dsaidereferences.bib

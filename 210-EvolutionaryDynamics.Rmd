@@ -1,6 +1,6 @@
 # Evolutionary Dynamics Introduction
 
-##Overview and Learning Objectives
+## Overview and Learning Objectives
 In this chapter, we will take a look at the evolutionary dynamics of infectious diseases. 
 
 The learning objectives for this chapter are:
@@ -34,7 +34,7 @@ A powerful driver of evolution is the host immune response. If an ID induces a s
 
 
 
-##Modeling Evolutionary Dynamics
+## Modeling Evolutionary Dynamics
 To study evolutionary dynamics, we will need to implement models that allow for changes in the system on top of the non-evolutionary dynamics of the ID. Unless we plan to model many different potential new variants, it is often easiest to pre-specify the number of variants we want to track. In the simplest form where we only track pathogen evolution, we might model the wild-type (normal, pre-existing) form of the pathogen and a single mutant that is different in some important characteristic, e.g., resistant to a drug or able to evade a vaccine. We would build a model with these compartments. We often also pre-specify the characteristics (i.e., the parameter values) for both the wild-type and mutant. We implement the process of mutant generation in the model and run the simulation. Under certain circumstances, we might see the mutant be generated and take over the population. 
 
 If we want to model many different mutants, maybe allowing for random, not pre-specified, differences in their fitness, and perhaps even allowing for host evolution, the models get quite a bit more complicated. They are not necessarily conceptually harder, but there is more bookkeeping and coding involved making it technically trickier.
@@ -44,12 +44,12 @@ If we want to model many different mutants, maybe allowing for random, not pre-s
 While the hosts infected by ID also evolve, this usually happens on much slower time-scales. As such, studying evolution by assuming only the ID evolves and not the host is often a good approximation. However, there are examples where host evolution needs to be considered. A good example is the introduction of myxoma virus to control Australian rabbit populations. Evolution of both the virus and rabbits was observed. Over longer time-scales, features such as sickle cell anemia, which comes from a mutation that is associated with reduced malaria morbidity, is likely a trait some humans evolved in response to malaria. A discussion of genetic characteristics in humans that might be attributable to evolution in response to specific infectious diseases is provided in [@pittman16].
 
 
-##Summary and Cartoon
+## Summary and Cartoon
 This module provides a brief discussion of ID-evolution, especially concerning ID control.
 
 ![Even if one believes that pathogens evolve (at a high rate), most human-only pathogens could have only survived a recent worldwide flood such as the one described in Genesis by living on/in the surviving humans. Source: smbc-comics.com (http://www.smbc-comics.com/)](./images/smbc-ID-evolution.png)
 
-##Exercises
+## Exercises
 * The _Evolutionary dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
 * Read the article 'Evolutionary epidemiology 20 years on: Challenges and prospects' by Restif. The paper talks about 3 evolutionary patterns that are important to ID control. Find one or several papers that have been published in the last 5 years which address ID control from an evolutionary perspective of one or more of those topics mentioned in the Restif paper. Summarize and discuss the paper(s) you found. Critically assess the feasibility of the ideas put forward. 
 
@@ -61,4 +61,4 @@ This module provides a brief discussion of ID-evolution, especially concerning I
 * One of the primary goals in ID research is to be able to forecast the dynamics of ID, both on short and long timescales (similar to weather and climate forecasts). A review and discussion of that topic are in [@gandon16].  
 
 
-##References
+## References

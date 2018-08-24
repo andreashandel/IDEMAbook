@@ -25,7 +25,7 @@
 <meta name="author" content="Andreas Handel">
 
 
-<meta name="date" content="2018-08-10">
+<meta name="date" content="2018-08-12">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -366,6 +366,7 @@
 <li class="chapter" data-level="24.4" data-path="appendix-d-a-very-brief-introduction-to-data-fitting.html"><a href="appendix-d-a-very-brief-introduction-to-data-fitting.html#references-22"><i class="fa fa-check"></i><b>24.4</b> References</a></li>
 </ul></li>
 <li class="chapter" data-level="25" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>25</b> Appendix E - Glossary of terms</a></li>
+<li class="chapter" data-level="26" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>26</b> References</a></li>
 </ul>
 
       </nav>
@@ -426,7 +427,7 @@ Figure 4.2: Example of an SIR model with births, deaths and waning immunity.
 <p>The new features of this model compared to the basic SIR model introduced earlier are births (of susceptibles) at some rate <em>m</em>, and the possibility that recovered lose their immunity and return to the susceptible class at rate <em>w</em>. Both of these processes can produce new susceptibles and thus lead to resource replenishment. If this process is fast enough, it can allow the ID to persist and lead to oscillations/cycles or steady states.</p>
 <div id="mynotebox" class="section level4">
 <h4><span class="header-section-number">4.4.0.1</span> Notes</h4>
-<p>The model shown in <a href="#fig:birtdheathmodel"><strong>??</strong></a> also includes natural death at rate <em>n</em>. This is done to for several reasons. One is simply consistency. If we make the model more detailed by taking into account natural births, it seems reasonable to also include natural death. Another, related reason is that without death in the model to balance births, we would have a population which grows without bounds. This is not a good approximation of any real scenario. When you implement models, especially larger ones, you always want to make sure that each component of the model produces reasonable results by itself. In this example, in the absence of disease, we would like to have susceptible individuals reach some steady level depending on births and deaths. Without the inclusion of the death rates, this could not happen.</p>
+<p>The model shown in <a href="patterns-of-infectious-disease-dynamics.html#fig:birthdeathdmodel">4.2</a> also includes natural death at rate <em>n</em>. This is done to for several reasons. One is simply consistency. If we make the model more detailed by taking into account natural births, it seems reasonable to also include natural death. Another, related reason is that without death in the model to balance births, we would have a population which grows without bounds. This is not a good approximation of any real scenario. When you implement models, especially larger ones, you always want to make sure that each component of the model produces reasonable results by itself. In this example, in the absence of disease, we would like to have susceptible individuals reach some steady level depending on births and deaths. Without the inclusion of the death rates, this could not happen.</p>
 </div>
 <div id="myadvancedbox" class="section level4">
 <h4><span class="header-section-number">4.4.0.2</span> Mathematical Equations for the Model with Resource replenishment</h4>
@@ -522,7 +523,7 @@ Figure 4.5: Here is a different kind of cycle that (ID) scientists sometimes enc
 
 </div>
 </div>
-<h3>References</h3>
+<h3> References</h3>
 <div id="refs" class="references">
 <div id="ref-keeling08">
 <p>Keeling, Matt J, and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press.</p>
@@ -597,7 +598,7 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
-"download": null,
+"download": ["_main.pdf"],
 "toc": {
 "collapse": "none"
 },

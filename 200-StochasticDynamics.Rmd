@@ -26,7 +26,7 @@ Biological systems are never deterministic. When numbers are small, randomness s
 ## Discrete Numbers and Extinctions
 Another problem inherent in the deterministic differential equation based models we have looked at so far is that they treat individuals in each compartment as continuous. For instance, the models allow 142.7 infected hosts. Of course, in reality, those numbers have to be integers. If we are dealing with large numbers, the difference between 142.7 and 142 or 143 is minor and doesn't matter. However, once numbers get small, the fact that we are dealing with discrete numbers of hosts becomes significant. So once less than 1 host has an infection the ID is in reality gone, but a continuous model would instead allow the number of infected to drop below 1 but remain above 0. In this way, the ID in the continuous models never actually goes extinct, it only gets closer and closer to 0 (and at some point is so close to 0 that the computer can't distinguish it from 0 anymore).
 
-##Modeling Stochasticity and Extinction
+## Modeling Stochasticity and Extinction
 To capture both the randomness and discrete nature of real systems requires a slightly different modeling approach. We can still use compartmental models, i.e., we track total numbers of individuals in particular states (e.g., S-I-R). But now, instead of letting the numbers in each compartment change continuously through inflows and outflows, changes happen in discrete steps, determined by specific events that occur in a probabilistic manner. 
 
 As an example, instead of new susceptible hosts entering the system at some continuous birth rate, we now model births occurring as discrete events. Each birth event leads to an increase in the number of susceptibles by 1. 

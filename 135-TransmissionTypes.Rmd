@@ -23,23 +23,23 @@ Another path of direct transmission is from mother to baby before or during birt
 ## Environmental Transmission
 As just mentioned, respiratory infections might spread through an environmental stage, where the environment is small water particles in the air or on solid surfaces. Infected surfaces (in the context of ID transmission often called fomites) are major routes of transmission for several important pathogens, for instance, Staph or pathogens that transmit through the fecal-oral route, e.g., norovirus. Water is the main transmission environment for another important fecal-orally transmitted disease, Cholera. The chapter on environmental transmission will discuss this route in more detail.
 
-##Vector-borne Transmission
+## Vector-borne Transmission
 Diseases that transmit through a vector stage, such as Malaria, Dengue, Zika, and others, are an important category. The most common and important vector are mosquitos, but other vectors are also important (e.g., kissing bugs for Trypanosoma, which causes Chagas disease). The definition of what makes an ID a vector borne ID is tricky. See the HIV-needle example above, or consider Zika, which can transmit by multiple routes. For some diseases, it is not clear if one should consider them vector-borne or not. For instance, _Toxoplasma gondii_ spends part of its life-cycle in cats, and the other part can be in another host, most commonly mice or birds. If the latter type of host should be considered a vector or not is largely a matter of definition. Often, it is called an intermediate host, and _T gondii_  and diseases with similar life-cycles (e.g., Schistosomiasis) are considered _multi-host diseases_, with the term vector-borne mainly used when the intermediate (non-human) host is an insect. As we will see, from the perspective of describing such diseases with models, the labeling does not make much of a difference.
 
 
-##Summary and Cartoon
+## Summary and Cartoon
 This chapter briefly introduced different modes of ID transmission. 
 
 ![Knowing transmission routes is important to understand how one can and cannot contract a specific disease. [Source: xkcd](https://xkcd.com/574/)](./images/xkcd-swine_flu.png)
 
 
 
-##Exercises
+## Exercises
 * Several apps in the DSAIDE package address specific types of transmission, those are discussed in the following chapters.
 
 
-##Further Resources
+## Further Resources
 * A detailed discussion linking transmission types to model alternatives is provided in [@mccallum17].
 
-##References
+## References
 

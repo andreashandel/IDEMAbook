@@ -1,6 +1,6 @@
 # Dynamics of Multiple Pathogens
 
-##Overview and Learning Objectives
+## Overview and Learning Objectives
 In this chapter, we will discuss scenarios where more than one infectious disease is considered simultaneously.
 
 The learning objectives for this chapter are:
@@ -9,29 +9,29 @@ The learning objectives for this chapter are:
 * Understand how IDs can interact
 
 
-##Introduction
+## Introduction
 So far, we focused on a single ID at a time. The main reason for this is simplicity. A single ID is already difficult to study and leads to complex dynamics. It makes sense to first study and understand individual IDs before including further IDs. That said, there are always many pathogens present at the same time, and infection with more than one ID is very common [@petney98]. This is true in the developed world with a fairly low ID burden, and even more so in developing countries. It is thus often useful to consider systems with more than one ID.
 
 
-##Interactions of ID
+## Interactions of ID
 Sometimes, different IDs do not interact, i.e., being infected with one does not impact the susceptibility or course of infection for another ID. It is likely that some amount of interaction occurs for almost all IDs, mediated by the immune response or through other mechanisms such as a change in host behavior or host death [@rohani03]. However, unless the IDs are relatively common and the interaction effect is strong, it is often hard to determine if and how IDs affect each other. As such, we know how some IDs interact (e.g., TB and HIV) but for most ID, we have very little knowledge. The next few sections briefly discuss some IDs for which we have some understanding regarding interactions. This is not an exhaustive discussion. Instead, we focus on some of the best-known interactions.
 
 
-###HIV-TB Interactions
+### HIV-TB Interactions
 HIV is the pathogen that is best studied with regard to interaction with other pathogens [@karp07; @karp07a; @griffiths11]. Arguably of most public health interest and concern is the interaction with TB. Having an (untreated) HIV infection makes it much more likely for an individual latently infected with TB to develop TB disease. Further, once TB disease develops, an individual who is also infected with HIV has worse symptoms and a much higher chance of dying [@pawlowski12]. An important current question that is still not fully answered is if the suppression of HIV by antiretroviral therapy treatment removes all detrimental effects of HIV on TB progression, or if the presence of HIV, albeit at minuscule levels, still has a negative impact on TB disease progression.
 
-###HIV-Hepatitis Interactions
+### HIV-Hepatitis Interactions
 Persons infected with HIV are also often at risk of having HBV or HCV infections. The primary reason for this is that risk factors for these pathogens are very similar (e.g., drug use) [@sulkowski08]. Co-infection leads to faster rate of liver failure [@chen14]. If HBV or HCV leads to more rapid progression to AIDS and HIV-mediated death is unclear [@kim09]. It seems that with antiretroviral therapy and the new drugs against viral hepatitis, the impact of this co-infection on health can be minimized.    
 
-###Influenza-Strep Interactions
+### Influenza-Strep Interactions
 The interaction of influenza with some bacteria and most notably _Streptococcus pneumoniae_ has been somewhat well studied [@mccullers06]. Some careful animal experiments, as well as modeling studies,  have shown how influenza interacts with bacteria co-infections [@smith14a; @shrestha13]. In general, an influenza infection seems to make it more likely - during a short time window - to have a subsequent bacterial infection, and the outcome of the bacterial infection is often worse. It is still not well understood if there is also an effect of a respiratory bacterial infection on a potential secondary influenza infection [@davis12].
 
 
-##More Than Two Infectious Diseases
+## More Than Two Infectious Diseases
 While not much is known about interactions between any two ID (apart from the examples just described and a few others), even less is known for 2+ ID. It is fair to say that given our current level of knowledge about the biology and epidemiology of various ID, understanding interactions and dynamics of multiple ID is beyond our current scope, and will likely remain so for a while.
 
 
-##Multiple ID and Control
+## Multiple ID and Control
 If multiple IDs are present, it makes sense to try and implement control strategies against as many of them as possible. This is true for diseases which interact or are independent. Unfortunately, given the way health systems are structured and funded, it is still often the case that interventions target a single ID at a time. E.g., a campaign against malaria focuses solely on malaria treatment, even though many of the patients probably also have TB or some helminth infections and should be tested and treated for those diseases at the same time. The one important exception is HIV. Often HIV testing and treatment is included even if a study or health campaign focuses on a different disease. Having a more wide-spread multi-ID approach to control would very likely be highly effective since, for many ID, individuals who are likely to get infected with one are also likely to get infected with other ID. This is because many IDs have the same risk factors for transmission from poor nutrition or unsanitary conditions to particular behaviors that increase the risk for multiple IDs. One could, therefore, efficiently find and effectively treat many different IDs. Public health is slowly moving this direction.
 
 Some ways in which multiple IDs are controlled are almost accidental. It is well known that better education, better nutrition, better standard of living, improved sanitation and housing all reduce morbidity and mortality to a large number of diseases. As developing countries become richer and people escape extreme poverty, the incidence of many IDs fall. This is the trajectory many developed countries were on, e.g., TB incidence in Europe was falling rapidly even before the introduction of anti-TB drugs. As more countries become developed, the ID burden will decline (and likely with it, "wealth diseases" like obesity will rise).
@@ -58,13 +58,13 @@ $$\dot I_{2X} = (b_2 (I_2 + I_{2X}) + b_{12}  I_{12}) R_1 - g_{2} I_{2X}$$
 $$\dot R_{12} = g_{1} I_{1X} + g_{2} I_{2X} + g_{12} I_{12} $$
 
 
-##Summary and Cartoon
+## Summary and Cartoon
 This chapter discussed multi-pathogen systems. 
 
 
 ![I don't have a topical cartoon, so instead just a random one. Let me know if you find a suitable one!](./images/xkcd-sick_day.png)
 
-##Exercises
+## Exercises
 * The _Multi-pathogen dynamics_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
 * Read the article "The nature and consequences of coinfection in humans" by Griffiths et al. [@griffiths11]. They report that for several of the "top 10" ID no co-infection studies could be found among 2009 publications. See if you can find any coinfection studies on one of those IDs that were published since. Describe and summarize the studies you found.
 
@@ -76,4 +76,4 @@ This chapter discussed multi-pathogen systems.
 * A very nice analysis of the impact of measles and measles vaccination on other childhood infectious diseases is given in [@mina15]. 
 
 
-##References
+## References

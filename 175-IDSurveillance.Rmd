@@ -10,15 +10,15 @@ The learning objectives for this chapter are:
 * Understand surveillance 
 
 
-##Introduction
+## Introduction
 To be able to implement successful interventions, we first need to know what is actually happening. Once we implemented a control strategy, we also want to know how it works. For both of those goals, good surveillance is key.
 
 
-##Goals of Surveillance
+## Goals of Surveillance
 
 * Identify new emerging diseases as quickly as possible
 
-##Types of Surveillance
+## Types of Surveillance
 Active and passive
 
 Medical/clinical and sequence
@@ -26,7 +26,7 @@ Medical/clinical and sequence
 Ongoing or ad-hoc
 
 
-##Problems with surveillance
+## Problems with surveillance
 Knowing numerator and denominator. Bias due to getting more severe cases. Behavior change during an outbreak.
 
 
@@ -35,17 +35,17 @@ Knowing numerator and denominator. Bias due to getting more severe cases. Behavi
 #### Biased Surveillance - an example {#myexamplebox}
 During the early days of the 2009 H1N1 influenza pandemic, the numbers on cases and deaths suggested that this strain of influenza might have a higher than normal case fatality ratio (the often used term case fatality rate is a bad label as this is not a rate). Once more and better data became available. It was realized that many infections initially did not get reported, and adjusting for those it became clear that the ratio of deaths to infected was thankfully not much different from seasonal influenza.
 
-##Summary and Cartoon
+## Summary and Cartoon
 
 ![A comprehensive, 'always on' surveillance for infectious diseases would be ideal.](./images/xkcd-listening.png)
 
 
-##Exercises
+## Exercises
 * 
 
 
 ## Further Resources
 * 
 
-##References
+## References
 

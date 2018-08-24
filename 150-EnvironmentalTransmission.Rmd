@@ -1,4 +1,4 @@
-#Environmental Transmission
+# Environmental Transmission
 
 
 ## Overview and Learning Objectives
@@ -62,16 +62,16 @@ This chapter provided a discussion of environmental transmission and its impact 
 ![One problem with environmental transmission control. [Source: xkcd](https://xkcd.com/1161/)](./images/xkcd-hand_sanitizer.png)
 
 
-##Exercises
+## Exercises
 * The _Environmental transmission_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
 * The paper by Killingley and Nguyen-Van-Tam describes modes of transmission for influenza. Pick a pathogen that can transmit in a somewhat similar manner (e.g., Ebola, SARS, MERS, or such) and compare and contrast what is known about similarities and differences in transmission between flu and the pathogen you pick. Also briefly discuss implications for control.
 
 
-##Further Resources
+## Further Resources
 * The paper [@cortez13] discusses how direct versus indirect transmission can lead to different incidence patterns and how models can help to determine routes of transmission.
 * Ewald discusses the relation between environmental transmission and virulence in [@ewald91].
 * Some further discussion about influenza routes of transmission is provided in [@brankston07; @weber08].
 
 
-##References
+## References
 
