@@ -5730,15 +5730,14 @@
 }
 
 @Article{breiman01,
-  author        = {Breiman, Leo and others},
-  title         = {Statistical modeling: The two cultures (with comments and a rejoinder by the author)},
-  journal       = {Statistical science},
-  year          = {2001},
-  volume        = {16},
-  number        = {3},
-  pages         = {199--231},
-  __markedentry = {[andreas:]},
-  publisher     = {Institute of Mathematical Statistics},
+  author    = {Breiman, Leo and others},
+  title     = {Statistical modeling: The two cultures (with comments and a rejoinder by the author)},
+  journal   = {Statistical science},
+  year      = {2001},
+  volume    = {16},
+  number    = {3},
+  pages     = {199--231},
+  publisher = {Institute of Mathematical Statistics},
 }
 
 @Article{shmueli10,
@@ -5747,7 +5746,7 @@
   journal       = {Statistical science},
   year          = {2010},
   pages         = {289--310},
-  __markedentry = {[andreas:6]},
+  __markedentry = {[andreas:]},
   publisher     = {JSTOR},
 }
 
@@ -5766,6 +5765,34 @@
   pii         = {JEB1480},
   pmid        = {18179516},
   timestamp   = {2009.12.21},
+}
+
+@Article{levin96,
+  author          = {Levin, B R},
+  title           = {The evolution and maintenance of virulence in microparasites.},
+  journal         = {Emerging infectious diseases},
+  year            = {1996},
+  volume          = {2},
+  pages           = {93--102},
+  issn            = {1080-6040},
+  __markedentry   = {[andreas:6]},
+  abstract        = {In recent years, population and evolutionary biologists have questioned the traditional view that parasite-mediated morbidity and mortality¿virulence¿is a primitive character and an artifact of recent associations between parasites and their hosts. A number of hypotheses have been proposed that favor virulence and suggest that it will be maintained by natural selection. According to some of these hypotheses, the pathogenicity of HIV, Vibrio cholerae, Mycobacterium tuberculosis,theShigella,as well as Plasmodium falciparum,and many other microparasites, are not only maintained by natural selection, but their virulence increases or decreases as an evolutionary response to changes in environmental conditions or the density and/or behavior of the human population. Other hypotheses propose that the virulence of microparasites is not directly favored by natural selection; rather, microparasite-mediated morbidity and mortality are either coincidental to parasite-expressed characters (virulence determinants that evolved for other functions) or the product of short-sighted evolution in infected hosts. These hypotheses for the evolution and maintenance of microparasite virulence are critically reviewed, and suggestions are made for testing them experimentally.},
+  citation-subset = {IM},
+  completed       = {1996-12-04},
+  country         = {United States},
+  doi             = {10.3201/eid0202.960203},
+  issn-linking    = {1080-6040},
+  issue           = {2},
+  keywords        = {Animals; Bacteria, pathogenicity; Eukaryota, pathogenicity; Evolution, Molecular; Humans; Virulence; Viruses, pathogenicity},
+  nlm-id          = {9508155},
+  owner           = {NLM},
+  pmc             = {PMC2639826},
+  pmid            = {8903208},
+  pubmodel        = {Print},
+  pubstatus       = {ppublish},
+  references      = {62},
+  revised         = {2017-02-19},
+  timestamp       = {2018.08.25},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
