@@ -28,5 +28,6 @@ Pathogens 'don't care' about harming their hosts, their primary 'purpose' is to 
 
 ## Further Resources
 * Ewald and colleagues have done some interesting investigations connecting transmission type to virulence/pathogenicity of specific diseases. See for instance [@ewald87; @ewald95].
+* Introductory articles to the topic are e.g. [@levin96; @frank08]
 
 ## References
