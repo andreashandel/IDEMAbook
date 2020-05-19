@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Infectious Disease Epidemiology - A modern systems approach</title>
-  <meta name="description" content="This book convers infectious disease epidemiology from a dynamical systems perspective">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>9 Vector-borne transmission | Infectious Disease Epidemiology - A modern systems approach</title>
+  <meta name="description" content="A modern, model-based approach to infectious disease epidemiology" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta property="og:title" content="9 Vector-borne transmission | Infectious Disease Epidemiology - A modern systems approach" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta property="og:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta name="twitter:title" content="9 Vector-borne transmission | Infectious Disease Epidemiology - A modern systems approach" />
   
-  <meta name="twitter:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta name="twitter:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
-<meta name="author" content="Andreas Handel">
+<meta name="author" content="Andreas Handel" />
 
 
-<meta name="date" content="2018-08-12">
+<meta name="date" content="2020-05-15" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="environmental-transmission-1.html">
-<link rel="next" href="infectious-disease-control.html">
+<link rel="prev" href="environmental-transmission-1.html"/>
+<link rel="next" href="infectious-disease-control.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -400,7 +403,7 @@
 <h2><span class="header-section-number">9.2</span> Introduction</h2>
 <p>Vector-borne IDs are those that go through - at least - two different hosts to complete a full replication and transmission cycle. Hosts of one type infect hosts of the other, and there is no direct transmission between hosts of the same type.</p>
 <div class="figure">
-<img src="images/vectorborne-schematic.png" alt="Schematic of a vector-borne ID" />
+<img src="images/vectorborne-schematic.png" alt="" />
 <p class="caption">Schematic of a vector-borne ID</p>
 </div>
 <p>Not surprisingly, the IDs which receive the most study are those where one of the hosts are humans. The other host (i.e., the vector) can be any other animal, such as dogs, rodents, snails, insects, etc. At times, growth and replication of the pathogen occur mainly in one host, with the other just serving as a vessel to get between hosts. Most often, the pathogen completes significant parts of its growth and replication cycle in both (or all, if there are more than 2) hosts.</p>
@@ -415,7 +418,8 @@
 <p>A major problem with all control strategies targeting vectors is that not only do pathogens evolve quickly, but most vectors have fairly short life spans and large population numbers, which means rapid evolution. That could result in wide spread resistance making any control measures ineffective within a short time. Indeed, that was observed for DDT, where mosquitos resistant to the chemical started to appear before its widespread use was discontinued.</p>
 <div id="myadvancedbox" class="section level4">
 <h4><span class="header-section-number">9.4.0.1</span> Modeling vector-borne transmission</h4>
-<p>The easiest way to model a vector-borne disease is to simply ignore the vector and assume that the transmission term of the equation (e.g., a term like <em>bSI</em>) represents – in a very simplified form – all the complicated processes involved in transmission, including the vector stage. That makes the model simple, but of course, doesn’t capture the vector-borne aspects of the dynamics. If we are interested in the dynamics of the disease in all hosts, we do need to include the vector components in a model. To add vectors in a model, one could, for instance, build 2 SIR-type models, with one set of equations for the (human) host and one for the vector, and then couple the compartments by including transmission from humans to vectors and vectors to humans. Equations for such a model might look as follows: <span class="math display">\[
+<p>The easiest way to model a vector-borne disease is to simply ignore the vector and assume that the transmission term of the equation (e.g., a term like <em>bSI</em>) represents – in a very simplified form – all the complicated processes involved in transmission, including the vector stage. That makes the model simple, but of course, doesn’t capture the vector-borne aspects of the dynamics. If we are interested in the dynamics of the disease in all hosts, we do need to include the vector components in a model. To add vectors in a model, one could, for instance, build 2 SIR-type models, with one set of equations for the (human) host and one for the vector, and then couple the compartments by including transmission from humans to vectors and vectors to humans. Equations for such a model might look as follows:
+<span class="math display">\[
 \begin{aligned}
 \dot S_h &amp;= - \beta_1 S_h I_v \\
 \dot I_h &amp;= \beta_1S_h I_v - \gamma_h I_h \\
@@ -424,14 +428,15 @@
 \dot I_v &amp;= \beta_2 S_v I_h - \gamma_v I_v \\
 \dot R_v &amp;= \gamma_v I_v
 \end{aligned}
-\]</span> Here, the index <em>h</em> indicates humans and <em>v</em> indicates vectors. The important vector-borne aspect of such a model is that transmission only occurs from hosts to vector and vector to host, not between hosts or vectors. In general, the above model needs to be modified to more accurately describe vector-borne ID dynamics. For instance, many vectors have a fairly short natural lifespan, and as such their births and deaths need to be included in the model, even if the timescale in which we investigate the model is short enough to allow us to ignore births and deaths for (human) hosts. It is common to include more details in the human part of the model (e.g., asymptomatic stage and others as discussed previously) and less detail for the vector part. The specific details that should be included are driven by the question one wants to study.</p>
+\]</span>
+Here, the index <em>h</em> indicates humans and <em>v</em> indicates vectors. The important vector-borne aspect of such a model is that transmission only occurs from hosts to vector and vector to host, not between hosts or vectors. In general, the above model needs to be modified to more accurately describe vector-borne ID dynamics. For instance, many vectors have a fairly short natural lifespan, and as such their births and deaths need to be included in the model, even if the timescale in which we investigate the model is short enough to allow us to ignore births and deaths for (human) hosts. It is common to include more details in the human part of the model (e.g., asymptomatic stage and others as discussed previously) and less detail for the vector part. The specific details that should be included are driven by the question one wants to study.</p>
 </div>
 </div>
 <div id="summary-and-cartoon-7" class="section level2">
 <h2><span class="header-section-number">9.5</span> Summary and Cartoon</h2>
 <p>Vector-borne transmission adds complexity to an ID, but also allows for a wider range of control measures (such as vector killing).</p>
 <div class="figure">
-<img src="images/xkcd-mosquito-ringtone.png" alt="There are multiple reasons mosquitos are not popular. Source: xkcd" />
+<img src="images/xkcd-mosquito-ringtone.png" alt="" />
 <p class="caption">There are multiple reasons mosquitos are not popular. <a href="https://xkcd.com/1241/">Source: xkcd</a></p>
 </div>
 </div>
@@ -445,7 +450,7 @@
 <div id="further-resources-7" class="section level2">
 <h2><span class="header-section-number">9.7</span> Further Resources</h2>
 <ul>
-<li>The following papers provide some additional discussion of vector-borne diseases and how to model them <span class="citation">(Smith et al. <a href="#ref-smith14">2014</a>; Kilpatrick and Randolph <a href="#ref-kilpatrick12">2012</a>; Luz, Struchiner, and Galvani <a href="#ref-luz10">2010</a>)</span>.</li>
+<li>The following papers provide some additional discussion of vector-borne diseases and how to model them <span class="citation">(D. L. Smith et al. <a href="#ref-smith14" role="doc-biblioref">2014</a>; Kilpatrick and Randolph <a href="#ref-kilpatrick12" role="doc-biblioref">2012</a>; Luz, Struchiner, and Galvani <a href="#ref-luz10" role="doc-biblioref">2010</a>)</span>.</li>
 </ul>
 </div>
 <div id="references-8" class="section level2">
@@ -455,14 +460,14 @@
 </div>
 <h3> References</h3>
 <div id="refs" class="references">
-<div id="ref-smith14">
-<p>Smith, David L, T Alex Perkins, Robert C Reiner, Christopher M Barker, Tianchan Niu, Luis Fernando Chaves, Alicia M Ellis, et al. 2014. “Recasting the Theory of Mosquito-Borne Pathogen Transmission Dynamics and Control.” <em>Transactions of the Royal Society of Tropical Medicine and Hygiene</em> 108 (4): 185–97. doi:<a href="https://doi.org/10.1093/trstmh/tru026">10.1093/trstmh/tru026</a>.</p>
-</div>
 <div id="ref-kilpatrick12">
-<p>Kilpatrick, A Marm, and Sarah E Randolph. 2012. “Drivers, Dynamics, and Control of Emerging Vector-Borne Zoonotic Diseases.” <em>Lancet (London, England)</em> 380 (9857): 1946–55. doi:<a href="https://doi.org/10.1016/S0140-6736(12)61151-9">10.1016/S0140-6736(12)61151-9</a>.</p>
+<p>Kilpatrick, A Marm, and Sarah E Randolph. 2012. “Drivers, Dynamics, and Control of Emerging Vector-Borne Zoonotic Diseases.” <em>Lancet (London, England)</em> 380 (9857): 1946–55. <a href="https://doi.org/10.1016/S0140-6736(12)61151-9">https://doi.org/10.1016/S0140-6736(12)61151-9</a>.</p>
 </div>
 <div id="ref-luz10">
-<p>Luz, Paula M, Claudio J Struchiner, and Alison P Galvani. 2010. “Modeling Transmission Dynamics and Control of Vector-Borne Neglected Tropical Diseases.” <em>PLoS Neglected Tropical Diseases</em> 4 (10): e761. doi:<a href="https://doi.org/10.1371/journal.pntd.0000761">10.1371/journal.pntd.0000761</a>.</p>
+<p>Luz, Paula M, Claudio J Struchiner, and Alison P Galvani. 2010. “Modeling Transmission Dynamics and Control of Vector-Borne Neglected Tropical Diseases.” <em>PLoS Neglected Tropical Diseases</em> 4 (10): e761. <a href="https://doi.org/10.1371/journal.pntd.0000761">https://doi.org/10.1371/journal.pntd.0000761</a>.</p>
+</div>
+<div id="ref-smith14">
+<p>Smith, David L, T Alex Perkins, Robert C Reiner, Christopher M Barker, Tianchan Niu, Luis Fernando Chaves, Alicia M Ellis, et al. 2014. “Recasting the Theory of Mosquito-Borne Pathogen Transmission Dynamics and Control.” <em>Transactions of the Royal Society of Tropical Medicine and Hygiene</em> 108 (4): 185–97. <a href="https://doi.org/10.1093/trstmh/tru026">https://doi.org/10.1093/trstmh/tru026</a>.</p>
 </div>
 </div>
             </section>
@@ -476,11 +481,13 @@
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -488,12 +495,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -501,7 +507,15 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
-"download": ["_main.pdf"],
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
 "toc": {
 "collapse": "none"
 },
@@ -517,10 +531,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

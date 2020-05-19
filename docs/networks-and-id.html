@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Infectious Disease Epidemiology - A modern systems approach</title>
-  <meta name="description" content="This book convers infectious disease epidemiology from a dynamical systems perspective">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>19 Networks and ID | Infectious Disease Epidemiology - A modern systems approach</title>
+  <meta name="description" content="A modern, model-based approach to infectious disease epidemiology" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta property="og:title" content="19 Networks and ID | Infectious Disease Epidemiology - A modern systems approach" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta property="og:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta name="twitter:title" content="19 Networks and ID | Infectious Disease Epidemiology - A modern systems approach" />
   
-  <meta name="twitter:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta name="twitter:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
-<meta name="author" content="Andreas Handel">
+<meta name="author" content="Andreas Handel" />
 
 
-<meta name="date" content="2018-08-12">
+<meta name="date" content="2020-05-15" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="virulence.html">
-<link rel="next" href="summary.html">
+<link rel="prev" href="virulence.html"/>
+<link rel="next" href="summary.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -405,7 +408,7 @@
 <h2><span class="header-section-number">19.3</span> Network Terminology</h2>
 <p>The basic building blocks of networks are entities and their connections. Those entities go by different, equivalent names, such as actor, node, vertex, site. Similarly, the connections have different, equivalent names, such as edge, link, bond, tie or connection. The different names stem from the fact that the network framework was developed independently in various scientific sub-fields.</p>
 <div class="figure">
-<img src="images/network-diagram.png" alt="Simple network diagram" />
+<img src="images/network-diagram.png" alt="" />
 <p class="caption">Simple network diagram</p>
 </div>
 </div>
@@ -418,7 +421,7 @@
 <h2><span class="header-section-number">19.5</span> Network Connections</h2>
 <p>What constitutes a connection in a network strongly depends on the question asked and the ID under consideration. Sexual networks connect people that have some form of sexual contact that was sufficient to transmit the disease in question. Similarly, social contact networks consider contacts between individuals in a social setting that allows for the transmission of an ID, e.g., close contact for transmission of a respiratory disease. Proximity networks can be built based on people frequenting the same locations. Connections can either be simple or have characteristics, which describe the relationship that exists between nodes. For instance, connections can have weights, with stronger connections between people that have closer or longer contacts. Connections can also have directions. For instance, if we wanted to model cholera transmission and had a network of villages, then a village upstream would have a connection pointing to villages downstream, but not the reverse. In other words, an ‘infected village’ upstream can infect a downstream village, but the opposite does not occur.</p>
 <div class="figure">
-<img src="images/complex-network-diagram.png" alt="More complex network diagram showing different types of nodes and connections." />
+<img src="images/complex-network-diagram.png" alt="" />
 <p class="caption">More complex network diagram showing different types of nodes and connections.</p>
 </div>
 </div>
@@ -426,7 +429,7 @@
 <h2><span class="header-section-number">19.6</span> Network Characteristics</h2>
 <p>The initial study of a network often starts with the properties of the network itself, without considering any ID spread (yet). One of the most important characteristics of a network is the degree distribution of the nodes. This is simply a histogram of the number of connections that each node has. If connections have directions or there is more than one type of connection possible, then each one would have a histogram.</p>
 <p>Another network characteristic is the ‘shortest path length’, which measures the shortest distance of going from a particular node to some other node. Every node has a shortest path length to every other node (if 2 nodes are not connected because they belong to unconnected subparts of a network, the path length is considered infinite).</p>
-<p>Many other network characteristics exist, the field of network analysis has proliferated in the last several years. If you want to learn more, <span class="citation">(Newman <a href="#ref-newman13">2013</a>)</span> is a useful resource. Many review articles on that topic also exist <span class="citation">(Keeling and Eames <a href="#ref-keeling05">2005</a>)</span>.</p>
+<p>Many other network characteristics exist, the field of network analysis has proliferated in the last several years. If you want to learn more, <span class="citation">(Newman <a href="#ref-newman13" role="doc-biblioref">2013</a>)</span> is a useful resource. Many review articles on that topic also exist <span class="citation">(Keeling and Eames <a href="#ref-keeling05" role="doc-biblioref">2005</a>)</span>.</p>
 <p>It is important to understand that some characteristics are attached to individual nodes and some to the full network. For instance, every node has a number of degrees (connections), and the network has an overall degree distribution. Similarly, one can compute the mean shortest path length for each node and, if one takes another mean, a mean path length for the whole network.</p>
 </div>
 <div id="important-types-of-networks" class="section level2">
@@ -435,7 +438,7 @@
 <p>One of the best-studied networks is the random network. In this network, any 2 nodes have a fixed probability of being connected. For a network of <em>N</em> nodes and connection probability <em>p</em>, the average number of connections each node has (it’s degree) is <em>(N-1)p</em>. The degree distribution of the network is binomial, which for large networks becomes a normal distribution. That means most nodes have approximately the average number of connections. There are only a few nodes with substantially fewer or more connections.</p>
 <p>Many real-world networks do not have the degree distribution found for random networks. It is often common that most nodes have very few connections, while a few nodes have many connections. This idea, for instance, underlies the superspreader concept. Such a distribution of connections can be well described by a scale-free network. In which case the degree distribution follows a power law, with most nodes having very few connections but a small number of nodes having very many connections.</p>
 <div class="figure"><span id="fig:network-examples"></span>
-<img src="images/network-examples.png" alt="Random and scale-free networks and degree distribution."  />
+<img src="images/network-examples.png" alt="Random and scale-free networks and degree distribution." width="1000" />
 <p class="caption">
 Figure 19.1: Random and scale-free networks and degree distribution.
 </p>
@@ -443,7 +446,7 @@ Figure 19.1: Random and scale-free networks and degree distribution.
 </div>
 <div id="id-transmission-on-networks" class="section level2">
 <h2><span class="header-section-number">19.8</span> ID Transmission on Networks</h2>
-<p>The premise for ID transmission is that it can only occur along the connections of a network. As such, the structure of the network can strongly influence the dynamics of the ID. How exactly different characteristics of networks, such as the one discussed above and others, interact with the features of the ID to affect overall ID dynamics is an area that is currently heavily investigated. For some recent work on that, see <span class="citation">(Bansal, Grenfell, and Meyers <a href="#ref-bansal07">2007</a>)</span>.</p>
+<p>The premise for ID transmission is that it can only occur along the connections of a network. As such, the structure of the network can strongly influence the dynamics of the ID. How exactly different characteristics of networks, such as the one discussed above and others, interact with the features of the ID to affect overall ID dynamics is an area that is currently heavily investigated. For some recent work on that, see <span class="citation">(Bansal, Grenfell, and Meyers <a href="#ref-bansal07" role="doc-biblioref">2007</a>)</span>.</p>
 </div>
 <div id="networks-and-id-control" class="section level2">
 <h2><span class="header-section-number">19.9</span> Networks and ID Control</h2>
@@ -455,13 +458,13 @@ Figure 19.1: Random and scale-free networks and degree distribution.
 </div>
 <div id="id-transmission-on-dynamic-networks" class="section level2">
 <h2><span class="header-section-number">19.11</span> ID Transmission on Dynamic Networks</h2>
-<p>Most of the time, networks are considered static and do not change during the ID transmission process. However, this does not have to be the case and is often not realistic. The most detailed models allow for variations in the network through the making and breaking of connections and addition and loss (birth and death) of nodes. Implementing and analyzing models that have a dynamically changing network with the ID dynamics (and potential control measures) occurring ‘on top’ is technically challenging. Not too many of such models currently exist, but it is an area of active investigation by many, see <span class="citation">(Bansal et al. <a href="#ref-bansal10">2010</a>)</span>.</p>
+<p>Most of the time, networks are considered static and do not change during the ID transmission process. However, this does not have to be the case and is often not realistic. The most detailed models allow for variations in the network through the making and breaking of connections and addition and loss (birth and death) of nodes. Implementing and analyzing models that have a dynamically changing network with the ID dynamics (and potential control measures) occurring ‘on top’ is technically challenging. Not too many of such models currently exist, but it is an area of active investigation by many, see <span class="citation">(Bansal et al. <a href="#ref-bansal10" role="doc-biblioref">2010</a>)</span>.</p>
 </div>
 <div id="summary-and-cartoon-17" class="section level2">
 <h2><span class="header-section-number">19.12</span> Summary and Cartoon</h2>
 <p>This module provides a brief discussion of transmission networks and how they impact dynamics and control of ID.</p>
 <div class="figure"><span id="fig:xkcdnetwork"></span>
-<img src="images/xkcd-network.png" alt="Computer viruses and human viruses are in many ways similar. [Source: xkcd.com](https://xkcd.com/350/)."  />
+<img src="images/xkcd-network.png" alt="Computer viruses and human viruses are in many ways similar. [Source: xkcd.com](https://xkcd.com/350/)." width="740" />
 <p class="caption">
 Figure 19.2: Computer viruses and human viruses are in many ways similar. <a href="https://xkcd.com/350/">Source: xkcd.com</a>.
 </p>
@@ -472,15 +475,15 @@ Figure 19.2: Computer viruses and human viruses are in many ways similar. <a hre
 <ul>
 <li>The online game <a href="http://vax.herokuapp.com/">VAX</a> provides a nice interactive setting where you can explore vaccination on networks and how it can help reduce disease spread. Try to pass all levels.</li>
 <li>Find a study that looked at the dynamics of an ID on a network. Summarize and discuss the study. Explain what findings in the study are due to the network approach. Discuss/speculate how results would be different if one were to ignore the network structure and instead used a compartmental model approach.</li>
-<li>Read the article “Networks and epidemic models” by Keeling and Eames <span class="citation">(Keeling and Eames <a href="#ref-keeling05">2005</a>)</span>. Find a recent paper that investigates a network for some ID and explain which data collection approach of the ones mentioned in section 3 (or a different one) was used. Also, discuss the structure of the network that was observed in relation to the ones described in section 5.</li>
+<li>Read the article “Networks and epidemic models” by Keeling and Eames <span class="citation">(Keeling and Eames <a href="#ref-keeling05" role="doc-biblioref">2005</a>)</span>. Find a recent paper that investigates a network for some ID and explain which data collection approach of the ones mentioned in section 3 (or a different one) was used. Also, discuss the structure of the network that was observed in relation to the ones described in section 5.</li>
 </ul>
 </div>
 <div id="further-resources-17" class="section level2">
 <h2><span class="header-section-number">19.14</span> Further Resources</h2>
 <ul>
-<li>Nice general introductions to networks are given in [<span class="citation">Strogatz (<a href="#ref-strogatz01">2001</a>)</span>; newman03]</li>
-<li>Further discussion of networks and ID spread are provided in <span class="citation">(Pellis et al. <a href="#ref-pellis15">2015</a>; Pastor-Satorras et al. <a href="#ref-pastor-satorras15">2015</a>; Ferrari et al. <a href="#ref-ferrari11">2011</a>; Bansal, Grenfell, and Meyers <a href="#ref-bansal07">2007</a>)</span></li>
-<li>Networks and ID control are for discussed in for instance <span class="citation">(Salathé and Jones <a href="#ref-salathe10">2010</a>)</span>.</li>
+<li>Nice general introductions to networks are given in [<span class="citation">Strogatz (<a href="#ref-strogatz01" role="doc-biblioref">2001</a>)</span>; newman03]</li>
+<li>Further discussion of networks and ID spread are provided in <span class="citation">(Pellis et al. <a href="#ref-pellis15" role="doc-biblioref">2015</a>; Pastor-Satorras et al. <a href="#ref-pastor-satorras15" role="doc-biblioref">2015</a>; Ferrari et al. <a href="#ref-ferrari11" role="doc-biblioref">2011</a>; Bansal, Grenfell, and Meyers <a href="#ref-bansal07" role="doc-biblioref">2007</a>)</span></li>
+<li>Networks and ID control are for discussed in for instance <span class="citation">(Salathé and Jones <a href="#ref-salathe10" role="doc-biblioref">2010</a>)</span>.</li>
 </ul>
 </div>
 <div id="references-18" class="section level2">
@@ -490,32 +493,32 @@ Figure 19.2: Computer viruses and human viruses are in many ways similar. <a hre
 </div>
 <h3> References</h3>
 <div id="refs" class="references">
+<div id="ref-bansal07">
+<p>Bansal, Shweta, Bryan T. Grenfell, and Lauren Ancel Meyers. 2007. “When Individual Behaviour Matters: Homogeneous and Network Models in Epidemiology.” <em>J R Soc Interface</em> 4 (16): 879–91. <a href="https://doi.org/10.1098/rsif.2007.1100">https://doi.org/10.1098/rsif.2007.1100</a>.</p>
+</div>
+<div id="ref-bansal10">
+<p>Bansal, Shweta, Jonathan Read, Babak Pourbohloul, and Lauren Ancel Meyers. 2010. “The Dynamic Nature of Contact Networks in Infectious Disease Epidemiology.” <em>J Biol Dyn</em> 4 (5): 478–89. <a href="https://doi.org/10.1080/17513758.2010.503376">https://doi.org/10.1080/17513758.2010.503376</a>.</p>
+</div>
+<div id="ref-ferrari11">
+<p>Ferrari, Matthew J., Sarah E. Perkins, Laura W. Pomeroy, and Ottar N. Bjørnstad. 2011. “Pathogens, Social Networks, and the Paradox of Transmission Scaling.” <em>Interdisciplinary Perspectives on Infectious Diseases</em> 2011: 1–10. <a href="https://doi.org/10.1155/2011/267049">https://doi.org/10.1155/2011/267049</a>.</p>
+</div>
+<div id="ref-keeling05">
+<p>Keeling, Matt J., and Ken T D. Eames. 2005. “Networks and Epidemic Models.” <em>J R Soc Interface</em> 2 (4): 295–307. <a href="https://doi.org/10.1098/rsif.2005.0051">https://doi.org/10.1098/rsif.2005.0051</a>.</p>
+</div>
 <div id="ref-newman13">
 <p>Newman, M. E. J. 2013. <em>Networks: An Introduction</em>. Reprint. with corr. Oxford [u.a.]: Oxford Univ. Press.</p>
 </div>
-<div id="ref-keeling05">
-<p>Keeling, Matt J., and Ken T D. Eames. 2005. “Networks and Epidemic Models.” <em>J R Soc Interface</em> 2 (4). Mathematics, University of Warwick, Institute Gibbet Hill Road, Coventry CV4 7AL, UK. m.j.keeling@warwick.ac.uk: 295–307. doi:<a href="https://doi.org/10.1098/rsif.2005.0051">10.1098/rsif.2005.0051</a>.</p>
-</div>
-<div id="ref-bansal07">
-<p>Bansal, Shweta, Bryan T. Grenfell, and Lauren Ancel Meyers. 2007. “When Individual Behaviour Matters: Homogeneous and Network Models in Epidemiology.” <em>J R Soc Interface</em> 4 (16). Computational; Applied Mathematics, Institute for Computational Engineering; Sciences, University of Texas at Austin, 1 University Station, C0200, Austin, TX 78712, USA.: 879–91. doi:<a href="https://doi.org/10.1098/rsif.2007.1100">10.1098/rsif.2007.1100</a>.</p>
-</div>
-<div id="ref-bansal10">
-<p>Bansal, Shweta, Jonathan Read, Babak Pourbohloul, and Lauren Ancel Meyers. 2010. “The Dynamic Nature of Contact Networks in Infectious Disease Epidemiology.” <em>J Biol Dyn</em> 4 (5). Center for Infectious Disease Dynamics, The Pennsylvania State University, University Park, PA, USA. shweta@sbansal.com: 478–89. doi:<a href="https://doi.org/10.1080/17513758.2010.503376">10.1080/17513758.2010.503376</a>.</p>
-</div>
-<div id="ref-strogatz01">
-<p>Strogatz, S H. 2001. “Exploring Complex Networks.” <em>Nature</em> 410 (6825): 268–76. doi:<a href="https://doi.org/10.1038/35065725">10.1038/35065725</a>.</p>
+<div id="ref-pastor-satorras15">
+<p>Pastor-Satorras, Romualdo, Claudio Castellano, Piet Van Mieghem, and Alessandro Vespignani. 2015. “Epidemic Processes in Complex Networks.” <em>Reviews of Modern Physics</em> 87 (3): 925–79. <a href="https://doi.org/10.1103/RevModPhys.87.925">https://doi.org/10.1103/RevModPhys.87.925</a>.</p>
 </div>
 <div id="ref-pellis15">
-<p>Pellis, Lorenzo, Frank Ball, Shweta Bansal, Ken Eames, Thomas House, Valerie Isham, and Pieter Trapman. 2015. “Eight Challenges for Network Epidemic Models.” <em>Epidemics</em> 10 (March): 58–62. doi:<a href="https://doi.org/10.1016/j.epidem.2014.07.003">10.1016/j.epidem.2014.07.003</a>.</p>
-</div>
-<div id="ref-pastor-satorras15">
-<p>Pastor-Satorras, Romualdo, Claudio Castellano, Piet Van Mieghem, and Alessandro Vespignani. 2015. “Epidemic Processes in Complex Networks.” <em>Reviews of Modern Physics</em> 87 (3): 925–79. doi:<a href="https://doi.org/10.1103/RevModPhys.87.925">10.1103/RevModPhys.87.925</a>.</p>
-</div>
-<div id="ref-ferrari11">
-<p>Ferrari, Matthew J., Sarah E. Perkins, Laura W. Pomeroy, and Ottar N. Bjørnstad. 2011. “Pathogens, Social Networks, and the Paradox of Transmission Scaling.” <em>Interdisciplinary Perspectives on Infectious Diseases</em> 2011: 1–10. doi:<a href="https://doi.org/10.1155/2011/267049">10.1155/2011/267049</a>.</p>
+<p>Pellis, Lorenzo, Frank Ball, Shweta Bansal, Ken Eames, Thomas House, Valerie Isham, and Pieter Trapman. 2015. “Eight Challenges for Network Epidemic Models.” <em>Epidemics</em> 10 (March): 58–62. <a href="https://doi.org/10.1016/j.epidem.2014.07.003">https://doi.org/10.1016/j.epidem.2014.07.003</a>.</p>
 </div>
 <div id="ref-salathe10">
-<p>Salathé, Marcel, and James H. Jones. 2010. “Dynamics and Control of Diseases in Networks with Community Structure.” <em>PLoS Computational Biology</em> 6 (4): e1000736. <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000736" class="uri">http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000736</a>.</p>
+<p>Salathé, Marcel, and James H. Jones. 2010. “Dynamics and Control of Diseases in Networks with Community Structure.” <em>PLoS Computational Biology</em> 6 (4): e1000736. <a href="http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000736">http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000736</a>.</p>
+</div>
+<div id="ref-strogatz01">
+<p>Strogatz, S H. 2001. “Exploring Complex Networks.” <em>Nature</em> 410 (6825): 268–76. <a href="https://doi.org/10.1038/35065725">https://doi.org/10.1038/35065725</a>.</p>
 </div>
 </div>
             </section>
@@ -529,11 +532,13 @@ Figure 19.2: Computer viruses and human viruses are in many ways similar. <a hre
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -541,12 +546,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -554,7 +558,15 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
-"download": ["_main.pdf"],
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
 "toc": {
 "collapse": "none"
 },
@@ -570,10 +582,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

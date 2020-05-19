@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Infectious Disease Epidemiology - A modern systems approach</title>
-  <meta name="description" content="This book convers infectious disease epidemiology from a dynamical systems perspective">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Patterns of Infectious Disease Dynamics | Infectious Disease Epidemiology - A modern systems approach</title>
+  <meta name="description" content="A modern, model-based approach to infectious disease epidemiology" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta property="og:title" content="4 Patterns of Infectious Disease Dynamics | Infectious Disease Epidemiology - A modern systems approach" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta property="og:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta name="twitter:title" content="4 Patterns of Infectious Disease Dynamics | Infectious Disease Epidemiology - A modern systems approach" />
   
-  <meta name="twitter:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta name="twitter:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
-<meta name="author" content="Andreas Handel">
+<meta name="author" content="Andreas Handel" />
 
 
-<meta name="date" content="2018-08-12">
+<meta name="date" content="2020-05-15" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="idstates.html">
-<link rel="next" href="R0.html">
+<link rel="prev" href="idstates.html"/>
+<link rel="next" href="R0.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -402,9 +405,9 @@
 <h2><span class="header-section-number">4.2</span> Introduction</h2>
 <p>Different IDs show different patterns in their dynamics. Some IDs produce sporadic outbreaks and then seem to disappear for years. Ebola is a prominent example. Other ID seem to be ‘always around’ and incidence or prevalence might change little. TB and HIV in some parts of the world, as well as certain STD and chronic viral infections show such patterns. Many other IDs show oscillatory behavior, i.e. we repeated outbreaks or increases in incidence, followed by periods of reduced incidence. For some ID, these patterns of increase and decrease are annual, for other ID the cycles are multi-year. Figure <a href="patterns-of-infectious-disease-dynamics.html#fig:IDcycles">4.1</a> shows an example of such patterns of increase and decrease for measles and pertussis.</p>
 <div class="figure"><span id="fig:IDcycles"></span>
-<img src="images/IDcycles.png" alt="Examples of ID cycles. From [@keeling08]."  />
+<img src="images/IDcycles.png" alt="Examples of ID cycles. From [@keeling08]." width="1387" />
 <p class="caption">
-Figure 4.1: Examples of ID cycles. From <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.
+Figure 4.1: Examples of ID cycles. From <span class="citation">(Keeling and Rohani <a href="#ref-keeling08" role="doc-biblioref">2008</a>)</span>.
 </p>
 </div>
 <p>Understanding the nature of the different patterns seen for ID help understand the general ‘behavior’ of the ID and can also point to best approaches of minimizing specific IDs.</p>
@@ -417,9 +420,10 @@ Figure 4.1: Examples of ID cycles. From <span class="citation">(Keeling and Roha
 </div>
 <div id="a-model-with-resource-replenishment" class="section level2">
 <h2><span class="header-section-number">4.4</span> A Model with Resource Replenishment</h2>
-<p>A version of the SIR model that includes resource replenishment through natural births or waning immunity is shown in figure <a href="patterns-of-infectious-disease-dynamics.html#fig:birthdeathdmodel">4.2</a>.</p>
+<p>A version of the SIR model that includes resource replenishment through natural births or waning immunity is shown in figure
+<a href="patterns-of-infectious-disease-dynamics.html#fig:birthdeathdmodel">4.2</a>.</p>
 <div class="figure"><span id="fig:birthdeathdmodel"></span>
-<img src="images/R0modelfigure.png" alt="Example of an SIR model with births, deaths and waning immunity."  />
+<img src="images/R0modelfigure.png" alt="Example of an SIR model with births, deaths and waning immunity." width="1796" />
 <p class="caption">
 Figure 4.2: Example of an SIR model with births, deaths and waning immunity.
 </p>
@@ -432,7 +436,9 @@ Figure 4.2: Example of an SIR model with births, deaths and waning immunity.
 <div id="myadvancedbox" class="section level4">
 <h4><span class="header-section-number">4.4.0.2</span> Mathematical Equations for the Model with Resource replenishment</h4>
 <p>The ordinary differential equations corresponding to the compartmental model shown in figure <a href="patterns-of-infectious-disease-dynamics.html#fig:birthdeathdmodel">4.2</a> are given by</p>
-<p><span class="math display">\[\dot S = m - b I S + wR - n S \]</span> <span class="math display">\[\dot I = b IS - gI - n I \]</span> <span class="math display">\[\dot R =  gI - wR - n R\]</span></p>
+<p><span class="math display">\[\dot S = m - b I S + wR - n S \]</span>
+<span class="math display">\[\dot I = b IS - gI - n I \]</span>
+<span class="math display">\[\dot R =  gI - wR - n R\]</span></p>
 </div>
 </div>
 <div id="intrinisic-cycles" class="section level2">
@@ -441,14 +447,15 @@ Figure 4.2: Example of an SIR model with births, deaths and waning immunity.
 </div>
 <div id="intrinisic-cycles-and-models" class="section level2">
 <h2><span class="header-section-number">4.6</span> Intrinisic Cycles and models</h2>
-<p>One can sometimes compute the time between outbreaks. For the simple compartmental SIR model, an approximate equation for the period close to the endemic state is <span class="math display">\[T \approx 2 \pi \sqrt{\left( \frac{LD}{R_0 - 1} \right)}\]</span></p>
-<p>Here, <em>L</em> is the average lifespan of a host, <em>D</em> is the average duration of infectiousness, and <em>R<sub>0</sub></em> is the basic reproductive number - a quantity we will discuss in chapter <a href="R0.html#R0">5</a> For more details on this equations, see e.g. <span class="citation">(Keeling and Rohani <a href="#ref-keeling08">2008</a>)</span>.</p>
+<p>One can sometimes compute the time between outbreaks. For the simple compartmental SIR model, an approximate equation for the period close to the endemic state is
+<span class="math display">\[T \approx 2 \pi \sqrt{\left( \frac{LD}{R_0 - 1} \right)}\]</span></p>
+<p>Here, <em>L</em> is the average lifespan of a host, <em>D</em> is the average duration of infectiousness, and <em>R<sub>0</sub></em> is the basic reproductive number - a quantity we will discuss in chapter <a href="R0.html#R0">5</a> For more details on this equations, see e.g. <span class="citation">(Keeling and Rohani <a href="#ref-keeling08" role="doc-biblioref">2008</a>)</span>.</p>
 <p>For more complicated models and real-world scenarios where the simple SIR model is not a good approximation, the equation just provided does not apply anymore. It might not even be possible to write down any equation. One can then instead run a computer simulation of the model and determine the length of the cycles from the time-series returned by the computer. The main point still holds, independent of the ability to write down an equation for the cycle length, namely that there is a relation between intrinsic characteristics of the system, such as duration of infectious period (<em>D</em>) and transmissibility of the disease (<em>R<sub>0</sub></em>), and the period of the oscillations. In cases where we cannot derive a mathematical equation, we can try to figure out the relation between cycle duration and some parameter of interest. This can be achieved by repeatedly altering the parameter (e.g. the duration of the infectious period, <em>D</em>), and recording the cycle period, <em>T</em>, reported by the model simulation for various values of the parameter. By plotting a figure showing <em>D</em> on the x-axis and <em>T</em> on the y-axis, we obtain a relation between these quantities.</p>
 </div>
 <div id="external-drivers-of-cycles" class="section level2">
 <h2><span class="header-section-number">4.7</span> External Drivers of Cycles</h2>
 <p>Another mechanism that can lead to oscillations in the dynamics of ID can come from “external” drivers. Of course, these processes are still part of the whole system, but not as directly as the dynamics and interaction of the hosts. In that sense, we consider it an external process.</p>
-<p>Weather is one of the most important external factors. Many IDs are influenced by the weather. For instance influenza virus survives better when the vapor pressure is low, which in temperate regions is usually the case in winter <span class="citation">(Lipsitch and Viboud <a href="#ref-lipsitch09">2009</a>, <span class="citation">Shaman et al. (<a href="#ref-shaman10">2010</a>)</span>)</span>.</p>
+<p>Weather is one of the most important external factors. Many IDs are influenced by the weather. For instance influenza virus survives better when the vapor pressure is low, which in temperate regions is usually the case in winter <span class="citation">(Lipsitch and Viboud <a href="#ref-lipsitch09" role="doc-biblioref">2009</a>, @shaman10)</span>.</p>
 <p>Other types of seasonality are related to human activity and behavior. For instance, many childhood diseases increase in incidence when a new school year starts.</p>
 <p>For some ID, weather and behavior interact. Many water-borne diseases in the U.S. see an uptick in summer. This is due to behavior changes in the host: More people swim in outdoor water in the summer.</p>
 <p>Often, more than one mechanism occurs and influences the ID dynamics. As such, it is often not possible to isolate a single factor as the main important one. It often depends on the particular setting.</p>
@@ -465,10 +472,10 @@ Figure 4.2: Example of an SIR model with births, deaths and waning immunity.
 <p>Note that there are technically steady states that exist but won’t show up in the simulation since they are unstable. Since any unstable steady state also rarely exists in nature (other than the disease free state, with a population remaining in that state until a new pathogen arrives), those steady states tend to be not that important in practice.</p>
 <div id="myadvancedbox" class="section level4">
 <h4><span class="header-section-number">4.8.0.1</span> Steady States and Models</h4>
-<p>When an ID reaches a steady state, a model based on ordinary differential equations, such as the model shown above, simplifies. At steady state, there are – by definition – no changes in the total number of individuals in each compartment. Therefore the left side of the equations are zero, i.e. <span class="math inline">\(\dot S = \dot I = \dot R =0\)</span>. This changes the differential equations into a set of algebraic equations. For a fairly small set of equations (usually &lt; 5), one can obtain equations for the compartments (<em>S</em>, <em>I</em>, and <em>R</em> in this case) at steady state that are a function of the model parameters. While it is often theoretically possible to solve models with more compartments/equations, the resulting expressions are usually so big and unwieldy to not provide much useful insight.</p>
-<p>The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. The two most important packages for such tasks are <a href="http://www.maplesoft.com/">Maple</a> and <a href="https://www.wolfram.com/mathematica/">Mathematica</a>. Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use <a href="http://maxima.sourceforge.net/">Maxima</a>. <a href="http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems">Other packages exist</a>. Note that <code>R</code> is not suitable for solving symbolic equations. Using Maxima to solve the equations above (without immune recovery, i.e. <em>w=0</em>, to make the results simpler) gives:</p>
+<p>When an ID reaches a steady state, a model based on ordinary differential equations, such as the model shown above, simplifies. At steady state, there are – by definition – no changes in the total number of individuals in each compartment. Therefore the left side of the equations are zero, i.e. <span class="math inline">\(\dot S = \dot I = \dot R =0\)</span>. This changes the differential equations into a set of algebraic equations. For a fairly small set of equations (usually &lt; 5), one can obtain equations for the compartments (<em>S</em>, <em>I</em>, and <em>R</em> in this case) at steady state that are a function of the model parameters. While it is often theoretically possible to solve models with more compartments/equations, the resulting expressions are usually so big and unwieldy to not provide much useful insight.</p>
+<p>The hard method of solving this set of equations is with pen and paper. Nowadays, there is software that can do it for you. The two most important packages for such tasks are <a href="http://www.maplesoft.com/">Maple</a> and <a href="https://www.wolfram.com/mathematica/">Mathematica</a>. Both are commercial products, fairly powerful and quite expensive. If you only need a program for occasionally solving such equations, free alternatives are available. I usually use <a href="http://maxima.sourceforge.net/">Maxima</a>. <a href="http://en.wikipedia.org/wiki/Comparison_of_computer_algebra_systems">Other packages exist</a>. Note that <code>R</code> is not suitable for solving symbolic equations. Using Maxima to solve the equations above (without immune recovery, i.e. <em>w=0</em>, to make the results simpler) gives:</p>
 <div class="figure"><span id="fig:SSmaxima"></span>
-<img src="images/SSmaxima.png" alt="Maxima code for solving the SIR model steady state equations."  />
+<img src="images/SSmaxima.png" alt="Maxima code for solving the SIR model steady state equations." width="1007" />
 <p class="caption">
 Figure 4.3: Maxima code for solving the SIR model steady state equations.
 </p>
@@ -479,9 +486,10 @@ Figure 4.3: Maxima code for solving the SIR model steady state equations.
 </div>
 <div id="detecting-cycles-or-other-patterns" class="section level2">
 <h2><span class="header-section-number">4.9</span> Detecting cycles or other patterns</h2>
-<p>It is often hard to determine if there is a specific repeating pattern, such as oscillations/cycles for a given ID. Consider for instance Figure <a href="patterns-of-infectious-disease-dynamics.html#fig:gonorrheapattern">4.4</a> (<a href="http://www.cdc.gov/STD/stats06/images/trends-img-2.gif">Source CDC</a>). One can see that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005, with ups and downs in between. The changes are not rapid enough to be due to seasonal/annual drivers. If we had more data and the same up-down pattern repeated, we could speculate that this might be due to some intrinsic oscillatory dynamics of the disease. In this case, the most likely explanation for the observed patterns lies outside the disease dynamics itself. Increased detection and treatment likely led to a decline in the 40s, changing sexual behavior lead to an increase starting in the 60s, and strong safe-sex campaigns, combined with the threat of HIV, resulted in a decrease starting in the 80s. However, this is somewhat speculative. It might well be that other factors, (e.g. changes in surveillance intensity) could explain the pattern. A careful analysis (which I have not done) would be needed before one can be more confident as to what might lead to the observed pattern.</p>
+<p>It is often hard to determine if there is a specific repeating pattern, such as oscillations/cycles for a given ID. Consider for instance Figure <a href="patterns-of-infectious-disease-dynamics.html#fig:gonorrheapattern">4.4</a> (<a href="http://www.cdc.gov/STD/stats06/images/trends-img-2.gif">Source CDC</a>).
+One can see that Gonorrhea incidence was fairly stable between 1950-1965 and again 1995-2005, with ups and downs in between. The changes are not rapid enough to be due to seasonal/annual drivers. If we had more data and the same up-down pattern repeated, we could speculate that this might be due to some intrinsic oscillatory dynamics of the disease. In this case, the most likely explanation for the observed patterns lies outside the disease dynamics itself. Increased detection and treatment likely led to a decline in the 40s, changing sexual behavior lead to an increase starting in the 60s, and strong safe-sex campaigns, combined with the threat of HIV, resulted in a decrease starting in the 80s. However, this is somewhat speculative. It might well be that other factors, (e.g. changes in surveillance intensity) could explain the pattern. A careful analysis (which I have not done) would be needed before one can be more confident as to what might lead to the observed pattern.</p>
 <div class="figure"><span id="fig:gonorrheapattern"></span>
-<img src="images/gonorrhea.png" alt="Gonorrhea cases in the US."  />
+<img src="images/gonorrhea.png" alt="Gonorrhea cases in the US." width="658" />
 <p class="caption">
 Figure 4.4: Gonorrhea cases in the US.
 </p>
@@ -496,7 +504,7 @@ Figure 4.4: Gonorrhea cases in the US.
 <h2><span class="header-section-number">4.11</span> Summary and Cartoon</h2>
 <p>This module provided a discussion of the various general patterns we observe in the dynamics of ID. Those are individual outbreaks, cycles of repeated outbreaks, and steady endemic states.</p>
 <div class="figure"><span id="fig:sciencenewscycle"></span>
-<img src="images/phd_sciencenewscycle.png" alt="Here is a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174)."  />
+<img src="images/phd_sciencenewscycle.png" alt="Here is a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174)." width="600" />
 <p class="caption">
 Figure 4.5: Here is a different kind of cycle that (ID) scientists sometimes encounter. <a href="http://www.phdcomics.com/comics/archive.php?comicid=1174">Source: phdcomics.com</a>.
 </p>
@@ -507,15 +515,15 @@ Figure 4.5: Here is a different kind of cycle that (ID) scientists sometimes enc
 <ul>
 <li>The <em>Patterns of ID</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
 <li>Find a scientific article/paper that investigates the incidence/prevalence pattern of some ID. Summarize the article. Discuss why one sees the observed pattern (and not one of the others). Speculate what kind of change to the ID/system could change the observed pattern (even if that change is not biologically realistic).</li>
-<li>Read the article “Dynamical resonance can account for seasonality of influenza epidemics” by Dushoff et al <span class="citation">(Dushoff et al. <a href="#ref-dushoff04">2004</a>)</span>. They suggest an interesting explanation for the seasonal variation in influenza cases. Look at the literature to see if since that paper came out, there has been any further progress on that question. Discuss recent advances that might support or refute the idea suggested by Dushoff et al.</li>
+<li>Read the article “Dynamical resonance can account for seasonality of influenza epidemics” by Dushoff et al <span class="citation">(Dushoff et al. <a href="#ref-dushoff04" role="doc-biblioref">2004</a>)</span>. They suggest an interesting explanation for the seasonal variation in influenza cases. Look at the literature to see if since that paper came out, there has been any further progress on that question. Discuss recent advances that might support or refute the idea suggested by Dushoff et al.</li>
 </ul>
 </div>
 <div id="further-resources-2" class="section level2">
 <h2><span class="header-section-number">4.13</span> Further Resources</h2>
 <ul>
-<li>The following references provide some more information on and discussion of seasonality in IDs: <span class="citation">(Altizer et al. <a href="#ref-altizer06">2006</a>; Dowell <a href="#ref-dowell01">2001</a>; Grassly and Fraser <a href="#ref-grassly06">2006</a>; Stone, Olinky, and Huppert <a href="#ref-stone07">2007</a>)</span>.</li>
-<li>Seasonality for influenza has been heavily studied, some references are <span class="citation">(Dushoff et al. <a href="#ref-dushoff04">2004</a>; Lofgren et al. <a href="#ref-lofgren07">2007</a>; Baumgartner et al. <a href="#ref-baumgartner12">2012</a>)</span>.</li>
-<li>A discussion of cycles in Cholera can be found in <span class="citation">(Pascual, Bouma, and Dobson <a href="#ref-pascual02">2002</a>; Emch et al. <a href="#ref-emch08">2008</a>)</span>.</li>
+<li>The following references provide some more information on and discussion of seasonality in IDs: <span class="citation">(Altizer et al. <a href="#ref-altizer06" role="doc-biblioref">2006</a>; Dowell <a href="#ref-dowell01" role="doc-biblioref">2001</a>; Grassly and Fraser <a href="#ref-grassly06" role="doc-biblioref">2006</a>; Stone, Olinky, and Huppert <a href="#ref-stone07" role="doc-biblioref">2007</a>)</span>.</li>
+<li>Seasonality for influenza has been heavily studied, some references are <span class="citation">(Dushoff et al. <a href="#ref-dushoff04" role="doc-biblioref">2004</a>; Lofgren et al. <a href="#ref-lofgren07" role="doc-biblioref">2007</a>; Baumgartner et al. <a href="#ref-baumgartner12" role="doc-biblioref">2012</a>)</span>.</li>
+<li>A discussion of cycles in Cholera can be found in <span class="citation">(Pascual, Bouma, and Dobson <a href="#ref-pascual02" role="doc-biblioref">2002</a>; Emch et al. <a href="#ref-emch08" role="doc-biblioref">2008</a>)</span>.</li>
 </ul>
 </div>
 <div id="references-3" class="section level2">
@@ -525,41 +533,38 @@ Figure 4.5: Here is a different kind of cycle that (ID) scientists sometimes enc
 </div>
 <h3> References</h3>
 <div id="refs" class="references">
+<div id="ref-altizer06">
+<p>Altizer, Sonia, Andrew Dobson, Parviez Hosseini, Peter Hudson, Mercedes Pascual, and Pejman Rohani. 2006. “Seasonality and the Dynamics of Infectious Diseases.” <em>Ecology Letters</em> 9 (4): 467–84. <a href="https://doi.org/10.1111/j.1461-0248.2005.00879.x">https://doi.org/10.1111/j.1461-0248.2005.00879.x</a>.</p>
+</div>
+<div id="ref-baumgartner12">
+<p>Baumgartner, Eduardo, Christine N. Dao, Sharifa Nasreen, Mejbah Uddin Bhuiyan, Syeda Mah-E-Muneer, Abdullah Al Mamun, M. A. Yushuf Sharker, et al. 2012. “Seasonality, Timing, and Climate Drivers of Influenza Activity Worldwide.” <em>The Journal of Infectious Diseases</em> 206 (6): 838–46. <a href="https://doi.org/10.1093/infdis/jis467">https://doi.org/10.1093/infdis/jis467</a>.</p>
+</div>
+<div id="ref-dowell01">
+<p>Dowell, S F. 2001. “Seasonal Variation in Host Susceptibility and Cycles of Certain Infectious Diseases.” <em>Emerging Infectious Diseases</em> 7 (3): 369–74. <a href="https://doi.org/10.3201/eid0703.010301">https://doi.org/10.3201/eid0703.010301</a>.</p>
+</div>
+<div id="ref-dushoff04">
+<p>Dushoff, Jonathan, Joshua B. Plotkin, Simon A. Levin, and David JD Earn. 2004. “Dynamical Resonance Can Account for Seasonality of Influenza Epidemics.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (48): 16915–6. <a href="http://www.pnas.org/content/101/48/16915.short">http://www.pnas.org/content/101/48/16915.short</a>.</p>
+</div>
+<div id="ref-emch08">
+<p>Emch, Michael, Caryl Feldacker, M Sirajul Islam, and Mohammad Ali. 2008. “Seasonality of Cholera from 1974 to 2005: A Review of Global Patterns.” <em>International Journal of Health Geographics</em> 7 (1): 31. <a href="https://doi.org/10.1186/1476-072X-7-31">https://doi.org/10.1186/1476-072X-7-31</a>.</p>
+</div>
+<div id="ref-grassly06">
+<p>Grassly, Nicholas C, and Christophe Fraser. 2006. “Seasonal Infectious Disease Epidemiology.” <em>Proceedings of the Royal Society of London B: Biological Sciences</em> 273 (1600): 2541–50.</p>
+</div>
 <div id="ref-keeling08">
 <p>Keeling, Matt J, and Pejman Rohani. 2008. <em>Modeling Infectious Diseases in Humans and Animals</em>. Princeton University Press.</p>
 </div>
 <div id="ref-lipsitch09">
-<p>Lipsitch, Marc, and Cécile Viboud. 2009. “Influenza Seasonality: Lifting the Fog.” <em>Proc Natl Acad Sci U S A</em> 106 (10). Department of Epidemiology, Harvard School of Public Health, Boston, MA 02130, USA. mlipsitc@hsph.harvard.edu: 3645–6. doi:<a href="https://doi.org/10.1073/pnas.0900933106">10.1073/pnas.0900933106</a>.</p>
-</div>
-<div id="ref-shaman10">
-<p>Shaman, Jeffrey, Virginia E. Pitzer, Cécile Viboud, Bryan T. Grenfell, and Marc Lipsitch. 2010. “Absolute Humidity and the Seasonal Onset of Influenza in the Continental United States.” <em>PLoS Biol</em> 8 (2). College of Oceanic; Atmospheric Sciences, Oregon State University, Corvallis, Oregon, United States of America.: e1000316. doi:<a href="https://doi.org/10.1371/journal.pbio.1000316">10.1371/journal.pbio.1000316</a>.</p>
-</div>
-<div id="ref-dushoff04">
-<p>Dushoff, Jonathan, Joshua B. Plotkin, Simon A. Levin, and David JD Earn. 2004. “Dynamical Resonance Can Account for Seasonality of Influenza Epidemics.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 101 (48): 16915–6. <a href="http://www.pnas.org/content/101/48/16915.short" class="uri">http://www.pnas.org/content/101/48/16915.short</a>.</p>
-</div>
-<div id="ref-altizer06">
-<p>Altizer, Sonia, Andrew Dobson, Parviez Hosseini, Peter Hudson, Mercedes Pascual, and Pejman Rohani. 2006. “Seasonality and the Dynamics of Infectious Diseases.” <em>Ecology Letters</em> 9 (4): 467–84. doi:<a href="https://doi.org/10.1111/j.1461-0248.2005.00879.x">10.1111/j.1461-0248.2005.00879.x</a>.</p>
-</div>
-<div id="ref-dowell01">
-<p>Dowell, S F. 2001. “Seasonal Variation in Host Susceptibility and Cycles of Certain Infectious Diseases.” <em>Emerging Infectious Diseases</em> 7 (3): 369–74. doi:<a href="https://doi.org/10.3201/eid0703.010301">10.3201/eid0703.010301</a>.</p>
-</div>
-<div id="ref-grassly06">
-<p>Grassly, Nicholas C, and Christophe Fraser. 2006. “Seasonal Infectious Disease Epidemiology.” <em>Proceedings of the Royal Society of London B: Biological Sciences</em> 273 (1600). The Royal Society: 2541–50.</p>
-</div>
-<div id="ref-stone07">
-<p>Stone, Lewi, Ronen Olinky, and Amit Huppert. 2007. “Seasonal Dynamics of Recurrent Epidemics.” <em>Nature</em> 446 (7135): 533–36. doi:<a href="https://doi.org/10.1038/nature05638">10.1038/nature05638</a>.</p>
+<p>Lipsitch, Marc, and Cécile Viboud. 2009. “Influenza Seasonality: Lifting the Fog.” <em>Proc Natl Acad Sci U S A</em> 106 (10): 3645–6. <a href="https://doi.org/10.1073/pnas.0900933106">https://doi.org/10.1073/pnas.0900933106</a>.</p>
 </div>
 <div id="ref-lofgren07">
-<p>Lofgren, E., N. H. Fefferman, Y. N. Naumov, J. Gorski, and E. N. Naumova. 2007. “Influenza Seasonality: Underlying Causes and Modeling Theories.” <em>Journal of Virology</em> 81 (11): 5429–36. doi:<a href="https://doi.org/10.1128/JVI.01680-06">10.1128/JVI.01680-06</a>.</p>
-</div>
-<div id="ref-baumgartner12">
-<p>Baumgartner, Eduardo, Christine N. Dao, Sharifa Nasreen, Mejbah Uddin Bhuiyan, Syeda Mah-E-Muneer, Abdullah Al Mamun, M. A. Yushuf Sharker, et al. 2012. “Seasonality, Timing, and Climate Drivers of Influenza Activity Worldwide.” <em>The Journal of Infectious Diseases</em> 206 (6): 838–46. doi:<a href="https://doi.org/10.1093/infdis/jis467">10.1093/infdis/jis467</a>.</p>
+<p>Lofgren, E., N. H. Fefferman, Y. N. Naumov, J. Gorski, and E. N. Naumova. 2007. “Influenza Seasonality: Underlying Causes and Modeling Theories.” <em>Journal of Virology</em> 81 (11): 5429–36. <a href="https://doi.org/10.1128/JVI.01680-06">https://doi.org/10.1128/JVI.01680-06</a>.</p>
 </div>
 <div id="ref-pascual02">
-<p>Pascual, Mercedes, Menno J. Bouma, and Andrew P. Dobson. 2002. “Cholera and Climate: Revisiting the Quantitative Evidence.” <em>Microbes and Infection</em> 4 (2): 237–45. <a href="http://www.sciencedirect.com/science/article/pii/S1286457901015337" class="uri">http://www.sciencedirect.com/science/article/pii/S1286457901015337</a>.</p>
+<p>Pascual, Mercedes, Menno J. Bouma, and Andrew P. Dobson. 2002. “Cholera and Climate: Revisiting the Quantitative Evidence.” <em>Microbes and Infection</em> 4 (2): 237–45. <a href="http://www.sciencedirect.com/science/article/pii/S1286457901015337">http://www.sciencedirect.com/science/article/pii/S1286457901015337</a>.</p>
 </div>
-<div id="ref-emch08">
-<p>Emch, Michael, Caryl Feldacker, M Sirajul Islam, and Mohammad Ali. 2008. “Seasonality of Cholera from 1974 to 2005: A Review of Global Patterns.” <em>International Journal of Health Geographics</em> 7 (1): 31. doi:<a href="https://doi.org/10.1186/1476-072X-7-31">10.1186/1476-072X-7-31</a>.</p>
+<div id="ref-stone07">
+<p>Stone, Lewi, Ronen Olinky, and Amit Huppert. 2007. “Seasonal Dynamics of Recurrent Epidemics.” <em>Nature</em> 446 (7135): 533–36. <a href="https://doi.org/10.1038/nature05638">https://doi.org/10.1038/nature05638</a>.</p>
 </div>
 </div>
             </section>
@@ -573,11 +578,13 @@ Figure 4.5: Here is a different kind of cycle that (ID) scientists sometimes enc
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -585,12 +592,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -598,7 +604,15 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
-"download": ["_main.pdf"],
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
 "toc": {
 "collapse": "none"
 },
@@ -614,10 +628,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

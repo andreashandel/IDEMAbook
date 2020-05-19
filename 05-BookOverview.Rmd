@@ -14,7 +14,7 @@ This book is intended to fill the gap. Infectious disease topics are discussed f
 
 
 ## What this book does and does not cover
-This book does not teach basic concepts of epidemiology. We assume readers are familiar with basic ideas such as incidence and prevalence, basic study design such as cohort and case-control studies and clinical trials, and other basic epidemiological concepts. For readers unfamiliar with these ideas, we suggest e.g. [@giesecke17].
+This book does not teach basic concepts of epidemiology. I assume readers are familiar with basic ideas such as incidence and prevalence, basic study design such as cohort and case-control studies and clinical trials, and other basic epidemiological concepts. For readers unfamiliar with these ideas, we suggest e.g. [@giesecke17].
 
 This book does also not teach much about specific infectious diseases. While many different infectious diseases appear in this book, the goal is not to describe any one in much detail. Instead, they appear as examples of general dynamical patterns and concepts the book covers. For information on the epidemiology of specific infectious diseases, good resources are e.g. [@nelson13].
 
@@ -30,7 +30,7 @@ The idea is that this material can be learned without the need to rely on advanc
 
 
 ## Computer exercises
-Modern infectious disease epidemiology is inherently computational. As such, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter. For an overview and introduction to the DSAIDE package, including how to install it and get started, please read [@handel17].
+Modern infectious disease epidemiology is inherently computational. While this book does not assume knowledge of or teach modeling, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter. For an overview and introduction to the DSAIDE package, including how to install it and get started, please read [@handel17].
 
 
 ## Recommended complementary resources

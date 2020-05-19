@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Infectious Disease Epidemiology - A modern systems approach</title>
-  <meta name="description" content="This book convers infectious disease epidemiology from a dynamical systems perspective">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>14 Stochastic Dynamics and Extinctions | Infectious Disease Epidemiology - A modern systems approach</title>
+  <meta name="description" content="A modern, model-based approach to infectious disease epidemiology" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta property="og:title" content="14 Stochastic Dynamics and Extinctions | Infectious Disease Epidemiology - A modern systems approach" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta property="og:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta name="twitter:title" content="14 Stochastic Dynamics and Extinctions | Infectious Disease Epidemiology - A modern systems approach" />
   
-  <meta name="twitter:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta name="twitter:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
-<meta name="author" content="Andreas Handel">
+<meta name="author" content="Andreas Handel" />
 
 
-<meta name="date" content="2018-08-12">
+<meta name="date" content="2020-05-15" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="dynamics-of-multiple-pathogens.html">
-<link rel="next" href="evolutionary-dynamics-introduction.html">
+<link rel="prev" href="dynamics-of-multiple-pathogens.html"/>
+<link rel="next" href="evolutionary-dynamics-introduction.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -416,7 +419,8 @@
 <div id="modeling-stochasticity-and-extinction" class="section level2">
 <h2><span class="header-section-number">14.6</span> Modeling Stochasticity and Extinction</h2>
 <p>To capture both the randomness and discrete nature of real systems requires a slightly different modeling approach. We can still use compartmental models, i.e., we track total numbers of individuals in particular states (e.g., S-I-R). But now, instead of letting the numbers in each compartment change continuously through inflows and outflows, changes happen in discrete steps, determined by specific events that occur in a probabilistic manner.</p>
-<p>As an example, instead of new susceptible hosts entering the system at some continuous birth rate, we now model births occurring as discrete events. Each birth event leads to an increase in the number of susceptibles by 1. The timing of the birth events is somewhat random, with an overall probability determined by the model (e.g., a higher birth rate will mean births occur more frequently, but still randomly).</p>
+<p>As an example, instead of new susceptible hosts entering the system at some continuous birth rate, we now model births occurring as discrete events. Each birth event leads to an increase in the number of susceptibles by 1.
+The timing of the birth events is somewhat random, with an overall probability determined by the model (e.g., a higher birth rate will mean births occur more frequently, but still randomly).</p>
 </div>
 <div id="factors-affecting-extinction" class="section level2">
 <h2><span class="header-section-number">14.7</span> Factors Affecting Extinction</h2>
@@ -425,12 +429,13 @@
 </div>
 <div id="critical-community-size" class="section level2">
 <h2><span class="header-section-number">14.8</span> Critical Community Size</h2>
-<p>The minimum size of a population at which an ID can maintain itself in a population without extinction has been termed the Critical Community Size (CCS) (this also depends on the replenishment of new susceptibles, e.g., birth rates). Studies for measles suggested that the CCS was several hundred thousand <span class="citation">(Keeling and Grenfell <a href="#ref-keeling02">2002</a>)</span>, meaning that measles could have only become a human pathogen once human populations were large enough to maintain it. The CCS is the number of susceptibles in a population and does not include those who are immune. Through vaccinating it is possible to reduce the size of the susceptible population below the CCS. So it is not necessary to vaccinate everyone to get an ID to go extinct. We just need to reach enough individuals to get the population of susceptibles below the critical level. This task is already hard by itself, as evidenced by the fact that we have not been able to eradicate measles, despite having a good vaccine.</p>
+<p>The minimum size of a population at which an ID can maintain itself in a population without extinction has been termed the Critical Community Size (CCS) (this also depends on the replenishment of new susceptibles, e.g., birth rates). Studies for measles suggested that the CCS was several hundred thousand <span class="citation">(Keeling and Grenfell <a href="#ref-keeling02" role="doc-biblioref">2002</a>)</span>, meaning that measles could have only become a human pathogen once human populations were large enough to maintain it. The CCS is the number of susceptibles in a population and does not include those who are immune. Through vaccinating it is possible to reduce the size of the susceptible population below the CCS. So it is not necessary to vaccinate everyone to get an ID to go extinct. We just need to reach enough individuals to get the population of susceptibles below the critical level. This task is already hard by itself, as evidenced by the fact that we have not been able to eradicate measles, despite having a good vaccine.</p>
 </div>
 <div id="host-extinction" class="section level2">
 <h2><span class="header-section-number">14.9</span> Host Extinction</h2>
-<p>Another way an ID can go extinct is if its hosts go extinct - either due to mortality from the ID or other causes. For most human diseases, such host extinction is fortunately not very common - though highly lethal ID such as Ebola can lead to marked reduction in the number of hosts in a given population. For non-human disease, extinctions of hosts due to disease is a more significant issue. Here, conversation efforts might try to achieve non-extinction of the host and - ideally - extinction of the ID.</p>
-<p>The host extinction approach is also often considered and used for vector-borne diseases. Here, the idea is to drive one of the hosts (commonly called the vector) to extinction. The obvious reasoning is that if there are fewer vectors (e.g., mosquitoes), the chances for humans to get infected are lower. Widespread use of DDT or insecticide-coated bed-nets are examples of this. A similar but more controversial approach is the attempted control of rabies in humans by killing its primary host, vampire-bats <span class="citation">(Stoner-Duncan, Streicker, and Tedeschi <a href="#ref-stoner-duncan14">2014</a>)</span>.</p>
+<p>Another way an ID can go extinct is if its hosts go extinct - either due to mortality from the ID or other causes.
+For most human diseases, such host extinction is fortunately not very common - though highly lethal ID such as Ebola can lead to marked reduction in the number of hosts in a given population. For non-human disease, extinctions of hosts due to disease is a more significant issue. Here, conversation efforts might try to achieve non-extinction of the host and - ideally - extinction of the ID.</p>
+<p>The host extinction approach is also often considered and used for vector-borne diseases. Here, the idea is to drive one of the hosts (commonly called the vector) to extinction. The obvious reasoning is that if there are fewer vectors (e.g., mosquitoes), the chances for humans to get infected are lower. Widespread use of DDT or insecticide-coated bed-nets are examples of this. A similar but more controversial approach is the attempted control of rabies in humans by killing its primary host, vampire-bats <span class="citation">(Stoner-Duncan, Streicker, and Tedeschi <a href="#ref-stoner-duncan14" role="doc-biblioref">2014</a>)</span>.</p>
 </div>
 <div id="disease-emergence" class="section level2">
 <h2><span class="header-section-number">14.10</span> Disease Emergence</h2>
@@ -444,7 +449,7 @@
 <h2><span class="header-section-number">14.12</span> Summary and Cartoon</h2>
 <p>This module provides a brief discussion of stochasticity in ID dynamics, and its relation to disease extinctions.</p>
 <div class="figure"><span id="fig:smallpox"></span>
-<img src="images/smallpox.png" alt="Smallpox is _almost_ extinct."  />
+<img src="images/smallpox.png" alt="Smallpox is _almost_ extinct." width="600" />
 <p class="caption">
 Figure 14.1: Smallpox is <em>almost</em> extinct.
 </p>
@@ -454,16 +459,16 @@ Figure 14.1: Smallpox is <em>almost</em> extinct.
 <h2><span class="header-section-number">14.13</span> Exercises</h2>
 <ul>
 <li>The <em>Stochastic dynamics</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
-<li>Read the article “Measles Endemicity in Insular Populations: Critical Community Size and Its Evolutionary Implication” by Black <span class="citation">(Black <a href="#ref-black66">1966</a>)</span>. The paper discusses critical community size for measles. Find 2 papers/analyses that discuss the CCS for other IDs. Read, summarize and critique the papers.</li>
+<li>Read the article “Measles Endemicity in Insular Populations: Critical Community Size and Its Evolutionary Implication” by Black <span class="citation">(Black <a href="#ref-black66" role="doc-biblioref">1966</a>)</span>. The paper discusses critical community size for measles. Find 2 papers/analyses that discuss the CCS for other IDs. Read, summarize and critique the papers.</li>
 </ul>
 </div>
 <div id="further-resources-12" class="section level2">
 <h2><span class="header-section-number">14.14</span> Further Resources</h2>
 <ul>
-<li>Some further analysis of critical community size and measles can be found in <span class="citation">(Bartlett <a href="#ref-bartlett57">1957</a>; Bartlett <a href="#ref-bartlett60">1960</a>; M J Keeling <a href="#ref-keeling97">1997</a>; M. J. Keeling <a href="#ref-keeling97a">1997</a>)</span>.</li>
-<li>Some further discussion of stochastic epidemic models can be found in <span class="citation">(Black and McKane <a href="#ref-black12">2012</a>; Britton <a href="#ref-britton10a">2010</a>)</span>.</li>
-<li>A broad discussion of invasion and persistence of ID and the role of stochasticity is given in <span class="citation">(J. O. Lloyd-Smith et al. <a href="#ref-lloyd-smith05b">2005</a>)</span>.</li>
-<li>An interesting discussion of critical community size and its dependence on birth dynamics, especially birth pulses, is provided in <span class="citation">(Peel et al. <a href="#ref-peel14">2014</a>)</span>.</li>
+<li>Some further analysis of critical community size and measles can be found in <span class="citation">(Bartlett <a href="#ref-bartlett57" role="doc-biblioref">1957</a>, <a href="#ref-bartlett60" role="doc-biblioref">1960</a>; M J Keeling <a href="#ref-keeling97" role="doc-biblioref">1997</a>; M. J. Keeling <a href="#ref-keeling97a" role="doc-biblioref">1997</a>)</span>.</li>
+<li>Some further discussion of stochastic epidemic models can be found in <span class="citation">(Black and McKane <a href="#ref-black12" role="doc-biblioref">2012</a>; Britton <a href="#ref-britton10a" role="doc-biblioref">2010</a>)</span>.</li>
+<li>A broad discussion of invasion and persistence of ID and the role of stochasticity is given in <span class="citation">(J. O. Lloyd-Smith et al. <a href="#ref-lloyd-smith05b" role="doc-biblioref">2005</a>)</span>.</li>
+<li>An interesting discussion of critical community size and its dependence on birth dynamics, especially birth pulses, is provided in <span class="citation">(Peel et al. <a href="#ref-peel14" role="doc-biblioref">2014</a>)</span>.</li>
 </ul>
 </div>
 <div id="references-13" class="section level2">
@@ -473,38 +478,38 @@ Figure 14.1: Smallpox is <em>almost</em> extinct.
 </div>
 <h3> References</h3>
 <div id="refs" class="references">
-<div id="ref-keeling02">
-<p>Keeling, Matt J, and Bryan T Grenfell. 2002. “Understanding the Persistence of Measles: Reconciling Theory, Simulation and Observation.” <em>Proceedings. Biological Sciences / the Royal Society</em> 269 (1489): 335–43.</p>
+<div id="ref-bartlett57">
+<p>Bartlett, Maurice S. 1957. “Measles Periodicity and Community Size.” <em>Journal of the Royal Statistical Society. Series A (General)</em> 120 (1): 48–70.</p>
 </div>
-<div id="ref-stoner-duncan14">
-<p>Stoner-Duncan, Benjamin, Daniel G Streicker, and Christopher M Tedeschi. 2014. “Vampire Bats and Rabies: Toward an Ecological Solution to a Public Health Problem.” <em>PLoS Neglected Tropical Diseases</em> 8 (6): e2867. doi:<a href="https://doi.org/10.1371/journal.pntd.0002867">10.1371/journal.pntd.0002867</a>.</p>
+<div id="ref-bartlett60">
+<p>Bartlett, M. S. 1960. “The Critical Community Size for Measles in the United States.” <em>Journal of the Royal Statistical Society. Series A (General)</em> 123 (1): 37. <a href="https://doi.org/10.2307/2343186">https://doi.org/10.2307/2343186</a>.</p>
+</div>
+<div id="ref-black12">
+<p>Black, Andrew J., and Alan J. McKane. 2012. “Stochastic Formulation of Ecological Models and Their Applications.” <em>Trends in Ecology &amp; Evolution</em> 27 (6): 337–45. <a href="https://doi.org/10.1016/j.tree.2012.01.014">https://doi.org/10.1016/j.tree.2012.01.014</a>.</p>
 </div>
 <div id="ref-black66">
 <p>Black, F L. 1966. “Measles Endemicity in Insular Populations: Critical Community Size and Its Evolutionary Implication.” <em>Journal of Theoretical Biology</em> 11 (2): 207–11.</p>
 </div>
-<div id="ref-bartlett57">
-<p>Bartlett, Maurice S. 1957. “Measles Periodicity and Community Size.” <em>Journal of the Royal Statistical Society. Series A (General)</em> 120 (1). JSTOR: 48–70.</p>
+<div id="ref-britton10a">
+<p>Britton, Tom. 2010. “Stochastic Epidemic Models: A Survey.” <em>Mathematical Biosciences</em> 225 (1): 24–35. <a href="https://doi.org/10.1016/j.mbs.2010.01.006">https://doi.org/10.1016/j.mbs.2010.01.006</a>.</p>
 </div>
-<div id="ref-bartlett60">
-<p>Bartlett, M. S. 1960. “The Critical Community Size for Measles in the United States.” <em>Journal of the Royal Statistical Society. Series A (General)</em> 123 (1): 37. doi:<a href="https://doi.org/10.2307/2343186">10.2307/2343186</a>.</p>
+<div id="ref-keeling02">
+<p>Keeling, Matt J, and Bryan T Grenfell. 2002. “Understanding the Persistence of Measles: Reconciling Theory, Simulation and Observation.” <em>Proceedings. Biological Sciences / the Royal Society</em> 269 (1489): 335–43.</p>
 </div>
 <div id="ref-keeling97">
-<p>Keeling, M J. 1997. “Modelling the Persistence of Measles.” <em>Trends in Microbiology</em> 5 (12): 513–18. doi:<a href="https://doi.org/10.1016/S0966-842X(97)01147-5">10.1016/S0966-842X(97)01147-5</a>.</p>
+<p>Keeling, M J. 1997. “Modelling the Persistence of Measles.” <em>Trends in Microbiology</em> 5 (12): 513–18. <a href="https://doi.org/10.1016/S0966-842X(97)01147-5">https://doi.org/10.1016/S0966-842X(97)01147-5</a>.</p>
 </div>
 <div id="ref-keeling97a">
-<p>Keeling, M. J. 1997. “Disease Extinction and Community Size: Modeling the Persistence of Measles.” <em>Science</em> 275 (5296): 65–67. doi:<a href="https://doi.org/10.1126/science.275.5296.65">10.1126/science.275.5296.65</a>.</p>
-</div>
-<div id="ref-black12">
-<p>Black, Andrew J., and Alan J. McKane. 2012. “Stochastic Formulation of Ecological Models and Their Applications.” <em>Trends in Ecology &amp; Evolution</em> 27 (6): 337–45. doi:<a href="https://doi.org/10.1016/j.tree.2012.01.014">10.1016/j.tree.2012.01.014</a>.</p>
-</div>
-<div id="ref-britton10a">
-<p>Britton, Tom. 2010. “Stochastic Epidemic Models: A Survey.” <em>Mathematical Biosciences</em> 225 (1): 24–35. doi:<a href="https://doi.org/10.1016/j.mbs.2010.01.006">10.1016/j.mbs.2010.01.006</a>.</p>
+<p>Keeling, M. J. 1997. “Disease Extinction and Community Size: Modeling the Persistence of Measles.” <em>Science</em> 275 (5296): 65–67. <a href="https://doi.org/10.1126/science.275.5296.65">https://doi.org/10.1126/science.275.5296.65</a>.</p>
 </div>
 <div id="ref-lloyd-smith05b">
-<p>Lloyd-Smith, James O, Paul C Cross, Cheryl J Briggs, Matt Daugherty, Wayne M Getz, John Latto, Maria S Sanchez, Adam B Smith, and Andrea Swei. 2005. “Should We Expect Population Thresholds for Wildlife Disease?” <em>Trends in Ecology &amp; Evolution</em> 20 (9): 511–19. doi:<a href="https://doi.org/10.1016/j.tree.2005.07.004">10.1016/j.tree.2005.07.004</a>.</p>
+<p>Lloyd-Smith, James O, Paul C Cross, Cheryl J Briggs, Matt Daugherty, Wayne M Getz, John Latto, Maria S Sanchez, Adam B Smith, and Andrea Swei. 2005. “Should We Expect Population Thresholds for Wildlife Disease?” <em>Trends in Ecology &amp; Evolution</em> 20 (9): 511–19. <a href="https://doi.org/10.1016/j.tree.2005.07.004">https://doi.org/10.1016/j.tree.2005.07.004</a>.</p>
 </div>
 <div id="ref-peel14">
-<p>Peel, A J, J R C Pulliam, A D Luis, R K Plowright, T J O’Shea, D T S Hayman, J L N Wood, C T Webb, and O Restif. 2014. “The Effect of Seasonal Birth Pulses on Pathogen Persistence in Wild Mammal Populations.” <em>Proceedings. Biological Sciences</em> 281 (1786). doi:<a href="https://doi.org/10.1098/rspb.2013.2962">10.1098/rspb.2013.2962</a>.</p>
+<p>Peel, A J, J R C Pulliam, A D Luis, R K Plowright, T J O’Shea, D T S Hayman, J L N Wood, C T Webb, and O Restif. 2014. “The Effect of Seasonal Birth Pulses on Pathogen Persistence in Wild Mammal Populations.” <em>Proceedings. Biological Sciences</em> 281 (1786). <a href="https://doi.org/10.1098/rspb.2013.2962">https://doi.org/10.1098/rspb.2013.2962</a>.</p>
+</div>
+<div id="ref-stoner-duncan14">
+<p>Stoner-Duncan, Benjamin, Daniel G Streicker, and Christopher M Tedeschi. 2014. “Vampire Bats and Rabies: Toward an Ecological Solution to a Public Health Problem.” <em>PLoS Neglected Tropical Diseases</em> 8 (6): e2867. <a href="https://doi.org/10.1371/journal.pntd.0002867">https://doi.org/10.1371/journal.pntd.0002867</a>.</p>
 </div>
 </div>
             </section>
@@ -518,11 +523,13 @@ Figure 14.1: Smallpox is <em>almost</em> extinct.
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -530,12 +537,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -543,7 +549,15 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
-"download": ["_main.pdf"],
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
 "toc": {
 "collapse": "none"
 },
@@ -559,10 +573,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

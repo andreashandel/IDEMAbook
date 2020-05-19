@@ -1,7 +1,7 @@
 --- 
 title: "Infectious Disease Epidemiology - A modern systems approach"
 author: "Andreas Handel"
-date: "2018-08-12"
+date: "2020-05-15"
 site: bookdown::bookdown_site
 output: 
     bookdown::gitbook:
@@ -15,7 +15,7 @@ output:
             toolbar:
               position: fixed
             edit: null
-            download: yes
+            download: no
     bookdown::pdf_book:
         keep_tex: yes
         toc: true
@@ -25,12 +25,12 @@ bibliography: dsaidereferences.bib
 biblio-style: apalike
 documentclass: book
 link-citations: yes
-description: "This book convers infectious disease epidemiology from a dynamical systems perspective"
+description: "A modern, model-based approach to infectious disease epidemiology"
 ---
 
 # Preface {-}
 
-This book convers infectious disease epidemiology from a dynamical systems perspective.
+This book covers infectious disease epidemiology from a dynamical systems perspective.
 
 __Note 1: This book is currently under active development. I will likely be moving material around, adding new chapters or combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to happen for a while. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
 
@@ -113,7 +113,7 @@ A complementary approach, which has seen increased use, is to look at all compon
 While the terminology of _systems thinking_ or _systems approach_ has seen increased use in the last few decades, the general idea has been around for a while. The notion of systems is present in virtually every field of research, ranging from the hard sciences to social sciences and business. In public health, there is the basic idea - most often applied to infectious diseases - of the *agent - host - environment* system, also referred to as the _epidemiological triangle_ (Figure \@ref(fig:epitriangle)). 
 
 <div class="figure">
-<img src="./images/epi-triangle.png" alt="A system perspective - The epidemiological triangle"  />
+<img src="./images/epi-triangle.png" alt="A system perspective - The epidemiological triangle" width="1116" />
 <p class="caption">(\#fig:epitriangle)A system perspective - The epidemiological triangle</p>
 </div>
 
@@ -126,7 +126,7 @@ For instance, the problem of obesity has many different components that interact
 
 
 <div class="figure">
-<img src="./images/complexsystem.png" alt="Obesity as a complex system: http://goo.gl/m2Qq13"  />
+<img src="./images/complexsystem.png" alt="Obesity as a complex system: http://goo.gl/m2Qq13" width="507" />
 <p class="caption">(\#fig:obesitysystem)Obesity as a complex system: http://goo.gl/m2Qq13</p>
 </div>
 
@@ -142,7 +142,7 @@ A huge class of models consists of what is usually refered to as statistical mod
 For instance, a linear regression model investigates if there is a pattern between input (system components or other measurable quantities that are part of the system) and an outcome of interest that can be approximated by a linear function. More complicated statistical models exist, some go by the name of _machine learning methods_. All of these models try to determine if there are patterns between inputs and outputs of interest in the data. Some of the more complicated models allow for interactions between system components (inputs, predictors, variables). Figure \@ref(fig:phenomodel) gives an illustration of 2 simple phenomenological models fit to some data.
 
 <div class="figure">
-<img src="./images/phenomodel.png" alt="Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model."  />
+<img src="./images/phenomodel.png" alt="Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model." width="2843" />
 <p class="caption">(\#fig:phenomodel)Two phenomenological models, a linear and quadratic equation, fit to data. The data and model suggest that there is a clear pattern of decreasing fuel efficiency as engine size increases. It seems the pattern is somewhat better described by the quadratic model.</p>
 </div>
 
@@ -168,7 +168,7 @@ However, often the interactions of components that make up a system occurs over 
 We can illustrate this dynamical perspective in an abstract way by extending the epidemiological triangle. Figure \@ref(fig:dynamictriangle) shows the components and the interactions of the triangle changing over time.
 
 <div class="figure">
-<img src="./images/moving-triangle.png" alt="Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction."  />
+<img src="./images/moving-triangle.png" alt="Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction." width="1633" />
 <p class="caption">(\#fig:dynamictriangle)Dynamic Epidemiological Triangle. Interactions between agent, host and environment change explicitly with time - indicated by the different coloring for each component and interaction.</p>
 </div>
 
@@ -217,7 +217,7 @@ The SIR model is very basic, but it still has the hallmark of a complex system. 
 For compartmental models (and often other types of models), it is useful to show a graphical representation of the compartments and processes included in the model. For compartmental models, such a diagram/figure is usually called a flow diagram. Such a diagram consists of a box for each compartment, and arrows pointing in and out of boxes to describe flows and interactions. For the simple SIR model, the flow diagram is shown in Figure \@ref(fig:basicSIR).
 
 <div class="figure">
-<img src="./images/basicSIRmodelfigure.png" alt="Flow diagram for the simple SIR model."  />
+<img src="./images/basicSIRmodelfigure.png" alt="Flow diagram for the simple SIR model." width="1703" />
 <p class="caption">(\#fig:basicSIR)Flow diagram for the simple SIR model.</p>
 </div>
 
@@ -227,7 +227,7 @@ To study a specific ID and scientific question, one needs to use a model that ap
 We can implement the flow diagram as a computer model, for instance by formulating it as the set of ordinary differential equations shown below, and then implementing those on a computer to simulate an outbreak. Figure \@ref(fig:sirsim) shows such a simulation.
 
 <div class="figure">
-<img src="./images/sirsim.png" alt="An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0."  />
+<img src="./images/sirsim.png" alt="An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0." width="2843" />
 <p class="caption">(\#fig:sirsim)An outbreak simulation using the simple SIR model. Values for parameters are chosen as b=0.0025/days and g = 1/(7 days). The starting conditions for each compartment are set to S=100, I=1, R=0.</p>
 </div>
 
@@ -258,7 +258,7 @@ This chapter provided a brief introduction to the concept of systems thinking an
 
 
 <div class="figure">
-<img src="./images/xkcd-flowcharts.png" alt="Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/)."  />
+<img src="./images/xkcd-flowcharts.png" alt="Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/)." width="740" />
 <p class="caption">(\#fig:complexcartoon)Not every diagram helps to understand a complex system. [Source: xkcd.com](https://xkcd.com/1488/).</p>
 </div>
 
@@ -273,7 +273,7 @@ This chapter provided a brief introduction to the concept of systems thinking an
 * The paper "Why Model?" by Joshua Epstein [@epstein08] provides a nice, short discussion of the purposes of models. Other general introductory discussions of systems thinking and model use are [@may04; @chubb10; @garnett11; @basu13; @gunawardena14; @homer06; @peters14; @sterman06].
 * Several introductory papers on infectious disease modeling can be found in e.g. [@keeling09; @heesterbeek15; @lessler16; @metcalf17].
 * While the dynamical systems approach has been applied to infectious diseases for a long time, it is starting to be used more frequently in other areas of public health. Some recent references on that topic are e.g. [@ness07; @sanchez-romero16].
-* This book does not deal with individual based models. If you want to learn more about them, see e.g. [@railsback11].
+* If you want to learn more about individual based models, see e.g. [@railsback11].
 
 ## References
 
@@ -346,7 +346,7 @@ Of course, the medical and ID dynamics/epidemiological perspectives are not an '
 The above sections described different states that might need to be considered and explained how models will need to be adjusted to account for such different states. To make this more specific, figure \@ref(fig:complicatedmodel) shows a model with additional compartments. We omit showing a mathematical representation (i.e. a set of differential equations) for this model. However, a very similar model, together with the equations, can be found in the DSAIDE app referred to below in the exercise section.
 
 <div class="figure">
-<img src="./images/ComplicatedModel.png" alt="Example of a model with more compartments."  />
+<img src="./images/ComplicatedModel.png" alt="Example of a model with more compartments." width="2439" />
 <p class="caption">(\#fig:complicatedmodel)Example of a model with more compartments.</p>
 </div>
 
@@ -365,7 +365,7 @@ This chapter discussed ways to characterize an individual host's state with rega
 
 
 <div class="figure">
-<img src="./images/xkcd-course-of-colds.png" alt="Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/)."  />
+<img src="./images/xkcd-course-of-colds.png" alt="Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/)." width="420" />
 <p class="caption">(\#fig:coldcourse)Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/).</p>
 </div>
 
@@ -414,7 +414,7 @@ The learning objectives for this chapter are:
 Different IDs show different patterns in their dynamics. Some IDs produce sporadic outbreaks and then seem to disappear for years. Ebola is a prominent example. Other ID seem to be 'always around' and incidence or prevalence might change little. TB and HIV in some parts of the world, as well as certain STD and chronic viral infections show such patterns. Many other IDs show oscillatory behavior, i.e. we repeated outbreaks or increases in incidence, followed by periods of reduced incidence. For some ID, these patterns of increase and decrease are annual, for other ID the cycles are multi-year. Figure \@ref(fig:IDcycles) shows an example of such patterns of increase and decrease for measles and pertussis.
 
 <div class="figure">
-<img src="./images/IDcycles.png" alt="Examples of ID cycles. From [@keeling08]."  />
+<img src="./images/IDcycles.png" alt="Examples of ID cycles. From [@keeling08]." width="1387" />
 <p class="caption">(\#fig:IDcycles)Examples of ID cycles. From [@keeling08].</p>
 </div>
 
@@ -436,7 +436,7 @@ A version of the SIR model that includes resource replenishment through natural 
 \@ref(fig:birthdeathdmodel). 
 
 <div class="figure">
-<img src="./images/R0modelfigure.png" alt="Example of an SIR model with births, deaths and waning immunity."  />
+<img src="./images/R0modelfigure.png" alt="Example of an SIR model with births, deaths and waning immunity." width="1796" />
 <p class="caption">(\#fig:birthdeathdmodel)Example of an SIR model with births, deaths and waning immunity.</p>
 </div>
 
@@ -503,7 +503,7 @@ The hard method of solving this set of equations is with pen and paper. Nowadays
 
 
 <div class="figure">
-<img src="./images/SSmaxima.png" alt="Maxima code for solving the SIR model steady state equations."  />
+<img src="./images/SSmaxima.png" alt="Maxima code for solving the SIR model steady state equations." width="1007" />
 <p class="caption">(\#fig:SSmaxima)Maxima code for solving the SIR model steady state equations.</p>
 </div>
 
@@ -519,7 +519,7 @@ One can see that Gonorrhea incidence was fairly stable between 1950-1965 and aga
 
 
 <div class="figure">
-<img src="./images/gonorrhea.png" alt="Gonorrhea cases in the US."  />
+<img src="./images/gonorrhea.png" alt="Gonorrhea cases in the US." width="658" />
 <p class="caption">(\#fig:gonorrheapattern)Gonorrhea cases in the US.</p>
 </div>
 
@@ -539,7 +539,7 @@ This module provided a discussion of the various general patterns we observe in 
 
 
 <div class="figure">
-<img src="./images/phd_sciencenewscycle.png" alt="Here is a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174)."  />
+<img src="./images/phd_sciencenewscycle.png" alt="Here is a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174)." width="600" />
 <p class="caption">(\#fig:sciencenewscycle)Here is a different kind of cycle that (ID) scientists sometimes encounter. [Source: phdcomics.com](http://www.phdcomics.com/comics/archive.php?comicid=1174).</p>
 </div>
 
@@ -628,7 +628,7 @@ As stated above, at the beginning of an outbreak, a specific disease in a certai
 It is intuitively clear that if on average every infectious person "produces" more than one subsequent infectious person, we get a growing epidemic. In contrast, if every infectious person "produces" less than one subsequent infectious person, the pathogen might transmit a few times, but pretty soon it will disappear. Thus if we can achieve R~0~ < 1, e.g. through vaccination, we can prevent an outbreak from starting. Further, if during an outbreak we can intervene to get R < 1, the outbreak is going to fizzle out. Figure \@ref(fig:R0intervention) illustrates this idea. If we wanted to stop _any_ further transmission, we would need to get R even lower, namely R = 0. Intervention efforts try to achieve an R as small as possible. If we could achieve R~0~ < 1 globally everywhere, we could eventually eradicate a disease. The ability to do that depends on many factors. One important one is the R~0~ value of any ID before we start an eradication campaign. Intuitively, the higher R~0~, the harder it will be to get it to < 1. We'll make that more explicit below.
 
 <div class="figure">
-<img src="./images/R0intervention.png" alt="Impact of an Intervention on transmission."  />
+<img src="./images/R0intervention.png" alt="Impact of an Intervention on transmission." width="864" />
 <p class="caption">(\#fig:R0intervention)Impact of an Intervention on transmission.</p>
 </div>
 
@@ -646,7 +646,7 @@ The level of population protection at which R=1 is called critical population (o
 
 
 <div class="figure">
-<img src="./images/kr-R0intervention.png" alt="R~0~ and Interventions. From [@keeling08]."  />
+<img src="./images/kr-R0intervention.png" alt="R~0~ and Interventions. From [@keeling08]." width="4263" />
 <p class="caption">(\#fig:krR0intervention)R~0~ and Interventions. From [@keeling08].</p>
 </div>
 
@@ -678,7 +678,7 @@ Once we know r and T, we can compute R. There are different equations relating r
 
 
 <div class="figure">
-<img src="./images/viboud-R0.png" alt="Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06]."  />
+<img src="./images/viboud-R0.png" alt="Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06]." width="4483" />
 <p class="caption">(\#fig:viboudR0)Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06].</p>
 </div>
 
@@ -691,7 +691,7 @@ More specifically, assume we know the final size of the outbreak, i.e. total fra
 
 
 <div class="figure">
-<img src="./images/outbreaksize.png" alt="The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08]."  />
+<img src="./images/outbreaksize.png" alt="The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08]." width="3380" />
 <p class="caption">(\#fig:outbreaksize)The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08].</p>
 </div>
 
@@ -709,7 +709,7 @@ For those ID for which an infection induces life-long immunity, i.e. where a hos
 
 
 <div class="figure">
-<img src="./images/R0age.png" alt="Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08]."  />
+<img src="./images/R0age.png" alt="Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08]." width="4263" />
 <p class="caption">(\#fig:R0age)Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08].</p>
 </div>
 
@@ -763,7 +763,7 @@ The simplicity of R is both its strength and its weakness. It gives a quick, qua
 
 
 <div class="figure">
-<img src="./images/xkcd-outbreak-control.png" alt="The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/)."  />
+<img src="./images/xkcd-outbreak-control.png" alt="The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/)." width="740" />
 <p class="caption">(\#fig:xkcd-outbreak-control)The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/).</p>
 </div>
 
@@ -1285,7 +1285,7 @@ The basic concept of including host heterogeneity in models is relatively straig
 
 
 <div class="figure">
-<img src="./images/heterogeneityexample.png" alt="Example of including host heterogeneity in an SIR model."  />
+<img src="./images/heterogeneityexample.png" alt="Example of including host heterogeneity in an SIR model." width="2311" />
 <p class="caption">(\#fig:heterogeneity)Example of including host heterogeneity in an SIR model.</p>
 </div>
 
@@ -1305,7 +1305,7 @@ This chapter provided a brief discussion of host heterogeneity, how to consider 
 
 
 <div class="figure">
-<img src="./images/crazyvenndiagram.png" alt="That is the best heterogeneity cartoon I have - let me know if you know a better one!"  />
+<img src="./images/crazyvenndiagram.png" alt="That is the best heterogeneity cartoon I have - let me know if you know a better one!" width="400" />
 <p class="caption">(\#fig:crazyvenndiagram)That is the best heterogeneity cartoon I have - let me know if you know a better one!</p>
 </div>
 
@@ -1373,7 +1373,7 @@ The approach to modeling multiple ID is similar to that of host heterogeneity: W
 As mentioned previously, more compartments the more complex the model becomes. Making it harder to code,  analyze, and we need estimates for each parameter, which are often hard to get. Because of that, considering/modeling more than 2 ID is still almost never done - but many critical 2-ID modeling studies exist. Figure \@ref(fig:coinfection) shows the diagram for a 2 ID model. 
 
 <div class="figure">
-<img src="./images/multipathogenmodel.png" alt="Example of a model that considers 2 ID."  />
+<img src="./images/multipathogenmodel.png" alt="Example of a model that considers 2 ID." width="1968" />
 <p class="caption">(\#fig:coinfection)Example of a model that considers 2 ID.</p>
 </div>
 
@@ -1480,7 +1480,7 @@ This module provides a brief discussion of stochasticity in ID dynamics, and its
 
 
 <div class="figure">
-<img src="./images/smallpox.png" alt="Smallpox is _almost_ extinct."  />
+<img src="./images/smallpox.png" alt="Smallpox is _almost_ extinct." width="600" />
 <p class="caption">(\#fig:smallpox)Smallpox is _almost_ extinct.</p>
 </div>
 
@@ -1663,7 +1663,7 @@ This module provides a brief discussion of ID emergence.
 *  
 
 ## Further Resources
-* 
+* A few nice overview articles are [@woolhouse02a]
 
 
 ## References
@@ -1700,6 +1700,7 @@ Pathogens 'don't care' about harming their hosts, their primary 'purpose' is to 
 
 ## Further Resources
 * Ewald and colleagues have done some interesting investigations connecting transmission type to virulence/pathogenicity of specific diseases. See for instance [@ewald87; @ewald95].
+* Introductory articles to the topic are e.g. [@levin96; @frank08]
 
 ## References
 
@@ -1763,7 +1764,7 @@ Many real-world networks do not have the degree distribution found for random ne
 
 
 <div class="figure">
-<img src="./images/network-examples.png" alt="Random and scale-free networks and degree distribution."  />
+<img src="./images/network-examples.png" alt="Random and scale-free networks and degree distribution." width="1000" />
 <p class="caption">(\#fig:network-examples)Random and scale-free networks and degree distribution.</p>
 </div>
 
@@ -1795,7 +1796,7 @@ This module provides a brief discussion of transmission networks and how they im
 
 
 <div class="figure">
-<img src="./images/xkcd-network.png" alt="Computer viruses and human viruses are in many ways similar. [Source: xkcd.com](https://xkcd.com/350/)."  />
+<img src="./images/xkcd-network.png" alt="Computer viruses and human viruses are in many ways similar. [Source: xkcd.com](https://xkcd.com/350/)." width="740" />
 <p class="caption">(\#fig:xkcdnetwork)Computer viruses and human viruses are in many ways similar. [Source: xkcd.com](https://xkcd.com/350/).</p>
 </div>
 
@@ -1886,7 +1887,7 @@ A good analogy for model building and use in general is the use of maps. Maps ar
 
 
 <div class="figure">
-<img src="./images/mapfigure.png" alt="Three different maps of the state of Georgia."  />
+<img src="./images/mapfigure.png" alt="Three different maps of the state of Georgia." width="7603" />
 <p class="caption">(\#fig:mapfigure)Three different maps of the state of Georgia.</p>
 </div>
 

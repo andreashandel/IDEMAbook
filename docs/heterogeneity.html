@@ -1,45 +1,48 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Infectious Disease Epidemiology - A modern systems approach</title>
-  <meta name="description" content="This book convers infectious disease epidemiology from a dynamical systems perspective">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>12 Host Heterogeneity | Infectious Disease Epidemiology - A modern systems approach</title>
+  <meta name="description" content="A modern, model-based approach to infectious disease epidemiology" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta property="og:title" content="12 Host Heterogeneity | Infectious Disease Epidemiology - A modern systems approach" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta property="og:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Infectious Disease Epidemiology - A modern systems approach" />
+  <meta name="twitter:title" content="12 Host Heterogeneity | Infectious Disease Epidemiology - A modern systems approach" />
   
-  <meta name="twitter:description" content="This book convers infectious disease epidemiology from a dynamical systems perspective" />
+  <meta name="twitter:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
 
-<meta name="author" content="Andreas Handel">
+<meta name="author" content="Andreas Handel" />
 
 
-<meta name="date" content="2018-08-12">
+<meta name="date" content="2020-05-15" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="infectious-disease-surveillance.html">
-<link rel="next" href="dynamics-of-multiple-pathogens.html">
+<link rel="prev" href="infectious-disease-surveillance.html"/>
+<link rel="next" href="dynamics-of-multiple-pathogens.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -413,16 +416,17 @@
 </div>
 <div id="heterogeneity-in-transmission-core-groups" class="section level2">
 <h2><span class="header-section-number">12.4</span> Heterogeneity in Transmission: Core Groups</h2>
-<p>To study ID transmission dynamics, differences in the potential and ability of individual hosts to spread an ID are obviously of great importance. This idea of heterogeneity in transmission has been studied in several contexts and under different names. One of the first was the concept of a core group introduced to explain the persistence of gonorrhea in the 1970s (see <span class="citation">(Yorke, Hethcote, and Nold <a href="#ref-yorke78">1978</a>)</span>). Core groups are subgroups in which transmission is higher compared to other groups. For many STI, transmission in the general population is low enough that the reproductive number is below 1. The question then is, why does that not lead to the extinction of the ID? The core group concept provides a reasonable explanation. Where a small but defined population of individuals maintain the ID with a reproductive number that is greater than 1. Infections spread from this group to those in the general population allows the ID to persist in the general population with a reproductive number less than 1.</p>
-<p>Once we have identified that different groups have different transmission behavior, it also becomes necessary to understand how individuals belonging to one of the groups interact with people of the other groups. Often called the <em>mixing</em> pattern between groups. We are most interested in the mixing and contact patterns that facilitate transmission of the ID under consideration. For instance, it is well known that humans tend to have more contacts with others of the same age, e.g., children predominantly contacting other children. This is called <em>assortative</em> mixing, and such age-specific mixing is important for the transmission of many respiratory diseases. The opposite is <em>disassortative</em> mixing. For instance, for STI, most mixing occurs between individuals from the opposite sex (and there are also more contacts among individuals of similar age). Therefore, for STI, mixing with regard to gender can be considered <em>disassortative</em>. However, it is also known that people who engage in risky sexual behavior (e.g., more partners per year) tend to have more contacts with others that engage in similar risk behavior, thus with regard to transmission and infection risk, STI often show <em>assortative</em> mixing. If there is no mixing preference, it is called <em>random</em> mixing. The <em>random</em> mixing assumption is made implicitly in any model that does not account for contact/transmission heterogeneity, e.g., the basic SIR model assumes <em>random</em> mixing and contact patterns between susceptible and infected, independent of any other characteristic. Determining the mixing patterns between individuals is important but also difficult. For some research in that area, see, e.g. <span class="citation">(Edmunds et al. <a href="#ref-edmunds06">2006</a>; Mossong et al. <a href="#ref-mossong08">2008</a>)</span>.</p>
+<p>To study ID transmission dynamics, differences in the potential and ability of individual hosts to spread an ID are obviously of great importance. This idea of heterogeneity in transmission has been studied in several contexts and under different names. One of the first was the concept of a core group introduced to explain the persistence of gonorrhea in
+the 1970s (see <span class="citation">(Yorke, Hethcote, and Nold <a href="#ref-yorke78" role="doc-biblioref">1978</a>)</span>). Core groups are subgroups in which transmission is higher compared to other groups. For many STI, transmission in the general population is low enough that the reproductive number is below 1. The question then is, why does that not lead to the extinction of the ID? The core group concept provides a reasonable explanation. Where a small but defined population of individuals maintain the ID with a reproductive number that is greater than 1. Infections spread from this group to those in the general population allows the ID to persist in the general population with a reproductive number less than 1.</p>
+<p>Once we have identified that different groups have different transmission behavior, it also becomes necessary to understand how individuals belonging to one of the groups interact with people of the other groups. Often called the <em>mixing</em> pattern between groups. We are most interested in the mixing and contact patterns that facilitate transmission of the ID under consideration. For instance, it is well known that humans tend to have more contacts with others of the same age, e.g., children predominantly contacting other children. This is called <em>assortative</em> mixing, and such age-specific mixing is important for the transmission of many respiratory diseases. The opposite is <em>disassortative</em> mixing. For instance, for STI, most mixing occurs between individuals from the opposite sex (and there are also more contacts among individuals of similar age). Therefore, for STI, mixing with regard to gender can be considered <em>disassortative</em>. However, it is also known that people who engage in risky sexual behavior (e.g., more partners per year) tend to have more contacts with others that engage in similar risk behavior, thus with regard to transmission and infection risk, STI often show <em>assortative</em> mixing. If there is no mixing preference, it is called <em>random</em> mixing. The <em>random</em> mixing assumption is made implicitly in any model that does not account for contact/transmission heterogeneity, e.g., the basic SIR model assumes <em>random</em> mixing and contact patterns between susceptible and infected, independent of any other characteristic. Determining the mixing patterns between individuals is important but also difficult. For some research in that area, see, e.g. <span class="citation">(Edmunds et al. <a href="#ref-edmunds06" role="doc-biblioref">2006</a>; Mossong et al. <a href="#ref-mossong08" role="doc-biblioref">2008</a>)</span>.</p>
 </div>
 <div id="heterogeneity-in-transmission-superspreaders" class="section level2">
 <h2><span class="header-section-number">12.5</span> Heterogeneity in Transmission: Superspreaders</h2>
-<p>An equivalent concept to that of the core group, but applied to individuals, is known by the term superspreaders. Superspreaders are individuals who spread/transmit an ID much more than the <em>average</em> infected person. It turns out that for most ID, the number of secondary transmissions produced by the average infected person is not too meaningful. Such a measure would be a good description if the distribution of secondary infections were close to normal (or Poisson), with most infected individuals infecting similar numbers of others. However, what is often observed is a heavily skewed distribution, with most individuals infecting none or only a few others, and a few individuals infecting many others <span class="citation">(Galvani and May <a href="#ref-galvani05">2005</a>)</span>.</p>
+<p>An equivalent concept to that of the core group, but applied to individuals, is known by the term superspreaders. Superspreaders are individuals who spread/transmit an ID much more than the <em>average</em> infected person. It turns out that for most ID, the number of secondary transmissions produced by the average infected person is not too meaningful. Such a measure would be a good description if the distribution of secondary infections were close to normal (or Poisson), with most infected individuals infecting similar numbers of others. However, what is often observed is a heavily skewed distribution, with most individuals infecting none or only a few others, and a few individuals infecting many others <span class="citation">(Galvani and May <a href="#ref-galvani05" role="doc-biblioref">2005</a>)</span>.</p>
 </div>
 <div id="heterogeneity-and-the-reproductive-number" class="section level2">
 <h2><span class="header-section-number">12.6</span> Heterogeneity and The Reproductive Number</h2>
-<p>If we have multiple host types, we need to extend the idea of the reproductive number. While it is possible to compute a reproductive number for the overall population, this quantity might not tell the full story. Instead, we might want to look at the reproductive number for subsets of the population, for instance for the general population (non-superspreaders) and core groups (the superspreaders). If one wants to compute an overall reproductive number, one needs to account for the population heterogeneity by including a measure of the variability of contacts in the equation for the reproductive number. See, <span class="citation">(May, Gupta, and McLean <a href="#ref-may01">2001</a>)</span> for a discussion of this topic.</p>
+<p>If we have multiple host types, we need to extend the idea of the reproductive number. While it is possible to compute a reproductive number for the overall population, this quantity might not tell the full story. Instead, we might want to look at the reproductive number for subsets of the population, for instance for the general population (non-superspreaders) and core groups (the superspreaders). If one wants to compute an overall reproductive number, one needs to account for the population heterogeneity by including a measure of the variability of contacts in the equation for the reproductive number. See, <span class="citation">(May, Gupta, and McLean <a href="#ref-may01" role="doc-biblioref">2001</a>)</span> for a discussion of this topic.</p>
 </div>
 <div id="heterogeneity-and-id-control" class="section level2">
 <h2><span class="header-section-number">12.7</span> Heterogeneity and ID control</h2>
@@ -432,7 +436,7 @@
 <h2><span class="header-section-number">12.8</span> Modeling Heterogeneity</h2>
 <p>The basic concept of including host heterogeneity in models is relatively straightforward. We stratify the population according to the characteristic we want to take into account. For instance, instead of lumping everyone into susceptible-infected-recovered categories, we can track males and females, or children and adults, separately. Figure <a href="heterogeneity.html#fig:heterogeneity">12.1</a> illustrates this.</p>
 <div class="figure"><span id="fig:heterogeneity"></span>
-<img src="images/heterogeneityexample.png" alt="Example of including host heterogeneity in an SIR model."  />
+<img src="images/heterogeneityexample.png" alt="Example of including host heterogeneity in an SIR model." width="2311" />
 <p class="caption">
 Figure 12.1: Example of including host heterogeneity in an SIR model.
 </p>
@@ -445,7 +449,7 @@ Figure 12.1: Example of including host heterogeneity in an SIR model.
 <h2><span class="header-section-number">12.9</span> Summary and Cartoon</h2>
 <p>This chapter provided a brief discussion of host heterogeneity, how to consider it in studies, and its impact on transmission and control. We also discussed how to include heterogeneity into models.</p>
 <div class="figure"><span id="fig:crazyvenndiagram"></span>
-<img src="images/crazyvenndiagram.png" alt="That is the best heterogeneity cartoon I have - let me know if you know a better one!"  />
+<img src="images/crazyvenndiagram.png" alt="That is the best heterogeneity cartoon I have - let me know if you know a better one!" width="400" />
 <p class="caption">
 Figure 12.2: That is the best heterogeneity cartoon I have - let me know if you know a better one!
 </p>
@@ -455,17 +459,17 @@ Figure 12.2: That is the best heterogeneity cartoon I have - let me know if you 
 <h2><span class="header-section-number">12.10</span> Exercises</h2>
 <ul>
 <li>The <em>Host Heterogeneity</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
-<li>Read the article “Disease spread, susceptibility, and infection intensity: vicious circles?” by Beldomenico and Begon <span class="citation">(Beldomenico et al. <a href="#ref-beldomenico09">2009</a>)</span>. The paper mostly discusses non-human IDs. Find evidence from human IDs for which the different components they discuss (variable host susceptibility, variable infection intensity, feedback circles in the individual/population level) might be applicable.</li>
+<li>Read the article “Disease spread, susceptibility, and infection intensity: vicious circles?” by Beldomenico and Begon <span class="citation">(Beldomenico et al. <a href="#ref-beldomenico09" role="doc-biblioref">2009</a>)</span>. The paper mostly discusses non-human IDs. Find evidence from human IDs for which the different components they discuss (variable host susceptibility, variable infection intensity, feedback circles in the individual/population level) might be applicable.</li>
 </ul>
 </div>
 <div id="further-resources-10" class="section level2">
 <h2><span class="header-section-number">12.11</span> Further Resources</h2>
 <ul>
-<li>Good further discussions of the superspreader concept can be found in <span class="citation">(Galvani and May <a href="#ref-galvani05">2005</a>; Lloyd-Smith et al. <a href="#ref-lloyd-smith05">2005</a>; Stein <a href="#ref-stein11">2011</a>)</span>.</li>
-<li>The impact of host heterogeneity on the reproductive number is for instance discussed in <span class="citation">(May, Gupta, and McLean <a href="#ref-may01">2001</a>)</span>, an application to Chlamydia is provided in <span class="citation">(Potterat et al. <a href="#ref-potterat99">1999</a>)</span>.</li>
-<li>An influential study that collected detailed information on contact patterns using a diary approach is <span class="citation">(Mossong et al. <a href="#ref-mossong08">2008</a>)</span>.</li>
-<li>General discussions of transmission heterogeneity are given in <span class="citation">(Matthews and Woolhouse <a href="#ref-matthews05">2005</a>; Paull et al. <a href="#ref-paull12">2012</a>)</span>.</li>
-<li>Host heterogeneity and control is for instance discussed in <span class="citation">(Yorke, Hethcote, and Nold <a href="#ref-yorke78">1978</a>; Woolhouse et al. <a href="#ref-woolhouse97">1997</a>)</span>.</li>
+<li>Good further discussions of the superspreader concept can be found in <span class="citation">(Galvani and May <a href="#ref-galvani05" role="doc-biblioref">2005</a>; Lloyd-Smith et al. <a href="#ref-lloyd-smith05" role="doc-biblioref">2005</a>; Stein <a href="#ref-stein11" role="doc-biblioref">2011</a>)</span>.</li>
+<li>The impact of host heterogeneity on the reproductive number is for instance discussed in <span class="citation">(May, Gupta, and McLean <a href="#ref-may01" role="doc-biblioref">2001</a>)</span>, an application to Chlamydia is provided in <span class="citation">(Potterat et al. <a href="#ref-potterat99" role="doc-biblioref">1999</a>)</span>.</li>
+<li>An influential study that collected detailed information on contact patterns using a diary approach is <span class="citation">(Mossong et al. <a href="#ref-mossong08" role="doc-biblioref">2008</a>)</span>.</li>
+<li>General discussions of transmission heterogeneity are given in <span class="citation">(Matthews and Woolhouse <a href="#ref-matthews05" role="doc-biblioref">2005</a>; Paull et al. <a href="#ref-paull12" role="doc-biblioref">2012</a>)</span>.</li>
+<li>Host heterogeneity and control is for instance discussed in <span class="citation">(Yorke, Hethcote, and Nold <a href="#ref-yorke78" role="doc-biblioref">1978</a>; Woolhouse et al. <a href="#ref-woolhouse97" role="doc-biblioref">1997</a>)</span>.</li>
 </ul>
 </div>
 <div id="references-11" class="section level2">
@@ -475,41 +479,41 @@ Figure 12.2: That is the best heterogeneity cartoon I have - let me know if you 
 </div>
 <h3> References</h3>
 <div id="refs" class="references">
-<div id="ref-yorke78">
-<p>Yorke, J. A., H. W. Hethcote, and A. Nold. 1978. “Dynamics and Control of the Transmission of Gonorrhea.” <em>Sex Transm Dis</em> 5 (2). Institute for Physical Science; Technology, University of Maryland, College Park, USA.: 51–56.</p>
+<div id="ref-beldomenico09">
+<p>Beldomenico, Pablo M, Sandra Telfer, Stephanie Gebert, Lukasz Lukomski, Malcolm Bennett, and Michael Begon. 2009. “The Vicious Circle and Infection Intensity: The Case of Trypanosoma Microti in Field Vole Populations.” <em>Epidemics</em> 1 (3): 162–67. <a href="https://doi.org/10.1016/j.epidem.2009.05.002">https://doi.org/10.1016/j.epidem.2009.05.002</a>.</p>
 </div>
 <div id="ref-edmunds06">
-<p>Edmunds, W J, G Kafatos, J Wallinga, and J R Mossong. 2006. “Mixing Patterns and the Spread of Close-Contact Infectious Diseases.” <em>Emerging Themes in Epidemiology</em> 3 (August): 10. doi:<a href="https://doi.org/10.1186/1742-7622-3-10">10.1186/1742-7622-3-10</a>.</p>
-</div>
-<div id="ref-mossong08">
-<p>Mossong, Joël, Niel Hens, Mark Jit, Philippe Beutels, Kari Auranen, Rafael Mikolajczyk, Marco Massari, et al. 2008. “Social Contacts and Mixing Patterns Relevant to the Spread of Infectious Diseases.” <em>PLoS Medicine</em> 5 (3): e74. <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074" class="uri">http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074</a>.</p>
+<p>Edmunds, W J, G Kafatos, J Wallinga, and J R Mossong. 2006. “Mixing Patterns and the Spread of Close-Contact Infectious Diseases.” <em>Emerging Themes in Epidemiology</em> 3 (August): 10. <a href="https://doi.org/10.1186/1742-7622-3-10">https://doi.org/10.1186/1742-7622-3-10</a>.</p>
 </div>
 <div id="ref-galvani05">
-<p>Galvani, Alison P., and Robert M. May. 2005. “Epidemiology: Dimensions of Superspreading.” <em>Nature</em> 438 (7066): 293–95. doi:<a href="https://doi.org/10.1038/438293a">10.1038/438293a</a>.</p>
-</div>
-<div id="ref-may01">
-<p>May, Robert M, Sunetra Gupta, and Angela R McLean. 2001. “Infectious Disease Dynamics: What Characterizes a Successful Invader?” <em>Philosophical Transactions of the Royal Society of London B: Biological Sciences</em> 356 (1410). The Royal Society: 901–10.</p>
-</div>
-<div id="ref-beldomenico09">
-<p>Beldomenico, Pablo M, Sandra Telfer, Stephanie Gebert, Lukasz Lukomski, Malcolm Bennett, and Michael Begon. 2009. “The Vicious Circle and Infection Intensity: The Case of Trypanosoma Microti in Field Vole Populations.” <em>Epidemics</em> 1 (3): 162–67. doi:<a href="https://doi.org/10.1016/j.epidem.2009.05.002">10.1016/j.epidem.2009.05.002</a>.</p>
+<p>Galvani, Alison P., and Robert M. May. 2005. “Epidemiology: Dimensions of Superspreading.” <em>Nature</em> 438 (7066): 293–95. <a href="https://doi.org/10.1038/438293a">https://doi.org/10.1038/438293a</a>.</p>
 </div>
 <div id="ref-lloyd-smith05">
-<p>Lloyd-Smith, J. O., S. J. Schreiber, P. E. Kopp, and W. M. Getz. 2005. “Superspreading and the Effect of Individual Variation on Disease Emergence.” <em>Nature</em> 438 (7066). Department of Environmental Science, Policy; Management, 140 Mulford Hall, University of California, Berkeley, California 94720-3114, USA. jls@nature.berkeley.edu: 355–59. doi:<a href="https://doi.org/10.1038/nature04153">10.1038/nature04153</a>.</p>
-</div>
-<div id="ref-stein11">
-<p>Stein, Richard A. 2011. “Super-Spreaders in Infectious Diseases.” <em>International Journal of Infectious Diseases : IJID : Official Publication of the International Society for Infectious Diseases</em> 15 (8): e510–e513. doi:<a href="https://doi.org/10.1016/j.ijid.2010.06.020">10.1016/j.ijid.2010.06.020</a>.</p>
-</div>
-<div id="ref-potterat99">
-<p>Potterat, John J., Helen Zimmerman-Rogers, Stephen Q. Muth, Richard B. Rothenberg, David L. Green, Jerry E. Taylor, Mandy S. Bonney, and Helen A. White. 1999. “Chlamydia Transmission: Concurrency, Reproduction Number, and the Epidemic Trajectory.” <em>American Journal of Epidemiology</em> 150 (12): 1331–9. <a href="https://academic.oup.com/aje/article-abstract/150/12/1331/53233" class="uri">https://academic.oup.com/aje/article-abstract/150/12/1331/53233</a>.</p>
+<p>Lloyd-Smith, J. O., S. J. Schreiber, P. E. Kopp, and W. M. Getz. 2005. “Superspreading and the Effect of Individual Variation on Disease Emergence.” <em>Nature</em> 438 (7066): 355–59. <a href="https://doi.org/10.1038/nature04153">https://doi.org/10.1038/nature04153</a>.</p>
 </div>
 <div id="ref-matthews05">
-<p>Matthews, Louise, and Mark Woolhouse. 2005. “New Approaches to Quantifying the Spread of Infection.” <em>Nature Reviews. Microbiology</em> 3 (7): 529–36. doi:<a href="https://doi.org/10.1038/nrmicro1178">10.1038/nrmicro1178</a>.</p>
+<p>Matthews, Louise, and Mark Woolhouse. 2005. “New Approaches to Quantifying the Spread of Infection.” <em>Nature Reviews. Microbiology</em> 3 (7): 529–36. <a href="https://doi.org/10.1038/nrmicro1178">https://doi.org/10.1038/nrmicro1178</a>.</p>
+</div>
+<div id="ref-may01">
+<p>May, Robert M, Sunetra Gupta, and Angela R McLean. 2001. “Infectious Disease Dynamics: What Characterizes a Successful Invader?” <em>Philosophical Transactions of the Royal Society of London B: Biological Sciences</em> 356 (1410): 901–10.</p>
+</div>
+<div id="ref-mossong08">
+<p>Mossong, Joël, Niel Hens, Mark Jit, Philippe Beutels, Kari Auranen, Rafael Mikolajczyk, Marco Massari, et al. 2008. “Social Contacts and Mixing Patterns Relevant to the Spread of Infectious Diseases.” <em>PLoS Medicine</em> 5 (3): e74. <a href="http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074">http://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.0050074</a>.</p>
 </div>
 <div id="ref-paull12">
-<p>Paull, Sara H, Sejin Song, Katherine M McClure, Loren C Sackett, A Marm Kilpatrick, and Pieter TJ Johnson. 2012. “From Superspreaders to Disease Hotspots: Linking Transmission Across Hosts and Space.” <em>Frontiers in Ecology and the Environment</em> 10 (2). Wiley Online Library: 75–82.</p>
+<p>Paull, Sara H, Sejin Song, Katherine M McClure, Loren C Sackett, A Marm Kilpatrick, and Pieter TJ Johnson. 2012. “From Superspreaders to Disease Hotspots: Linking Transmission Across Hosts and Space.” <em>Frontiers in Ecology and the Environment</em> 10 (2): 75–82.</p>
+</div>
+<div id="ref-potterat99">
+<p>Potterat, John J., Helen Zimmerman-Rogers, Stephen Q. Muth, Richard B. Rothenberg, David L. Green, Jerry E. Taylor, Mandy S. Bonney, and Helen A. White. 1999. “Chlamydia Transmission: Concurrency, Reproduction Number, and the Epidemic Trajectory.” <em>American Journal of Epidemiology</em> 150 (12): 1331–9. <a href="https://academic.oup.com/aje/article-abstract/150/12/1331/53233">https://academic.oup.com/aje/article-abstract/150/12/1331/53233</a>.</p>
+</div>
+<div id="ref-stein11">
+<p>Stein, Richard A. 2011. “Super-Spreaders in Infectious Diseases.” <em>International Journal of Infectious Diseases : IJID : Official Publication of the International Society for Infectious Diseases</em> 15 (8): e510–e513. <a href="https://doi.org/10.1016/j.ijid.2010.06.020">https://doi.org/10.1016/j.ijid.2010.06.020</a>.</p>
 </div>
 <div id="ref-woolhouse97">
 <p>Woolhouse, M E, C Dye, J F Etard, T Smith, J D Charlwood, G P Garnett, P Hagan, et al. 1997. “Heterogeneities in the Transmission of Infectious Agents: Implications for the Design of Control Programs.” <em>Proceedings of the National Academy of Sciences of the United States of America</em> 94 (1): 338–42.</p>
+</div>
+<div id="ref-yorke78">
+<p>Yorke, J. A., H. W. Hethcote, and A. Nold. 1978. “Dynamics and Control of the Transmission of Gonorrhea.” <em>Sex Transm Dis</em> 5 (2): 51–56.</p>
 </div>
 </div>
             </section>
@@ -523,11 +527,13 @@ Figure 12.2: That is the best heterogeneity cartoon I have - let me know if you 
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -535,12 +541,11 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -548,7 +553,15 @@ gitbook.start({
 "size": 2
 },
 "edit": null,
-"download": ["_main.pdf"],
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
 "toc": {
 "collapse": "none"
 },
@@ -564,10 +577,11 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
