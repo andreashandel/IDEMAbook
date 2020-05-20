@@ -1,12 +1,12 @@
 --- 
-title: "Infectious Disease Epidemiology - A modern systems approach"
+title: "Infectious Disease Epidemiology - a Model-based Approach (IDEMA)"
 author: "Andreas Handel"
-date: "2020-05-15"
+date: "2020-05-20"
 site: bookdown::bookdown_site
 output: 
     bookdown::gitbook:
         highlight: zenburn
-        css: ./dsaidebook.css
+        css: ./idemabook.css
         fig_caption: true
         keep_md: true
         config:
@@ -21,7 +21,7 @@ output:
         toc: true
     bookdown::word_document2: 
         toc: true
-bibliography: dsaidereferences.bib
+bibliography: idemabook_references.bib
 biblio-style: apalike
 documentclass: book
 link-citations: yes
@@ -30,11 +30,13 @@ description: "A modern, model-based approach to infectious disease epidemiology"
 
 # Preface {-}
 
-This book covers infectious disease epidemiology from a dynamical systems perspective.
+This book discusses infectious disease epidemiology using a model-based approach.
 
-__Note 1: This book is currently under active development. I will likely be moving material around, adding new chapters or combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to happen for a while. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
 
-_Note 2: I appreciate receiving feedback. If you think a certain topic is missing that should be covered, or certain topics aren't explained well, or any other thought you have, please provide feedback. The best way of doing so is by going to [the github page for this book](https://github.com/ahgroup/DSAIDEbook) and submitting an "Issue". Alternatively, feel free to email me (google me to get my email address)._  
+
+__Note 1: This book is a work in progress. I will likely be moving material around, adding new chapters or combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to happen for a while. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
+
+Note 2: I appreciate receiving feedback. If you think a certain topic is missing that should be covered, or certain topics aren't explained well, or any other thought you have, please provide feedback. The best way of doing so is by going to [the github page for this book](https://github.com/andreashandel/IDEMAbook) and submitting an "Issue". Alternatively, feel free to email me (google me to get my email address).
 
 <!--chapter:end:index.Rmd-->
 
@@ -54,7 +56,7 @@ This book is intended to fill the gap. Infectious disease topics are discussed f
 
 
 ## What this book does and does not cover
-This book does not teach basic concepts of epidemiology. We assume readers are familiar with basic ideas such as incidence and prevalence, basic study design such as cohort and case-control studies and clinical trials, and other basic epidemiological concepts. For readers unfamiliar with these ideas, we suggest e.g. [@giesecke17].
+This book does not teach basic concepts of epidemiology. I assume readers are familiar with basic ideas such as incidence and prevalence, basic study design such as cohort and case-control studies and clinical trials, and other basic epidemiological concepts. For readers unfamiliar with these ideas, we suggest e.g. [@giesecke17].
 
 This book does also not teach much about specific infectious diseases. While many different infectious diseases appear in this book, the goal is not to describe any one in much detail. Instead, they appear as examples of general dynamical patterns and concepts the book covers. For information on the epidemiology of specific infectious diseases, good resources are e.g. [@nelson13].
 
@@ -70,7 +72,7 @@ The idea is that this material can be learned without the need to rely on advanc
 
 
 ## Computer exercises
-Modern infectious disease epidemiology is inherently computational. As such, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter. For an overview and introduction to the DSAIDE package, including how to install it and get started, please read [@handel17].
+Modern infectious disease epidemiology is inherently computational. While this book does not assume knowledge of or teach modeling, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter. For an overview and introduction to the DSAIDE package, including how to install it and get started, please read [@handel17].
 
 
 ## Recommended complementary resources

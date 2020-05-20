@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.13)  15 MAY 2020 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.13)  20 MAY 2020 08:07
 entering extended mode
 **./_main.tex
 (_main.tex
@@ -830,12 +830,12 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ]
 Chapter 2.
 [17]
-<./images/epi-triangle.png, id=614, 268.8444pt x 236.5638pt>
+<./images/epi-triangle.png, id=613, 268.8444pt x 236.5638pt>
 File: ./images/epi-triangle.png Graphic file (type png)
 <use ./images/epi-triangle.png>
 Package pdftex.def Info: ./images/epi-triangle.png  used on input line 181.
 (pdftex.def)             Requested size: 268.84375pt x 236.5632pt.
-<./images/complexsystem.png, id=618, 244.2726pt x 231.7458pt>
+<./images/complexsystem.png, id=617, 244.2726pt x 231.7458pt>
 File: ./images/complexsystem.png Graphic file (type png)
 <use ./images/complexsystem.png>
 Package pdftex.def Info: ./images/complexsystem.png  used on input line 192.
@@ -850,7 +850,7 @@ TEMS APPROACH
  []
 
 [18 <./images/epi-triangle.png>] [19 <./images/complexsystem.png>]
-<./images/phenomodel.png, id=638, 684.8787pt x 411.6981pt>
+<./images/phenomodel.png, id=637, 684.8787pt x 411.6981pt>
 File: ./images/phenomodel.png Graphic file (type png)
 <use ./images/phenomodel.png>
 Package pdftex.def Info: ./images/phenomodel.png  used on input line 208.
@@ -867,7 +867,7 @@ TEMS APPROACH
  []
 
 [20] [21 <./images/phenomodel.png>]
-<./images/moving-triangle.png, id=659, 393.3897pt x 160.4394pt>
+<./images/moving-triangle.png, id=658, 393.3897pt x 160.4394pt>
 File: ./images/moving-triangle.png Graphic file (type png)
 <use ./images/moving-triangle.png>
 Package pdftex.def Info: ./images/moving-triangle.png  used on input line 237.
@@ -894,7 +894,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 287--289
 
  []
 
-<./images/basicSIRmodelfigure.png, id=687, 410.2527pt x 65.043pt>
+<./images/basicSIRmodelfigure.png, id=686, 410.2527pt x 65.043pt>
 File: ./images/basicSIRmodelfigure.png Graphic file (type png)
 <use ./images/basicSIRmodelfigure.png>
 Package pdftex.def Info: ./images/basicSIRmodelfigure.png  used on input line 2
@@ -906,7 +906,7 @@ Overfull \hbox (65.27046pt too wide) in paragraph at lines 299--299
  []
 
 [25]
-<./images/sirsim.png, id=697, 684.8787pt x 411.6981pt>
+<./images/sirsim.png, id=696, 684.8787pt x 411.6981pt>
 File: ./images/sirsim.png Graphic file (type png)
 <use ./images/sirsim.png>
 Package pdftex.def Info: ./images/sirsim.png  used on input line 307.
@@ -928,7 +928,7 @@ TEMS APPROACH
  []
 
 [26 <./images/basicSIRmodelfigure.png>] [27 <./images/sirsim.png>]
-<./images/xkcd-flowcharts.png, id=714, 668.4975pt x 700.11563pt>
+<./images/xkcd-flowcharts.png, id=713, 668.4975pt x 700.11563pt>
 File: ./images/xkcd-flowcharts.png Graphic file (type png)
 <use ./images/xkcd-flowcharts.png>
 Package pdftex.def Info: ./images/xkcd-flowcharts.png  used on input line 335.
@@ -958,7 +958,7 @@ Chapter 3.
 [31
 
 ] [32] [33] [34]
-<./images/ComplicatedModel.png, id=800, 587.5551pt x 205.0059pt>
+<./images/ComplicatedModel.png, id=799, 587.5551pt x 205.0059pt>
 File: ./images/ComplicatedModel.png Graphic file (type png)
 <use ./images/ComplicatedModel.png>
 Package pdftex.def Info: ./images/ComplicatedModel.png  used on input line 457.
@@ -970,7 +970,7 @@ Overfull \hbox (242.56262pt too wide) in paragraph at lines 457--457
  []
 
 [35 <./images/ComplicatedModel.png>]
-<./images/xkcd-course-of-colds.png, id=810, 379.4175pt x 284.56313pt>
+<./images/xkcd-course-of-colds.png, id=809, 379.4175pt x 284.56313pt>
 File: ./images/xkcd-course-of-colds.png Graphic file (type png)
 <use ./images/xkcd-course-of-colds.png>
 Package pdftex.def Info: ./images/xkcd-course-of-colds.png  used on input line 
@@ -994,7 +994,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 4.
-<./images/IDcycles.pdf, id=842, 500.87125pt x 388.45125pt>
+<./images/IDcycles.pdf, id=841, 500.87125pt x 388.45125pt>
 File: ./images/IDcycles.pdf Graphic file (type pdf)
 <use ./images/IDcycles.pdf>
 Package pdftex.def Info: ./images/IDcycles.pdf  used on input line 537.
@@ -1005,7 +1005,7 @@ Overfull \hbox (155.88528pt too wide) in paragraph at lines 537--537
  []
 
 [39] [40 <./images/IDcycles.pdf>]
-<./images/R0modelfigure.png, id=859, 432.6564pt x 109.3686pt>
+<./images/R0modelfigure.png, id=858, 432.6564pt x 109.3686pt>
 File: ./images/R0modelfigure.png Graphic file (type png)
 <use ./images/R0modelfigure.png>
 Package pdftex.def Info: ./images/R0modelfigure.png  used on input line 558.
@@ -1046,7 +1046,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
 ("C:\Users\andre\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<./images/SSmaxima.png, id=902, 758.08218pt x 121.20282pt>
+<./images/SSmaxima.png, id=901, 758.08218pt x 121.20282pt>
 File: ./images/SSmaxima.png Graphic file (type png)
 <use ./images/SSmaxima.png>
 Package pdftex.def Info: ./images/SSmaxima.png  used on input line 629.
@@ -1057,7 +1057,7 @@ Overfull \hbox (413.11502pt too wide) in paragraph at lines 629--629
  []
 
 [45 <./images/SSmaxima.png>]
-<./images/gonorrhea.png, id=914, 660.4675pt x 278.03876pt>
+<./images/gonorrhea.png, id=913, 660.4675pt x 278.03876pt>
 File: ./images/gonorrhea.png Graphic file (type png)
 <use ./images/gonorrhea.png>
 Package pdftex.def Info: ./images/gonorrhea.png  used on input line 643.
@@ -1068,7 +1068,7 @@ Overfull \hbox (315.47595pt too wide) in paragraph at lines 643--643
  []
 
 [46] [47 <./images/gonorrhea.png>]
-<./images/phd_sciencenewscycle.png, id=927, 602.25pt x 669.50125pt>
+<./images/phd_sciencenewscycle.png, id=926, 602.25pt x 669.50125pt>
 File: ./images/phd_sciencenewscycle.png Graphic file (type png)
 <use ./images/phd_sciencenewscycle.png>
 Package pdftex.def Info: ./images/phd_sciencenewscycle.png  used on input line 
@@ -1097,7 +1097,7 @@ LaTeX Warning: Float too large for page by 48.5468pt on input line 660.
 ]
 Chapter 5.
 [51]
-<./images/R0scheme.png, id=975, 416.5161pt x 396.5214pt>
+<./images/R0scheme.png, id=974, 416.5161pt x 396.5214pt>
 File: ./images/R0scheme.png Graphic file (type png)
 <use ./images/R0scheme.png>
 Package pdftex.def Info: ./images/R0scheme.png  used on input line 730.
@@ -1114,7 +1114,7 @@ Underfull \vbox (badness 3271) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [55]
-<./images/R0intervention.pdf, id=1007, 650.43pt x 361.35pt>
+<./images/R0intervention.pdf, id=1006, 650.43pt x 361.35pt>
 File: ./images/R0intervention.pdf Graphic file (type pdf)
 <use ./images/R0intervention.pdf>
 Package pdftex.def Info: ./images/R0intervention.pdf  used on input line 779.
@@ -1131,7 +1131,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{myexamplebox}
 l.783 ...k Control - Example}\label{myexamplebox}}
                                                    [56] [57 <./images/R0interve
 ntion.pdf>]
-<./images/kr-R0intervention.pdf, id=1029, 513.92pt x 412.54124pt>
+<./images/kr-R0intervention.pdf, id=1028, 513.92pt x 412.54124pt>
 File: ./images/kr-R0intervention.pdf Graphic file (type pdf)
 <use ./images/kr-R0intervention.pdf>
 Package pdftex.def Info: ./images/kr-R0intervention.pdf  used on input line 795
@@ -1152,7 +1152,7 @@ rvention.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./images/viboud-R0.pdf): PDF inclusion: foun
 d PDF version <1.6>, but at most version <1.5> allowed
-<./images/viboud-R0.pdf, id=1047, 1004.553pt x 320.61784pt>
+<./images/viboud-R0.pdf, id=1046, 1004.553pt x 320.61784pt>
 File: ./images/viboud-R0.pdf Graphic file (type pdf)
 <use ./images/viboud-R0.pdf>
 Package pdftex.def Info: ./images/viboud-R0.pdf  used on input line 825.
@@ -1163,7 +1163,7 @@ Overfull \hbox (659.61186pt too wide) in paragraph at lines 825--825
  []
 
 [60 <./images/viboud-R0.pdf>]
-<./images/outbreaksize.pdf, id=1058, 508.90125pt x 413.545pt>
+<./images/outbreaksize.pdf, id=1057, 508.90125pt x 413.545pt>
 File: ./images/outbreaksize.pdf Graphic file (type pdf)
 <use ./images/outbreaksize.pdf>
 Package pdftex.def Info: ./images/outbreaksize.pdf  used on input line 836.
@@ -1173,7 +1173,7 @@ Overfull \hbox (163.91553pt too wide) in paragraph at lines 836--836
 [][] 
  []
 
-<./images/R0age.pdf, id=1060, 513.92pt x 215.80624pt>
+<./images/R0age.pdf, id=1059, 513.92pt x 215.80624pt>
 File: ./images/R0age.pdf Graphic file (type pdf)
 <use ./images/R0age.pdf>
 Package pdftex.def Info: ./images/R0age.pdf  used on input line 852.
@@ -1198,7 +1198,7 @@ Underfull \hbox (badness 5924) in paragraph at lines 896--896
 Underfull \vbox (badness 3826) has occurred while \output is active []
 
 [64]
-<./images/xkcd-outbreak-control.png, id=1108, 742.775pt x 252.945pt>
+<./images/xkcd-outbreak-control.png, id=1107, 742.775pt x 252.945pt>
 File: ./images/xkcd-outbreak-control.png Graphic file (type png)
 <use ./images/xkcd-outbreak-control.png>
 Package pdftex.def Info: ./images/xkcd-outbreak-control.png  used on input line
@@ -1222,7 +1222,7 @@ Chapter 6.
 Underfull \vbox (badness 3428) has occurred while \output is active []
 
 [69] [70]
-<./images/xkcd-swine_flu.png, id=1158, 399.38684pt x 677.05579pt>
+<./images/xkcd-swine_flu.png, id=1157, 399.38684pt x 677.05579pt>
 File: ./images/xkcd-swine_flu.png Graphic file (type png)
 <use ./images/xkcd-swine_flu.png>
 Package pdftex.def Info: ./images/xkcd-swine_flu.png  used on input line 994.
@@ -1240,7 +1240,7 @@ cedbox}) has been already used, duplicate ignored
                    \relax 
 l.1066 ...rect transmission}\label{myadvancedbox}}
                                                    [75]
-<./images/smbctransmissionmode.png, id=1200, 686.565pt x 1840.8775pt>
+<./images/smbctransmissionmode.png, id=1199, 686.565pt x 1840.8775pt>
 File: ./images/smbctransmissionmode.png Graphic file (type png)
 <use ./images/smbctransmissionmode.png>
 Package pdftex.def Info: ./images/smbctransmissionmode.png  used on input line 
@@ -1257,7 +1257,7 @@ Chapter 8.
 Underfull \vbox (badness 6396) has occurred while \output is active []
 
 [79]
-<./images/environmentaltransmissionscheme.png, id=1235, 315.579pt x 153.6942pt>
+<./images/environmentaltransmissionscheme.png, id=1234, 315.579pt x 153.6942pt>
 
 File: ./images/environmentaltransmissionscheme.png Graphic file (type png)
 <use ./images/environmentaltransmissionscheme.png>
@@ -1274,7 +1274,7 @@ plicate ignored
                    \relax 
 l.1170 ...ntal transmission}\label{myadvancedbox}}
                                                   
-<./images/xkcd-hand_sanitizer.png, id=1244, 570.13pt x 213.79875pt>
+<./images/xkcd-hand_sanitizer.png, id=1243, 570.13pt x 213.79875pt>
 File: ./images/xkcd-hand_sanitizer.png Graphic file (type png)
 <use ./images/xkcd-hand_sanitizer.png>
 Package pdftex.def Info: ./images/xkcd-hand_sanitizer.png  used on input line 1
@@ -1287,7 +1287,7 @@ Underfull \vbox (badness 3989) has occurred while \output is active []
 
 ]
 Chapter 9.
-<./images/vectorborne-schematic.png, id=1283, 361.35pt x 144.54pt>
+<./images/vectorborne-schematic.png, id=1282, 361.35pt x 144.54pt>
 File: ./images/vectorborne-schematic.png Graphic file (type png)
 <use ./images/vectorborne-schematic.png>
 Package pdftex.def Info: ./images/vectorborne-schematic.png  used on input line
@@ -1305,7 +1305,7 @@ nored
                    \relax 
 l.1276 ...orne transmission}\label{myadvancedbox}}
                                                   
-<./images/xkcd-mosquito-ringtone.png, id=1299, 230.36063pt x 423.68288pt>
+<./images/xkcd-mosquito-ringtone.png, id=1298, 230.36063pt x 423.68288pt>
 File: ./images/xkcd-mosquito-ringtone.png Graphic file (type png)
 <use ./images/xkcd-mosquito-ringtone.png>
 Package pdftex.def Info: ./images/xkcd-mosquito-ringtone.png  used on input lin
@@ -1319,7 +1319,7 @@ Chapter 10.
 Underfull \vbox (badness 1490) has occurred while \output is active []
 
 [94]
-<./images/xkcd-disease-eradication.png, id=1362, 542.92838pt x 516.7305pt>
+<./images/xkcd-disease-eradication.png, id=1361, 542.92838pt x 516.7305pt>
 File: ./images/xkcd-disease-eradication.png Graphic file (type png)
 <use ./images/xkcd-disease-eradication.png>
 Package pdftex.def Info: ./images/xkcd-disease-eradication.png  used on input l
@@ -1335,7 +1335,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{myexamplebox}
                    \relax 
 l.1518 ...lance - an example}\label{myexamplebox}}
                                                    [99]
-<./images/xkcd-listening.png, id=1402, 286.06876pt x 414.54875pt>
+<./images/xkcd-listening.png, id=1401, 286.06876pt x 414.54875pt>
 File: ./images/xkcd-listening.png Graphic file (type png)
 <use ./images/xkcd-listening.png>
 Package pdftex.def Info: ./images/xkcd-listening.png  used on input line 1527.
@@ -1365,7 +1365,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1603--1603
  []
 
 [105]
-<./images/heterogeneityexample.png, id=1453, 556.7199pt x 269.808pt>
+<./images/heterogeneityexample.png, id=1452, 556.7199pt x 269.808pt>
 File: ./images/heterogeneityexample.png Graphic file (type png)
 <use ./images/heterogeneityexample.png>
 Package pdftex.def Info: ./images/heterogeneityexample.png  used on input line 
@@ -1377,7 +1377,7 @@ Overfull \hbox (211.76949pt too wide) in paragraph at lines 1618--1618
  []
 
 [106] [107 <./images/heterogeneityexample.png>]
-<./images/crazyvenndiagram.png, id=1467, 401.5pt x 397.485pt>
+<./images/crazyvenndiagram.png, id=1466, 401.5pt x 397.485pt>
 File: ./images/crazyvenndiagram.png Graphic file (type png)
 <use ./images/crazyvenndiagram.png>
 Package pdftex.def Info: ./images/crazyvenndiagram.png  used on input line 1633
@@ -1398,7 +1398,7 @@ ncedbox}) has been already used, duplicate ignored
                    \relax 
 l.1723 ...eling multiple ID}\label{myadvancedbox}}
                                                   
-<./images/multipathogenmodel.png, id=1553, 474.0912pt x 169.8345pt>
+<./images/multipathogenmodel.png, id=1552, 474.0912pt x 169.8345pt>
 File: ./images/multipathogenmodel.png Graphic file (type png)
 <use ./images/multipathogenmodel.png>
 Package pdftex.def Info: ./images/multipathogenmodel.png  used on input line 17
@@ -1410,7 +1410,7 @@ Overfull \hbox (129.1045pt too wide) in paragraph at lines 1729--1729
  []
 
 [113]
-<./images/xkcd-sick_day.png, id=1560, 498.86375pt x 424.58624pt>
+<./images/xkcd-sick_day.png, id=1559, 498.86375pt x 424.58624pt>
 File: ./images/xkcd-sick_day.png Graphic file (type png)
 <use ./images/xkcd-sick_day.png>
 Package pdftex.def Info: ./images/xkcd-sick_day.png  used on input line 1751.
@@ -1427,7 +1427,7 @@ Underfull \vbox (badness 1565) has occurred while \output is active []
 Underfull \vbox (badness 3364) has occurred while \output is active []
 
 [118] [119] [120]
-<./images/smallpox.png, id=1621, 144.54pt x 102.8643pt>
+<./images/smallpox.png, id=1620, 144.54pt x 102.8643pt>
 File: ./images/smallpox.png Graphic file (type png)
 <use ./images/smallpox.png>
 Package pdftex.def Info: ./images/smallpox.png  used on input line 1870.
@@ -1437,7 +1437,7 @@ Package pdftex.def Info: ./images/smallpox.png  used on input line 1870.
 ]
 Chapter 15.
 [123] [124]
-<./images/smbc-ID-evolution.png, id=1672, 686.565pt x 1150.2975pt>
+<./images/smbc-ID-evolution.png, id=1671, 686.565pt x 1150.2975pt>
 File: ./images/smbc-ID-evolution.png Graphic file (type png)
 <use ./images/smbc-ID-evolution.png>
 Package pdftex.def Info: ./images/smbc-ID-evolution.png  used on input line 196
@@ -1466,21 +1466,21 @@ Chapter 19.
 [139
 
 ]
-<./images/network-diagram.png, id=1806, 302.3295pt x 150.5625pt>
+<./images/network-diagram.png, id=1805, 302.3295pt x 150.5625pt>
 File: ./images/network-diagram.png Graphic file (type png)
 <use ./images/network-diagram.png>
 Package pdftex.def Info: ./images/network-diagram.png  used on input line 2210.
 
 (pdftex.def)             Requested size: 302.34258pt x 150.569pt.
 [140 <./images/network-diagram.png>]
-<./images/complex-network-diagram.png, id=1815, 171.039pt x 148.8762pt>
+<./images/complex-network-diagram.png, id=1814, 171.039pt x 148.8762pt>
 File: ./images/complex-network-diagram.png Graphic file (type png)
 <use ./images/complex-network-diagram.png>
 Package pdftex.def Info: ./images/complex-network-diagram.png  used on input li
 ne 2228.
 (pdftex.def)             Requested size: 171.03857pt x 148.87584pt.
 [141 <./images/complex-network-diagram.png>]
-<./images/network-examples.png, id=1828, 752.8125pt x 602.25pt>
+<./images/network-examples.png, id=1827, 752.8125pt x 602.25pt>
 File: ./images/network-examples.png Graphic file (type png)
 <use ./images/network-examples.png>
 Package pdftex.def Info: ./images/network-examples.png  used on input line 2253
@@ -1498,7 +1498,7 @@ LaTeX Warning: Float too large for page by 23.99611pt on input line 2254.
 Underfull \vbox (badness 3179) has occurred while \output is active []
 
 [142] [143 <./images/network-examples.png>]
-<./images/xkcd-network.png, id=1845, 742.775pt x 415.5525pt>
+<./images/xkcd-network.png, id=1844, 742.775pt x 415.5525pt>
 File: ./images/xkcd-network.png Graphic file (type png)
 <use ./images/xkcd-network.png>
 Package pdftex.def Info: ./images/xkcd-network.png  used on input line 2282.
@@ -1533,7 +1533,7 @@ N OF MODELING SOFTWARE
 ]
 Chapter 22.
 [153]
-<./images/mapfigure.png, id=1918, 1831.5627pt x 576.2328pt>
+<./images/mapfigure.png, id=1917, 1831.5627pt x 576.2328pt>
 File: ./images/mapfigure.png Graphic file (type png)
 <use ./images/mapfigure.png>
 Package pdftex.def Info: ./images/mapfigure.png  used on input line 2376.
@@ -1622,8 +1622,8 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  15023 strings out of 492449
- 226672 string characters out of 3119993
- 326278 words of memory out of 3000000
+ 226697 string characters out of 3119993
+ 326314 words of memory out of 3000000
  18003 multiletter control sequences out of 15000+200000
  89273 words of font info for 154 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1651,9 +1651,9 @@ ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Users/andre/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/andre/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Users/andr
 e/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on _main.pdf (174 pages, 8998299 bytes).
+Output written on _main.pdf (174 pages, 8998459 bytes).
 PDF statistics:
- 3153 PDF objects out of 3580 (max. 8388607)
+ 3152 PDF objects out of 3580 (max. 8388607)
  912 named destinations out of 1000 (max. 500000)
  16505 words of extra memory for PDF output out of 17280 (max. 10000000)
 

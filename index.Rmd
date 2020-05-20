@@ -1,12 +1,12 @@
 --- 
-title: "Infectious Disease Epidemiology - A modern systems approach"
+title: "Infectious Disease Epidemiology - a Model-based Approach (IDEMA)"
 author: "Andreas Handel"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: 
     bookdown::gitbook:
         highlight: zenburn
-        css: ./dsaidebook.css
+        css: ./idemabook.css
         fig_caption: true
         keep_md: true
         config:
@@ -21,7 +21,7 @@ output:
         toc: true
     bookdown::word_document2: 
         toc: true
-bibliography: dsaidereferences.bib
+bibliography: idemabook_references.bib
 biblio-style: apalike
 documentclass: book
 link-citations: yes
@@ -30,8 +30,10 @@ description: "A modern, model-based approach to infectious disease epidemiology"
 
 # Preface {-}
 
-This book covers infectious disease epidemiology from a dynamical systems perspective.
+This book discusses infectious disease epidemiology using a model-based approach.
 
-__Note 1: This book is currently under active development. I will likely be moving material around, adding new chapters or combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to happen for a while. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
 
-_Note 2: I appreciate receiving feedback. If you think a certain topic is missing that should be covered, or certain topics aren't explained well, or any other thought you have, please provide feedback. The best way of doing so is by going to [the github page for this book](https://github.com/ahgroup/DSAIDEbook) and submitting an "Issue". Alternatively, feel free to email me (google me to get my email address)._  
+
+__Note 1: This book is a work in progress. I will likely be moving material around, adding new chapters or combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to happen for a while. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
+
+Note 2: I appreciate receiving feedback. If you think a certain topic is missing that should be covered, or certain topics aren't explained well, or any other thought you have, please provide feedback. The best way of doing so is by going to [the github page for this book](https://github.com/andreashandel/IDEMAbook) and submitting an "Issue". Alternatively, feel free to email me (google me to get my email address).
