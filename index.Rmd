@@ -1,5 +1,5 @@
 --- 
-title: "Infectious Disease Epidemiology - a Model-based Approach (IDEMA)"
+title: "Infectious Disease Epidemiology<br>- a Model-based Approach (IDEMA)"
 author: "Andreas Handel"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -32,8 +32,6 @@ description: "A modern, model-based approach to infectious disease epidemiology"
 
 This book discusses infectious disease epidemiology using a model-based approach.
 
-
-
-__Note 1: This book is a work in progress. I will likely be moving material around, adding new chapters or combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to happen for a while. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
+__Note 1: This book is a continuous work in progress. I will likely be moving material around, adding new chapters, combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to keep happening. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
 
 Note 2: I appreciate receiving feedback. If you think a certain topic is missing that should be covered, or certain topics aren't explained well, or any other thought you have, please provide feedback. The best way of doing so is by going to [the github page for this book](https://github.com/andreashandel/IDEMAbook) and submitting an "Issue". Alternatively, feel free to email me (google me to get my email address).

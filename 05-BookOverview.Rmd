@@ -1,45 +1,43 @@
 # Overview of this book
 
-This book discusses infectious disease epidemiology by taking a _(dynamical) systems approach_.
+This book discusses infectious disease epidemiology by taking a model-based approach.
 
 
 ## Rationale for this book
 Infectious disease epidemiology is the oldest area of epidemiology and public health. As such, it is well studied, often taught, and good resources exist. So why another book on that topic?
 
-While there are plenty of infectious disease epidemiology books that cover the topic from a classical epidemiological perspective, such an approach often ignores or minimizes the importance of interactions.
+There are plenty of infectious disease epidemiology books that cover the topic from a classical epidemiological perspective. However, such an approach often ignores or minimizes the importance of interactions and is not suited to covering topics such as disease extinction and emergence, oscillations and other patterns, and any topic that requires considering a system of interacting elements. The well-developed field of infectious disease modeling has its main focus on studying the interactions and resulting dynamics of ID. Good text books exist, such as [@anderson91; @diekmann00; @keeling08; @vynnycky10; @bjornstadt18], but require a strong quantitative and mathematical background from the student.
 
-On the other side, the well-developed field of infectious disease modeling has its main focus on studying the interactions and resulting dynamics of ID. Good text books exist, such as [@anderson91; @diekmann00; @keeling08; @vynnycky10], but require a strong quantitative and mathematical background from the student.
-
-This book is intended to fill the gap. Infectious disease topics are discussed from a _dynamical systems perspective_, but without a strong emphasis on teaching modeling - though we believe any modern infectious disease epidemiologist needs to have some familiarity with models, and as such, this book contains models and equations - but does not try to teach the student to become a modeler, instead the focus is on understanding the modeling perspective and becoming an _educated consumer_ of models.
+This book is intended to fill the gap between classical infectious disease epidemiology books and infectious disease modeling books. Infectious disease topics are discussed from a model-based perspective, but without trying to teach modeling. 
+We believe any modern infectious disease epidemiologist needs to have some familiarity with models, and as such, this book contains models and equations. But this material is not meant to teach you how to become a modeler. Instead the focus is on understanding the modeling perspective and becoming an _educated consumer_ of models.
 
 
 ## What this book does and does not cover
-This book does not teach basic concepts of epidemiology. I assume readers are familiar with basic ideas such as incidence and prevalence, basic study design such as cohort and case-control studies and clinical trials, and other basic epidemiological concepts. For readers unfamiliar with these ideas, we suggest e.g. [@giesecke17].
+This book does not teach basic concepts of epidemiology. I assume readers are familiar with basic ideas such as incidence and prevalence, study designs such as cohort and case-control studies and clinical trials, and other basic epidemiological concepts. For readers unfamiliar with these ideas, we suggest e.g. [@giesecke17].
 
-This book does also not teach much about specific infectious diseases. While many different infectious diseases appear in this book, the goal is not to describe any one in much detail. Instead, they appear as examples of general dynamical patterns and concepts the book covers. For information on the epidemiology of specific infectious diseases, good resources are e.g. [@nelson13].
+This book does not teach much about specific infectious diseases. While many different infectious diseases appear in this book, the goal is not to describe any one in much detail. Instead, they appear as examples of general dynamical patterns and concepts the book covers. For information on the epidemiology of specific infectious diseases, see e.g. [@nelson13].
 
 Finally, while this book takes a modeling perspective, it does not intend to teach modeling. For anyone interested in learning how to build and analyze their own infectious disease models - a skill we highly recommend learning - we suggest e.g. [@keeling08; @vynnycky10].
 
-Maybe the material closest in approach to this book is not another book but the online course "Dynamics of Infectious Diseases" developed and taught by multiple faculty members at Penn State University and hosted on Coursera [@epimooc]. This course is free to take, and I can strongly recommend it. Another online course that has been offered in the past through edX is "Epidemics" from Hong Kong University [@hkepidemics].
+Maybe the material closest in approach to this book is not another book but the online course ["Epidemics"](https://www.coursera.org/learn/epidemics) developed and taught by multiple faculty members at Penn State University, or the course by the same name [offered by The University of Hong Kong](https://www.coursera.org/learn/hkuepidemics).
 
 
 ## How to use this book
-Each chapter deals with a different topic concerning infectious diseases and their dynamics at the population level. While I assume that the reader goes through the text linearly, and therefore occasionally reference topics discussed in previous chapters, it is likely possible to read the chapters out of order and as needed refer to previous sections to the book if they are mentioned.
+Each chapter deals with a different topic concerning infectious diseases and their dynamics at the population level. While I assume that you go through the text linearly, and therefore occasionally reference topics discussed in previous chapters, it is likely possible to read the chapters out of order and as needed refer to previous sections to the book if they are mentioned.
 
 The idea is that this material can be learned without the need to rely on advanced mathematics or computer modeling. That said, this book still contains models and equations. In the case where this material is advanced, it is placed in a special text box. It is possible to skip over those boxes and still follow everything else. 
 
 
 ## Computer exercises
-Modern infectious disease epidemiology is inherently computational. While this book does not assume knowledge of or teach modeling, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, DSAIDE, which allows the reader to explore and further learn all the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter. For an overview and introduction to the DSAIDE package, including how to install it and get started, please read [@handel17].
+Modern infectious disease epidemiology is inherently computational. While this book does not assume knowledge of or teach modeling, models feature prominently in this book. As a complement to this book, I wrote a user-friendly R package, [DSAIDE](https://ahgroup.github.io/DSAIDE/), which allows you to explore the topics discussed in this book through hands-on computer exercises. These computer exercises and the use of the DSAIDE package do not require coding skills. At the end of each chapter, I mention which simulation/app from the DSAIDE package corresponds to the material covered in the chapter. For more on the DSAIDE package and how to install it and get started [check out the package website](https://ahgroup.github.io/DSAIDE/).
 
 
 ## Recommended complementary resources
-Each chapter of the book lists additional and complementary resources for specific topics. As overall supplements to this book, I specifically recommend the following resources:
+Each chapter of the book lists additional resources. As overall supplements to this book, I specifically recommend the following resources:
 
-* The online courses "Epidemics - the Dynamics of Infectious Diseases" [@epimooc] and "Epidemics" [@hkepidemics].
+* The two "Epidemics" online courses mentioned above.
 * For additional information on infectious disease epidemiology from a more traditional, medical perspective, the very detailed book "Infectious Disease Epidemiology" is a good reference [@nelson13].
 * For those who want to continue learning about infectious diseases and modeling with the goal to become modelers, I recommend "Modeling Infectious Diseases in Humans and Animals" [@keeling08] and "An Introduction to Infectious Disease Modelling" [@vynnycky10].
-
 
 
 ## References
