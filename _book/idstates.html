@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 Characterizing Infectious Disease States | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)</title>
+  <meta name="description" content="A modern, model-based approach to infectious disease epidemiology" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 Characterizing Infectious Disease States | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A modern, model-based approach to infectious disease epidemiology" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 Characterizing Infectious Disease States | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
+  
+  <meta name="twitter:description" content="A modern, model-based approach to infectious disease epidemiology" />
+  
+
+<meta name="author" content="Andreas Handel" />
+
+
+<meta name="date" content="2020-08-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="idintro.html"/>
+<link rel="next" href="patterns-of-infectious-disease-dynamics.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="idemabook.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html"><i class="fa fa-check"></i><b>1</b> Overview of this book</a><ul>
+<li class="chapter" data-level="1.1" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#rationale-for-this-book"><i class="fa fa-check"></i><b>1.1</b> Rationale for this book</a></li>
+<li class="chapter" data-level="1.2" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#what-this-book-does-and-does-not-cover"><i class="fa fa-check"></i><b>1.2</b> What this book does and does not cover</a></li>
+<li class="chapter" data-level="1.3" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#how-to-use-this-book"><i class="fa fa-check"></i><b>1.3</b> How to use this book</a></li>
+<li class="chapter" data-level="1.4" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#computer-exercises"><i class="fa fa-check"></i><b>1.4</b> Computer exercises</a></li>
+<li class="chapter" data-level="1.5" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#recommended-complementary-resources"><i class="fa fa-check"></i><b>1.5</b> Recommended complementary resources</a></li>
+<li class="chapter" data-level="1.6" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>1.6</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="idintro.html"><a href="idintro.html"><i class="fa fa-check"></i><b>2</b> Introduction to the Dynamical Systems Approach</a><ul>
+<li class="chapter" data-level="2.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>2.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="2.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>2.2</b> Introduction</a></li>
+<li class="chapter" data-level="2.3" data-path="idintro.html"><a href="idintro.html#systems-thinking"><i class="fa fa-check"></i><b>2.3</b> Systems Thinking</a></li>
+<li class="chapter" data-level="2.4" data-path="idintro.html"><a href="idintro.html#systems-thinking-and-models"><i class="fa fa-check"></i><b>2.4</b> Systems Thinking and Models</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="idintro.html"><a href="idintro.html#phenomenological-statistical-models"><i class="fa fa-check"></i><b>2.4.1</b> Phenomenological (statistical) Models</a></li>
+<li class="chapter" data-level="2.4.2" data-path="idintro.html"><a href="idintro.html#mechanistic-models"><i class="fa fa-check"></i><b>2.4.2</b> Mechanistic Models</a></li>
+<li class="chapter" data-level="2.4.3" data-path="idintro.html"><a href="idintro.html#dynamical-models"><i class="fa fa-check"></i><b>2.4.3</b> Dynamical Models</a></li>
+<li class="chapter" data-level="2.4.4" data-path="idintro.html"><a href="idintro.html#types-of-dynamical-mechanistic-models"><i class="fa fa-check"></i><b>2.4.4</b> Types of Dynamical, Mechanistic Models</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="idintro.html"><a href="idintro.html#systems-approaches-in-id-epidemiology"><i class="fa fa-check"></i><b>2.5</b> Systems approaches in ID Epidemiology</a></li>
+<li class="chapter" data-level="2.6" data-path="idintro.html"><a href="idintro.html#a-basic-infectious-disease-systems-model"><i class="fa fa-check"></i><b>2.6</b> A Basic Infectious Disease Systems Model</a></li>
+<li class="chapter" data-level="2.7" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>2.7</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="2.8" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>2.8</b> Exercises</a></li>
+<li class="chapter" data-level="2.9" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>2.9</b> Further Resources</a></li>
+<li class="chapter" data-level="2.10" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>2.10</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="idstates.html"><a href="idstates.html"><i class="fa fa-check"></i><b>3</b> Characterizing Infectious Disease States</a><ul>
+<li class="chapter" data-level="3.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>3.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="3.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>3.2</b> Introduction</a></li>
+<li class="chapter" data-level="3.3" data-path="idstates.html"><a href="idstates.html#states-of-susceptibility"><i class="fa fa-check"></i><b>3.3</b> States of susceptibility</a></li>
+<li class="chapter" data-level="3.4" data-path="idstates.html"><a href="idstates.html#states-of-infection"><i class="fa fa-check"></i><b>3.4</b> States of Infection</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="idstates.html"><a href="idstates.html#latent-infection"><i class="fa fa-check"></i><b>3.4.1</b> Latent infection</a></li>
+<li class="chapter" data-level="3.4.2" data-path="idstates.html"><a href="idstates.html#symptomatic-infection"><i class="fa fa-check"></i><b>3.4.2</b> Symptomatic infection</a></li>
+<li class="chapter" data-level="3.4.3" data-path="idstates.html"><a href="idstates.html#asymptomatic-infection"><i class="fa fa-check"></i><b>3.4.3</b> Asymptomatic infection</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="idstates.html"><a href="idstates.html#post-infection-states"><i class="fa fa-check"></i><b>3.5</b> Post-infection states</a></li>
+<li class="chapter" data-level="3.6" data-path="idstates.html"><a href="idstates.html#medical-versus-id-dynamics-perspectives"><i class="fa fa-check"></i><b>3.6</b> Medical versus ID dynamics perspectives</a></li>
+<li class="chapter" data-level="3.7" data-path="idstates.html"><a href="idstates.html#models-with-more-details"><i class="fa fa-check"></i><b>3.7</b> Models with more details</a></li>
+<li class="chapter" data-level="3.8" data-path="idstates.html"><a href="idstates.html#how-much-detail-is-needed"><i class="fa fa-check"></i><b>3.8</b> How much detail is needed?</a></li>
+<li class="chapter" data-level="3.9" data-path="idstates.html"><a href="idstates.html#case-study-examples"><i class="fa fa-check"></i><b>3.9</b> Case study examples</a><ul>
+<li class="chapter" data-level="3.9.1" data-path="idstates.html"><a href="idstates.html#example-1"><i class="fa fa-check"></i><b>3.9.1</b> example 1</a></li>
+</ul></li>
+<li class="chapter" data-level="3.10" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>3.10</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="3.11" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>3.11</b> Exercises</a></li>
+<li class="chapter" data-level="3.12" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>3.12</b> Further Resources</a></li>
+<li class="chapter" data-level="3.13" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>3.13</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="patterns-of-infectious-disease-dynamics.html"><a href="patterns-of-infectious-disease-dynamics.html"><i class="fa fa-check"></i><b>4</b> Patterns of Infectious Disease Dynamics</a><ul>
+<li class="chapter" data-level="4.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="4.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>4.2</b> Introduction</a></li>
+<li class="chapter" data-level="4.3" data-path="patterns-of-infectious-disease-dynamics.html"><a href="patterns-of-infectious-disease-dynamics.html#resource-replenishment"><i class="fa fa-check"></i><b>4.3</b> Resource Replenishment</a></li>
+<li class="chapter" data-level="4.4" data-path="patterns-of-infectious-disease-dynamics.html"><a href="patterns-of-infectious-disease-dynamics.html#a-model-with-resource-replenishment"><i class="fa fa-check"></i><b>4.4</b> A Model with Resource Replenishment</a></li>
+<li class="chapter" data-level="4.5" data-path="patterns-of-infectious-disease-dynamics.html"><a href="patterns-of-infectious-disease-dynamics.html#intrinisic-cycles"><i class="fa fa-check"></i><b>4.5</b> Intrinisic Cycles</a></li>
+<li class="chapter" data-level="4.6" data-path="patterns-of-infectious-disease-dynamics.html"><a href="patterns-of-infectious-disease-dynamics.html#intrinisic-cycles-and-models"><i class="fa fa-check"></i><b>4.6</b> Intrinisic Cycles and models</a></li>
+<li class="chapter" data-level="4.7" data-path="patterns-of-infectious-disease-dynamics.html"><a href="patterns-of-infectious-disease-dynamics.html#external-drivers-of-cycles"><i class="fa fa-check"></i><b>4.7</b> External Drivers of Cycles</a></li>
+<li class="chapter" data-level="4.8" data-path="patterns-of-infectious-disease-dynamics.html"><a href="patterns-of-infectious-disease-dynamics.html#steady-states"><i class="fa fa-check"></i><b>4.8</b> Steady states</a></li>
+<li class="chapter" data-level="4.9" data-path="patterns-of-infectious-disease-dynamics.html"><a href="patterns-of-infectious-disease-dynamics.html#detecting-cycles-or-other-patterns"><i class="fa fa-check"></i><b>4.9</b> Detecting cycles or other patterns</a></li>
+<li class="chapter" data-level="4.10" data-path="patterns-of-infectious-disease-dynamics.html"><a href="patterns-of-infectious-disease-dynamics.html#id-dynamics-in-changing-populations"><i class="fa fa-check"></i><b>4.10</b> ID Dynamics in Changing Populations</a></li>
+<li class="chapter" data-level="4.11" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>4.11</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="4.12" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>4.12</b> Exercises</a></li>
+<li class="chapter" data-level="4.13" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>4.13</b> Further Resources</a></li>
+<li class="chapter" data-level="4.14" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>4.14</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="R0.html"><a href="R0.html"><i class="fa fa-check"></i><b>5</b> Reproductive Number</a><ul>
+<li class="chapter" data-level="5.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>5.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="5.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>5.2</b> Introduction</a></li>
+<li class="chapter" data-level="5.3" data-path="R0.html"><a href="R0.html#reproductive-number-definition"><i class="fa fa-check"></i><b>5.3</b> Reproductive number definition</a></li>
+<li class="chapter" data-level="5.4" data-path="R0.html"><a href="R0.html#reproductive-number-details"><i class="fa fa-check"></i><b>5.4</b> Reproductive number details</a></li>
+<li class="chapter" data-level="5.5" data-path="R0.html"><a href="R0.html#basic-reproductive-number"><i class="fa fa-check"></i><b>5.5</b> Basic reproductive number</a></li>
+<li class="chapter" data-level="5.6" data-path="R0.html"><a href="R0.html#reproductive-number-terminology"><i class="fa fa-check"></i><b>5.6</b> Reproductive number terminology</a></li>
+<li class="chapter" data-level="5.7" data-path="R0.html"><a href="R0.html#outbreaks-and-the-change-in-r"><i class="fa fa-check"></i><b>5.7</b> Outbreaks and the Change in R</a></li>
+<li class="chapter" data-level="5.8" data-path="R0.html"><a href="R0.html#reproductive-number-and-outbreak-control"><i class="fa fa-check"></i><b>5.8</b> Reproductive Number and Outbreak Control</a></li>
+<li class="chapter" data-level="5.9" data-path="R0.html"><a href="R0.html#estimating-intervention-efforts-based-on-r"><i class="fa fa-check"></i><b>5.9</b> Estimating Intervention Efforts based on R</a></li>
+<li class="chapter" data-level="5.10" data-path="R0.html"><a href="R0.html#how-to-determine-r"><i class="fa fa-check"></i><b>5.10</b> How to determine R</a><ul>
+<li class="chapter" data-level="5.10.1" data-path="R0.html"><a href="R0.html#determine-r-at-the-beginning-of-an-outbreak"><i class="fa fa-check"></i><b>5.10.1</b> Determine R at the Beginning of an Outbreak</a></li>
+<li class="chapter" data-level="5.10.2" data-path="R0.html"><a href="R0.html#determine-r-once-the-outbreak-is-over"><i class="fa fa-check"></i><b>5.10.2</b> Determine R Once the Outbreak is Over</a></li>
+<li class="chapter" data-level="5.10.3" data-path="R0.html"><a href="R0.html#determining-r-at-the-endemicsteady-state"><i class="fa fa-check"></i><b>5.10.3</b> Determining R at the Endemic/steady state</a></li>
+<li class="chapter" data-level="5.10.4" data-path="R0.html"><a href="R0.html#determining-r-through-age-of-infection"><i class="fa fa-check"></i><b>5.10.4</b> Determining R Through Age of Infection</a></li>
+<li class="chapter" data-level="5.10.5" data-path="R0.html"><a href="R0.html#determining-r-through-fitting-a-full-transmission-model"><i class="fa fa-check"></i><b>5.10.5</b> Determining R Through Fitting a Full Transmission Model</a></li>
+</ul></li>
+<li class="chapter" data-level="5.11" data-path="R0.html"><a href="R0.html#r-and-model-parameterization"><i class="fa fa-check"></i><b>5.11</b> R and model parameterization</a></li>
+<li class="chapter" data-level="5.12" data-path="R0.html"><a href="R0.html#case-studies"><i class="fa fa-check"></i><b>5.12</b> Case studies</a><ul>
+<li class="chapter" data-level="5.12.1" data-path="R0.html"><a href="R0.html#basic-science-example-estimating-the-reproductive-number-for-the-1918-influenza-pandemic"><i class="fa fa-check"></i><b>5.12.1</b> Basic Science example: Estimating the reproductive number for the 1918 influenza pandemic</a></li>
+<li class="chapter" data-level="5.12.2" data-path="R0.html"><a href="R0.html#policyapplication-example-estimating-the-reproductive-number-of-the-2014-ebola-outbreak"><i class="fa fa-check"></i><b>5.12.2</b> Policy/Application example: Estimating the reproductive number of the 2014 Ebola outbreak</a></li>
+</ul></li>
+<li class="chapter" data-level="5.13" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>5.13</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="5.14" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>5.14</b> Exercises</a></li>
+<li class="chapter" data-level="5.15" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>5.15</b> Further Resources</a></li>
+<li class="chapter" data-level="5.16" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>5.16</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="types-of-infectious-disease-transmission.html"><a href="types-of-infectious-disease-transmission.html"><i class="fa fa-check"></i><b>6</b> Types of Infectious Disease Transmission</a><ul>
+<li class="chapter" data-level="6.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>6.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="6.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>6.2</b> Introduction</a></li>
+<li class="chapter" data-level="6.3" data-path="types-of-infectious-disease-transmission.html"><a href="types-of-infectious-disease-transmission.html#direct-transmission"><i class="fa fa-check"></i><b>6.3</b> Direct Transmission</a></li>
+<li class="chapter" data-level="6.4" data-path="types-of-infectious-disease-transmission.html"><a href="types-of-infectious-disease-transmission.html#environmental-transmission"><i class="fa fa-check"></i><b>6.4</b> Environmental Transmission</a></li>
+<li class="chapter" data-level="6.5" data-path="types-of-infectious-disease-transmission.html"><a href="types-of-infectious-disease-transmission.html#vector-borne-transmission"><i class="fa fa-check"></i><b>6.5</b> Vector-borne Transmission</a></li>
+<li class="chapter" data-level="6.6" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>6.6</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="6.7" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>6.7</b> Exercises</a></li>
+<li class="chapter" data-level="6.8" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>6.8</b> Further Resources</a></li>
+<li class="chapter" data-level="6.9" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>6.9</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html"><i class="fa fa-check"></i><b>7</b> Modes of Direct Transmission</a><ul>
+<li class="chapter" data-level="7.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="7.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>7.2</b> Introduction</a></li>
+<li class="chapter" data-level="7.3" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#contact-transmission"><i class="fa fa-check"></i><b>7.3</b> Contact transmission</a></li>
+<li class="chapter" data-level="7.4" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#airborne-transmission"><i class="fa fa-check"></i><b>7.4</b> Airborne transmission</a></li>
+<li class="chapter" data-level="7.5" data-path="modes-of-direct-transmission.html"><a href="modes-of-direct-transmission.html#ways-in-which-direct-transmission-scales"><i class="fa fa-check"></i><b>7.5</b> Ways in which direct transmission scales</a><ul>
+<li class="chapter" data-level="7.5.1" data-path="idintro.html"><a href="idintro.html#myadvancedbox"><i class="fa fa-check"></i><b>7.5.1</b> Modeling types of direct transmission</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>7.6</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="7.7" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>7.7</b> Exercises</a></li>
+<li class="chapter" data-level="7.8" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>7.8</b> Further Resources</a></li>
+<li class="chapter" data-level="7.9" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>7.9</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="types-of-infectious-disease-transmission.html"><a href="types-of-infectious-disease-transmission.html#environmental-transmission"><i class="fa fa-check"></i><b>8</b> Environmental Transmission</a><ul>
+<li class="chapter" data-level="8.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>8.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="8.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>8.2</b> Introduction</a></li>
+<li class="chapter" data-level="8.3" data-path="environmental-transmission.html"><a href="environmental-transmission.html"><i class="fa fa-check"></i><b>8.3</b> Environmental transmission basics</a></li>
+<li class="chapter" data-level="8.4" data-path="environmental-transmission.html"><a href="environmental-transmission.html#environmental-transmission-and-external-drivers"><i class="fa fa-check"></i><b>8.4</b> Environmental transmission and external drivers</a></li>
+<li class="chapter" data-level="8.5" data-path="environmental-transmission.html"><a href="environmental-transmission.html#environmental-transmission-and-interventions"><i class="fa fa-check"></i><b>8.5</b> Environmental transmission and interventions</a></li>
+<li class="chapter" data-level="8.6" data-path="idstates.html"><a href="idstates.html#case-study-examples"><i class="fa fa-check"></i><b>8.6</b> Case study examples</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="environmental-transmission.html"><a href="environmental-transmission.html#basic-science-example-environmental-transmission-for-cholera"><i class="fa fa-check"></i><b>8.6.1</b> Basic Science example: Environmental transmission for Cholera</a></li>
+<li class="chapter" data-level="8.6.2" data-path="environmental-transmission.html"><a href="environmental-transmission.html#policyapplication-example"><i class="fa fa-check"></i><b>8.6.2</b> Policy/Application example:</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>8.7</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="8.8" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>8.8</b> Exercises</a></li>
+<li class="chapter" data-level="8.9" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>8.9</b> Further Resources</a></li>
+<li class="chapter" data-level="8.10" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>8.10</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="types-of-infectious-disease-transmission.html"><a href="types-of-infectious-disease-transmission.html#vector-borne-transmission"><i class="fa fa-check"></i><b>9</b> Vector-borne transmission</a><ul>
+<li class="chapter" data-level="9.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>9.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="9.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>9.2</b> Introduction</a></li>
+<li class="chapter" data-level="9.3" data-path="vector-borne-transmission.html"><a href="vector-borne-transmission.html"><i class="fa fa-check"></i><b>9.3</b> Vector-borne transmission and ID patterns</a></li>
+<li class="chapter" data-level="9.4" data-path="vector-borne-transmission.html"><a href="vector-borne-transmission.html#vector-borne-transmission-and-interventions"><i class="fa fa-check"></i><b>9.4</b> Vector-borne transmission and interventions</a></li>
+<li class="chapter" data-level="9.5" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>9.5</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="9.6" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>9.6</b> Exercises</a></li>
+<li class="chapter" data-level="9.7" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>9.7</b> Further Resources</a></li>
+<li class="chapter" data-level="9.8" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>9.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="heterogeneity.html"><a href="heterogeneity.html"><i class="fa fa-check"></i><b>10</b> Host Heterogeneity</a><ul>
+<li class="chapter" data-level="10.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>10.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="10.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>10.2</b> Introduction</a></li>
+<li class="chapter" data-level="10.3" data-path="heterogeneity.html"><a href="heterogeneity.html#types-of-host-heterogeneity"><i class="fa fa-check"></i><b>10.3</b> Types of Host Heterogeneity</a></li>
+<li class="chapter" data-level="10.4" data-path="heterogeneity.html"><a href="heterogeneity.html#heterogeneity-in-transmission-core-groups"><i class="fa fa-check"></i><b>10.4</b> Heterogeneity in Transmission: Core Groups</a></li>
+<li class="chapter" data-level="10.5" data-path="heterogeneity.html"><a href="heterogeneity.html#heterogeneity-in-transmission-superspreaders"><i class="fa fa-check"></i><b>10.5</b> Heterogeneity in Transmission: Superspreaders</a></li>
+<li class="chapter" data-level="10.6" data-path="heterogeneity.html"><a href="heterogeneity.html#heterogeneity-and-the-reproductive-number"><i class="fa fa-check"></i><b>10.6</b> Heterogeneity and The Reproductive Number</a></li>
+<li class="chapter" data-level="10.7" data-path="heterogeneity.html"><a href="heterogeneity.html#heterogeneity-and-id-control"><i class="fa fa-check"></i><b>10.7</b> Heterogeneity and ID control</a></li>
+<li class="chapter" data-level="10.8" data-path="heterogeneity.html"><a href="heterogeneity.html#modeling-heterogeneity"><i class="fa fa-check"></i><b>10.8</b> Modeling Heterogeneity</a></li>
+<li class="chapter" data-level="10.9" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>10.9</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="10.10" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>10.10</b> Exercises</a></li>
+<li class="chapter" data-level="10.11" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>10.11</b> Further Resources</a></li>
+<li class="chapter" data-level="10.12" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>10.12</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html"><i class="fa fa-check"></i><b>11</b> Infectious Disease Control</a><ul>
+<li class="chapter" data-level="11.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>11.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="11.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>11.2</b> Introduction</a></li>
+<li class="chapter" data-level="11.3" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#goals-of-id-control"><i class="fa fa-check"></i><b>11.3</b> Goals of ID Control</a></li>
+<li class="chapter" data-level="11.4" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#types-of-infectious-disease-control"><i class="fa fa-check"></i><b>11.4</b> Types of Infectious Disease Control</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#vaccination"><i class="fa fa-check"></i><b>11.4.1</b> Vaccination</a></li>
+<li class="chapter" data-level="11.4.2" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#pharmaceutical-interventions-drugs"><i class="fa fa-check"></i><b>11.4.2</b> Pharmaceutical Interventions (Drugs)</a></li>
+<li class="chapter" data-level="11.4.3" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#non-pharmaceutical-interventions"><i class="fa fa-check"></i><b>11.4.3</b> Non-pharmaceutical Interventions</a></li>
+<li class="chapter" data-level="11.4.4" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#special-interventions-for-non-human-hosts"><i class="fa fa-check"></i><b>11.4.4</b> Special Interventions for Non-human Hosts</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#characteristics-of-interventions"><i class="fa fa-check"></i><b>11.5</b> Characteristics of Interventions</a></li>
+<li class="chapter" data-level="11.6" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#impact-of-interventions"><i class="fa fa-check"></i><b>11.6</b> Impact of Interventions</a></li>
+<li class="chapter" data-level="11.7" data-path="infectious-disease-control.html"><a href="infectious-disease-control.html#interventions-and-models"><i class="fa fa-check"></i><b>11.7</b> Interventions and Models</a></li>
+<li class="chapter" data-level="11.8" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>11.8</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="11.9" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>11.9</b> Exercises</a></li>
+<li class="chapter" data-level="11.10" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>11.10</b> Further Resources</a></li>
+<li class="chapter" data-level="11.11" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>11.11</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="infectious-disease-surveillance.html"><a href="infectious-disease-surveillance.html"><i class="fa fa-check"></i><b>12</b> Infectious Disease Surveillance</a><ul>
+<li class="chapter" data-level="12.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>12.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="12.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>12.2</b> Introduction</a></li>
+<li class="chapter" data-level="12.3" data-path="infectious-disease-surveillance.html"><a href="infectious-disease-surveillance.html#goals-of-surveillance"><i class="fa fa-check"></i><b>12.3</b> Goals of Surveillance</a></li>
+<li class="chapter" data-level="12.4" data-path="infectious-disease-surveillance.html"><a href="infectious-disease-surveillance.html#types-of-surveillance"><i class="fa fa-check"></i><b>12.4</b> Types of Surveillance</a></li>
+<li class="chapter" data-level="12.5" data-path="infectious-disease-surveillance.html"><a href="infectious-disease-surveillance.html#problems-with-surveillance"><i class="fa fa-check"></i><b>12.5</b> Problems with surveillance</a></li>
+<li class="chapter" data-level="12.6" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>12.6</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="12.7" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>12.7</b> Exercises</a></li>
+<li class="chapter" data-level="12.8" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>12.8</b> Further Resources</a></li>
+<li class="chapter" data-level="12.9" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>12.9</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html"><i class="fa fa-check"></i><b>13</b> Dynamics of Multiple Pathogens</a><ul>
+<li class="chapter" data-level="13.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>13.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="13.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>13.2</b> Introduction</a></li>
+<li class="chapter" data-level="13.3" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#interactions-of-id"><i class="fa fa-check"></i><b>13.3</b> Interactions of ID</a><ul>
+<li class="chapter" data-level="13.3.1" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#hiv-tb-interactions"><i class="fa fa-check"></i><b>13.3.1</b> HIV-TB Interactions</a></li>
+<li class="chapter" data-level="13.3.2" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#hiv-hepatitis-interactions"><i class="fa fa-check"></i><b>13.3.2</b> HIV-Hepatitis Interactions</a></li>
+<li class="chapter" data-level="13.3.3" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#influenza-strep-interactions"><i class="fa fa-check"></i><b>13.3.3</b> Influenza-Strep Interactions</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#more-than-two-infectious-diseases"><i class="fa fa-check"></i><b>13.4</b> More Than Two Infectious Diseases</a></li>
+<li class="chapter" data-level="13.5" data-path="dynamics-of-multiple-pathogens.html"><a href="dynamics-of-multiple-pathogens.html#multiple-id-and-control"><i class="fa fa-check"></i><b>13.5</b> Multiple ID and Control</a></li>
+<li class="chapter" data-level="13.6" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>13.6</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="13.7" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>13.7</b> Exercises</a></li>
+<li class="chapter" data-level="13.8" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>13.8</b> Further Resources</a></li>
+<li class="chapter" data-level="13.9" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>13.9</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="stochastic.html"><a href="stochastic.html"><i class="fa fa-check"></i><b>14</b> Stochastic Dynamics and Extinctions</a><ul>
+<li class="chapter" data-level="14.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>14.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="14.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>14.2</b> Introduction</a></li>
+<li class="chapter" data-level="14.3" data-path="stochastic.html"><a href="stochastic.html#deterministic-systems"><i class="fa fa-check"></i><b>14.3</b> Deterministic systems</a></li>
+<li class="chapter" data-level="14.4" data-path="stochastic.html"><a href="stochastic.html#stochasticity"><i class="fa fa-check"></i><b>14.4</b> Stochasticity</a></li>
+<li class="chapter" data-level="14.5" data-path="stochastic.html"><a href="stochastic.html#discrete-numbers-and-extinctions"><i class="fa fa-check"></i><b>14.5</b> Discrete Numbers and Extinctions</a></li>
+<li class="chapter" data-level="14.6" data-path="stochastic.html"><a href="stochastic.html#modeling-stochasticity-and-extinction"><i class="fa fa-check"></i><b>14.6</b> Modeling Stochasticity and Extinction</a></li>
+<li class="chapter" data-level="14.7" data-path="stochastic.html"><a href="stochastic.html#factors-affecting-extinction"><i class="fa fa-check"></i><b>14.7</b> Factors Affecting Extinction</a></li>
+<li class="chapter" data-level="14.8" data-path="stochastic.html"><a href="stochastic.html#critical-community-size"><i class="fa fa-check"></i><b>14.8</b> Critical Community Size</a></li>
+<li class="chapter" data-level="14.9" data-path="stochastic.html"><a href="stochastic.html#host-extinction"><i class="fa fa-check"></i><b>14.9</b> Host Extinction</a></li>
+<li class="chapter" data-level="14.10" data-path="stochastic.html"><a href="stochastic.html#disease-emergence"><i class="fa fa-check"></i><b>14.10</b> Disease Emergence</a></li>
+<li class="chapter" data-level="14.11" data-path="stochastic.html"><a href="stochastic.html#are-stochastic-models-better"><i class="fa fa-check"></i><b>14.11</b> Are stochastic models better?</a></li>
+<li class="chapter" data-level="14.12" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>14.12</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="14.13" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>14.13</b> Exercises</a></li>
+<li class="chapter" data-level="14.14" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>14.14</b> Further Resources</a></li>
+<li class="chapter" data-level="14.15" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>14.15</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="evolutionary-dynamics-introduction.html"><a href="evolutionary-dynamics-introduction.html"><i class="fa fa-check"></i><b>15</b> Evolutionary Dynamics Introduction</a><ul>
+<li class="chapter" data-level="15.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>15.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="15.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>15.2</b> Introduction</a></li>
+<li class="chapter" data-level="15.3" data-path="evolutionary-dynamics-introduction.html"><a href="evolutionary-dynamics-introduction.html#basics-of-evolutionary-dynamics"><i class="fa fa-check"></i><b>15.3</b> Basics of Evolutionary dynamics</a></li>
+<li class="chapter" data-level="15.4" data-path="evolutionary-dynamics-introduction.html"><a href="evolutionary-dynamics-introduction.html#evolution-and-immune-escape"><i class="fa fa-check"></i><b>15.4</b> Evolution and Immune Escape</a></li>
+<li class="chapter" data-level="15.5" data-path="evolutionary-dynamics-introduction.html"><a href="evolutionary-dynamics-introduction.html#modeling-evolutionary-dynamics"><i class="fa fa-check"></i><b>15.5</b> Modeling Evolutionary Dynamics</a></li>
+<li class="chapter" data-level="15.6" data-path="evolutionary-dynamics-introduction.html"><a href="evolutionary-dynamics-introduction.html#co-evolution"><i class="fa fa-check"></i><b>15.6</b> Co-evolution</a></li>
+<li class="chapter" data-level="15.7" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>15.7</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="15.8" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>15.8</b> Exercises</a></li>
+<li class="chapter" data-level="15.9" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>15.9</b> Further Resources</a></li>
+<li class="chapter" data-level="15.10" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>15.10</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="evolution-and-control.html"><a href="evolution-and-control.html"><i class="fa fa-check"></i><b>16</b> Evolution and Control</a><ul>
+<li class="chapter" data-level="16.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>16.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="16.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>16.2</b> Introduction</a></li>
+<li class="chapter" data-level="16.3" data-path="evolution-and-control.html"><a href="evolution-and-control.html#vaccine-escape"><i class="fa fa-check"></i><b>16.3</b> Vaccine Escape</a></li>
+<li class="chapter" data-level="16.4" data-path="evolution-and-control.html"><a href="evolution-and-control.html#drug-resistance"><i class="fa fa-check"></i><b>16.4</b> Drug Resistance</a></li>
+<li class="chapter" data-level="16.5" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>16.5</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="16.6" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>16.6</b> Exercises</a></li>
+<li class="chapter" data-level="16.7" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>16.7</b> Further Resources</a></li>
+<li class="chapter" data-level="16.8" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>16.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="emerging-infectious-diseases.html"><a href="emerging-infectious-diseases.html"><i class="fa fa-check"></i><b>17</b> Emerging Infectious Diseases</a><ul>
+<li class="chapter" data-level="17.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>17.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="17.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>17.2</b> Introduction</a></li>
+<li class="chapter" data-level="17.3" data-path="emerging-infectious-diseases.html"><a href="emerging-infectious-diseases.html#emergence-and-evolution"><i class="fa fa-check"></i><b>17.3</b> Emergence and Evolution</a></li>
+<li class="chapter" data-level="17.4" data-path="emerging-infectious-diseases.html"><a href="emerging-infectious-diseases.html#ecological-drivers-of-evolution-and-emergence"><i class="fa fa-check"></i><b>17.4</b> Ecological drivers of evolution and emergence</a></li>
+<li class="chapter" data-level="17.5" data-path="emerging-infectious-diseases.html"><a href="emerging-infectious-diseases.html#emergence-dynamics"><i class="fa fa-check"></i><b>17.5</b> Emergence dynamics</a></li>
+<li class="chapter" data-level="17.6" data-path="emerging-infectious-diseases.html"><a href="emerging-infectious-diseases.html#modeling-id-emergence-dynamics"><i class="fa fa-check"></i><b>17.6</b> Modeling ID Emergence Dynamics</a></li>
+<li class="chapter" data-level="17.7" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>17.7</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="17.8" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>17.8</b> Exercises</a></li>
+<li class="chapter" data-level="17.9" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>17.9</b> Further Resources</a></li>
+<li class="chapter" data-level="17.10" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>17.10</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="virulence.html"><a href="virulence.html"><i class="fa fa-check"></i><b>18</b> Virulence</a><ul>
+<li class="chapter" data-level="18.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>18.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="18.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>18.2</b> Introduction</a></li>
+<li class="chapter" data-level="18.3" data-path="virulence.html"><a href="virulence.html#virulence-definition"><i class="fa fa-check"></i><b>18.3</b> Virulence definition</a></li>
+<li class="chapter" data-level="18.4" data-path="virulence.html"><a href="virulence.html#virulence-evolution"><i class="fa fa-check"></i><b>18.4</b> Virulence evolution</a></li>
+<li class="chapter" data-level="18.5" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>18.5</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="18.6" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>18.6</b> Exercises</a></li>
+<li class="chapter" data-level="18.7" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>18.7</b> Further Resources</a></li>
+<li class="chapter" data-level="18.8" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>18.8</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="networks-and-id.html"><a href="networks-and-id.html"><i class="fa fa-check"></i><b>19</b> Networks and ID</a><ul>
+<li class="chapter" data-level="19.1" data-path="idintro.html"><a href="idintro.html#overview-and-learning-objectives"><i class="fa fa-check"></i><b>19.1</b> Overview and Learning Objectives</a></li>
+<li class="chapter" data-level="19.2" data-path="idintro.html"><a href="idintro.html#introduction"><i class="fa fa-check"></i><b>19.2</b> Introduction</a></li>
+<li class="chapter" data-level="19.3" data-path="networks-and-id.html"><a href="networks-and-id.html#network-terminology"><i class="fa fa-check"></i><b>19.3</b> Network Terminology</a></li>
+<li class="chapter" data-level="19.4" data-path="networks-and-id.html"><a href="networks-and-id.html#network-nodes"><i class="fa fa-check"></i><b>19.4</b> Network Nodes</a></li>
+<li class="chapter" data-level="19.5" data-path="networks-and-id.html"><a href="networks-and-id.html#network-connections"><i class="fa fa-check"></i><b>19.5</b> Network Connections</a></li>
+<li class="chapter" data-level="19.6" data-path="networks-and-id.html"><a href="networks-and-id.html#network-characteristics"><i class="fa fa-check"></i><b>19.6</b> Network Characteristics</a></li>
+<li class="chapter" data-level="19.7" data-path="networks-and-id.html"><a href="networks-and-id.html#important-types-of-networks"><i class="fa fa-check"></i><b>19.7</b> Important types of networks</a></li>
+<li class="chapter" data-level="19.8" data-path="networks-and-id.html"><a href="networks-and-id.html#id-transmission-on-networks"><i class="fa fa-check"></i><b>19.8</b> ID Transmission on Networks</a></li>
+<li class="chapter" data-level="19.9" data-path="networks-and-id.html"><a href="networks-and-id.html#networks-and-id-control"><i class="fa fa-check"></i><b>19.9</b> Networks and ID Control</a></li>
+<li class="chapter" data-level="19.10" data-path="networks-and-id.html"><a href="networks-and-id.html#modeling-id-transmission-on-networks"><i class="fa fa-check"></i><b>19.10</b> Modeling ID Transmission on Networks</a></li>
+<li class="chapter" data-level="19.11" data-path="networks-and-id.html"><a href="networks-and-id.html#id-transmission-on-dynamic-networks"><i class="fa fa-check"></i><b>19.11</b> ID Transmission on Dynamic Networks</a></li>
+<li class="chapter" data-level="19.12" data-path="idintro.html"><a href="idintro.html#summary-and-cartoon"><i class="fa fa-check"></i><b>19.12</b> Summary and Cartoon</a></li>
+<li class="chapter" data-level="19.13" data-path="idintro.html"><a href="idintro.html#exercises"><i class="fa fa-check"></i><b>19.13</b> Exercises</a></li>
+<li class="chapter" data-level="19.14" data-path="idintro.html"><a href="idintro.html#further-resources"><i class="fa fa-check"></i><b>19.14</b> Further Resources</a></li>
+<li class="chapter" data-level="19.15" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>19.15</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="summary.html"><a href="summary.html"><i class="fa fa-check"></i><b>20</b> Summary</a><ul>
+<li class="chapter" data-level="20.1" data-path="summary.html"><a href="summary.html#all-references"><i class="fa fa-check"></i><b>20.1</b> All References</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="appendix-a-a-brief-description-of-modeling-software.html"><a href="appendix-a-a-brief-description-of-modeling-software.html"><i class="fa fa-check"></i><b>21</b> Appendix A - A brief description of modeling software</a><ul>
+<li class="chapter" data-level="21.1" data-path="appendix-a-a-brief-description-of-modeling-software.html"><a href="appendix-a-a-brief-description-of-modeling-software.html#overview"><i class="fa fa-check"></i><b>21.1</b> Overview</a></li>
+<li class="chapter" data-level="21.2" data-path="appendix-a-a-brief-description-of-modeling-software.html"><a href="appendix-a-a-brief-description-of-modeling-software.html#r"><i class="fa fa-check"></i><b>21.2</b> R</a></li>
+<li class="chapter" data-level="21.3" data-path="appendix-a-a-brief-description-of-modeling-software.html"><a href="appendix-a-a-brief-description-of-modeling-software.html#r-packages"><i class="fa fa-check"></i><b>21.3</b> R packages</a></li>
+<li class="chapter" data-level="21.4" data-path="appendix-a-a-brief-description-of-modeling-software.html"><a href="appendix-a-a-brief-description-of-modeling-software.html#the-r-universe"><i class="fa fa-check"></i><b>21.4</b> The ‘R universe’</a></li>
+<li class="chapter" data-level="21.5" data-path="appendix-a-a-brief-description-of-modeling-software.html"><a href="appendix-a-a-brief-description-of-modeling-software.html#other-software"><i class="fa fa-check"></i><b>21.5</b> Other software</a></li>
+<li class="chapter" data-level="21.6" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>21.6</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="modelcomplexity.html"><a href="modelcomplexity.html"><i class="fa fa-check"></i><b>22</b> Appendix B - How to build or use the right model</a><ul>
+<li class="chapter" data-level="22.1" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>22.1</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="appendix-c-the-different-uses-of-infectious-disease-models.html"><a href="appendix-c-the-different-uses-of-infectious-disease-models.html"><i class="fa fa-check"></i><b>23</b> Appendix C - The different uses of Infectious Disease models</a><ul>
+<li class="chapter" data-level="23.1" data-path="appendix-a-a-brief-description-of-modeling-software.html"><a href="appendix-a-a-brief-description-of-modeling-software.html#overview"><i class="fa fa-check"></i><b>23.1</b> Overview</a></li>
+<li class="chapter" data-level="23.2" data-path="appendix-c-the-different-uses-of-infectious-disease-models.html"><a href="appendix-c-the-different-uses-of-infectious-disease-models.html#exploringunderstanding"><i class="fa fa-check"></i><b>23.2</b> Exploring/Understanding</a></li>
+<li class="chapter" data-level="23.3" data-path="appendix-c-the-different-uses-of-infectious-disease-models.html"><a href="appendix-c-the-different-uses-of-infectious-disease-models.html#predictionwhat-if"><i class="fa fa-check"></i><b>23.3</b> Prediction/what-if</a></li>
+<li class="chapter" data-level="23.4" data-path="appendix-c-the-different-uses-of-infectious-disease-models.html"><a href="appendix-c-the-different-uses-of-infectious-disease-models.html#fittinginference"><i class="fa fa-check"></i><b>23.4</b> Fitting/inference</a></li>
+<li class="chapter" data-level="23.5" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>23.5</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="appendix-d-a-very-brief-introduction-to-data-fitting.html"><a href="appendix-d-a-very-brief-introduction-to-data-fitting.html"><i class="fa fa-check"></i><b>24</b> Appendix D - A very brief introduction to data fitting</a><ul>
+<li class="chapter" data-level="24.1" data-path="appendix-a-a-brief-description-of-modeling-software.html"><a href="appendix-a-a-brief-description-of-modeling-software.html#overview"><i class="fa fa-check"></i><b>24.1</b> Overview</a></li>
+<li class="chapter" data-level="24.2" data-path="appendix-d-a-very-brief-introduction-to-data-fitting.html"><a href="appendix-d-a-very-brief-introduction-to-data-fitting.html#conceptual-ideas"><i class="fa fa-check"></i><b>24.2</b> Conceptual Ideas</a></li>
+<li class="chapter" data-level="24.3" data-path="appendix-d-a-very-brief-introduction-to-data-fitting.html"><a href="appendix-d-a-very-brief-introduction-to-data-fitting.html#technical-details"><i class="fa fa-check"></i><b>24.3</b> Technical details</a></li>
+<li class="chapter" data-level="24.4" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>24.4</b> References</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="glossary.html"><a href="glossary.html"><i class="fa fa-check"></i><b>25</b> Appendix E - Glossary of terms</a></li>
+<li class="chapter" data-level="26" data-path="overview-of-this-book.html"><a href="overview-of-this-book.html#references"><i class="fa fa-check"></i><b>26</b> References</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Infectious Disease Epidemiology<br>- a Model-based Approach (IDEMA)</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="idstates" class="section level1">
+<h1><span class="header-section-number">3</span> Characterizing Infectious Disease States</h1>
+<div id="overview-and-learning-objectives" class="section level2">
+<h2><span class="header-section-number">3.1</span> Overview and Learning Objectives</h2>
+<p>In this module, we will discuss ways to characterize individuals with regard to their infection status, e.g. susceptible, symptomatic infected, revovered and immune. We will consider why some infection states are important for public health control but less important from an individual patient, medical perspective, and the reverse. We will also discuss the connection between infectious disease states and compartments in computer models.</p>
+<p>The learning objectives for this chapter are:</p>
+<ul>
+<li>Ability to accurately categorize infectious diseases according to medical and public health characteristics</li>
+<li>Evaluate the impact of different infection states on medical outcomes and disease dynamics</li>
+<li>Understand how “medical states” (e.g. symptoms) and “public health states” (e.g. infectiousness) do not always overlap.</li>
+<li>Identify the features of infectious diseases that are most important to know for successful intervention planning</li>
+<li>Understand how different infections states are represented in mathematical models</li>
+</ul>
+</div>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">3.2</span> Introduction</h2>
+<p>In the previous chapter, we introduced a very simple compartmental systems model for an infectious disease (the SIR model) where individuals were split according to 3 states related to the infectious disease of interest: susceptible, infected (and infectious) and recovered (and immune). Sometimes, placing individuals into one of these 3 categories provides a reasonable approximation of reality. It is easy and thus often a good starting point. However, at some point we might want to categorize infection states of individuals in some more detail. For instance, for a disease like tuberculosis, a large fraction of individuals who are infected are not infectious. Thus, combining all of those who are infected into a single group is not realistic. We have to allow for more distinct categories. there is potentially an unlimited number of states we can consider. For instance for HIV, we could categorize infected individuals into sub-groups based on their CD4 cell count - and the number of such sub-groups is essentially infinite. Fortunately, to get a fairly realistic picture of most diseases, we can usually get away with introducing just some additional categories. The following sections discuss the major categories with regard to infection status of individuals.</p>
+</div>
+<div id="states-of-susceptibility" class="section level2">
+<h2><span class="header-section-number">3.3</span> States of susceptibility</h2>
+<p>The simplest assumption is to classify everyone as susceptible. While this is true in some instances, e.g. for a newly emerging disease, often this assumption is not justified. Depending on the disease and population, some individuals might not be susceptible, e.g. because they previously had the infection and have natural immunity, or they received a vaccine or they have a genetic make-up that makes them non-susceptible (examples are the CCR5-delta 32 mutation in HIV or the FUT2-G428A for some norovirus strains). The easiest way to deal with individuals who are not susceptible is to “ignore” them, i.e. simply not include them in any models for that disease. Alternatively, if the model has a recovered and immune class, one can place all those individuals in that category.</p>
+<p>It gets more complicated if susceptibility is only somewhat reduced. This is common for some vaccines, which often do not offer full protection, but instead reduce the chance of getting infected (and if infection occurs, often disease severity is reduced). If you wants to account for this, you will have to introduce a new state into your conceptual/mathematical/computer model. For instance you could have a category <em>S</em> of fully susceptible individuals, and a category <em>Sp</em> of partially susceptible. Those individuals would get infected at a lower rate compared to fully susceptible individuals. If reduced susceptibility can wane, e.g. due to the wearing off of a vaccine induced immunity, one might need to include a process in the model by which <em>sp</em> individuals transition back into the <em>S</em> category.</p>
+</div>
+<div id="states-of-infection" class="section level2">
+<h2><span class="header-section-number">3.4</span> States of Infection</h2>
+<p>Categorizing individuals beyond the simple <em>infected and infectious</em> category is often the most important addition to a model if one wants to make things more realistic. Several important states are commonly distinguished and described in the next few sections.</p>
+<div id="latent-infection" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Latent infection</h3>
+<p>Many important diseases (e.g. HIV, Tuberculosis), have a state during which an individual is infected but does not show any symptoms. This is usually called <em>latent</em> infection. Sometimes the term <em>exposed</em> is also used. Latent, non-symptomatic infected individuals might (HIV) or might not (TB) be infectious. It is important to keep in mind that infectiousness and symptoms are not always overlapping. The former is the most important driver of the ongoing infection process and drives the observed disease dynamics on the population level. The latter is important for surveillance and medical interventions.</p>
+</div>
+<div id="symptomatic-infection" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Symptomatic infection</h3>
+<p>From a purely medical perspective, focusing on one patient at a time, the most important characteristic of a disease is its severity, also called morbidity. We would like to know what kind of symptoms a disease produces and how frequently those occur. This is the morbidity profile of a disease. One can consider mortality the “ultimate symptom”. Because of its importance, mortality is often considered separate from morbidity. Knowing morbidity and mortality of an ID are generally most important when caring for individual patients. For interventions, understanding what might help mitigate morbidity and mortality is of prime interest.</p>
+<p>Most diseases lead to a state with morbidity, i.e. where an infected individual shows symptoms. Those diseases that don’t are usually not of much medical and public health interest. During the symptomatic state, individuals are generally infectious. The question how symptoms might or might not impact infectiousness is important but not too well understood. Qualitatively, we know that coughing and sneezing help spread many respiratory pathogens, while the symptoms an HIV infected individual displays during the AIDS stage are likely not increasing infectiousness. The connection of symptoms, morbidity and mortality and its relation to infectiousness is the main theme underlying the topic of <em>virulence</em>, which we’ll cover later in the chapter on virulence evolution.</p>
+<p>Morbidity and mortality are also often important for public health surveillance. It is generally difficult to capture infected individuals that do not show symptoms, those that are symptomatic - and obviously, those that die - are easier to count and thus get estimates for disease prevalence and incidence.</p>
+</div>
+<div id="asymptomatic-infection" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Asymptomatic infection</h3>
+<p>After infection, for almost all diseases there is a latent period when symptoms are not yet visible. For many diseases, the whole course of infection is asymptomatic in at least a fraction of infected individuals. If such asymptomatic individuals are infectious, they are a potentially important driver of the infection dynamics. Since asymptomatic indivuals are often not picked up by surveillance, they can pose problems for the control of a disease.</p>
+<p>Note that some diseases can show complicated patterns of symptoms, e.g. for malaria symptoms can be intermittent, with periods of no symptoms in between.</p>
+</div>
+</div>
+<div id="post-infection-states" class="section level2">
+<h2><span class="header-section-number">3.5</span> Post-infection states</h2>
+<p>After infection is over, it is possible for an individual to enter different states. So far, we only considered a <em>recovered and immune</em> state. in the classic SIR model, those <em>R</em> individuals are immune forever and thus do not further influence the systems dynamics. However, some infectious diseases either do not induce immunity (e.g. many sexually transmitted diseases) or only lead to short-term immunity (e.g. norovirus or influenza). If a disease does not induce immunity, one can conceptualize and model this by assuming that after infection, individuals directly enter the susceptible state again (leading to the SIS model).</p>
+<p>If we assume that everyone has immunity only for a short period of time, we can account for that by having infected individuals first enter the recovered state, and then from that state move at some rate back to the susceptible state (leading to the SIRS model).</p>
+<p>Things can get more complicated when combined with different infection states. For instance it might be that those individuals who had an asymptomatic case of the disease aquire immunity that lasts less long compared to those who were symptomatic infected. We then need to have 2 different recovered compartments, each with its own rate of returning to the susceptible state.</p>
+<p>A special and important post-infection state is death. From a ID dynamics perspective, a dead person generally behaves like a recovered and immune person, i.e. they do not further influence the infection dynamics (ignoring special cases such as e.g. Ebola where transmission after death has been observed). Of course, from a medical and public health perspective, a recoverd and immune person is a favorable outcome while a dead person is not.</p>
+</div>
+<div id="medical-versus-id-dynamics-perspectives" class="section level2">
+<h2><span class="header-section-number">3.6</span> Medical versus ID dynamics perspectives</h2>
+<p>I hope that the above description of different states made it clear that features that are important from a medical perspective (e.g. severity of symptoms), might or might not be important for understanding the dynamics of the disease. To properly study the dynamics of an ID, we need to know when someone is infectious (e.g. before/without symptoms, or only when symptomatic), how transmission occurs, if recovered individuals become immune, if immunity is waning, etc. The difficult part is that our data often comes from clinical (symptomatic) cases or deaths. If asymptomatic individuals are infectious, or there is underreporting, we often don’t get the full picture. This is discussed further in the surveillance chapter.</p>
+<p>Of course, the medical and ID dynamics/epidemiological perspectives are not an ‘either/or’. Instead, success in combating infectious diseases only comes when all aspects are considered. Still, it is useful to keep in mind that certain infection states are more important when considering how to intervene on the individual patient level versus intervention on a population level.</p>
+</div>
+<div id="models-with-more-details" class="section level2">
+<h2><span class="header-section-number">3.7</span> Models with more details</h2>
+<p>The above sections described different states that might need to be considered and explained how models will need to be adjusted to account for such different states. To make this more specific, figure <a href="idstates.html#fig:complicatedmodel">3.1</a> shows a model with additional compartments. We omit showing a mathematical representation (i.e. a set of differential equations) for this model. However, a very similar model, together with the equations, can be found in the DSAIDE app referred to below in the exercise section.</p>
+<div class="figure"><span id="fig:complicatedmodel"></span>
+<img src="images/ComplicatedModel.png" alt="Example of a model with more compartments." width="2439" />
+<p class="caption">
+Figure 3.1: Example of a model with more compartments.
+</p>
+</div>
+</div>
+<div id="how-much-detail-is-needed" class="section level2">
+<h2><span class="header-section-number">3.8</span> How much detail is needed?</h2>
+<p>While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected indiduals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? Tthis is an important question and deserves a detailed answer, which I am trying to provide in the Appendix, Chapter <a href="modelcomplexity.html#modelcomplexity">22</a>.</p>
+</div>
+<div id="case-study-examples" class="section level2">
+<h2><span class="header-section-number">3.9</span> Case study examples</h2>
+<div id="example-1" class="section level3">
+<h3><span class="header-section-number">3.9.1</span> example 1</h3>
+</div>
+</div>
+<div id="summary-and-cartoon" class="section level2">
+<h2><span class="header-section-number">3.10</span> Summary and Cartoon</h2>
+<p>This chapter discussed ways to characterize an individual host’s state with regard to an infection. We discussed the differences between medical and public health perspectives and how ID states can be mapped to models. We also briefly discussed how one should build models that provide the right amount of complexity.</p>
+<div class="figure"><span id="fig:coldcourse"></span>
+<img src="images/xkcd-course-of-colds.png" alt="Yet another perspective on ID infection states. [Source: xkcd.com](https://xkcd.com/1612/)." width="420" />
+<p class="caption">
+Figure 3.2: Yet another perspective on ID infection states. <a href="https://xkcd.com/1612/">Source: xkcd.com</a>.
+</p>
+</div>
+</div>
+<div id="exercises" class="section level2">
+<h2><span class="header-section-number">3.11</span> Exercises</h2>
+<ul>
+<li>The <em>Characteristics of ID</em> app in the DSAIDE package provides hands-on computer exercises for this chapter.</li>
+<li>Suggest a real ID that might be approximately described by the <em>Characteristics of ID</em> DSAIDE app. Approximately what values for the different parameters would be appropriate to describe the ID you have in mind? See what you can find for the different parameters of the ID you chose in the literature.</li>
+<li>Read the paper “Modelling an outbreak of an emerging pathogen” by Kajita et al <span class="citation">(Kajita et al. <a href="#ref-kajita07" role="doc-biblioref">2007</a>)</span>. The paper lists 8 assumptions that went into constructing the model. Is there any assumption that you might have made differently, and why? Are there other assumptions the authors make when building the model that are not included in their list of assumptions? If your next step would be to further increase model realism, what would you do, i.e. what feature(s) would you include that are currently not in the model?</li>
+</ul>
+</div>
+<div id="further-resources" class="section level2">
+<h2><span class="header-section-number">3.12</span> Further Resources</h2>
+<ul>
+<li>The following papers provide some additional information on the ideas discussed in this chapter: <span class="citation">(Fine <a href="#ref-fine03" role="doc-biblioref">2003</a>; Milwid et al. <a href="#ref-milwid16" role="doc-biblioref">2016</a>)</span>.</li>
+<li>A good example showing how different assumptions about ID states can lead to different conclusions, and how models can be used to discriminate between alternate hypotheses can be found in <span class="citation">(King et al. <a href="#ref-king08" role="doc-biblioref">2008</a>)</span>.</li>
+</ul>
+</div>
+<div id="references" class="section level2">
+<h2><span class="header-section-number">3.13</span> References</h2>
+
+</div>
+</div>
+<h3> References</h3>
+<div id="refs" class="references">
+<div id="ref-fine03">
+<p>Fine, P. E. M. 2003. “The Interval Between Successive Cases of an Infectious Disease.” <em>American Journal of Epidemiology</em> 158 (11): 1039–47. <a href="https://doi.org/10.1093/aje/kwg251">https://doi.org/10.1093/aje/kwg251</a>.</p>
+</div>
+<div id="ref-kajita07">
+<p>Kajita, Emily, Justin T Okano, Erin N Bodine, Scott P Layne, and Sally Blower. 2007. “Modelling an Outbreak of an Emerging Pathogen.” <em>Nature Reviews. Microbiology</em> 5 (9): 700–709. <a href="https://doi.org/10.1038/nrmicro1660">https://doi.org/10.1038/nrmicro1660</a>.</p>
+</div>
+<div id="ref-king08">
+<p>King, Aaron A., Edward L. Ionides, Mercedes Pascual, and Menno J. Bouma. 2008. “Inapparent Infections and Cholera Dynamics.” <em>Nature</em> 454 (7206): 877–80. <a href="https://doi.org/10.1038/nature07084">https://doi.org/10.1038/nature07084</a>.</p>
+</div>
+<div id="ref-milwid16">
+<p>Milwid, Rachael, Andreea Steriu, Julien Arino, Jane Heffernan, Ayaz Hyder, Dena Schanzer, Emma Gardner, et al. 2016. “Toward Standardizing a Lexicon of Infectious Disease Modeling Terms.” <em>Frontiers in Public Health</em> 4: 213. <a href="https://doi.org/10.3389/fpubh.2016.00213">https://doi.org/10.3389/fpubh.2016.00213</a>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="idintro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="patterns-of-infectious-disease-dynamics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": null,
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "none"
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

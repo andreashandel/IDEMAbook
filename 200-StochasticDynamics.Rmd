@@ -79,7 +79,7 @@ knitr::include_graphics("./images/smallpox.png")
 
 ## Further Resources
 * Some further analysis of critical community size and measles can be found in [@bartlett57; @bartlett60; @keeling97; @keeling97a].
-* Some further discussion of stochastic epidemic models can be found in [@black12; @britton10a].
+* Some further discussion of stochastic epidemic models can be found in [@black12; @britton10].
 * A broad discussion of invasion and persistence of ID and the role of stochasticity is given in [@lloyd-smith05b].
 * An interesting discussion of critical community size and its dependence on birth dynamics, especially birth pulses, is provided in [@peel14].
 

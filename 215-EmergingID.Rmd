@@ -41,7 +41,7 @@ This module provides a brief discussion of ID emergence.
 *  
 
 ## Further Resources
-* A few nice overview articles are [@woolhouse02a]
+* A few nice overview articles are [@woolhouse02]
 
 
 ## References
