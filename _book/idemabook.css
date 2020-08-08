@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* template/styling for DSAIDE book
+ * Last Modified: 2017-06-26
+ *
+-------------------------------------------------------------------------------- */
+/* Color Glossary for easy changing of colors later
+ * grey:  #403c3d 
+ * dark grey:  #333
+ * light grey: #ccc
+ * near white: #f9f9f9
+ * light blue: #3388CC
+ * blue: #005599
+------------------------------------------------ */
+
+/* Image
+---------------*/
+img {
+	max-width: 80%;
+	padding: 5px;
+	
+}
+.image {
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
+	max-width: 80%;
+	padding: 5px;  
+	text-align: center;
+  
+  /* Visual */
+	border-radius: 5px;
+	border: 1px solid #ccc;  /* light grey */
+}
+.figure {
+	margin: auto;
+	max-width: 80%;
+	padding: 0;  
+	text-align: center;
+  
+  /* Visual */
+	border-radius: 5px;
+	border: 1px solid #ccc;  /* light grey */
+}
+.caption {
+	padding: 0;
+	margin: auto;
+	margin-bottom: 6px;
+}
+
+
+
+/* My additions
+-------------------- */
+
+#myadvancedbox
+{
+	border: 10px solid #cc6600; 
+	padding: 10px; 
+	border-radius: 5px;
+	font-size: smaller;
+}
+
+#mynotebox
+{
+	border: 10px solid blue; 
+	padding: 10px; 
+	border-radius: 5px;
+	font-size: smaller;
+}
+
+
+#myexamplebox
+{
+	border: 10px solid #cfd7e0; 
+	padding: 10px; 
+	border-radius: 5px;
+	font-size: smaller;
+}
+
+
+#mytextbox
+{
+	border: 10px solid #8e00cc; 
+}

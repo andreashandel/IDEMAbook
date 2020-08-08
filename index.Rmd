@@ -16,11 +16,11 @@ output:
               position: fixed
             edit: null
             download: no
-    bookdown::pdf_book:
-        keep_tex: yes
-        toc: true
-    bookdown::word_document2: 
-        toc: true
+    # bookdown::pdf_book:
+    #     keep_tex: yes
+    #     toc: true
+    # bookdown::word_document2: 
+    #     toc: true
 bibliography: idemabook_references.bib
 biblio-style: apalike
 documentclass: book
