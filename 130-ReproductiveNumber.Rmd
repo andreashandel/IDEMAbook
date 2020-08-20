@@ -147,7 +147,7 @@ knitr::include_graphics("./images/R0age.png")
 
 For a simple model with certain assumptions [@keeling08], one can find an approximating equation connecting the median age of infection and the basic reproductive number with the equation $A \approx \frac {L}{R_0 - 1}$ or rewritten $R_0 \approx \frac{L}{A} + 1$. In this equation, _L_ is the average life expectancy of a host and _A_ is the median age of infection. This shows what we expect intuitively: Higher R~0~, i.e. more infectious ID, leads to an earlier age of infection.
 
-#### Note {mynotebox}
+#### Note {#mynotebox}
 If you want to determine R/R~0~ to be used as parameter in a mathematical transmission model, you use this approach based on the age-seroprevalence relation even if the model you plan on using doesn't have age in it.
 
 
@@ -177,10 +177,12 @@ Knowing R is not only essential for public health intervention planning, but it 
 ## Case studies
 
 ### Basic Science example: Estimating the reproductive number for the 1918 influenza pandemic
-Marc paper
+
+_To come_
 
 ### Policy/Application example: Estimating the reproductive number of the 2014 Ebola outbreak
 
+_To come_
 
 
 ## Summary and Cartoon

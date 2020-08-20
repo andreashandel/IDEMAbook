@@ -1,7 +1,7 @@
 --- 
 title: "Infectious Disease Epidemiology<br>- a Model-based Approach (IDEMA)"
 author: "Andreas Handel"
-date: "2020-08-06"
+date: "2020-08-20"
 site: bookdown::bookdown_site
 output: 
     bookdown::gitbook:
@@ -350,11 +350,12 @@ The above sections described different states that might need to be considered a
 
 
 ## How much detail is needed?
-While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected indiduals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? Tthis is an important question and deserves a detailed answer, which I am trying to provide in the Appendix, Chapter \@ref(modelcomplexity).
+While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected individuals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? This is an important question and deserves a detailed answer, which I am trying to provide in the Appendix, Chapter \@ref(modelcomplexity).
+
 
 ## Case study examples
 
-### example 1
+_To come_
 
 
 ## Summary and Cartoon
@@ -713,7 +714,7 @@ For those ID for which an infection induces life-long immunity, i.e. where a hos
 
 For a simple model with certain assumptions [@keeling08], one can find an approximating equation connecting the median age of infection and the basic reproductive number with the equation $A \approx \frac {L}{R_0 - 1}$ or rewritten $R_0 \approx \frac{L}{A} + 1$. In this equation, _L_ is the average life expectancy of a host and _A_ is the median age of infection. This shows what we expect intuitively: Higher R~0~, i.e. more infectious ID, leads to an earlier age of infection.
 
-#### Note {mynotebox}
+#### Note {#mynotebox}
 If you want to determine R/R~0~ to be used as parameter in a mathematical transmission model, you use this approach based on the age-seroprevalence relation even if the model you plan on using doesn't have age in it.
 
 
@@ -743,10 +744,12 @@ Knowing R is not only essential for public health intervention planning, but it 
 ## Case studies
 
 ### Basic Science example: Estimating the reproductive number for the 1918 influenza pandemic
-Marc paper
+
+_To come_
 
 ### Policy/Application example: Estimating the reproductive number of the 2014 Ebola outbreak
 
+_To come_
 
 
 ## Summary and Cartoon
