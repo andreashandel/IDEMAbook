@@ -1,7 +1,7 @@
 --- 
 title: "Infectious Disease Epidemiology<br>- a Model-based Approach (IDEMA)"
 author: "Andreas Handel"
-date: "2020-08-06"
+date: "2020-08-21"
 site: bookdown::bookdown_site
 output: 
     bookdown::gitbook:
@@ -16,17 +16,19 @@ output:
               position: fixed
             edit: null
             download: no
-    bookdown::pdf_book:
-        keep_tex: yes
-        toc: true
-    bookdown::word_document2: 
-        toc: true
+    # bookdown::pdf_book:
+    #     keep_tex: yes
+    #     toc: true
+    # bookdown::word_document2: 
+    #     toc: true
 bibliography: idemabook_references.bib
 biblio-style: apalike
 documentclass: book
 link-citations: yes
 description: "A modern, model-based approach to infectious disease epidemiology"
 ---
+
+
 
 # Preface {-}
 
@@ -46,7 +48,7 @@ This book discusses infectious disease epidemiology by taking a model-based appr
 ## Rationale for this book
 Infectious disease epidemiology is the oldest area of epidemiology and public health. As such, it is well studied, often taught, and good resources exist. So why another book on that topic?
 
-There are plenty of infectious disease epidemiology books that cover the topic from a classical epidemiological perspective. However, such an approach often ignores or minimizes the importance of interactions and is not suited to covering topics such as disease extinction and emergence, oscillations and other patterns, and any topic that requires considering a system of interacting elements. The well-developed field of infectious disease modeling has its main focus on studying the interactions and resulting dynamics of ID. Good text books exist, such as [@anderson91; @diekmann00; @keeling08; @vynnycky10; @bjornstadt18], but require a strong quantitative and mathematical background from the student.
+There are plenty of infectious disease epidemiology books that cover the topic from a classical epidemiological perspective. However, such an approach often ignores or minimizes the importance of interactions and is not suited to covering topics such as disease extinction and emergence, oscillations and other patterns, and any topic that requires considering a system of interacting elements. The well-developed field of infectious disease modeling has its main focus on studying the interactions and resulting dynamics of ID. Good text books exist, such as [@anderson91; @diekmann00; @keeling08; @vynnycky10; @bjornstad18], but require a strong quantitative and mathematical background from the student.
 
 This book is intended to fill the gap between classical infectious disease epidemiology books and infectious disease modeling books. Infectious disease topics are discussed from a model-based perspective, but without trying to teach modeling. 
 We believe any modern infectious disease epidemiologist needs to have some familiarity with models, and as such, this book contains models and equations. But this material is not meant to teach you how to become a modeler. Instead the focus is on understanding the modeling perspective and becoming an _educated consumer_ of models.
@@ -350,11 +352,12 @@ The above sections described different states that might need to be considered a
 
 
 ## How much detail is needed?
-While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected indiduals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? Tthis is an important question and deserves a detailed answer, which I am trying to provide in the Appendix, Chapter \@ref(modelcomplexity).
+While we discussed major ways to categorize individuals (e.g. symptomatic versus asymptomatic or infectious vs non-infectious), one can potentially sub-divide any state into as many sub-states as one wanted. For instance one could split infected individuals into 10 different levels of infectiousness. The question then becomes: How detailed and complex should our model be? What details should we include and which ones should we omit? This is an important question and deserves a detailed answer, which I am trying to provide in the Appendix, Chapter \@ref(modelcomplexity).
+
 
 ## Case study examples
 
-### example 1
+_To come_
 
 
 ## Summary and Cartoon
@@ -713,7 +716,7 @@ For those ID for which an infection induces life-long immunity, i.e. where a hos
 
 For a simple model with certain assumptions [@keeling08], one can find an approximating equation connecting the median age of infection and the basic reproductive number with the equation $A \approx \frac {L}{R_0 - 1}$ or rewritten $R_0 \approx \frac{L}{A} + 1$. In this equation, _L_ is the average life expectancy of a host and _A_ is the median age of infection. This shows what we expect intuitively: Higher R~0~, i.e. more infectious ID, leads to an earlier age of infection.
 
-#### Note {mynotebox}
+#### Note {#mynotebox}
 If you want to determine R/R~0~ to be used as parameter in a mathematical transmission model, you use this approach based on the age-seroprevalence relation even if the model you plan on using doesn't have age in it.
 
 
@@ -743,10 +746,12 @@ Knowing R is not only essential for public health intervention planning, but it 
 ## Case studies
 
 ### Basic Science example: Estimating the reproductive number for the 1918 influenza pandemic
-Marc paper
+
+_To come_
 
 ### Policy/Application example: Estimating the reproductive number of the 2014 Ebola outbreak
 
+_To come_
 
 
 ## Summary and Cartoon
@@ -768,7 +773,7 @@ The simplicity of R is both its strength and its weakness. It gives a quick, qua
 
 
 
-## Exercises
+## Exercises {#reproductive-exercises}
 * The _Reproductive Number_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
 * Find a paper from the research literature that provides evidence for herd immunity for a specific infectious disease and setting. Summarize the paper and explain how it demonstrates the occurrence of herd immunity.
 * Read the paper "Herd Immunity: A Rough Guide" by Fine et al. [@fine11]. In this paper, the authors mention _"...the complexities of imperfect immunity, heterogeneous populations, nonrandom vaccination, and freeloaders..."_. For each of those complexities, find, read and summarize a research paper that discusses the topic. Ideally, choose papers other than those already cited by Fine et al. 
@@ -1153,7 +1158,7 @@ This chapter provided a brief discussion of host heterogeneity, how to consider 
 
 ## Exercises
 * The _Host Heterogeneity_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
-* Read the article "Disease spread, susceptibility, and infection intensity: vicious circles?" by Beldomenico and Begon [@beldomenico09]. The paper mostly discusses non-human IDs. Find evidence from human IDs for which the different components they discuss (variable host susceptibility, variable infection intensity, feedback circles in the individual/population level) might be applicable. 
+* Read the article "Disease spread, susceptibility, and infection intensity: vicious circles?" by Beldomenico and Begon [@beldomenico10]. The paper mostly discusses non-human IDs. Find evidence from human IDs for which the different components they discuss (variable host susceptibility, variable infection intensity, feedback circles in the individual/population level) might be applicable. 
 
 
 ## Further Resources
@@ -1492,7 +1497,7 @@ This module provides a brief discussion of stochasticity in ID dynamics, and its
 
 ## Further Resources
 * Some further analysis of critical community size and measles can be found in [@bartlett57; @bartlett60; @keeling97; @keeling97a].
-* Some further discussion of stochastic epidemic models can be found in [@black12; @britton10a].
+* Some further discussion of stochastic epidemic models can be found in [@black12; @britton10].
 * A broad discussion of invasion and persistence of ID and the role of stochasticity is given in [@lloyd-smith05b].
 * An interesting discussion of critical community size and its dependence on birth dynamics, especially birth pulses, is provided in [@peel14].
 
@@ -1661,7 +1666,7 @@ This module provides a brief discussion of ID emergence.
 *  
 
 ## Further Resources
-* A few nice overview articles are [@woolhouse02a]
+* A few nice overview articles are [@woolhouse02]
 
 
 ## References
