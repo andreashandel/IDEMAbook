@@ -28,6 +28,10 @@ link-citations: yes
 description: "A modern, model-based approach to infectious disease epidemiology"
 ---
 
+```{r, echo = FALSE, include = FALSE}
+options(bookdown.render.file_scope = FALSE)
+```
+
 # Preface {-}
 
 This book discusses infectious disease epidemiology using a model-based approach.
