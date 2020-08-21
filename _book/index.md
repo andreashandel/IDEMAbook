@@ -1,7 +1,7 @@
 --- 
 title: "Infectious Disease Epidemiology<br>- a Model-based Approach (IDEMA)"
 author: "Andreas Handel"
-date: "2020-08-20"
+date: "2020-08-21"
 site: bookdown::bookdown_site
 output: 
     bookdown::gitbook:
@@ -771,7 +771,7 @@ The simplicity of R is both its strength and its weakness. It gives a quick, qua
 
 
 
-## Exercises
+## Exercises {#reproductive-exercises}
 * The _Reproductive Number_ app in the DSAIDE package provides hands-on computer exercises for this chapter.
 * Find a paper from the research literature that provides evidence for herd immunity for a specific infectious disease and setting. Summarize the paper and explain how it demonstrates the occurrence of herd immunity.
 * Read the paper "Herd Immunity: A Rough Guide" by Fine et al. [@fine11]. In this paper, the authors mention _"...the complexities of imperfect immunity, heterogeneous populations, nonrandom vaccination, and freeloaders..."_. For each of those complexities, find, read and summarize a research paper that discusses the topic. Ideally, choose papers other than those already cited by Fine et al. 
