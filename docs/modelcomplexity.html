@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)</title>
+  <title>Chapter 22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)</title>
   <meta name="description" content="A modern, model-based approach to infectious disease epidemiology" />
   <meta name="generator" content="bookdown 0.20.3 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
+  <meta property="og:title" content="Chapter 22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://andreashandel.github.io/IDEMAbook/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="andreashandel/IDEMAbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
+  <meta name="twitter:title" content="Chapter 22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
   
   <meta name="twitter:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
@@ -386,7 +386,7 @@
 
             <section class="normal" id="section-">
 <div id="modelcomplexity" class="section level1">
-<h1><span class="header-section-number">22</span> Appendix B - How to build or use the right model</h1>
+<h1><span class="header-section-number">Chapter 22</span> Appendix B - How to build or use the right model</h1>
 <p>Onee might be inclined to build very complicated and detailed models, in an effort to be as realistic as possible. While more detailed models can indeed be more realistic, there are several drawbacks. First, as models get larger, they contain more parameters. Each parameter needs to be given a numeric value to allow one to run simulations. One can try to obtain the parameters from the literature, however, often that information is not available. Alternatively, one could fit the model to data (something not discussed in this book) and try to estimate the parameters. However, with the kind of data typically available, one can usually only estimate a few parameters with some level of certainty. And even if one were to be able to get good estimates for all model parameters, larger models are harder to implement, take longer to run, and are more difficult to analyze. With too many parts present, it can be hard to understand how different components interact with each other and affect outcomes of interest.</p>
 <p>We therefore cannot - and do not want to - include every detail of a complex system, i.e. all components and interactions. We need to decide which parts are important and need to be in the model, and which ones we can ignore. A simple and somewhat silly example: We never include the hair color of individuals in any infectious disease models (at least I’ve never seen such a model), since we assume that this characteristic is not important for the ID dynamics. The choice to include or exclude other features is less obvious in other cases. For instance, for an HIV model, we likely need gender, while a SARS model might ignore this characteristic.</p>
 <p>It is important to find a trade-off between details that need to be included and details one can leave out. Unfortunately, there is no recipe for it. Some very simple models have produced useful insights, while there are big models in the literature that arguably do little to nothing in helping us understand or deal with infectious diseases. Obviously, there have also been fairly big models that have produced useful information, and small models that are too simplistic to provide much information about any real system.</p>
@@ -394,7 +394,7 @@
 <div class="figure"><span id="fig:mapfigure"></span>
 <img src="images/mapfigure.png" alt="Three different maps of the state of Georgia." width="3802" />
 <p class="caption">
-Figure 22.1: Three different maps of the state of Georgia.
+FIGURE 22.1: Three different maps of the state of Georgia.
 </p>
 </div>
 <p>In analogy to the map example, we need to decide for a specific ID, scenario, and question which details to include in our model and which ones to ignore. In general, the primary interactions between components of the system are needed. Thus, if we wanted to model the transmission dynamics of Ebola, we might need to include deceased infected individuals into the model, since they are known to contribute to transmission. In contrast, if we want to study how some control strategies for SARS might reduce the total number of <em>infected</em> but we don’t care about the impact on total deaths (unlikely, but let’s just pretend). In this case, we would not need a dead compartment in our model, since those dead don’t further interact with anyone else in the system. However, if we want to keep track of deaths and how they are impacted by our intervention (likely), we do need to track them - even though dead people are not known to transmit SARS.</p>
@@ -442,7 +442,10 @@ gitbook.start({
 "family": "sans",
 "size": 2
 },
-"edit": null,
+"edit": {
+"link": "https://github.com/andreashandel/IDEMAbook/edit/master/505-Appendix-ModelComplexity.Rmd",
+"text": "Edit"
+},
 "history": {
 "link": null,
 "text": null
@@ -451,11 +454,10 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["IDEMAbook.pdf"],
 "toc": {
 "collapse": "none"
-},
-"toolbar": null
+}
 });
 });
 </script>

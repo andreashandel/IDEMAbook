@@ -1,1 +1,12 @@
+book_filename: "IDEMAbook"
+repo: https://github.com/andreashandel/IDEMAbook
+delete_merged_file: true
+clean: [packages.bib]
+language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
+  ui:
+    chapter_name: "Chapter "
+edit: "https://github.com/andreashandel/IDEMAbook/edit/master/%s"
 output_dir: "docs"

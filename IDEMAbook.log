@@ -1,0 +1,1513 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.23)  24 AUG 2020 17:56
+entering extended mode
+**./IDEMAbook.tex
+(IDEMAbook.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-08-07> ("C:\Users\Andreas Handel\AppData\Local\Progr
+ams\MiKTeX\tex/latex/base\book.cls"
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
+"
+File: bk10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count168
+\c@chapter=\count169
+\c@section=\count170
+\c@subsection=\count171
+\c@subsubsection=\count172
+\c@paragraph=\count173
+\c@subparagraph=\count174
+\c@figure=\count175
+\c@table=\count176
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/lm\lmodern.st
+y"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amss
+ymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsf
+onts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsma
+th.sty"
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amste
+xt.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsge
+n.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen135
+))
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbs
+y.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen136
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsop
+n.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count177
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count178
+\leftroot@=\count179
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count180
+\DOTSCASE@=\count181
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count182
+\c@MaxMatrixCols=\count183
+\dotsspace@=\muskip16
+\c@parentequation=\count184
+\dspbrk@lvl=\count185
+\tag@help=\toks17
+\row@=\count186
+\column@=\count187
+\maxfields@=\count188
+\andhelp@=\toks18
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxet
+ex.sty"
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex
+.sty"
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iflua
+tex.sty"
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.
+sty"
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc
+.sty"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks21
+\inpenc@posthook=\toks22
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp
+.sty"
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquo
+te.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mic
+rotype.sty"
+Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyv
+al.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+\MT@toks=\toks24
+\MT@count=\count189
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen144
+LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
+\MT@listname@count=\count190
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mic
+rotype-pdftex.def"
+File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip52
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mic
+rotype.cfg"
+File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+))
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parsk
+ip.sty"
+Package: parskip 2020-06-15 v2.0f non-zero parskip adjustments
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvo
+ptions.sty"
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltx
+cmds.sty"
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\k
+vsetkeys.sty"
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoo
+lbox.sty"
+Package: etoolbox 2020/07/15 v2.5i e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count191
+))
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor
+.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\
+color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\
+pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) ("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.s
+ty"
+Package: xurl 2020/01/24 v 0.09 modify URL breaks
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty"
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+))
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\book
+mark.sty"
+Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hype
+rref.sty"
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\
+pdftexcmds.sty"
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\i
+nfwarerr.sty"
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekey
+s\kvdefinekeys.sty"
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\p
+dfescape.sty"
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycol
+or.sty"
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\l
+etltxmacro.sty"
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxho
+ok.sty"
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+\@linkdim=\dimen145
+\Hy@linkcounter=\count192
+\Hy@pagecounter=\count193
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1e
+nc.def"
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\int
+calc.sty"
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\et
+excmds.sty"
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count194
+Package hyperref Info: Option `unicode' set `true' on input line 4338.
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puen
+c.def"
+File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count195
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen146
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bits
+et.sty"
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\
+bigintcalc.sty"
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count196
+\Field@Width=\dimen147
+\Fld@charsize=\dimen148
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/atbegshi\at
+begshi.sty"
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count197
+\c@Item=\count198
+\c@Hfootnote=\count199
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdf
+tex.def"
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/atveryend\atv
+eryend.sty"
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+)
+\Fld@listcount=\count266
+\c@bookmark@seq@number=\count267
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilechec
+k\rerunfilecheck.sty"
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/uniquecount
+er\uniquecounter.sty"
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip53
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-
+pdftex.def"
+File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
+\BKM@id=\count268
+))
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtab
+le.sty"
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip54
+\LTright=\skip55
+\LTpre=\skip56
+\LTpost=\skip57
+\LTchunksize=\count269
+\LTcapwidth=\dimen149
+\LT@head=\box47
+\LT@firsthead=\box48
+\LT@foot=\box49
+\LT@lastfoot=\box50
+\LT@cols=\count270
+\LT@rows=\count271
+\c@LT@tables=\count272
+\c@LT@chunks=\count273
+\LT@p@ftn=\toks25
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\book
+tabs.sty"
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen150
+\lightrulewidth=\dimen151
+\cmidrulewidth=\dimen152
+\belowrulesep=\dimen153
+\belowbottomsep=\dimen154
+\aboverulesep=\dimen155
+\abovetopsep=\dimen156
+\cmidrulesep=\dimen157
+\cmidrulekern=\dimen158
+\defaultaddspace=\dimen159
+\@cmidla=\count274
+\@cmidlb=\count275
+\@aboverulesep=\dimen160
+\@belowrulesep=\dimen161
+\@thisruleclass=\count276
+\@lastruleclass=\count277
+\@thisrulewidth=\dimen162
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/footnotehyper
+\footnotehyper.sty"
+Package: footnotehyper 2019/11/07 v1.1a hyperref aware footnote.sty (JFB)
+\FNH@notes=\box51
+\FNH@width=\dimen163
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\grap
+hicx.sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\grap
+hics.sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig
+.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\
+graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+)
+\Gin@req@height=\dimen164
+\Gin@req@width=\dimen165
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/grffile\grffi
+le.sty"
+Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legac
+y)
+Package grffile Info: This package is an empty stub for compatibility on input 
+line 40.
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3b
+ackend-pdfmode.def"
+File: l3backend-pdfmode.def 2020-08-07 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count278
+\l__pdf_internal_box=\box52
+) (IDEMAbook.aux
+
+LaTeX Warning: Label `mynotebox' multiply defined.
+
+
+LaTeX Warning: Label `mynotebox' multiply defined.
+
+
+LaTeX Warning: Label `myadvancedbox' multiply defined.
+
+
+LaTeX Warning: Label `mynotebox' multiply defined.
+
+
+LaTeX Warning: Label `myadvancedbox' multiply defined.
+
+
+LaTeX Warning: Label `mynotebox' multiply defined.
+
+
+LaTeX Warning: Label `myexamplebox' multiply defined.
+
+
+LaTeX Warning: Label `myadvancedbox' multiply defined.
+
+
+LaTeX Warning: Label `mynotebox' multiply defined.
+
+
+LaTeX Warning: Label `myadvancedbox' multiply defined.
+
+
+LaTeX Warning: Label `myadvancedbox' multiply defined.
+
+
+LaTeX Warning: Label `myadvancedbox' multiply defined.
+
+
+LaTeX Warning: Label `myadvancedbox' multiply defined.
+
+
+LaTeX Warning: Label `myexamplebox' multiply defined.
+
+
+LaTeX Warning: Label `myexamplebox' multiply defined.
+
+
+LaTeX Warning: Label `myadvancedbox' multiply defined.
+
+
+LaTeX Warning: Label `references' multiply defined.
+
+)
+\openout1 = `IDEMAbook.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Info: Redefining \microtypecontext on input line 75.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using protrusion set `basicmath'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 75.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-
+cmr.cfg"
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\s
+upp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count279
+\scratchdimen=\dimen166
+\scratchbox=\box53
+\nofMPsegments=\count280
+\nofMParguments=\count281
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count282
+\MPscratchDim=\dimen167
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
+\everyMPtoPDFconversion=\toks27
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\
+epstopdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+\AtBeginShipoutBox=\box54
+Package hyperref Info: Link coloring OFF on input line 75.
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\name
+ref.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refc
+ount.sty"
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestr
+ing\gettitlestring.sty"
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count285
+)
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
+7.
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
+7.
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+77.
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
+"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+77.
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
+"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 77.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 77.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 77.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
+
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa
+.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-
+msa.cfg"
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
+
+
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb
+.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-
+msb.cfg"
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [1
+
+
+{C:/Users/Andreas Handel/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2
+
+] (IDEMAbook.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 3.
+[3] [4] [5] [6] [7] [8])
+\tf@toc=\write3
+\openout3 = `IDEMAbook.toc'.
+
+[9] [10
+
+] [11] [12
+
+]
+Chapter 1.
+[13] [14]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+38.
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd"
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [15] [16
+
+]
+Chapter 2.
+[17]
+<./images/epi-triangle.png, id=613, 268.8444pt x 236.5638pt>
+File: ./images/epi-triangle.png Graphic file (type png)
+<use ./images/epi-triangle.png>
+Package pdftex.def Info: ./images/epi-triangle.png  used on input line 180.
+(pdftex.def)             Requested size: 268.84375pt x 236.5632pt.
+<./images/complexsystem.png, id=617, 244.2726pt x 231.7458pt>
+File: ./images/complexsystem.png Graphic file (type png)
+<use ./images/complexsystem.png>
+Package pdftex.def Info: ./images/complexsystem.png  used on input line 191.
+(pdftex.def)             Requested size: 244.28317pt x 231.75583pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (29.62227pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 18 \T1/lmr/m/sl/10 CHAPTER 2.  INTRODUCTION TO THE DYNAMICAL SYS
+TEMS APPROACH
+ []
+
+[18 <./images/epi-triangle.png>] [19 <./images/complexsystem.png>]
+<./images/phenomodel.png, id=637, 684.8787pt x 411.6981pt>
+File: ./images/phenomodel.png Graphic file (type png)
+<use ./images/phenomodel.png>
+Package pdftex.def Info: ./images/phenomodel.png  used on input line 207.
+(pdftex.def)             Requested size: 684.88745pt x 411.70335pt.
+
+Overfull \hbox (339.88745pt too wide) in paragraph at lines 207--207
+[][] 
+ []
+
+
+Overfull \hbox (29.62227pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 20 \T1/lmr/m/sl/10 CHAPTER 2.  INTRODUCTION TO THE DYNAMICAL SYS
+TEMS APPROACH
+ []
+
+[20] [21 <./images/phenomodel.png>]
+<./images/moving-triangle.png, id=658, 393.3897pt x 160.4394pt>
+File: ./images/moving-triangle.png Graphic file (type png)
+<use ./images/moving-triangle.png>
+Package pdftex.def Info: ./images/moving-triangle.png  used on input line 236.
+(pdftex.def)             Requested size: 393.38873pt x 160.43901pt.
+
+Overfull \hbox (48.38873pt too wide) in paragraph at lines 236--236
+[][] 
+ []
+
+
+Overfull \hbox (29.62227pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 22 \T1/lmr/m/sl/10 CHAPTER 2.  INTRODUCTION TO THE DYNAMICAL SYS
+TEMS APPROACH
+ []
+
+[22] [23 <./images/moving-triangle.png>]
+Overfull \hbox (29.62227pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 24 \T1/lmr/m/sl/10 CHAPTER 2.  INTRODUCTION TO THE DYNAMICAL SYS
+TEMS APPROACH
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
+
+ []
+
+<./images/basicSIRmodelfigure.png, id=686, 410.2527pt x 65.043pt>
+File: ./images/basicSIRmodelfigure.png Graphic file (type png)
+<use ./images/basicSIRmodelfigure.png>
+Package pdftex.def Info: ./images/basicSIRmodelfigure.png  used on input line 2
+98.
+(pdftex.def)             Requested size: 410.27046pt x 65.0458pt.
+
+Overfull \hbox (65.27046pt too wide) in paragraph at lines 298--298
+[][] 
+ []
+
+[25]
+<./images/sirsim.png, id=696, 684.8787pt x 411.6981pt>
+File: ./images/sirsim.png Graphic file (type png)
+<use ./images/sirsim.png>
+Package pdftex.def Info: ./images/sirsim.png  used on input line 306.
+(pdftex.def)             Requested size: 684.88745pt x 411.70335pt.
+
+Overfull \hbox (339.88745pt too wide) in paragraph at lines 306--306
+[][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{mynotebox}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.312 \subsubsection{Notes}\label{mynotebox}}
+                                             
+Overfull \hbox (29.62227pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 26 \T1/lmr/m/sl/10 CHAPTER 2.  INTRODUCTION TO THE DYNAMICAL SYS
+TEMS APPROACH
+ []
+
+[26 <./images/basicSIRmodelfigure.png>] [27 <./images/sirsim.png>]
+<./images/xkcd-flowcharts.png, id=713, 668.4975pt x 700.11563pt>
+File: ./images/xkcd-flowcharts.png Graphic file (type png)
+<use ./images/xkcd-flowcharts.png>
+Package pdftex.def Info: ./images/xkcd-flowcharts.png  used on input line 334.
+(pdftex.def)             Requested size: 525.18991pt x 550.02998pt.
+
+Overfull \hbox (180.18991pt too wide) in paragraph at lines 334--334
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 36.52998pt on input line 335.
+
+
+Overfull \hbox (29.62227pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 28 \T1/lmr/m/sl/10 CHAPTER 2.  INTRODUCTION TO THE DYNAMICAL SYS
+TEMS APPROACH
+ []
+
+[28] [29 <./images/xkcd-flowcharts.png>]
+Overfull \hbox (29.62227pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 30 \T1/lmr/m/sl/10 CHAPTER 2.  INTRODUCTION TO THE DYNAMICAL SYS
+TEMS APPROACH
+ []
+
+[30]
+Chapter 3.
+[31
+
+] [32] [33] [34]
+<./images/ComplicatedModel.png, id=800, 587.5551pt x 205.0059pt>
+File: ./images/ComplicatedModel.png Graphic file (type png)
+<use ./images/ComplicatedModel.png>
+Package pdftex.def Info: ./images/ComplicatedModel.png  used on input line 456.
+
+(pdftex.def)             Requested size: 587.56262pt x 205.00851pt.
+
+Overfull \hbox (242.56262pt too wide) in paragraph at lines 456--456
+[][] 
+ []
+
+[35 <./images/ComplicatedModel.png>]
+<./images/xkcd-course-of-colds.png, id=811, 379.4175pt x 284.56313pt>
+File: ./images/xkcd-course-of-colds.png Graphic file (type png)
+<use ./images/xkcd-course-of-colds.png>
+Package pdftex.def Info: ./images/xkcd-course-of-colds.png  used on input line 
+475.
+(pdftex.def)             Requested size: 379.45708pt x 284.5928pt.
+
+Overfull \hbox (34.45708pt too wide) in paragraph at lines 475--475
+[][] 
+ []
+
+
+Underfull \hbox (badness 1221) in paragraph at lines 475--475
+[]\T1/lmr/m/n/10 (+20) Figure 3.2: []Yet an-other per-spec-tive on ID in-fec-ti
+on states. [Source:
+ []
+
+[36 <./images/xkcd-course-of-colds.png>] [37] [38
+
+]
+Chapter 4.
+<./images/IDcycles.pdf, id=840, 500.87125pt x 388.45125pt>
+File: ./images/IDcycles.pdf Graphic file (type pdf)
+<use ./images/IDcycles.pdf>
+Package pdftex.def Info: ./images/IDcycles.pdf  used on input line 535.
+(pdftex.def)             Requested size: 500.88528pt x 388.46213pt.
+
+Overfull \hbox (155.88528pt too wide) in paragraph at lines 535--535
+[][] 
+ []
+
+[39] [40 <./images/IDcycles.pdf>]
+<./images/R0modelfigure.png, id=857, 432.6564pt x 109.3686pt>
+File: ./images/R0modelfigure.png Graphic file (type png)
+<use ./images/R0modelfigure.png>
+Package pdftex.def Info: ./images/R0modelfigure.png  used on input line 556.
+(pdftex.def)             Requested size: 432.65535pt x 109.36832pt.
+
+Overfull \hbox (87.65535pt too wide) in paragraph at lines 556--556
+[][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{mynotebox}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.562 \subsubsection{Notes}\label{mynotebox}}
+                                             
+Underfull \vbox (badness 1472) has occurred while \output is active []
+
+[41]pdfTeX warning (ext4): destination with the same identifier (name{myadvance
+dbox}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.567 ...urce replenishment}\label{myadvancedbox}}
+                                                   [42 <./images/R0modelfigure.
+png>] [43]pdfTeX warning (ext4): destination with the same identifier (name{myn
+otebox}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.604 \subsubsection{Notes}\label{mynotebox}}
+                                              [44]pdfTeX warning (ext4): destin
+ation with the same identifier (name{myadvancedbox}) has been already used, dup
+licate ignored
+<to be read again> 
+                   \relax 
+l.620 ... States and Models}\label{myadvancedbox}}
+                                                  
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
+24.
+("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<./images/SSmaxima.png, id=900, 758.08218pt x 121.20282pt>
+File: ./images/SSmaxima.png Graphic file (type png)
+<use ./images/SSmaxima.png>
+Package pdftex.def Info: ./images/SSmaxima.png  used on input line 627.
+(pdftex.def)             Requested size: 758.11502pt x 121.20805pt.
+
+Overfull \hbox (413.11502pt too wide) in paragraph at lines 627--627
+[][] 
+ []
+
+[45 <./images/SSmaxima.png>]
+<./images/gonorrhea.png, id=912, 660.4675pt x 278.03876pt>
+File: ./images/gonorrhea.png Graphic file (type png)
+<use ./images/gonorrhea.png>
+Package pdftex.def Info: ./images/gonorrhea.png  used on input line 641.
+(pdftex.def)             Requested size: 660.47595pt x 278.04231pt.
+
+Overfull \hbox (315.47595pt too wide) in paragraph at lines 641--641
+[][] 
+ []
+
+[46] [47 <./images/gonorrhea.png>]
+<./images/phd_sciencenewscycle.png, id=925, 602.25pt x 669.50125pt>
+File: ./images/phd_sciencenewscycle.png Graphic file (type png)
+<use ./images/phd_sciencenewscycle.png>
+Package pdftex.def Info: ./images/phd_sciencenewscycle.png  used on input line 
+657.
+(pdftex.def)             Requested size: 494.79472pt x 550.0468pt.
+
+Overfull \hbox (149.79472pt too wide) in paragraph at lines 657--657
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--657
+[]\T1/lmr/m/n/10 (+20) Figure 4.5: []Here is a dif-fer-ent kind of cy-cle that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--657
+\T1/lmr/m/n/10 (+20) (ID) sci-en-tists some-times en-counter. [Source: phd-
+ []
+
+
+LaTeX Warning: Float too large for page by 48.5468pt on input line 658.
+
+[48] [49 <./images/phd_sciencenewscycle.png>] [50
+
+]
+Chapter 5.
+[51]
+<./images/R0scheme.png, id=973, 416.5161pt x 396.5214pt>
+File: ./images/R0scheme.png Graphic file (type png)
+<use ./images/R0scheme.png>
+Package pdftex.def Info: ./images/R0scheme.png  used on input line 728.
+(pdftex.def)             Requested size: 345.00916pt x 328.44711pt.
+[52] [53 <./images/R0scheme.png>]pdfTeX warning (ext4): destination with the sa
+me identifier (name{mynotebox}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.758 \subsubsection{Notes}\label{mynotebox}}
+                                             
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+[54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[55]
+<./images/R0intervention.pdf, id=1005, 650.43pt x 361.35pt>
+File: ./images/R0intervention.pdf Graphic file (type pdf)
+<use ./images/R0intervention.pdf>
+Package pdftex.def Info: ./images/R0intervention.pdf  used on input line 777.
+(pdftex.def)             Requested size: 650.4284pt x 361.34912pt.
+
+Overfull \hbox (305.4284pt too wide) in paragraph at lines 777--777
+[][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{myexamplebox}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.781 ...k Control - Example}\label{myexamplebox}}
+                                                   [56] [57 <./images/R0interve
+ntion.pdf>]
+<./images/kr-R0intervention.pdf, id=1027, 513.92pt x 412.54124pt>
+File: ./images/kr-R0intervention.pdf Graphic file (type pdf)
+<use ./images/kr-R0intervention.pdf>
+Package pdftex.def Info: ./images/kr-R0intervention.pdf  used on input line 793
+.
+(pdftex.def)             Requested size: 513.92656pt x 412.54652pt.
+
+Overfull \hbox (168.92656pt too wide) in paragraph at lines 793--793
+[][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{myadvancedbox
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.797 ... and the SIR Model}\label{myadvancedbox}}
+                                                   [58] [59 <./images/kr-R0inte
+rvention.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./images/viboud-R0.pdf): PDF inclusion: foun
+d PDF version <1.6>, but at most version <1.5> allowed
+<./images/viboud-R0.pdf, id=1045, 1004.553pt x 320.61784pt>
+File: ./images/viboud-R0.pdf Graphic file (type pdf)
+<use ./images/viboud-R0.pdf>
+Package pdftex.def Info: ./images/viboud-R0.pdf  used on input line 823.
+(pdftex.def)             Requested size: 1004.61186pt x 320.63661pt.
+
+Overfull \hbox (659.61186pt too wide) in paragraph at lines 823--823
+[][] 
+ []
+
+[60 <./images/viboud-R0.pdf>]
+<./images/outbreaksize.pdf, id=1056, 508.90125pt x 413.545pt>
+File: ./images/outbreaksize.pdf Graphic file (type pdf)
+<use ./images/outbreaksize.pdf>
+Package pdftex.def Info: ./images/outbreaksize.pdf  used on input line 834.
+(pdftex.def)             Requested size: 508.91553pt x 413.5566pt.
+
+Overfull \hbox (163.91553pt too wide) in paragraph at lines 834--834
+[][] 
+ []
+
+<./images/R0age.pdf, id=1058, 513.92pt x 215.80624pt>
+File: ./images/R0age.pdf Graphic file (type pdf)
+<use ./images/R0age.pdf>
+Package pdftex.def Info: ./images/R0age.pdf  used on input line 850.
+(pdftex.def)             Requested size: 513.9344pt x 215.81229pt.
+
+Overfull \hbox (168.9344pt too wide) in paragraph at lines 850--850
+[][] 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{mynotebox}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.856 \subsubsection{Note}\label{mynotebox}}
+                                             [61] [62 <./images/outbreaksize.pd
+f>]pdfTeX warning (ext4): destination with the same identifier (name{myadvanced
+box}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.866 ... for a Given Model}\label{myadvancedbox}}
+                                                   [63 <./images/R0age.pdf>]
+Underfull \hbox (badness 5924) in paragraph at lines 894--894
+[]\T1/lmr/bx/n/12 Policy/Application ex-am-ple: Es-ti-mat-ing the
+ []
+
+[64]
+<./images/xkcd-outbreak-control.png, id=1107, 742.775pt x 252.945pt>
+File: ./images/xkcd-outbreak-control.png Graphic file (type png)
+<use ./images/xkcd-outbreak-control.png>
+Package pdftex.def Info: ./images/xkcd-outbreak-control.png  used on input line
+ 910.
+(pdftex.def)             Requested size: 742.7845pt x 252.94823pt.
+
+Overfull \hbox (397.7845pt too wide) in paragraph at lines 910--910
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 910--910
+[]\T1/lmr/m/n/10 (+20) Figure 5.7: []The R 0  in this case was 0. [Source:
+ []
+
+[65 <./images/xkcd-outbreak-control.png>] [66]
+Chapter 6.
+
+Underfull \vbox (badness 3428) has occurred while \output is active []
+
+[67
+
+] [68]
+<./images/xkcd-swine_flu.png, id=1147, 399.38684pt x 677.05579pt>
+File: ./images/xkcd-swine_flu.png Graphic file (type png)
+<use ./images/xkcd-swine_flu.png>
+Package pdftex.def Info: ./images/xkcd-swine_flu.png  used on input line 994.
+(pdftex.def)             Requested size: 324.45834pt x 550.03416pt.
+
+LaTeX Warning: Float too large for page by 35.97859pt on input line 996.
+
+[69] [70 <./images/xkcd-swine_flu.png>]
+Chapter 7.
+[71
+
+] [72]pdfTeX warning (ext4): destination with the same identifier (name{myadvan
+cedbox}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1066 ...rect transmission}\label{myadvancedbox}}
+                                                   [73]
+<./images/smbctransmissionmode.png, id=1189, 686.565pt x 1840.8775pt>
+File: ./images/smbctransmissionmode.png Graphic file (type png)
+<use ./images/smbctransmissionmode.png>
+Package pdftex.def Info: ./images/smbctransmissionmode.png  used on input line 
+1091.
+(pdftex.def)             Requested size: 205.12251pt x 549.99226pt.
+
+LaTeX Warning: Float too large for page by 33.99226pt on input line 1093.
+
+[74] [75 <./images/smbctransmissionmode.png>] [76
+
+]
+Chapter 8.
+
+Underfull \vbox (badness 6396) has occurred while \output is active []
+
+[77]
+<./images/environmentaltransmissionscheme.png, id=1223, 315.579pt x 153.6942pt>
+
+File: ./images/environmentaltransmissionscheme.png Graphic file (type png)
+<use ./images/environmentaltransmissionscheme.png>
+Package pdftex.def Info: ./images/environmentaltransmissionscheme.png  used on 
+input line 1152.
+(pdftex.def)             Requested size: 315.58784pt x 153.69849pt.
+
+Underfull \vbox (badness 2050) has occurred while \output is active []
+
+[78 <./images/environmentaltransmissionscheme.png>]pdfTeX warning (ext4): desti
+nation with the same identifier (name{myadvancedbox}) has been already used, du
+plicate ignored
+<to be read again> 
+                   \relax 
+l.1170 ...ntal transmission}\label{myadvancedbox}}
+                                                  
+<./images/xkcd-hand_sanitizer.png, id=1232, 570.13pt x 213.79875pt>
+File: ./images/xkcd-hand_sanitizer.png Graphic file (type png)
+<use ./images/xkcd-hand_sanitizer.png>
+Package pdftex.def Info: ./images/xkcd-hand_sanitizer.png  used on input line 1
+199.
+(pdftex.def)             Requested size: 344.99496pt x 129.3731pt.
+
+Underfull \vbox (badness 3989) has occurred while \output is active []
+
+[79] [80 <./images/xkcd-hand_sanitizer.png>] [81] [82
+
+]
+Chapter 9.
+<./images/vectorborne-schematic.png, id=1272, 361.35pt x 144.54pt>
+File: ./images/vectorborne-schematic.png Graphic file (type png)
+<use ./images/vectorborne-schematic.png>
+Package pdftex.def Info: ./images/vectorborne-schematic.png  used on input line
+ 1257.
+(pdftex.def)             Requested size: 345.00084pt x 138.00032pt.
+[83]
+Underfull \hbox (badness 1931) in paragraph at lines 1269--1269
+[]\T1/lmr/bx/n/14.4 Vector-borne trans-mis-sion and in-ter-ven-
+ []
+
+[84 <./images/vectorborne-schematic.png>]pdfTeX warning (ext4): destination wit
+h the same identifier (name{myadvancedbox}) has been already used, duplicate ig
+nored
+<to be read again> 
+                   \relax 
+l.1276 ...orne transmission}\label{myadvancedbox}}
+                                                  
+<./images/xkcd-mosquito-ringtone.png, id=1287, 230.36063pt x 423.68288pt>
+File: ./images/xkcd-mosquito-ringtone.png Graphic file (type png)
+<use ./images/xkcd-mosquito-ringtone.png>
+Package pdftex.def Info: ./images/xkcd-mosquito-ringtone.png  used on input lin
+e 1298.
+(pdftex.def)             Requested size: 230.36005pt x 423.68184pt.
+[85] [86 <./images/xkcd-mosquito-ringtone.png>] [87] [88
+
+]
+Chapter 10.
+[89]pdfTeX warning (ext4): destination with the same identifier (name{myexample
+box}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1362 ...rogeneity Examples}\label{myexamplebox}}
+                                                  
+Underfull \hbox (badness 4608) in paragraph at lines 1367--1367
+[]\T1/lmr/bx/n/14.4 Heterogeneity in Trans-mis-sion: Core
+ []
+
+[90]
+Underfull \hbox (badness 1348) in paragraph at lines 1375--1375
+[]\T1/lmr/bx/n/14.4 Heterogeneity in Trans-mis-sion: Su-per-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1380--1380
+[]\T1/lmr/bx/n/14.4 Heterogeneity and The Re-pro-duc-tive
+ []
+
+[91]
+<./images/heterogeneityexample.png, id=1350, 556.7199pt x 269.808pt>
+File: ./images/heterogeneityexample.png Graphic file (type png)
+<use ./images/heterogeneityexample.png>
+Package pdftex.def Info: ./images/heterogeneityexample.png  used on input line 
+1395.
+(pdftex.def)             Requested size: 556.76949pt x 269.83203pt.
+
+Overfull \hbox (211.76949pt too wide) in paragraph at lines 1395--1395
+[][] 
+ []
+
+[92] [93 <./images/heterogeneityexample.png>]
+<./images/crazyvenndiagram.png, id=1364, 401.5pt x 397.485pt>
+File: ./images/crazyvenndiagram.png Graphic file (type png)
+<use ./images/crazyvenndiagram.png>
+Package pdftex.def Info: ./images/crazyvenndiagram.png  used on input line 1410
+.
+(pdftex.def)             Requested size: 401.51125pt x 397.49614pt.
+
+Overfull \hbox (56.51125pt too wide) in paragraph at lines 1410--1410
+[][] 
+ []
+
+[94] [95 <./images/crazyvenndiagram.png>] [96]
+Chapter 11.
+[97
+
+] [98] [99]
+Underfull \vbox (badness 1490) has occurred while \output is active []
+
+[100]
+<./images/xkcd-disease-eradication.png, id=1433, 542.92838pt x 516.7305pt>
+File: ./images/xkcd-disease-eradication.png Graphic file (type png)
+<use ./images/xkcd-disease-eradication.png>
+Package pdftex.def Info: ./images/xkcd-disease-eradication.png  used on input l
+ine 1563.
+(pdftex.def)             Requested size: 345.0125pt x 328.36464pt.
+[101] [102 <./images/xkcd-disease-eradication.png>] [103] [104
+
+]
+Chapter 12.
+pdfTeX warning (ext4): destination with the same identifier (name{myexamplebox}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1637 ...lance - an example}\label{myexamplebox}}
+                                                   [105]
+<./images/xkcd-listening.png, id=1473, 286.06876pt x 414.54875pt>
+File: ./images/xkcd-listening.png Graphic file (type png)
+<use ./images/xkcd-listening.png>
+Package pdftex.def Info: ./images/xkcd-listening.png  used on input line 1646.
+(pdftex.def)             Requested size: 286.07242pt x 414.55405pt.
+[106] [107 <./images/xkcd-listening.png>] [108
+
+]
+Chapter 13.
+[109] [110]pdfTeX warning (ext4): destination with the same identifier (name{my
+advancedbox}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1723 ...eling multiple ID}\label{myadvancedbox}}
+                                                  
+<./images/multipathogenmodel.png, id=1542, 474.0912pt x 169.8345pt>
+File: ./images/multipathogenmodel.png Graphic file (type png)
+<use ./images/multipathogenmodel.png>
+Package pdftex.def Info: ./images/multipathogenmodel.png  used on input line 17
+29.
+(pdftex.def)             Requested size: 474.1045pt x 169.83925pt.
+
+Overfull \hbox (129.1045pt too wide) in paragraph at lines 1729--1729
+[][] 
+ []
+
+[111]
+<./images/xkcd-sick_day.png, id=1549, 498.86375pt x 424.58624pt>
+File: ./images/xkcd-sick_day.png Graphic file (type png)
+<use ./images/xkcd-sick_day.png>
+Package pdftex.def Info: ./images/xkcd-sick_day.png  used on input line 1751.
+(pdftex.def)             Requested size: 345.00801pt x 293.6386pt.
+[112 <./images/multipathogenmodel.png>] [113 <./images/xkcd-sick_day.png>] [114
+]
+Chapter 14.
+
+Underfull \vbox (badness 1565) has occurred while \output is active []
+
+[115
+
+]
+Underfull \vbox (badness 3364) has occurred while \output is active []
+
+[116] [117] [118]
+<./images/smallpox.png, id=1610, 144.54pt x 102.8643pt>
+File: ./images/smallpox.png Graphic file (type png)
+<use ./images/smallpox.png>
+Package pdftex.def Info: ./images/smallpox.png  used on input line 1870.
+(pdftex.def)             Requested size: 144.54404pt x 102.86717pt.
+[119 <./images/smallpox.png>] [120
+
+]
+Chapter 15.
+[121] [122]
+<./images/smbc-ID-evolution.png, id=1661, 686.565pt x 1150.2975pt>
+File: ./images/smbc-ID-evolution.png Graphic file (type png)
+<use ./images/smbc-ID-evolution.png>
+Package pdftex.def Info: ./images/smbc-ID-evolution.png  used on input line 196
+6.
+(pdftex.def)             Requested size: 328.27985pt x 550.01273pt.
+
+LaTeX Warning: Float too large for page by 60.51273pt on input line 1968.
+
+[123] [124 <./images/smbc-ID-evolution.png (PNG copy)>] [125] [126
+
+]
+Chapter 16.
+
+Underfull \vbox (badness 1221) has occurred while \output is active []
+
+[127] [128] [129] [130
+
+]
+Chapter 17.
+[131] [132] [133] [134
+
+]
+Chapter 18.
+[135] [136]
+Chapter 19.
+[137
+
+]
+<./images/network-diagram.png, id=1796, 302.3295pt x 150.5625pt>
+File: ./images/network-diagram.png Graphic file (type png)
+<use ./images/network-diagram.png>
+Package pdftex.def Info: ./images/network-diagram.png  used on input line 2210.
+
+(pdftex.def)             Requested size: 302.34258pt x 150.569pt.
+[138 <./images/network-diagram.png>]
+<./images/complex-network-diagram.png, id=1805, 171.039pt x 148.8762pt>
+File: ./images/complex-network-diagram.png Graphic file (type png)
+<use ./images/complex-network-diagram.png>
+Package pdftex.def Info: ./images/complex-network-diagram.png  used on input li
+ne 2228.
+(pdftex.def)             Requested size: 171.03857pt x 148.87584pt.
+[139 <./images/complex-network-diagram.png>]
+<./images/network-examples.png, id=1819, 752.8125pt x 602.25pt>
+File: ./images/network-examples.png Graphic file (type png)
+<use ./images/network-examples.png>
+Package pdftex.def Info: ./images/network-examples.png  used on input line 2253
+.
+(pdftex.def)             Requested size: 687.5646pt x 550.05168pt.
+
+Overfull \hbox (342.5646pt too wide) in paragraph at lines 2253--2253
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 23.99611pt on input line 2254.
+
+
+Underfull \vbox (badness 3179) has occurred while \output is active []
+
+[140] [141 <./images/network-examples.png>]
+<./images/xkcd-network.png, id=1836, 742.775pt x 415.5525pt>
+File: ./images/xkcd-network.png Graphic file (type png)
+<use ./images/xkcd-network.png>
+Package pdftex.def Info: ./images/xkcd-network.png  used on input line 2282.
+(pdftex.def)             Requested size: 742.80717pt x 415.5705pt.
+
+Overfull \hbox (397.80717pt too wide) in paragraph at lines 2282--2282
+[][] 
+ []
+
+[142] [143 <./images/xkcd-network.png>] [144]
+Chapter 20.
+[145
+
+] [146
+
+]
+Chapter 21.
+[147]
+Overfull \hbox (63.30125pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 148 \T1/lmr/m/sl/10 CHAPTER 21.  APPENDIX A - A BRIEF DESCRIPTIO
+N OF MODELING SOFTWARE
+ []
+
+[148] [149]
+Overfull \hbox (63.30125pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 150 \T1/lmr/m/sl/10 CHAPTER 21.  APPENDIX A - A BRIEF DESCRIPTIO
+N OF MODELING SOFTWARE
+ []
+
+[150
+
+]
+Chapter 22.
+[151]
+<./images/mapfigure.png, id=1909, 1831.5627pt x 576.2328pt>
+File: ./images/mapfigure.png Graphic file (type png)
+<use ./images/mapfigure.png>
+Package pdftex.def Info: ./images/mapfigure.png  used on input line 2376.
+(pdftex.def)             Requested size: 1748.30305pt x 550.03824pt.
+
+Overfull \hbox (1403.30305pt too wide) in paragraph at lines 2376--2376
+[][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 23.98267pt on input line 2377.
+
+
+Overfull \hbox (28.5764pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 152 \T1/lmr/m/sl/10 CHAPTER 22.  APPENDIX B - HOW TO BUILD OR US
+E THE RIGHT MODEL
+ []
+
+[152] [153 <./images/mapfigure.png>]
+Overfull \hbox (28.5764pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 154 \T1/lmr/m/sl/10 CHAPTER 22.  APPENDIX B - HOW TO BUILD OR US
+E THE RIGHT MODEL
+ []
+
+[154]
+Chapter 23.
+[155
+
+]
+Overfull \hbox (97.67502pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 156 \T1/lmr/m/sl/10 CHAPTER 23.  APPENDIX C - THE DIFFERENT USES
+ OF INFECTIOUS DISEASE MODELS
+ []
+
+[156]
+Chapter 24.
+[157
+
+]
+Overfull \hbox (62.18747pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 158 \T1/lmr/m/sl/10 CHAPTER 24.  APPENDIX D - A VERY BRIEF INTRO
+DUCTION TO DATA FITTING
+ []
+
+[158
+
+]
+Chapter 25.
+pdfTeX warning (ext4): destination with the same identifier (name{references}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2447 \chapter{References}\label{references}}
+                                               [159] [160
+
+]
+Chapter 26.
+[161] [162]
+Overfull \hbox (1.11102pt too wide) in paragraph at lines 2543--2545
+\T1/lmr/m/n/10 (-20) 2004. ``Dynamical Resonance Can Account for Seasonality of
+ Influenza Epidemics.''
+ []
+
+[163]
+Overfull \hbox (0.25568pt too wide) in paragraph at lines 2561--2563
+[][]\T1/lmr/m/n/10 (-20) ---------. 1995. ``The Evolution of Virulence: A Unify
+ing Link Between Parasitology
+ []
+
+[164] [165] [166] [167]
+Overfull \hbox (0.5124pt too wide) in paragraph at lines 2711--2713
+\T1/lmr/m/n/10 (-20) Lello. 2017. ``Breaking Beta: Deconstructing the Parasite 
+Transmission Function.''
+ []
+
+[168] [169] [170]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2846.
+[171]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2846.
+(IDEMAbook.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2846.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2846.
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 14598 strings out of 481212
+ 222901 string characters out of 2901718
+ 498059 words of memory out of 3000000
+ 28830 multiletter control sequences out of 15000+200000
+ 619958 words of font info for 168 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 50i,8n,42p,1874b,469s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
+mathsy.enc}{C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/enc/dvi
+ps/lm/lm-rm.enc}{C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/en
+c/dvips/lm/lm-mathit.enc}{C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX
+/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Andreas Handel/AppData/Local/Programs/M
+iKTeX/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Users/Andreas Handel/AppData/Local/P
+rograms/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Users/Andreas Handel/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Andreas Handel/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Andrea
+s Handel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Use
+rs/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pf
+b><C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/
+lmmi7.pfb><C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/lm/lmr10.pfb><C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmr12.pfb><C:/Users/Andreas Handel/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmr17.pfb><C:/Users/Andreas Handel/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Andreas Handel/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Andreas Handel/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Andreas Hand
+el/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri7.pfb><C:/Users/Andr
+eas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/U
+sers/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.
+pfb><C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmsy7.pfb><C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/lm/lmtt10.pfb>
+Output written on IDEMAbook.pdf (171 pages, 8989363 bytes).
+PDF statistics:
+ 3109 PDF objects out of 3580 (max. 8388607)
+ 906 named destinations out of 1000 (max. 500000)
+ 16505 words of extra memory for PDF output out of 17280 (max. 10000000)
+

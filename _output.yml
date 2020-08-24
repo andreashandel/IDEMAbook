@@ -1,0 +1,12 @@
+bookdown::gitbook:
+  css: ./idemabook.css
+  fig_caption: true
+  keep_md: false
+  config:
+    edit: null
+    download: ["pdf"]
+    toc:
+      collapse: none
+bookdown::pdf_book:
+  keep_tex: no
+  toc: true
