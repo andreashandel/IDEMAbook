@@ -4,19 +4,19 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)</title>
+  <title>22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)</title>
   <meta name="description" content="A modern, model-based approach to infectious disease epidemiology" />
   <meta name="generator" content="bookdown 0.20.3 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
+  <meta property="og:title" content="22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
   <meta property="og:type" content="book" />
-  
+  <meta property="og:url" content="https://andreashandel.github.io/IDEMAbook/" />
   
   <meta property="og:description" content="A modern, model-based approach to infectious disease epidemiology" />
-  
+  <meta name="github-repo" content="andreashandel/IDEMAbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
+  <meta name="twitter:title" content="22 Appendix B - How to build or use the right model | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
   
   <meta name="twitter:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
@@ -387,13 +387,13 @@
 
             <section class="normal" id="section-">
 <div id="modelcomplexity" class="section level1">
-<h1><span class="header-section-number">Chapter 22</span> Appendix B - How to build or use the right model</h1>
+<h1><span class="header-section-number">22</span> Appendix B - How to build or use the right model</h1>
 <p>Onee might be inclined to build very complicated and detailed models, in an effort to be as realistic as possible. While more detailed models can indeed be more realistic, there are several drawbacks. First, as models get larger, they contain more parameters. Each parameter needs to be given a numeric value to allow one to run simulations. One can try to obtain the parameters from the literature, however, often that information is not available. Alternatively, one could fit the model to data (something not discussed in this book) and try to estimate the parameters. However, with the kind of data typically available, one can usually only estimate a few parameters with some level of certainty. And even if one were to be able to get good estimates for all model parameters, larger models are harder to implement, take longer to run, and are more difficult to analyze. With too many parts present, it can be hard to understand how different components interact with each other and affect outcomes of interest.</p>
 <p>We therefore cannot - and do not want to - include every detail of a complex system, i.e. all components and interactions. We need to decide which parts are important and need to be in the model, and which ones we can ignore. A simple and somewhat silly example: We never include the hair color of individuals in any infectious disease models (at least I’ve never seen such a model), since we assume that this characteristic is not important for the ID dynamics. The choice to include or exclude other features is less obvious in other cases. For instance, for an HIV model, we likely need gender, while a SARS model might ignore this characteristic.</p>
 <p>It is important to find a trade-off between details that need to be included and details one can leave out. Unfortunately, there is no recipe for it. Some very simple models have produced useful insights, while there are big models in the literature that arguably do little to nothing in helping us understand or deal with infectious diseases. Obviously, there have also been fairly big models that have produced useful information, and small models that are too simplistic to provide much information about any real system.</p>
 <p>A good analogy for model building and use in general is the use of maps. Maps are models of the real world. They serve specific purposes, and it is important that a given map be useful for the intended purpose. For instance, if we want to know how to drive from Atlanta to Athens, the left map in figure <a href="modelcomplexity.html#fig:mapfigure">22.1</a> would be most useful. If instead we want to know where in the US the state of Georgia is located, the middle map is most useful. If we want to know where most people live in Georgia, the right map is most useful. In each case, we study the same object (the state of Georgia), but depending on the question, different maps are needed. Maps (and models) are useful because they capture the information that is needed for a specific situation, while leaving out unneccesary information. Nobody would want to have a map so detailed that it is essentially the real world - it wouldn’t be a very useful map anymore.</p>
 <div class="figure"><span id="fig:mapfigure"></span>
-<img src="images/mapfigure.png" alt="Three different maps of the state of Georgia." width="7603" />
+<img src="images/mapfigure.png" alt="Three different maps of the state of Georgia." width="3802" />
 <p class="caption">
 Figure 22.1: Three different maps of the state of Georgia.
 </p>
@@ -452,12 +452,12 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": "IDEMAbook.pdf",
+"download": ["_main.pdf"],
 "toc": {
 "collapse": "none"
 },
 "toolbar": {
-"position": "fixed"
+"download": "PDF"
 }
 });
 });

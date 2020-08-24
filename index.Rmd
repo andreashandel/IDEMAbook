@@ -6,7 +6,6 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 url: "https://andreashandel.github.io/IDEMAbook/"
 github-repo: "andreashandel/IDEMAbook"
-output_dir: "docs"
 output: 
   bookdown::gitbook:
     css: ./idemabook.css
@@ -15,7 +14,7 @@ output:
     config:
       edit: null
       toolbar:
-        download: ["IDEMAbook.pdf"]
+        download: ["PDF"]
       toc:
         collapse: none
   bookdown::pdf_book:

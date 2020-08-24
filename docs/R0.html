@@ -4,19 +4,19 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Reproductive Number | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)</title>
+  <title>5 Reproductive Number | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)</title>
   <meta name="description" content="A modern, model-based approach to infectious disease epidemiology" />
   <meta name="generator" content="bookdown 0.20.3 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Reproductive Number | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
+  <meta property="og:title" content="5 Reproductive Number | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
   <meta property="og:type" content="book" />
-  
+  <meta property="og:url" content="https://andreashandel.github.io/IDEMAbook/" />
   
   <meta property="og:description" content="A modern, model-based approach to infectious disease epidemiology" />
-  
+  <meta name="github-repo" content="andreashandel/IDEMAbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Reproductive Number | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
+  <meta name="twitter:title" content="5 Reproductive Number | Infectious Disease Epidemiology - a Model-based Approach (IDEMA)" />
   
   <meta name="twitter:description" content="A modern, model-based approach to infectious disease epidemiology" />
   
@@ -387,7 +387,7 @@
 
             <section class="normal" id="section-">
 <div id="R0" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Reproductive Number</h1>
+<h1><span class="header-section-number">5</span> Reproductive Number</h1>
 <div id="overview-and-learning-objectives-3" class="section level2">
 <h2><span class="header-section-number">5.1</span> Overview and Learning Objectives</h2>
 <p>The reproductive number is a fundamental concept in infectious disease epidemiology. It is so important, it even made its way into (at least) one mainstream movie <span class="citation">(“Contagion” <a href="#ref-contagionmovie" role="doc-biblioref">2011</a>)</span>! It is simple in its definition and rather useful. The hard part is to correctly estimate the reproductive number for a given disease and scenario.
@@ -448,7 +448,7 @@ The quantity R<sub>0</sub> is a measurement of the transmission potential of a d
 <h2><span class="header-section-number">5.8</span> Reproductive Number and Outbreak Control</h2>
 <p>It is intuitively clear that if on average every infectious person “produces” more than one subsequent infectious person, we get a growing epidemic. In contrast, if every infectious person “produces” less than one subsequent infectious person, the pathogen might transmit a few times, but pretty soon it will disappear. Thus if we can achieve R<sub>0</sub> &lt; 1, e.g. through vaccination, we can prevent an outbreak from starting. Further, if during an outbreak we can intervene to get R &lt; 1, the outbreak is going to fizzle out. Figure <a href="R0.html#fig:R0intervention">5.1</a> illustrates this idea. If we wanted to stop <em>any</em> further transmission, we would need to get R even lower, namely R = 0. Intervention efforts try to achieve an R as small as possible. If we could achieve R<sub>0</sub> &lt; 1 globally everywhere, we could eventually eradicate a disease. The ability to do that depends on many factors. One important one is the R<sub>0</sub> value of any ID before we start an eradication campaign. Intuitively, the higher R<sub>0</sub>, the harder it will be to get it to &lt; 1. We’ll make that more explicit below.</p>
 <div class="figure"><span id="fig:R0intervention"></span>
-<img src="images/R0intervention.png" alt="Impact of an Intervention on transmission." width="864" />
+<img src="images/R0intervention.png" alt="Impact of an Intervention on transmission." width="432" />
 <p class="caption">
 Figure 5.1: Impact of an Intervention on transmission.
 </p>
@@ -463,7 +463,7 @@ Figure 5.1: Impact of an Intervention on transmission.
 <p>Let’s make the relation between response efforts and the reproductive number a bit more quantitative. As a simple example, consider an infectious disease with R<sub>0</sub>=2. That means on average every infected person infects two others. If we could somehow protect a bit more than half of the susceptibles, then a person who might have become infected can’t become infected anymore, and the <em>effective R</em> (sometimes called R<sub>eff</sub>) drops below 1. More generally, to prevent an outbreak, a fraction p = 1-1/R<sub>0</sub> of the population needs to be protected (e.g. through vaccination). From this, it follows that the higher R<sub>0</sub>, the harder it is to control and ID. This is illustrated in figure <a href="R0.html#fig:krR0intervention">5.2</a>. One can see both from the figure and the equation that a disease with say R<sub>0</sub> = 5 requires that 80% of the population is protected such that R<sub>eff</sub> = 1.</p>
 <p>The level of population protection at which R=1 is called critical population (or herd) immunity level. The relation between basic reproductive number, intervention coverage, and effective R is R= R<sub>0</sub>(1-p). That holds true if we assume that the intervention fully protects those to whom it is applied. If the intervention is not perfect, we have R=R<sub>0</sub>(1-e*p), where e is the effectiveness of the intervention (e=1 is an entirely effective intervention).</p>
 <div class="figure"><span id="fig:krR0intervention"></span>
-<img src="images/kr-R0intervention.png" alt="R~0~ and Interventions. From [@keeling08]." width="4263" />
+<img src="images/kr-R0intervention.png" alt="R~0~ and Interventions. From [@keeling08]." width="2132" />
 <p class="caption">
 Figure 5.2: R<sub>0</sub> and Interventions. From <span class="citation">(Keeling and Rohani <a href="#ref-keeling08" role="doc-biblioref">2008</a>)</span>.
 </p>
@@ -489,7 +489,7 @@ For this model, what needs to be true to get an increase in the number of infect
 <p>Very early in an outbreak, there will only be a few cases, and they occur seemingly randomly/stochastically. If the outbreak continues growing after a while, the case numbers will increase exponentially. The exponential growth rate, r, can be estimated from the data, essentially by fitting a straight line to the logarithmic values of the case report data. To go from the growth rate to R, we need some further information. Namely, we need to know the serial interval. The serial interval, T, is the time between onset of infection in one host to the onset of infection in a secondary host. Sometimes T can be approximated by the duration of the infectious period, D.</p>
 <p>Once we know r and T, we can compute R. There are different equations relating r and T to R, they depend on specific assumptions one makes about the disease. One relation between r, T, and R is given by R = 1 + rT, and another one is given by R = e<sup>rT</sup> . For assumptions underlying these equations and further details, see e.g. <span class="citation">(Wallinga and Lipsitch <a href="#ref-wallinga07" role="doc-biblioref">2007</a>)</span>.</p>
 <div class="figure"><span id="fig:viboudR0"></span>
-<img src="images/viboud-R0.png" alt="Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06]." width="4483" />
+<img src="images/viboud-R0.png" alt="Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine [@viboud06]." width="2242" />
 <p class="caption">
 Figure 5.3: Example of R0 estimation based on case data in the early stages of an outbreak. Source: Viboud et al 2006 Vaccine <span class="citation">(Viboud et al. <a href="#ref-viboud06" role="doc-biblioref">2006</a>)</span>.
 </p>
@@ -500,7 +500,7 @@ Figure 5.3: Example of R0 estimation based on case data in the early stages of a
 <p>A larger R leads to a larger outbreak (ignoring things like interventions, behavior change, etc.). The reason to determine R is so we can use it to predict the expected size of an (uncontrolled) outbreak - and more importantly, we can learn how strong our intervention efforts need to be. But we can also flip things around. Once an (uncontrolled) outbreak has occurred, knowing the outbreak size can allow us to estimate R. It is often possible to determine outbreak sizes after an outbreak has occurred, e.g. through serosurveys which show antibodies against the disease and therefore indicate who got infected. We don’t need any ‘timing’ information, just the fraction infected at the end. Essentially, we need to know the number of people that got infected, and the number of people who were at risk (i.e. the susceptibles) at the beginning of the outbreak. Once we know these pieces of the puzzle, we can estimate R.</p>
 <p>More specifically, assume we know the final size of the outbreak, i.e. total fraction of those becoming infected, I<sub>f</sub> = I<sub>tot</sub>/N, where N is the population at risk and I<sub>tot</sub> is the total number of infected. We then also know the fraction of susceptibles that are left at the end of an outbreak, S<sub>f</sub>=1-I<sub>f</sub>. To find R/R<sub>0</sub>, we can use the equation R=<em>ln</em>(S<sub>f</sub>)/(S<sub>f</sub> - 1) (here, <em>ln</em> is the natural logarithm). The figure below shows the relation between the fraction infected and R<sub>0</sub> graphically.</p>
 <div class="figure"><span id="fig:outbreaksize"></span>
-<img src="images/outbreaksize.png" alt="The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08]." width="3380" />
+<img src="images/outbreaksize.png" alt="The relation between R~0~ and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R~0~. Source: Keeling and Rohani 2008 [@keeling08]." width="1690" />
 <p class="caption">
 Figure 5.4: The relation between R<sub>0</sub> and outbreak Size. If we have information about the size of an outbreak (in the absence of control measures), we can use it to estimate R<sub>0</sub>. Source: Keeling and Rohani 2008 <span class="citation">(Keeling and Rohani <a href="#ref-keeling08" role="doc-biblioref">2008</a>)</span>.
 </p>
@@ -515,7 +515,7 @@ Figure 5.4: The relation between R<sub>0</sub> and outbreak Size. If we have inf
 <h3><span class="header-section-number">5.10.4</span> Determining R Through Age of Infection</h3>
 <p>For those ID for which an infection induces life-long immunity, i.e. where a host can only be infected once, the age of infection is an important concept. Intuitively, the more infectious a disease is, the more likely it is that a host gets an ID at an early age. For an ID that induces immunity, one can collect serological data (i.e. antibody measurements) to determine the fraction of individuals of a given age who have antibodies, which means they have been previously infected (assuming for the moment that no vaccine is available). One can define the median age of infection as the age at which 50% of the population has been infected.</p>
 <div class="figure"><span id="fig:R0age"></span>
-<img src="images/R0age.png" alt="Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08]." width="4263" />
+<img src="images/R0age.png" alt="Fraction seropositive (previously infected) as function of age for measles. Source [@keeling08]." width="2132" />
 <p class="caption">
 Figure 5.5: Fraction seropositive (previously infected) as function of age for measles. Source <span class="citation">(Keeling and Rohani <a href="#ref-keeling08" role="doc-biblioref">2008</a>)</span>.
 </p>
@@ -565,7 +565,7 @@ Figure 5.5: Fraction seropositive (previously infected) as function of age for m
 <p>R only measures one – important – component of a disease, namely its transmission potential/transmissibility. For a full understanding of a given disease, we need to know other characteristics such as speed of transmission, the severity of disease including mortality, routes of transmission, and other disease specific details.</p>
 <p>The simplicity of R is both its strength and its weakness. It gives a quick, quantitative assessment of the transmission potential (and therefore outbreak size and needed control measures) of a disease. However, R is a population level average and ignores heterogeneities of host, agent, and environment. Therefore any R estimates are only approximate.</p>
 <div class="figure"><span id="fig:xkcd-outbreak-control"></span>
-<img src="images/xkcd-outbreak-control.png" alt="The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/)." width="740" />
+<img src="images/xkcd-outbreak-control.png" alt="The R~0~ in this case was 0. [Source: xkcd.com](https://xkcd.com/734/)." width="370" />
 <p class="caption">
 Figure 5.6: The R<sub>0</sub> in this case was 0. <a href="https://xkcd.com/734/">Source: xkcd.com</a>.
 </p>
@@ -678,12 +678,12 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": "IDEMAbook.pdf",
+"download": ["_main.pdf"],
 "toc": {
 "collapse": "none"
 },
 "toolbar": {
-"position": "fixed"
+"download": "PDF"
 }
 });
 });
