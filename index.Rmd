@@ -1,31 +1,34 @@
 --- 
 title: "Infectious Disease Epidemiology<br>- a Model-based Approach (IDEMA)"
-author: "Andreas Handel"
+description: "A modern, model-based approach to infectious disease epidemiology"
+author: "[Andreas Handel](https://www.andreashandel.com)"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
+url: "https://andreashandel.github.io/IDEMAbook/"
+github-repo: "andreashandel/IDEMAbook"
+output_dir: "docs"
 output: 
-    bookdown::gitbook:
-        highlight: zenburn
-        css: ./idemabook.css
-        fig_caption: true
-        keep_md: true
-        config:
-            toc:
-              collapse: none
-            toolbar:
-              position: fixed
-            edit: null
-            download: ["IDEMAbook.pdf"]
-    bookdown::pdf_book:
-        keep_tex: no
-        toc: true
-    # bookdown::word_document2: 
-    #     toc: true
+  bookdown::gitbook:
+    css: ./idemabook.css
+    fig_caption: true
+    keep_md: false
+    config:
+      edit: null
+      toolbar:
+        download: ["IDEMAbook.pdf"]
+      toc:
+        collapse: none
+  bookdown::pdf_book:
+    keep_tex: no
+    toc: true
+documentclass: book
 bibliography: idemabook_references.bib
 biblio-style: apalike
-documentclass: book
 link-citations: yes
-description: "A modern, model-based approach to infectious disease epidemiology"
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Chapter "
 ---
 
 ```{r, echo = FALSE, include = FALSE}
