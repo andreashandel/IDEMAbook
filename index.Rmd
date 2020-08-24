@@ -14,7 +14,7 @@ output:
     config:
       edit: null
       toolbar:
-        download: ["PDF"]
+        download: ["IDEMAbook.pdf"]
       toc:
         collapse: none
   bookdown::pdf_book:
