@@ -15,7 +15,7 @@ output:
             toolbar:
               position: fixed
             edit: null
-            download: no
+            download: ["IDEMAbook.pdf"]
     bookdown::pdf_book:
         keep_tex: no
         toc: true
@@ -23,8 +23,6 @@ output:
     #     toc: true
 bibliography: idemabook_references.bib
 biblio-style: apalike
-download:
-  - ["IDEMAbook.pdf", "PDF"]
 documentclass: book
 link-citations: yes
 description: "A modern, model-based approach to infectious disease epidemiology"

@@ -1,7 +1,7 @@
 --- 
 title: "Infectious Disease Epidemiology<br>- a Model-based Approach (IDEMA)"
 author: "Andreas Handel"
-date: "2020-08-23"
+date: "2020-08-24"
 site: bookdown::bookdown_site
 output: 
     bookdown::gitbook:
@@ -15,7 +15,7 @@ output:
             toolbar:
               position: fixed
             edit: null
-            download: no
+            download: ["IDEMAbook.pdf"]
     bookdown::pdf_book:
         keep_tex: no
         toc: true
@@ -23,8 +23,6 @@ output:
     #     toc: true
 bibliography: idemabook_references.bib
 biblio-style: apalike
-download:
-  - ["IDEMAbook.pdf", "PDF"]
 documentclass: book
 link-citations: yes
 description: "A modern, model-based approach to infectious disease epidemiology"
