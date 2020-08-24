@@ -2,7 +2,7 @@
 title: "Infectious Disease Epidemiology<br>- a Model-based Approach (IDEMA)"
 description: "A modern, model-based approach to infectious disease epidemiology"
 author: "[Andreas Handel](https://www.andreashandel.com)"
-date: "`r Sys.Date()`"
+date: "`r Sys.time()`"
 site: bookdown::bookdown_site
 url: "https://andreashandel.github.io/IDEMAbook/"
 github-repo: "andreashandel/IDEMAbook"
@@ -14,7 +14,7 @@ output:
     config:
       edit: null
       toolbar:
-        download: ["IDEMAbook.pdf"]
+        download: ["IDEMAbook.pdf", "docs/IDEMAbook.pdf"]
       toc:
         collapse: none
   bookdown::pdf_book:
