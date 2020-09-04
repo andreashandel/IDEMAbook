@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.23)  27 AUG 2020 10:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.23)  4 SEP 2020 13:12
 entering extended mode
 **./IDEMAbook.tex
 (IDEMAbook.tex
@@ -810,58 +810,65 @@ TEMS APPROACH
 Chapter 3.
 [31
 
-] [32] [33] [34]
-<./images/ComplicatedModel.png, id=800, 587.5551pt x 205.0059pt>
+] [32]
+Underfull \vbox (badness 1087) has occurred while \output is active []
+
+[33] [34]
+<./images/ComplicatedModel.png, id=799, 587.5551pt x 205.0059pt>
 File: ./images/ComplicatedModel.png Graphic file (type png)
 <use ./images/ComplicatedModel.png>
-Package pdftex.def Info: ./images/ComplicatedModel.png  used on input line 456.
+Package pdftex.def Info: ./images/ComplicatedModel.png  used on input line 462.
 
 (pdftex.def)             Requested size: 587.56262pt x 205.00851pt.
 
-Overfull \hbox (242.56262pt too wide) in paragraph at lines 456--456
+Overfull \hbox (242.56262pt too wide) in paragraph at lines 462--462
 [][] 
  []
 
-[35 <./images/ComplicatedModel.png>]
-<./images/xkcd-course-of-colds.png, id=811, 379.4175pt x 284.56313pt>
+
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+[35]
+<./images/xkcd-course-of-colds.png, id=810, 379.4175pt x 284.56313pt>
 File: ./images/xkcd-course-of-colds.png Graphic file (type png)
 <use ./images/xkcd-course-of-colds.png>
 Package pdftex.def Info: ./images/xkcd-course-of-colds.png  used on input line 
-475.
+481.
 (pdftex.def)             Requested size: 379.45708pt x 284.5928pt.
 
-Overfull \hbox (34.45708pt too wide) in paragraph at lines 475--475
+Overfull \hbox (34.45708pt too wide) in paragraph at lines 481--481
 [][] 
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 475--475
+Underfull \hbox (badness 1221) in paragraph at lines 481--481
 []\T1/lmr/m/n/10 (+20) Figure 3.2: []Yet an-other per-spec-tive on ID in-fec-ti
 on states. [Source:
  []
 
-[36 <./images/xkcd-course-of-colds.png>] [37] [38
-
-]
+[36 <./images/ComplicatedModel.png>] [37 <./images/xkcd-course-of-colds.png>] [
+38]
 Chapter 4.
 <./images/IDcycles.pdf, id=840, 500.87125pt x 388.45125pt>
 File: ./images/IDcycles.pdf Graphic file (type pdf)
 <use ./images/IDcycles.pdf>
-Package pdftex.def Info: ./images/IDcycles.pdf  used on input line 535.
+Package pdftex.def Info: ./images/IDcycles.pdf  used on input line 541.
 (pdftex.def)             Requested size: 500.88528pt x 388.46213pt.
 
-Overfull \hbox (155.88528pt too wide) in paragraph at lines 535--535
+Overfull \hbox (155.88528pt too wide) in paragraph at lines 541--541
 [][] 
  []
 
-[39] [40 <./images/IDcycles.pdf>]
+[39
+
+] [40 <./images/IDcycles.pdf>]
 <./images/R0modelfigure.png, id=857, 432.6564pt x 109.3686pt>
 File: ./images/R0modelfigure.png Graphic file (type png)
 <use ./images/R0modelfigure.png>
-Package pdftex.def Info: ./images/R0modelfigure.png  used on input line 556.
+Package pdftex.def Info: ./images/R0modelfigure.png  used on input line 562.
 (pdftex.def)             Requested size: 432.65535pt x 109.36832pt.
 
-Overfull \hbox (87.65535pt too wide) in paragraph at lines 556--556
+Overfull \hbox (87.65535pt too wide) in paragraph at lines 562--562
 [][] 
  []
 
@@ -869,7 +876,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{mynotebox}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.562 \subsubsection{Notes}\label{mynotebox}}
+l.568 \subsubsection{Notes}\label{mynotebox}}
                                              
 Underfull \vbox (badness 1472) has occurred while \output is active []
 
@@ -877,32 +884,32 @@ Underfull \vbox (badness 1472) has occurred while \output is active []
 dbox}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.567 ...urce replenishment}\label{myadvancedbox}}
+l.573 ...urce replenishment}\label{myadvancedbox}}
                                                    [42 <./images/R0modelfigure.
 png>] [43]pdfTeX warning (ext4): destination with the same identifier (name{myn
 otebox}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.604 \subsubsection{Notes}\label{mynotebox}}
+l.610 \subsubsection{Notes}\label{mynotebox}}
                                               [44]pdfTeX warning (ext4): destin
 ation with the same identifier (name{myadvancedbox}) has been already used, dup
 licate ignored
 <to be read again> 
                    \relax 
-l.620 ... States and Models}\label{myadvancedbox}}
+l.626 ... States and Models}\label{myadvancedbox}}
                                                   
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-24.
+30.
 ("C:\Users\Andreas Handel\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 <./images/SSmaxima.png, id=900, 758.08218pt x 121.20282pt>
 File: ./images/SSmaxima.png Graphic file (type png)
 <use ./images/SSmaxima.png>
-Package pdftex.def Info: ./images/SSmaxima.png  used on input line 627.
+Package pdftex.def Info: ./images/SSmaxima.png  used on input line 633.
 (pdftex.def)             Requested size: 758.11502pt x 121.20805pt.
 
-Overfull \hbox (413.11502pt too wide) in paragraph at lines 627--627
+Overfull \hbox (413.11502pt too wide) in paragraph at lines 633--633
 [][] 
  []
 
@@ -910,10 +917,10 @@ Overfull \hbox (413.11502pt too wide) in paragraph at lines 627--627
 <./images/gonorrhea.png, id=912, 660.4675pt x 278.03876pt>
 File: ./images/gonorrhea.png Graphic file (type png)
 <use ./images/gonorrhea.png>
-Package pdftex.def Info: ./images/gonorrhea.png  used on input line 641.
+Package pdftex.def Info: ./images/gonorrhea.png  used on input line 647.
 (pdftex.def)             Requested size: 660.47595pt x 278.04231pt.
 
-Overfull \hbox (315.47595pt too wide) in paragraph at lines 641--641
+Overfull \hbox (315.47595pt too wide) in paragraph at lines 647--647
 [][] 
  []
 
@@ -922,25 +929,25 @@ Overfull \hbox (315.47595pt too wide) in paragraph at lines 641--641
 File: ./images/phd_sciencenewscycle.png Graphic file (type png)
 <use ./images/phd_sciencenewscycle.png>
 Package pdftex.def Info: ./images/phd_sciencenewscycle.png  used on input line 
-657.
+663.
 (pdftex.def)             Requested size: 494.79472pt x 550.0468pt.
 
-Overfull \hbox (149.79472pt too wide) in paragraph at lines 657--657
+Overfull \hbox (149.79472pt too wide) in paragraph at lines 663--663
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 657--657
+Underfull \hbox (badness 10000) in paragraph at lines 663--663
 []\T1/lmr/m/n/10 (+20) Figure 4.5: []Here is a dif-fer-ent kind of cy-cle that
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 657--657
+Underfull \hbox (badness 10000) in paragraph at lines 663--663
 \T1/lmr/m/n/10 (+20) (ID) sci-en-tists some-times en-counter. [Source: phd-
  []
 
 
-LaTeX Warning: Float too large for page by 48.5468pt on input line 658.
+LaTeX Warning: Float too large for page by 48.5468pt on input line 664.
 
 [48] [49 <./images/phd_sciencenewscycle.png>] [50
 
@@ -950,13 +957,13 @@ Chapter 5.
 <./images/R0scheme.png, id=973, 416.5161pt x 396.5214pt>
 File: ./images/R0scheme.png Graphic file (type png)
 <use ./images/R0scheme.png>
-Package pdftex.def Info: ./images/R0scheme.png  used on input line 728.
+Package pdftex.def Info: ./images/R0scheme.png  used on input line 734.
 (pdftex.def)             Requested size: 345.00916pt x 328.44711pt.
 [52] [53 <./images/R0scheme.png>]pdfTeX warning (ext4): destination with the sa
 me identifier (name{mynotebox}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.758 \subsubsection{Notes}\label{mynotebox}}
+l.764 \subsubsection{Notes}\label{mynotebox}}
                                              
 Underfull \vbox (badness 3271) has occurred while \output is active []
 
@@ -967,10 +974,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <./images/R0intervention.pdf, id=1005, 650.43pt x 361.35pt>
 File: ./images/R0intervention.pdf Graphic file (type pdf)
 <use ./images/R0intervention.pdf>
-Package pdftex.def Info: ./images/R0intervention.pdf  used on input line 777.
+Package pdftex.def Info: ./images/R0intervention.pdf  used on input line 783.
 (pdftex.def)             Requested size: 650.4284pt x 361.34912pt.
 
-Overfull \hbox (305.4284pt too wide) in paragraph at lines 777--777
+Overfull \hbox (305.4284pt too wide) in paragraph at lines 783--783
 [][] 
  []
 
@@ -978,17 +985,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{myexamplebox}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.781 ...k Control - Example}\label{myexamplebox}}
+l.787 ...k Control - Example}\label{myexamplebox}}
                                                    [56] [57 <./images/R0interve
 ntion.pdf>]
 <./images/kr-R0intervention.pdf, id=1027, 513.92pt x 412.54124pt>
 File: ./images/kr-R0intervention.pdf Graphic file (type pdf)
 <use ./images/kr-R0intervention.pdf>
-Package pdftex.def Info: ./images/kr-R0intervention.pdf  used on input line 793
+Package pdftex.def Info: ./images/kr-R0intervention.pdf  used on input line 799
 .
 (pdftex.def)             Requested size: 513.92656pt x 412.54652pt.
 
-Overfull \hbox (168.92656pt too wide) in paragraph at lines 793--793
+Overfull \hbox (168.92656pt too wide) in paragraph at lines 799--799
 [][] 
  []
 
@@ -996,7 +1003,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{myadvancedbox
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.797 ... and the SIR Model}\label{myadvancedbox}}
+l.803 ... and the SIR Model}\label{myadvancedbox}}
                                                    [58] [59 <./images/kr-R0inte
 rvention.pdf>]
 
@@ -1005,10 +1012,10 @@ d PDF version <1.6>, but at most version <1.5> allowed
 <./images/viboud-R0.pdf, id=1045, 1004.553pt x 320.61784pt>
 File: ./images/viboud-R0.pdf Graphic file (type pdf)
 <use ./images/viboud-R0.pdf>
-Package pdftex.def Info: ./images/viboud-R0.pdf  used on input line 823.
+Package pdftex.def Info: ./images/viboud-R0.pdf  used on input line 829.
 (pdftex.def)             Requested size: 1004.61186pt x 320.63661pt.
 
-Overfull \hbox (659.61186pt too wide) in paragraph at lines 823--823
+Overfull \hbox (659.61186pt too wide) in paragraph at lines 829--829
 [][] 
  []
 
@@ -1016,20 +1023,20 @@ Overfull \hbox (659.61186pt too wide) in paragraph at lines 823--823
 <./images/outbreaksize.pdf, id=1056, 508.90125pt x 413.545pt>
 File: ./images/outbreaksize.pdf Graphic file (type pdf)
 <use ./images/outbreaksize.pdf>
-Package pdftex.def Info: ./images/outbreaksize.pdf  used on input line 834.
+Package pdftex.def Info: ./images/outbreaksize.pdf  used on input line 840.
 (pdftex.def)             Requested size: 508.91553pt x 413.5566pt.
 
-Overfull \hbox (163.91553pt too wide) in paragraph at lines 834--834
+Overfull \hbox (163.91553pt too wide) in paragraph at lines 840--840
 [][] 
  []
 
 <./images/R0age.pdf, id=1058, 513.92pt x 215.80624pt>
 File: ./images/R0age.pdf Graphic file (type pdf)
 <use ./images/R0age.pdf>
-Package pdftex.def Info: ./images/R0age.pdf  used on input line 850.
+Package pdftex.def Info: ./images/R0age.pdf  used on input line 856.
 (pdftex.def)             Requested size: 513.9344pt x 215.81229pt.
 
-Overfull \hbox (168.9344pt too wide) in paragraph at lines 850--850
+Overfull \hbox (168.9344pt too wide) in paragraph at lines 856--856
 [][] 
  []
 
@@ -1037,15 +1044,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{mynotebox}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.856 \subsubsection{Note}\label{mynotebox}}
+l.862 \subsubsection{Note}\label{mynotebox}}
                                              [61] [62 <./images/outbreaksize.pd
 f>]pdfTeX warning (ext4): destination with the same identifier (name{myadvanced
 box}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.866 ... for a Given Model}\label{myadvancedbox}}
+l.872 ... for a Given Model}\label{myadvancedbox}}
                                                    [63 <./images/R0age.pdf>]
-Underfull \hbox (badness 5924) in paragraph at lines 894--894
+Underfull \hbox (badness 5924) in paragraph at lines 900--900
 []\T1/lmr/bx/n/12 Policy/Application ex-am-ple: Es-ti-mat-ing the
  []
 
@@ -1054,15 +1061,15 @@ Underfull \hbox (badness 5924) in paragraph at lines 894--894
 File: ./images/xkcd-outbreak-control.png Graphic file (type png)
 <use ./images/xkcd-outbreak-control.png>
 Package pdftex.def Info: ./images/xkcd-outbreak-control.png  used on input line
- 910.
+ 916.
 (pdftex.def)             Requested size: 742.7845pt x 252.94823pt.
 
-Overfull \hbox (397.7845pt too wide) in paragraph at lines 910--910
+Overfull \hbox (397.7845pt too wide) in paragraph at lines 916--916
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 910--910
+Underfull \hbox (badness 10000) in paragraph at lines 916--916
 []\T1/lmr/m/n/10 (+20) Figure 5.7: []The R 0  in this case was 0. [Source:
  []
 
@@ -1077,10 +1084,10 @@ Underfull \vbox (badness 3428) has occurred while \output is active []
 <./images/xkcd-swine_flu.png, id=1147, 399.38684pt x 677.05579pt>
 File: ./images/xkcd-swine_flu.png Graphic file (type png)
 <use ./images/xkcd-swine_flu.png>
-Package pdftex.def Info: ./images/xkcd-swine_flu.png  used on input line 994.
+Package pdftex.def Info: ./images/xkcd-swine_flu.png  used on input line 1000.
 (pdftex.def)             Requested size: 324.45834pt x 550.03416pt.
 
-LaTeX Warning: Float too large for page by 35.97859pt on input line 996.
+LaTeX Warning: Float too large for page by 35.97859pt on input line 1002.
 
 [69] [70 <./images/xkcd-swine_flu.png>]
 Chapter 7.
@@ -1090,16 +1097,16 @@ Chapter 7.
 cedbox}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1066 ...rect transmission}\label{myadvancedbox}}
+l.1072 ...rect transmission}\label{myadvancedbox}}
                                                    [73]
 <./images/smbctransmissionmode.png, id=1189, 686.565pt x 1840.8775pt>
 File: ./images/smbctransmissionmode.png Graphic file (type png)
 <use ./images/smbctransmissionmode.png>
 Package pdftex.def Info: ./images/smbctransmissionmode.png  used on input line 
-1091.
+1097.
 (pdftex.def)             Requested size: 205.12251pt x 549.99226pt.
 
-LaTeX Warning: Float too large for page by 33.99226pt on input line 1093.
+LaTeX Warning: Float too large for page by 33.99226pt on input line 1099.
 
 [74] [75 <./images/smbctransmissionmode.png>] [76
 
@@ -1114,7 +1121,7 @@ Underfull \vbox (badness 6396) has occurred while \output is active []
 File: ./images/environmentaltransmissionscheme.png Graphic file (type png)
 <use ./images/environmentaltransmissionscheme.png>
 Package pdftex.def Info: ./images/environmentaltransmissionscheme.png  used on 
-input line 1152.
+input line 1158.
 (pdftex.def)             Requested size: 315.58784pt x 153.69849pt.
 
 Underfull \vbox (badness 2050) has occurred while \output is active []
@@ -1124,13 +1131,13 @@ nation with the same identifier (name{myadvancedbox}) has been already used, du
 plicate ignored
 <to be read again> 
                    \relax 
-l.1170 ...ntal transmission}\label{myadvancedbox}}
+l.1176 ...ntal transmission}\label{myadvancedbox}}
                                                   
 <./images/xkcd-hand_sanitizer.png, id=1232, 570.13pt x 213.79875pt>
 File: ./images/xkcd-hand_sanitizer.png Graphic file (type png)
 <use ./images/xkcd-hand_sanitizer.png>
 Package pdftex.def Info: ./images/xkcd-hand_sanitizer.png  used on input line 1
-199.
+205.
 (pdftex.def)             Requested size: 344.99496pt x 129.3731pt.
 
 Underfull \vbox (badness 3989) has occurred while \output is active []
@@ -1143,10 +1150,10 @@ Chapter 9.
 File: ./images/vectorborne-schematic.png Graphic file (type png)
 <use ./images/vectorborne-schematic.png>
 Package pdftex.def Info: ./images/vectorborne-schematic.png  used on input line
- 1257.
+ 1263.
 (pdftex.def)             Requested size: 345.00084pt x 138.00032pt.
 [83]
-Underfull \hbox (badness 1931) in paragraph at lines 1269--1269
+Underfull \hbox (badness 1931) in paragraph at lines 1275--1275
 []\T1/lmr/bx/n/14.4 Vector-borne trans-mis-sion and in-ter-ven-
  []
 
@@ -1155,13 +1162,13 @@ h the same identifier (name{myadvancedbox}) has been already used, duplicate ig
 nored
 <to be read again> 
                    \relax 
-l.1276 ...orne transmission}\label{myadvancedbox}}
+l.1282 ...orne transmission}\label{myadvancedbox}}
                                                   
 <./images/xkcd-mosquito-ringtone.png, id=1287, 230.36063pt x 423.68288pt>
 File: ./images/xkcd-mosquito-ringtone.png Graphic file (type png)
 <use ./images/xkcd-mosquito-ringtone.png>
 Package pdftex.def Info: ./images/xkcd-mosquito-ringtone.png  used on input lin
-e 1298.
+e 1304.
 (pdftex.def)             Requested size: 230.36005pt x 423.68184pt.
 [85] [86 <./images/xkcd-mosquito-ringtone.png>] [87] [88
 
@@ -1171,19 +1178,19 @@ Chapter 10.
 box}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1362 ...rogeneity Examples}\label{myexamplebox}}
+l.1368 ...rogeneity Examples}\label{myexamplebox}}
                                                   
-Underfull \hbox (badness 4608) in paragraph at lines 1367--1367
+Underfull \hbox (badness 4608) in paragraph at lines 1373--1373
 []\T1/lmr/bx/n/14.4 Heterogeneity in Trans-mis-sion: Core
  []
 
 [90]
-Underfull \hbox (badness 1348) in paragraph at lines 1375--1375
+Underfull \hbox (badness 1348) in paragraph at lines 1381--1381
 []\T1/lmr/bx/n/14.4 Heterogeneity in Trans-mis-sion: Su-per-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1380--1380
+Underfull \hbox (badness 10000) in paragraph at lines 1386--1386
 []\T1/lmr/bx/n/14.4 Heterogeneity and The Re-pro-duc-tive
  []
 
@@ -1192,10 +1199,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1380--1380
 File: ./images/heterogeneityexample.png Graphic file (type png)
 <use ./images/heterogeneityexample.png>
 Package pdftex.def Info: ./images/heterogeneityexample.png  used on input line 
-1395.
+1401.
 (pdftex.def)             Requested size: 556.76949pt x 269.83203pt.
 
-Overfull \hbox (211.76949pt too wide) in paragraph at lines 1395--1395
+Overfull \hbox (211.76949pt too wide) in paragraph at lines 1401--1401
 [][] 
  []
 
@@ -1203,11 +1210,11 @@ Overfull \hbox (211.76949pt too wide) in paragraph at lines 1395--1395
 <./images/crazyvenndiagram.png, id=1364, 401.5pt x 397.485pt>
 File: ./images/crazyvenndiagram.png Graphic file (type png)
 <use ./images/crazyvenndiagram.png>
-Package pdftex.def Info: ./images/crazyvenndiagram.png  used on input line 1410
+Package pdftex.def Info: ./images/crazyvenndiagram.png  used on input line 1416
 .
 (pdftex.def)             Requested size: 401.51125pt x 397.49614pt.
 
-Overfull \hbox (56.51125pt too wide) in paragraph at lines 1410--1410
+Overfull \hbox (56.51125pt too wide) in paragraph at lines 1416--1416
 [][] 
  []
 
@@ -1223,7 +1230,7 @@ Underfull \vbox (badness 1490) has occurred while \output is active []
 File: ./images/xkcd-disease-eradication.png Graphic file (type png)
 <use ./images/xkcd-disease-eradication.png>
 Package pdftex.def Info: ./images/xkcd-disease-eradication.png  used on input l
-ine 1563.
+ine 1569.
 (pdftex.def)             Requested size: 345.0125pt x 328.36464pt.
 [101] [102 <./images/xkcd-disease-eradication.png>] [103] [104
 
@@ -1233,12 +1240,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{myexamplebox}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1637 ...lance - an example}\label{myexamplebox}}
+l.1643 ...lance - an example}\label{myexamplebox}}
                                                    [105]
 <./images/xkcd-listening.png, id=1473, 286.06876pt x 414.54875pt>
 File: ./images/xkcd-listening.png Graphic file (type png)
 <use ./images/xkcd-listening.png>
-Package pdftex.def Info: ./images/xkcd-listening.png  used on input line 1646.
+Package pdftex.def Info: ./images/xkcd-listening.png  used on input line 1652.
 (pdftex.def)             Requested size: 286.07242pt x 414.55405pt.
 [106] [107 <./images/xkcd-listening.png>] [108
 
@@ -1248,16 +1255,16 @@ Chapter 13.
 advancedbox}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1723 ...eling multiple ID}\label{myadvancedbox}}
+l.1729 ...eling multiple ID}\label{myadvancedbox}}
                                                   
 <./images/multipathogenmodel.png, id=1542, 474.0912pt x 169.8345pt>
 File: ./images/multipathogenmodel.png Graphic file (type png)
 <use ./images/multipathogenmodel.png>
 Package pdftex.def Info: ./images/multipathogenmodel.png  used on input line 17
-29.
+35.
 (pdftex.def)             Requested size: 474.1045pt x 169.83925pt.
 
-Overfull \hbox (129.1045pt too wide) in paragraph at lines 1729--1729
+Overfull \hbox (129.1045pt too wide) in paragraph at lines 1735--1735
 [][] 
  []
 
@@ -1265,7 +1272,7 @@ Overfull \hbox (129.1045pt too wide) in paragraph at lines 1729--1729
 <./images/xkcd-sick_day.png, id=1549, 498.86375pt x 424.58624pt>
 File: ./images/xkcd-sick_day.png Graphic file (type png)
 <use ./images/xkcd-sick_day.png>
-Package pdftex.def Info: ./images/xkcd-sick_day.png  used on input line 1751.
+Package pdftex.def Info: ./images/xkcd-sick_day.png  used on input line 1757.
 (pdftex.def)             Requested size: 345.00801pt x 293.6386pt.
 [112 <./images/multipathogenmodel.png>] [113 <./images/xkcd-sick_day.png>] [114
 ]
@@ -1282,7 +1289,7 @@ Underfull \vbox (badness 3364) has occurred while \output is active []
 <./images/smallpox.png, id=1610, 144.54pt x 102.8643pt>
 File: ./images/smallpox.png Graphic file (type png)
 <use ./images/smallpox.png>
-Package pdftex.def Info: ./images/smallpox.png  used on input line 1870.
+Package pdftex.def Info: ./images/smallpox.png  used on input line 1876.
 (pdftex.def)             Requested size: 144.54404pt x 102.86717pt.
 [119 <./images/smallpox.png>] [120
 
@@ -1292,11 +1299,11 @@ Chapter 15.
 <./images/smbc-ID-evolution.png, id=1661, 686.565pt x 1150.2975pt>
 File: ./images/smbc-ID-evolution.png Graphic file (type png)
 <use ./images/smbc-ID-evolution.png>
-Package pdftex.def Info: ./images/smbc-ID-evolution.png  used on input line 196
-6.
+Package pdftex.def Info: ./images/smbc-ID-evolution.png  used on input line 197
+2.
 (pdftex.def)             Requested size: 328.27985pt x 550.01273pt.
 
-LaTeX Warning: Float too large for page by 60.51273pt on input line 1968.
+LaTeX Warning: Float too large for page by 60.51273pt on input line 1974.
 
 [123] [124 <./images/smbc-ID-evolution.png (PNG copy)>] [125] [126
 
@@ -1321,7 +1328,7 @@ Chapter 19.
 <./images/network-diagram.png, id=1796, 302.3295pt x 150.5625pt>
 File: ./images/network-diagram.png Graphic file (type png)
 <use ./images/network-diagram.png>
-Package pdftex.def Info: ./images/network-diagram.png  used on input line 2210.
+Package pdftex.def Info: ./images/network-diagram.png  used on input line 2216.
 
 (pdftex.def)             Requested size: 302.34258pt x 150.569pt.
 [138 <./images/network-diagram.png>]
@@ -1329,22 +1336,22 @@ Package pdftex.def Info: ./images/network-diagram.png  used on input line 2210.
 File: ./images/complex-network-diagram.png Graphic file (type png)
 <use ./images/complex-network-diagram.png>
 Package pdftex.def Info: ./images/complex-network-diagram.png  used on input li
-ne 2228.
+ne 2234.
 (pdftex.def)             Requested size: 171.03857pt x 148.87584pt.
 [139 <./images/complex-network-diagram.png>]
 <./images/network-examples.png, id=1819, 752.8125pt x 602.25pt>
 File: ./images/network-examples.png Graphic file (type png)
 <use ./images/network-examples.png>
-Package pdftex.def Info: ./images/network-examples.png  used on input line 2253
+Package pdftex.def Info: ./images/network-examples.png  used on input line 2259
 .
 (pdftex.def)             Requested size: 687.5646pt x 550.05168pt.
 
-Overfull \hbox (342.5646pt too wide) in paragraph at lines 2253--2253
+Overfull \hbox (342.5646pt too wide) in paragraph at lines 2259--2259
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 23.99611pt on input line 2254.
+LaTeX Warning: Float too large for page by 23.99611pt on input line 2260.
 
 
 Underfull \vbox (badness 3179) has occurred while \output is active []
@@ -1353,10 +1360,10 @@ Underfull \vbox (badness 3179) has occurred while \output is active []
 <./images/xkcd-network.png, id=1836, 742.775pt x 415.5525pt>
 File: ./images/xkcd-network.png Graphic file (type png)
 <use ./images/xkcd-network.png>
-Package pdftex.def Info: ./images/xkcd-network.png  used on input line 2282.
+Package pdftex.def Info: ./images/xkcd-network.png  used on input line 2288.
 (pdftex.def)             Requested size: 742.80717pt x 415.5705pt.
 
-Overfull \hbox (397.80717pt too wide) in paragraph at lines 2282--2282
+Overfull \hbox (397.80717pt too wide) in paragraph at lines 2288--2288
 [][] 
  []
 
@@ -1388,15 +1395,15 @@ Chapter 22.
 <./images/mapfigure.png, id=1909, 1831.5627pt x 576.2328pt>
 File: ./images/mapfigure.png Graphic file (type png)
 <use ./images/mapfigure.png>
-Package pdftex.def Info: ./images/mapfigure.png  used on input line 2376.
+Package pdftex.def Info: ./images/mapfigure.png  used on input line 2382.
 (pdftex.def)             Requested size: 1748.30305pt x 550.03824pt.
 
-Overfull \hbox (1403.30305pt too wide) in paragraph at lines 2376--2376
+Overfull \hbox (1403.30305pt too wide) in paragraph at lines 2382--2382
 [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 23.98267pt on input line 2377.
+LaTeX Warning: Float too large for page by 23.98267pt on input line 2383.
 
 
 Overfull \hbox (28.5764pt too wide) has occurred while \output is active
@@ -1438,44 +1445,44 @@ pdfTeX warning (ext4): destination with the same identifier (name{references})
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2447 \chapter{References}\label{references}}
+l.2453 \chapter{References}\label{references}}
                                                [159] [160
 
 ]
 Chapter 26.
 [161] [162]
-Overfull \hbox (1.11102pt too wide) in paragraph at lines 2543--2545
+Overfull \hbox (1.11102pt too wide) in paragraph at lines 2549--2551
 \T1/lmr/m/n/10 (-20) 2004. ``Dynamical Resonance Can Account for Seasonality of
  Influenza Epidemics.''
  []
 
 [163]
-Overfull \hbox (0.25568pt too wide) in paragraph at lines 2561--2563
+Overfull \hbox (0.25568pt too wide) in paragraph at lines 2567--2569
 [][]\T1/lmr/m/n/10 (-20) ---------. 1995. ``The Evolution of Virulence: A Unify
 ing Link Between Parasitology
  []
 
 [164] [165] [166] [167]
-Overfull \hbox (0.5124pt too wide) in paragraph at lines 2711--2713
+Overfull \hbox (0.5124pt too wide) in paragraph at lines 2717--2719
 \T1/lmr/m/n/10 (-20) Lello. 2017. ``Breaking Beta: Deconstructing the Parasite 
 Transmission Function.''
  []
 
 [168] [169] [170]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2846.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2852.
 [171]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2846.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2852.
 (IDEMAbook.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2846.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2846.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2852.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2852.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
  14598 strings out of 481212
- 222901 string characters out of 2901718
- 498059 words of memory out of 3000000
+ 222895 string characters out of 2901718
+ 498056 words of memory out of 3000000
  28830 multiletter control sequences out of 15000+200000
  619958 words of font info for 168 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1505,7 +1512,7 @@ sers/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.
 pfb><C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
 m/lmsy7.pfb><C:/Users/Andreas Handel/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/lm/lmtt10.pfb>
-Output written on IDEMAbook.pdf (171 pages, 8988554 bytes).
+Output written on IDEMAbook.pdf (171 pages, 8989470 bytes).
 PDF statistics:
  3108 PDF objects out of 3580 (max. 8388607)
  906 named destinations out of 1000 (max. 500000)

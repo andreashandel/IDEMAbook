@@ -26,10 +26,15 @@ It gets more complicated if susceptibility is only somewhat reduced. This is com
 ## States of Infection 
 Categorizing individuals beyond the simple _infected and infectious_ category is often the most important addition to a model if one wants to make things more realistic. Several important states are commonly distinguished and described in the next few sections.
 
-### Latent infection
-Many important diseases (e.g. HIV, Tuberculosis), have a state during which an individual is infected but does not show any symptoms. This is usually called _latent_ infection. Sometimes the term _exposed_ is also used. Latent, non-symptomatic infected individuals might (HIV) or might not (TB) be infectious. It is important to keep in mind that infectiousness and symptoms are not always overlapping. The former is the most important driver of the ongoing infection process and drives the observed disease dynamics on the population level. The latter is important for surveillance and medical interventions. 
+### Pre-symptomatic state
+Many important diseases (e.g. HIV, Tuberculosis), have a state during which an individual is infected but does not show any symptoms. There are different labels for this pre-symptomatic stage. Terms that are often used are _latent_, _exposed_ or _incubation_ period.
 
-### Symptomatic infection
+Pre-symptomatic infected individuals might (HIV) or might not (TB) be infectious. Some authors use the term _latent_ or _exposed_ specifically for a pre-symptomatic stage in which an individual is non-infectious, while _incubation_ period usually refers more specifically to the time before symptom onset. However there is no fully standardized terminology and these terms are at times used interchangeably. The context generally makes it clear what is meant.
+
+It is important to keep in mind that infectiousness and symptoms are not always overlapping. The former is the most important driver of the ongoing infection process and drives the observed disease dynamics on the population level. The latter is important for surveillance and medical interventions. 
+
+
+### Symptomatic state
 From a purely medical perspective, focusing on one patient at a time, the most important characteristic of a disease is its severity, also called morbidity. We would like to know what kind of symptoms a disease produces and how frequently those occur. This is the morbidity profile of a disease. One can consider mortality the "ultimate symptom". Because of its importance, mortality is often considered separate from morbidity. Knowing morbidity and mortality of an ID are generally most important when caring for individual patients. For interventions, understanding what might help mitigate morbidity and mortality is of prime interest.
 
 Most diseases lead to a state with morbidity, i.e. where an infected individual shows symptoms. Those diseases that don't are usually not of much medical and public health interest. During the symptomatic state, individuals are generally infectious. The question how symptoms might or might not impact infectiousness is important but not too well understood. Qualitatively, we know that coughing and sneezing help spread many respiratory pathogens, while the symptoms an HIV infected individual displays during the AIDS stage are likely not increasing infectiousness. The connection of symptoms, morbidity and mortality and its relation to infectiousness is the main theme underlying the topic of _virulence_, which we'll cover later in the chapter on virulence evolution. 
@@ -37,8 +42,10 @@ Most diseases lead to a state with morbidity, i.e. where an infected individual 
 Morbidity and mortality are also often important for public health surveillance. It is generally difficult to capture infected individuals that do not show symptoms, those that are symptomatic - and obviously, those that die - are easier to count and thus get estimates for disease prevalence and incidence.
 
 
-### Asymptomatic infection
-After infection, for almost all diseases there is a latent period when symptoms are not yet visible. For many diseases, the whole course of infection is asymptomatic in at least a fraction of infected individuals. If such asymptomatic individuals are infectious, they are a potentially important driver of the infection dynamics. Since asymptomatic indivuals are often not picked up by surveillance, they can pose problems for the control of a disease. 
+### Asymptomatic state
+After infection, for almost all diseases there is a pre-symptomatic period before symptoms appear. This can be a very short time (hours), or can be years. While many diseases eventually lead to some amount of symptoms/morbidity in at least some infected individuals, there are also many infectious diseases that might never lead to symptoms, at least in a fraction of infected individuals. The importance of fully asymptomatic infections depends strongly on the pathogen. On the one extreme are pathogens like Ebola or HIV, who produce symptoms in a large fraction of individuals, either pretty quickly (Ebola) or after an extended period (HIV). The other extreme are many chronic viral infections, e.g. many herpes viruses that often do not lead to any symptoms in infected individuals.
+
+During the asymptomatic state, individuals might or might not be infectious. If they are infectious and do not show symptoms, they are a potentially important source of ongoing transmission of the pathogen. For many sexually transmitted diseases, this is the case. Since asymptomatic individuals are often not picked up by surveillance, they can pose problems for the control of a disease. 
 
 Note that some diseases can show complicated patterns of symptoms, e.g. for malaria symptoms can be intermittent, with periods of no symptoms in between.
 

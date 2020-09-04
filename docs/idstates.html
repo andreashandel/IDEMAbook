@@ -97,9 +97,9 @@
 <li class="chapter" data-level="3.2" data-path="idstates.html"><a href="idstates.html#introduction-1"><i class="fa fa-check"></i><b>3.2</b> Introduction</a></li>
 <li class="chapter" data-level="3.3" data-path="idstates.html"><a href="idstates.html#states-of-susceptibility"><i class="fa fa-check"></i><b>3.3</b> States of susceptibility</a></li>
 <li class="chapter" data-level="3.4" data-path="idstates.html"><a href="idstates.html#states-of-infection"><i class="fa fa-check"></i><b>3.4</b> States of Infection</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="idstates.html"><a href="idstates.html#latent-infection"><i class="fa fa-check"></i><b>3.4.1</b> Latent infection</a></li>
-<li class="chapter" data-level="3.4.2" data-path="idstates.html"><a href="idstates.html#symptomatic-infection"><i class="fa fa-check"></i><b>3.4.2</b> Symptomatic infection</a></li>
-<li class="chapter" data-level="3.4.3" data-path="idstates.html"><a href="idstates.html#asymptomatic-infection"><i class="fa fa-check"></i><b>3.4.3</b> Asymptomatic infection</a></li>
+<li class="chapter" data-level="3.4.1" data-path="idstates.html"><a href="idstates.html#pre-symptomatic-state"><i class="fa fa-check"></i><b>3.4.1</b> Pre-symptomatic state</a></li>
+<li class="chapter" data-level="3.4.2" data-path="idstates.html"><a href="idstates.html#symptomatic-state"><i class="fa fa-check"></i><b>3.4.2</b> Symptomatic state</a></li>
+<li class="chapter" data-level="3.4.3" data-path="idstates.html"><a href="idstates.html#asymptomatic-state"><i class="fa fa-check"></i><b>3.4.3</b> Asymptomatic state</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="idstates.html"><a href="idstates.html#post-infection-states"><i class="fa fa-check"></i><b>3.5</b> Post-infection states</a></li>
 <li class="chapter" data-level="3.6" data-path="idstates.html"><a href="idstates.html#medical-versus-id-dynamics-perspectives"><i class="fa fa-check"></i><b>3.6</b> Medical versus ID dynamics perspectives</a></li>
@@ -411,19 +411,22 @@
 <div id="states-of-infection" class="section level2">
 <h2><span class="header-section-number">3.4</span> States of Infection</h2>
 <p>Categorizing individuals beyond the simple <em>infected and infectious</em> category is often the most important addition to a model if one wants to make things more realistic. Several important states are commonly distinguished and described in the next few sections.</p>
-<div id="latent-infection" class="section level3">
-<h3><span class="header-section-number">3.4.1</span> Latent infection</h3>
-<p>Many important diseases (e.g. HIV, Tuberculosis), have a state during which an individual is infected but does not show any symptoms. This is usually called <em>latent</em> infection. Sometimes the term <em>exposed</em> is also used. Latent, non-symptomatic infected individuals might (HIV) or might not (TB) be infectious. It is important to keep in mind that infectiousness and symptoms are not always overlapping. The former is the most important driver of the ongoing infection process and drives the observed disease dynamics on the population level. The latter is important for surveillance and medical interventions.</p>
+<div id="pre-symptomatic-state" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Pre-symptomatic state</h3>
+<p>Many important diseases (e.g. HIV, Tuberculosis), have a state during which an individual is infected but does not show any symptoms. There are different labels for this pre-symptomatic stage. Terms that are often used are <em>latent</em>, <em>exposed</em> or <em>incubation</em> period.</p>
+<p>Pre-symptomatic infected individuals might (HIV) or might not (TB) be infectious. Some authors use the term <em>latent</em> or <em>exposed</em> specifically for a pre-symptomatic stage in which an individual is non-infectious, while <em>incubation</em> period usually refers more specifically to the time before symptom onset. However there is no fully standardized terminology and these terms are at times used interchangeably. The context generally makes it clear what is meant.</p>
+<p>It is important to keep in mind that infectiousness and symptoms are not always overlapping. The former is the most important driver of the ongoing infection process and drives the observed disease dynamics on the population level. The latter is important for surveillance and medical interventions.</p>
 </div>
-<div id="symptomatic-infection" class="section level3">
-<h3><span class="header-section-number">3.4.2</span> Symptomatic infection</h3>
+<div id="symptomatic-state" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Symptomatic state</h3>
 <p>From a purely medical perspective, focusing on one patient at a time, the most important characteristic of a disease is its severity, also called morbidity. We would like to know what kind of symptoms a disease produces and how frequently those occur. This is the morbidity profile of a disease. One can consider mortality the “ultimate symptom”. Because of its importance, mortality is often considered separate from morbidity. Knowing morbidity and mortality of an ID are generally most important when caring for individual patients. For interventions, understanding what might help mitigate morbidity and mortality is of prime interest.</p>
 <p>Most diseases lead to a state with morbidity, i.e. where an infected individual shows symptoms. Those diseases that don’t are usually not of much medical and public health interest. During the symptomatic state, individuals are generally infectious. The question how symptoms might or might not impact infectiousness is important but not too well understood. Qualitatively, we know that coughing and sneezing help spread many respiratory pathogens, while the symptoms an HIV infected individual displays during the AIDS stage are likely not increasing infectiousness. The connection of symptoms, morbidity and mortality and its relation to infectiousness is the main theme underlying the topic of <em>virulence</em>, which we’ll cover later in the chapter on virulence evolution.</p>
 <p>Morbidity and mortality are also often important for public health surveillance. It is generally difficult to capture infected individuals that do not show symptoms, those that are symptomatic - and obviously, those that die - are easier to count and thus get estimates for disease prevalence and incidence.</p>
 </div>
-<div id="asymptomatic-infection" class="section level3">
-<h3><span class="header-section-number">3.4.3</span> Asymptomatic infection</h3>
-<p>After infection, for almost all diseases there is a latent period when symptoms are not yet visible. For many diseases, the whole course of infection is asymptomatic in at least a fraction of infected individuals. If such asymptomatic individuals are infectious, they are a potentially important driver of the infection dynamics. Since asymptomatic indivuals are often not picked up by surveillance, they can pose problems for the control of a disease.</p>
+<div id="asymptomatic-state" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Asymptomatic state</h3>
+<p>After infection, for almost all diseases there is a pre-symptomatic period before symptoms appear. This can be a very short time (hours), or can be years. While many diseases eventually lead to some amount of symptoms/morbidity in at least some infected individuals, there are also many infectious diseases that might never lead to symptoms, at least in a fraction of infected individuals. The importance of fully asymptomatic infections depends strongly on the pathogen. On the one extreme are pathogens like Ebola or HIV, who produce symptoms in a large fraction of individuals, either pretty quickly (Ebola) or after an extended period (HIV). The other extreme are many chronic viral infections, e.g. many herpes viruses that often do not lead to any symptoms in infected individuals.</p>
+<p>During the asymptomatic state, individuals might or might not be infectious. If they are infectious and do not show symptoms, they are a potentially important source of ongoing transmission of the pathogen. For many sexually transmitted diseases, this is the case. Since asymptomatic individuals are often not picked up by surveillance, they can pose problems for the control of a disease.</p>
 <p>Note that some diseases can show complicated patterns of symptoms, e.g. for malaria symptoms can be intermittent, with periods of no symptoms in between.</p>
 </div>
 </div>
