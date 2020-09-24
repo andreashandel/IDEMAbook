@@ -50,19 +50,19 @@ It is important to understand that R only provides a measure of how transmissibl
 #### Notes {#mynotebox}
 While we often say "Infectious disease X has an R~0~ of Y", this is only an approximation. R and R~0~ also depend on the setting. The potential for transmission for many ID is much higher in for instance crowded locations (prisons, slums, cruise ships), or among "high risk groups" (e.g. STD in sex workers). For example in most countries R~0~ of HIV is below 1 in the general population but HIV is not disappearing because it has an R~0~ > 1 in certain subgroups. The importance of such population heterogeneity is further discused in chapter \@ref(heterogeneity) . When we talk about R, it is therefore useful to be as specific as possible about the scenario/population/setting.
 
-In this book, and in the literature in general, you will foten find the use of R~0~, R or _effective R_ (R~eff~) used (sloppily) in an interchangeable manner. Usually, it is clear from the context if the symbol refers specifically to ~R~0 at the beginning of an outbreak in a susceptible population, or more generally to R, the average number of secondary infectious cases produced by one infectious individual in any population.
+In this book, and in the literature in general, you will often find the use of R~0~, R or _effective R_ (R~eff~) used (sloppily) in an interchangeable manner. Usually, it is clear from the context if the symbol refers specifically to R~0~ at the beginning of an outbreak in a susceptible population, or more generally to R, the average number of secondary infectious cases produced by one infectious individual in any population.
 
 Unfortunately, _R_ seem to be a very popular letter. In the context of infectious disease dynamics, _R_ is used both to indicate the removed compartment in an SIR model, and as abbreviation for the reproductive number. To make things worse, it is also the name of the programming language which I used to write the DSAIDE package which accompanies this book. You will just have to figure out from the context if a reference to _R_ means "computer software" or "removed compartment" or "reproductive number". Fortunately, it should always be clear what is meant.
 
 
 ## Outbreaks and the Change in R
-As stated above, at the beginning of an outbreak, a specific disease in a certain setting will have some value R~0~. As the outbreak progresses, more and more hosts become infected and - for many diseases - either die or recover and become immune to further infection. This leads to a reduction in the reproductive number as the outbreak progresses. For instance, at the start of the epidemic with everyone susceptible, R~0~=3. Then once a third of the population have become infected and immune, an infectious person who would have infected three others at the beginning of an outbreak now 'wastes' one of their transmissions on an already immune person, and therefore only infects two others. Similarly, once 2/3 of the population have become infected and immune, R will have dropped to 1. At this point, the outbreak does not grow further (recall, we need R>1 for growth). Instead, the outbreak has reached its peak and now starts to decline, with R continuing to go down as fewer and fewer susceptibles remain.
+As stated above, at the beginning of an outbreak, a specific disease in a certain setting will have some value R~0~. As the outbreak progresses, more and more hosts become infected and - for many diseases - either die or recover and become immune to further infection. This leads to a reduction in the reproductive number as the outbreak progresses. For instance, at the start of the epidemic with everyone susceptible, R~0~=3. Then once a third of the population have become infected and immune, an infectious person who would have infected three others at the beginning of an outbreak now 'wastes' one of their transmissions on an already immune person, and therefore only infects two others. Similarly, once 2/3 of the population have become infected and immune, R will have dropped to 1. The outbreak has reached its peak. From our definition, when R=1, the outbreak does not grow further nor does it decay (recall, we need R>1 for growth or R<1 for decay). However, this point of the outbreak, the peak with R=1, is somewhat instantaneous as, now, more than 2/3 of the population have become infected or immune which causes R to drop below 1. Thus, the outbreak starts to decline, with R continuing to go down as fewer and fewer susceptibles remain. 
 
 
 
 
 ## Reproductive Number and Outbreak Control
-It is intuitively clear that if on average every infectious person "produces" more than one subsequent infectious person, we get a growing epidemic. In contrast, if every infectious person "produces" less than one subsequent infectious person, the pathogen might transmit a few times, but pretty soon it will disappear. Thus if we can achieve R~0~ < 1, e.g. through vaccination, we can prevent an outbreak from starting. Further, if during an outbreak we can intervene to get R < 1, the outbreak is going to fizzle out. Figure \@ref(fig:R0intervention) illustrates this idea. If we wanted to stop _any_ further transmission, we would need to get R even lower, namely R = 0. Intervention efforts try to achieve an R as small as possible. If we could achieve R~0~ < 1 globally everywhere, we could eventually eradicate a disease. The ability to do that depends on many factors. One important one is the R~0~ value of any ID before we start an eradication campaign. Intuitively, the higher R~0~, the harder it will be to get it to < 1. We'll make that more explicit below.
+It is intuitively clear that if on average every infectious person "produces" more than one subsequent infectious person, we get a growing epidemic. In contrast, if every infectious person "produces" less than one subsequent infectious person, the pathogen might transmit a few times, but pretty soon it will disappear. Thus if we can achieve R < 1, e.g. through vaccination, we can prevent an outbreak from starting. Further, if during an outbreak we can intervene to get R < 1, the outbreak is going to fizzle out. Figure \@ref(fig:R0intervention) illustrates this idea. If we wanted to stop _any_ further transmission, we would need to get R even lower, namely R = 0. Intervention efforts try to achieve an R as small as possible. If we could achieve R < 1 globally everywhere, we could eventually eradicate a disease. The ability to do that depends on many factors. One important one is the R~0~ value of any ID before we start an eradication campaign. Intuitively, the higher R~0~, the harder it will be to get it to < 1. We'll make that more explicit below.
 
 ```{r R0intervention,   fig.cap='Impact of an Intervention on transmission.',  echo=FALSE}
 knitr::include_graphics("./images/R0intervention.png")
@@ -78,12 +78,39 @@ During the large Ebola outbreak in West Africa which started in 2013, a few Ebol
 ## Estimating Intervention Efforts based on R
 Let's make the relation between response efforts and the reproductive number a bit more quantitative. As a simple example, consider an infectious disease with R~0~=2. That means on average every infected person infects two others. If we could somehow protect a bit more than half of the susceptibles, then a person who might have become infected can't become infected anymore, and the _effective R_ (sometimes called R~eff~) drops below 1. More generally, to prevent an outbreak, a fraction p = 1-1/R~0~ of the population needs to be protected (e.g. through vaccination). From this, it follows that the higher R~0~, the harder it is to control and ID. This is illustrated in figure \@ref(fig:krR0intervention). One can see both from the figure and the equation that a disease with say R~0~ = 5 requires that 80% of the population is protected such that R~eff~ = 1.
 
-The level of population protection at which R=1 is called critical population (or herd) immunity level. The relation between basic reproductive number, intervention coverage, and effective R is R= R~0~(1-p). That holds true if we assume that the intervention fully protects those to whom it is applied. If the intervention is not perfect, we have R=R~0~(1-e*p), where e is the effectiveness of the intervention (e=1 is an entirely effective intervention).
+The level of population protection at which R=1 is called critical population (or herd) immunity level. The relation between basic reproductive number, intervention coverage, and effective R is R= R~0~(1-p). That holds true if we assume that the intervention fully protects those to whom it is applied. If the intervention is not perfect, we have R=R~0~(1-e*p), where ~e~ is the effectiveness of the intervention (~e~=1 is an entirely effective intervention).
 
 
 ```{r krR0intervention,   fig.cap='R~0~ and Interventions. From [@keeling08].',  echo=FALSE}
 knitr::include_graphics("./images/kr-R0intervention.png")
 ```
+
+
+#### Rearranging the Herd Immunity Equation {#myexamplebox}
+
+If we take our equation $R=R_0(1-p)$ and substitute $R=1$ then solve for ~p~, we get $P_{HI}=1-\frac{1}{R_0}$, or if we include vaccine efficacy, we get the equation as below. 
+
+$$ 
+\begin{aligned}
+R = R_0(1-e*p) \\
+1 = R_0(1-e*p) \\
+\frac{1}{R_0} = 1-e*p \\
+e*p = 1 - \frac{1}{R_0} \\
+p = (1-\frac{1}{R_0})(\frac{1}{e}) \\
+\end{aligned}
+$$
+
+Measles has an R_0 of \~15. Let's plug this value into our new equation for the critical population immunity level, i.e., the proportion of the population who need to be immune to establish herd immunity. 
+
+$$ 
+\begin{aligned}
+p = (1 - \frac{1}{R_0})(\frac{1}{e}) \\
+p = (1 - \frac{1}{15})(\frac{1}{e}) \\
+p \approx 0.933 \times (\frac{1}{e}) \\
+\end{aligned}
+$$
+
+So, what does this mean? For a perfectly efficacious vaccine, i.e., $e=1$, we would need 93.3% to be immune to measles to prevent outbreaks. We can reach this 93.3% by natural immunity (i.e., developing immunity following infection) or by inducing artificial immunity (e.g., actively via vaccination). The Measles, Mumps, Rubella (MMR) vaccine is our currently best option for inducing artificial immunity. CDC states that one dose of MMR is 93% effective against measles and that two doses are 97% effective [@cdcmmrvax19]. How do these numbers affect our calculations of critical population immunity level. Well, for one dose $p \approx 0.933 \times \frac{1}{0.93} \approx 1.003$. This is an illogical value as it indicates that *over* 100% of the population would need to be vaccinated to reach herd immunity. Why? Because the vaccine effectiveness is less than the critical population immunity level; that is, even if 100% of people were vaccinated only 93% of them would become immune and, thus, there would still be enough susceptibles to allow an outbreak to happen. For two doses, $p \approx 0.933 \times \frac{1}{0.97} \approx 0.962$. This means that 96.2% of a population would need to be vaccinated (i.e., given two doses of MMR) to prevent an outbreak of measles. Perhaps with this knowledge, you can understand how vaccination hesitancy and refusal debates often mention measles.
 
 
 
@@ -133,7 +160,7 @@ For the above equation to be true, we assume that initially everyone is suscepti
 
 
 ### Determining R at the Endemic/steady state
-For an ID that is at an endemic/steady state, we have another way of determining R~0~. At the endemic equilibrium, the reproductive number is R~eq~ = 1. If it weren't, the ID would either grow or decline, and it wouldn't be the endemic state. At this endemic state, a fraction of the population is still susceptible, S~eq~. By definition, at the beginning of an ID with transmissibility R~0~, everyone is susceptible (S~0~=1, expressed as a fraction). If we know S~eq~, we can then compute R~0~ as given by R~0~ = R~eq~ S~0~/S~eq~ = 1/ S~eq~. As an example, if at an endemic state (with R~eq~=1), 50% of the population is susceptible, then at the beginning, when 100% of the population was susceptible, we have R~0~=2. Conversely, if we know R~0~, we can predict the number of susceptibles at the endemic state, S~eq~=1/R~0~.
+For an ID that is at an endemic/steady state, we have another way of determining R~0~. At the endemic equilibrium, the reproductive number is R~eq~ = 1. If it weren't, the ID prevalence would either grow or decline, and it wouldn't be the endemic state. At this endemic state, a fraction of the population is still susceptible, S~eq~. By definition, at the beginning of an ID with transmissibility R~0~, everyone is susceptible (S~0~=1, expressed as a fraction). If we know S~eq~, we can then compute R~0~ as given by R~0~ = R~eq~ S~0~/S~eq~ = 1/ S~eq~. As an example, if at an endemic state (with R~eq~=1), 50% of the population is susceptible, then at the beginning, when 100% of the population was susceptible, we have R~0~=2. Conversely, if we know R~0~, we can predict the number of susceptibles at the endemic state, S~eq~=1/R~0~.
 
 
 
@@ -209,7 +236,7 @@ knitr::include_graphics("./images/xkcd-outbreak-control.png")
 * Read the paper "Herd Immunity: A Rough Guide" by Fine et al. [@fine11]. In this paper, the authors mention _"...the complexities of imperfect immunity, heterogeneous populations, nonrandom vaccination, and freeloaders..."_. For each of those complexities, find, read and summarize a research paper that discusses the topic. Ideally, choose papers other than those already cited by Fine et al. 
 * Compute R~0~ following the scheme described in this chapter for the following model, which has an additional compartment of exposed, not-yet infectious hosts (we called those _P_ in previous models).  Note that you always go "full circle", i.e. from one infectious individual back to infectious individuals: $\dot S = -b SI, \ \dot E = b S I - a E, \ \dot I = a E - g I - m I, \ \dot R = g I$.
 * Compute R~0~ following the scheme described in this chapter for the following model, which includes births and deaths:
-$\dot S =m - b SI - n S, \ \dot E = b S I - a E - n E, \ \dot I = a E - g I - n I, \ \dot R = g I - n R$. (Note that in the previous exercise, the parameter _m_ represents disease-induced mortality, here it represents births. I'm purposefully re-cycling it, so you get used to the fact that different papers/people use different letters for parameters. Always read carefully.)
+$\dot S =n - b SI - m S, \ \dot E = b S I - a E - m E, \ \dot I = a E - g I - m I, \ \dot R = g I - m R$. (Note that in the previous exercise, the parameter _m_ represents disease-induced mortality, here it represents births. I'm purposefully re-cycling it, so you get used to the fact that different papers/people use different letters for parameters. Always read carefully.)
 
 
 
