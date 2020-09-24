@@ -6,8 +6,9 @@ In this chapter, we will discuss different types of direct transmission and expl
 
 The learning objectives for this chapter are:
 
-* Understand the assumptions underlying different modes of direct transmission
-* Understand how different modes of direct transmission affect ID dynamics
+* Assess how different modes of direct transmission affect ID dynamics.
+* Contrast the difference between density- and frequency-dependent transmission.
+* Predict how population size impacts ID dynamics for different types of transmission.
 
 
 ## Introduction

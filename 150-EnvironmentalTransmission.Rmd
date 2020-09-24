@@ -7,9 +7,11 @@ A number of pathogens are transmitted through an environmental stage. This chapt
 
 The learning objectives for this chapter are:
 
-* Know the hallmarks of indirect, environmental transmission
-* Understand what environmental transmission implies for control strategies
-* Identify diseases for which the environmental transmission pathway is important
+* Know the hallmarks of indirect, environmental transmission.
+* Contrast the difference between direct and environmental transmission.
+* Assess how indirect transmission processes affect ID dynamics.
+* Understand what environmental transmission implies for control strategies.
+* Identify diseases for which the environmental transmission pathway is important.
 
 
 ## Introduction
