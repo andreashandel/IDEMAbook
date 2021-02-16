@@ -1,5 +1,5 @@
 --- 
-title: "Infectious Disease Epidemiology<br>- a Model-based Approach (IDEMA)"
+title: "<table><tr><th>Infectious Disease Epidemiology <br> (Ecology)(Evlution) <br> - a Model-based Approach (IDEMA)</th><th>![](images/idema_book_logo.png){width=1.5in}</th></tr></table>"
 description: "A modern, model-based approach to infectious disease epidemiology"
 author: "[Andreas Handel](https://www.andreashandel.com)"
 date: "`r Sys.time()`"
@@ -16,10 +16,16 @@ url: "https://andreashandel.github.io/IDEMAbook/"
 options(bookdown.render.file_scope = FALSE)
 ```
 
+
+
+
 # Preface {-}
 
-This book discusses infectious disease epidemiology using a model-based approach.
+This book discusses infectious disease epidemiology (ecology)(evolution) using a model-based approach.
 
-__Note 1: This book is a continuous work in progress. I will likely be moving material around, adding new chapters, combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to keep happening. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book__  
+Note 1: This book is a continuous work in progress. Some chapters are fairly complete and readable, and I use them [when teaching my infectious disease courses](https://andreashandel.github.io/IDEMAcourse/index.html). Other chapters are essentially empty and need to be written. I do include references here and there, but it's not as thoroughly sources as one would expect from a _real_ textbook.
 
-Note 2: I appreciate receiving feedback. If you think a certain topic is missing that should be covered, or certain topics aren't explained well, or any other thought you have, please provide feedback. The best way of doing so is by going to [the github page for this book](https://github.com/andreashandel/IDEMAbook) and submitting an "Issue". Alternatively, feel free to email me (google me to get my email address).
+Note 2: As I keep working on this book (on and off), I will likely be moving material around, adding new chapters, combining existing ones, and adding more content. I don't expect to delete major parts, but rewrites and reshuffling are expected to keep happening. So if something you read previously is 'gone', it got likely moved to a different chapter/section of the book.  
+
+Note 3: I appreciate receiving feedback, bug reports, feature requests, or contributions. If you think a certain topic is missing that should be covered, or certain topics aren't explained well, or any other thought you have, please provide feedback. The best way of doing so is by going to [the github page for this book](https://github.com/andreashandel/IDEMAbook) and submitting an _Issue_. You can also go ahead and improve the book and send a pull request - I'm certainly happy to receive any improvements you might have, however large or small.
+

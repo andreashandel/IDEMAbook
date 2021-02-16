@@ -7,6 +7,8 @@ bookdown::gitbook:
     download: ["pdf"]
     toc:
       collapse: none
+  includes:
+    in_header: include_head.html
 bookdown::pdf_book:
   keep_tex: no
   toc: true
