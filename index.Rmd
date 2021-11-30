@@ -1,5 +1,5 @@
 --- 
-title: "<table><tr><th>Infectious Disease Epidemiology <br> (Ecology)(Evlution) <br> - a Model-based Approach (IDEMA)</th><th>![](images/idema_book_logo.png){width=1.5in}</th></tr></table>"
+title: "<table><tr><th>Infectious Disease Epidemiology <br> (Ecology)(Evolution) <br> - a Model-based Approach (IDEMA)</th><th>![](images/idema_book_logo.png){width=1.5in}</th></tr></table>"
 description: "A modern, model-based approach to infectious disease epidemiology"
 author: "[Andreas Handel](https://www.andreashandel.com)"
 date: "`r Sys.time()`"
